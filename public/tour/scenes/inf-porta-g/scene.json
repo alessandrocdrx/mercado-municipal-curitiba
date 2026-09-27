@@ -1,0 +1,40 @@
+{
+  "title": "Porta G",
+  "floor": "inferior",
+  "position": {
+    "x": 109.8,
+    "y": -60.6,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#c7803a",
+          "label": "Piso · Porta G"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "inf-sul-04"
+    },
+    {
+      "to": "inf-diagonal"
+    }
+  ],
+  "generated": true
+}

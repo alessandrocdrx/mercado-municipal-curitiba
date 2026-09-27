@@ -1,0 +1,25 @@
+{
+  "type": "porta",
+  "title": "Porta D",
+  "placement": {
+    "floor": "superior",
+    "x": 59.5,
+    "y": -12.6,
+    "z": 1.6,
+    "width": 3.2,
+    "height": 3.2,
+    "facing": 180,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "#1e3a5f",
+      "label": "Porta D",
+      "sublabel": "Rua da Paz"
+    }
+  },
+  "info": {
+    "location": "Pavimento superior · Rua da Paz"
+  },
+  "generated": true
+}

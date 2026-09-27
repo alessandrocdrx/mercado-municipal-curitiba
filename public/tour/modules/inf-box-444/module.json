@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 444",
+  "placement": {
+    "floor": "inferior",
+    "x": 77,
+    "y": -63.77,
+    "z": 1.4,
+    "width": 2.31,
+    "height": 2.8,
+    "facing": 180,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(253, 30%, 38%)",
+      "label": "Box 444",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

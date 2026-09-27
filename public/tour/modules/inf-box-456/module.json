@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 456",
+  "placement": {
+    "floor": "inferior",
+    "x": 113.4,
+    "y": -52.8,
+    "z": 1.4,
+    "width": 2.51,
+    "height": 2.8,
+    "facing": 250,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(286, 30%, 38%)",
+      "label": "Box 456",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

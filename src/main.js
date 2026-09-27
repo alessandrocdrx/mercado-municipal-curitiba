@@ -19,7 +19,10 @@ const loader = new TourLoader(import.meta.env.BASE_URL + 'tour/tour.json');
 const viewer = new Viewer(stage);
 const hotspots = new Hotspots(viewer, overlay, (link) => goTo(link.to, { via: link }));
 const info = new InfoPanel(app);
-const minimap = new Minimap(app, (id) => goTo(id));
+const minimap = new Minimap(app, {
+  onSelect: (id) => goTo(id),
+  onFloor: (floor) => goTo(floor.startScene),
+});
 const editor = new Editor(viewer, app);
 editor.onReload = () => reload();
 
@@ -54,12 +57,13 @@ async function goTo(sceneId, { via, view } = {}) {
     viewer.setContent(built.group);
     viewer.setView(nextView(previous, built, via, view));
     hotspots.setLinks(built.links);
-    minimap.render({ scenes: built.scenes, modules: built.modules, currentId: built.scene.id });
+    const tour = await loader.tour();
+    minimap.render({ tour, tourUrl: loader.tourUrl, scenes: built.scenes, modules: built.modules, current: built.scene });
     minimap.setHeading(viewer.view.yaw);
     editor.setScene(built);
     info.hide();
     titleEl.textContent = built.scene.title ?? built.scene.id;
-    document.title = `${built.scene.title ?? built.scene.id} · ${(await loader.tour()).title ?? 'Tour 360°'}`;
+    document.title = `${built.scene.title ?? built.scene.id} · ${tour.title ?? 'Tour 360°'}`;
     writeHash();
 
     previous?.dispose();
@@ -132,4 +136,5 @@ function wait(ms) {
 
 const start = readHash();
 const tour = await loader.tour();
+app.querySelector('.about').addEventListener('click', () => info.show({ title: tour.title, type: 'Sobre', info: tour.info }));
 goTo(start.scene ?? tour.startScene, { view: start.scene ? start : undefined });

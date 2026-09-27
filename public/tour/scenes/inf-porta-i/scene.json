@@ -1,0 +1,43 @@
+{
+  "title": "Porta I · Rua General Carneiro",
+  "floor": "inferior",
+  "position": {
+    "x": 64.2,
+    "y": -65.52,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#c7803a",
+          "label": "Piso · Porta I · Rua General Carneiro"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "inf-lig-i"
+    },
+    {
+      "to": "inf-porta-j"
+    },
+    {
+      "to": "inf-porta-h"
+    }
+  ],
+  "generated": true
+}

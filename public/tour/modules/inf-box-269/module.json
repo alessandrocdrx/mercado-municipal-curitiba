@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 269",
+  "placement": {
+    "floor": "inferior",
+    "x": 10.8,
+    "y": -10.74,
+    "z": 1.4,
+    "width": 2.07,
+    "height": 2.8,
+    "facing": 180,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(198, 30%, 38%)",
+      "label": "Box 269",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

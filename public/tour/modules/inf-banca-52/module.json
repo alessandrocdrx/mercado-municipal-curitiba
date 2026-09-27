@@ -1,0 +1,26 @@
+{
+  "type": "banca",
+  "title": "Banca 52",
+  "placement": {
+    "floor": "inferior",
+    "x": 66.72,
+    "y": -45.12,
+    "z": 1,
+    "width": 1.21,
+    "height": 2,
+    "facing": 0,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(140, 35%, 30%)",
+      "label": "Banca 52",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

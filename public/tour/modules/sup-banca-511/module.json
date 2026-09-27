@@ -1,0 +1,26 @@
+{
+  "type": "banca",
+  "title": "Banca 511",
+  "placement": {
+    "floor": "superior",
+    "x": 71.26,
+    "y": -19.46,
+    "z": 1,
+    "width": 2.32,
+    "height": 2,
+    "facing": 90,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(38, 35%, 30%)",
+      "label": "Banca 511",
+      "sublabel": "Pavimento superior"
+    }
+  },
+  "info": {
+    "location": "Pavimento superior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

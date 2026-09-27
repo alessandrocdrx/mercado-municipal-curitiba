@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 350",
+  "placement": {
+    "floor": "superior",
+    "x": 47.32,
+    "y": -23.59,
+    "z": 1.4,
+    "width": 2.58,
+    "height": 2.8,
+    "facing": 90,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(39, 30%, 38%)",
+      "label": "Box 350",
+      "sublabel": "Pavimento superior"
+    }
+  },
+  "info": {
+    "location": "Pavimento superior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

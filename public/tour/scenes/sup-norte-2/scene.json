@@ -1,0 +1,43 @@
+{
+  "title": "Setor 300 · norte centro",
+  "floor": "superior",
+  "position": {
+    "x": 27.3,
+    "y": -20.3,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#6b6f76",
+          "label": "Piso · Setor 300 · norte centro"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "sup-porta-c"
+    },
+    {
+      "to": "sup-norte-1"
+    },
+    {
+      "to": "sup-centro-1"
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Anexo · sudoeste",
+  "floor": "inferior",
+  "position": {
+    "x": 4.92,
+    "y": -21,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#8a5a9c",
+          "label": "Piso · Anexo · sudoeste"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "inf-anexo-4"
+    },
+    {
+      "to": "inf-anexo-6"
+    }
+  ],
+  "generated": true
+}

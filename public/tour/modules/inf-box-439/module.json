@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 439",
+  "placement": {
+    "floor": "inferior",
+    "x": 59.88,
+    "y": -63.32,
+    "z": 1.4,
+    "width": 2.32,
+    "height": 2.8,
+    "facing": 180,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(227, 30%, 38%)",
+      "label": "Box 439",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

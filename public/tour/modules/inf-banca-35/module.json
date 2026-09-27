@@ -1,0 +1,26 @@
+{
+  "type": "banca",
+  "title": "Banca 35",
+  "placement": {
+    "floor": "inferior",
+    "x": 58.38,
+    "y": -47.4,
+    "z": 1,
+    "width": 1.21,
+    "height": 2,
+    "facing": 90,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(81, 35%, 30%)",
+      "label": "Banca 35",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

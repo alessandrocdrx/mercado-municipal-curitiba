@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 10",
+  "placement": {
+    "floor": "inferior",
+    "x": 90.84,
+    "y": -38.22,
+    "z": 1.4,
+    "width": 2.21,
+    "height": 2.8,
+    "facing": 270,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(14, 30%, 38%)",
+      "label": "Box 10",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

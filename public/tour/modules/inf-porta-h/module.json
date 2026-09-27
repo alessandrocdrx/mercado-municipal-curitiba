@@ -1,0 +1,25 @@
+{
+  "type": "porta",
+  "title": "Porta H",
+  "placement": {
+    "floor": "inferior",
+    "x": 85.5,
+    "y": -67.62,
+    "z": 1.6,
+    "width": 3.2,
+    "height": 3.2,
+    "facing": 0,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "#1e3a5f",
+      "label": "Porta H",
+      "sublabel": "Rua General Carneiro"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior · Rua General Carneiro"
+  },
+  "generated": true
+}

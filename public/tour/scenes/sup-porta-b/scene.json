@@ -1,0 +1,37 @@
+{
+  "title": "Porta B · Av. Sete de Setembro",
+  "floor": "superior",
+  "position": {
+    "x": 11.55,
+    "y": -30.8,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#6b6f76",
+          "label": "Piso · Porta B · Av. Sete de Setembro"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "sup-sul-1"
+    }
+  ],
+  "generated": true
+}

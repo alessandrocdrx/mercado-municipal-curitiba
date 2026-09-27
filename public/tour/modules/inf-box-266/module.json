@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 266",
+  "placement": {
+    "floor": "inferior",
+    "x": 34.8,
+    "y": -24.48,
+    "z": 1.4,
+    "width": 2.21,
+    "height": 2.8,
+    "facing": 270,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(195, 30%, 38%)",
+      "label": "Box 266",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

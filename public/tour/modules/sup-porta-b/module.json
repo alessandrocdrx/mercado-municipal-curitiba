@@ -1,0 +1,25 @@
+{
+  "type": "porta",
+  "title": "Porta B",
+  "placement": {
+    "floor": "superior",
+    "x": 9.8,
+    "y": -30.8,
+    "z": 1.6,
+    "width": 3.2,
+    "height": 3.2,
+    "facing": 90,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "#1e3a5f",
+      "label": "Porta B",
+      "sublabel": "Avenida Sete de Setembro"
+    }
+  },
+  "info": {
+    "location": "Pavimento superior · Avenida Sete de Setembro"
+  },
+  "generated": true
+}

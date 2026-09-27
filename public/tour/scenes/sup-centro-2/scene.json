@@ -1,0 +1,43 @@
+{
+  "title": "Setor 300 · entre ilhas leste",
+  "floor": "superior",
+  "position": {
+    "x": 40.46,
+    "y": -26.39,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#6b6f76",
+          "label": "Piso · Setor 300 · entre ilhas leste"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "sup-porta-c"
+    },
+    {
+      "to": "sup-escada"
+    },
+    {
+      "to": "sup-sul-3"
+    }
+  ],
+  "generated": true
+}

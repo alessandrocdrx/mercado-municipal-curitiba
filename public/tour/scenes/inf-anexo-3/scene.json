@@ -1,0 +1,40 @@
+{
+  "title": "Anexo · norte",
+  "floor": "inferior",
+  "position": {
+    "x": 19.8,
+    "y": -12.78,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#8a5a9c",
+          "label": "Piso · Anexo · norte"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "inf-anexo-2"
+    },
+    {
+      "to": "inf-anexo-4"
+    }
+  ],
+  "generated": true
+}

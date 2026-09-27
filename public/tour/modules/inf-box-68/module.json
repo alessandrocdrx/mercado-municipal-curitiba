@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 68",
+  "placement": {
+    "floor": "inferior",
+    "x": 69.6,
+    "y": -57.96,
+    "z": 1.4,
+    "width": 2.24,
+    "height": 2.8,
+    "facing": 0,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(177, 30%, 38%)",
+      "label": "Box 68",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

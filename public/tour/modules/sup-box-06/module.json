@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 06",
+  "placement": {
+    "floor": "superior",
+    "x": 63.28,
+    "y": -86.1,
+    "z": 1.4,
+    "width": 4.51,
+    "height": 2.8,
+    "facing": 270,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(349, 30%, 38%)",
+      "label": "Box 06",
+      "sublabel": "Pavimento superior"
+    }
+  },
+  "info": {
+    "location": "Pavimento superior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

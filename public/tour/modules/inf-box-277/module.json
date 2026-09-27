@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 277",
+  "placement": {
+    "floor": "inferior",
+    "x": 35.36,
+    "y": -15.56,
+    "z": 1.4,
+    "width": 2.56,
+    "height": 2.8,
+    "facing": 270,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(227, 30%, 38%)",
+      "label": "Box 277",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

@@ -1,0 +1,26 @@
+{
+  "type": "banca",
+  "title": "Banca 37",
+  "placement": {
+    "floor": "inferior",
+    "x": 61.92,
+    "y": -52.56,
+    "z": 1,
+    "width": 1.21,
+    "height": 2,
+    "facing": 180,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(83, 35%, 30%)",
+      "label": "Banca 37",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

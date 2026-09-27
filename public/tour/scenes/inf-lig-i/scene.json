@@ -1,0 +1,40 @@
+{
+  "title": "Passagem para a Porta I",
+  "floor": "inferior",
+  "position": {
+    "x": 66,
+    "y": -60.18,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#c7803a",
+          "label": "Piso · Passagem para a Porta I"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "inf-c-04"
+    },
+    {
+      "to": "inf-porta-i"
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 457",
+  "placement": {
+    "floor": "inferior",
+    "x": 114.15,
+    "y": -50.17,
+    "z": 1.4,
+    "width": 2.51,
+    "height": 2.8,
+    "facing": 250,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(287, 30%, 38%)",
+      "label": "Box 457",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Anexo · noroeste",
+  "floor": "inferior",
+  "position": {
+    "x": 5.28,
+    "y": -12.9,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#8a5a9c",
+          "label": "Piso · Anexo · noroeste"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "inf-anexo-3"
+    },
+    {
+      "to": "inf-anexo-5"
+    }
+  ],
+  "generated": true
+}

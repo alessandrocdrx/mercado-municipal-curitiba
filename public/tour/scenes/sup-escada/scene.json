@@ -1,0 +1,55 @@
+{
+  "title": "Escadas · pavimento superior",
+  "floor": "superior",
+  "position": {
+    "x": 32.9,
+    "y": -30.8,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#6b6f76",
+          "label": "Piso · Escadas · pavimento superior"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "sup-centro-1"
+    },
+    {
+      "to": "sup-centro-2"
+    },
+    {
+      "to": "sup-sul-1"
+    },
+    {
+      "to": "sup-sul-3"
+    },
+    {
+      "to": "sup-rosa-1"
+    },
+    {
+      "to": "inf-a-00",
+      "yaw": 180,
+      "pitch": -20,
+      "label": "Escada · descer ao pavimento inferior"
+    }
+  ],
+  "generated": true
+}

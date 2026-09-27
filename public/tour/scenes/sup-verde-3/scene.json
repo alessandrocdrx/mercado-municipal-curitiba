@@ -1,0 +1,40 @@
+{
+  "title": "Área verde · sul",
+  "floor": "superior",
+  "position": {
+    "x": 63,
+    "y": -44.8,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#2f7d32",
+          "label": "Piso · Área verde · sul"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "sup-rosa-2"
+    },
+    {
+      "to": "sup-verde-1"
+    }
+  ],
+  "generated": true
+}

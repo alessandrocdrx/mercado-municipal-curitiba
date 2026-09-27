@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 20b",
+  "placement": {
+    "floor": "inferior",
+    "x": 108.3,
+    "y": -52.38,
+    "z": 1.4,
+    "width": 3.04,
+    "height": 2.8,
+    "facing": 180,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(53, 30%, 38%)",
+      "label": "Box 20b",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

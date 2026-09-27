@@ -1,0 +1,46 @@
+{
+  "title": "Corredor B (amarelo) · 4",
+  "floor": "inferior",
+  "position": {
+    "x": 59.7,
+    "y": -42.3,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#c9b43a",
+          "label": "Piso · Corredor B (amarelo) · 4"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "inf-b-02"
+    },
+    {
+      "to": "inf-b-04"
+    },
+    {
+      "to": "inf-a-03"
+    },
+    {
+      "to": "inf-c-03"
+    }
+  ],
+  "generated": true
+}

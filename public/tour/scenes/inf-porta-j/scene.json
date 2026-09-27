@@ -1,0 +1,43 @@
+{
+  "title": "Porta J · Rua General Carneiro",
+  "floor": "inferior",
+  "position": {
+    "x": 45.9,
+    "y": -65.28,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#c7803a",
+          "label": "Piso · Porta J · Rua General Carneiro"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "inf-lig-j"
+    },
+    {
+      "to": "inf-sul-00"
+    },
+    {
+      "to": "inf-porta-i"
+    }
+  ],
+  "generated": true
+}

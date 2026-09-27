@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 437",
+  "placement": {
+    "floor": "inferior",
+    "x": 54.84,
+    "y": -63.25,
+    "z": 1.4,
+    "width": 2.32,
+    "height": 2.8,
+    "facing": 180,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(225, 30%, 38%)",
+      "label": "Box 437",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

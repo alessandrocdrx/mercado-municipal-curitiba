@@ -125,6 +125,7 @@ function collectLayers(scene, modules) {
     for (const module of modules) {
       const p = module.placement;
       if (!isWorldPlacement(p) || module.enabled === false || explicit.has(module.id) || hidden.has(module.id)) continue;
+      if ((p.floor ?? null) !== (scene.floor ?? null)) continue; // só módulos do mesmo pavimento
       const dist = Math.hypot(p.x - scene.position.x, p.y - scene.position.y);
       if (dist <= radius) out.push({ module, placement: p });
     }
@@ -142,7 +143,7 @@ async function buildModuleMesh(module, placement, scene) {
   const baseUrl = module.inline ? scene._baseUrl : module._baseUrl;
   const media = module.media ?? {};
   const tex = await textureFor(media, {
-    baseUrl, version: module.version, aspect, fallbackLabel: module.title ?? module.id,
+    baseUrl, version: module.version, aspect, fallbackLabel: module.title ?? module.id, resolution: 256,
   });
   const material = new THREE.MeshBasicMaterial({
     map: tex,
@@ -167,7 +168,8 @@ function resolveLinks(scene, scenes) {
   return scene.links.map((link) => {
     const target = byId.get(link.to);
     let yaw = link.yaw;
-    if (yaw === undefined && scene.position && target?.position) {
+    const sameFloor = (scene.floor ?? null) === (target?.floor ?? null);
+    if (yaw === undefined && sameFloor && scene.position && target?.position) {
       yaw = wrapDeg((scene.northYaw ?? 0) + bearing(scene.position, target.position));
     }
     return { pitch: -25, ...link, yaw: yaw ?? 0, label: link.label ?? target?.title ?? link.to };

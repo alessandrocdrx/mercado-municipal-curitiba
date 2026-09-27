@@ -8,6 +8,7 @@
 export class TourLoader {
   constructor(tourUrl) {
     this.tourUrl = new URL(tourUrl, window.location.href).toString();
+    window.__TOUR_ROOT__ = new URL('.', this.tourUrl).href;
     this._cache = new Map();
   }
 
@@ -20,7 +21,8 @@ export class TourLoader {
     const tour = await this._json(this.tourUrl);
     tour.scenes ??= [];
     tour.modules ??= [];
-    tour.startScene ??= tour.scenes[0];
+    tour.floors ??= [];
+    tour.startScene ??= tour.floors[0]?.startScene ?? tour.scenes[0];
     return tour;
   }
 

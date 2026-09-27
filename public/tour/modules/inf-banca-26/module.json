@@ -1,0 +1,26 @@
+{
+  "type": "banca",
+  "title": "Banca 26",
+  "placement": {
+    "floor": "inferior",
+    "x": 56.22,
+    "y": -50.1,
+    "z": 1,
+    "width": 1.21,
+    "height": 2,
+    "facing": 270,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(51, 35%, 30%)",
+      "label": "Banca 26",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

@@ -13,9 +13,33 @@ npm run validate   # confere links, módulos e arquivos de mídia
 npm run build      # gera o site estático em dist/ (pode ir para qualquer hospedagem)
 ```
 
-O repositório já vem com um tour de exemplo, com 5 pontos, 8 boxes, teto, piso,
-mural e uma placa. Tudo usa imagens provisórias geradas na hora, então funciona
-antes de existir qualquer foto.
+As fotos 360° ainda não existem: cada ponto usa uma imagem provisória com a cor
+do corredor no piso, até que as fotos reais sejam adicionadas.
+
+## Planta real (já aplicada)
+
+O tour foi montado sobre as **plantas afixadas no próprio mercado** (fotos em
+`public/tour/plantas/`), digitalizadas em `scripts/planta/dados-planta.mjs`:
+
+- **Pavimento inferior:** corredores A (azul), B (amarelo) e C (verde), ilhas
+  de bancas 01–102, boxes 02–80, 266–310, 354–378 e 429–458, anexo lilás,
+  rampa oeste e portas E, G, H, I e J.
+- **Pavimento superior:** setor 311–353, área rosa (01–19), área verde
+  (501–522) e portas B, C e D.
+- **62 pontos de vista** ligados por setas, e a escada ligando os dois pavimentos.
+- **370 módulos** (boxes, bancas e portas), cada um na sua pasta.
+
+A escala (metros por pixel) foi **estimada** pelo tamanho típico de um box.
+Com uma medida real, ajuste `escala` em `dados-planta.mjs` e rode:
+
+```bash
+npm run planta     # regenera posições/links sem apagar o que foi preenchido à mão
+```
+
+Nome, categoria, fotos e horário de cada box ainda **não** foram cadastrados:
+não há base pública com esses dados por número de box. Preencha `title`,
+`info` e `media` em `public/tour/modules/inf-box-XX/module.json`. O gerador
+preserva esses campos.
 
 ## Como funciona (3 camadas)
 

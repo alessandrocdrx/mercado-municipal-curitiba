@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 369",
+  "placement": {
+    "floor": "inferior",
+    "x": 31.2,
+    "y": -51.48,
+    "z": 1.4,
+    "width": 2.51,
+    "height": 2.8,
+    "facing": 180,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(79, 30%, 38%)",
+      "label": "Box 369",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

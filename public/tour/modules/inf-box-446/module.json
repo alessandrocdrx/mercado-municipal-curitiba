@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 446",
+  "placement": {
+    "floor": "inferior",
+    "x": 82.02,
+    "y": -63.84,
+    "z": 1.4,
+    "width": 2.31,
+    "height": 2.8,
+    "facing": 180,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(255, 30%, 38%)",
+      "label": "Box 446",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

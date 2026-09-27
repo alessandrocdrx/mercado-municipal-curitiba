@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 433",
+  "placement": {
+    "floor": "inferior",
+    "x": 40.32,
+    "y": -62.76,
+    "z": 1.4,
+    "width": 2.21,
+    "height": 2.8,
+    "facing": 180,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(221, 30%, 38%)",
+      "label": "Box 433",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 54",
+  "placement": {
+    "floor": "inferior",
+    "x": 24.65,
+    "y": -54.54,
+    "z": 1.4,
+    "width": 2.65,
+    "height": 2.8,
+    "facing": 90,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(142, 30%, 38%)",
+      "label": "Box 54",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

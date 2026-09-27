@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 328",
+  "placement": {
+    "floor": "superior",
+    "x": 51.34,
+    "y": -30.38,
+    "z": 1.4,
+    "width": 2.32,
+    "height": 2.8,
+    "facing": 270,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(314, 30%, 38%)",
+      "label": "Box 328",
+      "sublabel": "Pavimento superior"
+    }
+  },
+  "info": {
+    "location": "Pavimento superior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

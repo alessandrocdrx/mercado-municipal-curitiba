@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 514",
+  "placement": {
+    "floor": "superior",
+    "x": 75.25,
+    "y": -18.65,
+    "z": 1.4,
+    "width": 3.32,
+    "height": 2.8,
+    "facing": 270,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(41, 30%, 38%)",
+      "label": "Box 514",
+      "sublabel": "Pavimento superior"
+    }
+  },
+  "info": {
+    "location": "Pavimento superior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

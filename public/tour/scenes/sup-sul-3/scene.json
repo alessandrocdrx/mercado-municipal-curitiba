@@ -1,0 +1,46 @@
+{
+  "title": "Setor 300 · sul leste",
+  "floor": "superior",
+  "position": {
+    "x": 48.65,
+    "y": -31.15,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#6b6f76",
+          "label": "Piso · Setor 300 · sul leste"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "sup-norte-3"
+    },
+    {
+      "to": "sup-centro-2"
+    },
+    {
+      "to": "sup-escada"
+    },
+    {
+      "to": "sup-rosa-2"
+    }
+  ],
+  "generated": true
+}

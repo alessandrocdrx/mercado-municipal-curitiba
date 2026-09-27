@@ -11,6 +11,7 @@ const root = path.resolve(process.argv[2] ?? 'public/tour');
 const FACES = new Set(['front', 'right', 'back', 'left', 'up', 'down']);
 const errors = [];
 const warnings = [];
+const semFoto = [];
 
 const readJson = (file) => {
   try {
@@ -30,6 +31,10 @@ const checkMedia = (media, dir, where) => {
 const tour = readJson(path.join(root, 'tour.json'));
 if (!tour) finish();
 
+for (const floor of tour.floors ?? []) {
+  checkMedia(floor.plan, root, `tour.json pavimento ${floor.id}`);
+  if (!(tour.scenes ?? []).includes(floor.startScene)) errors.push(`tour.json: pavimento ${floor.id} começa em cena inexistente "${floor.startScene}"`);
+}
 const sceneIds = new Set(tour.scenes ?? []);
 const moduleIds = new Set(tour.modules ?? []);
 if (!sceneIds.has(tour.startScene ?? tour.scenes?.[0])) errors.push(`tour.json: startScene "${tour.startScene}" não está em "scenes"`);
@@ -60,8 +65,8 @@ for (const id of sceneIds) {
       if (!FACES.has(face)) errors.push(`${where}: face "${face}" inválida (use ${[...FACES].join(', ')})`);
       checkMedia(typeof media === 'string' ? { src: media } : media, dir, `${where} face ${face}`);
     }
-    const missing = [...FACES].filter((f) => !base.faces?.[f]);
-    if (missing.length) warnings.push(`${where}: faces sem foto (placeholder): ${missing.join(', ')}`);
+    const missing = [...FACES].filter((f) => !(typeof base.faces?.[f] === 'string' || base.faces?.[f]?.src));
+    if (missing.length) semFoto.push(id);
   } else {
     errors.push(`${where}: base.type "${base.type}" desconhecido (use "cube" ou "equirect")`);
   }
@@ -91,6 +96,7 @@ for (const [kind, set] of [['scenes', sceneIds], ['modules', moduleIds]]) {
 finish();
 
 function finish() {
+  if (semFoto.length) console.log(`info: ${semFoto.length} cena(s) ainda sem foto 360° (usando imagem provisória)`);
   for (const w of warnings) console.log(`aviso: ${w}`);
   for (const e of errors) console.log(`ERRO:  ${e}`);
   console.log(errors.length ? `\n${errors.length} erro(s).` : `\nTour OK (${warnings.length} aviso(s)).`);

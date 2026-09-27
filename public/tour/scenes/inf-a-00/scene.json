@@ -1,0 +1,49 @@
+{
+  "title": "Corredor A (azul) · 1",
+  "floor": "inferior",
+  "position": {
+    "x": 28.2,
+    "y": -33.12,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#2f6fb3",
+          "label": "Piso · Corredor A (azul) · 1"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "inf-a-01"
+    },
+    {
+      "to": "inf-b-00"
+    },
+    {
+      "to": "inf-anexo-1"
+    },
+    {
+      "to": "sup-escada",
+      "yaw": 160,
+      "pitch": -20,
+      "label": "Escada · subir ao pavimento superior"
+    }
+  ],
+  "generated": true
+}

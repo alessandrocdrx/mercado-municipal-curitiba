@@ -16,11 +16,24 @@ export class InfoPanel {
     this.el.append(close, title);
     if (module.type) this.el.append(element('p', module.type, 'info-type'));
     if (info.description) this.el.append(element('p', info.description));
-    const rows = [['Horário', info.hours], ['Telefone', info.phone], ['Categoria', info.category]].filter(([, v]) => v);
+    const rows = [['Endereço', info.address], ['Horário', info.hours], ['Telefone', info.phone], ['Categoria', info.category], ['Localização', info.location]].filter(([, v]) => v);
     if (rows.length) {
       const dl = document.createElement('dl');
       for (const [k, v] of rows) dl.append(element('dt', k), element('dd', v));
       this.el.append(dl);
+    }
+    if (info.note) this.el.append(element('p', info.note, 'info-version'));
+    if (info.sources?.length) {
+      const list = document.createElement('ul');
+      list.className = 'info-sources';
+      for (const src of info.sources) {
+        const a = element('a', src.title);
+        Object.assign(a, { href: src.url, target: '_blank', rel: 'noopener' });
+        const li = document.createElement('li');
+        li.append(a);
+        list.append(li);
+      }
+      this.el.append(element('p', 'Fontes', 'info-type'), list);
     }
     if (info.url) {
       const a = element('a', 'Saiba mais');

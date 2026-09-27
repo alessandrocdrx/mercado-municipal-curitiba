@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 42",
+  "placement": {
+    "floor": "inferior",
+    "x": 34.63,
+    "y": -30.36,
+    "z": 1.4,
+    "width": 2.16,
+    "height": 2.8,
+    "facing": 180,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(109, 30%, 38%)",
+      "label": "Box 42",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

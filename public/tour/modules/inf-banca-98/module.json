@@ -1,0 +1,26 @@
+{
+  "type": "banca",
+  "title": "Banca 98",
+  "placement": {
+    "floor": "inferior",
+    "x": 85.98,
+    "y": -34.44,
+    "z": 1,
+    "width": 1.21,
+    "height": 2,
+    "facing": 0,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(270, 35%, 30%)",
+      "label": "Banca 98",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

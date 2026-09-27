@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 443",
+  "placement": {
+    "floor": "inferior",
+    "x": 74.5,
+    "y": -63.73,
+    "z": 1.4,
+    "width": 2.31,
+    "height": 2.8,
+    "facing": 180,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(252, 30%, 38%)",
+      "label": "Box 443",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

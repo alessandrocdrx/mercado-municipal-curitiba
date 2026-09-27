@@ -1,0 +1,40 @@
+{
+  "title": "Área rosa · oeste",
+  "floor": "superior",
+  "position": {
+    "x": 32.2,
+    "y": -38.15,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#c98a8a",
+          "label": "Piso · Área rosa · oeste"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "sup-escada"
+    },
+    {
+      "to": "sup-rosa-2"
+    }
+  ],
+  "generated": true
+}

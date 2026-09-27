@@ -1,0 +1,46 @@
+{
+  "title": "Corredor A (azul) · 6",
+  "floor": "inferior",
+  "position": {
+    "x": 78,
+    "y": -33.12,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#2f6fb3",
+          "label": "Piso · Corredor A (azul) · 6"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "inf-a-04"
+    },
+    {
+      "to": "inf-a-06"
+    },
+    {
+      "to": "inf-b-05"
+    },
+    {
+      "to": "inf-porta-e"
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 332",
+  "placement": {
+    "floor": "superior",
+    "x": 15,
+    "y": -21.56,
+    "z": 1.4,
+    "width": 2.32,
+    "height": 2.8,
+    "facing": 90,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(339, 30%, 38%)",
+      "label": "Box 332",
+      "sublabel": "Pavimento superior"
+    }
+  },
+  "info": {
+    "location": "Pavimento superior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

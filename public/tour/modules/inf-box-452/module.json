@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 452",
+  "placement": {
+    "floor": "inferior",
+    "x": 101.97,
+    "y": -64.21,
+    "z": 1.4,
+    "width": 2.35,
+    "height": 2.8,
+    "facing": 180,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(282, 30%, 38%)",
+      "label": "Box 452",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

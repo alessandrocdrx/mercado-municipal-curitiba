@@ -1,0 +1,46 @@
+{
+  "title": "Área rosa · centro",
+  "floor": "superior",
+  "position": {
+    "x": 49,
+    "y": -49,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#c98a8a",
+          "label": "Piso · Área rosa · centro"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "sup-sul-3"
+    },
+    {
+      "to": "sup-rosa-1"
+    },
+    {
+      "to": "sup-rosa-3"
+    },
+    {
+      "to": "sup-verde-3"
+    }
+  ],
+  "generated": true
+}

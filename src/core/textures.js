@@ -13,7 +13,7 @@ const VIDEO_EXT = /\.(mp4|webm|ogv)(\?|$)/i;
  * baseUrl: pasta do JSON que declarou a mídia (src é relativo a ela)
  * version: string usada para invalidar cache do navegador quando o arquivo muda
  */
-export function textureFor(media, { baseUrl, version, aspect = 1, fallbackLabel = '', labelScale = 1 } = {}) {
+export function textureFor(media, { baseUrl, version, aspect = 1, fallbackLabel = '', labelScale = 1, resolution = 1024 } = {}) {
   if (media?.src) {
     const url = resolveUrl(media.src, baseUrl, version);
     if (!cache.has(url)) {
@@ -26,11 +26,15 @@ export function textureFor(media, { baseUrl, version, aspect = 1, fallbackLabel 
     }
     return cache.get(url);
   }
-  return Promise.resolve(placeholderTexture({ label: fallbackLabel, labelScale, ...media?.placeholder, aspect }));
+  return Promise.resolve(placeholderTexture({ label: fallbackLabel, labelScale, resolution, ...media?.placeholder, aspect }));
 }
 
 export function resolveUrl(src, baseUrl, version) {
   const url = new URL(src, new URL(baseUrl, window.location.href));
+  // Build de arquivo único: imagens do tour embutidas como data: URI.
+  const root = window.__TOUR_ROOT__;
+  const embedded = root && url.href.startsWith(root) && window.__TOUR_ASSETS__?.[url.href.slice(root.length)];
+  if (embedded) return embedded;
   if (version) url.searchParams.set('v', version);
   return url.toString();
 }
@@ -81,9 +85,9 @@ function loadVideo(url) {
 }
 
 /** Textura provisória: cor sólida, grade de 1 m aprox. e um rótulo. */
-export function placeholderTexture({ color = '#3b4252', label = '', sublabel = '', aspect = 1, grid = 8, labelScale = 1 } = {}) {
-  const w = 1024;
-  const h = Math.max(64, Math.round(w / aspect));
+export function placeholderTexture({ color = '#3b4252', label = '', sublabel = '', aspect = 1, grid = 8, labelScale = 1, resolution = 1024 } = {}) {
+  const w = resolution;
+  const h = Math.max(32, Math.round(w / aspect));
   const canvas = document.createElement('canvas');
   canvas.width = w;
   canvas.height = h;
@@ -104,7 +108,7 @@ export function placeholderTexture({ color = '#3b4252', label = '', sublabel = '
   ctx.fillStyle = '#fff';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
-  const size = Math.min(h * 0.18, 96) * labelScale;
+  const size = Math.min(h * 0.18, w * 0.094) * labelScale;
   ctx.font = `600 ${size}px system-ui, sans-serif`;
   ctx.fillText(label, w / 2, h / 2 - (sublabel ? size * 0.45 : 0), w * 0.9);
   if (sublabel) {

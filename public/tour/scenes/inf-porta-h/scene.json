@@ -1,0 +1,43 @@
+{
+  "title": "Porta H · Rua General Carneiro",
+  "floor": "inferior",
+  "position": {
+    "x": 85.5,
+    "y": -66,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#c7803a",
+          "label": "Piso · Porta H · Rua General Carneiro"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "inf-lig-h"
+    },
+    {
+      "to": "inf-porta-i"
+    },
+    {
+      "to": "inf-sul-04"
+    }
+  ],
+  "generated": true
+}

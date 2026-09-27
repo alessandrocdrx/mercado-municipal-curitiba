@@ -1,0 +1,37 @@
+{
+  "title": "Rampa oeste",
+  "floor": "inferior",
+  "position": {
+    "x": 21.6,
+    "y": -42.3,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#8a4a4a",
+          "label": "Piso · Rampa oeste"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "inf-b-00"
+    }
+  ],
+  "generated": true
+}

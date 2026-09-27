@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 448",
+  "placement": {
+    "floor": "inferior",
+    "x": 91.77,
+    "y": -64.01,
+    "z": 1.4,
+    "width": 2.35,
+    "height": 2.8,
+    "facing": 180,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(257, 30%, 38%)",
+      "label": "Box 448",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

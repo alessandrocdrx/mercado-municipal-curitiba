@@ -1,0 +1,26 @@
+{
+  "type": "banca",
+  "title": "Banca 74",
+  "placement": {
+    "floor": "inferior",
+    "x": 75.24,
+    "y": -50.1,
+    "z": 1,
+    "width": 1.21,
+    "height": 2,
+    "facing": 270,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(204, 35%, 30%)",
+      "label": "Banca 74",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

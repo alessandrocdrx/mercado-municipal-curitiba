@@ -1,0 +1,40 @@
+{
+  "title": "Corredor C (verde) · 2",
+  "floor": "inferior",
+  "position": {
+    "x": 37.2,
+    "y": -54.3,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#3f8f3a",
+          "label": "Piso · Corredor C (verde) · 2"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "inf-c-00"
+    },
+    {
+      "to": "inf-c-02"
+    }
+  ],
+  "generated": true
+}

@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 57",
+  "placement": {
+    "floor": "inferior",
+    "x": 33.12,
+    "y": -57.06,
+    "z": 1.4,
+    "width": 2.21,
+    "height": 2.8,
+    "facing": 0,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(145, 30%, 38%)",
+      "label": "Box 57",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}

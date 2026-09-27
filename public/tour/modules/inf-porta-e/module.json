@@ -1,0 +1,25 @@
+{
+  "type": "porta",
+  "title": "Porta E",
+  "placement": {
+    "floor": "inferior",
+    "x": 78,
+    "y": -27.12,
+    "z": 1.6,
+    "width": 3.2,
+    "height": 3.2,
+    "facing": 180,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "#1e3a5f",
+      "label": "Porta E",
+      "sublabel": "Rua da Paz"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior · Rua da Paz"
+  },
+  "generated": true
+}

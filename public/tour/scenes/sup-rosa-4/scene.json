@@ -1,0 +1,37 @@
+{
+  "title": "Área rosa · sul",
+  "floor": "superior",
+  "position": {
+    "x": 53.2,
+    "y": -79.1,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#c98a8a",
+          "label": "Piso · Área rosa · sul"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "sup-rosa-3"
+    }
+  ],
+  "generated": true
+}

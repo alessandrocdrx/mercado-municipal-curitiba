@@ -1,0 +1,37 @@
+{
+  "title": "Porta E · Rua da Paz",
+  "floor": "inferior",
+  "position": {
+    "x": 78,
+    "y": -28.2,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#6b6f76",
+          "label": "Piso · Porta E · Rua da Paz"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "inf-a-05"
+    }
+  ],
+  "generated": true
+}

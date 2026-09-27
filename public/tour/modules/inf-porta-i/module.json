@@ -1,0 +1,25 @@
+{
+  "type": "porta",
+  "title": "Porta I",
+  "placement": {
+    "floor": "inferior",
+    "x": 64.2,
+    "y": -67.02,
+    "z": 1.6,
+    "width": 3.2,
+    "height": 3.2,
+    "facing": 0,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "#1e3a5f",
+      "label": "Porta I",
+      "sublabel": "Rua General Carneiro"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior · Rua General Carneiro"
+  },
+  "generated": true
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Área verde · leste",
+  "floor": "superior",
+  "position": {
+    "x": 73.85,
+    "y": -32.9,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 14,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#3a3d42"
+    },
+    "faces": {
+      "down": {
+        "placeholder": {
+          "color": "#2f7d32",
+          "label": "Piso · Área verde · leste"
+        }
+      },
+      "up": {
+        "placeholder": {
+          "color": "#55595f",
+          "label": "Teto (aguardando foto)"
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "to": "sup-verde-1"
+    }
+  ],
+  "generated": true
+}

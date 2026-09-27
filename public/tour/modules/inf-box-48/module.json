@@ -1,0 +1,26 @@
+{
+  "type": "box",
+  "title": "Box 48",
+  "placement": {
+    "floor": "inferior",
+    "x": 25.75,
+    "y": -34.86,
+    "z": 1.4,
+    "width": 2.26,
+    "height": 2.8,
+    "facing": 90,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "hsl(115, 30%, 38%)",
+      "label": "Box 48",
+      "sublabel": "Pavimento inferior"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior",
+    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+  },
+  "generated": true
+}
