@@ -1,6 +1,6 @@
 :root {
   --bg: #111;
-  --panel: rgba(20, 22, 26, 0.88);
+  --panel: rgba(20, 22, 26, 0.95);
   --text: #f3f3f3;
   --muted: #b8bcc4;
   --accent: #ffc94d;
@@ -10,7 +10,7 @@
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html, body { margin: 0; height: 100%; background: var(--bg); overflow: hidden; }
-#app { position: fixed; inset: 0; }
+#app { position: fixed; inset: 0; color: var(--text); }
 .stage, .overlay { position: absolute; inset: 0; }
 .stage canvas { display: block; cursor: grab; }
 .stage canvas:active { cursor: grabbing; }

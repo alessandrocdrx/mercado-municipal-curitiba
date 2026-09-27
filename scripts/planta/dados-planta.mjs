@@ -167,9 +167,14 @@ const CINZA = '#6b6f76';
 
 export const CENAS = {
   inferior: [
-    ...[470, 620, 835, 995, 1150, 1300, 1460].map((x, i) => ({ id: `inf-a-${n(i)}`, titulo: `Corredor A (azul) · ${i + 1}`, em: [x, 552], cor: AZUL })),
-    ...[470, 620, 835, 995, 1150, 1310, 1470, 1620, 1780, 1905].map((x, i) => ({ id: `inf-b-${n(i)}`, titulo: `Corredor B (amarelo) · ${i + 1}`, em: [x, 705], cor: AMARELO })),
-    ...[470, 620, 835, 995, 1150, 1310, 1470, 1620, 1780].map((x, i) => ({ id: `inf-c-${n(i)}`, titulo: `Corredor C (verde) · ${i + 1}`, em: [x, 905], cor: VERDE })),
+    // [x, y] no centro do corredor: y a meio caminho entre as frentes dos boxes/bancas
+    // dos dois lados (o corredor B se alarga a leste, depois das ilhas de bancas).
+    ...[[470, 541], [620, 541], [835, 541], [995, 541], [1150, 541], [1300, 541], [1460, 542]]
+      .map((em, i) => ({ id: `inf-a-${n(i)}`, titulo: `Corredor A (azul) · ${i + 1}`, em, cor: AZUL })),
+    ...[[470, 723], [620, 724], [835, 724], [995, 724], [1150, 724], [1310, 724], [1470, 732], [1620, 740], [1780, 740], [1905, 740]]
+      .map((em, i) => ({ id: `inf-b-${n(i)}`, titulo: `Corredor B (amarelo) · ${i + 1}`, em, cor: AMARELO })),
+    ...[[470, 908], [620, 915], [835, 918], [995, 918], [1150, 920], [1310, 921], [1470, 923], [1620, 925], [1780, 925]]
+      .map((em, i) => ({ id: `inf-c-${n(i)}`, titulo: `Corredor C (verde) · ${i + 1}`, em, cor: VERDE })),
     { id: 'inf-porta-e', titulo: 'Porta E · Rua da Paz', em: [1300, 470], cor: CINZA },
     { id: 'inf-lig-j', titulo: 'Passagem para a Porta J', em: [770, 1000], cor: LARANJA },
     { id: 'inf-lig-i', titulo: 'Passagem para a Porta I', em: [1100, 1003], cor: LARANJA },
