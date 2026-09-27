@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Manga Rosa",
+  "title": "Box 60",
   "placement": {
     "floor": "inferior",
     "x": 40.32,
@@ -13,17 +13,15 @@
   },
   "media": {
     "placeholder": {
-      "color": "#5d5a6e",
-      "label": "Manga Rosa",
-      "sublabel": "Outros · Box 60"
+      "color": "#44474d",
+      "label": "Box 60",
+      "sublabel": "comerciante não identificado"
     }
   },
   "info": {
-    "category": "Outros",
-    "location": "Pavimento inferior · Box 60",
-    "phone": "(41) 98477-8335",
-    "note": "A lista cita boxes 59 e 60; o 59 também aparece como Empório Francisca. Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
+    "location": "Pavimento inferior",
+    "description": "Comerciante deste espaço não identificado no site oficial."
   },
   "generated": true,
-  "autoHash": "65c75ad7562d"
+  "autoHash": "b463eddc11be"
 }

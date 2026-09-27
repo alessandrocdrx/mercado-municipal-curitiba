@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 30",
+  "title": "Banca Tutumi",
   "placement": {
     "floor": "inferior",
     "x": 56.22,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 30",
-      "sublabel": "comerciante não identificado"
+      "color": "#3c7a34",
+      "label": "Banca Tutumi",
+      "sublabel": "Hortifrúti · Banca 30"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Hortifrúti",
+    "location": "Pavimento inferior · Banca 22, 30",
+    "phone": "(41) 3264-4274 · (41) 99279-0911",
+    "note": "A lista diz \"Box 22 e 30\"; foi posta nas bancas 22 e 30 do salão. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "bd62d0a11de3"
+  "autoHash": "9e692e0ef7e7"
 }

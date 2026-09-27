@@ -179,6 +179,13 @@ for (const [dir, keep] of [['scenes', sceneIds], ['modules', moduleIds]]) {
 }
 
 verificaLigacoes();
+for (const com of COMERCIANTES) {
+  const faltando = com.boxes.filter((id) => !moduleIds.includes(id));
+  if (faltando.length) {
+    console.error(`${com.nome}: box inexistente na planta: ${faltando.join(', ')}`);
+    process.exit(1);
+  }
+}
 console.log(`${sceneIds.length} cenas e ${moduleIds.length} módulos gerados em ${ROOT}`);
 
 /**

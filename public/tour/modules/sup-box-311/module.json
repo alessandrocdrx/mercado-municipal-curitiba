@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 311",
+  "title": "Le Caffés Especiais",
   "placement": {
     "floor": "superior",
     "x": 12.74,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 311",
-      "sublabel": "comerciante não identificado"
+      "color": "#b0561d",
+      "label": "Le Caffés Especiais",
+      "sublabel": "Lanchonete e restaurante · Box 311"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Lanchonete e restaurante",
+    "location": "Pavimento superior · Box 311",
+    "phone": "(41) 99925-5508",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "a84a0e9c4843"
+  "autoHash": "f7341b5d4d54"
 }

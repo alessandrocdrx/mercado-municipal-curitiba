@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 327",
+  "title": "Sapataria Rápida Capricho",
   "placement": {
     "floor": "superior",
     "x": 51.44,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 327",
-      "sublabel": "comerciante não identificado"
+      "color": "#4a5a73",
+      "label": "Sapataria Rápida Capricho",
+      "sublabel": "Variedades e serviços · Box 327"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento superior · Box 327",
+    "phone": "(41) 3026-7082 · (41) 99591-5098",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "1f91eb28dfb9"
+  "autoHash": "b362b8c71302"
 }

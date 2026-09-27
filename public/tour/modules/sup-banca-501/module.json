@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 501",
+  "title": "Nico's Empório Orgânico",
   "placement": {
     "floor": "superior",
     "x": 67.83,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 501",
-      "sublabel": "comerciante não identificado"
+      "color": "#2f7d32",
+      "label": "Nico's Empório Orgânico",
+      "sublabel": "Orgânicos · Banca 501"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Orgânicos",
+    "location": "Pavimento superior · Banca 501",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/nicos-emporio-organico/",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "059198e926a4"
+  "autoHash": "092ed2702da0"
 }

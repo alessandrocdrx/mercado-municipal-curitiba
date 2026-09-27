@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 13",
+  "title": "Agro Comercial Paraná",
   "placement": {
     "floor": "inferior",
     "x": 52.56,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 13",
-      "sublabel": "comerciante não identificado"
+      "color": "#3c7a34",
+      "label": "Agro Comercial Paraná",
+      "sublabel": "Hortifrúti · Banca 13"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Hortifrúti",
+    "location": "Pavimento inferior · Banca 01, 13",
+    "phone": "(41) 99944-4334",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "240941ec808c"
+  "autoHash": "de9b8d3e375e"
 }

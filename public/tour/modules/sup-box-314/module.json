@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 314",
+  "title": "Vetsan Express",
   "placement": {
     "floor": "superior",
     "x": 22.46,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 314",
-      "sublabel": "comerciante não identificado"
+      "color": "#4c5f7a",
+      "label": "Vetsan Express",
+      "sublabel": "Pet shop · Box 314"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Pet shop",
+    "location": "Pavimento superior · Box 314",
+    "phone": "(41) 98819-9892",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "e51b34c72a52"
+  "autoHash": "443b76e5a1ef"
 }

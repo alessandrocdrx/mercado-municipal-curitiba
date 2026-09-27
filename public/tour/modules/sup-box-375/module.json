@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 375",
+  "title": "Okashi Sweets & Teas",
   "placement": {
     "floor": "superior",
     "x": 16.24,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 375",
-      "sublabel": "comerciante não identificado"
+      "color": "#6b3a2a",
+      "label": "Okashi Sweets & Teas",
+      "sublabel": "Doces e chocolates · Box 375"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Doces e chocolates",
+    "location": "Pavimento superior · Box 375",
+    "phone": "(41) 3254-7738",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "a990774fc866"
+  "autoHash": "ad80709b544d"
 }

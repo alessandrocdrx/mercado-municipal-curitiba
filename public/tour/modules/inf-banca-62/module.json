@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca do Zé Mario",
+  "title": "Yueqing Chen",
   "placement": {
     "floor": "inferior",
     "x": 70.44,
@@ -13,18 +13,16 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3c7a34",
-      "label": "Banca do Zé Mario",
-      "sublabel": "Hortifrúti · Banca 62"
+      "color": "#9a6b1f",
+      "label": "Yueqing Chen",
+      "sublabel": "Empório e mercearia · Banca 62"
     }
   },
   "info": {
-    "category": "Hortifrúti",
-    "location": "Pavimento inferior · Banca 49, 62",
-    "phone": "(41) 99901-2347",
-    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-do-ze-mario/",
-    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Banca 62",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "50dc8d139458"
+  "autoHash": "3eee414b1a3b"
 }

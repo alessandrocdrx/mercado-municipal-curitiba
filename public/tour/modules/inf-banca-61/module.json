@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 61",
+  "title": "Viver Mais",
   "placement": {
     "floor": "inferior",
     "x": 71.52,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 61",
-      "sublabel": "comerciante não identificado"
+      "color": "#9a6b1f",
+      "label": "Viver Mais",
+      "sublabel": "Empório e mercearia · Banca 61"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Banca 61",
+    "phone": "(41) 3276-8525 · (41) 98802-7159",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "4bef45602b92"
+  "autoHash": "27a63f3387ca"
 }

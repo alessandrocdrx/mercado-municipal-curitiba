@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 321",
+  "title": "Ki Bolada Loteria",
   "placement": {
     "floor": "superior",
     "x": 44.99,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 321",
-      "sublabel": "comerciante não identificado"
+      "color": "#4a5a73",
+      "label": "Ki Bolada Loteria",
+      "sublabel": "Variedades e serviços · Box 321"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento superior · Box 320, 321",
+    "phone": "(41) 3263-2841",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "b71075cfd5db"
+  "autoHash": "cd938a98beeb"
 }

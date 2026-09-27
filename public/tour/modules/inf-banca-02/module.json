@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 02",
+  "title": "Tenda Árabe",
   "placement": {
     "floor": "inferior",
     "x": 46.74,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 02",
-      "sublabel": "comerciante não identificado"
+      "color": "#9a6b1f",
+      "label": "Tenda Árabe",
+      "sublabel": "Empório e mercearia · Banca 02"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Banca 02, 03",
+    "phone": "(41) 3016-0910 · (41) 99911-6842",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "463f0c638c53"
+  "autoHash": "f89e1b502e1f"
 }

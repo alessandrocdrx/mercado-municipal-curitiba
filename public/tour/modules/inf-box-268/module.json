@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 268",
+  "title": "Adega Brasil",
   "placement": {
     "floor": "inferior",
     "x": 8.55,
@@ -13,15 +13,18 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 268",
-      "sublabel": "comerciante não identificado"
+      "color": "#5b2e63",
+      "label": "Adega Brasil",
+      "sublabel": "Bebidas · Box 268"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Bebidas",
+    "location": "Pavimento inferior · Box 268",
+    "phone": "(41) 3264-4232 · (41) 98901-7114",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/adega-brasil/",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "b4501ef4e590"
+  "autoHash": "76a4e5f7f326"
 }

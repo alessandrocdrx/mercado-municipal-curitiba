@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 345",
+  "title": "Calçados Vila Rica",
   "placement": {
     "floor": "superior",
     "x": 34.65,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 345",
-      "sublabel": "comerciante não identificado"
+      "color": "#4a5a73",
+      "label": "Calçados Vila Rica",
+      "sublabel": "Variedades e serviços · Box 345"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento superior · Box 345",
+    "phone": "(41) 3262-5828",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "bbac54b16194"
+  "autoHash": "4645a4e4be59"
 }

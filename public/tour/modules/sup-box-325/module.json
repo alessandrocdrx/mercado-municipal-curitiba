@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 325",
+  "title": "Rafa's – Ateliê de Costura",
   "placement": {
     "floor": "superior",
     "x": 51.63,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 325",
-      "sublabel": "comerciante não identificado"
+      "color": "#4a5a73",
+      "label": "Rafa's – Ateliê de Costura",
+      "sublabel": "Variedades e serviços · Box 325"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento superior · Box 325, 326",
+    "phone": "(41) 3013-0960 · (41) 99102-0201",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "c1834e7cac56"
+  "autoHash": "93c639139d79"
 }

@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 41",
+  "title": "Banca do Demétrio",
   "placement": {
     "floor": "inferior",
     "x": 61.92,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 41",
-      "sublabel": "comerciante não identificado"
+      "color": "#3c7a34",
+      "label": "Banca do Demétrio",
+      "sublabel": "Hortifrúti · Banca 41"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Hortifrúti",
+    "location": "Pavimento inferior · Banca 41",
+    "phone": "(41) 3352-0601",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "68b919a335cf"
+  "autoHash": "429bca6b9b87"
 }

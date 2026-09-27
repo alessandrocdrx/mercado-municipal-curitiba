@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 37",
+  "title": "Mafo Com. de Alimentos",
   "placement": {
     "floor": "inferior",
     "x": 61.92,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 37",
-      "sublabel": "comerciante não identificado"
+      "color": "#9a6b1f",
+      "label": "Mafo Com. de Alimentos",
+      "sublabel": "Empório e mercearia · Banca 37"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Banca 37",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/mafo-com-de-alimentos/",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "84624ab4c99b"
+  "autoHash": "06c0f5a78007"
 }

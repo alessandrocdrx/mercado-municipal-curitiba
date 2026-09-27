@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 513",
+  "title": "Botané Sustentável",
   "placement": {
     "floor": "superior",
     "x": 75.18,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 513",
-      "sublabel": "comerciante não identificado"
+      "color": "#2f7d32",
+      "label": "Botané Sustentável",
+      "sublabel": "Orgânicos · Box 513"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Orgânicos",
+    "location": "Pavimento superior · Box 513",
+    "phone": "(41) 3262-0610 · (41) 99126-3383",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "6fa56f5db19e"
+  "autoHash": "042e7f6f1fb1"
 }

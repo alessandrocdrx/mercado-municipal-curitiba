@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Armazém da Zelma",
+  "title": "Box 30",
   "placement": {
     "floor": "inferior",
     "x": 62.83,
@@ -13,18 +13,15 @@
   },
   "media": {
     "placeholder": {
-      "color": "#7a4a24",
-      "label": "Armazém da Zelma",
-      "sublabel": "Cereais e especiarias · Box 30"
+      "color": "#44474d",
+      "label": "Box 30",
+      "sublabel": "comerciante não identificado"
     }
   },
   "info": {
-    "category": "Cereais e especiarias",
-    "location": "Pavimento inferior · Box 28, 29, 30",
-    "description": "No Mercado desde 1º de novembro de 1960: azeites, bacalhau, castanhas, frutas secas, especiarias, conservas e cereais.",
-    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/armazem-da-zelma/",
-    "note": "Fonte: diretório de comerciantes do site oficial. Confirme no local."
+    "location": "Pavimento inferior",
+    "description": "Comerciante deste espaço não identificado no site oficial."
   },
   "generated": true,
-  "autoHash": "5d7a46efd443"
+  "autoHash": "5bf643739118"
 }

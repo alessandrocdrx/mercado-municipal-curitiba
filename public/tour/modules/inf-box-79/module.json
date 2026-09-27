@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Flora Cristiane",
+  "title": "Box 79",
   "placement": {
     "floor": "inferior",
     "x": 101.85,
@@ -13,19 +13,15 @@
   },
   "media": {
     "placeholder": {
-      "color": "#a33d6b",
-      "label": "Flora Cristiane",
-      "sublabel": "Flores e plantas · Box 79"
+      "color": "#44474d",
+      "label": "Box 79",
+      "sublabel": "comerciante não identificado"
     }
   },
   "info": {
-    "category": "Flores e plantas",
-    "location": "Pavimento inferior · Box 77, 79, 80",
-    "phone": "(41) 3264-2324 · (41) 98845-0161",
-    "description": "Floricultura fundada em 5 de agosto de 1966: árvores frutíferas e ornamentais, sementes e plantas.",
-    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/flora-cristiane/",
-    "note": "Fonte: diretório de comerciantes do site oficial. Confirme no local."
+    "location": "Pavimento inferior",
+    "description": "Comerciante deste espaço não identificado no site oficial."
   },
   "generated": true,
-  "autoHash": "66468dbdc2b6"
+  "autoHash": "f65fc0d73215"
 }

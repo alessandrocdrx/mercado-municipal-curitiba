@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 12",
+  "title": "Moncloa",
   "placement": {
     "floor": "inferior",
     "x": 48.9,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 12",
-      "sublabel": "comerciante não identificado"
+      "color": "#9a6b1f",
+      "label": "Moncloa",
+      "sublabel": "Empório e mercearia · Banca 12"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Banca 11, 12",
+    "phone": "(41) 98731-0990 · (41) 3347-7234",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "3572285cf668"
+  "autoHash": "ef41920c2802"
 }

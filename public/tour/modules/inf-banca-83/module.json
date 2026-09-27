@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 83",
+  "title": "Banca do Nei",
   "placement": {
     "floor": "inferior",
     "x": 81.12,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 83",
-      "sublabel": "comerciante não identificado"
+      "color": "#3c7a34",
+      "label": "Banca do Nei",
+      "sublabel": "Hortifrúti · Banca 83"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Hortifrúti",
+    "location": "Pavimento inferior · Banca 83",
+    "phone": "(41) 3262-2678",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "0e428f1864cc"
+  "autoHash": "2daea5bac0e8"
 }

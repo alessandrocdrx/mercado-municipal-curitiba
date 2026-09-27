@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 438",
+  "title": "Café do Mercado",
   "placement": {
     "floor": "inferior",
     "x": 57.36,
@@ -13,15 +13,18 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 438",
-      "sublabel": "comerciante não identificado"
+      "color": "#b0561d",
+      "label": "Café do Mercado",
+      "sublabel": "Lanchonete e restaurante · Box 438"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Lanchonete e restaurante",
+    "location": "Pavimento inferior · Box 438, 439",
+    "phone": "(41) 3011-1212 · (41) 99235-3196",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cafe-do-mercado/",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "d491087886a4"
+  "autoHash": "205180a04962"
 }

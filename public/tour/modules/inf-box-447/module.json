@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "The Bootlegger's Box",
+  "title": "The Bootlegger's",
   "placement": {
     "floor": "inferior",
     "x": 89.22,
@@ -14,7 +14,7 @@
   "media": {
     "placeholder": {
       "color": "#5b2e63",
-      "label": "The Bootlegger's Box",
+      "label": "The Bootlegger's",
       "sublabel": "Bebidas · Box 447"
     }
   },
@@ -22,8 +22,8 @@
     "category": "Bebidas",
     "location": "Pavimento inferior · Box 447, 448",
     "phone": "(41) 99184-8362 · (41) 99184-9277",
-    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "33453572e87b"
+  "autoHash": "bdc0a8c25a58"
 }

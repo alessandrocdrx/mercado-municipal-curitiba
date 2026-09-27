@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 512",
+  "title": "Sírius Orgânicos",
   "placement": {
     "floor": "superior",
     "x": 71.26,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 512",
-      "sublabel": "comerciante não identificado"
+      "color": "#2f7d32",
+      "label": "Sírius Orgânicos",
+      "sublabel": "Orgânicos · Banca 512"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Orgânicos",
+    "location": "Pavimento superior · Banca 511, 512",
+    "phone": "(41) 99134-4400",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "e63e96c2cc7e"
+  "autoHash": "59f12f1bc149"
 }

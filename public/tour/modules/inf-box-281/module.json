@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 281",
+  "title": "Casa Gourmet",
   "placement": {
     "floor": "inferior",
     "x": 22.2,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 281",
-      "sublabel": "comerciante não identificado"
+      "color": "#7a4a24",
+      "label": "Casa Gourmet",
+      "sublabel": "Cereais e especiarias · Box 281"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Cereais e especiarias",
+    "location": "Pavimento inferior · Box 281, 283",
+    "phone": "(41) 3238-0927 · (41) 99571-0735",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "e8ff95201d19"
+  "autoHash": "39736e048df0"
 }

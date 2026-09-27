@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 78",
+  "title": "Flora Cristiane",
   "placement": {
     "floor": "inferior",
     "x": 99.3,
@@ -13,15 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 78",
-      "sublabel": "comerciante não identificado"
+      "color": "#a33d6b",
+      "label": "Flora Cristiane",
+      "sublabel": "Flores e plantas · Box 78"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Flores e plantas",
+    "location": "Pavimento inferior · Box 78",
+    "phone": "(41) 3264-5324 · (41) 98871-0868",
+    "description": "Floricultura fundada em 5 de agosto de 1966: árvores frutíferas e ornamentais, sementes e plantas.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/flora-cristiane/",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "65c444fe7167"
+  "autoHash": "1c9a952bc24f"
 }

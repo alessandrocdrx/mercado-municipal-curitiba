@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 25",
+  "title": "Decaésse Acessórios",
   "placement": {
     "floor": "inferior",
     "x": 57.3,
@@ -13,15 +13,16 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 25",
-      "sublabel": "comerciante não identificado"
+      "color": "#4a5a73",
+      "label": "Decaésse Acessórios",
+      "sublabel": "Variedades e serviços · Banca 25"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento inferior · Banca 25",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "33c57d8fd181"
+  "autoHash": "3f24ad734709"
 }

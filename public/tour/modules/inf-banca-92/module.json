@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 92",
+  "title": "Emporium Nattuvida",
   "placement": {
     "floor": "inferior",
     "x": 84.9,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 92",
-      "sublabel": "comerciante não identificado"
+      "color": "#9a6b1f",
+      "label": "Emporium Nattuvida",
+      "sublabel": "Empório e mercearia · Banca 92"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Banca 91, 92",
+    "phone": "(41) 99187-8481",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "b3ff9d2f36f6"
+  "autoHash": "1b518db6d997"
 }

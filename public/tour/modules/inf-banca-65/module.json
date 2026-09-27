@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 65",
+  "title": "Banca da Leonilda",
   "placement": {
     "floor": "inferior",
     "x": 71.52,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 65",
-      "sublabel": "comerciante não identificado"
+      "color": "#3c7a34",
+      "label": "Banca da Leonilda",
+      "sublabel": "Hortifrúti · Banca 65"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Hortifrúti",
+    "location": "Pavimento inferior · Banca 65",
+    "phone": "(41) 98867-9897",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "cc4e40456d70"
+  "autoHash": "f5056c83f229"
 }

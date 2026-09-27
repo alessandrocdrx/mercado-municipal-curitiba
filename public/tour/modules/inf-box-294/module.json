@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 294",
+  "title": "Lá de Minas",
   "placement": {
     "floor": "inferior",
     "x": 4.56,
@@ -13,15 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 294",
-      "sublabel": "comerciante não identificado"
+      "color": "#9a6b1f",
+      "label": "Lá de Minas",
+      "sublabel": "Empório e mercearia · Box 294"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Box 293, 294",
+    "phone": "(41) 3262-9911",
+    "description": "Produtos de Minas Gerais: cachaças, doces, queijos e artesanato.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/la-de-minas/",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "8058b055fb34"
+  "autoHash": "e5738f592461"
 }

@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 32",
+  "title": "Banca da Helena",
   "placement": {
     "floor": "inferior",
     "x": 57.3,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 32",
-      "sublabel": "comerciante não identificado"
+      "color": "#3c7a34",
+      "label": "Banca da Helena",
+      "sublabel": "Hortifrúti · Banca 32"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Hortifrúti",
+    "location": "Pavimento inferior · Banca 32",
+    "phone": "(41) 3262-7266",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "0a01593c2dea"
+  "autoHash": "72d2ffefe90f"
 }

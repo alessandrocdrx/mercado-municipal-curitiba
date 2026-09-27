@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 378",
+  "title": "Kalloria Zero",
   "placement": {
     "floor": "inferior",
     "x": 19.35,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 378",
-      "sublabel": "comerciante não identificado"
+      "color": "#9a6b1f",
+      "label": "Kalloria Zero",
+      "sublabel": "Empório e mercearia · Box 378"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Box 378",
+    "phone": "(41) 3262-8564 · (41) 99191-4882",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "0b5eabbe0bc0"
+  "autoHash": "c469de35efc0"
 }

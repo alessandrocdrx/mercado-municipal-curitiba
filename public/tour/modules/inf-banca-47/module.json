@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 47",
+  "title": "Banca do Fernando",
   "placement": {
     "floor": "inferior",
     "x": 63,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 47",
-      "sublabel": "comerciante não identificado"
+      "color": "#3c7a34",
+      "label": "Banca do Fernando",
+      "sublabel": "Hortifrúti · Banca 47"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Hortifrúti",
+    "location": "Pavimento inferior · Banca 47",
+    "phone": "(41) 98754-7070 · (41) 98811-7070",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "eb13be13e168"
+  "autoHash": "6d8a0f3c5d06"
 }

@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 343",
+  "title": "Quadrolândia",
   "placement": {
     "floor": "superior",
     "x": 37.45,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 343",
-      "sublabel": "comerciante não identificado"
+      "color": "#4a5a73",
+      "label": "Quadrolândia",
+      "sublabel": "Variedades e serviços · Box 343"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento superior · Box 343",
+    "phone": "(41) 99948-2823",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "3ef4ce87a919"
+  "autoHash": "b6921e753fe5"
 }

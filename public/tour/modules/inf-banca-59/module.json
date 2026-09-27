@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 59",
+  "title": "Manga Rosa",
   "placement": {
     "floor": "inferior",
     "x": 67.8,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 59",
-      "sublabel": "comerciante não identificado"
+      "color": "#3c7a34",
+      "label": "Manga Rosa",
+      "sublabel": "Hortifrúti · Banca 59"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Hortifrúti",
+    "location": "Pavimento inferior · Banca 59, 60",
+    "phone": "(41) 98477-8335",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "108b19eafcf9"
+  "autoHash": "987fb130a9f3"
 }

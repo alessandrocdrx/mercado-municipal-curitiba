@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 41 Vinhos",
+  "title": "Box 39",
   "placement": {
     "floor": "inferior",
     "x": 41.68,
@@ -13,19 +13,15 @@
   },
   "media": {
     "placeholder": {
-      "color": "#5b2e63",
-      "label": "Box 41 Vinhos",
-      "sublabel": "Bebidas · Box 39"
+      "color": "#44474d",
+      "label": "Box 39",
+      "sublabel": "comerciante não identificado"
     }
   },
   "info": {
-    "category": "Bebidas",
-    "location": "Pavimento inferior · Box 39, 40, 41, 42",
-    "phone": "(41) 3264-4343 · (41) 99705-4697",
-    "description": "Especialista em vinhos, com mais de 1.100 rótulos.",
-    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/box-41-vinhos/",
-    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
+    "location": "Pavimento inferior",
+    "description": "Comerciante deste espaço não identificado no site oficial."
   },
   "generated": true,
-  "autoHash": "57439f75a753"
+  "autoHash": "7b6e0df0955d"
 }

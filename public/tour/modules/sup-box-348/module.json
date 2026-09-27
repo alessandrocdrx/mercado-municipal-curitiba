@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 348",
+  "title": "Bazar Cotegipe",
   "placement": {
     "floor": "superior",
     "x": 42.28,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 348",
-      "sublabel": "comerciante não identificado"
+      "color": "#4a5a73",
+      "label": "Bazar Cotegipe",
+      "sublabel": "Variedades e serviços · Box 348"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento superior · Box 348",
+    "phone": "(41) 3262-5011 · (41) 99592-8110",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "1db690cd6713"
+  "autoHash": "87574a6050f1"
 }

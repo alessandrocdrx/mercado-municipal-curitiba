@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 517",
+  "title": "Arte Verde Comida Orgânica",
   "placement": {
     "floor": "superior",
     "x": 70.35,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 517",
-      "sublabel": "comerciante não identificado"
+      "color": "#2f7d32",
+      "label": "Arte Verde Comida Orgânica",
+      "sublabel": "Orgânicos · Box 517"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Orgânicos",
+    "location": "Pavimento superior · Box 517",
+    "phone": "(41) 3363-5606",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "d9403783c08f"
+  "autoHash": "8a49a6d83665"
 }

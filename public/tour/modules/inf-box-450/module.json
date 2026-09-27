@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 450",
+  "title": "Revistaria Municipal",
   "placement": {
     "floor": "inferior",
     "x": 96.87,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 450",
-      "sublabel": "comerciante não identificado"
+      "color": "#4a5a73",
+      "label": "Revistaria Municipal",
+      "sublabel": "Variedades e serviços · Box 450"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento inferior · Box 450, 451",
+    "phone": "(41) 3023-7880 · (41) 99755-5243",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "a337f3883495"
+  "autoHash": "515e94d8116a"
 }

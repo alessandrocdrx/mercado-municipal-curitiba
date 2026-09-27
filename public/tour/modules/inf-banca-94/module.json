@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 94",
+  "title": "Banca da Isabel",
   "placement": {
     "floor": "inferior",
     "x": 85.98,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 94",
-      "sublabel": "comerciante não identificado"
+      "color": "#3c7a34",
+      "label": "Banca da Isabel",
+      "sublabel": "Hortifrúti · Banca 94"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Hortifrúti",
+    "location": "Pavimento inferior · Banca 94",
+    "phone": "(41) 98803-3416",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "f3299cc88cdf"
+  "autoHash": "bed3f03ad616"
 }

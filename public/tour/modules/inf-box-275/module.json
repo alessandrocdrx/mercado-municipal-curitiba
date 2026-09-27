@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 275",
+  "title": "Tepanya – Utilidades Domésticas",
   "placement": {
     "floor": "inferior",
     "x": 31.8,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 275",
-      "sublabel": "comerciante não identificado"
+      "color": "#4a5a73",
+      "label": "Tepanya – Utilidades Domésticas",
+      "sublabel": "Variedades e serviços · Box 275"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento inferior · Box 275, 376",
+    "phone": "(41) 3023-2099 · (41) 99975-9265",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "05d85f101c5d"
+  "autoHash": "b8a27d821d99"
 }

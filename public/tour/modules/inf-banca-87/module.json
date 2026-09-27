@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 87",
+  "title": "Empório Nossa Banca",
   "placement": {
     "floor": "inferior",
     "x": 82.2,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 87",
-      "sublabel": "comerciante não identificado"
+      "color": "#6b3a2a",
+      "label": "Empório Nossa Banca",
+      "sublabel": "Doces e chocolates · Banca 87"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Doces e chocolates",
+    "location": "Pavimento inferior · Banca 87, 88",
+    "phone": "(41) 99700-4977",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "9d5731a6b65b"
+  "autoHash": "a8935289e101"
 }

@@ -13,19 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "#9a6b1f",
+      "color": "#6b3a2a",
       "label": "Conversic",
-      "sublabel": "Empório e mercearia · Box 55"
+      "sublabel": "Doces e chocolates · Box 55"
     }
   },
   "info": {
-    "category": "Empório e mercearia",
+    "category": "Doces e chocolates",
     "location": "Pavimento inferior · Box 54, 55",
-    "phone": "(41) 3022-0802 · WhatsApp (41) 99976-3741",
+    "phone": "(41) 3022-0802 · (41) 99976-3741",
     "description": "Há mais de 30 anos com produtos portugueses.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/conversic/",
-    "note": "Fonte: diretório de comerciantes do site oficial. Confirme no local."
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "898044adb8aa"
+  "autoHash": "2f4692a9ee98"
 }

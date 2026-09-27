@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 288",
+  "title": "Armazém da Serra",
   "placement": {
     "floor": "inferior",
     "x": 8.85,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 288",
-      "sublabel": "comerciante não identificado"
+      "color": "#7a4a24",
+      "label": "Armazém da Serra",
+      "sublabel": "Cereais e especiarias · Box 288"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Cereais e especiarias",
+    "location": "Pavimento inferior · Box 288, 289",
+    "phone": "(41) 3264-8769",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "4414a2af5e54"
+  "autoHash": "b20a37677116"
 }

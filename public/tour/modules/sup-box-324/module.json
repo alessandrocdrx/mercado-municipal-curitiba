@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Mina de Ouro Presentes",
+  "title": "Loja de Presentes Mina de Ouro",
   "placement": {
     "floor": "superior",
     "x": 51.73,
@@ -14,7 +14,7 @@
   "media": {
     "placeholder": {
       "color": "#4a5a73",
-      "label": "Mina de Ouro Presentes",
+      "label": "Loja de Presentes Mina de Ouro",
       "sublabel": "Variedades e serviços · Box 324"
     }
   },
@@ -22,8 +22,8 @@
     "category": "Variedades e serviços",
     "location": "Pavimento superior · Box 324",
     "phone": "(41) 3362-9357",
-    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "bff519ad39c4"
+  "autoHash": "d418f1ade2a7"
 }

@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 436",
+  "title": "Box Verde",
   "placement": {
     "floor": "inferior",
     "x": 52.32,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 436",
-      "sublabel": "comerciante não identificado"
+      "color": "#9a6b1f",
+      "label": "Box Verde",
+      "sublabel": "Empório e mercearia · Box 436"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Box 435, 436",
+    "phone": "(41) 3362-3955 · (41) 99911-6539",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "0cf4bbbd9174"
+  "autoHash": "f3d9d0890f03"
 }

@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 308",
+  "title": "Empório Manfré",
   "placement": {
     "floor": "inferior",
     "x": 27.56,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 308",
-      "sublabel": "comerciante não identificado"
+      "color": "#5b2e63",
+      "label": "Empório Manfré",
+      "sublabel": "Bebidas · Box 308"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Bebidas",
+    "location": "Pavimento inferior · Box 308",
+    "phone": "(41) 3053-8323 · (41) 99184-9277",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "0e19d4cf9a75"
+  "autoHash": "c7f42e12bd11"
 }

@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 77",
+  "title": "Fitz",
   "placement": {
     "floor": "inferior",
     "x": 77.4,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 77",
-      "sublabel": "comerciante não identificado"
+      "color": "#3c7a34",
+      "label": "Fitz",
+      "sublabel": "Hortifrúti · Banca 77"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Hortifrúti",
+    "location": "Pavimento inferior · Banca 76, 77, 78",
+    "phone": "(41) 99654-6053",
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "d3e1d114743b"
+  "autoHash": "20b67835692d"
 }
