@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 332",
+  "title": "Vitornis Chapelaria",
   "placement": {
     "floor": "superior",
     "x": 15,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 332",
-      "sublabel": "comerciante não identificado"
+      "color": "#4a5a73",
+      "label": "Vitornis Chapelaria",
+      "sublabel": "Variedades e serviços · Box 332"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento superior · Box 332",
+    "phone": "(41) 99659-0035",
+    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "f5caec662e4e"
+  "autoHash": "a0ecc7669303"
 }

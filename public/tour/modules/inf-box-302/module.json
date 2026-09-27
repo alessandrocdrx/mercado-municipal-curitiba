@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 302",
+  "title": "Empório D'Gust",
   "placement": {
     "floor": "inferior",
     "x": 16.61,
@@ -13,15 +13,16 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 302",
-      "sublabel": "comerciante não identificado"
+      "color": "#9a6b1f",
+      "label": "Empório D'Gust",
+      "sublabel": "Empório e mercearia · Box 302"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Box 300, 302",
+    "note": "A lista cita boxes 300 a 302; o 301 aparece como Temperamento. Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "02fd5c96b511"
+  "autoHash": "7f468960dc49"
 }

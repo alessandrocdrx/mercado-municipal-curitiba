@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 307",
+  "title": "Galisa",
   "placement": {
     "floor": "inferior",
     "x": 27.56,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 307",
-      "sublabel": "comerciante não identificado"
+      "color": "#5d5a6e",
+      "label": "Galisa",
+      "sublabel": "Outros · Box 307"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Outros",
+    "location": "Pavimento inferior · Box 307",
+    "phone": "(41) 3014-7760 · (41) 99845-9535",
+    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "78263ebe30dd"
+  "autoHash": "b1dd2c8a4278"
 }

@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 333",
+  "title": "Kotobuki Artesanato e Presentes",
   "placement": {
     "floor": "superior",
     "x": 15.12,
@@ -13,15 +13,16 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 333",
-      "sublabel": "comerciante não identificado"
+      "color": "#4a5a73",
+      "label": "Kotobuki Artesanato e Presentes",
+      "sublabel": "Variedades e serviços · Box 333"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento superior · Box 313, 333",
+    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "ea1e2dbf363f"
+  "autoHash": "3d5c020f16b2"
 }

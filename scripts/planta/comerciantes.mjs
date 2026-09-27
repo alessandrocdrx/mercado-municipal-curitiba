@@ -5,6 +5,9 @@
 // mecanismo de busca porque o site não estava acessível diretamente, e de
 // guias públicos (applocal, Yelp, páginas das próprias lojas) para o número
 // do box quando o site não o trazia. `fonte` indica quando não é o oficial.
+// DIRETORIO = lista "Lojas – Telefones e Boxs" (encontracuritiba.com.br /
+// mercadomodelo.com.br), consultada por número de box via busca, pois o site
+// oficial e o Wayback Machine estavam inacessíveis nesta rede.
 //
 // Pavimento: números 01–19 existem nos dois andares. Restaurantes e
 // lanchonetes desses números foram postos na área rosa do pavimento superior
@@ -30,8 +33,10 @@ export const CATEGORIAS = {
   organicos: { nome: 'Orgânicos', cor: '#2f7d32' },
   pet: { nome: 'Pet shop', cor: '#4c5f7a' },
   servicos: { nome: 'Variedades e serviços', cor: '#4a5a73' },
+  outros: { nome: 'Outros', cor: '#5d5a6e' },
 };
 
+const DIRETORIO = 'lista de lojas e boxes (encontracuritiba / mercadomodelo)';
 const c = (nome, categoria, slug, extra = {}) => ({ nome, categoria, url: slug ? OFICIAL + slug + '/' : undefined, boxes: [], ...extra });
 
 export const COMERCIANTES = [
@@ -97,7 +102,9 @@ export const COMERCIANTES = [
     fonte: 'resumo de busca do diretório oficial; página própria não localizada',
   }),
   c('Box 41 Vinhos', 'bebidas', 'box-41-vinhos', {
-    boxes: ['inf-box-41'], descricao: 'Especialista em vinhos, com mais de 1.100 rótulos.',
+    boxes: ['inf-box-39', 'inf-box-40', 'inf-box-41', 'inf-box-42'], telefone: '(41) 3264-4343 · (41) 99705-4697',
+    descricao: 'Especialista em vinhos, com mais de 1.100 rótulos.',
+    fonte: DIRETORIO,
   }),
   c('Armazém Becker', 'especiarias', 'armazem-becker', {
     boxes: ['inf-box-47', 'inf-box-48'], telefone: '(41) 3263-4565 · WhatsApp (41) 99215-5300',
@@ -127,9 +134,12 @@ export const COMERCIANTES = [
     descricao: 'Produtos da culinária oriental, doces típicos, bebidas e utensílios.',
   }),
   c('Vô Milano Cachaçaria', 'bebidas', 'vo-milano-cachacaria', {
-    boxes: ['inf-box-74'],
+    boxes: ['inf-banca-73', 'inf-banca-74'],
     descricao: 'Única loja de Curitiba 100% especializada em cachaça, com mais de 400 rótulos.',
-    obs: 'O site cita os boxes 73/74; o 73 aparece como Mercearia Sansei em outras fontes.',
+    obs: 'O site cita "bancas 73/74". Os boxes 73 e 74 aparecem como Mercearia Sansei e Casa da Bolacha Caseira, então foi posta nas bancas 73–74 do salão; confirmar.',
+  }),
+  c('Casa da Bolacha Caseira', 'doces', 'casa-da-bolacha-caseira', {
+    boxes: ['inf-box-74'], descricao: 'Bolachas, doces caseiros e biscoitos de polvilho.', fonte: DIRETORIO,
   }),
   c('Flora Cristiane', 'flores', 'flora-cristiane', {
     boxes: ['inf-box-77', 'inf-box-79', 'inf-box-80'], telefone: '(41) 3264-2324 · (41) 98845-0161',
@@ -194,6 +204,37 @@ export const COMERCIANTES = [
     descricao: 'Há 40 anos no hortifrúti do Mercado.',
   }),
 
+  // ---- levantados pela lista de lojas por número de box
+  c("Claudio's Mercearia", 'emporio', null, { boxes: ['inf-box-31', 'inf-box-32'], telefone: '(41) 3026-7468 · (41) 99647-4429', fonte: DIRETORIO }),
+  c('Casa da Azeitona', 'emporio', null, { boxes: ['inf-box-33', 'inf-box-34', 'inf-box-35', 'inf-box-36'], telefone: '(41) 3264-1132 · (41) 99568-2026', fonte: DIRETORIO }),
+  c('Empório Valência', 'emporio', null, { boxes: ['inf-box-43', 'inf-box-44'], telefone: '(41) 3262-1584 · (41) 99984-0833', fonte: DIRETORIO }),
+  c('Empório Francisca', 'emporio', null, { boxes: ['inf-box-58', 'inf-box-59'], telefone: '(41) 3079-5207 · (41) 99178-8090', fonte: DIRETORIO }),
+  c('Manga Rosa', 'outros', null, { boxes: ['inf-box-60'], telefone: '(41) 98477-8335', obs: 'A lista cita boxes 59 e 60; o 59 também aparece como Empório Francisca.', fonte: DIRETORIO }),
+  c('Embalagens Municipal', 'servicos', 'embalagens-municipal', { boxes: ['inf-box-70', 'inf-box-71', 'inf-box-72'], descricao: 'Embalagens.' }),
+  c('K & M Artesanatos', 'servicos', null, { boxes: ['inf-box-75', 'inf-box-76'], fonte: DIRETORIO }),
+  c('Mercearia O Barracão', 'emporio', null, { boxes: ['inf-box-278', 'inf-box-279'], fonte: DIRETORIO }),
+  c('Manfré Cervejas Especiais', 'bebidas', null, { boxes: ['inf-box-284', 'inf-box-285'], fonte: DIRETORIO }),
+  c('Empório Curitibano', 'emporio', null, { boxes: ['inf-box-291', 'inf-box-292'], fonte: DIRETORIO }),
+  c('Nissei Comércio de Alimentos', 'emporio', null, { boxes: ['inf-box-297', 'inf-box-298'], fonte: DIRETORIO }),
+  c("Empório D'Gust", 'emporio', null, { boxes: ['inf-box-300', 'inf-box-302'], obs: 'A lista cita boxes 300 a 302; o 301 aparece como Temperamento.', fonte: DIRETORIO }),
+  c('Bordando Sonhos', 'servicos', null, { boxes: ['inf-box-303', 'inf-box-305'], telefone: '(41) 99688-1790', obs: 'A lista cita boxes 303 a 305; o 304 aparece como Empório Metropolitano.', fonte: DIRETORIO }),
+  c('Galisa', 'outros', null, { boxes: ['inf-box-307'], telefone: '(41) 3014-7760 · (41) 99845-9535', fonte: DIRETORIO }),
+  c('Lotérica Mercado Municipal', 'servicos', null, { boxes: ['inf-box-309', 'inf-box-310'], telefone: '(41) 3014-7760', fonte: DIRETORIO }),
+  c('Mercearia Sayonara', 'emporio', null, { boxes: ['inf-box-355'], telefone: '(41) 3262-2386 · (41) 98762-8681', fonte: DIRETORIO }),
+  c('Puro Coco', 'outros', null, { boxes: ['inf-box-364', 'inf-box-369'], telefone: '(41) 3085-5080 · (41) 99995-0345', fonte: DIRETORIO }),
+  c("Vitaly's Especiarias", 'especiarias', null, { boxes: ['inf-box-367', 'inf-box-368'], telefone: '(41) 3363-5316 · (41) 99891-8237', fonte: DIRETORIO }),
+  c('Tepanya Utilidades Domésticas', 'servicos', null, { boxes: ['inf-box-376'], telefone: '(41) 3023-2099 · (41) 99975-9265', fonte: DIRETORIO }),
+  c('Satine Cosméticos', 'servicos', null, { boxes: ['inf-box-377'], telefone: '(41) 3029-6250 · (41) 99118-0069', fonte: DIRETORIO }),
+  c('Café do Mercado', 'lanchonete', 'cafe-do-mercado', { boxes: ['inf-box-437', 'inf-box-438', 'inf-box-439'], fonte: DIRETORIO }),
+  c('Grander & Shiomi (restaurante)', 'lanchonete', null, {
+    boxes: ['inf-box-445', 'inf-box-446'],
+    fonte: 'Decreto municipal nº 327/2019 (transferência de permissão de uso)',
+    obs: 'Razão social da permissionária; nome fantasia não identificado.',
+  }),
+  c("The Bootlegger's Box", 'bebidas', null, { boxes: ['inf-box-447', 'inf-box-448'], telefone: '(41) 99184-8362 · (41) 99184-9277', fonte: DIRETORIO }),
+  c('Banca do Zé Mario', 'hortifruti', 'banca-do-ze-mario', { boxes: ['inf-banca-49', 'inf-banca-62'], telefone: '(41) 99901-2347', fonte: DIRETORIO }),
+  c('Merca Fruty – Produtos Congelados', 'emporio', null, { boxes: ['inf-banca-14'], telefone: '(41) 3076-7121', fonte: DIRETORIO }),
+
   // ================================================ pavimento superior
   c('Box do Eliseu', 'lanchonete', 'box-do-eliseu', {
     boxes: ['sup-box-12', 'sup-box-13'],
@@ -220,9 +261,13 @@ export const COMERCIANTES = [
     boxes: ['sup-box-352', 'sup-box-353'],
     descricao: 'Desde 1977: revistas e livros japoneses e ofurôs, no pavimento superior perto da praça de alimentação.',
   }),
-  c("The Bootlegger's", 'bebidas', null, {
-    boxes: ['sup-box-518'], fonte: 'resumo de busca do diretório oficial; categoria não confirmada',
-  }),
+
+  c('Kotobuki Artesanato e Presentes', 'servicos', null, { boxes: ['sup-box-313', 'sup-box-333'], fonte: DIRETORIO }),
+  c('Artigos Orientais', 'servicos', null, { boxes: ['sup-box-322', 'sup-box-323'], telefone: '(41) 3264-7914 · (41) 99975-9265', fonte: DIRETORIO }),
+  c('Mina de Ouro Presentes', 'servicos', null, { boxes: ['sup-box-324'], telefone: '(41) 3362-9357', fonte: DIRETORIO }),
+  c("Rafa's Ateliê de Costura", 'servicos', null, { boxes: ['sup-box-326'], telefone: '(41) 3013-0960 · (41) 99102-0201', fonte: DIRETORIO }),
+  c('Vitornis Chapelaria', 'servicos', null, { boxes: ['sup-box-332'], telefone: '(41) 99659-0035', fonte: DIRETORIO }),
+  c('Relojoaria Dajuki', 'servicos', null, { boxes: ['sup-box-340'], telefone: '(41) 99870-3865', fonte: DIRETORIO }),
   c("Taurino's Organic", 'organicos', 'taurinos-organic', {
     boxes: ['sup-box-521', 'sup-box-522'], telefone: '(41) 3095-0123 · (41) 98851-9391',
     horario: 'Ter a Sáb 8h–18h · Dom 8h–13h (setor de orgânicos, acesso pela Rua da Paz, 608)',
@@ -239,6 +284,10 @@ export const COMERCIANTES = [
     boxesForaDaPlanta: ['194'], descricao: 'Desde 2000, famosa pelo sanduíche de mortadela.',
   }),
   c('Restaurante Ohana', 'lanchonete', null, { boxesForaDaPlanta: ['201'] }),
+  c('4 Estações', 'outros', null, {
+    boxesForaDaPlanta: ['Bloco 02 – lojas 25, 26, 27, 45, 46'], telefone: '(41) 3346-4635',
+    obs: '"Bloco 02" não corresponde à numeração das plantas; os boxes 25–26 do salão são da Sissi.', fonte: DIRETORIO,
+  }),
   c('Ninki Pastéis & Delícias', 'lanchonete', 'ninki-pasteis-delicias', {
     boxesForaDaPlanta: ['205'], telefone: '(41) 99179-1197 · (41) 99663-2026',
     descricao: 'Há 25 anos: pastéis, bolinhos artesanais e bebidas.',
@@ -256,16 +305,13 @@ export const COMERCIANTES = [
   c('Mafo Com. de Alimentos', 'emporio', 'mafo-com-de-alimentos'),
   c('Lá de Minas', 'emporio', 'la-de-minas', { descricao: 'Produtos de Minas Gerais: cachaças, doces, queijos e artesanato.' }),
   c('Banca do Mário', 'hortifruti', 'banca-do-mario'),
-  c('Banca do Zé Mario', 'hortifruti', 'banca-do-ze-mario'),
   c('Banca do Hiro', 'hortifruti', 'banca-do-hiro', { telefone: '(41) 99944-4334' }),
   c('Oliveiras Hortifruti', 'hortifruti', 'oliveiras-hortifruti'),
   c('Dinho Wine and Spirits', 'bebidas', 'dinho-wine-and-spirits', { telefone: '(41) 98783-5900' }),
   c('Adega Brasil', 'bebidas', 'adega-brasil', { obs: 'Uma fonte cita endereço na Rua da Paz, 643, ao lado do Mercado.' }),
   c('Restaurante Takê', 'lanchonete', 'restaurante-take', { descricao: 'Comida japonesa por quilo.' }),
   c('Café do Jorge e da Aurea', 'lanchonete', 'cafe-do-jorge-e-da-aurea'),
-  c('Café do Mercado', 'lanchonete', 'cafe-do-mercado'),
   c('Confeitaria Colônia Cecília', 'doces', 'confeitaria-colonia-cecilia', { descricao: 'Desde 2003, na entrada pela Av. Sete de Setembro. Café colonial aos domingos.' }),
-  c('Casa da Bolacha Caseira', 'doces', 'casa-da-bolacha-caseira', { descricao: 'Bolachas, doces caseiros e biscoitos de polvilho.' }),
   c("Nico's Empório Orgânico", 'organicos', 'nicos-emporio-organico'),
   c('Espaço Orgânico', 'organicos', 'espaco-organico'),
   c('Organique Essentiel', 'organicos', 'organique-essentiel'),

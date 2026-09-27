@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 309",
+  "title": "Lotérica Mercado Municipal",
   "placement": {
     "floor": "inferior",
     "x": 30.3,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 309",
-      "sublabel": "comerciante não identificado"
+      "color": "#4a5a73",
+      "label": "Lotérica Mercado Municipal",
+      "sublabel": "Variedades e serviços · Box 309"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento inferior · Box 309, 310",
+    "phone": "(41) 3014-7760",
+    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "b1e6a17e8084"
+  "autoHash": "c8a2122eead2"
 }

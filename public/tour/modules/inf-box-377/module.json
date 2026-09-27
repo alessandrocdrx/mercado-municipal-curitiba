@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 377",
+  "title": "Satine Cosméticos",
   "placement": {
     "floor": "inferior",
     "x": 19.35,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 377",
-      "sublabel": "comerciante não identificado"
+      "color": "#4a5a73",
+      "label": "Satine Cosméticos",
+      "sublabel": "Variedades e serviços · Box 377"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento inferior · Box 377",
+    "phone": "(41) 3029-6250 · (41) 99118-0069",
+    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "bc000527821c"
+  "autoHash": "3151591a57ef"
 }

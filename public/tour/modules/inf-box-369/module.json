@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 369",
+  "title": "Puro Coco",
   "placement": {
     "floor": "inferior",
     "x": 31.2,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 369",
-      "sublabel": "comerciante não identificado"
+      "color": "#5d5a6e",
+      "label": "Puro Coco",
+      "sublabel": "Outros · Box 369"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Outros",
+    "location": "Pavimento inferior · Box 364, 369",
+    "phone": "(41) 3085-5080 · (41) 99995-0345",
+    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "01826e09dd99"
+  "autoHash": "5fb9c6af746f"
 }

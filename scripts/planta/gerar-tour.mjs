@@ -82,7 +82,7 @@ for (const pav of PAVIMENTOS) {
             hours: com.horario,
             description: com.descricao,
             url: com.url,
-            note: [com.obs, com.fonte && `Fonte do box: ${com.fonte}.`, 'Dados do diretório de comerciantes do site oficial; confirme no local.'].filter(Boolean).join(' '),
+            note: [com.obs, `Fonte: ${com.fonte ?? 'diretório de comerciantes do site oficial'}. Confirme no local.`].filter(Boolean).join(' '),
           })
           : {
             location: pav.titulo,

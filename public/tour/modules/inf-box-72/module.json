@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 72",
+  "title": "Embalagens Municipal",
   "placement": {
     "floor": "inferior",
     "x": 79.34,
@@ -13,15 +13,18 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 72",
-      "sublabel": "comerciante não identificado"
+      "color": "#4a5a73",
+      "label": "Embalagens Municipal",
+      "sublabel": "Variedades e serviços · Box 72"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento inferior · Box 70, 71, 72",
+    "description": "Embalagens.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/embalagens-municipal/",
+    "note": "Fonte: diretório de comerciantes do site oficial. Confirme no local."
   },
   "generated": true,
-  "autoHash": "91532225d11f"
+  "autoHash": "00622a9855f3"
 }

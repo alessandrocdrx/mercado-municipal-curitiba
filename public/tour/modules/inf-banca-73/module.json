@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 73",
+  "title": "Vô Milano Cachaçaria",
   "placement": {
     "floor": "inferior",
     "x": 76.32,
@@ -13,15 +13,18 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 73",
-      "sublabel": "comerciante não identificado"
+      "color": "#5b2e63",
+      "label": "Vô Milano Cachaçaria",
+      "sublabel": "Bebidas · Banca 73"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Bebidas",
+    "location": "Pavimento inferior · Banca 73, 74",
+    "description": "Única loja de Curitiba 100% especializada em cachaça, com mais de 400 rótulos.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/vo-milano-cachacaria/",
+    "note": "O site cita \"bancas 73/74\". Os boxes 73 e 74 aparecem como Mercearia Sansei e Casa da Bolacha Caseira, então foi posta nas bancas 73–74 do salão; confirmar. Fonte: diretório de comerciantes do site oficial. Confirme no local."
   },
   "generated": true,
-  "autoHash": "9ce3f7dcb99f"
+  "autoHash": "3761f15dcd03"
 }

@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Vô Milano Cachaçaria",
+  "title": "Casa da Bolacha Caseira",
   "placement": {
     "floor": "inferior",
     "x": 89.1,
@@ -13,18 +13,18 @@
   },
   "media": {
     "placeholder": {
-      "color": "#5b2e63",
-      "label": "Vô Milano Cachaçaria",
-      "sublabel": "Bebidas · Box 74"
+      "color": "#6b3a2a",
+      "label": "Casa da Bolacha Caseira",
+      "sublabel": "Doces e chocolates · Box 74"
     }
   },
   "info": {
-    "category": "Bebidas",
+    "category": "Doces e chocolates",
     "location": "Pavimento inferior · Box 74",
-    "description": "Única loja de Curitiba 100% especializada em cachaça, com mais de 400 rótulos.",
-    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/vo-milano-cachacaria/",
-    "note": "O site cita os boxes 73/74; o 73 aparece como Mercearia Sansei em outras fontes. Dados do diretório de comerciantes do site oficial; confirme no local."
+    "description": "Bolachas, doces caseiros e biscoitos de polvilho.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/casa-da-bolacha-caseira/",
+    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "e458874e0351"
+  "autoHash": "d7b7d21d8ed1"
 }

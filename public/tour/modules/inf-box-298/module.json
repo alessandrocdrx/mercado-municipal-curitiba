@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 298",
+  "title": "Nissei Comércio de Alimentos",
   "placement": {
     "floor": "inferior",
     "x": 11.14,
@@ -13,15 +13,16 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 298",
-      "sublabel": "comerciante não identificado"
+      "color": "#9a6b1f",
+      "label": "Nissei Comércio de Alimentos",
+      "sublabel": "Empório e mercearia · Box 298"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Box 297, 298",
+    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "532c777ea154"
+  "autoHash": "78c0a0cbafa4"
 }

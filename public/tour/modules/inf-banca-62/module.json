@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 62",
+  "title": "Banca do Zé Mario",
   "placement": {
     "floor": "inferior",
     "x": 70.44,
@@ -13,15 +13,18 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 62",
-      "sublabel": "comerciante não identificado"
+      "color": "#3c7a34",
+      "label": "Banca do Zé Mario",
+      "sublabel": "Hortifrúti · Banca 62"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Hortifrúti",
+    "location": "Pavimento inferior · Banca 49, 62",
+    "phone": "(41) 99901-2347",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-do-ze-mario/",
+    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "726cdc789604"
+  "autoHash": "50dc8d139458"
 }

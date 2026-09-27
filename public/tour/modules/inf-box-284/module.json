@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 284",
+  "title": "Manfré Cervejas Especiais",
   "placement": {
     "floor": "inferior",
     "x": 17.37,
@@ -13,15 +13,16 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 284",
-      "sublabel": "comerciante não identificado"
+      "color": "#5b2e63",
+      "label": "Manfré Cervejas Especiais",
+      "sublabel": "Bebidas · Box 284"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Bebidas",
+    "location": "Pavimento inferior · Box 284, 285",
+    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "527db751e8f9"
+  "autoHash": "ec2a8b93f3ed"
 }

@@ -645,10 +645,14 @@
       "name": "Box 41 Vinhos",
       "category": "Bebidas",
       "modules": [
-        "inf-box-41"
+        "inf-box-39",
+        "inf-box-40",
+        "inf-box-41",
+        "inf-box-42"
       ],
-      "boxes": "41",
+      "boxes": "39, 40, 41, 42",
       "onPlan": true,
+      "phone": "(41) 3264-4343 · (41) 99705-4697",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/box-41-vinhos/",
       "description": "Especialista em vinhos, com mais de 1.100 rótulos."
     },
@@ -733,12 +737,24 @@
       "name": "Vô Milano Cachaçaria",
       "category": "Bebidas",
       "modules": [
+        "inf-banca-73",
+        "inf-banca-74"
+      ],
+      "boxes": "73, 74",
+      "onPlan": true,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/vo-milano-cachacaria/",
+      "description": "Única loja de Curitiba 100% especializada em cachaça, com mais de 400 rótulos."
+    },
+    {
+      "name": "Casa da Bolacha Caseira",
+      "category": "Doces e chocolates",
+      "modules": [
         "inf-box-74"
       ],
       "boxes": "74",
       "onPlan": true,
-      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/vo-milano-cachacaria/",
-      "description": "Única loja de Curitiba 100% especializada em cachaça, com mais de 400 rótulos."
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/casa-da-bolacha-caseira/",
+      "description": "Bolachas, doces caseiros e biscoitos de polvilho."
     },
     {
       "name": "Flora Cristiane",
@@ -953,6 +969,274 @@
       "description": "Há 40 anos no hortifrúti do Mercado."
     },
     {
+      "name": "Claudio's Mercearia",
+      "category": "Empório e mercearia",
+      "modules": [
+        "inf-box-31",
+        "inf-box-32"
+      ],
+      "boxes": "31, 32",
+      "onPlan": true,
+      "phone": "(41) 3026-7468 · (41) 99647-4429"
+    },
+    {
+      "name": "Casa da Azeitona",
+      "category": "Empório e mercearia",
+      "modules": [
+        "inf-box-33",
+        "inf-box-34",
+        "inf-box-35",
+        "inf-box-36"
+      ],
+      "boxes": "33, 34, 35, 36",
+      "onPlan": true,
+      "phone": "(41) 3264-1132 · (41) 99568-2026"
+    },
+    {
+      "name": "Empório Valência",
+      "category": "Empório e mercearia",
+      "modules": [
+        "inf-box-43",
+        "inf-box-44"
+      ],
+      "boxes": "43, 44",
+      "onPlan": true,
+      "phone": "(41) 3262-1584 · (41) 99984-0833"
+    },
+    {
+      "name": "Empório Francisca",
+      "category": "Empório e mercearia",
+      "modules": [
+        "inf-box-58",
+        "inf-box-59"
+      ],
+      "boxes": "58, 59",
+      "onPlan": true,
+      "phone": "(41) 3079-5207 · (41) 99178-8090"
+    },
+    {
+      "name": "Manga Rosa",
+      "category": "Outros",
+      "modules": [
+        "inf-box-60"
+      ],
+      "boxes": "60",
+      "onPlan": true,
+      "phone": "(41) 98477-8335"
+    },
+    {
+      "name": "Embalagens Municipal",
+      "category": "Variedades e serviços",
+      "modules": [
+        "inf-box-70",
+        "inf-box-71",
+        "inf-box-72"
+      ],
+      "boxes": "70, 71, 72",
+      "onPlan": true,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/embalagens-municipal/",
+      "description": "Embalagens."
+    },
+    {
+      "name": "K & M Artesanatos",
+      "category": "Variedades e serviços",
+      "modules": [
+        "inf-box-75",
+        "inf-box-76"
+      ],
+      "boxes": "75, 76",
+      "onPlan": true
+    },
+    {
+      "name": "Mercearia O Barracão",
+      "category": "Empório e mercearia",
+      "modules": [
+        "inf-box-278",
+        "inf-box-279"
+      ],
+      "boxes": "278, 279",
+      "onPlan": true
+    },
+    {
+      "name": "Manfré Cervejas Especiais",
+      "category": "Bebidas",
+      "modules": [
+        "inf-box-284",
+        "inf-box-285"
+      ],
+      "boxes": "284, 285",
+      "onPlan": true
+    },
+    {
+      "name": "Empório Curitibano",
+      "category": "Empório e mercearia",
+      "modules": [
+        "inf-box-291",
+        "inf-box-292"
+      ],
+      "boxes": "291, 292",
+      "onPlan": true
+    },
+    {
+      "name": "Nissei Comércio de Alimentos",
+      "category": "Empório e mercearia",
+      "modules": [
+        "inf-box-297",
+        "inf-box-298"
+      ],
+      "boxes": "297, 298",
+      "onPlan": true
+    },
+    {
+      "name": "Empório D'Gust",
+      "category": "Empório e mercearia",
+      "modules": [
+        "inf-box-300",
+        "inf-box-302"
+      ],
+      "boxes": "300, 302",
+      "onPlan": true
+    },
+    {
+      "name": "Bordando Sonhos",
+      "category": "Variedades e serviços",
+      "modules": [
+        "inf-box-303",
+        "inf-box-305"
+      ],
+      "boxes": "303, 305",
+      "onPlan": true,
+      "phone": "(41) 99688-1790"
+    },
+    {
+      "name": "Galisa",
+      "category": "Outros",
+      "modules": [
+        "inf-box-307"
+      ],
+      "boxes": "307",
+      "onPlan": true,
+      "phone": "(41) 3014-7760 · (41) 99845-9535"
+    },
+    {
+      "name": "Lotérica Mercado Municipal",
+      "category": "Variedades e serviços",
+      "modules": [
+        "inf-box-309",
+        "inf-box-310"
+      ],
+      "boxes": "309, 310",
+      "onPlan": true,
+      "phone": "(41) 3014-7760"
+    },
+    {
+      "name": "Mercearia Sayonara",
+      "category": "Empório e mercearia",
+      "modules": [
+        "inf-box-355"
+      ],
+      "boxes": "355",
+      "onPlan": true,
+      "phone": "(41) 3262-2386 · (41) 98762-8681"
+    },
+    {
+      "name": "Puro Coco",
+      "category": "Outros",
+      "modules": [
+        "inf-box-364",
+        "inf-box-369"
+      ],
+      "boxes": "364, 369",
+      "onPlan": true,
+      "phone": "(41) 3085-5080 · (41) 99995-0345"
+    },
+    {
+      "name": "Vitaly's Especiarias",
+      "category": "Cereais e especiarias",
+      "modules": [
+        "inf-box-367",
+        "inf-box-368"
+      ],
+      "boxes": "367, 368",
+      "onPlan": true,
+      "phone": "(41) 3363-5316 · (41) 99891-8237"
+    },
+    {
+      "name": "Tepanya Utilidades Domésticas",
+      "category": "Variedades e serviços",
+      "modules": [
+        "inf-box-376"
+      ],
+      "boxes": "376",
+      "onPlan": true,
+      "phone": "(41) 3023-2099 · (41) 99975-9265"
+    },
+    {
+      "name": "Satine Cosméticos",
+      "category": "Variedades e serviços",
+      "modules": [
+        "inf-box-377"
+      ],
+      "boxes": "377",
+      "onPlan": true,
+      "phone": "(41) 3029-6250 · (41) 99118-0069"
+    },
+    {
+      "name": "Café do Mercado",
+      "category": "Lanchonete e restaurante",
+      "modules": [
+        "inf-box-437",
+        "inf-box-438",
+        "inf-box-439"
+      ],
+      "boxes": "437, 438, 439",
+      "onPlan": true,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cafe-do-mercado/"
+    },
+    {
+      "name": "Grander & Shiomi (restaurante)",
+      "category": "Lanchonete e restaurante",
+      "modules": [
+        "inf-box-445",
+        "inf-box-446"
+      ],
+      "boxes": "445, 446",
+      "onPlan": true
+    },
+    {
+      "name": "The Bootlegger's Box",
+      "category": "Bebidas",
+      "modules": [
+        "inf-box-447",
+        "inf-box-448"
+      ],
+      "boxes": "447, 448",
+      "onPlan": true,
+      "phone": "(41) 99184-8362 · (41) 99184-9277"
+    },
+    {
+      "name": "Banca do Zé Mario",
+      "category": "Hortifrúti",
+      "modules": [
+        "inf-banca-49",
+        "inf-banca-62"
+      ],
+      "boxes": "49, 62",
+      "onPlan": true,
+      "phone": "(41) 99901-2347",
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-do-ze-mario/"
+    },
+    {
+      "name": "Merca Fruty – Produtos Congelados",
+      "category": "Empório e mercearia",
+      "modules": [
+        "inf-banca-14"
+      ],
+      "boxes": "14",
+      "onPlan": true,
+      "phone": "(41) 3076-7121"
+    },
+    {
       "name": "Box do Eliseu",
       "category": "Lanchonete e restaurante",
       "modules": [
@@ -1012,13 +1296,65 @@
       "description": "Desde 1977: revistas e livros japoneses e ofurôs, no pavimento superior perto da praça de alimentação."
     },
     {
-      "name": "The Bootlegger's",
-      "category": "Bebidas",
+      "name": "Kotobuki Artesanato e Presentes",
+      "category": "Variedades e serviços",
       "modules": [
-        "sup-box-518"
+        "sup-box-313",
+        "sup-box-333"
       ],
-      "boxes": "518",
+      "boxes": "313, 333",
       "onPlan": true
+    },
+    {
+      "name": "Artigos Orientais",
+      "category": "Variedades e serviços",
+      "modules": [
+        "sup-box-322",
+        "sup-box-323"
+      ],
+      "boxes": "322, 323",
+      "onPlan": true,
+      "phone": "(41) 3264-7914 · (41) 99975-9265"
+    },
+    {
+      "name": "Mina de Ouro Presentes",
+      "category": "Variedades e serviços",
+      "modules": [
+        "sup-box-324"
+      ],
+      "boxes": "324",
+      "onPlan": true,
+      "phone": "(41) 3362-9357"
+    },
+    {
+      "name": "Rafa's Ateliê de Costura",
+      "category": "Variedades e serviços",
+      "modules": [
+        "sup-box-326"
+      ],
+      "boxes": "326",
+      "onPlan": true,
+      "phone": "(41) 3013-0960 · (41) 99102-0201"
+    },
+    {
+      "name": "Vitornis Chapelaria",
+      "category": "Variedades e serviços",
+      "modules": [
+        "sup-box-332"
+      ],
+      "boxes": "332",
+      "onPlan": true,
+      "phone": "(41) 99659-0035"
+    },
+    {
+      "name": "Relojoaria Dajuki",
+      "category": "Variedades e serviços",
+      "modules": [
+        "sup-box-340"
+      ],
+      "boxes": "340",
+      "onPlan": true,
+      "phone": "(41) 99870-3865"
     },
     {
       "name": "Taurino's Organic",
@@ -1055,6 +1391,13 @@
       "category": "Lanchonete e restaurante",
       "boxes": "201",
       "onPlan": false
+    },
+    {
+      "name": "4 Estações",
+      "category": "Outros",
+      "boxes": "Bloco 02 – lojas 25, 26, 27, 45, 46",
+      "onPlan": false,
+      "phone": "(41) 3346-4635"
     },
     {
       "name": "Ninki Pastéis & Delícias",
@@ -1126,12 +1469,6 @@
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-do-mario/"
     },
     {
-      "name": "Banca do Zé Mario",
-      "category": "Hortifrúti",
-      "onPlan": false,
-      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-do-ze-mario/"
-    },
-    {
       "name": "Banca do Hiro",
       "category": "Hortifrúti",
       "onPlan": false,
@@ -1171,24 +1508,11 @@
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cafe-do-jorge-e-da-aurea/"
     },
     {
-      "name": "Café do Mercado",
-      "category": "Lanchonete e restaurante",
-      "onPlan": false,
-      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cafe-do-mercado/"
-    },
-    {
       "name": "Confeitaria Colônia Cecília",
       "category": "Doces e chocolates",
       "onPlan": false,
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/confeitaria-colonia-cecilia/",
       "description": "Desde 2003, na entrada pela Av. Sete de Setembro. Café colonial aos domingos."
-    },
-    {
-      "name": "Casa da Bolacha Caseira",
-      "category": "Doces e chocolates",
-      "onPlan": false,
-      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/casa-da-bolacha-caseira/",
-      "description": "Bolachas, doces caseiros e biscoitos de polvilho."
     },
     {
       "name": "Nico's Empório Orgânico",

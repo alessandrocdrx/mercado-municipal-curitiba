@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 448",
+  "title": "The Bootlegger's Box",
   "placement": {
     "floor": "inferior",
     "x": 91.77,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 448",
-      "sublabel": "comerciante não identificado"
+      "color": "#5b2e63",
+      "label": "The Bootlegger's Box",
+      "sublabel": "Bebidas · Box 448"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Bebidas",
+    "location": "Pavimento inferior · Box 447, 448",
+    "phone": "(41) 99184-8362 · (41) 99184-9277",
+    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "dd2b740ab82c"
+  "autoHash": "03e8bf659b53"
 }

@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 445",
+  "title": "Grander & Shiomi (restaurante)",
   "placement": {
     "floor": "inferior",
     "x": 79.51,
@@ -13,15 +13,16 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 445",
-      "sublabel": "comerciante não identificado"
+      "color": "#b0561d",
+      "label": "Grander & Shiomi (restaurante)",
+      "sublabel": "Lanchonete e restaurante · Box 445"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Lanchonete e restaurante",
+    "location": "Pavimento inferior · Box 445, 446",
+    "note": "Razão social da permissionária; nome fantasia não identificado. Fonte: Decreto municipal nº 327/2019 (transferência de permissão de uso). Confirme no local."
   },
   "generated": true,
-  "autoHash": "f5996e9a56bc"
+  "autoHash": "69c4224ce01f"
 }

@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 322",
+  "title": "Artigos Orientais",
   "placement": {
     "floor": "superior",
     "x": 47.62,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 322",
-      "sublabel": "comerciante não identificado"
+      "color": "#4a5a73",
+      "label": "Artigos Orientais",
+      "sublabel": "Variedades e serviços · Box 322"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento superior · Box 322, 323",
+    "phone": "(41) 3264-7914 · (41) 99975-9265",
+    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "cd2283cb0a5c"
+  "autoHash": "f459e6f413dd"
 }

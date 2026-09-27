@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 14",
+  "title": "Merca Fruty – Produtos Congelados",
   "placement": {
     "floor": "inferior",
     "x": 51.48,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 14",
-      "sublabel": "comerciante não identificado"
+      "color": "#9a6b1f",
+      "label": "Merca Fruty – Produtos Congelados",
+      "sublabel": "Empório e mercearia · Banca 14"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Banca 14",
+    "phone": "(41) 3076-7121",
+    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "5b9c84674126"
+  "autoHash": "08d8b5201fb0"
 }

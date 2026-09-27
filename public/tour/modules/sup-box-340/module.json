@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 340",
+  "title": "Relojoaria Dajuki",
   "placement": {
     "floor": "superior",
     "x": 29.05,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 340",
-      "sublabel": "comerciante não identificado"
+      "color": "#4a5a73",
+      "label": "Relojoaria Dajuki",
+      "sublabel": "Variedades e serviços · Box 340"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento superior · Box 340",
+    "phone": "(41) 99870-3865",
+    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "8db21f539e14"
+  "autoHash": "deee3c57ce00"
 }

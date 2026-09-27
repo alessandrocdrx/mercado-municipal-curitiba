@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 75",
+  "title": "K & M Artesanatos",
   "placement": {
     "floor": "inferior",
     "x": 91.65,
@@ -13,15 +13,16 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 75",
-      "sublabel": "comerciante não identificado"
+      "color": "#4a5a73",
+      "label": "K & M Artesanatos",
+      "sublabel": "Variedades e serviços · Box 75"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento inferior · Box 75, 76",
+    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "0a484a785cd7"
+  "autoHash": "81606fcbd234"
 }

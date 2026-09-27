@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 367",
+  "title": "Vitaly's Especiarias",
   "placement": {
     "floor": "inferior",
     "x": 39.64,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 367",
-      "sublabel": "comerciante não identificado"
+      "color": "#7a4a24",
+      "label": "Vitaly's Especiarias",
+      "sublabel": "Cereais e especiarias · Box 367"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Cereais e especiarias",
+    "location": "Pavimento inferior · Box 367, 368",
+    "phone": "(41) 3363-5316 · (41) 99891-8237",
+    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "9e20e253e305"
+  "autoHash": "b4c0e762aff6"
 }

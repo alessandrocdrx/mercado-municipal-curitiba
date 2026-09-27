@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 279",
+  "title": "Mercearia O Barracão",
   "placement": {
     "floor": "inferior",
     "x": 35.04,
@@ -13,15 +13,16 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 279",
-      "sublabel": "comerciante não identificado"
+      "color": "#9a6b1f",
+      "label": "Mercearia O Barracão",
+      "sublabel": "Empório e mercearia · Box 279"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Box 278, 279",
+    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "444374dd7685"
+  "autoHash": "01d79c35bde6"
 }

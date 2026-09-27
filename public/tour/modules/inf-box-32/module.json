@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 32",
+  "title": "Claudio's Mercearia",
   "placement": {
     "floor": "inferior",
     "x": 58.13,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 32",
-      "sublabel": "comerciante não identificado"
+      "color": "#9a6b1f",
+      "label": "Claudio's Mercearia",
+      "sublabel": "Empório e mercearia · Box 32"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Box 31, 32",
+    "phone": "(41) 3026-7468 · (41) 99647-4429",
+    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "999f44f571f2"
+  "autoHash": "5a4e45305e2c"
 }

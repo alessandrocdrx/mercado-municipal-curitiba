@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 43",
+  "title": "Empório Valência",
   "placement": {
     "floor": "inferior",
     "x": 32.28,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 43",
-      "sublabel": "comerciante não identificado"
+      "color": "#9a6b1f",
+      "label": "Empório Valência",
+      "sublabel": "Empório e mercearia · Box 43"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Box 43, 44",
+    "phone": "(41) 3262-1584 · (41) 99984-0833",
+    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "9a9657068687"
+  "autoHash": "7e4324fc19a2"
 }
