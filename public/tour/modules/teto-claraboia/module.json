@@ -1,0 +1,21 @@
+{
+  "type": "teto",
+  "title": "Teto — claraboia do corredor central",
+  "version": "2026-09-27",
+  "placement": {
+    "x": 0,
+    "y": 12,
+    "z": 7,
+    "width": 4,
+    "height": 16,
+    "facing": 0,
+    "surface": "ceiling"
+  },
+  "media": {
+    "placeholder": {
+      "color": "#6f8fa8",
+      "label": "Claraboia",
+      "sublabel": "módulo de teto"
+    }
+  }
+}

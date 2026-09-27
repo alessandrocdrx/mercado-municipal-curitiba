@@ -1,0 +1,15 @@
+{
+  "type": "sinalizacao",
+  "title": "Placa de boas-vindas",
+  "version": "2026-09-27",
+  "media": {
+    "placeholder": {
+      "color": "#1f4e3d",
+      "label": "Bem-vindo ao Mercado",
+      "sublabel": "placa ancorada na vista (exemplo)"
+    }
+  },
+  "info": {
+    "description": "Exemplo de módulo ancorado na vista de uma única cena (layers do scene.json)."
+  }
+}

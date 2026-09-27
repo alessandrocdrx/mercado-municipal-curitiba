@@ -1,0 +1,36 @@
+{
+  "title": "Entrada principal",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "initialView": {
+    "yaw": 0,
+    "pitch": 0,
+    "fov": 75
+  },
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#2b2f36"
+    },
+    "faces": {}
+  },
+  "links": [
+    {
+      "to": "corredor-central-1"
+    }
+  ],
+  "layers": [
+    {
+      "module": "placa-boas-vindas",
+      "yaw": 0,
+      "pitch": 18,
+      "distance": 8,
+      "width": 5,
+      "height": 1.2
+    }
+  ]
+}

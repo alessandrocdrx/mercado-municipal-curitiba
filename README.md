@@ -1,0 +1,150 @@
+# Mercado Municipal de Curitiba · Tour 360° modular
+
+Tour no estilo Google Street View em que **cada parte do ambiente é um módulo
+independente**: a foto panorâmica de cada ponto, cada face do cubo (inclusive
+teto e piso) e cada box, parede, placa ou teto sobreposto. Para atualizar
+qualquer coisa, basta trocar os arquivos de uma pasta. Não é preciso refotografar
+o mercado inteiro.
+
+```bash
+npm install
+npm run dev        # abre em http://localhost:5173
+npm run validate   # confere links, módulos e arquivos de mídia
+npm run build      # gera o site estático em dist/ (pode ir para qualquer hospedagem)
+```
+
+O repositório já vem com um tour de exemplo, com 5 pontos, 8 boxes, teto, piso,
+mural e uma placa. Tudo usa imagens provisórias geradas na hora, então funciona
+antes de existir qualquer foto.
+
+## Como funciona (3 camadas)
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│ 3. Módulos: box, parede, teto, piso, placa (PNG/JPG/vídeo)   │  ← troca frequente
+│ 2. Base da cena: panorâmica do ponto (cubo com 6 faces       │  ← troca pontual
+│    OU equiretangular de X graus)                             │
+│ 1. Planta: posição (x,y) de cada cena e módulo, em metros    │  ← quase nunca muda
+└──────────────────────────────────────────────────────────────┘
+```
+
+1. **Planta.** Cada cena (ponto de foto) tem `position` em metros e `northYaw`,
+   que indica para onde fica o norte na foto. Com isso as setas de navegação,
+   o minimapa e a direção do olhar ao "andar" são calculados sozinhos, como no
+   Street View.
+2. **Base.** É a foto 360° do ponto. Pode ser:
+   - `"type": "cube"`: 6 arquivos (`front`, `right`, `back`, `left`, `up`, `down`).
+     Dá para trocar **só o teto** (`up`) ou **só o piso** (`down`) de uma cena.
+   - `"type": "equirect"`: uma imagem 2:1 ou **parcial de X graus**
+     (`"hfov": 200, "vfov": 120`). Útil para fotos que não são 360° completas.
+3. **Módulos.** São planos com imagem (PNG com transparência, JPG ou vídeo)
+   sobrepostos à base. Existem dois tipos de âncora:
+   - **na planta** (`placement` no `module.json`): declarado uma vez e exibido
+     automaticamente em todas as cenas num raio de `moduleRadius` metros (30 por
+     padrão). Troque a foto da fachada do Box 12 e ela muda em todos os pontos
+     de onde o box aparece.
+   - **na vista** (`layers` no `scene.json`, com yaw/pitch/distância): ajuste
+     fino para uma foto específica. Também serve para sobrescrever a posição ou
+     a mídia de um módulo da planta só naquela cena.
+
+## Estrutura de arquivos
+
+```
+public/tour/
+├── tour.json                        índice: título, cena inicial, lista de cenas e módulos
+├── scenes/
+│   └── corredor-central-1/
+│       ├── scene.json               base + links + layers + posição na planta
+│       ├── front.jpg … down.jpg     (faces do cubo, quando houver fotos)
+└── modules/
+    └── box-04/
+        ├── module.json              tipo, título, versão, placement, mídia, info
+        └── fachada.jpg
+src/
+├── core/        Viewer (câmera/controles), geo (coordenadas), textures (cache/placeholder)
+├── tour/        TourLoader (lê JSON), SceneBuilder (monta a cena), placement
+└── ui/          setas de navegação, minimapa, painel de informações, editor
+scripts/validate-tour.mjs
+```
+
+### `scene.json`
+
+```jsonc
+{
+  "title": "Corredor central — trecho 1",
+  "position": { "x": 0, "y": 10, "z": 1.6 },   // metros; z = altura da câmera
+  "northYaw": 0,                                // yaw da foto que aponta para o norte
+  "initialView": { "yaw": 0, "pitch": 0, "fov": 75 },
+  "moduleRadius": 30,                           // até onde módulos da planta aparecem
+  "base": {
+    "type": "cube",
+    "version": "2026-09-27",                    // mude para forçar recarregar as fotos
+    "faces": { "front": "front.jpg", "up": "teto-2026-10.jpg" /* … */ }
+  },
+  "links": [{ "to": "corredor-central-2" }],    // yaw calculado pela planta (ou informe "yaw")
+  "hideModules": ["piso-corredor"],             // esconde módulos da planta nesta cena
+  "layers": [
+    { "module": "placa-boas-vindas", "yaw": 0, "pitch": 18, "distance": 8, "width": 5, "height": 1.2 }
+  ]
+}
+```
+
+### `module.json`
+
+```jsonc
+{
+  "type": "box",                               // box | parede | teto | piso | sinalizacao …
+  "title": "Box 04 — Cafés Especiais",
+  "version": "2026-09-27",                     // mude a cada troca de imagem
+  "enabled": true,                             // false = some de todas as cenas
+  "placement": { "x": 3, "y": 10, "z": 1.4, "width": 3.4, "height": 2.8,
+                 "facing": 270, "surface": "wall" },  // wall | floor | ceiling
+  "media": { "src": "fachada.jpg" },           // ou .png / .mp4; sem src = placeholder
+  "info": { "category": "Cafés", "hours": "Seg–Sáb 7h–19h", "description": "…", "url": "…" }
+}
+```
+
+## Receitas
+
+| Quero… | Faço… |
+|---|---|
+| Atualizar a fachada de um box | Troco `modules/box-XX/fachada.jpg` e mudo `version` |
+| Box mudou de dono | Edito `title`/`info`/`media` do `module.json` |
+| Box fechado | `"enabled": false` |
+| Refazer só o teto de um ponto | Troco a face `up` daquele `scene.json` |
+| Novo ponto de foto | Crio `scenes/<id>/scene.json`, listo em `tour.json` e adiciono `links` |
+| Módulo desalinhado numa foto | Uso o editor (tecla **E**) e colo o JSON em `layers` da cena |
+| Compartilhar uma vista | A URL guarda cena e direção (`#cena=…&yaw=…`) |
+
+## Editor (tecla E)
+
+- Clique num ponto vazio para ver yaw/pitch e um trecho de `layers` pronto.
+- Clique num módulo para selecioná-lo. Ajuste pelo teclado: setas movem,
+  `PgUp/PgDn` mudam distância ou altura, `[ ]` mudam a largura, `; '` a altura,
+  `, .` giram, e com `Shift` o passo fica 10×. Depois clique em **Copiar JSON** e
+  cole no arquivo indicado.
+- **R** recarrega os JSON sem perder a vista.
+
+## Como começar no mercado de verdade
+
+1. **Planta.** Consiga (ou desenhe) a planta baixa com os boxes numerados e
+   defina uma origem (0,0), por exemplo a entrada principal.
+2. **Pontos de foto.** Marque um ponto a cada 5–8 m nos corredores e anote o
+   (x,y) de cada um. Cada ponto vira uma cena.
+3. **Captura.** Use uma câmera 360° (Insta360, Ricoh Theta) num tripé a 1,60 m,
+   sempre com a mesma orientação (por exemplo, a lente virada para o norte, e
+   `northYaw: 0`). Fotografe em horário de pouco movimento.
+4. **Base.** Exporte a foto equiretangular (`equirect`) ou converta em 6 faces
+   de cubo (`cube`) para poder trocar teto e piso separadamente. Ferramentas
+   possíveis: PTGui, Hugin ou o pacote `panorama-to-cubemap`.
+5. **Módulos.** Fotografe cada fachada de box de frente, recorte em retângulo
+   (ou PNG com transparência) e cadastre com `placement` na planta.
+6. **Ajuste fino** com o editor e **publique** com `npm run validate && npm run build`.
+
+## Próximos passos sugeridos
+
+- Script para converter equiretangular → 6 faces automaticamente.
+- Tiles e multirresolução para fotos 8K+ (carregamento progressivo).
+- Painel admin (CMS) para lojistas atualizarem seus próprios boxes.
+- Histórico de versões ("como era o mercado em 2025").
+- Máscaras de oclusão para módulos atrás de pilares.

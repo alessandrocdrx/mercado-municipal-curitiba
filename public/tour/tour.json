@@ -1,0 +1,25 @@
+{
+  "title": "Mercado Municipal de Curitiba",
+  "startScene": "entrada-principal",
+  "scenes": [
+    "entrada-principal",
+    "corredor-central-1",
+    "corredor-central-2",
+    "corredor-lateral",
+    "praca-alimentacao"
+  ],
+  "modules": [
+    "box-01",
+    "box-02",
+    "box-03",
+    "box-04",
+    "box-05",
+    "box-06",
+    "box-07",
+    "box-08",
+    "teto-claraboia",
+    "piso-corredor",
+    "placa-boas-vindas",
+    "parede-mural-praca"
+  ]
+}

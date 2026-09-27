@@ -1,0 +1,20 @@
+{
+  "name": "mercado-tour-360",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Tour 360° modular do Mercado Municipal de Curitiba",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:single": "vite build && node scripts/build-single.mjs",
+    "preview": "vite preview",
+    "validate": "node scripts/validate-tour.mjs"
+  },
+  "dependencies": {
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "vite": "^8.3.1"
+  }
+}

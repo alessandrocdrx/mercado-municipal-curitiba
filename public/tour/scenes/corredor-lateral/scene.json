@@ -1,0 +1,46 @@
+{
+  "title": "Corredor lateral",
+  "position": {
+    "x": 8,
+    "y": 10,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 5.5,
+  "base": {
+    "type": "cube",
+    "placeholder": {
+      "color": "#2c3330"
+    },
+    "faces": {}
+  },
+  "links": [
+    {
+      "to": "corredor-central-1"
+    }
+  ],
+  "hideModules": [
+    "piso-corredor",
+    "teto-claraboia"
+  ],
+  "layers": [
+    {
+      "module": "box-04",
+      "yaw": -90,
+      "pitch": 0,
+      "distance": 5,
+      "width": 3.4,
+      "height": 2.8,
+      "rotation": {
+        "yaw": 0
+      },
+      "media": {
+        "placeholder": {
+          "color": "#4a2c1c",
+          "label": "Box 04 (fundos)",
+          "sublabel": "mídia sobrescrita só nesta cena"
+        }
+      }
+    }
+  ]
+}
