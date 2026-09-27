@@ -18,7 +18,47 @@
         "url": "https://cidadeseducadoras.curitiba.pr.gov.br/pontos-turisticos/mercado-municipal/"
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "fotos/praca-de-alimentacao.jpg",
+        "caption": "Praça de alimentação no pavimento superior, sob a cobertura em arcos (2013)",
+        "author": "Paulo JC Nogueira",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Mercado_Municipal_de_Curitiba_PR_-_panoramio.jpg"
+      },
+      {
+        "src": "fotos/saguao.jpg",
+        "caption": "Saguão com piso de granito, quiosque Yogutiba e saída para a rua (2013)",
+        "author": "Paulo JC Nogueira",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Mercado_Municipal_de_Curitiba_-_Curitiba_PR_-_panoramio_(1).jpg"
+      },
+      {
+        "src": "fotos/bon-vivant.jpg",
+        "caption": "Bon Vivant: queijos, frios e empório (2019)",
+        "author": "Simplus Menegati",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Mercado_municipal_de_Curitiba.1.jpg"
+      },
+      {
+        "src": "fotos/graos-pinhao.jpg",
+        "caption": "Grãos, castanhas e cortadores de pinhão a granel (2019)",
+        "author": "Simplus Menegati",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Mercado_municipal_de_Curitiba.2.jpg"
+      },
+      {
+        "src": "fotos/graos-a-granel.jpg",
+        "caption": "Feijões, grãos e castanhas vendidos a granel (2018)",
+        "author": "Renato Soares / MTur Destinos",
+        "license": "Domínio público",
+        "url": "https://commons.wikimedia.org/wiki/File:RenatoSoares_MercadoMunicipal_Curitiba_PR_(26275540647).jpg"
+      }
+    ]
   },
   "startScene": "inf-b-04",
   "floors": [

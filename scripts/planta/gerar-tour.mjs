@@ -11,7 +11,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { PAVIMENTOS, BOXES, PORTAS, CENAS, LIGACOES, ESCADAS, RUAS, AREA_COBERTA } from './dados-planta.mjs';
 import { COMERCIANTES, CATEGORIAS } from './comerciantes.mjs';
-import { FOTOS_MERCADO } from './fotos.mjs';
+import { FOTOS_MERCADO, FOTOS_COMERCIANTES } from './fotos.mjs';
 import crypto from 'node:crypto';
 
 const ROOT = 'public/tour';
@@ -84,6 +84,7 @@ for (const pav of PAVIMENTOS) {
             description: com.descricao,
             url: com.url,
             note: [com.obs, `Fonte: ${com.fonte ?? 'diretório de comerciantes do site oficial'}. Confirme no local.`].filter(Boolean).join(' '),
+            photos: FOTOS_COMERCIANTES[com.nome],
           })
           : {
             location: pav.titulo,

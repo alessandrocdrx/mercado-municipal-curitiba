@@ -24,8 +24,18 @@
     "phone": "(41) 3013-7753 · (41) 99673-7753",
     "description": "Mais de 300 queijos nacionais e importados e embutidos artesanais.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/bon-vivant/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local.",
+    "photos": [
+      {
+        "src": "../../fotos/bon-vivant.jpg",
+        "caption": "Bon Vivant: queijos, frios e empório (2019)",
+        "author": "Simplus Menegati",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Mercado_municipal_de_Curitiba.1.jpg"
+      }
+    ]
   },
   "generated": true,
-  "autoHash": "9b8482f7cb60"
+  "autoHash": "a687af4b35a2"
 }

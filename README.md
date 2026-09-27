@@ -177,6 +177,31 @@ scripts/validate-tour.mjs
    (ou PNG com transparência) e cadastre com `placement` na planta.
 6. **Ajuste fino** com o editor e **publique** com `npm run validate && npm run build`.
 
+## Créditos das fotos
+
+Fotos do Wikimedia Commons
+([Category:Mercado municipal de Curitiba](https://commons.wikimedia.org/wiki/Category:Mercado_municipal_de_Curitiba)),
+só com licença livre (CC0, domínio público, CC BY ou CC BY-SA), reduzidas em
+`public/tour/fotos/`. Aparecem no painel **Sobre** (e a da Bon Vivant também no
+painel dos boxes 56–57) com o crédito "Foto: autor · licença · Wikimedia
+Commons". Os dados ficam em `scripts/planta/fotos.mjs`: `npm run planta` os
+leva para `tour.json` e para os `module.json`. Para acrescentar uma foto a um
+box, use `info.photos` (`src`, `caption`, `author`, `license`, `licenseUrl`,
+`url`); `npm run validate` confere o arquivo e o crédito.
+
+| Arquivo | O que mostra | Autor | Licença | Página |
+|---|---|---|---|---|
+| `praca-de-alimentacao.jpg` | Praça de alimentação no pavimento superior (2013) | Paulo JC Nogueira | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) | [Commons](https://commons.wikimedia.org/wiki/File:Mercado_Municipal_de_Curitiba_PR_-_panoramio.jpg) |
+| `saguao.jpg` | Saguão com quiosque Yogutiba e saída para a rua (2013) | Paulo JC Nogueira | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) | [Commons](https://commons.wikimedia.org/wiki/File:Mercado_Municipal_de_Curitiba_-_Curitiba_PR_-_panoramio_(1).jpg) |
+| `bon-vivant.jpg` | Bon Vivant, boxes 56–57 (2019) | Simplus Menegati | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [Commons](https://commons.wikimedia.org/wiki/File:Mercado_municipal_de_Curitiba.1.jpg) |
+| `graos-pinhao.jpg` | Grãos, castanhas e cortadores de pinhão (2019) | Simplus Menegati | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [Commons](https://commons.wikimedia.org/wiki/File:Mercado_municipal_de_Curitiba.2.jpg) |
+| `graos-a-granel.jpg` | Feijões, grãos e castanhas a granel (2018) | Renato Soares / MTur Destinos | Domínio público | [Commons](https://commons.wikimedia.org/wiki/File:RenatoSoares_MercadoMunicipal_Curitiba_PR_(26275540647).jpg) |
+
+As fotos reduzidas são obras derivadas e seguem a mesma licença do original.
+Outras três fotos de Renato Soares/MTur Destinos na categoria ficaram de fora:
+o Commons as marca só como "Attribution" (`{{Flickrstream MTur Destinos}}`),
+que não é uma das licenças acima.
+
 ## Próximos passos sugeridos
 
 - Script para converter equiretangular → 6 faces automaticamente.
