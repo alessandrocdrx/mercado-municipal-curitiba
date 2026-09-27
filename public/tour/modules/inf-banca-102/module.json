@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 102",
+  "title": "Une Toyoda",
   "placement": {
     "floor": "inferior",
     "x": 87.06,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 102",
-      "sublabel": "comerciante não identificado"
+      "color": "#9a6b1f",
+      "label": "Une Toyoda",
+      "sublabel": "Empório e mercearia · Banca 102"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Banca 101, 102",
+    "phone": "(41) 3019-5293 · (41) 99245-0122",
+    "note": "A lista cita a banca 101; outro guia cita 101 e 102. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "0b960e489a05"
+  "autoHash": "7d567b503ac9"
 }

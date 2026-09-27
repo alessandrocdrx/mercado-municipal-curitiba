@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 70",
+  "title": "Osvaldo Cereais",
   "placement": {
     "floor": "inferior",
     "x": 72.6,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 70",
-      "sublabel": "comerciante não identificado"
+      "color": "#7a4a24",
+      "label": "Osvaldo Cereais",
+      "sublabel": "Cereais e especiarias · Banca 70"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Cereais e especiarias",
+    "location": "Pavimento inferior · Banca 68, 69, 70",
+    "phone": "(41) 3264-5271 · (41) 99923-2668",
+    "note": "A lista cita a banca 68; outro guia cita 68 a 70. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "39f4d8d90566"
+  "autoHash": "2eaa27ed19a2"
 }

@@ -607,13 +607,16 @@
       "name": "Adega Municipal",
       "category": "Bebidas",
       "modules": [
-        "inf-box-15"
+        "inf-box-267",
+        "inf-box-269",
+        "inf-box-270",
+        "inf-box-271"
       ],
-      "boxes": "15",
+      "boxes": "267, 269, 270, 271",
       "onPlan": true,
       "phone": "(41) 3039-1984 · (41) 98870-1977",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/adega-municipal/",
-      "description": "Vinhos, espumantes, whisky, conhaque e licores."
+      "description": "Vinhos, espumantes, whisky, conhaque, licores e tabacaria."
     },
     {
       "name": "Planeta Aquários",
@@ -670,9 +673,11 @@
       "name": "Armazém da Zelma",
       "category": "Cereais e especiarias",
       "modules": [
-        "inf-box-28"
+        "inf-box-28",
+        "inf-box-29",
+        "inf-box-30"
       ],
-      "boxes": "28",
+      "boxes": "28, 29, 30",
       "onPlan": true,
       "phone": "(41) 3264-4064 · (41) 99215-5400",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/armazem-da-zelma/",
@@ -714,10 +719,12 @@
       "name": "Box 41 – Vinhos",
       "category": "Bebidas",
       "modules": [
+        "inf-box-39",
         "inf-box-40",
-        "inf-box-41"
+        "inf-box-41",
+        "inf-box-42"
       ],
-      "boxes": "40, 41",
+      "boxes": "39, 40, 41, 42",
       "onPlan": true,
       "phone": "(41) 3264-4343 · (41) 99705-4697",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/box-41-vinhos/",
@@ -895,9 +902,12 @@
       "name": "Flora Cristiane",
       "category": "Flores e plantas",
       "modules": [
-        "inf-box-78"
+        "inf-box-77",
+        "inf-box-78",
+        "inf-box-79",
+        "inf-box-80"
       ],
-      "boxes": "78",
+      "boxes": "77, 78, 79, 80",
       "onPlan": true,
       "phone": "(41) 3264-5324 · (41) 98871-0868",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/flora-cristiane/",
@@ -1643,9 +1653,11 @@
       "name": "Osvaldo Cereais",
       "category": "Cereais e especiarias",
       "modules": [
-        "inf-banca-68"
+        "inf-banca-68",
+        "inf-banca-69",
+        "inf-banca-70"
       ],
-      "boxes": "68",
+      "boxes": "68, 69, 70",
       "onPlan": true,
       "phone": "(41) 3264-5271 · (41) 99923-2668"
     },
@@ -1759,9 +1771,10 @@
       "name": "Une Toyoda",
       "category": "Empório e mercearia",
       "modules": [
-        "inf-banca-101"
+        "inf-banca-101",
+        "inf-banca-102"
       ],
-      "boxes": "101",
+      "boxes": "101, 102",
       "onPlan": true,
       "phone": "(41) 3019-5293 · (41) 99245-0122"
     },

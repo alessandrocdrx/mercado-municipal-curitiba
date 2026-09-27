@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 29",
+  "title": "Armazém da Zelma",
   "placement": {
     "floor": "inferior",
     "x": 65.18,
@@ -13,15 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 29",
-      "sublabel": "comerciante não identificado"
+      "color": "#7a4a24",
+      "label": "Armazém da Zelma",
+      "sublabel": "Cereais e especiarias · Box 29"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Cereais e especiarias",
+    "location": "Pavimento inferior · Box 28, 29, 30",
+    "phone": "(41) 3264-4064 · (41) 99215-5400",
+    "description": "No Mercado desde 1º de novembro de 1960: azeites, bacalhau, castanhas, frutas secas, especiarias, conservas e cereais.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/armazem-da-zelma/",
+    "note": "A lista cita só o Box 28; o site oficial e o Foursquare citam 28 a 30. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "631bd1e940b6"
+  "autoHash": "269c064c2c2b"
 }

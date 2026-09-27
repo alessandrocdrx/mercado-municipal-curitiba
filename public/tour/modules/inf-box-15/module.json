@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Adega Municipal",
+  "title": "Box 15",
   "placement": {
     "floor": "inferior",
     "x": 98.4,
@@ -13,19 +13,15 @@
   },
   "media": {
     "placeholder": {
-      "color": "#5b2e63",
-      "label": "Adega Municipal",
-      "sublabel": "Bebidas · Box 15"
+      "color": "#44474d",
+      "label": "Box 15",
+      "sublabel": "comerciante não identificado"
     }
   },
   "info": {
-    "category": "Bebidas",
-    "location": "Pavimento inferior · Box 15",
-    "phone": "(41) 3039-1984 · (41) 98870-1977",
-    "description": "Vinhos, espumantes, whisky, conhaque e licores.",
-    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/adega-municipal/",
-    "note": "A lista informa \"Box 15B\"; a planta mostra um único Box 15. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "location": "Pavimento inferior",
+    "description": "Comerciante deste espaço não identificado no site oficial."
   },
   "generated": true,
-  "autoHash": "6f6879325412"
+  "autoHash": "a0c31b9211ae"
 }

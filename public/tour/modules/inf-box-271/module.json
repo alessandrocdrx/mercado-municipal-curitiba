@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 271",
+  "title": "Adega Municipal",
   "placement": {
     "floor": "inferior",
     "x": 15.3,
@@ -13,15 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 271",
-      "sublabel": "comerciante não identificado"
+      "color": "#5b2e63",
+      "label": "Adega Municipal",
+      "sublabel": "Bebidas · Box 271"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Bebidas",
+    "location": "Pavimento inferior · Box 267, 269, 270, 271",
+    "phone": "(41) 3039-1984 · (41) 98870-1977",
+    "description": "Vinhos, espumantes, whisky, conhaque, licores e tabacaria.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/adega-municipal/",
+    "note": "A lista informa \"Box 15B\". Um guia público lista os boxes 267 a 271 (bebidas e tabacaria) com o mesmo telefone; o 268 é da Adega Brasil. Confirmar no local. Fonte: lista de lojas e guia público. Confirme no local."
   },
   "generated": true,
-  "autoHash": "921dca35dd55"
+  "autoHash": "0bf2d6f774ef"
 }
