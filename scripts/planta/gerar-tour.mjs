@@ -9,9 +9,9 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { PAVIMENTOS, BOXES, PORTAS, CENAS, LIGACOES, ESCADAS, RUAS, AREA_COBERTA, AREAS } from './dados-planta.mjs';
+import { PAVIMENTOS, BOXES, PORTAS, CENAS, LIGACOES, ESCADAS, RUAS, AREA_COBERTA } from './dados-planta.mjs';
 import { COMERCIANTES, CATEGORIAS } from './comerciantes.mjs';
-import { FOTOS_MERCADO, FOTOS_COMERCIANTES, fotoDoModulo } from './fotos.mjs';
+import { FOTOS_MERCADO, FOTOS_COMERCIANTES } from './fotos.mjs';
 import crypto from 'node:crypto';
 
 const ROOT = 'public/tour';
@@ -106,23 +106,6 @@ for (const pav of PAVIMENTOS) {
     });
   }
 
-  // ---------------------------------------------------------- módulos: placas das áreas fora do desenho
-  for (const area of AREAS[pav.id] ?? []) {
-    upsertModule(`${prefix}-area-${area.id}`, {
-      type: 'sinalizacao',
-      title: area.titulo,
-      placement: { floor: pav.id, ...toMeters(pav, area.placa.em), z: 3.2, width: 4.2, height: 1.1, facing: area.placa.facing, surface: 'wall', doubleSided: true },
-      media: { placeholder: { color: area.cor, label: area.titulo, sublabel: area.subtitulo } },
-      info: limpa({
-        category: area.tipo === 'praca' ? 'Praça de alimentação' : 'Saguão',
-        location: area.local,
-        description: area.descricao,
-        note: area.nota,
-        photos: area.foto ? [fotoDoModulo(area.foto)] : undefined,
-      }),
-    });
-  }
-
   // ---------------------------------------------------------- cenas
   for (const cena of CENAS[pav.id]) {
     const links = LIGACOES.flatMap(([a, b]) => (a === cena.id ? [{ to: b }] : b === cena.id ? [{ to: a }] : []));
@@ -161,9 +144,6 @@ writeJson(path.join(ROOT, 'tour.json'), {
     title: p.titulo,
     startScene: p.inicio,
     plan: { src: p.planta, width: r2(IMG_W * p.escala), height: r2(IMG_H * p.escala) },
-    areas: (AREAS[p.id] ?? []).map((a) => ({
-      id: a.id, title: a.titulo, kind: a.tipo, color: a.cor, from: toMeters(p, a.de), to: toMeters(p, a.ate),
-    })),
     covered: AREA_COBERTA[p.id] && {
       from: toMeters(p, AREA_COBERTA[p.id].de), to: toMeters(p, AREA_COBERTA[p.id].ate),
     },

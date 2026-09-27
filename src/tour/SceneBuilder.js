@@ -33,7 +33,7 @@ export async function buildScene(loader, sceneId) {
     };
     const tour = await loader.tour();
     const floor = tour.floors?.find((f) => f.id === scene.floor);
-    environment = await buildModel(group, anchor, floor, loader.tourUrl, scenes);
+    environment = await buildModel(group, anchor, floor, loader.tourUrl);
   } else {
     group.add(await buildBase(scene));
   }
@@ -73,7 +73,7 @@ export function hasPhoto(base) {
 
 const CEILING_HEIGHT = 5.5;
 
-async function buildModel(group, scene, floor, tourUrl, scenes = []) {
+async function buildModel(group, scene, floor, tourUrl) {
   // luz para os volumes dos boxes terem faces com tons diferentes
   group.add(new THREE.AmbientLight('#ffffff', 1.6));
   const sun = new THREE.DirectionalLight('#ffffff', 1.4);
@@ -106,10 +106,6 @@ async function buildModel(group, scene, floor, tourUrl, scenes = []) {
     }, scene);
     group.add(plane);
   }
-  // áreas que a planta não desenha (praça de alimentação, saguão): piso próprio e mesas
-  const pontos = scenes.filter((s) => s.position && (s.floor ?? null) === (floor?.id ?? null)).map((s) => s.position);
-  for (const area of floor?.areas ?? []) buildArea(group, scene, area, pontos);
-
   // piso neutro em volta, para não haver "buraco" fora da planta
   const ground = new THREE.Mesh(new THREE.PlaneGeometry(400, 400), new THREE.MeshBasicMaterial({ color: '#8d8b86' }));
   ground.rotation.x = -Math.PI / 2;
@@ -140,43 +136,6 @@ async function buildModel(group, scene, floor, tourUrl, scenes = []) {
   for (const street of floor?.streets ?? []) buildStreet(group, scene, street);
 
   return { background: '#cfdbe4', fog: { color: '#d6dde2', near: 12, far: 55 } };
-}
-
-const TABLE_SPACING = 2.6; // m entre mesas
-const TABLE_CLEAR = 1.4; // m livres em volta de cada ponto de vista
-
-/** Piso colorido de uma área fora do desenho da planta; na praça, mesas em grade. */
-function buildArea(group, scene, area, pontos) {
-  const x0 = Math.min(area.from.x, area.to.x);
-  const x1 = Math.max(area.from.x, area.to.x);
-  const y0 = Math.min(area.from.y, area.to.y);
-  const y1 = Math.max(area.from.y, area.to.y);
-  const piso = new THREE.Mesh(
-    new THREE.PlaneGeometry(1, 1),
-    new THREE.MeshBasicMaterial({ color: area.kind === 'praca' ? '#d9d2c3' : '#c9c5bd', transparent: true, opacity: 0.85 }),
-  );
-  piso.name = `area:${area.id}`;
-  applyPlacement(piso, { x: (x0 + x1) / 2, y: (y0 + y1) / 2, z: 0.01, width: x1 - x0, height: y1 - y0, facing: 0, surface: 'floor' }, scene);
-  group.add(piso);
-  if (area.kind !== 'praca') return;
-
-  const livre = (x, y) => pontos.every((p) => Math.hypot(p.x - x, p.y - y) > TABLE_CLEAR);
-  const lugares = [];
-  for (let x = x0 + 2.5; x <= x1 - 2.5; x += TABLE_SPACING) {
-    for (let y = y0 + 2.5; y <= y1 - 2.5; y += TABLE_SPACING) if (livre(x, y)) lugares.push({ x, y });
-  }
-  const tampo = new THREE.InstancedMesh(new THREE.BoxGeometry(0.9, 0.05, 0.9), new THREE.MeshLambertMaterial({ color: '#4a3326' }), lugares.length);
-  const pe = new THREE.InstancedMesh(new THREE.BoxGeometry(0.08, 0.72, 0.08), new THREE.MeshLambertMaterial({ color: '#333333' }), lugares.length);
-  const m = new THREE.Matrix4();
-  const v = new THREE.Vector3();
-  lugares.forEach((l, i) => {
-    worldToLocal({ ...l, z: 0.75 }, scene, v);
-    tampo.setMatrixAt(i, m.makeTranslation(v.x, v.y, v.z));
-    worldToLocal({ ...l, z: 0.37 }, scene, v);
-    pe.setMatrixAt(i, m.makeTranslation(v.x, v.y, v.z));
-  });
-  tampo.name = pe.name = `mesas:${area.id}`;
-  group.add(tampo, pe);
 }
 
 /**
@@ -370,9 +329,9 @@ async function buildModuleMesh(module, placement, scene, model = false) {
   mesh.name = `module:${module.id}`;
   mesh.renderOrder = placement.order ?? 1;
   mesh.userData = { pickable: true, module, placement, anchor: isWorldPlacement(placement) ? 'world' : 'view' };
-  if (model && BODY_DEPTH[module.type] && isWorldPlacement(placement) && (placement.surface ?? 'wall') === 'wall') {
+  if (model && BODY_DEPTH[kind] && isWorldPlacement(placement) && (placement.surface ?? 'wall') === 'wall') {
     // volume da loja atrás da fachada (filho do plano: herda posição e largura/altura)
-    const depth = BODY_DEPTH[module.type];
+    const depth = BODY_DEPTH[kind];
     const body = new THREE.Mesh(
       new THREE.BoxGeometry(1, 1, depth),
       new THREE.MeshLambertMaterial({ color: kind === 'banca' ? '#cfc6b4' : '#ddd6c8' }),

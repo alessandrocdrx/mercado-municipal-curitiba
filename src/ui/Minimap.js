@@ -59,15 +59,6 @@ export class Minimap {
     this.svg.setAttribute('viewBox', `${box.minX} ${-box.maxY} ${box.maxX - box.minX} ${box.maxY - box.minY}`);
     const unit = (box.maxX - box.minX) / 100; // marcadores proporcionais ao tamanho do mapa
 
-    // áreas fora do desenho da planta (posição aproximada)
-    for (const a of floor?.areas ?? []) {
-      const x = Math.min(a.from.x, a.to.x);
-      const y = -Math.max(a.from.y, a.to.y);
-      const rect = node('rect', { x, y, width: Math.abs(a.to.x - a.from.x), height: Math.abs(a.to.y - a.from.y), class: 'mm-area', 'stroke-width': unit * 0.4, fill: a.color });
-      rect.append(node('title', {}, a.title));
-      this.svg.append(rect);
-    }
-
     for (const m of modules) {
       const p = m.placement;
       if (p?.x === undefined || !onFloor(p.floor) || p.surface === 'ceiling' || p.surface === 'floor') continue;

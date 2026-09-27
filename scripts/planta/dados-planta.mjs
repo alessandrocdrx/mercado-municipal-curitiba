@@ -218,13 +218,6 @@ export const CENAS = {
     { id: 'sup-verde-1', titulo: 'Área verde · centro', em: [900, 440], cor: VERDE_ESC },
     { id: 'sup-verde-2', titulo: 'Área verde · leste', em: [1055, 470], cor: VERDE_ESC },
     { id: 'sup-verde-3', titulo: 'Área verde · sul', em: [900, 640], cor: VERDE_ESC },
-    // áreas de AREAS (fora do desenho da planta; posição aproximada)
-    { id: 'sup-praca-1', titulo: 'Praça de alimentação · oeste', em: [990, 930], cor: LARANJA },
-    { id: 'sup-praca-2', titulo: 'Praça de alimentação · centro', em: [1300, 1080], cor: LARANJA },
-    { id: 'sup-praca-3', titulo: 'Praça de alimentação · leste', em: [1650, 1080], cor: LARANJA },
-    { id: 'sup-arena-acesso', titulo: 'Passagem para a Arena', em: [120, 690], cor: CINZA },
-    { id: 'sup-arena-1', titulo: 'Arena · centro', em: [290, 1000], cor: CINZA },
-    { id: 'sup-arena-entrada', titulo: 'Arena · entrada principal (Av. Sete de Setembro)', em: [160, 1260], cor: CINZA },
   ],
 };
 
@@ -263,10 +256,6 @@ export const LIGACOES = [
   ['sup-rosa-2', 'sup-verde-3'],
   ...cadeia(['sup-verde-porta-d', 'sup-verde-1', 'sup-verde-3']),
   ['sup-verde-1', 'sup-verde-2'],
-  // áreas de AREAS
-  ['sup-rosa-3', 'sup-praca-1'],
-  ...cadeia(['sup-praca-1', 'sup-praca-2', 'sup-praca-3']),
-  ...cadeia(['sup-porta-b', 'sup-arena-acesso', 'sup-arena-1', 'sup-arena-entrada']),
 ];
 
 // Escadas entre pavimentos (direção informada à mão: não há planta comum).
@@ -294,42 +283,5 @@ export const RUAS = {
 // Área coberta de cada pavimento (px): o teto só é desenhado aqui dentro.
 export const AREA_COBERTA = {
   inferior: { de: [0, 100], ate: [2000, 1145] },
-  superior: { de: [100, 160], ate: [1990, 1400] },
-};
-
-// ---------------------------------------------------------------- áreas fora do desenho
-// Regiões que a planta afixada deixa em branco (ou só contorna), identificadas
-// por fotos do Wikimedia Commons (scripts/planta/fotos.mjs) e por quem conhece
-// o mercado. Retângulos APROXIMADOS em px da planta; não há boxes numerados.
-//   tipo: 'praca' (mesas) · 'saguao' (piso livre)
-//   placa: letreiro suspenso clicável, com descrição e fotos · local: texto de localização
-export const AREAS = {
-  superior: [
-    {
-      id: 'praca-arcos',
-      titulo: 'Praça de alimentação',
-      subtitulo: 'salão sob os arcos',
-      local: 'Pavimento superior · ao lado da área rosa (boxes 01–10)',
-      tipo: 'praca',
-      cor: '#c7803a',
-      de: [880, 845], ate: [1985, 1370],
-      placa: { em: [990, 870], facing: 270 },
-      foto: 'pracaAlimentacao',
-      descricao: 'Salão de mesas sob a cobertura em arcos de madeira, com restaurantes nas paredes e escada para o pavimento inferior. Na foto de 2013 aparecem Mister Dea, Polly Lazzarotto (praça de alimentação), Cozinha Oriental e Takê.',
-      nota: 'Área contornada na planta afixada sem boxes numerados; limites e mesas aproximados a partir da foto. A escada para o pavimento inferior ainda não tem ponto de chegada definido.',
-    },
-    {
-      id: 'arena',
-      titulo: 'Arena',
-      subtitulo: 'entrada principal · Av. Sete de Setembro',
-      local: 'Entrada principal pela Av. Sete de Setembro, em nível abaixo do pavimento superior',
-      tipo: 'saguao',
-      cor: '#8f8a80',
-      de: [107, 750], ate: [464, 1393],
-      placa: { em: [290, 900], facing: 180 },
-      foto: 'saguao',
-      descricao: 'Saguão da entrada principal pela Av. Sete de Setembro, em nível abaixo do pavimento superior: piso de granito, fachada de vidro para a rua e escada metálica. Na foto de 2013 aparece o quiosque Yogutiba.',
-      nota: 'Área em branco na planta afixada; posição e acesso aproximados (informação de visitante + foto). Confirme no local.',
-    },
-  ],
+  superior: { de: [100, 160], ate: [1180, 1400] },
 };
