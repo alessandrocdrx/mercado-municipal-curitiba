@@ -1,9 +1,9 @@
 {
-  "title": "Área rosa · corredor",
+  "title": "Arena · centro",
   "floor": "superior",
   "position": {
-    "x": 53.2,
-    "y": -64.4,
+    "x": 20.3,
+    "y": -70,
     "z": 1.6
   },
   "northYaw": 0,
@@ -14,13 +14,10 @@
   },
   "links": [
     {
-      "to": "sup-rosa-desce"
+      "to": "sup-arena-acesso"
     },
     {
-      "to": "sup-rosa-4"
-    },
-    {
-      "to": "sup-praca-1"
+      "to": "sup-arena-entrada"
     }
   ],
   "generated": true

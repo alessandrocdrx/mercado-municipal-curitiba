@@ -1,9 +1,9 @@
 {
-  "title": "Área rosa · corredor",
+  "title": "Passagem para a Arena",
   "floor": "superior",
   "position": {
-    "x": 53.2,
-    "y": -64.4,
+    "x": 8.4,
+    "y": -48.3,
     "z": 1.6
   },
   "northYaw": 0,
@@ -14,13 +14,10 @@
   },
   "links": [
     {
-      "to": "sup-rosa-desce"
+      "to": "sup-porta-b"
     },
     {
-      "to": "sup-rosa-4"
-    },
-    {
-      "to": "sup-praca-1"
+      "to": "sup-arena-1"
     }
   ],
   "generated": true

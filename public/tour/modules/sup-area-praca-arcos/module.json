@@ -1,0 +1,40 @@
+{
+  "type": "sinalizacao",
+  "title": "Praça de alimentação",
+  "placement": {
+    "floor": "superior",
+    "x": 69.3,
+    "y": -60.9,
+    "z": 3.2,
+    "width": 4.2,
+    "height": 1.1,
+    "facing": 270,
+    "surface": "wall",
+    "doubleSided": true
+  },
+  "media": {
+    "placeholder": {
+      "color": "#c7803a",
+      "label": "Praça de alimentação",
+      "sublabel": "salão sob os arcos"
+    }
+  },
+  "info": {
+    "category": "Praça de alimentação",
+    "location": "Pavimento superior · ao lado da área rosa (boxes 01–10)",
+    "description": "Salão de mesas sob a cobertura em arcos de madeira, com restaurantes nas paredes e escada para o pavimento inferior. Na foto de 2013 aparecem Mister Dea, Polly Lazzarotto (praça de alimentação), Cozinha Oriental e Takê.",
+    "note": "Área contornada na planta afixada sem boxes numerados; limites e mesas aproximados a partir da foto. A escada para o pavimento inferior ainda não tem ponto de chegada definido.",
+    "photos": [
+      {
+        "src": "../../fotos/praca-de-alimentacao.jpg",
+        "caption": "Praça de alimentação no pavimento superior, sob a cobertura em arcos (2013)",
+        "author": "Paulo JC Nogueira",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Mercado_Municipal_de_Curitiba_PR_-_panoramio.jpg"
+      }
+    ]
+  },
+  "generated": true,
+  "autoHash": "28a3fbc7c884"
+}

@@ -1,9 +1,9 @@
 {
-  "title": "Área rosa · corredor",
+  "title": "Praça de alimentação · centro",
   "floor": "superior",
   "position": {
-    "x": 53.2,
-    "y": -64.4,
+    "x": 91,
+    "y": -75.6,
     "z": 1.6
   },
   "northYaw": 0,
@@ -14,13 +14,10 @@
   },
   "links": [
     {
-      "to": "sup-rosa-desce"
-    },
-    {
-      "to": "sup-rosa-4"
-    },
-    {
       "to": "sup-praca-1"
+    },
+    {
+      "to": "sup-praca-3"
     }
   ],
   "generated": true

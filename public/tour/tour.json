@@ -71,6 +71,7 @@
         "width": 120,
         "height": 90
       },
+      "areas": [],
       "covered": {
         "from": {
           "x": 0,
@@ -113,13 +114,43 @@
         "width": 140,
         "height": 105
       },
+      "areas": [
+        {
+          "id": "praca-arcos",
+          "title": "Praça de alimentação",
+          "kind": "praca",
+          "color": "#c7803a",
+          "from": {
+            "x": 61.6,
+            "y": -59.15
+          },
+          "to": {
+            "x": 138.95,
+            "y": -95.9
+          }
+        },
+        {
+          "id": "arena",
+          "title": "Arena",
+          "kind": "saguao",
+          "color": "#8f8a80",
+          "from": {
+            "x": 7.49,
+            "y": -52.5
+          },
+          "to": {
+            "x": 32.48,
+            "y": -97.51
+          }
+        }
+      ],
       "covered": {
         "from": {
           "x": 7,
           "y": -11.2
         },
         "to": {
-          "x": 82.6,
+          "x": 139.3,
           "y": -98
         }
       },
@@ -193,7 +224,13 @@
     "sup-verde-porta-d",
     "sup-verde-1",
     "sup-verde-2",
-    "sup-verde-3"
+    "sup-verde-3",
+    "sup-praca-1",
+    "sup-praca-2",
+    "sup-praca-3",
+    "sup-arena-acesso",
+    "sup-arena-1",
+    "sup-arena-entrada"
   ],
   "modules": [
     "inf-box-43",
@@ -565,7 +602,9 @@
     "sup-box-518",
     "sup-porta-b",
     "sup-porta-c",
-    "sup-porta-d"
+    "sup-porta-d",
+    "sup-area-praca-arcos",
+    "sup-area-arena"
   ],
   "directory": [
     {

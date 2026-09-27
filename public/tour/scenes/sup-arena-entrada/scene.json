@@ -1,9 +1,9 @@
 {
-  "title": "Área rosa · corredor",
+  "title": "Arena · entrada principal (Av. Sete de Setembro)",
   "floor": "superior",
   "position": {
-    "x": 53.2,
-    "y": -64.4,
+    "x": 11.2,
+    "y": -88.2,
     "z": 1.6
   },
   "northYaw": 0,
@@ -14,13 +14,7 @@
   },
   "links": [
     {
-      "to": "sup-rosa-desce"
-    },
-    {
-      "to": "sup-rosa-4"
-    },
-    {
-      "to": "sup-praca-1"
+      "to": "sup-arena-1"
     }
   ],
   "generated": true

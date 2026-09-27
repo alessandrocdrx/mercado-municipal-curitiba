@@ -51,6 +51,9 @@ const comSrc = ({ file, ...foto }, prefixo) => ({ src: `${prefixo}fotos/${file}`
 /** Painel "Sobre" (tour.json fica em public/tour/). */
 export const FOTOS_MERCADO = Object.values(FOTOS).map((f) => comSrc(f, ''));
 
+/** Foto pela chave (ex.: 'saguao') para um module.json em public/tour/modules/<id>/. */
+export const fotoDoModulo = (chave) => comSrc(FOTOS[chave], '../../');
+
 /** Fotos de um comerciante, pelo nome em comerciantes.mjs; módulos ficam em public/tour/modules/<id>/. */
 export const FOTOS_COMERCIANTES = {
   'Bon Vivant': [comSrc(FOTOS.bonVivant, '../../')],

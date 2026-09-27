@@ -15,6 +15,9 @@
   "links": [
     {
       "to": "sup-sul-1"
+    },
+    {
+      "to": "sup-arena-acesso"
     }
   ],
   "generated": true

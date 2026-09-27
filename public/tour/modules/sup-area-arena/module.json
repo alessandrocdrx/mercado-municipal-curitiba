@@ -1,0 +1,40 @@
+{
+  "type": "sinalizacao",
+  "title": "Arena",
+  "placement": {
+    "floor": "superior",
+    "x": 20.3,
+    "y": -63,
+    "z": 3.2,
+    "width": 4.2,
+    "height": 1.1,
+    "facing": 180,
+    "surface": "wall",
+    "doubleSided": true
+  },
+  "media": {
+    "placeholder": {
+      "color": "#8f8a80",
+      "label": "Arena",
+      "sublabel": "entrada principal · Av. Sete de Setembro"
+    }
+  },
+  "info": {
+    "category": "Saguão",
+    "location": "Entrada principal pela Av. Sete de Setembro, em nível abaixo do pavimento superior",
+    "description": "Saguão da entrada principal pela Av. Sete de Setembro, em nível abaixo do pavimento superior: piso de granito, fachada de vidro para a rua e escada metálica. Na foto de 2013 aparece o quiosque Yogutiba.",
+    "note": "Área em branco na planta afixada; posição e acesso aproximados (informação de visitante + foto). Confirme no local.",
+    "photos": [
+      {
+        "src": "../../fotos/saguao.jpg",
+        "caption": "Saguão com piso de granito, quiosque Yogutiba e saída para a rua (2013)",
+        "author": "Paulo JC Nogueira",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Mercado_Municipal_de_Curitiba_-_Curitiba_PR_-_panoramio_(1).jpg"
+      }
+    ]
+  },
+  "generated": true,
+  "autoHash": "9209bed13a33"
+}
