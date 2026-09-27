@@ -13,9 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(12, 30%, 38%)",
+      "color": "#44474d",
       "label": "Box 344",
-      "sublabel": "Pavimento superior"
+      "sublabel": "comerciante não identificado"
     }
   },
   "info": {
@@ -23,5 +23,5 @@
     "description": "Comerciante deste espaço não identificado no site oficial."
   },
   "generated": true,
-  "autoHash": "328e442a68ed"
+  "autoHash": "906115c8fba8"
 }

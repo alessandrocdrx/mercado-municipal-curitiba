@@ -13,9 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(312, 30%, 38%)",
+      "color": "#44474d",
       "label": "Box 326",
-      "sublabel": "Pavimento superior"
+      "sublabel": "comerciante não identificado"
     }
   },
   "info": {
@@ -23,5 +23,5 @@
     "description": "Comerciante deste espaço não identificado no site oficial."
   },
   "generated": true,
-  "autoHash": "a5dcd617a34d"
+  "autoHash": "8aed2b5ecfa4"
 }

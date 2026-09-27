@@ -13,9 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(43, 30%, 38%)",
+      "color": "#44474d",
       "label": "Box 516",
-      "sublabel": "Pavimento superior"
+      "sublabel": "comerciante não identificado"
     }
   },
   "info": {
@@ -23,5 +23,5 @@
     "description": "Comerciante deste espaço não identificado no site oficial."
   },
   "generated": true,
-  "autoHash": "2b6324715b21"
+  "autoHash": "98ffa0eab1ec"
 }

@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 19",
+  "title": "Restaurante Box Curitiba",
   "placement": {
     "floor": "superior",
     "x": 48.44,
@@ -13,15 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(23, 30%, 38%)",
-      "label": "Box 19",
-      "sublabel": "Pavimento superior"
+      "color": "#b0561d",
+      "label": "Restaurante Box Curitiba",
+      "sublabel": "Lanchonete e restaurante · Box 19"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Lanchonete e restaurante",
+    "location": "Pavimento superior · Box 19",
+    "phone": "(41) 3015-8240",
+    "description": "Massas, risotos e saladas.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/restaurante-box-curitiba/",
+    "note": "Pavimento assumido: praça de alimentação. Fonte do box: guias públicos (Guia da Semana). Dados do diretório de comerciantes do site oficial; confirme no local."
   },
   "generated": true,
-  "autoHash": "9267a72ec14f"
+  "autoHash": "980e24b87f22"
 }

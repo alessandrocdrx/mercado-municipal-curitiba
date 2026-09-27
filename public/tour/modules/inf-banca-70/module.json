@@ -13,9 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(200, 35%, 30%)",
+      "color": "#3a3f3c",
       "label": "Banca 70",
-      "sublabel": "Pavimento inferior"
+      "sublabel": "comerciante não identificado"
     }
   },
   "info": {
@@ -23,5 +23,5 @@
     "description": "Comerciante deste espaço não identificado no site oficial."
   },
   "generated": true,
-  "autoHash": "cc717c9b8b09"
+  "autoHash": "39f4d8d90566"
 }

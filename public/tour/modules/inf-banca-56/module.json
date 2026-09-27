@@ -13,9 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(144, 35%, 30%)",
+      "color": "#3a3f3c",
       "label": "Banca 56",
-      "sublabel": "Pavimento inferior"
+      "sublabel": "comerciante não identificado"
     }
   },
   "info": {
@@ -23,5 +23,5 @@
     "description": "Comerciante deste espaço não identificado no site oficial."
   },
   "generated": true,
-  "autoHash": "62e9d74a1fd5"
+  "autoHash": "4fa7baf41e38"
 }

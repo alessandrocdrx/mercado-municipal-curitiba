@@ -13,9 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(112, 30%, 38%)",
+      "color": "#44474d",
       "label": "Box 45",
-      "sublabel": "Pavimento inferior"
+      "sublabel": "comerciante não identificado"
     }
   },
   "info": {
@@ -23,5 +23,5 @@
     "description": "Comerciante deste espaço não identificado no site oficial."
   },
   "generated": true,
-  "autoHash": "e4ae30acd7e9"
+  "autoHash": "a1160cc380d0"
 }

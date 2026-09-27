@@ -73,7 +73,7 @@ for (const pav of PAVIMENTOS) {
         },
         media: com
           ? { placeholder: { color: cat.cor, label: com.nome, sublabel: `${cat.nome} · ${nome}` } }
-          : { placeholder: { color: corDoBox(num, banca), label: nome, sublabel: pav.titulo } },
+          : { placeholder: { color: banca ? '#3a3f3c' : '#44474d', label: nome, sublabel: 'comerciante não identificado' } },
         info: com
           ? limpa({
             category: cat.nome,
@@ -212,8 +212,3 @@ function pick(obj, keys) {
   return Object.fromEntries(keys.filter((k) => obj[k] !== undefined).map((k) => [k, obj[k]]));
 }
 
-function corDoBox(num, banca) {
-  // tons variados por número só para diferenciar vizinhos até chegarem as fotos
-  const h = [...num].reduce((a, c) => a * 31 + c.charCodeAt(0), 7) % 360;
-  return banca ? `hsl(${h}, 35%, 30%)` : `hsl(${h}, 30%, 38%)`;
-}

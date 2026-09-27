@@ -13,9 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(306, 30%, 38%)",
+      "color": "#44474d",
       "label": "Box 320",
-      "sublabel": "Pavimento superior"
+      "sublabel": "comerciante não identificado"
     }
   },
   "info": {
@@ -23,5 +23,5 @@
     "description": "Comerciante deste espaço não identificado no site oficial."
   },
   "generated": true,
-  "autoHash": "3d877fd18335"
+  "autoHash": "c26b536e0e73"
 }

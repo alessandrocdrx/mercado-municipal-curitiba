@@ -13,9 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(310, 30%, 38%)",
+      "color": "#44474d",
       "label": "Box 324",
-      "sublabel": "Pavimento superior"
+      "sublabel": "comerciante não identificado"
     }
   },
   "info": {
@@ -23,5 +23,5 @@
     "description": "Comerciante deste espaço não identificado no site oficial."
   },
   "generated": true,
-  "autoHash": "7b23f420008f"
+  "autoHash": "7cb8d67ca0a3"
 }

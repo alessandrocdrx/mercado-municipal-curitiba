@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 11",
+  "title": "Peixaria Santa Clara",
   "placement": {
     "floor": "inferior",
     "x": 90.84,
@@ -13,15 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(15, 30%, 38%)",
-      "label": "Box 11",
-      "sublabel": "Pavimento inferior"
+      "color": "#23577f",
+      "label": "Peixaria Santa Clara",
+      "sublabel": "Peixaria · Box 11"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Peixaria",
+    "location": "Pavimento inferior · Box 11",
+    "phone": "(41) 3264-4014",
+    "description": "Desde 1970: peixes frescos, filés, postas, camarão, lagosta, lagostins e crustáceos importados.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/peixaria-santa-clara-eireli/",
+    "note": "Fonte do box: guias públicos. Dados do diretório de comerciantes do site oficial; confirme no local."
   },
   "generated": true,
-  "autoHash": "9537e692732b"
+  "autoHash": "67a4fda8e9c8"
 }

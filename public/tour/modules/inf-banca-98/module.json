@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 98",
+  "title": "Yamasaki Verduras",
   "placement": {
     "floor": "inferior",
     "x": 85.98,
@@ -13,15 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(270, 35%, 30%)",
-      "label": "Banca 98",
-      "sublabel": "Pavimento inferior"
+      "color": "#3c7a34",
+      "label": "Yamasaki Verduras",
+      "sublabel": "Hortifrúti · Banca 98"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Hortifrúti",
+    "location": "Pavimento inferior · Banca 98, 99, 100",
+    "phone": "(41) 3264-4533 · (41) 99937-6822",
+    "description": "Há 40 anos no hortifrúti do Mercado.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/yamasaki-verduras-2/",
+    "note": "Dados do diretório de comerciantes do site oficial; confirme no local."
   },
   "generated": true,
-  "autoHash": "be83fdd0f999"
+  "autoHash": "420b38893822"
 }

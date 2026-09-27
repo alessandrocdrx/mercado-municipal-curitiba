@@ -13,9 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(255, 30%, 38%)",
+      "color": "#44474d",
       "label": "Box 446",
-      "sublabel": "Pavimento inferior"
+      "sublabel": "comerciante não identificado"
     }
   },
   "info": {
@@ -23,5 +23,5 @@
     "description": "Comerciante deste espaço não identificado no site oficial."
   },
   "generated": true,
-  "autoHash": "f3ed6260c54d"
+  "autoHash": "66f17bb8185a"
 }

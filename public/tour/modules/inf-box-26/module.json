@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 26",
+  "title": "Cereais e Especiarias Sissi",
   "placement": {
     "floor": "inferior",
     "x": 72.23,
@@ -13,15 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(51, 30%, 38%)",
-      "label": "Box 26",
-      "sublabel": "Pavimento inferior"
+      "color": "#7a4a24",
+      "label": "Cereais e Especiarias Sissi",
+      "sublabel": "Cereais e especiarias · Box 26"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Cereais e especiarias",
+    "location": "Pavimento inferior · Box 25, 26",
+    "phone": "(41) 3264-5271",
+    "description": "Azeites, especiarias e conservas nacionais e importados.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cereais-e-especiarias-sissi/",
+    "note": "Fonte do box: guias públicos. Dados do diretório de comerciantes do site oficial; confirme no local."
   },
   "generated": true,
-  "autoHash": "591b8636fa1a"
+  "autoHash": "e895040c3c84"
 }

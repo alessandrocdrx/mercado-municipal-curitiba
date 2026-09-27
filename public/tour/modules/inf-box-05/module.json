@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 05",
+  "title": "DAP Boutique de Carnes",
   "placement": {
     "floor": "inferior",
     "x": 103.08,
@@ -13,15 +13,18 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(348, 30%, 38%)",
-      "label": "Box 05",
-      "sublabel": "Pavimento inferior"
+      "color": "#8e2f2f",
+      "label": "DAP Boutique de Carnes",
+      "sublabel": "Açougue · Box 05"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Açougue",
+    "location": "Pavimento inferior · Box 04, 05",
+    "description": "Carnes exóticas: cordeiro, coelho, pato, jacaré, rã, codorna.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/dap-boutique-de-carnes/",
+    "note": "Fonte do box: guias públicos (Bendito Guia). Dados do diretório de comerciantes do site oficial; confirme no local."
   },
   "generated": true,
-  "autoHash": "2b6b8943e417"
+  "autoHash": "467e3e5d7b3d"
 }

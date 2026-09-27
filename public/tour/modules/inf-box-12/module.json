@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box do Eliseu",
+  "title": "Celeiro Municipal",
   "placement": {
     "floor": "inferior",
     "x": 92.1,
@@ -13,18 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "#b0561d",
-      "label": "Box do Eliseu",
-      "sublabel": "Lanchonete e restaurante · Box 12"
+      "color": "#9a6b1f",
+      "label": "Celeiro Municipal",
+      "sublabel": "Empório e mercearia · Box 12"
     }
   },
   "info": {
-    "category": "Lanchonete e restaurante",
+    "category": "Empório e mercearia",
     "location": "Pavimento inferior · Box 12, 13",
-    "description": "Há 39 anos no Mercado: comida caseira, pastéis, sanduíches, sucos e café. Famoso pela almôndega de carne.",
-    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/box-do-eliseu/",
+    "phone": "(41) 3024-7266",
+    "description": "Queijos, vinhos, destilados, castanhas, frutas secas e bacalhau.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/celeiro-municipal/",
     "note": "Dados do diretório de comerciantes do site oficial; confirme no local."
   },
   "generated": true,
-  "autoHash": "25568c44d971"
+  "autoHash": "d92762a3f9bf"
 }

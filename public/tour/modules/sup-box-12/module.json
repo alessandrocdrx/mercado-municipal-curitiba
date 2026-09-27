@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 12",
+  "title": "Box do Eliseu",
   "placement": {
     "floor": "superior",
     "x": 42.12,
@@ -13,15 +13,18 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(16, 30%, 38%)",
-      "label": "Box 12",
-      "sublabel": "Pavimento superior"
+      "color": "#b0561d",
+      "label": "Box do Eliseu",
+      "sublabel": "Lanchonete e restaurante · Box 12"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Lanchonete e restaurante",
+    "location": "Pavimento superior · Box 12, 13",
+    "description": "Há 39 anos no Mercado: comida caseira, pastéis, sanduíches, sucos e café. Famoso pela almôndega de carne.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/box-do-eliseu/",
+    "note": "Boxes 12–13 do pavimento inferior pertencem ao Celeiro Municipal; o Eliseu foi posto na praça de alimentação. Dados do diretório de comerciantes do site oficial; confirme no local."
   },
   "generated": true,
-  "autoHash": "914b27bee6b7"
+  "autoHash": "81972a2d4abf"
 }

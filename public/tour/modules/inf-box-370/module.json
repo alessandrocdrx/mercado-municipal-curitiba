@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 370",
+  "title": "ICAB Chocolates",
   "placement": {
     "floor": "inferior",
     "x": 33.93,
@@ -13,15 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(101, 30%, 38%)",
-      "label": "Box 370",
-      "sublabel": "Pavimento inferior"
+      "color": "#6b3a2a",
+      "label": "ICAB Chocolates",
+      "sublabel": "Doces e chocolates · Box 370"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Doces e chocolates",
+    "location": "Pavimento inferior · Box 370",
+    "phone": "(41) 3049-0136",
+    "description": "Fundada em 1930: chocolates, biscoitos e bombons.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/icab-chocolates/",
+    "note": "Dados do diretório de comerciantes do site oficial; confirme no local."
   },
   "generated": true,
-  "autoHash": "cbaccd14a1d3"
+  "autoHash": "8e4ff5d97975"
 }

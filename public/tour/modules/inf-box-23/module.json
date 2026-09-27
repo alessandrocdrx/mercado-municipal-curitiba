@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 23",
+  "title": "Cia. do Tempero",
   "placement": {
     "floor": "inferior",
     "x": 84.2,
@@ -13,15 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(48, 30%, 38%)",
-      "label": "Box 23",
-      "sublabel": "Pavimento inferior"
+      "color": "#7a4a24",
+      "label": "Cia. do Tempero",
+      "sublabel": "Cereais e especiarias · Box 23"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Cereais e especiarias",
+    "location": "Pavimento inferior · Box 23, 24",
+    "phone": "(41) 3363-1527",
+    "description": "Temperos e castanhas.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cia-do-tempero/",
+    "note": "Dados do diretório de comerciantes do site oficial; confirme no local."
   },
   "generated": true,
-  "autoHash": "d1cd95220c9b"
+  "autoHash": "7295760e57de"
 }

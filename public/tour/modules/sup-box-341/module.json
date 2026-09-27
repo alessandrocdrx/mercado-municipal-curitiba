@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 341",
+  "title": "Box's Celulares",
   "placement": {
     "floor": "superior",
     "x": 31.85,
@@ -13,15 +13,18 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(9, 30%, 38%)",
-      "label": "Box 341",
-      "sublabel": "Pavimento superior"
+      "color": "#4a5a73",
+      "label": "Box's Celulares",
+      "sublabel": "Variedades e serviços · Box 341"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento superior · Box 341",
+    "description": "Assistência técnica de celulares e acessórios, desde 2005.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/boxs-celulares-ltda/",
+    "note": "Fonte do box: guias públicos (applocal). Dados do diretório de comerciantes do site oficial; confirme no local."
   },
   "generated": true,
-  "autoHash": "df82d469cd8d"
+  "autoHash": "f8f2d497f03e"
 }

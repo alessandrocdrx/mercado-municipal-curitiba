@@ -13,9 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(13, 35%, 30%)",
+      "color": "#3a3f3c",
       "label": "Banca 507",
-      "sublabel": "Pavimento superior"
+      "sublabel": "comerciante não identificado"
     }
   },
   "info": {
@@ -23,5 +23,5 @@
     "description": "Comerciante deste espaço não identificado no site oficial."
   },
   "generated": true,
-  "autoHash": "33890b0bf67d"
+  "autoHash": "9eb6215724db"
 }

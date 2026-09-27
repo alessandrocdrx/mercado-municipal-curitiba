@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 35",
+  "title": "Banca da Júlia",
   "placement": {
     "floor": "inferior",
     "x": 58.38,
@@ -13,15 +13,18 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(81, 35%, 30%)",
-      "label": "Banca 35",
-      "sublabel": "Pavimento inferior"
+      "color": "#3c7a34",
+      "label": "Banca da Júlia",
+      "sublabel": "Hortifrúti · Banca 35"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Hortifrúti",
+    "location": "Pavimento inferior · Banca 33, 34, 35, 42, 43, 44",
+    "description": "Frutas e verduras nacionais e importadas, sem agrotóxicos, com entrega.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-da-julia/",
+    "note": "Fonte do box: guias públicos. Dados do diretório de comerciantes do site oficial; confirme no local."
   },
   "generated": true,
-  "autoHash": "259fbdfc79c6"
+  "autoHash": "f0292fcb0d10"
 }

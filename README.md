@@ -39,9 +39,10 @@ npm run planta     # regenera posições/links sem apagar o que foi preenchido �
 ### Comerciantes
 
 `scripts/planta/comerciantes.mjs` lista 74 comerciantes levantados no diretório
-do site oficial (nome, ramo, telefone, descrição e link). 23 deles têm número
-de box que existe na planta e aparecem com nome e cor do ramo no tour. Os
-demais ficam só no botão **Comerciantes** do app, com link para o site oficial.
+do site oficial (nome, ramo, telefone, descrição e link). 45 deles têm número
+de box que existe na planta (82 espaços) e aparecem com nome e cor do ramo no
+tour. Boxes sem comerciante identificado ficam cinza. Os demais comerciantes
+ficam só no botão **Comerciantes** do app, com link para o site oficial.
 Rode `npm run planta` depois de editar a lista.
 
 Edições feitas à mão direto num `module.json` (título, info, mídia) são

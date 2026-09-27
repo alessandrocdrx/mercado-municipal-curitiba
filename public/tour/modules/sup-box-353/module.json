@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 353",
+  "title": "Nippon Boutique",
   "placement": {
     "floor": "superior",
     "x": 42.28,
@@ -13,15 +13,18 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(42, 30%, 38%)",
-      "label": "Box 353",
-      "sublabel": "Pavimento superior"
+      "color": "#4a5a73",
+      "label": "Nippon Boutique",
+      "sublabel": "Variedades e serviços · Box 353"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento superior · Box 352, 353",
+    "description": "Desde 1977: revistas e livros japoneses e ofurôs, no pavimento superior perto da praça de alimentação.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/nippon-boutique/",
+    "note": "Dados do diretório de comerciantes do site oficial; confirme no local."
   },
   "generated": true,
-  "autoHash": "0aee57dc3371"
+  "autoHash": "9ea39e9c5bff"
 }

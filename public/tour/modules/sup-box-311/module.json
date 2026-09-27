@@ -13,9 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(276, 30%, 38%)",
+      "color": "#44474d",
       "label": "Box 311",
-      "sublabel": "Pavimento superior"
+      "sublabel": "comerciante não identificado"
     }
   },
   "info": {
@@ -23,5 +23,5 @@
     "description": "Comerciante deste espaço não identificado no site oficial."
   },
   "generated": true,
-  "autoHash": "4c2aa30eaab3"
+  "autoHash": "a84a0e9c4843"
 }

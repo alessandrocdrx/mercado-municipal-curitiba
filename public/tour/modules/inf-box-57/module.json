@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 57",
+  "title": "Bon Vivant",
   "placement": {
     "floor": "inferior",
     "x": 33.12,
@@ -13,15 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(145, 30%, 38%)",
-      "label": "Box 57",
-      "sublabel": "Pavimento inferior"
+      "color": "#9a6b1f",
+      "label": "Bon Vivant",
+      "sublabel": "Empório e mercearia · Box 57"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Box 56, 57",
+    "phone": "(41) 99673-7753 · (41) 3013-7753",
+    "description": "Mais de 300 queijos nacionais e importados, de leite de vaca, cabra, ovelha e búfala, e embutidos artesanais.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/bon-vivant/",
+    "note": "Fonte do box: guias públicos (Bom Gourmet). Dados do diretório de comerciantes do site oficial; confirme no local."
   },
   "generated": true,
-  "autoHash": "aa3fd42c807a"
+  "autoHash": "8fdd0303f6ce"
 }

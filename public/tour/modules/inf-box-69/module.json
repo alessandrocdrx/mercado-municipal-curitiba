@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 69",
+  "title": "Empório Bon Appétit",
   "placement": {
     "floor": "inferior",
     "x": 72.04,
@@ -13,15 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(178, 30%, 38%)",
-      "label": "Box 69",
-      "sublabel": "Pavimento inferior"
+      "color": "#9a6b1f",
+      "label": "Empório Bon Appétit",
+      "sublabel": "Empório e mercearia · Box 69"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Box 68, 69",
+    "phone": "(41) 3363-5750",
+    "description": "Frios, queijos, azeitonas, bacalhau, azeites, massas e frutas secas.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-bon-appetit/",
+    "note": "Fonte do box: guias públicos. Dados do diretório de comerciantes do site oficial; confirme no local."
   },
   "generated": true,
-  "autoHash": "06c381cd5618"
+  "autoHash": "2dcc45617162"
 }

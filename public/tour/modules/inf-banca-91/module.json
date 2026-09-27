@@ -13,9 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(263, 35%, 30%)",
+      "color": "#3a3f3c",
       "label": "Banca 91",
-      "sublabel": "Pavimento inferior"
+      "sublabel": "comerciante não identificado"
     }
   },
   "info": {
@@ -23,5 +23,5 @@
     "description": "Comerciante deste espaço não identificado no site oficial."
   },
   "generated": true,
-  "autoHash": "d860d59e64e6"
+  "autoHash": "495e2b1c5c25"
 }

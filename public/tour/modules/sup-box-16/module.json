@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 16",
+  "title": "Restaurante Anarco",
   "placement": {
     "floor": "superior",
     "x": 25.01,
@@ -13,15 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(20, 30%, 38%)",
-      "label": "Box 16",
-      "sublabel": "Pavimento superior"
+      "color": "#b0561d",
+      "label": "Restaurante Anarco",
+      "sublabel": "Lanchonete e restaurante · Box 16"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Lanchonete e restaurante",
+    "location": "Pavimento superior · Box 16",
+    "phone": "(41) 3336-0049",
+    "description": "Cozinha italiana, fundado em 1991.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/restaurante-anarco/",
+    "note": "Box 16 do inferior pertence à Planeta Aquários; o Anarco foi posto na praça de alimentação. Fonte do box: site do restaurante. Dados do diretório de comerciantes do site oficial; confirme no local."
   },
   "generated": true,
-  "autoHash": "097fba032e41"
+  "autoHash": "bb3f7d7d9577"
 }

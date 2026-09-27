@@ -13,9 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(264, 35%, 30%)",
+      "color": "#3a3f3c",
       "label": "Banca 92",
-      "sublabel": "Pavimento inferior"
+      "sublabel": "comerciante não identificado"
     }
   },
   "info": {
@@ -23,5 +23,5 @@
     "description": "Comerciante deste espaço não identificado no site oficial."
   },
   "generated": true,
-  "autoHash": "e7b457bf9f43"
+  "autoHash": "b3ff9d2f36f6"
 }

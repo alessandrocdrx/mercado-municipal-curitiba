@@ -13,9 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(7, 35%, 30%)",
+      "color": "#3a3f3c",
       "label": "Banca 501",
-      "sublabel": "Pavimento superior"
+      "sublabel": "comerciante não identificado"
     }
   },
   "info": {
@@ -23,5 +23,5 @@
     "description": "Comerciante deste espaço não identificado no site oficial."
   },
   "generated": true,
-  "autoHash": "5d12c8deb3f9"
+  "autoHash": "059198e926a4"
 }

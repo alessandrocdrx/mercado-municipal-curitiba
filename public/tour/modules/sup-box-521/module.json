@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 521",
+  "title": "Taurino's Organic",
   "placement": {
     "floor": "superior",
     "x": 77.51,
@@ -13,15 +13,20 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(69, 30%, 38%)",
-      "label": "Box 521",
-      "sublabel": "Pavimento superior"
+      "color": "#2f7d32",
+      "label": "Taurino's Organic",
+      "sublabel": "Orgânicos · Box 521"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Orgânicos",
+    "location": "Pavimento superior · Box 521, 522",
+    "phone": "(41) 3095-0123 · (41) 98851-9391",
+    "hours": "Ter a Sáb 8h–18h · Dom 8h–13h (setor de orgânicos, acesso pela Rua da Paz, 608)",
+    "description": "Primeiro açougue orgânico certificado do Brasil, no setor de orgânicos desde 2009.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/taurinos-organic/",
+    "note": "Fonte do box: guias públicos. Dados do diretório de comerciantes do site oficial; confirme no local."
   },
   "generated": true,
-  "autoHash": "619fff7bb1ae"
+  "autoHash": "268fe1ec90bc"
 }

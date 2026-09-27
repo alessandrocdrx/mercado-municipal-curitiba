@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 296",
+  "title": "D'Fuhrmann Chocolates",
   "placement": {
     "floor": "inferior",
     "x": 8.4,
@@ -13,15 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(288, 30%, 38%)",
-      "label": "Box 296",
-      "sublabel": "Pavimento inferior"
+      "color": "#6b3a2a",
+      "label": "D'Fuhrmann Chocolates",
+      "sublabel": "Doces e chocolates · Box 296"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Doces e chocolates",
+    "location": "Pavimento inferior · Box 295, 296",
+    "phone": "(41) 3154-5999 · (41) 99677-8821",
+    "description": "Chocolates de tradição alemã feitos em Curitiba.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/dfuhrmann-chocolates/",
+    "note": "Dados do diretório de comerciantes do site oficial; confirme no local."
   },
   "generated": true,
-  "autoHash": "79ed3d0facb6"
+  "autoHash": "e76a57ac139a"
 }
