@@ -24,6 +24,8 @@ export class Viewer extends EventTarget {
     this.scene.add(this.content);
 
     this.raycaster = new THREE.Raycaster();
+    this.eye = new THREE.Vector3(); // posição da câmera (anda pela maquete)
+    this._look = new THREE.Vector3();
     this._frameHooks = new Set();
 
     this._bindPointer();
@@ -60,7 +62,7 @@ export class Viewer extends EventTarget {
 
   /** Projeta um ponto 3D para pixels da tela; null se estiver atrás da câmera. */
   toScreen(vec3) {
-    const p = vec3.clone().project(this.camera);
+    const p = vec3.clone().add(this.eye).project(this.camera);
     if (p.z > 1) return null;
     const { clientWidth: w, clientHeight: h } = this.container;
     return { x: (p.x + 1) * 0.5 * w, y: (1 - p.y) * 0.5 * h };
@@ -72,7 +74,25 @@ export class Viewer extends EventTarget {
     const ndc = new THREE.Vector2((x / w) * 2 - 1, -(y / h) * 2 + 1);
     this.raycaster.setFromCamera(ndc, this.camera);
     const hits = this.raycaster.intersectObjects(this.content.children, true).filter((hit) => hit.object.userData.pickable);
+    for (const hit of hits) hit.local = hit.point.clone().sub(this.eye); // relativo ao observador
     return { ...yawPitchFromDir(this.raycaster.ray.direction), hits };
+  }
+
+  /** Desliza a câmera até `to` (animação com aceleração suave). */
+  moveEye(to, ms = 700) {
+    const from = this.eye.clone();
+    const t0 = performance.now();
+    return new Promise((resolve) => {
+      const off = this.onFrame(() => {
+        const k = Math.min(1, (performance.now() - t0) / ms);
+        const e = k < 0.5 ? 2 * k * k : 1 - (-2 * k + 2) ** 2 / 2;
+        this.eye.lerpVectors(from, to, e);
+        if (k >= 1) {
+          off();
+          resolve();
+        }
+      });
+    });
   }
 
   /**
@@ -101,7 +121,8 @@ export class Viewer extends EventTarget {
       this.camera.fov = fov;
       this.camera.updateProjectionMatrix();
     }
-    this.camera.lookAt(dirFromYawPitch(yaw, pitch));
+    this.camera.position.copy(this.eye);
+    this.camera.lookAt(dirFromYawPitch(yaw, pitch, this._look).add(this.eye));
     this.camera.updateMatrixWorld();
     for (const fn of this._frameHooks) fn();
     this.renderer.render(this.scene, this.camera);

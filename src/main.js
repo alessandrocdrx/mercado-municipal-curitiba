@@ -3,7 +3,7 @@ import { Viewer } from './core/Viewer.js';
 import { wrapDeg } from './core/geo.js';
 import { releaseUnused } from './core/textures.js';
 import { TourLoader } from './tour/TourLoader.js';
-import { buildScene } from './tour/SceneBuilder.js';
+import { buildScene, eyeFor, hasPhoto, resolveLinks } from './tour/SceneBuilder.js';
 import { Hotspots } from './ui/Hotspots.js';
 import { InfoPanel } from './ui/InfoPanel.js';
 import { Minimap } from './ui/Minimap.js';
@@ -58,7 +58,7 @@ viewer.addEventListener('hover', ({ detail }) => {
   const eye = current?.scene.position?.z ?? 1.6;
   const p = detail && current?.scene.position ? viewer.floorPoint(detail.x, detail.y, eye) : null;
   cursor.visible = Boolean(p && p.length() < 40);
-  if (cursor.visible) cursor.position.copy(p).setY(-eye + 0.03);
+  if (cursor.visible) cursor.position.copy(p).add(viewer.eye).setY(-eye + 0.03);
 });
 
 const tip = app.querySelector('.tip');
@@ -85,7 +85,7 @@ function walkTarget({ x, y, hits }) {
   const here = current.scene;
   const eye = here.position.z ?? 1.6;
   // lugar clicado: o box (se clicou num), o chão, ou 6 m à frente se clicou acima do horizonte
-  let local = hits[0]?.point?.clone() ?? viewer.floorPoint(x, y, eye);
+  let local = hits[0]?.local?.clone() ?? viewer.floorPoint(x, y, eye);
   if (!local || local.length() > 40) {
     const { yaw } = viewer.pick(x, y);
     local = new THREE.Vector3(Math.sin(yaw * DEG), 0, -Math.cos(yaw * DEG)).multiplyScalar(6);
@@ -111,6 +111,7 @@ function walkTarget({ x, y, hits }) {
 
 viewer.addEventListener('viewchange', ({ detail }) => {
   minimap.setHeading(detail.yaw);
+  if (current) updateForward();
   writeHash();
 });
 
@@ -126,6 +127,13 @@ async function goTo(sceneId, { via, view, force } = {}) {
     return;
   }
   navigating = (async () => {
+    // Na maquete do mesmo pavimento, anda-se deslizando a câmera (sem recarregar)
+    const target = await loader.scene(sceneId);
+    if (current?.world && !hasPhoto(target.base) && (target.floor ?? null) === current.world.floor) {
+      await walkTo(target);
+      if (view) viewer.setView(view);
+      return;
+    }
     fader.classList.add('on');
     const [built] = await Promise.all([buildScene(loader, sceneId), wait(200)]);
     const previous = current;
@@ -133,17 +141,10 @@ async function goTo(sceneId, { via, view, force } = {}) {
 
     viewer.setContent(built.group);
     viewer.setEnvironment(built.environment);
+    viewer.eye.copy(built.eye);
     viewer.setView(nextView(previous, built, via, view));
-    // setas só para trocar de andar (escada); no mesmo andar anda-se com clique duplo
-    hotspots.setLinks(built.links.filter((l) => l.distance === undefined));
-    const tour = await loader.tour();
-    minimap.render({ tour, tourUrl: loader.tourUrl, scenes: built.scenes, modules: built.modules, current: built.scene });
-    minimap.setHeading(viewer.view.yaw);
+    await arrived();
     editor.setScene(built);
-    info.hide();
-    titleEl.textContent = built.scene.title ?? built.scene.id;
-    document.title = `${built.scene.title ?? built.scene.id} · ${tour.title ?? 'Tour 360°'}`;
-    writeHash();
 
     previous?.dispose();
     releaseUnused(collectTextures(built.group));
@@ -155,6 +156,73 @@ async function goTo(sceneId, { via, view, force } = {}) {
   }).finally(() => { navigating = null; });
   return navigating;
 }
+
+/** Desliza até outro ponto de vista do mesmo pavimento. */
+async function walkTo(target) {
+  info.hide();
+  const from = current.scene.position;
+  const dist = Math.hypot(target.position.x - from.x, target.position.y - from.y);
+  current.scene = target;
+  current.links = resolveLinks(target, current.scenes);
+  forward.hidden = true;
+  await viewer.moveEye(eyeFor(target, current.anchor), Math.min(1400, Math.max(450, dist * 110)));
+  await arrived();
+}
+
+/** Atualiza tudo o que depende do ponto atual (título, mapa, botões). */
+async function arrived() {
+  // setas só para trocar de andar (escada); no mesmo andar anda-se pelo chão
+  hotspots.setLinks(current.links.filter((l) => l.distance === undefined));
+  const tour = await loader.tour();
+  minimap.render({ tour, tourUrl: loader.tourUrl, scenes: current.scenes, modules: current.modules, current: current.scene });
+  minimap.setHeading(viewer.view.yaw);
+  titleEl.textContent = current.scene.title ?? current.scene.id;
+  document.title = `${current.scene.title ?? current.scene.id} · ${tour.title ?? 'Tour 360°'}`;
+  writeHash();
+  updateForward();
+}
+
+// ------------------------------------------------ botão "andar" e teclado
+// Mostra o próximo ponto na direção do olhar; tocar nele anda até lá.
+
+const forward = app.querySelector('.forward');
+let forwardTarget = null;
+
+/** Vizinho pelo corredor mais alinhado com uma direção (graus relativos ao olhar). */
+function neighborToward(offset = 0, maxOff = 50) {
+  if (!current?.scene.position) return null;
+  const heading = viewer.view.yaw + offset - (current.scene.northYaw ?? 0);
+  let best = null;
+  for (const l of current.links) {
+    if (l.distance === undefined) continue;
+    const off = Math.abs(wrapDeg(l.yaw - (current.scene.northYaw ?? 0) - heading));
+    if (off <= maxOff && (!best || off < best.off)) best = { link: l, off };
+  }
+  return best?.link ?? null;
+}
+
+function updateForward() {
+  forwardTarget = neighborToward(0);
+  forward.hidden = !forwardTarget;
+  if (forwardTarget) forward.querySelector('span').textContent = forwardTarget.label;
+}
+
+forward.addEventListener('click', () => {
+  if (forwardTarget && !navigating) {
+    hideTip();
+    goTo(forwardTarget.to);
+  }
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.target.closest?.('input, textarea') || editor.active || navigating) return;
+  const key = e.key.toLowerCase();
+  const link = key === 'w' ? neighborToward(0) : key === 's' ? neighborToward(180) : null;
+  if (link) {
+    hideTip();
+    goTo(link.to);
+  }
+});
 
 /**
  * Como no Street View: ao andar para outra cena mantém-se o rumo (direção em

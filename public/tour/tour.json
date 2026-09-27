@@ -536,7 +536,7 @@
       ],
       "boxes": "02, 03",
       "onPlan": true,
-      "phone": "(41) 3264-4890",
+      "phone": "(41) 3264-4890 · (41) 99642-9398",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/casa-de-carnes-pe-de-boi/",
       "description": "Carnes bovina, suína e de aves, carnes exóticas e ingredientes para feijoada, desde 1963."
     },
@@ -662,7 +662,7 @@
       ],
       "boxes": "25, 26",
       "onPlan": true,
-      "phone": "(41) 3264-5271",
+      "phone": "(41) 3264-5271 · (41) 99923-2668",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cereais-e-especiarias-sissi/",
       "description": "Azeites, especiarias e conservas nacionais e importados."
     },
@@ -801,6 +801,7 @@
       ],
       "boxes": "74",
       "onPlan": true,
+      "phone": "(41) 99984-8383",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/casa-da-bolacha-caseira/",
       "description": "Bolachas, doces caseiros e biscoitos de polvilho."
     },
@@ -903,6 +904,7 @@
       ],
       "boxes": "429, 430, 431, 432",
       "onPlan": true,
+      "phone": "(41) 3264-6502 · (41) 99883-3951",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/furuta-cereais/"
     },
     {
@@ -995,10 +997,13 @@
       "name": "SN Frutas e Verduras",
       "category": "Hortifrúti",
       "modules": [
+        "inf-banca-84",
+        "inf-banca-85",
         "inf-banca-86"
       ],
-      "boxes": "86",
+      "boxes": "84, 85, 86",
       "onPlan": true,
+      "phone": "(41) 3264-6560 · (41) 99618-2000",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/sn-frutas-e-verduras/",
       "description": "Há 30 anos no Mercado: folhas, frutas, verduras, legumes e cogumelos."
     },
@@ -1093,7 +1098,8 @@
         "inf-box-76"
       ],
       "boxes": "75, 76",
-      "onPlan": true
+      "onPlan": true,
+      "phone": "(41) 3082-3434 · (41) 99677-0762"
     },
     {
       "name": "Mercearia O Barracão",
@@ -1103,7 +1109,8 @@
         "inf-box-279"
       ],
       "boxes": "278, 279",
-      "onPlan": true
+      "onPlan": true,
+      "phone": "(41) 3265-4426 · (41) 99580-5340"
     },
     {
       "name": "Manfré Cervejas Especiais",
@@ -1123,7 +1130,8 @@
         "inf-box-292"
       ],
       "boxes": "291, 292",
-      "onPlan": true
+      "onPlan": true,
+      "phone": "(41) 3222-0477 · (41) 99703-5981"
     },
     {
       "name": "Nissei Comércio de Alimentos",
@@ -1143,7 +1151,8 @@
         "inf-box-302"
       ],
       "boxes": "300, 302",
-      "onPlan": true
+      "onPlan": true,
+      "phone": "(41) 3231-0569 · (41) 98890-3025"
     },
     {
       "name": "Bordando Sonhos",
@@ -1233,12 +1242,11 @@
       "name": "Café do Mercado",
       "category": "Lanchonete e restaurante",
       "modules": [
-        "inf-box-437",
-        "inf-box-438",
-        "inf-box-439"
+        "inf-box-61"
       ],
-      "boxes": "437, 438, 439",
+      "boxes": "61",
       "onPlan": true,
+      "phone": "(41) 3011-1212 · (41) 99235-3196",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cafe-do-mercado/"
     },
     {
@@ -1273,6 +1281,18 @@
       "onPlan": true,
       "phone": "(41) 99901-2347",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-do-ze-mario/"
+    },
+    {
+      "name": "Empório 56",
+      "category": "Empório e mercearia",
+      "modules": [
+        "inf-banca-56",
+        "inf-banca-57"
+      ],
+      "boxes": "56, 57",
+      "onPlan": true,
+      "phone": "(41) 99861-3398",
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-56-2/"
     },
     {
       "name": "Merca Fruty – Produtos Congelados",
@@ -1351,7 +1371,8 @@
         "sup-box-333"
       ],
       "boxes": "313, 333",
-      "onPlan": true
+      "onPlan": true,
+      "phone": "(41) 3362-4973 · (41) 99975-9265"
     },
     {
       "name": "Artigos Orientais",
@@ -1441,6 +1462,20 @@
       "onPlan": false
     },
     {
+      "name": "Dahra Pedras Brasileiras",
+      "category": "Variedades e serviços",
+      "boxes": "190",
+      "onPlan": false,
+      "phone": "(41) 99652-5910"
+    },
+    {
+      "name": "Moncloa Bank",
+      "category": "Variedades e serviços",
+      "boxes": "11–12",
+      "onPlan": false,
+      "phone": "(41) 98731-0990 · (41) 3347-7234"
+    },
+    {
       "name": "4 Estações",
       "category": "Outros",
       "boxes": "Bloco 02 – lojas 25, 26, 27, 45, 46",
@@ -1476,12 +1511,6 @@
       "onPlan": false,
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-curitibano/",
       "description": "Queijos, frios, vinhos, espumantes, destilados e mercearia."
-    },
-    {
-      "name": "Empório 56",
-      "category": "Empório e mercearia",
-      "onPlan": false,
-      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-56-2/"
     },
     {
       "name": "Empório Top Mix",

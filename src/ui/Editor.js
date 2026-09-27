@@ -127,7 +127,7 @@ export class Editor {
     if (!nudge) return;
     e.preventDefault();
     nudge();
-    applyPlacement(this.selected, p, this.current.scene);
+    applyPlacement(this.selected, p, this.current.anchor ?? this.current.scene);
     this._showSelected();
   }
 }

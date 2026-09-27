@@ -19,20 +19,27 @@ export async function buildScene(loader, sceneId) {
   const group = new THREE.Group();
   group.name = `scene:${scene.id}`;
 
-  // Sem foto 360° no ponto, o app monta uma maquete 3D a partir da planta:
-  // chão com a planta (corredores coloridos), teto, boxes em volume.
+  // Sem foto 360° no ponto, o app monta uma maquete 3D do pavimento inteiro
+  // (chão com a planta, teto, boxes em volume, rua). Ela é montada uma vez por
+  // pavimento, em torno de uma âncora fixa, e a câmera anda por ela.
   const model = !hasPhoto(scene.base);
   let environment = { background: '#111111' };
+  let anchor = scene;
   if (model) {
+    const eye = scene.position?.z ?? 1.6;
+    anchor = {
+      id: `pavimento:${scene.floor ?? ''}`, floor: scene.floor, northYaw: 0,
+      position: { x: 0, y: 0, z: eye }, moduleRadius: Infinity, layers: [], hideModules: [],
+    };
     const tour = await loader.tour();
     const floor = tour.floors?.find((f) => f.id === scene.floor);
-    environment = await buildModel(group, scene, floor, loader.tourUrl);
+    environment = await buildModel(group, anchor, floor, loader.tourUrl);
   } else {
     group.add(await buildBase(scene));
   }
 
-  const layers = collectLayers(scene, modules);
-  const meshes = await Promise.all(layers.map(({ module, placement }) => buildModuleMesh(module, placement, scene, model)));
+  const layers = collectLayers(anchor, modules);
+  const meshes = await Promise.all(layers.map(({ module, placement }) => buildModuleMesh(module, placement, anchor, model)));
   meshes.forEach((m) => group.add(m));
 
   return {
@@ -42,9 +49,18 @@ export async function buildScene(loader, sceneId) {
     group,
     meshes,
     environment,
+    world: model ? { floor: scene.floor ?? null } : null,
+    anchor,
+    eye: eyeFor(scene, anchor),
     links: resolveLinks(scene, scenes),
     dispose: () => disposeGroup(group),
   };
+}
+
+/** Posição da câmera (coordenadas do grupo) para um ponto de vista. */
+export function eyeFor(scene, anchor) {
+  if (!scene.position || anchor === scene) return new THREE.Vector3();
+  return worldToLocal({ ...scene.position, z: anchor.position.z }, anchor);
 }
 
 // ---------------------------------------------------------------- maquete
@@ -331,7 +347,7 @@ async function buildModuleMesh(module, placement, scene, model = false) {
 // ---------------------------------------------------------------- links
 
 /** Completa yaw dos links a partir das posições na planta, quando omitido. */
-function resolveLinks(scene, scenes) {
+export function resolveLinks(scene, scenes) {
   const byId = new Map(scenes.map((s) => [s.id, s]));
   return scene.links.map((link) => {
     const target = byId.get(link.to);

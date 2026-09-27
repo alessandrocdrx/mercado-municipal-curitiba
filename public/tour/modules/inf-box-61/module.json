@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 61",
+  "title": "Café do Mercado",
   "placement": {
     "floor": "inferior",
     "x": 42.72,
@@ -13,15 +13,18 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 61",
-      "sublabel": "comerciante não identificado"
+      "color": "#b0561d",
+      "label": "Café do Mercado",
+      "sublabel": "Lanchonete e restaurante · Box 61"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Lanchonete e restaurante",
+    "location": "Pavimento inferior · Box 61",
+    "phone": "(41) 3011-1212 · (41) 99235-3196",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cafe-do-mercado/",
+    "note": "Outra fonte (Foursquare) cita os boxes 437 a 439. Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
   },
   "generated": true,
-  "autoHash": "daa884ffb35b"
+  "autoHash": "4161cc4efa0f"
 }

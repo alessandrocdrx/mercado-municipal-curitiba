@@ -42,7 +42,7 @@ const c = (nome, categoria, slug, extra = {}) => ({ nome, categoria, url: slug ?
 export const COMERCIANTES = [
   // ================================================ pavimento inferior
   c('Casa de Carnes Pé de Boi', 'acougue', 'casa-de-carnes-pe-de-boi', {
-    boxes: ['inf-box-02', 'inf-box-03'], telefone: '(41) 3264-4890',
+    boxes: ['inf-box-02', 'inf-box-03'], telefone: '(41) 3264-4890 · (41) 99642-9398',
     descricao: 'Carnes bovina, suína e de aves, carnes exóticas e ingredientes para feijoada, desde 1963.',
     fonte: 'guias públicos (applocal, Yelp)',
   }),
@@ -89,7 +89,7 @@ export const COMERCIANTES = [
     descricao: 'Temperos e castanhas.',
   }),
   c('Cereais e Especiarias Sissi', 'especiarias', 'cereais-e-especiarias-sissi', {
-    boxes: ['inf-box-25', 'inf-box-26'], telefone: '(41) 3264-5271',
+    boxes: ['inf-box-25', 'inf-box-26'], telefone: '(41) 3264-5271 · (41) 99923-2668',
     descricao: 'Azeites, especiarias e conservas nacionais e importados.',
     fonte: 'guias públicos',
   }),
@@ -139,7 +139,7 @@ export const COMERCIANTES = [
     obs: 'O site cita "bancas 73/74". Os boxes 73 e 74 aparecem como Mercearia Sansei e Casa da Bolacha Caseira, então foi posta nas bancas 73–74 do salão; confirmar.',
   }),
   c('Casa da Bolacha Caseira', 'doces', 'casa-da-bolacha-caseira', {
-    boxes: ['inf-box-74'], descricao: 'Bolachas, doces caseiros e biscoitos de polvilho.', fonte: DIRETORIO,
+    boxes: ['inf-box-74'], telefone: '(41) 99984-8383', descricao: 'Bolachas, doces caseiros e biscoitos de polvilho.', fonte: DIRETORIO,
   }),
   c('Flora Cristiane', 'flores', 'flora-cristiane', {
     boxes: ['inf-box-77', 'inf-box-79', 'inf-box-80'], telefone: '(41) 3264-2324 · (41) 98845-0161',
@@ -170,7 +170,7 @@ export const COMERCIANTES = [
     descricao: 'Há 17 anos: especiarias, condimentos, cereais, conservas, frutas secas e importados.',
   }),
   c('Furuta Cereais', 'especiarias', 'furuta-cereais', {
-    boxes: ['inf-box-429', 'inf-box-430', 'inf-box-431', 'inf-box-432'],
+    boxes: ['inf-box-429', 'inf-box-430', 'inf-box-431', 'inf-box-432'], telefone: '(41) 3264-6502 · (41) 99883-3951',
   }),
   c('Daimaru Bebidas', 'bebidas', 'daimaru-bebidas', {
     boxes: ['inf-box-433', 'inf-box-434'], telefone: '(41) 3363-8275',
@@ -197,7 +197,7 @@ export const COMERCIANTES = [
     boxes: ['inf-banca-63'], descricao: 'Produtos coloniais: conservas, queijos, salames, doces.',
   }),
   c('SN Frutas e Verduras', 'hortifruti', 'sn-frutas-e-verduras', {
-    boxes: ['inf-banca-86'], descricao: 'Há 30 anos no Mercado: folhas, frutas, verduras, legumes e cogumelos.',
+    boxes: ['inf-banca-84', 'inf-banca-85', 'inf-banca-86'], telefone: '(41) 3264-6560 · (41) 99618-2000', fonte: DIRETORIO, descricao: 'Há 30 anos no Mercado: folhas, frutas, verduras, legumes e cogumelos.',
   }),
   c('Yamasaki Verduras', 'hortifruti', 'yamasaki-verduras-2', {
     boxes: ['inf-banca-98', 'inf-banca-99', 'inf-banca-100'], telefone: '(41) 3264-4533 · (41) 99937-6822',
@@ -211,12 +211,12 @@ export const COMERCIANTES = [
   c('Empório Francisca', 'emporio', null, { boxes: ['inf-box-58', 'inf-box-59'], telefone: '(41) 3079-5207 · (41) 99178-8090', fonte: DIRETORIO }),
   c('Manga Rosa', 'outros', null, { boxes: ['inf-box-60'], telefone: '(41) 98477-8335', obs: 'A lista cita boxes 59 e 60; o 59 também aparece como Empório Francisca.', fonte: DIRETORIO }),
   c('Embalagens Municipal', 'servicos', 'embalagens-municipal', { boxes: ['inf-box-70', 'inf-box-71', 'inf-box-72'], descricao: 'Embalagens.' }),
-  c('K & M Artesanatos', 'servicos', null, { boxes: ['inf-box-75', 'inf-box-76'], fonte: DIRETORIO }),
-  c('Mercearia O Barracão', 'emporio', null, { boxes: ['inf-box-278', 'inf-box-279'], fonte: DIRETORIO }),
+  c('K & M Artesanatos', 'servicos', null, { boxes: ['inf-box-75', 'inf-box-76'], telefone: '(41) 3082-3434 · (41) 99677-0762', fonte: DIRETORIO }),
+  c('Mercearia O Barracão', 'emporio', null, { boxes: ['inf-box-278', 'inf-box-279'], telefone: '(41) 3265-4426 · (41) 99580-5340', fonte: DIRETORIO }),
   c('Manfré Cervejas Especiais', 'bebidas', null, { boxes: ['inf-box-284', 'inf-box-285'], fonte: DIRETORIO }),
-  c('Empório Curitibano', 'emporio', null, { boxes: ['inf-box-291', 'inf-box-292'], fonte: DIRETORIO }),
+  c('Empório Curitibano', 'emporio', null, { boxes: ['inf-box-291', 'inf-box-292'], telefone: '(41) 3222-0477 · (41) 99703-5981', fonte: DIRETORIO }),
   c('Nissei Comércio de Alimentos', 'emporio', null, { boxes: ['inf-box-297', 'inf-box-298'], fonte: DIRETORIO }),
-  c("Empório D'Gust", 'emporio', null, { boxes: ['inf-box-300', 'inf-box-302'], obs: 'A lista cita boxes 300 a 302; o 301 aparece como Temperamento.', fonte: DIRETORIO }),
+  c("Empório D'Gust", 'emporio', null, { boxes: ['inf-box-300', 'inf-box-302'], telefone: '(41) 3231-0569 · (41) 98890-3025', obs: 'A lista cita boxes 300 a 302; o 301 aparece como Temperamento.', fonte: DIRETORIO }),
   c('Bordando Sonhos', 'servicos', null, { boxes: ['inf-box-303', 'inf-box-305'], telefone: '(41) 99688-1790', obs: 'A lista cita boxes 303 a 305; o 304 aparece como Empório Metropolitano.', fonte: DIRETORIO }),
   c('Galisa', 'outros', null, { boxes: ['inf-box-307'], telefone: '(41) 3014-7760 · (41) 99845-9535', fonte: DIRETORIO }),
   c('Lotérica Mercado Municipal', 'servicos', null, { boxes: ['inf-box-309', 'inf-box-310'], telefone: '(41) 3014-7760', fonte: DIRETORIO }),
@@ -225,7 +225,7 @@ export const COMERCIANTES = [
   c("Vitaly's Especiarias", 'especiarias', null, { boxes: ['inf-box-367', 'inf-box-368'], telefone: '(41) 3363-5316 · (41) 99891-8237', fonte: DIRETORIO }),
   c('Tepanya Utilidades Domésticas', 'servicos', null, { boxes: ['inf-box-376'], telefone: '(41) 3023-2099 · (41) 99975-9265', fonte: DIRETORIO }),
   c('Satine Cosméticos', 'servicos', null, { boxes: ['inf-box-377'], telefone: '(41) 3029-6250 · (41) 99118-0069', fonte: DIRETORIO }),
-  c('Café do Mercado', 'lanchonete', 'cafe-do-mercado', { boxes: ['inf-box-437', 'inf-box-438', 'inf-box-439'], fonte: DIRETORIO }),
+  c('Café do Mercado', 'lanchonete', 'cafe-do-mercado', { boxes: ['inf-box-61'], telefone: '(41) 3011-1212 · (41) 99235-3196', obs: 'Outra fonte (Foursquare) cita os boxes 437 a 439.', fonte: DIRETORIO }),
   c('Grander & Shiomi (restaurante)', 'lanchonete', null, {
     boxes: ['inf-box-445', 'inf-box-446'],
     fonte: 'Decreto municipal nº 327/2019 (transferência de permissão de uso)',
@@ -233,6 +233,7 @@ export const COMERCIANTES = [
   }),
   c("The Bootlegger's Box", 'bebidas', null, { boxes: ['inf-box-447', 'inf-box-448'], telefone: '(41) 99184-8362 · (41) 99184-9277', fonte: DIRETORIO }),
   c('Banca do Zé Mario', 'hortifruti', 'banca-do-ze-mario', { boxes: ['inf-banca-49', 'inf-banca-62'], telefone: '(41) 99901-2347', fonte: DIRETORIO }),
+  c('Empório 56', 'emporio', 'emporio-56-2', { boxes: ['inf-banca-56', 'inf-banca-57'], telefone: '(41) 99861-3398', fonte: DIRETORIO }),
   c('Merca Fruty – Produtos Congelados', 'emporio', null, { boxes: ['inf-banca-14'], telefone: '(41) 3076-7121', fonte: DIRETORIO }),
 
   // ================================================ pavimento superior
@@ -262,7 +263,7 @@ export const COMERCIANTES = [
     descricao: 'Desde 1977: revistas e livros japoneses e ofurôs, no pavimento superior perto da praça de alimentação.',
   }),
 
-  c('Kotobuki Artesanato e Presentes', 'servicos', null, { boxes: ['sup-box-313', 'sup-box-333'], fonte: DIRETORIO }),
+  c('Kotobuki Artesanato e Presentes', 'servicos', null, { boxes: ['sup-box-313', 'sup-box-333'], telefone: '(41) 3362-4973 · (41) 99975-9265', fonte: DIRETORIO }),
   c('Artigos Orientais', 'servicos', null, { boxes: ['sup-box-322', 'sup-box-323'], telefone: '(41) 3264-7914 · (41) 99975-9265', fonte: DIRETORIO }),
   c('Mina de Ouro Presentes', 'servicos', null, { boxes: ['sup-box-324'], telefone: '(41) 3362-9357', fonte: DIRETORIO }),
   c("Rafa's Ateliê de Costura", 'servicos', null, { boxes: ['sup-box-326'], telefone: '(41) 3013-0960 · (41) 99102-0201', fonte: DIRETORIO }),
@@ -284,6 +285,11 @@ export const COMERCIANTES = [
     boxesForaDaPlanta: ['194'], descricao: 'Desde 2000, famosa pelo sanduíche de mortadela.',
   }),
   c('Restaurante Ohana', 'lanchonete', null, { boxesForaDaPlanta: ['201'] }),
+  c('Dahra Pedras Brasileiras', 'servicos', null, { boxesForaDaPlanta: ['190'], telefone: '(41) 99652-5910', fonte: DIRETORIO }),
+  c('Moncloa Bank', 'servicos', null, {
+    boxesForaDaPlanta: ['11–12'], telefone: '(41) 98731-0990 · (41) 3347-7234', fonte: DIRETORIO,
+    obs: 'Os boxes 11 e 12 do térreo aparecem como Peixaria Santa Clara e Celeiro Municipal; pode ser outro setor.',
+  }),
   c('4 Estações', 'outros', null, {
     boxesForaDaPlanta: ['Bloco 02 – lojas 25, 26, 27, 45, 46'], telefone: '(41) 3346-4635',
     obs: '"Bloco 02" não corresponde à numeração das plantas; os boxes 25–26 do salão são da Sissi.', fonte: DIRETORIO,
@@ -299,7 +305,6 @@ export const COMERCIANTES = [
   // ================================================ sem número de box nas fontes
   c('Casabianco Empório Gourmet', 'emporio', 'emporio-gourmet'),
   c('Domo Empório Gourmet', 'emporio', 'emporio-curitibano', { descricao: 'Queijos, frios, vinhos, espumantes, destilados e mercearia.' }),
-  c('Empório 56', 'emporio', 'emporio-56-2'),
   c('Empório Top Mix', 'doces', 'emporio-top-mix', { descricao: 'Desde 2011: geleias, azeites, frutas secas, patês, azeitonas e doces.' }),
   c('A Faca e o Queijo', 'emporio', 'mercearia-imperial', { descricao: 'Mais de 200 queijos, bacalhau, azeitonas, azeites, castanhas e nozes.' }),
   c('Mafo Com. de Alimentos', 'emporio', 'mafo-com-de-alimentos'),

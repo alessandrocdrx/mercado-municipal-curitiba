@@ -29,7 +29,7 @@ O tour foi montado sobre as **plantas afixadas no próprio mercado** (fotos em
   rampa oeste e portas E, G, H, I e J.
 - **Pavimento superior:** setor 311–353, área rosa (01–19), área verde
   (501–522) e portas B, C e D.
-- **67 pontos de vista**. Anda-se com **dois cliques (ou dois toques) no chão**, como no Street View, sempre para um ponto vizinho **pelo corredor**. `npm run planta` falha se alguma ligação entre pontos atravessar um box ou banca. A escada tem uma seta para trocar de pavimento.
+- **67 pontos de vista**. Anda-se pelo botão **▲** (mostra o próximo ponto na direção do olhar), pelas teclas **W/S** ou com **dois cliques/toques no chão**, sempre para um ponto vizinho **pelo corredor**. Na maquete, o pavimento é montado uma vez e a câmera desliza entre os pontos, sem recarregar. `npm run planta` falha se alguma ligação entre pontos atravessar um box ou banca. A escada tem uma seta para trocar de pavimento.
 - **Rua General Carneiro** do lado de fora (calçada, meio-fio, asfalto, faixas de pedestres em frente às portas J, I e H e placas), definida em `RUAS` no `dados-planta.mjs`. O teto só cobre a área em `AREA_COBERTA`.
 - **370 módulos** (boxes, bancas e portas), cada um na sua pasta.
 

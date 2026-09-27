@@ -30,6 +30,18 @@ kbd { border: 1px solid var(--muted); border-radius: 4px; padding: 0 4px; font-s
 .fader { position: absolute; inset: 0; background: #000; opacity: 0; pointer-events: none; transition: opacity .2s; }
 .fader.on { opacity: 1; }
 
+/* --- botão andar --- */
+.forward {
+  position: absolute; left: 50%; bottom: 72px; transform: translateX(-50%);
+  display: flex; align-items: center; gap: 8px; max-width: calc(100% - 32px);
+  background: #1d3f8f; color: #fff; border: 2px solid #fff; border-radius: 28px;
+  padding: 10px 18px; font: 600 15px/1.2 system-ui, sans-serif; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,.35); z-index: 3;
+}
+.forward span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; }
+.forward:hover { background: #27519f; }
+.forward:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
 /* --- dica inicial --- */
 .tip {
   position: absolute; left: 50%; bottom: 24px; transform: translateX(-50%);
@@ -152,5 +164,8 @@ div.dir-item.off { cursor: default; }
 @media (max-width: 600px) {
   .help { display: none; }
   .tip { display: block; }
-  .minimap { width: 180px; }
+  .minimap { width: 150px; }
+  .minimap .mm-bar button { padding: 2px 5px; font-size: 11px; }
+  .forward { bottom: 24px; left: auto; right: 16px; transform: none; max-width: calc(100% - 200px); }
+  .tip { top: 96px; bottom: auto; white-space: normal; width: max-content; max-width: calc(100% - 32px); text-align: center; }
 }

@@ -135,7 +135,7 @@ function line(ctx, x1, y1, x2, y2) {
  * e, abaixo, a "loja" (vão escuro com balcão). style: 'box' | 'banca' | 'porta'.
  */
 export function facadeTexture({ style = 'box', color = '#6b6e73', label = '', sublabel = '', aspect = 1, known = true }) {
-  const w = 512;
+  const w = 320;
   const h = Math.max(64, Math.round(w / aspect));
   const canvas = document.createElement('canvas');
   canvas.width = w;
@@ -184,7 +184,7 @@ function signText(ctx, label, sublabel, x, y, w, h) {
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
   ctx.fillStyle = '#fff';
-  let size = Math.min(h * (sublabel ? 0.42 : 0.55), 72);
+  let size = Math.min(h * (sublabel ? 0.42 : 0.55), w * 0.14);
   ctx.font = `700 ${size}px system-ui, sans-serif`;
   // quebra em duas linhas se o nome for longo
   const lines = fitLines(ctx, label, w * 0.9);

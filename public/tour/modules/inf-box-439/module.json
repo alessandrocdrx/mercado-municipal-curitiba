@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Café do Mercado",
+  "title": "Box 439",
   "placement": {
     "floor": "inferior",
     "x": 59.88,
@@ -13,17 +13,15 @@
   },
   "media": {
     "placeholder": {
-      "color": "#b0561d",
-      "label": "Café do Mercado",
-      "sublabel": "Lanchonete e restaurante · Box 439"
+      "color": "#44474d",
+      "label": "Box 439",
+      "sublabel": "comerciante não identificado"
     }
   },
   "info": {
-    "category": "Lanchonete e restaurante",
-    "location": "Pavimento inferior · Box 437, 438, 439",
-    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cafe-do-mercado/",
-    "note": "Fonte: lista de lojas e boxes (encontracuritiba / mercadomodelo). Confirme no local."
+    "location": "Pavimento inferior",
+    "description": "Comerciante deste espaço não identificado no site oficial."
   },
   "generated": true,
-  "autoHash": "71f9025b2ad7"
+  "autoHash": "d973cb046293"
 }
