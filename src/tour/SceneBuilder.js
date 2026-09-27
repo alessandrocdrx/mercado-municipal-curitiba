@@ -2,8 +2,8 @@
 // completa ou parcial) + módulos sobrepostos + descrição dos links.
 
 import * as THREE from 'three';
-import { DEG, bearing, wrapDeg } from '../core/geo.js';
-import { textureFor, ceilingTexture } from '../core/textures.js';
+import { DEG, bearing, wrapDeg, worldToLocal } from '../core/geo.js';
+import { textureFor, ceilingTexture, roadTexture, sidewalkTexture, crosswalkTexture, streetSignTexture } from '../core/textures.js';
 import { applyPlacement, isWorldPlacement } from './placement.js';
 
 const BASE_RADIUS = 1000;
@@ -66,32 +66,123 @@ async function buildModel(group, scene, floor, tourUrl) {
 
   const cam = scene.position ?? { x: 0, y: 0 };
   if (floor?.plan) {
-    // chão = foto da planta, na escala e posição da própria planta
-    const tex = await textureFor({ src: floor.plan.src }, { baseUrl: tourUrl });
+    // chão = foto da planta, na escala e posição da própria planta, recortada
+    // na área coberta (fora dela a foto mostra só o papel)
+    const W = floor.plan.width;
+    const H = floor.plan.height;
+    const cov = floor.covered ?? { from: { x: 0, y: 0 }, to: { x: W, y: -H } };
+    const x0 = Math.min(cov.from.x, cov.to.x);
+    const x1 = Math.max(cov.from.x, cov.to.x);
+    const y0 = Math.min(-cov.from.y, -cov.to.y); // distância a partir do topo da planta
+    const y1 = Math.max(-cov.from.y, -cov.to.y);
+    const original = await textureFor({ src: floor.plan.src }, { baseUrl: tourUrl });
+    const tex = original.clone();
+    tex.userData = { own: true, base: original }; // cópia com recorte próprio
+    tex.repeat.set((x1 - x0) / W, (y1 - y0) / H);
+    tex.offset.set(x0 / W, 1 - y1 / H);
+    tex.needsUpdate = true;
     const mat = new THREE.MeshBasicMaterial({ map: tex, color: '#d8d8d8' });
     const plane = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), mat);
     plane.name = 'piso-planta';
     applyPlacement(plane, {
-      x: floor.plan.width / 2, y: -floor.plan.height / 2, z: 0,
-      width: floor.plan.width, height: floor.plan.height, facing: 0, surface: 'floor',
+      x: (x0 + x1) / 2, y: -(y0 + y1) / 2, z: 0,
+      width: x1 - x0, height: y1 - y0, facing: 0, surface: 'floor',
     }, scene);
     group.add(plane);
   }
   // piso neutro em volta, para não haver "buraco" fora da planta
-  const ground = new THREE.Mesh(new THREE.PlaneGeometry(400, 400), new THREE.MeshBasicMaterial({ color: '#9a978f' }));
+  const ground = new THREE.Mesh(new THREE.PlaneGeometry(400, 400), new THREE.MeshBasicMaterial({ color: '#8d8b86' }));
   ground.rotation.x = -Math.PI / 2;
   ground.position.y = -(cam.z ?? 1.6) - 0.02;
   group.add(ground);
 
+  // teto só sobre a área coberta do pavimento (na rua, céu aberto)
+  const cov = floor?.covered;
   const ceilTex = ceilingTexture();
-  ceilTex.repeat.set(400 / 6, 400 / 6);
-  const ceiling = new THREE.Mesh(new THREE.PlaneGeometry(400, 400), new THREE.MeshBasicMaterial({ map: ceilTex }));
-  ceiling.rotation.x = Math.PI / 2;
-  ceiling.position.y = CEILING_HEIGHT - (cam.z ?? 1.6);
+  const ceiling = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ map: ceilTex }));
   ceiling.name = 'teto';
+  if (cov) {
+    const w = Math.abs(cov.to.x - cov.from.x);
+    const h = Math.abs(cov.to.y - cov.from.y);
+    ceilTex.repeat.set(w / 6, h / 6);
+    applyPlacement(ceiling, {
+      x: (cov.from.x + cov.to.x) / 2, y: (cov.from.y + cov.to.y) / 2, z: CEILING_HEIGHT,
+      width: w, height: h, facing: 0, surface: 'ceiling',
+    }, scene);
+  } else {
+    ceilTex.repeat.set(400 / 6, 400 / 6);
+    ceiling.scale.set(400, 400, 1);
+    ceiling.rotation.x = Math.PI / 2;
+    ceiling.position.y = CEILING_HEIGHT - (cam.z ?? 1.6);
+  }
   group.add(ceiling);
 
-  return { background: '#d9d6cf', fog: { color: '#d9d6cf', near: 10, far: 42 } };
+  for (const street of floor?.streets ?? []) buildStreet(group, scene, street);
+
+  return { background: '#cfdbe4', fog: { color: '#d6dde2', near: 12, far: 55 } };
+}
+
+/**
+ * Rua do lado de fora do prédio: calçada, meio-fio, asfalto com faixa
+ * central, faixas de pedestres em frente às portas, calçada oposta e placas.
+ */
+function buildStreet(group, scene, st) {
+  const along = bearing(st.from, st.to); // direção da rua (graus a partir do norte)
+  const L = Math.hypot(st.to.x - st.from.x, st.to.y - st.from.y) + 60;
+  const out = along + (st.side === 'norte' || st.side === 'esquerda' ? -90 : 90); // do prédio para a rua
+  const n = { x: Math.sin(out * DEG), y: Math.cos(out * DEG) };
+  const mid = { x: (st.from.x + st.to.x) / 2, y: (st.from.y + st.to.y) / 2 };
+  const at = (off) => ({ x: mid.x + n.x * off, y: mid.y + n.y * off });
+  const strip = (off, width, z, material, name) => {
+    const m = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), material);
+    m.name = name;
+    applyPlacement(m, { ...at(off), z, width: L, height: width, facing: along - 90, surface: 'floor' }, scene);
+    group.add(m);
+    return m;
+  };
+  const tex = (t, rx, ry) => { t.repeat.set(rx, ry); return t; };
+
+  strip(st.sidewalk / 2, st.sidewalk, 0.15, new THREE.MeshBasicMaterial({ map: tex(sidewalkTexture(), L / 2, st.sidewalk / 2) }), 'calcada');
+  strip(st.sidewalk + st.road / 2, st.road, 0.01, new THREE.MeshBasicMaterial({ map: tex(roadTexture(), L / 12, 1) }), 'asfalto');
+  strip(st.sidewalk + st.road + st.farSidewalk / 2, st.farSidewalk, 0.15, new THREE.MeshBasicMaterial({ map: tex(sidewalkTexture(), L / 2, st.farSidewalk / 2) }), 'calcada-oposta');
+
+  // meio-fio (degrau de 15 cm) dos dois lados da pista
+  for (const off of [st.sidewalk, st.sidewalk + st.road]) {
+    const curb = new THREE.Mesh(new THREE.BoxGeometry(L, 0.15, 0.2), new THREE.MeshLambertMaterial({ color: '#9d988e' }));
+    const p = worldToLocal({ ...at(off), z: 0.075 }, scene);
+    curb.position.copy(p);
+    curb.rotation.y = -((scene.northYaw ?? 0) + along - 90) * DEG;
+    group.add(curb);
+  }
+
+  // faixas de pedestres em frente às portas
+  const cwTex = crosswalkTexture();
+  for (const x of st.crosswalks ?? []) {
+    const base = { x: st.from.x + (x - st.from.x), y: st.from.y };
+    const m = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ map: cwTex, transparent: true }));
+    const c = { x: base.x + n.x * (st.sidewalk + st.road / 2), y: base.y + n.y * (st.sidewalk + st.road / 2) };
+    applyPlacement(m, { ...c, z: 0.02, width: 4, height: st.road - 0.6, facing: along - 90, surface: 'floor' }, scene);
+    group.add(m);
+  }
+
+  // placas com o nome da rua na beira da calçada, a cada 30 m
+  const signTex = streetSignTexture(st.name);
+  const postMat = new THREE.MeshLambertMaterial({ color: '#50555c' });
+  const lenReal = L - 60;
+  for (let d = 10; d < lenReal; d += 30) {
+    const k = d / lenReal;
+    const pt = { x: st.from.x + (st.to.x - st.from.x) * k + n.x * (st.sidewalk - 0.4), y: st.from.y + (st.to.y - st.from.y) * k + n.y * (st.sidewalk - 0.4) };
+    const post = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.05, 2.6, 8), postMat);
+    post.position.copy(worldToLocal({ ...pt, z: 1.3 }, scene));
+    group.add(post);
+    // uma face para cada lado, para o texto nunca aparecer espelhado
+    for (const facing of [out, out + 180]) {
+      const sign = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ map: signTex }));
+      applyPlacement(sign, { ...pt, z: 2.75, width: 1.6, height: 0.4, facing: facing % 360, surface: 'wall' }, scene);
+      sign.name = 'placa-rua';
+      group.add(sign);
+    }
+  }
 }
 
 // ---------------------------------------------------------------- base
@@ -261,7 +352,7 @@ function disposeGroup(group) {
     if (Array.isArray(obj.material)) return;
     obj.geometry.dispose();
     // Texturas de arquivo ficam no cache (textures.js); só as geradas morrem aqui.
-    if (obj.material.map?.isCanvasTexture) obj.material.map.dispose();
+    if (obj.material.map?.isCanvasTexture || obj.material.map?.userData?.own) obj.material.map.dispose();
     obj.material.dispose();
   });
 }

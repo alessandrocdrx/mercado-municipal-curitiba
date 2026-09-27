@@ -9,7 +9,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { PAVIMENTOS, BOXES, PORTAS, CENAS, LIGACOES, ESCADAS } from './dados-planta.mjs';
+import { PAVIMENTOS, BOXES, PORTAS, CENAS, LIGACOES, ESCADAS, RUAS, AREA_COBERTA } from './dados-planta.mjs';
 import { COMERCIANTES, CATEGORIAS } from './comerciantes.mjs';
 import crypto from 'node:crypto';
 
@@ -141,6 +141,16 @@ writeJson(path.join(ROOT, 'tour.json'), {
     title: p.titulo,
     startScene: p.inicio,
     plan: { src: p.planta, width: r2(IMG_W * p.escala), height: r2(IMG_H * p.escala) },
+    covered: AREA_COBERTA[p.id] && {
+      from: toMeters(p, AREA_COBERTA[p.id].de), to: toMeters(p, AREA_COBERTA[p.id].ate),
+    },
+    streets: (RUAS[p.id] ?? []).map((r) => ({
+      name: r.nome,
+      from: toMeters(p, r.de), to: toMeters(p, r.ate),
+      side: r.lado,
+      sidewalk: r2(r.calcada * p.escala), road: r2(r.pista * p.escala), farSidewalk: r2(r.calcadaOposta * p.escala),
+      crosswalks: (r.faixasPedestres ?? []).map((px) => r2(px * p.escala)),
+    })),
   })),
   scenes: sceneIds,
   modules: moduleIds,
@@ -168,7 +178,59 @@ for (const [dir, keep] of [['scenes', sceneIds], ['modules', moduleIds]]) {
   }
 }
 
+verificaLigacoes();
 console.log(`${sceneIds.length} cenas e ${moduleIds.length} módulos gerados em ${ROOT}`);
+
+/**
+ * Nenhuma ligação entre pontos de vista pode atravessar um box ou banca:
+ * o caminho tem de seguir pelos corredores. Falha o gerador se atravessar.
+ */
+function verificaLigacoes() {
+  const PROF = { box: 2.2, banca: 1.0 };
+  const mods = moduleIds.map((id) => readJson(path.join(ROOT, 'modules', id, 'module.json')));
+  const pos = Object.fromEntries(sceneIds.map((id) => [id, readJson(path.join(ROOT, 'scenes', id, 'scene.json'))]));
+  const erros = [];
+  for (const [a, b] of LIGACOES) {
+    const A = pos[a];
+    const B = pos[b];
+    const hit = mods.filter((m) => PROF[m.type] && m.placement.floor === A.floor && atravessa(A.position, B.position, m.placement, PROF[m.type]));
+    if (hit.length) erros.push(`${a} ↔ ${b} atravessa ${hit.map((m) => m.title).join(', ')}`);
+  }
+  if (erros.length) {
+    console.error('Ligações que atravessam boxes (ajuste dados-planta.mjs):\n  ' + erros.join('\n  '));
+    process.exit(1);
+  }
+}
+
+function atravessa(a, b, p, prof) {
+  const f = (p.facing * Math.PI) / 180;
+  const n = [Math.sin(f), Math.cos(f)];
+  const t = [Math.cos(f), -Math.sin(f)];
+  const c = [p.x - (n[0] * prof) / 2, p.y - (n[1] * prof) / 2];
+  const loc = (q) => [(q.x - c[0]) * t[0] + (q.y - c[1]) * t[1], (q.x - c[0]) * n[0] + (q.y - c[1]) * n[1]];
+  const [u0, v0] = loc(a);
+  const [u1, v1] = loc(b);
+  const hu = p.width / 2 - 0.15;
+  const hv = prof / 2 - 0.1;
+  let t0 = 0;
+  let t1 = 1;
+  // recorte de Liang–Barsky do segmento contra o retângulo do box
+  for (const [pp, qq] of [[-(u1 - u0), u0 + hu], [u1 - u0, hu - u0], [-(v1 - v0), v0 + hv], [v1 - v0, hv - v0]]) {
+    if (pp === 0) {
+      if (qq < 0) return false;
+      continue;
+    }
+    const r = qq / pp;
+    if (pp < 0) {
+      if (r > t1) return false;
+      t0 = Math.max(t0, r);
+    } else {
+      if (r < t0) return false;
+      t1 = Math.min(t1, r);
+    }
+  }
+  return true;
+}
 
 // ------------------------------------------------------------ helpers
 

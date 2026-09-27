@@ -1,9 +1,9 @@
 {
-  "title": "Setor 300 · entre ilhas oeste",
+  "title": "Área rosa · descida",
   "floor": "superior",
   "position": {
-    "x": 25.9,
-    "y": -26.04,
+    "x": 46.55,
+    "y": -55.3,
     "z": 1.6
   },
   "northYaw": 0,
@@ -14,10 +14,10 @@
   },
   "links": [
     {
-      "to": "sup-norte-2"
+      "to": "sup-rosa-2"
     },
     {
-      "to": "sup-escada"
+      "to": "sup-rosa-3"
     }
   ],
   "generated": true

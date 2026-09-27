@@ -168,19 +168,20 @@ const CINZA = '#6b6f76';
 export const CENAS = {
   inferior: [
     ...[470, 620, 835, 995, 1150, 1300, 1460].map((x, i) => ({ id: `inf-a-${n(i)}`, titulo: `Corredor A (azul) · ${i + 1}`, em: [x, 552], cor: AZUL })),
-    ...[470, 620, 835, 995, 1150, 1310, 1470, 1620, 1780, 1935].map((x, i) => ({ id: `inf-b-${n(i)}`, titulo: `Corredor B (amarelo) · ${i + 1}`, em: [x, 705], cor: AMARELO })),
+    ...[470, 620, 835, 995, 1150, 1310, 1470, 1620, 1780, 1905].map((x, i) => ({ id: `inf-b-${n(i)}`, titulo: `Corredor B (amarelo) · ${i + 1}`, em: [x, 705], cor: AMARELO })),
     ...[470, 620, 835, 995, 1150, 1310, 1470, 1620, 1780].map((x, i) => ({ id: `inf-c-${n(i)}`, titulo: `Corredor C (verde) · ${i + 1}`, em: [x, 905], cor: VERDE })),
     { id: 'inf-porta-e', titulo: 'Porta E · Rua da Paz', em: [1300, 470], cor: CINZA },
     { id: 'inf-lig-j', titulo: 'Passagem para a Porta J', em: [770, 1000], cor: LARANJA },
     { id: 'inf-lig-i', titulo: 'Passagem para a Porta I', em: [1100, 1003], cor: LARANJA },
     { id: 'inf-lig-h', titulo: 'Passagem para a Porta H', em: [1425, 1008], cor: LARANJA },
-    { id: 'inf-sul-00', titulo: 'Corredor sul · oeste', em: [520, 1085], cor: LARANJA },
+    { id: 'inf-sul-00', titulo: 'Corredor sul · oeste', em: [470, 1090], cor: LARANJA },
     { id: 'inf-porta-j', titulo: 'Porta J · Rua General Carneiro', em: [765, 1088], cor: LARANJA },
     { id: 'inf-porta-i', titulo: 'Porta I · Rua General Carneiro', em: [1070, 1092], cor: LARANJA },
     { id: 'inf-porta-h', titulo: 'Porta H · Rua General Carneiro', em: [1425, 1100], cor: LARANJA },
-    { id: 'inf-sul-04', titulo: 'Corredor sul · leste', em: [1700, 1105], cor: LARANJA },
+    { id: 'inf-sul-04', titulo: 'Corredor sul · leste', em: [1700, 1110], cor: LARANJA },
+    { id: 'inf-sul-05', titulo: 'Corredor sul · esquina leste', em: [1830, 1100], cor: LARANJA },
     { id: 'inf-porta-g', titulo: 'Porta G', em: [1830, 1010], cor: LARANJA },
-    { id: 'inf-diagonal', titulo: 'Corredor leste (diagonal)', em: [1880, 860], cor: LARANJA },
+    { id: 'inf-diagonal', titulo: 'Corredor leste (diagonal)', em: [1870, 860], cor: LARANJA },
     { id: 'inf-rampa', titulo: 'Rampa oeste', em: [360, 705], cor: VINHO },
     { id: 'inf-anexo-1', titulo: 'Anexo · acesso', em: [545, 395], cor: LILAS },
     { id: 'inf-anexo-2', titulo: 'Anexo · nordeste', em: [545, 215], cor: LILAS },
@@ -191,7 +192,8 @@ export const CENAS = {
   ],
   superior: [
     { id: 'sup-porta-b', titulo: 'Porta B · Av. Sete de Setembro', em: [165, 440], cor: CINZA },
-    { id: 'sup-porta-c', titulo: 'Porta C · Rua da Paz', em: [560, 205], cor: CINZA },
+    { id: 'sup-porta-c', titulo: 'Porta C · Rua da Paz', em: [558, 205], cor: CINZA },
+    { id: 'sup-norte-c', titulo: 'Setor 300 · em frente à Porta C', em: [558, 292], cor: CINZA },
     { id: 'sup-norte-1', titulo: 'Setor 300 · norte oeste', em: [245, 290], cor: CINZA },
     { id: 'sup-norte-2', titulo: 'Setor 300 · norte centro', em: [390, 290], cor: CINZA },
     { id: 'sup-norte-3', titulo: 'Setor 300 · norte leste', em: [695, 295], cor: CINZA },
@@ -201,6 +203,9 @@ export const CENAS = {
     { id: 'sup-escada', titulo: 'Escadas · pavimento superior', em: [470, 440], cor: CINZA },
     { id: 'sup-sul-3', titulo: 'Setor 300 · sul leste', em: [695, 445], cor: CINZA },
     { id: 'sup-rosa-1', titulo: 'Área rosa · oeste', em: [460, 545], cor: ROSA },
+    { id: 'sup-rosa-1b', titulo: 'Área rosa · leste', em: [688, 572], cor: ROSA },
+    { id: 'sup-passagem', titulo: 'Passagem para a área rosa', em: [745, 560], cor: CINZA },
+    { id: 'sup-rosa-desce', titulo: 'Área rosa · descida', em: [665, 790], cor: ROSA },
     { id: 'sup-rosa-2', titulo: 'Área rosa · centro', em: [700, 700], cor: ROSA },
     { id: 'sup-rosa-3', titulo: 'Área rosa · corredor', em: [760, 920], cor: ROSA },
     { id: 'sup-rosa-4', titulo: 'Área rosa · sul', em: [760, 1130], cor: ROSA },
@@ -222,25 +227,27 @@ export const LIGACOES = [
   ...cadeia(serie('inf-c', 9)),
   // atravessando o salão pelos vãos entre as ilhas
   ...[0, 2, 3, 4, 5, 6].map((i) => [`inf-a-${n(i)}`, `inf-b-${n(i)}`]),
-  ...[0, 2, 3, 4, 5, 6, 7, 8].map((i) => [`inf-b-${n(i)}`, `inf-c-${n(i)}`]),
+  ...[0, 2, 3, 4, 5, 6, 8].map((i) => [`inf-b-${n(i)}`, `inf-c-${n(i)}`]), // 7: boxes 14/15 no meio
   ['inf-a-05', 'inf-porta-e'],
   ['inf-c-02', 'inf-lig-j'], ['inf-lig-j', 'inf-porta-j'],
   ['inf-c-04', 'inf-lig-i'], ['inf-lig-i', 'inf-porta-i'],
   ['inf-c-06', 'inf-lig-h'], ['inf-lig-h', 'inf-porta-h'],
   ['inf-c-00', 'inf-sul-00'],
-  ...cadeia(['inf-sul-00', 'inf-porta-j', 'inf-porta-i', 'inf-porta-h', 'inf-sul-04', 'inf-porta-g', 'inf-diagonal', 'inf-b-09']),
+  ...cadeia(['inf-sul-00', 'inf-porta-j', 'inf-porta-i', 'inf-porta-h', 'inf-sul-04', 'inf-sul-05', 'inf-porta-g', 'inf-diagonal', 'inf-b-09']),
   ['inf-c-08', 'inf-diagonal'],
   ['inf-b-00', 'inf-rampa'],
   ['inf-a-00', 'inf-anexo-1'],
   ...cadeia(['inf-anexo-1', 'inf-anexo-2', 'inf-anexo-3', 'inf-anexo-4', 'inf-anexo-5', 'inf-anexo-6', 'inf-anexo-1']),
   // pavimento superior
-  ['sup-porta-c', 'sup-norte-2'], ['sup-porta-c', 'sup-norte-3'], ['sup-porta-c', 'sup-centro-2'],
+  ['sup-porta-c', 'sup-norte-c'], ['sup-norte-c', 'sup-norte-2'], ['sup-norte-c', 'sup-norte-3'], ['sup-norte-c', 'sup-centro-2'],
   ['sup-norte-1', 'sup-norte-2'], ['sup-norte-1', 'sup-sul-1'],
-  ['sup-norte-2', 'sup-centro-1'], ['sup-centro-1', 'sup-escada'], ['sup-centro-1', 'sup-sul-1'],
-  ['sup-norte-3', 'sup-sul-3'], ['sup-centro-2', 'sup-escada'], ['sup-centro-2', 'sup-sul-3'],
+  ['sup-norte-2', 'sup-centro-1'], ['sup-centro-1', 'sup-escada'],
+  ['sup-norte-3', 'sup-sul-3'], ['sup-centro-2', 'sup-escada'],
   ['sup-sul-1', 'sup-porta-b'], ['sup-sul-1', 'sup-escada'], ['sup-escada', 'sup-sul-3'],
-  ['sup-escada', 'sup-rosa-1'], ['sup-sul-3', 'sup-rosa-2'],
-  ...cadeia(['sup-rosa-1', 'sup-rosa-2', 'sup-rosa-3', 'sup-rosa-4']),
+  ['sup-escada', 'sup-rosa-1'],
+  ...cadeia(['sup-sul-3', 'sup-passagem', 'sup-rosa-2']),
+  ...cadeia(['sup-rosa-1', 'sup-rosa-1b', 'sup-rosa-2', 'sup-rosa-desce', 'sup-rosa-3', 'sup-rosa-4']),
+  ['sup-rosa-1b', 'sup-passagem'],
   ['sup-rosa-2', 'sup-verde-3'],
   ...cadeia(['sup-verde-porta-d', 'sup-verde-1', 'sup-verde-3']),
   ['sup-verde-1', 'sup-verde-2'],
@@ -251,3 +258,25 @@ export const ESCADAS = [
   { de: 'inf-a-00', para: 'sup-escada', yaw: 160, rotulo: 'Escada · subir ao pavimento superior' },
   { de: 'sup-escada', para: 'inf-a-00', yaw: 180, rotulo: 'Escada · descer ao pavimento inferior' },
 ];
+
+// ---------------------------------------------------------------- ruas
+// Camada de rua do lado de fora do prédio (px da planta). `calcada` = faixa
+// entre o prédio e o asfalto; `pista` = asfalto; `portas` recebem faixa de
+// pedestres em frente.
+export const RUAS = {
+  inferior: [
+    {
+      nome: 'Rua General Carneiro',
+      de: [0, 1145], ate: [2000, 1145], // alinhamento do prédio (lado norte da calçada)
+      lado: 'sul',                       // a rua fica ao sul (para baixo na planta)
+      calcada: 120, pista: 170, calcadaOposta: 70,
+      faixasPedestres: [765, 1070, 1425],
+    },
+  ],
+};
+
+// Área coberta de cada pavimento (px): o teto só é desenhado aqui dentro.
+export const AREA_COBERTA = {
+  inferior: { de: [0, 100], ate: [2000, 1145] },
+  superior: { de: [100, 160], ate: [1180, 1400] },
+};

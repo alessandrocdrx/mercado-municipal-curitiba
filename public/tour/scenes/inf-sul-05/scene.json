@@ -1,9 +1,9 @@
 {
-  "title": "Setor 300 · entre ilhas oeste",
-  "floor": "superior",
+  "title": "Corredor sul · esquina leste",
+  "floor": "inferior",
   "position": {
-    "x": 25.9,
-    "y": -26.04,
+    "x": 109.8,
+    "y": -66,
     "z": 1.6
   },
   "northYaw": 0,
@@ -14,10 +14,10 @@
   },
   "links": [
     {
-      "to": "sup-norte-2"
+      "to": "inf-sul-04"
     },
     {
-      "to": "sup-escada"
+      "to": "inf-porta-g"
     }
   ],
   "generated": true

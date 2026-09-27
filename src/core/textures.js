@@ -143,13 +143,16 @@ export function facadeTexture({ style = 'box', color = '#6b6e73', label = '', su
   const ctx = canvas.getContext('2d');
 
   if (style === 'porta') {
+    // vão aberto: só moldura e letreiro; o miolo fica transparente (vê-se a rua)
+    ctx.clearRect(0, 0, w, h);
     ctx.fillStyle = '#1d2a38';
-    ctx.fillRect(0, 0, w, h);
-    ctx.fillStyle = '#9fc3e6';
-    ctx.fillRect(w * 0.12, h * 0.3, w * 0.76, h * 0.7);
-    ctx.fillStyle = '#1d2a38';
-    ctx.fillRect(w * 0.49, h * 0.3, w * 0.02, h * 0.7);
+    ctx.fillRect(0, 0, w, h * 0.26);
+    ctx.fillRect(0, 0, w * 0.07, h);
+    ctx.fillRect(w * 0.93, 0, w * 0.07, h);
     signText(ctx, label, sublabel, 0, 0, w, h * 0.26);
+    const tex = new THREE.CanvasTexture(canvas);
+    tex.colorSpace = THREE.SRGBColorSpace;
+    return tex;
   } else {
     const signH = style === 'banca' ? h * 0.42 : h * 0.3;
     // corpo da loja
@@ -236,4 +239,72 @@ export function ceilingTexture() {
   tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
   tex.colorSpace = THREE.SRGBColorSpace;
   return tex;
+}
+
+function canvasTexture(w, h, draw, repeat = true) {
+  const canvas = document.createElement('canvas');
+  canvas.width = w;
+  canvas.height = h;
+  draw(canvas.getContext('2d'), w, h);
+  const tex = new THREE.CanvasTexture(canvas);
+  if (repeat) tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+  tex.colorSpace = THREE.SRGBColorSpace;
+  tex.anisotropy = 8;
+  return tex;
+}
+
+/** Asfalto com faixa central amarela tracejada (1 repetição = 12 m de rua). */
+export function roadTexture() {
+  return canvasTexture(512, 256, (ctx, w, h) => {
+    ctx.fillStyle = '#3a3c40';
+    ctx.fillRect(0, 0, w, h);
+    for (let i = 0; i < 1400; i++) {
+      ctx.fillStyle = `rgba(255,255,255,${Math.random() * 0.06})`;
+      ctx.fillRect(Math.random() * w, Math.random() * h, 2, 2);
+    }
+    ctx.fillStyle = '#e8c33a';
+    ctx.fillRect(0, h / 2 - 5, w * 0.55, 10); // tracejado central
+    ctx.fillStyle = '#f2f2f2';
+    ctx.fillRect(0, 6, w, 6); // bordas da pista
+    ctx.fillRect(0, h - 12, w, 6);
+  });
+}
+
+/** Calçada de petit-pavê claro com juntas. */
+export function sidewalkTexture() {
+  return canvasTexture(256, 256, (ctx, w, h) => {
+    ctx.fillStyle = '#c9c4ba';
+    ctx.fillRect(0, 0, w, h);
+    ctx.strokeStyle = 'rgba(80,70,60,.18)';
+    ctx.lineWidth = 3;
+    for (let i = 0; i <= w; i += 64) {
+      ctx.beginPath(); ctx.moveTo(i, 0); ctx.lineTo(i, h); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(0, i); ctx.lineTo(w, i); ctx.stroke();
+    }
+  });
+}
+
+/** Faixa de pedestres (listras brancas). */
+export function crosswalkTexture() {
+  return canvasTexture(256, 256, (ctx, w, h) => {
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = 'rgba(245,245,245,.95)';
+    for (let x = 16; x < w; x += 64) ctx.fillRect(x, 0, 32, h);
+  }, false);
+}
+
+/** Placa de rua (azul, texto branco). */
+export function streetSignTexture(name) {
+  return canvasTexture(512, 128, (ctx, w, h) => {
+    ctx.fillStyle = '#1f4f8f';
+    ctx.fillRect(0, 0, w, h);
+    ctx.strokeStyle = '#fff';
+    ctx.lineWidth = 6;
+    ctx.strokeRect(8, 8, w - 16, h - 16);
+    ctx.fillStyle = '#fff';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.font = '700 54px system-ui, sans-serif';
+    ctx.fillText(name, w / 2, h / 2 + 2, w - 40);
+  }, false);
 }

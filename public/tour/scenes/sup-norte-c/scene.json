@@ -1,9 +1,9 @@
 {
-  "title": "Setor 300 · entre ilhas oeste",
+  "title": "Setor 300 · em frente à Porta C",
   "floor": "superior",
   "position": {
-    "x": 25.9,
-    "y": -26.04,
+    "x": 39.06,
+    "y": -20.44,
     "z": 1.6
   },
   "northYaw": 0,
@@ -14,10 +14,16 @@
   },
   "links": [
     {
+      "to": "sup-porta-c"
+    },
+    {
       "to": "sup-norte-2"
     },
     {
-      "to": "sup-escada"
+      "to": "sup-norte-3"
+    },
+    {
+      "to": "sup-centro-2"
     }
   ],
   "generated": true

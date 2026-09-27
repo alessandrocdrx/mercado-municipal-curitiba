@@ -96,13 +96,15 @@ function walkTarget({ x, y, hits }) {
   const point = { x: here.position.x + Math.sin(b) * dist, y: here.position.y + Math.cos(b) * dist };
   const clickBearing = yawLocal - (here.northYaw ?? 0);
 
-  const candidates = current.scenes.filter((s) => s.id !== here.id && s.position && (s.floor ?? null) === (here.floor ?? null))
+  // só os vizinhos ligados pelo corredor: nunca se atravessa um box
+  const neighbors = new Set(current.links.filter((l) => l.distance !== undefined).map((l) => l.to));
+  const candidates = current.scenes.filter((s) => neighbors.has(s.id) && s.position)
     .map((s) => {
       const away = Math.hypot(s.position.x - here.position.x, s.position.y - here.position.y);
       const off = Math.abs(wrapDeg(bearing(here.position, s.position) - clickBearing));
       return { s, away, off, toClick: Math.hypot(s.position.x - point.x, s.position.y - point.y) };
     })
-    .filter((c) => c.away > 1 && c.off < 60);
+    .filter((c) => c.off < 70);
   candidates.sort((a, b) => a.toClick - b.toClick);
   return candidates[0]?.s ?? null;
 }
@@ -193,7 +195,10 @@ async function reload() {
 
 function collectTextures(group) {
   const set = new Set();
-  group.traverse((o) => o.material?.map && set.add(o.material.map));
+  group.traverse((o) => {
+    const map = o.material?.map;
+    if (map) set.add(map.userData?.base ?? map);
+  });
   return set;
 }
 

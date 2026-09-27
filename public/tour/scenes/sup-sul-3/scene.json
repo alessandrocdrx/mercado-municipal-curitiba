@@ -17,13 +17,10 @@
       "to": "sup-norte-3"
     },
     {
-      "to": "sup-centro-2"
-    },
-    {
       "to": "sup-escada"
     },
     {
-      "to": "sup-rosa-2"
+      "to": "sup-passagem"
     }
   ],
   "generated": true

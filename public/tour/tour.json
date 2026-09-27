@@ -29,7 +29,39 @@
         "src": "plantas/pavimento-inferior.jpg",
         "width": 120,
         "height": 90
-      }
+      },
+      "covered": {
+        "from": {
+          "x": 0,
+          "y": -6
+        },
+        "to": {
+          "x": 120,
+          "y": -68.7
+        }
+      },
+      "streets": [
+        {
+          "name": "Rua General Carneiro",
+          "from": {
+            "x": 0,
+            "y": -68.7
+          },
+          "to": {
+            "x": 120,
+            "y": -68.7
+          },
+          "side": "sul",
+          "sidewalk": 7.2,
+          "road": 10.2,
+          "farSidewalk": 4.2,
+          "crosswalks": [
+            45.9,
+            64.2,
+            85.5
+          ]
+        }
+      ]
     },
     {
       "id": "superior",
@@ -39,7 +71,18 @@
         "src": "plantas/pavimento-superior.jpg",
         "width": 140,
         "height": 105
-      }
+      },
+      "covered": {
+        "from": {
+          "x": 7,
+          "y": -11.2
+        },
+        "to": {
+          "x": 82.6,
+          "y": -98
+        }
+      },
+      "streets": []
     }
   ],
   "scenes": [
@@ -78,6 +121,7 @@
     "inf-porta-i",
     "inf-porta-h",
     "inf-sul-04",
+    "inf-sul-05",
     "inf-porta-g",
     "inf-diagonal",
     "inf-rampa",
@@ -89,6 +133,7 @@
     "inf-anexo-6",
     "sup-porta-b",
     "sup-porta-c",
+    "sup-norte-c",
     "sup-norte-1",
     "sup-norte-2",
     "sup-norte-3",
@@ -98,6 +143,9 @@
     "sup-escada",
     "sup-sul-3",
     "sup-rosa-1",
+    "sup-rosa-1b",
+    "sup-passagem",
+    "sup-rosa-desce",
     "sup-rosa-2",
     "sup-rosa-3",
     "sup-rosa-4",
