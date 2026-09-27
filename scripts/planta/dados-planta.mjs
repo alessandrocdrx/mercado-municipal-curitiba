@@ -2,27 +2,39 @@
 // (fotos em public/tour/plantas/). Coordenadas em PIXELS de uma imagem de
 // 2000 × 1500 px de cada planta; o gerador converte para metros com `escala`.
 //
-// ⚠ Precisão: as fotos têm leve perspectiva e a escala (m/px) foi ESTIMADA
-// pelo tamanho típico de um box (~2,5 m). Ajuste `escala` quando houver uma
-// medida real (ex.: comprimento do corredor B com trena/laser) e rode
-// `npm run planta` de novo.
+// ⚠ Precisão: as fotos têm leve perspectiva. A escala (m/px) e a orientação
+// foram calibradas pelo contorno do prédio no OpenStreetMap (ver PAVIMENTOS);
+// com uma medida no local (ex.: comprimento do corredor B com trena/laser),
+// ajuste `escala` e rode `npm run planta` de novo.
 //
 // facing = para onde a frente do box aponta na planta:
 //   0 = para cima da planta (Rua da Paz) · 90 = direita · 180 = baixo · 270 = esquerda
 
+// Escala e orientação vêm do contorno do prédio no OpenStreetMap (ver
+// CONTORNOS_OSM abaixo). As plantas estão giradas: o "cima" delas (Rua da Paz)
+// aponta para o rumo real `rumoCima` (graus a partir do norte); a Av. Sete de
+// Setembro fica à esquerda e a Rua General Carneiro embaixo.
+// `ancora` liga um ponto da planta (px) ao mesmo ponto no mapa (lon, lat).
 export const PAVIMENTOS = [
   {
     id: 'inferior',
     titulo: 'Pavimento inferior',
     planta: 'plantas/pavimento-inferior.jpg',
-    escala: 0.06, // m por px (estimado)
+    // largura do bloco principal (General Carneiro → fundo dos boxes 21–43) e
+    // distância salão de hortifrúti → canto diagonal sudeste
+    escala: 0.063, // m por px
+    rumoCima: 66,
+    ancora: { px: [1857, 1143], lonLat: [-49.2568914, -25.435487] }, // canto General Carneiro × diagonal sudeste
     inicio: 'inf-b-04',
   },
   {
     id: 'superior',
     titulo: 'Pavimento superior',
     planta: 'plantas/pavimento-superior.jpg',
-    escala: 0.07, // m por px (estimado)
+    // fachada da Av. Sete de Setembro → ponta sudeste, General Carneiro → Rua da Paz
+    escala: 0.0725, // m por px
+    rumoCima: 66,
+    ancora: { px: [978, 478], lonLat: [-49.2565894, -25.4346528] }, // centro do setor de orgânicos = centro do prédio "Mercado Municipal - Orgânicos"
     inicio: 'sup-escada',
   },
 ];
@@ -285,3 +297,18 @@ export const AREA_COBERTA = {
   inferior: { de: [0, 100], ate: [2000, 1145] },
   superior: { de: [100, 160], ate: [1180, 1400] },
 };
+
+// ---------------------------------------------------------------- OpenStreetMap
+// Contornos do OpenStreetMap desenhados no minimapa (tracejados). Mostram o
+// prédio atual, inclusive partes que as plantas afixadas (de ~2011) não
+// desenham. Coordenadas em scripts/planta/osm-dados.json; para atualizar:
+//   npm run osm && npm run planta
+// © OpenStreetMap contributors, licença ODbL (openstreetmap.org/copyright).
+export const CONTORNOS_OSM = [
+  { way: 24776455, nome: 'Mercado Municipal (prédio)', tipo: 'predio', pavimentos: ['inferior', 'superior'] },
+  { way: 128976784, nome: 'Mercado de Orgânicos (prédio)', tipo: 'organicos', pavimentos: ['inferior', 'superior'] },
+  { way: 128976783, nome: 'Estacionamento', tipo: 'estacionamento', pavimentos: ['inferior', 'superior'] },
+  { way: 696383653, nome: 'Boxes de hortifrúti', tipo: 'hortifruti', pavimentos: ['inferior'] },
+  { way: 696383650, nome: 'Praça de alimentação', tipo: 'praca', pavimentos: ['superior'] },
+  { way: 696383651, nome: 'Praça de alimentação', tipo: 'praca', pavimentos: ['superior'] },
+];

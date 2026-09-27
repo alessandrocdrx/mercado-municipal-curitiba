@@ -3,10 +3,10 @@
   "title": "Box 520",
   "placement": {
     "floor": "superior",
-    "x": 77.4,
-    "y": -37.33,
+    "x": 80.16,
+    "y": -38.67,
     "z": 1.4,
-    "width": 3.33,
+    "width": 3.45,
     "height": 2.8,
     "facing": 270,
     "surface": "wall"

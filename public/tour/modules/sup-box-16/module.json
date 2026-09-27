@@ -3,10 +3,10 @@
   "title": "Restaurante Anarco",
   "placement": {
     "floor": "superior",
-    "x": 25.01,
-    "y": -42.28,
+    "x": 25.91,
+    "y": -43.79,
     "z": 1.4,
-    "width": 2.88,
+    "width": 2.98,
     "height": 2.8,
     "facing": 0,
     "surface": "wall"

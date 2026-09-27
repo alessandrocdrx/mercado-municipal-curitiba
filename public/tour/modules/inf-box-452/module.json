@@ -3,10 +3,10 @@
   "title": "Farmácia do Mercado – Nellyfarma",
   "placement": {
     "floor": "inferior",
-    "x": 101.97,
-    "y": -64.21,
+    "x": 107.07,
+    "y": -67.42,
     "z": 1.4,
-    "width": 2.35,
+    "width": 2.46,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

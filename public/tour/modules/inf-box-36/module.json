@@ -3,10 +3,10 @@
   "title": "Box 36",
   "placement": {
     "floor": "inferior",
-    "x": 48.73,
-    "y": -30.36,
+    "x": 51.17,
+    "y": -31.88,
     "z": 1.4,
-    "width": 2.16,
+    "width": 2.27,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

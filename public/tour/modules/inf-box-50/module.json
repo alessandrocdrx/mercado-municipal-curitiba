@@ -3,10 +3,10 @@
   "title": "Box 50",
   "placement": {
     "floor": "inferior",
-    "x": 25.56,
-    "y": -39.78,
+    "x": 26.84,
+    "y": -41.77,
     "z": 1.4,
-    "width": 2.26,
+    "width": 2.38,
     "height": 2.8,
     "facing": 90,
     "surface": "wall"

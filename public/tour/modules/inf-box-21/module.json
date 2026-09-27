@@ -3,10 +3,10 @@
   "title": "Peixaria São José",
   "placement": {
     "floor": "inferior",
-    "x": 88.8,
-    "y": -30.66,
+    "x": 93.24,
+    "y": -32.19,
     "z": 1.4,
-    "width": 2.12,
+    "width": 2.22,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

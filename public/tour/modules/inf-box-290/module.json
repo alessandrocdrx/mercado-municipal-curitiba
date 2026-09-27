@@ -3,10 +3,10 @@
   "title": "Box 290",
   "placement": {
     "floor": "inferior",
-    "x": 3.24,
-    "y": -24.18,
+    "x": 3.4,
+    "y": -25.39,
     "z": 1.4,
-    "width": 2.64,
+    "width": 2.77,
     "height": 2.8,
     "facing": 90,
     "surface": "wall"

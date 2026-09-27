@@ -3,10 +3,10 @@
   "title": "SN Frutas e Verduras",
   "placement": {
     "floor": "inferior",
-    "x": 81.12,
-    "y": -34.44,
+    "x": 85.18,
+    "y": -36.16,
     "z": 0.6,
-    "width": 1.21,
+    "width": 1.28,
     "height": 1.2,
     "facing": 0,
     "surface": "wall"

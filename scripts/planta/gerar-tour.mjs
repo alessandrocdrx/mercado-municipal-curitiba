@@ -9,7 +9,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { PAVIMENTOS, BOXES, PORTAS, CENAS, LIGACOES, ESCADAS, RUAS, AREA_COBERTA } from './dados-planta.mjs';
+import { PAVIMENTOS, BOXES, PORTAS, CENAS, LIGACOES, ESCADAS, RUAS, AREA_COBERTA, CONTORNOS_OSM } from './dados-planta.mjs';
 import { COMERCIANTES, CATEGORIAS } from './comerciantes.mjs';
 import { FOTOS_MERCADO, FOTOS_COMERCIANTES } from './fotos.mjs';
 import crypto from 'node:crypto';
@@ -24,6 +24,19 @@ const writeJson = (file, data) => {
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, `${JSON.stringify(data, null, 2)}\n`);
 };
+
+const OSM = JSON.parse(fs.readFileSync(new URL('./osm-dados.json', import.meta.url), 'utf8'));
+
+/** lon/lat → px da planta, pela rotação (`rumoCima`), escala e âncora do pavimento. */
+function lonLatParaPx(pav, [lon, lat]) {
+  const [alon, alat] = pav.ancora.lonLat;
+  const leste = (lon - alon) * 111320 * Math.cos((alat * Math.PI) / 180);
+  const norte = (lat - alat) * 110540;
+  const r = (pav.rumoCima * Math.PI) / 180;
+  const direita = leste * Math.cos(r) - norte * Math.sin(r);
+  const cima = leste * Math.sin(r) + norte * Math.cos(r);
+  return [pav.ancora.px[0] + direita / pav.escala, pav.ancora.px[1] - cima / pav.escala];
+}
 
 /** px da imagem → metros na planta (x para a direita, y para cima = Rua da Paz). */
 const toMeters = (pav, [px, py]) => ({ x: r2(px * pav.escala), y: r2(-py * pav.escala) });
@@ -135,6 +148,7 @@ writeJson(path.join(ROOT, 'tour.json'), {
       { title: 'Visite Curitiba', url: 'https://visite.curitiba.br/mercado-municipal-de-curitiba/' },
       { title: 'Mercado Municipal de Curitiba – 61 anos', url: 'https://www.mercadomunicipaldecuritiba.com.br/61-anos-do-mercado-municipal-de-curitiba/' },
       { title: 'Prefeitura – Cidades Educadoras', url: 'https://cidadeseducadoras.curitiba.pr.gov.br/pontos-turisticos/mercado-municipal/' },
+      { title: 'Contornos, escala e norte do prédio: © OpenStreetMap contributors (ODbL)', url: 'https://www.openstreetmap.org/copyright' },
     ],
     photos: FOTOS_MERCADO,
   },
@@ -144,6 +158,11 @@ writeJson(path.join(ROOT, 'tour.json'), {
     title: p.titulo,
     startScene: p.inicio,
     plan: { src: p.planta, width: r2(IMG_W * p.escala), height: r2(IMG_H * p.escala) },
+    bearingUp: p.rumoCima, // rumo real (graus a partir do norte) do "cima" da planta
+    outlines: CONTORNOS_OSM.filter((c) => c.pavimentos.includes(p.id)).map((c) => ({
+      id: `osm-way-${c.way}`, title: c.nome, kind: c.tipo, source: 'OpenStreetMap',
+      points: OSM.ways[c.way].lonLat.map((ll) => toMeters(p, lonLatParaPx(p, ll))),
+    })),
     covered: AREA_COBERTA[p.id] && {
       from: toMeters(p, AREA_COBERTA[p.id].de), to: toMeters(p, AREA_COBERTA[p.id].ate),
     },

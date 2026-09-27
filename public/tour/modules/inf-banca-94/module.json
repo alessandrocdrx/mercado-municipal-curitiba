@@ -3,10 +3,10 @@
   "title": "Banca da Isabel",
   "placement": {
     "floor": "inferior",
-    "x": 85.98,
-    "y": -45.12,
+    "x": 90.28,
+    "y": -47.38,
     "z": 0.6,
-    "width": 1.21,
+    "width": 1.28,
     "height": 1.2,
     "facing": 0,
     "surface": "wall"

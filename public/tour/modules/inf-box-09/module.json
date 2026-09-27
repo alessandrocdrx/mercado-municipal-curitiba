@@ -3,10 +3,10 @@
   "title": "Box 09",
   "placement": {
     "floor": "inferior",
-    "x": 91.8,
-    "y": -41.58,
+    "x": 96.39,
+    "y": -43.66,
     "z": 1.4,
-    "width": 2.21,
+    "width": 2.32,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

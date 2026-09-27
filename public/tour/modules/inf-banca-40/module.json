@@ -3,10 +3,10 @@
   "title": "Banca 40",
   "placement": {
     "floor": "inferior",
-    "x": 61.92,
-    "y": -45.12,
+    "x": 65.02,
+    "y": -47.38,
     "z": 0.6,
-    "width": 1.21,
+    "width": 1.28,
     "height": 1.2,
     "facing": 0,
     "surface": "wall"

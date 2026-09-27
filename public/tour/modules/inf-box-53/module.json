@@ -3,10 +3,10 @@
   "title": "Impactto",
   "placement": {
     "floor": "inferior",
-    "x": 24.75,
-    "y": -51.66,
+    "x": 25.99,
+    "y": -54.24,
     "z": 1.4,
-    "width": 2.65,
+    "width": 2.78,
     "height": 2.8,
     "facing": 90,
     "surface": "wall"

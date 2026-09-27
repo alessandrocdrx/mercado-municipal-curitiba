@@ -3,10 +3,10 @@
   "title": "Banca da Júlia",
   "placement": {
     "floor": "inferior",
-    "x": 61.92,
-    "y": -34.44,
+    "x": 65.02,
+    "y": -36.16,
     "z": 0.6,
-    "width": 1.21,
+    "width": 1.28,
     "height": 1.2,
     "facing": 0,
     "surface": "wall"

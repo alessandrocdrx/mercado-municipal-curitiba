@@ -3,10 +3,10 @@
   "title": "Bon Vivant",
   "placement": {
     "floor": "inferior",
-    "x": 33.12,
-    "y": -57.06,
+    "x": 34.78,
+    "y": -59.91,
     "z": 1.4,
-    "width": 2.21,
+    "width": 2.32,
     "height": 2.8,
     "facing": 0,
     "surface": "wall"

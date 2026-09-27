@@ -3,10 +3,10 @@
   "title": "Box 45",
   "placement": {
     "floor": "inferior",
-    "x": 26.04,
-    "y": -27.48,
+    "x": 27.34,
+    "y": -28.85,
     "z": 1.4,
-    "width": 2.26,
+    "width": 2.38,
     "height": 2.8,
     "facing": 90,
     "surface": "wall"

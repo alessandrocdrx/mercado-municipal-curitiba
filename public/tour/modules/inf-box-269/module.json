@@ -3,10 +3,10 @@
   "title": "Adega Municipal",
   "placement": {
     "floor": "inferior",
-    "x": 10.8,
-    "y": -10.74,
+    "x": 11.34,
+    "y": -11.28,
     "z": 1.4,
-    "width": 2.07,
+    "width": 2.17,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

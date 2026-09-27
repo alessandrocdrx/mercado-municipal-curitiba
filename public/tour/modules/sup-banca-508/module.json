@@ -3,10 +3,10 @@
   "title": "Espaço Orgânico",
   "placement": {
     "floor": "superior",
-    "x": 71.26,
-    "y": -25.2,
+    "x": 73.8,
+    "y": -26.1,
     "z": 0.6,
-    "width": 2.32,
+    "width": 2.4,
     "height": 1.2,
     "facing": 90,
     "surface": "wall"

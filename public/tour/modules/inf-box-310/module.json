@@ -3,10 +3,10 @@
   "title": "Lotérica Mercado Municipal",
   "placement": {
     "floor": "inferior",
-    "x": 30.3,
-    "y": -18.78,
+    "x": 31.82,
+    "y": -19.72,
     "z": 1.4,
-    "width": 2.52,
+    "width": 2.64,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

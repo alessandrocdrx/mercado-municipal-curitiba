@@ -3,10 +3,10 @@
   "title": "Banca do Zé Mario",
   "placement": {
     "floor": "inferior",
-    "x": 66.72,
-    "y": -52.56,
+    "x": 70.06,
+    "y": -55.19,
     "z": 0.6,
-    "width": 1.21,
+    "width": 1.28,
     "height": 1.2,
     "facing": 180,
     "surface": "wall"

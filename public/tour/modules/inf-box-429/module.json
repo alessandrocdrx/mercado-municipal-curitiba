@@ -3,10 +3,10 @@
   "title": "Furuta Cereais",
   "placement": {
     "floor": "inferior",
-    "x": 30.72,
-    "y": -62.76,
+    "x": 32.26,
+    "y": -65.9,
     "z": 1.4,
-    "width": 2.21,
+    "width": 2.32,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

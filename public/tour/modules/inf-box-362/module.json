@@ -3,10 +3,10 @@
   "title": "Box do Palmito",
   "placement": {
     "floor": "inferior",
-    "x": 39.81,
-    "y": -40.68,
+    "x": 41.8,
+    "y": -42.71,
     "z": 1.4,
-    "width": 2.46,
+    "width": 2.58,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

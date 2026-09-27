@@ -3,10 +3,10 @@
   "title": "Box 363",
   "placement": {
     "floor": "inferior",
-    "x": 42.48,
-    "y": -40.68,
+    "x": 44.6,
+    "y": -42.71,
     "z": 1.4,
-    "width": 2.46,
+    "width": 2.58,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

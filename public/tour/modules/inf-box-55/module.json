@@ -3,10 +3,10 @@
   "title": "Conversic",
   "placement": {
     "floor": "inferior",
-    "x": 24.54,
-    "y": -57.42,
+    "x": 25.77,
+    "y": -60.29,
     "z": 1.4,
-    "width": 2.65,
+    "width": 2.78,
     "height": 2.8,
     "facing": 90,
     "surface": "wall"

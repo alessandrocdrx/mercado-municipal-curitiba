@@ -3,10 +3,10 @@
   "title": "Mercearia Sansei",
   "placement": {
     "floor": "inferior",
-    "x": 81.78,
-    "y": -57.96,
+    "x": 85.87,
+    "y": -60.86,
     "z": 1.4,
-    "width": 2.24,
+    "width": 2.35,
     "height": 2.8,
     "facing": 0,
     "surface": "wall"

@@ -3,10 +3,10 @@
   "title": "Banca do Kobe",
   "placement": {
     "floor": "superior",
-    "x": 67.83,
-    "y": -25.2,
+    "x": 70.25,
+    "y": -26.1,
     "z": 0.6,
-    "width": 2.32,
+    "width": 2.4,
     "height": 1.2,
     "facing": 270,
     "surface": "wall"

@@ -3,10 +3,10 @@
   "title": "Tenda Árabe",
   "placement": {
     "floor": "inferior",
-    "x": 46.74,
-    "y": -50.1,
+    "x": 49.08,
+    "y": -52.6,
     "z": 0.6,
-    "width": 1.21,
+    "width": 1.28,
     "height": 1.2,
     "facing": 270,
     "surface": "wall"

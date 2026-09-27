@@ -3,10 +3,10 @@
   "title": "Ceccon Produtos Orgânicos",
   "placement": {
     "floor": "superior",
-    "x": 67.83,
-    "y": -28.14,
+    "x": 70.25,
+    "y": -29.14,
     "z": 0.6,
-    "width": 2.32,
+    "width": 2.4,
     "height": 1.2,
     "facing": 270,
     "surface": "wall"

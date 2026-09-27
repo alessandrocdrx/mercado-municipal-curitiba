@@ -3,10 +3,10 @@
   "title": "Box 361",
   "placement": {
     "floor": "inferior",
-    "x": 37.14,
-    "y": -40.68,
+    "x": 39,
+    "y": -42.71,
     "z": 1.4,
-    "width": 2.46,
+    "width": 2.58,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

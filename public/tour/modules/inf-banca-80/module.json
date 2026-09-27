@@ -3,10 +3,10 @@
   "title": "Banca 80",
   "placement": {
     "floor": "inferior",
-    "x": 80.04,
-    "y": -50.1,
+    "x": 84.04,
+    "y": -52.6,
     "z": 0.6,
-    "width": 1.21,
+    "width": 1.28,
     "height": 1.2,
     "facing": 270,
     "surface": "wall"

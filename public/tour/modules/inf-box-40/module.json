@@ -3,10 +3,10 @@
   "title": "Box 41 – Vinhos",
   "placement": {
     "floor": "inferior",
-    "x": 39.33,
-    "y": -30.36,
+    "x": 41.3,
+    "y": -31.88,
     "z": 1.4,
-    "width": 2.16,
+    "width": 2.27,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

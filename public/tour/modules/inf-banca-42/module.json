@@ -3,10 +3,10 @@
   "title": "Banca 42",
   "placement": {
     "floor": "inferior",
-    "x": 60.84,
-    "y": -39.3,
+    "x": 63.88,
+    "y": -41.26,
     "z": 0.6,
-    "width": 1.21,
+    "width": 1.28,
     "height": 1.2,
     "facing": 270,
     "surface": "wall"

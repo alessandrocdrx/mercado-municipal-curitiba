@@ -3,10 +3,10 @@
   "title": "Peixaria Keli Mozer",
   "placement": {
     "floor": "inferior",
-    "x": 90.84,
-    "y": -38.22,
+    "x": 95.38,
+    "y": -40.13,
     "z": 1.4,
-    "width": 2.21,
+    "width": 2.32,
     "height": 2.8,
     "facing": 270,
     "surface": "wall"

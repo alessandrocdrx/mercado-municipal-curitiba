@@ -3,10 +3,10 @@
   "title": "Mercearia MMM",
   "placement": {
     "floor": "inferior",
-    "x": 46.38,
-    "y": -30.36,
+    "x": 48.7,
+    "y": -31.88,
     "z": 1.4,
-    "width": 2.16,
+    "width": 2.27,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

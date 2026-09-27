@@ -3,10 +3,10 @@
   "title": "Vitornis Chapelaria",
   "placement": {
     "floor": "superior",
-    "x": 15,
-    "y": -21.56,
+    "x": 15.54,
+    "y": -22.33,
     "z": 1.4,
-    "width": 2.32,
+    "width": 2.4,
     "height": 2.8,
     "facing": 90,
     "surface": "wall"

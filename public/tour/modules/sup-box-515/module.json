@@ -3,10 +3,10 @@
   "title": "Cativa Natureza",
   "placement": {
     "floor": "superior",
-    "x": 75.32,
-    "y": -15.05,
+    "x": 78.01,
+    "y": -15.59,
     "z": 1.4,
-    "width": 3.32,
+    "width": 3.44,
     "height": 2.8,
     "facing": 270,
     "surface": "wall"

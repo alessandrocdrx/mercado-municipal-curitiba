@@ -3,10 +3,10 @@
   "title": "Sapataria Rápida Capricho",
   "placement": {
     "floor": "superior",
-    "x": 51.44,
-    "y": -27.86,
+    "x": 53.27,
+    "y": -28.85,
     "z": 1.4,
-    "width": 2.32,
+    "width": 2.4,
     "height": 2.8,
     "facing": 270,
     "surface": "wall"

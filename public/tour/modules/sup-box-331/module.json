@@ -3,10 +3,10 @@
   "title": "Box 331",
   "placement": {
     "floor": "superior",
-    "x": 14.89,
-    "y": -24.08,
+    "x": 15.42,
+    "y": -24.94,
     "z": 1.4,
-    "width": 2.32,
+    "width": 2.4,
     "height": 2.8,
     "facing": 90,
     "surface": "wall"

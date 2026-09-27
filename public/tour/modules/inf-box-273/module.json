@@ -3,10 +3,10 @@
   "title": "Darumayá",
   "placement": {
     "floor": "inferior",
-    "x": 27,
-    "y": -10.74,
+    "x": 28.35,
+    "y": -11.28,
     "z": 1.4,
-    "width": 2.21,
+    "width": 2.32,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

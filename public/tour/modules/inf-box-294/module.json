@@ -3,10 +3,10 @@
   "title": "Lá de Minas",
   "placement": {
     "floor": "inferior",
-    "x": 4.56,
-    "y": -12.78,
+    "x": 4.79,
+    "y": -13.42,
     "z": 1.4,
-    "width": 2.64,
+    "width": 2.77,
     "height": 2.8,
     "facing": 90,
     "surface": "wall"

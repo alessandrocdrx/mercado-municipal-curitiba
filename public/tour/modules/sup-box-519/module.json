@@ -3,10 +3,10 @@
   "title": "Natural Market",
   "placement": {
     "floor": "superior",
-    "x": 77.28,
-    "y": -40.95,
+    "x": 80.04,
+    "y": -42.41,
     "z": 1.4,
-    "width": 3.33,
+    "width": 3.45,
     "height": 2.8,
     "facing": 270,
     "surface": "wall"

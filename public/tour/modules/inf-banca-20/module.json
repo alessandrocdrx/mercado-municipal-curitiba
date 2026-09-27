@@ -3,10 +3,10 @@
   "title": "Banca 20",
   "placement": {
     "floor": "inferior",
-    "x": 52.56,
-    "y": -34.44,
+    "x": 55.19,
+    "y": -36.16,
     "z": 0.6,
-    "width": 1.21,
+    "width": 1.28,
     "height": 1.2,
     "facing": 0,
     "surface": "wall"

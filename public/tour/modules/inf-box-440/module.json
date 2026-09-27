@@ -3,10 +3,10 @@
   "title": "Box 440",
   "placement": {
     "floor": "inferior",
-    "x": 62.4,
-    "y": -63.36,
+    "x": 65.52,
+    "y": -66.53,
     "z": 1.4,
-    "width": 2.32,
+    "width": 2.43,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

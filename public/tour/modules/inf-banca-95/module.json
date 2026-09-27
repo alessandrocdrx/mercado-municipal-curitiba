@@ -3,10 +3,10 @@
   "title": "Banca 95",
   "placement": {
     "floor": "inferior",
-    "x": 85.98,
-    "y": -41.76,
+    "x": 90.28,
+    "y": -43.85,
     "z": 0.6,
-    "width": 1.21,
+    "width": 1.28,
     "height": 1.2,
     "facing": 180,
     "surface": "wall"

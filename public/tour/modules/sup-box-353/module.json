@@ -3,10 +3,10 @@
   "title": "Nippon Boutique",
   "placement": {
     "floor": "superior",
-    "x": 42.28,
-    "y": -29.19,
+    "x": 43.79,
+    "y": -30.23,
     "z": 1.4,
-    "width": 2.58,
+    "width": 2.67,
     "height": 2.8,
     "facing": 270,
     "surface": "wall"

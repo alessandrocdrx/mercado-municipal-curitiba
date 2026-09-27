@@ -3,10 +3,10 @@
   "title": "Mercearia O Barracão",
   "placement": {
     "floor": "inferior",
-    "x": 35.2,
-    "y": -18.34,
+    "x": 36.96,
+    "y": -19.26,
     "z": 1.4,
-    "width": 2.56,
+    "width": 2.69,
     "height": 2.8,
     "facing": 270,
     "surface": "wall"

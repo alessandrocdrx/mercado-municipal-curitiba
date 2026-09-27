@@ -11,9 +11,13 @@ export class Minimap {
     this.el = document.createElement('section');
     this.el.className = 'minimap';
     this.el.innerHTML = `
-      <div class="mm-bar"><div class="mm-floors"></div><button class="mm-expand" title="Ampliar mapa">⤢</button></div>`;
+      <div class="mm-bar"><div class="mm-floors"></div><button class="mm-expand" title="Ampliar mapa">⤢</button></div>
+      <div class="mm-map"><span class="mm-north" title="Norte real" hidden><i></i>N</span></div>
+      <a class="mm-credit" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener" title="Contornos, escala e norte do prédio: © OpenStreetMap contributors (ODbL)" hidden>© OpenStreetMap</a>`;
     this.svg = document.createElementNS(SVG, 'svg');
-    this.el.appendChild(this.svg);
+    this.el.querySelector('.mm-map').appendChild(this.svg);
+    this.north = this.el.querySelector('.mm-north');
+    this.credit = this.el.querySelector('.mm-credit');
     root.appendChild(this.el);
     this.onSelect = onSelect;
     this.onFloor = onFloor;
@@ -38,10 +42,14 @@ export class Minimap {
       return b;
     }));
 
-    // Enquadramento: a planta inteira, se houver; senão os pontos existentes.
+    // Enquadramento: a planta inteira (e os contornos do prédio), se houver; senão os pontos existentes.
     let box;
+    const outlines = floor?.outlines ?? [];
     if (floor?.plan) {
       box = { minX: 0, minY: -floor.plan.height, maxX: floor.plan.width, maxY: 0 };
+      for (const p of outlines.flatMap((o) => o.points)) {
+        box = { minX: Math.min(box.minX, p.x - 2), maxX: Math.max(box.maxX, p.x + 2), minY: Math.min(box.minY, p.y - 2), maxY: Math.max(box.maxY, p.y + 2) };
+      }
       this.svg.append(node('image', {
         href: resolveUrl(floor.plan.src, tourUrl),
         x: 0, y: 0, width: floor.plan.width, height: floor.plan.height,
@@ -58,6 +66,20 @@ export class Minimap {
     // y da planta cresce para o norte; no SVG cresce para baixo.
     this.svg.setAttribute('viewBox', `${box.minX} ${-box.maxY} ${box.maxX - box.minX} ${box.maxY - box.minY}`);
     const unit = (box.maxX - box.minX) / 100; // marcadores proporcionais ao tamanho do mapa
+
+    // contornos do prédio atual (OpenStreetMap): mostram o que as plantas não desenham
+    for (const o of outlines) {
+      const poly = node('polygon', {
+        points: o.points.map((p) => `${p.x},${-p.y}`).join(' '),
+        class: `mm-outline mm-outline-${o.kind}`, 'stroke-width': unit * 0.35, 'stroke-dasharray': `${unit * 1.2} ${unit * 0.7}`,
+      });
+      poly.append(node('title', {}, `${o.title} (OpenStreetMap)`));
+      this.svg.append(poly);
+    }
+    this.credit.hidden = !outlines.length;
+    // seta do norte real: o "cima" da planta aponta para o rumo `bearingUp`
+    this.north.hidden = floor?.bearingUp === undefined;
+    if (!this.north.hidden) this.north.firstElementChild.style.transform = `rotate(${-floor.bearingUp}deg)`;
 
     for (const m of modules) {
       const p = m.placement;

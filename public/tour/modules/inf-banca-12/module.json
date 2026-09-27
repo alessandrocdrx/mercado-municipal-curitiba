@@ -3,10 +3,10 @@
   "title": "Moncloa",
   "placement": {
     "floor": "inferior",
-    "x": 48.9,
-    "y": -50.1,
+    "x": 51.35,
+    "y": -52.6,
     "z": 0.6,
-    "width": 1.21,
+    "width": 1.28,
     "height": 1.2,
     "facing": 90,
     "surface": "wall"

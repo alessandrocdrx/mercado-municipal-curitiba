@@ -3,10 +3,10 @@
   "title": "Artigos Orientais",
   "placement": {
     "floor": "superior",
-    "x": 50.26,
-    "y": -18.27,
+    "x": 52.06,
+    "y": -18.92,
     "z": 1.4,
-    "width": 2.43,
+    "width": 2.51,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

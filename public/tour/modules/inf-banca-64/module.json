@@ -3,10 +3,10 @@
   "title": "Banca da Cirlei",
   "placement": {
     "floor": "inferior",
-    "x": 71.52,
-    "y": -45.12,
+    "x": 75.1,
+    "y": -47.38,
     "z": 0.6,
-    "width": 1.21,
+    "width": 1.28,
     "height": 1.2,
     "facing": 0,
     "surface": "wall"

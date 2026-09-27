@@ -3,10 +3,10 @@
   "title": "Banca 29",
   "placement": {
     "floor": "inferior",
-    "x": 57.3,
-    "y": -41.76,
+    "x": 60.17,
+    "y": -43.85,
     "z": 0.6,
-    "width": 1.21,
+    "width": 1.28,
     "height": 1.2,
     "facing": 180,
     "surface": "wall"

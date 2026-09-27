@@ -3,10 +3,10 @@
   "title": "Banca 23",
   "placement": {
     "floor": "inferior",
-    "x": 53.64,
-    "y": -47.4,
+    "x": 56.32,
+    "y": -49.77,
     "z": 0.6,
-    "width": 1.21,
+    "width": 1.28,
     "height": 1.2,
     "facing": 90,
     "surface": "wall"

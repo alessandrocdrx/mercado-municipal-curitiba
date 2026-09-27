@@ -3,10 +3,10 @@
   "title": "Mafo Com. de Alimentos",
   "placement": {
     "floor": "inferior",
-    "x": 61.92,
-    "y": -52.56,
+    "x": 65.02,
+    "y": -55.19,
     "z": 0.6,
-    "width": 1.21,
+    "width": 1.28,
     "height": 1.2,
     "facing": 180,
     "surface": "wall"

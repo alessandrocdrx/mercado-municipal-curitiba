@@ -3,10 +3,10 @@
   "title": "Café do Mercado",
   "placement": {
     "floor": "inferior",
-    "x": 57.36,
-    "y": -63.29,
+    "x": 60.23,
+    "y": -66.45,
     "z": 1.4,
-    "width": 2.32,
+    "width": 2.43,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

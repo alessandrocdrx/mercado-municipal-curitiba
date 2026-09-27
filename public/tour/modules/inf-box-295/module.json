@@ -3,10 +3,10 @@
   "title": "D'Fuhrmann Chocolates",
   "placement": {
     "floor": "inferior",
-    "x": 8.4,
-    "y": -14.58,
+    "x": 8.82,
+    "y": -15.31,
     "z": 1.4,
-    "width": 2.52,
+    "width": 2.64,
     "height": 2.8,
     "facing": 0,
     "surface": "wall"

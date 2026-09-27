@@ -3,10 +3,10 @@
   "title": "Puro Coco",
   "placement": {
     "floor": "inferior",
-    "x": 31.2,
-    "y": -51.48,
+    "x": 32.76,
+    "y": -54.05,
     "z": 1.4,
-    "width": 2.51,
+    "width": 2.64,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

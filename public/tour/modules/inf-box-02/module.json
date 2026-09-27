@@ -3,10 +3,10 @@
   "title": "Casa de Carnes Pé de Boi",
   "placement": {
     "floor": "inferior",
-    "x": 112.5,
-    "y": -42,
+    "x": 118.13,
+    "y": -44.1,
     "z": 1.4,
-    "width": 1.93,
+    "width": 2.03,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

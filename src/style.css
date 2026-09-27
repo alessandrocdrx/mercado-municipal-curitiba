@@ -119,6 +119,19 @@ kbd { border: 1px solid var(--muted); border-radius: 4px; padding: 0 4px; font-s
 .minimap button.on { background: var(--accent); color: #222; border-color: var(--accent); }
 .mm-plan { opacity: .85; }
 .mm-module { fill: #b0452c; opacity: .8; }
+.mm-map { position: relative; }
+.mm-outline { fill: #8a6d3b; fill-opacity: .08; stroke: #6b4a1a; }
+.mm-outline-praca { fill: #d9573b; fill-opacity: .18; stroke: #b0452c; }
+.mm-outline-hortifruti { fill: #3c7a34; fill-opacity: .12; stroke: #2f6a2a; }
+.mm-outline-organicos { fill: #2f7d32; fill-opacity: .15; stroke: #2f7d32; }
+.mm-outline-estacionamento { fill: #4c5f7a; fill-opacity: .12; stroke: #4c5f7a; }
+.mm-north {
+  position: absolute; top: 6px; right: 6px; width: 24px; height: 24px; border-radius: 50%;
+  background: rgba(20, 22, 26, .8); color: #fff; font: 700 11px/24px system-ui, sans-serif; text-align: center; pointer-events: none;
+}
+.mm-north i { position: absolute; inset: 0; }
+.mm-north i::before { content: ''; position: absolute; left: 50%; top: -6px; transform: translateX(-50%); border: 5px solid transparent; border-top: 0; border-bottom: 8px solid #e0483a; }
+.mm-credit { font-size: 10px; color: var(--muted); text-decoration: none; align-self: flex-end; white-space: nowrap; }
 .mm-link { stroke: rgba(20, 30, 60, .45); }
 .mm-scene { fill: #1d3f8f; stroke: #fff; stroke-width: .3; cursor: pointer; }
 .mm-scene:hover { fill: var(--accent); }

@@ -3,10 +3,10 @@
   "title": "Banca 89",
   "placement": {
     "floor": "inferior",
-    "x": 82.2,
-    "y": -47.4,
+    "x": 86.31,
+    "y": -49.77,
     "z": 0.6,
-    "width": 1.21,
+    "width": 1.28,
     "height": 1.2,
     "facing": 90,
     "surface": "wall"

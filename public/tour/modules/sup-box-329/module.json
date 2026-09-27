@@ -3,10 +3,10 @@
   "title": "Salão de Cabeleireiro Unissex – Eurides",
   "placement": {
     "floor": "superior",
-    "x": 51.24,
-    "y": -32.9,
+    "x": 53.07,
+    "y": -34.07,
     "z": 1.4,
-    "width": 2.32,
+    "width": 2.4,
     "height": 2.8,
     "facing": 270,
     "surface": "wall"

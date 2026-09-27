@@ -3,10 +3,10 @@
   "title": "Banca 82",
   "placement": {
     "floor": "inferior",
-    "x": 81.12,
-    "y": -45.12,
+    "x": 85.18,
+    "y": -47.38,
     "z": 0.6,
-    "width": 1.21,
+    "width": 1.28,
     "height": 1.2,
     "facing": 0,
     "surface": "wall"

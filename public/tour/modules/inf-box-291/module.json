@@ -3,10 +3,10 @@
   "title": "Empório Curitibano",
   "placement": {
     "floor": "inferior",
-    "x": 3.57,
-    "y": -21.33,
+    "x": 3.75,
+    "y": -22.4,
     "z": 1.4,
-    "width": 2.64,
+    "width": 2.77,
     "height": 2.8,
     "facing": 90,
     "surface": "wall"

@@ -10,7 +10,8 @@
     "build:single": "vite build && node scripts/build-single.mjs",
     "preview": "vite preview",
     "validate": "node scripts/validate-tour.mjs",
-    "planta": "node scripts/planta/gerar-tour.mjs"
+    "planta": "node scripts/planta/gerar-tour.mjs",
+    "osm": "node scripts/planta/baixar-osm.mjs"
   },
   "dependencies": {
     "three": "^0.186.1"

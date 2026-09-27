@@ -3,10 +3,10 @@
   "title": "DAP Boutique de Carnes",
   "placement": {
     "floor": "inferior",
-    "x": 103.08,
-    "y": -41.88,
+    "x": 108.23,
+    "y": -43.97,
     "z": 1.4,
-    "width": 2.32,
+    "width": 2.43,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

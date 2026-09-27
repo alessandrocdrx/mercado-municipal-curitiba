@@ -3,10 +3,10 @@
   "title": "Loja de Presentes Mina de Ouro",
   "placement": {
     "floor": "superior",
-    "x": 51.73,
-    "y": -20.3,
+    "x": 53.58,
+    "y": -21.02,
     "z": 1.4,
-    "width": 2.32,
+    "width": 2.4,
     "height": 2.8,
     "facing": 270,
     "surface": "wall"

@@ -3,10 +3,10 @@
   "title": "Claudio's Mercearia",
   "placement": {
     "floor": "inferior",
-    "x": 58.13,
-    "y": -30.36,
+    "x": 61.04,
+    "y": -31.88,
     "z": 1.4,
-    "width": 2.16,
+    "width": 2.27,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

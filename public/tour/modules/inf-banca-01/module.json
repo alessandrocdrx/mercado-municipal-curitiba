@@ -3,10 +3,10 @@
   "title": "Agro Comercial Paraná",
   "placement": {
     "floor": "inferior",
-    "x": 47.82,
-    "y": -52.56,
+    "x": 50.21,
+    "y": -55.19,
     "z": 0.6,
-    "width": 1.21,
+    "width": 1.28,
     "height": 1.2,
     "facing": 180,
     "surface": "wall"

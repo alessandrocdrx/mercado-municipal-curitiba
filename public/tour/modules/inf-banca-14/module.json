@@ -3,10 +3,10 @@
   "title": "Merca Fruty – Produtos Congelados",
   "placement": {
     "floor": "inferior",
-    "x": 51.48,
-    "y": -50.1,
+    "x": 54.05,
+    "y": -52.6,
     "z": 0.6,
-    "width": 1.21,
+    "width": 1.28,
     "height": 1.2,
     "facing": 270,
     "surface": "wall"

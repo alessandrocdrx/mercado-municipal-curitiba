@@ -3,10 +3,10 @@
   "title": "Box Verde",
   "placement": {
     "floor": "inferior",
-    "x": 52.32,
-    "y": -63.22,
+    "x": 54.94,
+    "y": -66.38,
     "z": 1.4,
-    "width": 2.32,
+    "width": 2.43,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

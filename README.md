@@ -33,8 +33,24 @@ O tour foi montado sobre as **plantas afixadas no próprio mercado** (fotos em
 - **Rua General Carneiro** do lado de fora (calçada, meio-fio, asfalto, faixas de pedestres em frente às portas J, I e H e placas), definida em `RUAS` no `dados-planta.mjs`. O teto só cobre a área em `AREA_COBERTA`.
 - **370 módulos** (boxes, bancas e portas), cada um na sua pasta.
 
-A escala (metros por pixel) foi **estimada** pelo tamanho típico de um box.
-Com uma medida real, ajuste `escala` em `dados-planta.mjs` e rode:
+A **escala** (metros por pixel) e o **norte** vêm do contorno do prédio no
+[OpenStreetMap](https://www.openstreetmap.org/way/24776455): 0,063 m/px no
+pavimento inferior e 0,0725 m/px no superior. As plantas estão giradas: o
+"cima" delas (Rua da Paz) aponta para o rumo real de 66°, e a seta vermelha do
+minimapa mostra o norte. O minimapa também traz, tracejados, os contornos do
+OpenStreetMap: o prédio atual, o Mercado de Orgânicos, o estacionamento, os
+boxes de hortifrúti (inferior) e as praças de alimentação (superior). Eles
+mostram o que as plantas afixadas (de ~2011, durante a ampliação) não desenham,
+como o trecho do lado da Av. Sete de Setembro. Os dados ficam em
+`scripts/planta/osm-dados.json` (© OpenStreetMap contributors, licença
+[ODbL](https://www.openstreetmap.org/copyright)); a lista de contornos e as
+âncoras planta ↔ mapa estão em `dados-planta.mjs`. Para atualizar do mapa:
+
+```bash
+npm run osm        # baixa de novo os contornos do OpenStreetMap
+```
+
+Com uma medida real no local, ajuste `escala` em `dados-planta.mjs` e rode:
 
 ```bash
 npm run planta     # regenera posições/links sem apagar o que foi preenchido à mão

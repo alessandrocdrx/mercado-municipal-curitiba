@@ -3,10 +3,10 @@
   "title": "Banca do Fernando",
   "placement": {
     "floor": "inferior",
-    "x": 63,
-    "y": -47.4,
+    "x": 66.15,
+    "y": -49.77,
     "z": 0.6,
-    "width": 1.21,
+    "width": 1.28,
     "height": 1.2,
     "facing": 90,
     "surface": "wall"

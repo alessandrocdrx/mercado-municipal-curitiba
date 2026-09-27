@@ -3,10 +3,10 @@
   "title": "Box 03",
   "placement": {
     "floor": "superior",
-    "x": 55.72,
-    "y": -57.47,
+    "x": 57.71,
+    "y": -59.52,
     "z": 1.4,
-    "width": 2.51,
+    "width": 2.6,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"
