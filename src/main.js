@@ -302,7 +302,7 @@ function wait(ms) {
 
 const start = readHash();
 const tour = await loader.tour();
-app.querySelector('.about').addEventListener('click', () => info.show({ title: tour.title, type: 'Sobre', info: tour.info }));
+app.querySelector('.about').addEventListener('click', () => info.show({ title: tour.title, type: 'Sobre', info: tour.info, _baseUrl: loader.tourUrl }));
 directory.setItems(tour.directory);
 app.querySelector('.open-directory').addEventListener('click', () => directory.toggle());
 goTo(start.scene ?? tour.startScene, { view: start.scene ? start : undefined });

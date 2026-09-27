@@ -27,6 +27,14 @@ const checkMedia = (media, dir, where) => {
   const file = path.resolve(dir, media.src);
   if (!fs.existsSync(file)) errors.push(`${where}: mídia "${media.src}" não existe (${rel(file)})`);
 };
+// fotos do painel de informações: arquivo existe e crédito completo
+const checkPhotos = (info, dir, where) => {
+  for (const [i, photo] of (info?.photos ?? []).entries()) {
+    checkMedia(photo, dir, `${where} info.photos[${i}]`);
+    const falta = ['author', 'license', 'url'].filter((k) => !photo[k]);
+    if (falta.length) errors.push(`${where}: info.photos[${i}] sem ${falta.join(', ')} (crédito obrigatório)`);
+  }
+};
 
 const tour = readJson(path.join(root, 'tour.json'));
 if (!tour) finish();
@@ -35,6 +43,7 @@ for (const floor of tour.floors ?? []) {
   checkMedia(floor.plan, root, `tour.json pavimento ${floor.id}`);
   if (!(tour.scenes ?? []).includes(floor.startScene)) errors.push(`tour.json: pavimento ${floor.id} começa em cena inexistente "${floor.startScene}"`);
 }
+checkPhotos(tour.info, root, 'tour.json');
 const sceneIds = new Set(tour.scenes ?? []);
 const moduleIds = new Set(tour.modules ?? []);
 if (!sceneIds.has(tour.startScene ?? tour.scenes?.[0])) errors.push(`tour.json: startScene "${tour.startScene}" não está em "scenes"`);
@@ -45,6 +54,7 @@ for (const id of moduleIds) {
   if (!mod) continue;
   const where = `modules/${id}`;
   checkMedia(mod.media, dir, where);
+  checkPhotos(mod.info, dir, where);
   const p = mod.placement;
   if (p && (typeof p.x !== 'number' || typeof p.y !== 'number')) errors.push(`${where}: placement precisa de x e y numéricos`);
   if (p && !(p.width > 0 && p.height > 0)) errors.push(`${where}: placement precisa de width e height > 0`);

@@ -11,6 +11,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { PAVIMENTOS, BOXES, PORTAS, CENAS, LIGACOES, ESCADAS, RUAS, AREA_COBERTA } from './dados-planta.mjs';
 import { COMERCIANTES, CATEGORIAS } from './comerciantes.mjs';
+import { FOTOS_MERCADO } from './fotos.mjs';
 import crypto from 'node:crypto';
 
 const ROOT = 'public/tour';
@@ -134,6 +135,7 @@ writeJson(path.join(ROOT, 'tour.json'), {
       { title: 'Mercado Municipal de Curitiba – 61 anos', url: 'https://www.mercadomunicipaldecuritiba.com.br/61-anos-do-mercado-municipal-de-curitiba/' },
       { title: 'Prefeitura – Cidades Educadoras', url: 'https://cidadeseducadoras.curitiba.pr.gov.br/pontos-turisticos/mercado-municipal/' },
     ],
+    photos: FOTOS_MERCADO,
   },
   startScene: PAVIMENTOS[0].inicio,
   floors: PAVIMENTOS.map((p) => ({
