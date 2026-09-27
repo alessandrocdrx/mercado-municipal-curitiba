@@ -30,10 +30,20 @@ const MIME = { '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png',
   }
 })(tourDir);
 
+// ícone e imagem de compartilhamento embutidos (a página não tem outros arquivos)
+const dataUri = (file, mime) => `data:${mime};base64,${fs.readFileSync(path.join('public', file)).toString('base64')}`;
+const icon = dataUri('icon.svg', 'image/svg+xml');
+const head = html.match(/<head>([\s\S]*)<\/head>/)[1]
+  .split('\n').filter((l) => /<meta (name="(description|theme-color|twitter:card)"|property="og:)|<link rel="(icon|apple-touch-icon)"/.test(l)).join('\n')
+  .replaceAll('./icon.svg', icon)
+  .replaceAll('./apple-touch-icon.png', dataUri('apple-touch-icon.png', 'image/png'))
+  .replaceAll('./og-image.jpg', dataUri('og-image.jpg', 'image/jpeg'));
+
 const title = html.match(/<title>(.*?)<\/title>/)[1];
-const body = html.match(/<body>([\s\S]*)<\/body>/)[1].replace(/<script type="module"[^>]*><\/script>/, '');
+const body = html.match(/<body>([\s\S]*)<\/body>/)[1].replace(/<script type="module"[^>]*><\/script>/, '').replaceAll('./icon.svg', icon);
 
 const out = `<title>${title}</title>
+${head}
 ${cssFile ? `<style>${inlineAsset(cssFile)}</style>` : ''}
 ${body.trim()}
 <script>window.__TOUR_FILES__ = ${JSON.stringify(tourFiles).replaceAll('</', '<\\/')};

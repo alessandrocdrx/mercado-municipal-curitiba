@@ -177,7 +177,8 @@ async function arrived() {
   minimap.render({ tour, tourUrl: loader.tourUrl, scenes: current.scenes, modules: current.modules, current: current.scene });
   minimap.setHeading(viewer.view.yaw);
   titleEl.textContent = current.scene.title ?? current.scene.id;
-  document.title = `${current.scene.title ?? current.scene.id} · ${tour.title ?? 'Tour 360°'}`;
+  document.title = `${tour.title ?? 'Tour 360°'} · ${current.scene.title ?? current.scene.id}`;
+  app.querySelector('.splash')?.classList.add('gone');
   writeHash();
   updateForward();
 }

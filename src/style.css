@@ -18,12 +18,22 @@ html, body { margin: 0; height: 100%; background: var(--bg); overflow: hidden; }
 
 .topbar {
   position: absolute; top: 0; left: 0; right: 0; z-index: 2;
-  display: flex; gap: 16px; align-items: baseline; flex-wrap: wrap;
+  display: flex; gap: 6px 16px; align-items: baseline; flex-wrap: wrap;
   padding: 12px 16px;
   background: linear-gradient(rgba(0,0,0,.65), transparent);
   pointer-events: none;
 }
-.scene-title { font-weight: 600; font-size: 18px; }
+.brand { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; color: #fff; flex-basis: 100%; }
+.brand img { border-radius: 7px; box-shadow: 0 1px 4px rgba(0,0,0,.4); }
+.scene-title { font-weight: 600; font-size: 17px; }
+.splash {
+  position: absolute; inset: 0; z-index: 10; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 14px; background: #1d4d34; color: #f3efe4; text-align: center; padding-inline: 16px; transition: opacity .5s;
+}
+.splash img { border-radius: 26px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+.splash strong { font-size: 26px; line-height: 1.15; }
+.splash span { opacity: .8; font-size: 15px; }
+.splash.gone { opacity: 0; pointer-events: none; }
 .help { color: var(--muted); font-size: 13px; }
 kbd { border: 1px solid var(--muted); border-radius: 4px; padding: 0 4px; font-size: 12px; }
 
@@ -167,5 +177,5 @@ div.dir-item.off { cursor: default; }
   .minimap { width: 150px; }
   .minimap .mm-bar button { padding: 2px 5px; font-size: 11px; }
   .forward { bottom: 24px; left: auto; right: 16px; transform: none; max-width: calc(100% - 200px); }
-  .tip { top: 96px; bottom: auto; white-space: normal; width: max-content; max-width: calc(100% - 32px); text-align: center; }
+  .tip { top: 120px; bottom: auto; white-space: normal; width: max-content; max-width: calc(100% - 32px); text-align: center; }
 }

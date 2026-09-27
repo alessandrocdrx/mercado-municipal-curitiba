@@ -3,13 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Mercado Municipal 360°</title>
+    <title>Mercado Municipal de Curitiba</title>
+    <meta name="description" content="Tour 360° do Mercado Municipal de Curitiba: ande pelos corredores e encontre boxes, bancas e comerciantes." />
+    <meta name="theme-color" content="#1d4d34" />
+    <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mercado Municipal de Curitiba" />
+    <meta property="og:description" content="Tour 360° do Mercado Municipal de Curitiba: ande pelos corredores e encontre boxes, bancas e comerciantes." />
+    <meta property="og:image" content="./og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <div id="app">
       <div class="stage"></div>
       <div class="overlay"></div>
       <header class="topbar">
+        <span class="brand"><img src="./icon.svg" alt="" width="28" height="28" /><span>Mercado Municipal de Curitiba</span></span>
         <span class="scene-title">Carregando…</span>
         <button class="about" title="Sobre o Mercado">Sobre</button>
         <button class="about open-directory" title="Lista de comerciantes">Comerciantes</button>
@@ -18,6 +28,11 @@
       <div class="tip">Toque em <b>▲</b> ou dê <b>dois toques</b> no chão para andar</div>
       <button class="forward" hidden>▲ <span></span></button>
       <div class="fader on"></div>
+      <div class="splash">
+        <img src="./icon.svg" alt="" width="112" height="112" />
+        <strong>Mercado Municipal de Curitiba</strong>
+        <span>Tour 360° · carregando…</span>
+      </div>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>
