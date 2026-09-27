@@ -42,11 +42,11 @@ npm run planta     # regenera posições/links sem apagar o que foi preenchido �
 
 ### Comerciantes
 
-`scripts/planta/comerciantes.mjs` lista 103 comerciantes levantados no
-diretório do site oficial e na lista pública de lojas e boxes (nome, ramo,
-telefone, descrição e link). 76 deles têm número de box que existe na planta
-(142 espaços) e aparecem com nome e cor do ramo no tour. Boxes sem comerciante identificado ficam cinza. Os demais comerciantes
-ficam só no botão **Comerciantes** do app, com link para o site oficial.
+`scripts/planta/comerciantes.mjs` lista 158 comerciantes da lista pública de
+lojas do Mercado (curitiba.mercadomodelo.com.br), com descrições do site
+oficial. 140 deles ocupam 220 boxes e bancas da planta e aparecem com nome e
+cor do ramo no tour. Boxes sem comerciante identificado ficam cinza. Os demais
+aparecem só no botão **Comerciantes** do app.
 Rode `npm run planta` depois de editar a lista.
 
 Edições feitas à mão direto num `module.json` (título, info, mídia) são
