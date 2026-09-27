@@ -26,7 +26,8 @@ export function textureFor(media, { baseUrl, version, aspect = 1, fallbackLabel 
     }
     return cache.get(url);
   }
-  return Promise.resolve(placeholderTexture({ label: fallbackLabel, labelScale, resolution, ...media?.placeholder, aspect }));
+  const ph = { label: fallbackLabel, labelScale, resolution, ...media?.placeholder, aspect };
+  return Promise.resolve(ph.style ? facadeTexture(ph) : placeholderTexture(ph));
 }
 
 export function resolveUrl(src, baseUrl, version) {
@@ -127,4 +128,112 @@ function line(ctx, x1, y1, x2, y2) {
   ctx.moveTo(x1, y1);
   ctx.lineTo(x2, y2);
   ctx.stroke();
+}
+
+/**
+ * Fachada provisória para a maquete 3D: letreiro colorido no alto com o nome
+ * e, abaixo, a "loja" (vão escuro com balcão). style: 'box' | 'banca' | 'porta'.
+ */
+export function facadeTexture({ style = 'box', color = '#6b6e73', label = '', sublabel = '', aspect = 1, known = true }) {
+  const w = 512;
+  const h = Math.max(64, Math.round(w / aspect));
+  const canvas = document.createElement('canvas');
+  canvas.width = w;
+  canvas.height = h;
+  const ctx = canvas.getContext('2d');
+
+  if (style === 'porta') {
+    ctx.fillStyle = '#1d2a38';
+    ctx.fillRect(0, 0, w, h);
+    ctx.fillStyle = '#9fc3e6';
+    ctx.fillRect(w * 0.12, h * 0.3, w * 0.76, h * 0.7);
+    ctx.fillStyle = '#1d2a38';
+    ctx.fillRect(w * 0.49, h * 0.3, w * 0.02, h * 0.7);
+    signText(ctx, label, sublabel, 0, 0, w, h * 0.26);
+  } else {
+    const signH = style === 'banca' ? h * 0.42 : h * 0.3;
+    // corpo da loja
+    ctx.fillStyle = '#e7e1d6';
+    ctx.fillRect(0, 0, w, h);
+    ctx.fillStyle = known ? '#3b342c' : '#4a4a4a';
+    ctx.fillRect(w * 0.06, signH + h * 0.04, w * 0.88, h - signH - h * 0.04);
+    // balcão
+    ctx.fillStyle = known ? shade(color, 0.35) : '#8a8a8a';
+    ctx.fillRect(w * 0.06, h * (style === 'banca' ? 0.72 : 0.68), w * 0.88, h);
+    // letreiro
+    ctx.fillStyle = color;
+    ctx.fillRect(0, 0, w, signH);
+    ctx.fillStyle = 'rgba(0,0,0,.25)';
+    ctx.fillRect(0, signH - 6, w, 6);
+    signText(ctx, label, sublabel, 0, 0, w, signH);
+  }
+  ctx.strokeStyle = 'rgba(0,0,0,.35)';
+  ctx.lineWidth = 6;
+  ctx.strokeRect(3, 3, w - 6, h - 6);
+
+  const tex = new THREE.CanvasTexture(canvas);
+  tex.colorSpace = THREE.SRGBColorSpace;
+  tex.anisotropy = 4;
+  return tex;
+}
+
+function signText(ctx, label, sublabel, x, y, w, h) {
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillStyle = '#fff';
+  let size = Math.min(h * (sublabel ? 0.42 : 0.55), 72);
+  ctx.font = `700 ${size}px system-ui, sans-serif`;
+  // quebra em duas linhas se o nome for longo
+  const lines = fitLines(ctx, label, w * 0.9);
+  if (lines.length > 1) {
+    size *= 0.72;
+    ctx.font = `700 ${size}px system-ui, sans-serif`;
+  }
+  const total = lines.length * size + (sublabel ? size * 0.7 : 0);
+  let cy = y + h / 2 - total / 2 + size / 2;
+  for (const line of lines) {
+    ctx.fillText(line, x + w / 2, cy, w * 0.92);
+    cy += size;
+  }
+  if (sublabel) {
+    ctx.font = `500 ${size * 0.5}px system-ui, sans-serif`;
+    ctx.fillStyle = 'rgba(255,255,255,.85)';
+    ctx.fillText(sublabel, x + w / 2, cy - size * 0.15, w * 0.92);
+  }
+}
+
+function fitLines(ctx, text, max) {
+  if (ctx.measureText(text).width <= max) return [text];
+  const words = text.split(' ');
+  let best = [text];
+  for (let i = 1; i < words.length; i++) {
+    const a = words.slice(0, i).join(' ');
+    const b = words.slice(i).join(' ');
+    const worst = Math.max(ctx.measureText(a).width, ctx.measureText(b).width);
+    if (!best.worst || worst < best.worst) best = Object.assign([a, b], { worst });
+  }
+  return best;
+}
+
+function shade(hex, amount) {
+  const c = new THREE.Color(hex);
+  return `#${c.lerp(new THREE.Color('#ffffff'), amount).getHexString()}`;
+}
+
+/** Textura repetível de teto: forro claro com vigas. */
+export function ceilingTexture() {
+  const canvas = document.createElement('canvas');
+  canvas.width = canvas.height = 256;
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = '#ecebe6';
+  ctx.fillRect(0, 0, 256, 256);
+  ctx.fillStyle = '#c9c6bd';
+  ctx.fillRect(0, 0, 256, 14);
+  ctx.fillRect(0, 0, 14, 256);
+  ctx.fillStyle = '#f7f6f2';
+  ctx.fillRect(70, 70, 116, 116);
+  const tex = new THREE.CanvasTexture(canvas);
+  tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+  tex.colorSpace = THREE.SRGBColorSpace;
+  return tex;
 }

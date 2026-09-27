@@ -14,7 +14,8 @@ export class InfoPanel {
     const close = button('×', 'info-close', () => this.hide());
     const title = element('h2', module.title ?? module.id);
     this.el.append(close, title);
-    if (module.type) this.el.append(element('p', module.type, 'info-type'));
+    const label = info.category ?? { box: 'Box', banca: 'Banca', porta: 'Porta' }[module.type] ?? module.type;
+    if (label) this.el.append(element('p', label, 'info-type'));
     if (info.description) this.el.append(element('p', info.description));
     const rows = [['Endereço', info.address], ['Horário', info.hours], ['Telefone', info.phone], ['Categoria', info.category], ['Localização', info.location]].filter(([, v]) => v);
     if (rows.length) {

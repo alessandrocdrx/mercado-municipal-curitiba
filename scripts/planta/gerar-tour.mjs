@@ -65,9 +65,9 @@ for (const pav of PAVIMENTOS) {
         placement: {
           floor: pav.id,
           ...toMeters(pav, frente),
-          z: banca ? 1.0 : 1.4,
+          z: banca ? 0.6 : 1.4,
           width: r2(larguraPx * pav.escala * 0.92),
-          height: banca ? 2.0 : 2.8,
+          height: banca ? 1.2 : 2.8,
           facing,
           surface: 'wall',
         },
@@ -113,15 +113,10 @@ for (const pav of PAVIMENTOS) {
       floor: pav.id,
       position: { ...toMeters(pav, cena.em), z: 1.6 },
       northYaw: 0,
-      moduleRadius: 14,
-      base: {
-        type: 'cube',
-        placeholder: { color: '#3a3d42' },
-        faces: {
-          down: { placeholder: { color: cena.cor, label: `Piso · ${cena.titulo}` } },
-          up: { placeholder: { color: '#55595f', label: 'Teto (aguardando foto)' } },
-        },
-      },
+      moduleRadius: 28,
+      // sem foto: o app monta a maquete 3D. Para usar foto 360°, preencha
+      // base.faces (cubo) ou base.src (equirect) — o gerador preserva.
+      base: { type: 'cube', faces: {} },
       links,
     });
   }

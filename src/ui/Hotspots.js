@@ -23,7 +23,11 @@ export class Hotspots {
       el.querySelector('.hotspot-label').textContent = link.label;
       el.addEventListener('click', () => this.onNavigate(link));
       this.layer.appendChild(el);
-      return { el, link, pos: dirFromYawPitch(link.yaw, link.pitch).multiplyScalar(10) };
+      // no mesmo pavimento a seta fica pousada no chão, a meio caminho (até 4 m)
+      const pos = link.distance
+        ? dirFromYawPitch(link.yaw, 0).multiplyScalar(Math.min(4, Math.max(1.8, link.distance / 2))).setY(-(link.eye ?? 1.6) + 0.05)
+        : dirFromYawPitch(link.yaw, link.pitch).multiplyScalar(10);
+      return { el, link, pos };
     });
   }
 

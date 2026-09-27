@@ -62,6 +62,7 @@ async function goTo(sceneId, { via, view, force } = {}) {
     current = built;
 
     viewer.setContent(built.group);
+    viewer.setEnvironment(built.environment);
     viewer.setView(nextView(previous, built, via, view));
     hotspots.setLinks(built.links);
     const tour = await loader.tour();

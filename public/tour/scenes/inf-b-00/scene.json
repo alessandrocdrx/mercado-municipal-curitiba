@@ -7,26 +7,10 @@
     "z": 1.6
   },
   "northYaw": 0,
-  "moduleRadius": 14,
+  "moduleRadius": 28,
   "base": {
     "type": "cube",
-    "placeholder": {
-      "color": "#3a3d42"
-    },
-    "faces": {
-      "down": {
-        "placeholder": {
-          "color": "#c9b43a",
-          "label": "Piso · Corredor B (amarelo) · 1"
-        }
-      },
-      "up": {
-        "placeholder": {
-          "color": "#55595f",
-          "label": "Teto (aguardando foto)"
-        }
-      }
-    }
+    "faces": {}
   },
   "links": [
     {

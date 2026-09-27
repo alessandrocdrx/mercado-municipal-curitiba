@@ -13,8 +13,11 @@ npm run validate   # confere links, módulos e arquivos de mídia
 npm run build      # gera o site estático em dist/ (pode ir para qualquer hospedagem)
 ```
 
-As fotos 360° ainda não existem: cada ponto usa uma imagem provisória com a cor
-do corredor no piso, até que as fotos reais sejam adicionadas.
+As fotos 360° ainda não existem. Enquanto um ponto não tiver foto, o app monta
+uma **maquete 3D** a partir da planta: o chão é a própria planta (corredores A
+azul, B amarelo e C verde), há teto, e cada box vira um volume com fachada e
+letreiro (nome e ramo). Bancas aparecem como balcões baixos. Quando a foto 360°
+de um ponto for adicionada em `base`, aquele ponto passa a mostrar a foto.
 
 ## Planta real (já aplicada)
 

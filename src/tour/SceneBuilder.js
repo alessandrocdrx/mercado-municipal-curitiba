@@ -3,7 +3,7 @@
 
 import * as THREE from 'three';
 import { DEG, bearing, wrapDeg } from '../core/geo.js';
-import { textureFor } from '../core/textures.js';
+import { textureFor, ceilingTexture } from '../core/textures.js';
 import { applyPlacement, isWorldPlacement } from './placement.js';
 
 const BASE_RADIUS = 1000;
@@ -19,10 +19,20 @@ export async function buildScene(loader, sceneId) {
   const group = new THREE.Group();
   group.name = `scene:${scene.id}`;
 
-  group.add(await buildBase(scene));
+  // Sem foto 360° no ponto, o app monta uma maquete 3D a partir da planta:
+  // chão com a planta (corredores coloridos), teto, boxes em volume.
+  const model = !hasPhoto(scene.base);
+  let environment = { background: '#111111' };
+  if (model) {
+    const tour = await loader.tour();
+    const floor = tour.floors?.find((f) => f.id === scene.floor);
+    environment = await buildModel(group, scene, floor, loader.tourUrl);
+  } else {
+    group.add(await buildBase(scene));
+  }
 
   const layers = collectLayers(scene, modules);
-  const meshes = await Promise.all(layers.map(({ module, placement }) => buildModuleMesh(module, placement, scene)));
+  const meshes = await Promise.all(layers.map(({ module, placement }) => buildModuleMesh(module, placement, scene, model)));
   meshes.forEach((m) => group.add(m));
 
   return {
@@ -31,9 +41,57 @@ export async function buildScene(loader, sceneId) {
     modules,
     group,
     meshes,
+    environment,
     links: resolveLinks(scene, scenes),
     dispose: () => disposeGroup(group),
   };
+}
+
+// ---------------------------------------------------------------- maquete
+
+export function hasPhoto(base) {
+  if (!base) return false;
+  if (base.type === 'equirect') return Boolean(base.src);
+  return Object.values(base.faces ?? {}).some((f) => typeof f === 'string' || f?.src);
+}
+
+const CEILING_HEIGHT = 5.5;
+
+async function buildModel(group, scene, floor, tourUrl) {
+  // luz para os volumes dos boxes terem faces com tons diferentes
+  group.add(new THREE.AmbientLight('#ffffff', 1.6));
+  const sun = new THREE.DirectionalLight('#ffffff', 1.4);
+  sun.position.set(0.4, 1, 0.25);
+  group.add(sun);
+
+  const cam = scene.position ?? { x: 0, y: 0 };
+  if (floor?.plan) {
+    // chão = foto da planta, na escala e posição da própria planta
+    const tex = await textureFor({ src: floor.plan.src }, { baseUrl: tourUrl });
+    const mat = new THREE.MeshBasicMaterial({ map: tex, color: '#d8d8d8' });
+    const plane = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), mat);
+    plane.name = 'piso-planta';
+    applyPlacement(plane, {
+      x: floor.plan.width / 2, y: -floor.plan.height / 2, z: 0,
+      width: floor.plan.width, height: floor.plan.height, facing: 0, surface: 'floor',
+    }, scene);
+    group.add(plane);
+  }
+  // piso neutro em volta, para não haver "buraco" fora da planta
+  const ground = new THREE.Mesh(new THREE.PlaneGeometry(400, 400), new THREE.MeshBasicMaterial({ color: '#9a978f' }));
+  ground.rotation.x = -Math.PI / 2;
+  ground.position.y = -(cam.z ?? 1.6) - 0.02;
+  group.add(ground);
+
+  const ceilTex = ceilingTexture();
+  ceilTex.repeat.set(400 / 6, 400 / 6);
+  const ceiling = new THREE.Mesh(new THREE.PlaneGeometry(400, 400), new THREE.MeshBasicMaterial({ map: ceilTex }));
+  ceiling.rotation.x = Math.PI / 2;
+  ceiling.position.y = CEILING_HEIGHT - (cam.z ?? 1.6);
+  ceiling.name = 'teto';
+  group.add(ceiling);
+
+  return { background: '#d9d6cf', fog: { color: '#d9d6cf', near: 10, far: 42 } };
 }
 
 // ---------------------------------------------------------------- base
@@ -138,10 +196,18 @@ function inlineModule(layer) {
   return { id: layer.id ?? `inline-${Math.random().toString(36).slice(2, 8)}`, title: layer.title, media: layer.media, info: layer.info, inline: true };
 }
 
-async function buildModuleMesh(module, placement, scene) {
+const BODY_DEPTH = { box: 2.2, banca: 1.0 };
+
+async function buildModuleMesh(module, placement, scene, model = false) {
   const aspect = (placement.width ?? 1) / (placement.height ?? 1);
   const baseUrl = module.inline ? scene._baseUrl : module._baseUrl;
-  const media = module.media ?? {};
+  let media = module.media ?? {};
+  const kind = module.type === 'porta' ? 'porta' : module.type === 'banca' ? 'banca' : 'box';
+  if (model && !media.src && ['box', 'banca', 'porta'].includes(module.type)) {
+    // fachada com letreiro em vez da placa provisória
+    const known = !String(media.placeholder?.sublabel ?? '').includes('não identificado');
+    media = { ...media, placeholder: { ...media.placeholder, style: kind, known } };
+  }
   const tex = await textureFor(media, {
     baseUrl, version: module.version, aspect, fallbackLabel: module.title ?? module.id, resolution: 256,
   });
@@ -156,6 +222,17 @@ async function buildModuleMesh(module, placement, scene) {
   mesh.name = `module:${module.id}`;
   mesh.renderOrder = placement.order ?? 1;
   mesh.userData = { pickable: true, module, placement, anchor: isWorldPlacement(placement) ? 'world' : 'view' };
+  if (model && BODY_DEPTH[kind] && isWorldPlacement(placement) && (placement.surface ?? 'wall') === 'wall') {
+    // volume da loja atrás da fachada (filho do plano: herda posição e largura/altura)
+    const depth = BODY_DEPTH[kind];
+    const body = new THREE.Mesh(
+      new THREE.BoxGeometry(1, 1, depth),
+      new THREE.MeshLambertMaterial({ color: kind === 'banca' ? '#cfc6b4' : '#ddd6c8' }),
+    );
+    body.position.z = -depth / 2 - 0.005;
+    body.name = 'volume';
+    mesh.add(body);
+  }
   applyPlacement(mesh, placement, scene);
   return mesh;
 }
@@ -172,13 +249,16 @@ function resolveLinks(scene, scenes) {
     if (yaw === undefined && sameFloor && scene.position && target?.position) {
       yaw = wrapDeg((scene.northYaw ?? 0) + bearing(scene.position, target.position));
     }
-    return { pitch: -25, ...link, yaw: yaw ?? 0, label: link.label ?? target?.title ?? link.to };
+    const distance = sameFloor && scene.position && target?.position
+      ? Math.hypot(target.position.x - scene.position.x, target.position.y - scene.position.y) : undefined;
+    return { pitch: -25, ...link, yaw: yaw ?? 0, distance, eye: scene.position?.z ?? 1.6, label: link.label ?? target?.title ?? link.to };
   });
 }
 
 function disposeGroup(group) {
   group.traverse((obj) => {
     if (!obj.isMesh) return;
+    if (Array.isArray(obj.material)) return;
     obj.geometry.dispose();
     // Texturas de arquivo ficam no cache (textures.js); só as geradas morrem aqui.
     if (obj.material.map?.isCanvasTexture) obj.material.map.dispose();

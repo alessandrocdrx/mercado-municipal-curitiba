@@ -47,6 +47,12 @@ export class Viewer extends EventTarget {
     this.scene.add(group);
   }
 
+  /** Cor de fundo e neblina (a maquete usa neblina para dar profundidade). */
+  setEnvironment({ background = '#111111', fog } = {}) {
+    this.scene.background = new THREE.Color(background);
+    this.scene.fog = fog ? new THREE.Fog(fog.color, fog.near, fog.far) : null;
+  }
+
   onFrame(fn) {
     this._frameHooks.add(fn);
     return () => this._frameHooks.delete(fn);

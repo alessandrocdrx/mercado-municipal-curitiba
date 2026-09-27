@@ -5,9 +5,9 @@
     "floor": "inferior",
     "x": 56.22,
     "y": -39.3,
-    "z": 1,
+    "z": 0.6,
     "width": 1.21,
-    "height": 2,
+    "height": 1.2,
     "facing": 270,
     "surface": "wall"
   },
