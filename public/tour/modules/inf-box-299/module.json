@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 299",
+  "title": "Temperamento",
   "placement": {
     "floor": "inferior",
     "x": 13.88,
@@ -13,14 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(291, 30%, 38%)",
-      "label": "Box 299",
-      "sublabel": "Pavimento inferior"
+      "color": "#7a4a24",
+      "label": "Temperamento",
+      "sublabel": "Cereais e especiarias · Box 299"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+    "category": "Cereais e especiarias",
+    "location": "Pavimento inferior · Box 299, 301",
+    "phone": "(41) 3030-2728 · WhatsApp (41) 99827-1827",
+    "description": "Especiarias, molhos, azeites, pimentas, sais e utensílios culinários.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/temperamento/",
+    "note": "Dados do diretório de comerciantes do site oficial; confirme no local."
   },
-  "generated": true
+  "generated": true,
+  "autoHash": "b620b9c54080"
 }

@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 74",
+  "title": "Vô Milano Cachaçaria",
   "placement": {
     "floor": "inferior",
     "x": 89.1,
@@ -13,14 +13,18 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(204, 30%, 38%)",
-      "label": "Box 74",
-      "sublabel": "Pavimento inferior"
+      "color": "#5b2e63",
+      "label": "Vô Milano Cachaçaria",
+      "sublabel": "Bebidas · Box 74"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+    "category": "Bebidas",
+    "location": "Pavimento inferior · Box 73, 74",
+    "description": "Única loja de Curitiba 100% especializada em cachaça, com mais de 400 rótulos.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/vo-milano-cachacaria/",
+    "note": "A Mercearia Sansei também aparece no Box 73 em outra página; confirmar. Dados do diretório de comerciantes do site oficial; confirme no local."
   },
-  "generated": true
+  "generated": true,
+  "autoHash": "8de58761e05f"
 }

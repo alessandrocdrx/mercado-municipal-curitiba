@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 518",
+  "title": "The Bootlegger's",
   "placement": {
     "floor": "superior",
     "x": 77,
@@ -13,14 +13,16 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(45, 30%, 38%)",
-      "label": "Box 518",
-      "sublabel": "Pavimento superior"
+      "color": "#5b2e63",
+      "label": "The Bootlegger's",
+      "sublabel": "Bebidas · Box 518"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+    "category": "Bebidas",
+    "location": "Pavimento superior · Box 518",
+    "note": "Fonte do box: resumo de busca do diretório oficial; categoria não confirmada. Dados do diretório de comerciantes do site oficial; confirme no local."
   },
-  "generated": true
+  "generated": true,
+  "autoHash": "fb179af8441e"
 }

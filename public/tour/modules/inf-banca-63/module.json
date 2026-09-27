@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 63",
+  "title": "Banca 63 Produtos Coloniais",
   "placement": {
     "floor": "inferior",
     "x": 70.44,
@@ -13,14 +13,18 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(172, 35%, 30%)",
-      "label": "Banca 63",
-      "sublabel": "Pavimento inferior"
+      "color": "#9a6b1f",
+      "label": "Banca 63 Produtos Coloniais",
+      "sublabel": "Empório e mercearia · Banca 63"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Banca 63",
+    "description": "Produtos coloniais: conservas, queijos, salames, doces.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-63-produtos-coloniais/",
+    "note": "Dados do diretório de comerciantes do site oficial; confirme no local."
   },
-  "generated": true
+  "generated": true,
+  "autoHash": "db5918788e0f"
 }

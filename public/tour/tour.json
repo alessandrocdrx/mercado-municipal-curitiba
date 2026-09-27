@@ -477,5 +477,624 @@
     "sup-porta-b",
     "sup-porta-c",
     "sup-porta-d"
+  ],
+  "directory": [
+    {
+      "name": "Casa de Carnes Pé de Boi",
+      "category": "Açougue",
+      "modules": [
+        "inf-box-02",
+        "inf-box-03"
+      ],
+      "boxes": "02, 03",
+      "onPlan": true,
+      "phone": "(41) 3264-4890",
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/casa-de-carnes-pe-de-boi/",
+      "description": "Carnes bovina, suína e de aves, carnes exóticas e ingredientes para feijoada, desde 1963."
+    },
+    {
+      "name": "Espaço Angus Prime",
+      "category": "Açougue",
+      "modules": [
+        "inf-box-06",
+        "inf-box-07"
+      ],
+      "boxes": "06, 07",
+      "onPlan": true,
+      "phone": "(41) 3264-4163 · delivery (41) 99642-9398",
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/espaco-angus-prime/",
+      "description": "Boutique de carnes 100% Angus e carnes exóticas."
+    },
+    {
+      "name": "Peixaria Keli Mozer",
+      "category": "Peixaria",
+      "modules": [
+        "inf-box-10"
+      ],
+      "boxes": "10",
+      "onPlan": true,
+      "phone": "(41) 3264-1523 · (41) 99566-7702",
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/peixaria-keli-mozer/",
+      "description": "Pescados e frutos do mar, com estrutura totalmente reformada."
+    },
+    {
+      "name": "Box do Eliseu",
+      "category": "Lanchonete e restaurante",
+      "modules": [
+        "inf-box-12",
+        "inf-box-13"
+      ],
+      "boxes": "12, 13",
+      "onPlan": true,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/box-do-eliseu/",
+      "description": "Há 39 anos no Mercado: comida caseira, pastéis, sanduíches, sucos e café. Famoso pela almôndega de carne."
+    },
+    {
+      "name": "Adega Municipal",
+      "category": "Bebidas",
+      "modules": [
+        "inf-box-15"
+      ],
+      "boxes": "15",
+      "onPlan": true,
+      "phone": "(41) 3039-1984 · (41) 98870-1977",
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/adega-municipal/",
+      "description": "Vinhos, espumantes, whisky, conhaque e licores."
+    },
+    {
+      "name": "Peixaria São José",
+      "category": "Peixaria",
+      "modules": [
+        "inf-box-21",
+        "inf-box-22"
+      ],
+      "boxes": "21, 22",
+      "onPlan": true,
+      "phone": "(41) 3264-1462 · (41) 99870-8373",
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/peixaria-sao-jose/",
+      "description": "Lagosta, lagostim, polvo, lula, mariscos e peixes variados. Faz entregas."
+    },
+    {
+      "name": "Armazém da Zelma",
+      "category": "Cereais e especiarias",
+      "modules": [
+        "inf-box-28",
+        "inf-box-29",
+        "inf-box-30"
+      ],
+      "boxes": "28, 29, 30",
+      "onPlan": true,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/armazem-da-zelma/",
+      "description": "No Mercado desde 1º de novembro de 1960: azeites, bacalhau, castanhas, frutas secas, especiarias, conservas e cereais."
+    },
+    {
+      "name": "Mercearia MMM",
+      "category": "Empório e mercearia",
+      "modules": [
+        "inf-box-37",
+        "inf-box-38"
+      ],
+      "boxes": "37, 38",
+      "onPlan": true
+    },
+    {
+      "name": "Box 41 Vinhos",
+      "category": "Bebidas",
+      "modules": [
+        "inf-box-41"
+      ],
+      "boxes": "41",
+      "onPlan": true,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/box-41-vinhos/",
+      "description": "Especialista em vinhos, com mais de 1.100 rótulos."
+    },
+    {
+      "name": "Armazém Becker",
+      "category": "Cereais e especiarias",
+      "modules": [
+        "inf-box-47",
+        "inf-box-48"
+      ],
+      "boxes": "47, 48",
+      "onPlan": true,
+      "phone": "(41) 3263-4565 · WhatsApp (41) 99215-5300",
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/armazem-becker/",
+      "description": "Há 32 anos: frutas secas, cereais, farinhas e especiarias."
+    },
+    {
+      "name": "Conversic",
+      "category": "Empório e mercearia",
+      "modules": [
+        "inf-box-54",
+        "inf-box-55"
+      ],
+      "boxes": "54, 55",
+      "onPlan": true,
+      "phone": "(41) 3022-0802 · WhatsApp (41) 99976-3741",
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/conversic/",
+      "description": "Há mais de 30 anos com produtos portugueses."
+    },
+    {
+      "name": "Vô Milano Cachaçaria",
+      "category": "Bebidas",
+      "modules": [
+        "inf-box-73",
+        "inf-box-74"
+      ],
+      "boxes": "73, 74",
+      "onPlan": true,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/vo-milano-cachacaria/",
+      "description": "Única loja de Curitiba 100% especializada em cachaça, com mais de 400 rótulos."
+    },
+    {
+      "name": "Flora Cristiane",
+      "category": "Flores e plantas",
+      "modules": [
+        "inf-box-77",
+        "inf-box-79",
+        "inf-box-80"
+      ],
+      "boxes": "77, 79, 80",
+      "onPlan": true,
+      "phone": "(41) 3264-2324 · (41) 98845-0161",
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/flora-cristiane/",
+      "description": "Floricultura fundada em 5 de agosto de 1966: árvores frutíferas e ornamentais, sementes e plantas."
+    },
+    {
+      "name": "Box do Ademir",
+      "category": "Hortifrúti",
+      "modules": [
+        "inf-box-358"
+      ],
+      "boxes": "358",
+      "onPlan": true,
+      "phone": "(41) 3262-9414 · WhatsApp (41) 99528-7690 / 99962-4073",
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/box-do-ademir/"
+    },
+    {
+      "name": "Empório do Sabor",
+      "category": "Cereais e especiarias",
+      "modules": [
+        "inf-box-372"
+      ],
+      "boxes": "372",
+      "onPlan": true,
+      "phone": "(41) 3264-1543",
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-do-sabor/",
+      "description": "Há 17 anos: especiarias, condimentos, cereais, conservas, frutas secas e importados."
+    },
+    {
+      "name": "Temperamento",
+      "category": "Cereais e especiarias",
+      "modules": [
+        "inf-box-299",
+        "inf-box-301"
+      ],
+      "boxes": "299, 301",
+      "onPlan": true,
+      "phone": "(41) 3030-2728 · WhatsApp (41) 99827-1827",
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/temperamento/",
+      "description": "Especiarias, molhos, azeites, pimentas, sais e utensílios culinários."
+    },
+    {
+      "name": "Furuta Cereais",
+      "category": "Cereais e especiarias",
+      "modules": [
+        "inf-box-429",
+        "inf-box-430",
+        "inf-box-431",
+        "inf-box-432"
+      ],
+      "boxes": "429, 430, 431, 432",
+      "onPlan": true,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/furuta-cereais/"
+    },
+    {
+      "name": "Daimaru Bebidas",
+      "category": "Bebidas",
+      "modules": [
+        "inf-box-433",
+        "inf-box-434"
+      ],
+      "boxes": "433, 434",
+      "onPlan": true,
+      "phone": "(41) 3363-8275",
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/daimaru-bebidas/",
+      "description": "Cachaças, vinhos nacionais e importados, licores, xaropes e destilados."
+    },
+    {
+      "name": "Empório Kaveh Kanes",
+      "category": "Empório e mercearia",
+      "modules": [
+        "inf-box-456",
+        "inf-box-457"
+      ],
+      "boxes": "456, 457",
+      "onPlan": true,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-kaveh-kanes/"
+    },
+    {
+      "name": "Urbano 52 CWB",
+      "category": "Hortifrúti",
+      "modules": [
+        "inf-banca-52"
+      ],
+      "boxes": "52",
+      "onPlan": true,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/urbano-52-cwb/",
+      "description": "Frutas e verduras."
+    },
+    {
+      "name": "Banca 63 Produtos Coloniais",
+      "category": "Empório e mercearia",
+      "modules": [
+        "inf-banca-63"
+      ],
+      "boxes": "63",
+      "onPlan": true,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-63-produtos-coloniais/",
+      "description": "Produtos coloniais: conservas, queijos, salames, doces."
+    },
+    {
+      "name": "SN Frutas e Verduras",
+      "category": "Hortifrúti",
+      "modules": [
+        "inf-banca-86"
+      ],
+      "boxes": "86",
+      "onPlan": true,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/sn-frutas-e-verduras/",
+      "description": "Há 30 anos no Mercado: folhas, frutas, verduras, legumes e cogumelos."
+    },
+    {
+      "name": "The Bootlegger's",
+      "category": "Bebidas",
+      "modules": [
+        "sup-box-518"
+      ],
+      "boxes": "518",
+      "onPlan": true
+    },
+    {
+      "name": "Miranda's Mercearia",
+      "category": "Empório e mercearia",
+      "boxes": "189",
+      "onPlan": false,
+      "phone": "(41) 99700-4977",
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/mirandas-mercearia/",
+      "description": "Produtos paranaenses: chocolates artesanais, doces e cafés."
+    },
+    {
+      "name": "Maia Box Sanduicheria",
+      "category": "Lanchonete e restaurante",
+      "boxes": "194",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/maia-box-sanduicheria/",
+      "description": "Desde 2000, famosa pelo sanduíche de mortadela."
+    },
+    {
+      "name": "Restaurante Ohana",
+      "category": "Lanchonete e restaurante",
+      "boxes": "201",
+      "onPlan": false
+    },
+    {
+      "name": "Ninki Pastéis & Delícias",
+      "category": "Lanchonete e restaurante",
+      "boxes": "205",
+      "onPlan": false,
+      "phone": "(41) 99179-1197 · (41) 99663-2026",
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/ninki-pasteis-delicias/",
+      "description": "Há 25 anos: pastéis, bolinhos artesanais e bebidas."
+    },
+    {
+      "name": "Casabianco Empório Gourmet",
+      "category": "Empório e mercearia",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-gourmet/"
+    },
+    {
+      "name": "Domo Empório Gourmet",
+      "category": "Empório e mercearia",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-curitibano/",
+      "description": "Queijos, frios, vinhos, espumantes, destilados e mercearia."
+    },
+    {
+      "name": "Empório Barion",
+      "category": "Empório e mercearia",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-barion/",
+      "description": "Ingredientes diferenciados e queijos nacionais e importados."
+    },
+    {
+      "name": "Empório Bon Appétit",
+      "category": "Empório e mercearia",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-bon-appetit/",
+      "description": "Frios, queijos, azeitonas, bacalhau, azeites, massas e frutas secas."
+    },
+    {
+      "name": "Empório Metropolitano",
+      "category": "Empório e mercearia",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-metropolitano/"
+    },
+    {
+      "name": "Empório 56",
+      "category": "Empório e mercearia",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-56-2/"
+    },
+    {
+      "name": "Empório Top Mix",
+      "category": "Doces e chocolates",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-top-mix/",
+      "description": "Desde 2011: chocolates, doces e itens gourmet."
+    },
+    {
+      "name": "A Faca e o Queijo",
+      "category": "Empório e mercearia",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/mercearia-imperial/",
+      "description": "Queijos, bacalhau, azeitonas, azeites, castanhas e nozes."
+    },
+    {
+      "name": "Bon Vivant",
+      "category": "Empório e mercearia",
+      "onPlan": false,
+      "phone": "(41) 99673-7753",
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/bon-vivant/",
+      "description": "Queijos do mundo todo."
+    },
+    {
+      "name": "Mercearia Sansei",
+      "category": "Empório e mercearia",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/mercearia-sansei/",
+      "description": "Produtos da culinária oriental e doces típicos."
+    },
+    {
+      "name": "Mafo Com. de Alimentos",
+      "category": "Empório e mercearia",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/mafo-com-de-alimentos/"
+    },
+    {
+      "name": "Cereais e Especiarias Sissi",
+      "category": "Cereais e especiarias",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cereais-e-especiarias-sissi/",
+      "description": "Azeites, especiarias e conservas nacionais e importados."
+    },
+    {
+      "name": "Cereais Mistura Fina",
+      "category": "Cereais e especiarias",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cereais-mistura-fina/",
+      "description": "Frutas desidratadas, castanhas torradas, cereais e especiarias."
+    },
+    {
+      "name": "Cia. do Tempero",
+      "category": "Cereais e especiarias",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cia-do-tempero/"
+    },
+    {
+      "name": "Celeiro Municipal",
+      "category": "Cereais e especiarias",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/celeiro-municipal/"
+    },
+    {
+      "name": "DAP Boutique de Carnes",
+      "category": "Açougue",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/dap-boutique-de-carnes/",
+      "description": "Carnes exóticas: cordeiro, coelho, pato, jacaré, rã, codorna."
+    },
+    {
+      "name": "Nippon Boutique",
+      "category": "Açougue",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/nippon-boutique/"
+    },
+    {
+      "name": "Lá de Minas",
+      "category": "Empório e mercearia",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/la-de-minas/"
+    },
+    {
+      "name": "Peixaria Santa Clara",
+      "category": "Peixaria",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/peixaria-santa-clara-eireli/",
+      "description": "Peixes frescos, filés, camarão, lagosta e crustáceos importados."
+    },
+    {
+      "name": "Banca da Júlia",
+      "category": "Hortifrúti",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-da-julia/",
+      "description": "Frutas e verduras nacionais e importadas, sem agrotóxicos, com entrega."
+    },
+    {
+      "name": "Banca do Mário",
+      "category": "Hortifrúti",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-do-mario/"
+    },
+    {
+      "name": "Banca do Zé Mario",
+      "category": "Hortifrúti",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-do-ze-mario/"
+    },
+    {
+      "name": "Banca da Maria",
+      "category": "Hortifrúti",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-da-maria/",
+      "description": "Há 10 anos no hortifrúti do Mercado."
+    },
+    {
+      "name": "Banca do Hiro",
+      "category": "Hortifrúti",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-do-hiro/"
+    },
+    {
+      "name": "Banca do Adalto",
+      "category": "Hortifrúti",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-do-adalto/",
+      "description": "Frutas e verduras frescas com entrega."
+    },
+    {
+      "name": "Yamasaki Verduras",
+      "category": "Hortifrúti",
+      "onPlan": false,
+      "phone": "(41) 3264-4533 · (41) 99937-6822",
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/yamasaki-verduras-2/",
+      "description": "Há 40 anos no hortifrúti do Mercado."
+    },
+    {
+      "name": "Oliveiras Hortifruti",
+      "category": "Hortifrúti",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/oliveiras-hortifruti/"
+    },
+    {
+      "name": "Dinho Wine and Spirits",
+      "category": "Bebidas",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/dinho-wine-and-spirits/"
+    },
+    {
+      "name": "Adega Brasil",
+      "category": "Bebidas",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/adega-brasil/"
+    },
+    {
+      "name": "Restaurante Box Curitiba",
+      "category": "Lanchonete e restaurante",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/restaurante-box-curitiba/",
+      "description": "Massas, risotos e saladas."
+    },
+    {
+      "name": "Restaurante Takê",
+      "category": "Lanchonete e restaurante",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/restaurante-take/",
+      "description": "Comida japonesa por quilo."
+    },
+    {
+      "name": "Restaurante Anarco",
+      "category": "Lanchonete e restaurante",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/restaurante-anarco/",
+      "description": "Gastronomia italiana, temperos e vinhos."
+    },
+    {
+      "name": "Café do Jorge e da Aurea",
+      "category": "Lanchonete e restaurante",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cafe-do-jorge-e-da-aurea/"
+    },
+    {
+      "name": "Café do Mercado",
+      "category": "Lanchonete e restaurante",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cafe-do-mercado/"
+    },
+    {
+      "name": "Confeitaria Colônia Cecília",
+      "category": "Doces e chocolates",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/confeitaria-colonia-cecilia/",
+      "description": "Café colonial aos domingos e bolos por encomenda."
+    },
+    {
+      "name": "D'Fuhrmann Chocolates",
+      "category": "Doces e chocolates",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/dfuhrmann-chocolates/"
+    },
+    {
+      "name": "ICAB Chocolates",
+      "category": "Doces e chocolates",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/icab-chocolates/",
+      "description": "Fundada em 1930."
+    },
+    {
+      "name": "Casa da Bolacha Caseira",
+      "category": "Doces e chocolates",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/casa-da-bolacha-caseira/"
+    },
+    {
+      "name": "Taurino's Organic",
+      "category": "Orgânicos",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/taurinos-organic/",
+      "description": "Primeiro açougue orgânico certificado do Brasil, no setor de orgânicos desde 2009."
+    },
+    {
+      "name": "Nico's Empório Orgânico",
+      "category": "Orgânicos",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/nicos-emporio-organico/"
+    },
+    {
+      "name": "Espaço Orgânico",
+      "category": "Orgânicos",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/espaco-organico/"
+    },
+    {
+      "name": "Organique Essentiel",
+      "category": "Orgânicos",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/organique-essentiel/"
+    },
+    {
+      "name": "Cativa Natureza",
+      "category": "Orgânicos",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cativa-natureza/",
+      "description": "Cosméticos com insumos orgânicos rastreados, desde 2008."
+    },
+    {
+      "name": "Couve & Flor",
+      "category": "Orgânicos",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/couve-flor/"
+    },
+    {
+      "name": "Rei do Kão",
+      "category": "Pet shop",
+      "onPlan": false,
+      "phone": "(41) 3262-7136",
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/rei-do-kao/",
+      "description": "Único pet shop do Mercado."
+    },
+    {
+      "name": "Planeta Aquários",
+      "category": "Pet shop",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/planeta-aquarios/"
+    },
+    {
+      "name": "Box's Celulares",
+      "category": "Serviços",
+      "onPlan": false,
+      "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/boxs-celulares-ltda/",
+      "description": "Assistência técnica de celulares e acessórios, desde 2005."
+    }
   ]
 }

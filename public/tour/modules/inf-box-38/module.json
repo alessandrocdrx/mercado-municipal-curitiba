@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 38",
+  "title": "Mercearia MMM",
   "placement": {
     "floor": "inferior",
     "x": 44.03,
@@ -13,14 +13,16 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(84, 30%, 38%)",
-      "label": "Box 38",
-      "sublabel": "Pavimento inferior"
+      "color": "#9a6b1f",
+      "label": "Mercearia MMM",
+      "sublabel": "Empório e mercearia · Box 38"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Box 37, 38",
+    "note": "Fonte do box: resumo de busca do diretório oficial; página própria não localizada. Dados do diretório de comerciantes do site oficial; confirme no local."
   },
-  "generated": true
+  "generated": true,
+  "autoHash": "b9a6611f04b8"
 }

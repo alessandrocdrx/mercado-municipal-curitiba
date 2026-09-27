@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 41",
+  "title": "Box 41 Vinhos",
   "placement": {
     "floor": "inferior",
     "x": 36.98,
@@ -13,14 +13,18 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(108, 30%, 38%)",
-      "label": "Box 41",
-      "sublabel": "Pavimento inferior"
+      "color": "#5b2e63",
+      "label": "Box 41 Vinhos",
+      "sublabel": "Bebidas · Box 41"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+    "category": "Bebidas",
+    "location": "Pavimento inferior · Box 41",
+    "description": "Especialista em vinhos, com mais de 1.100 rótulos.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/box-41-vinhos/",
+    "note": "Dados do diretório de comerciantes do site oficial; confirme no local."
   },
-  "generated": true
+  "generated": true,
+  "autoHash": "9f2805781d58"
 }

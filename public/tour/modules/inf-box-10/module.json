@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 10",
+  "title": "Peixaria Keli Mozer",
   "placement": {
     "floor": "inferior",
     "x": 90.84,
@@ -13,14 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(14, 30%, 38%)",
-      "label": "Box 10",
-      "sublabel": "Pavimento inferior"
+      "color": "#23577f",
+      "label": "Peixaria Keli Mozer",
+      "sublabel": "Peixaria · Box 10"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+    "category": "Peixaria",
+    "location": "Pavimento inferior · Box 10",
+    "phone": "(41) 3264-1523 · (41) 99566-7702",
+    "description": "Pescados e frutos do mar, com estrutura totalmente reformada.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/peixaria-keli-mozer/",
+    "note": "Dados do diretório de comerciantes do site oficial; confirme no local."
   },
-  "generated": true
+  "generated": true,
+  "autoHash": "6a6a746d9e3e"
 }

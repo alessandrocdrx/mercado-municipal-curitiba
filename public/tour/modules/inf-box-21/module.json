@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 21",
+  "title": "Peixaria São José",
   "placement": {
     "floor": "inferior",
     "x": 88.8,
@@ -13,14 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(46, 30%, 38%)",
-      "label": "Box 21",
-      "sublabel": "Pavimento inferior"
+      "color": "#23577f",
+      "label": "Peixaria São José",
+      "sublabel": "Peixaria · Box 21"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+    "category": "Peixaria",
+    "location": "Pavimento inferior · Box 21, 22",
+    "phone": "(41) 3264-1462 · (41) 99870-8373",
+    "description": "Lagosta, lagostim, polvo, lula, mariscos e peixes variados. Faz entregas.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/peixaria-sao-jose/",
+    "note": "Dados do diretório de comerciantes do site oficial; confirme no local."
   },
-  "generated": true
+  "generated": true,
+  "autoHash": "74ef8a20a197"
 }

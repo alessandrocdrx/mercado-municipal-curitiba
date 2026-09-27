@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 457",
+  "title": "Empório Kaveh Kanes",
   "placement": {
     "floor": "inferior",
     "x": 114.15,
@@ -13,14 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(287, 30%, 38%)",
-      "label": "Box 457",
-      "sublabel": "Pavimento inferior"
+      "color": "#9a6b1f",
+      "label": "Empório Kaveh Kanes",
+      "sublabel": "Empório e mercearia · Box 457"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Box 456, 457",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-kaveh-kanes/",
+    "note": "Dados do diretório de comerciantes do site oficial; confirme no local."
   },
-  "generated": true
+  "generated": true,
+  "autoHash": "bea3260b82c9"
 }

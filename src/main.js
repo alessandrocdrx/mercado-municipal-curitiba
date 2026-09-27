@@ -8,6 +8,8 @@ import { Hotspots } from './ui/Hotspots.js';
 import { InfoPanel } from './ui/InfoPanel.js';
 import { Minimap } from './ui/Minimap.js';
 import { Editor } from './ui/Editor.js';
+import { Directory } from './ui/Directory.js';
+import { bearing } from './core/geo.js';
 
 const app = document.getElementById('app');
 const stage = app.querySelector('.stage');
@@ -24,6 +26,7 @@ const minimap = new Minimap(app, {
   onFloor: (floor) => goTo(floor.startScene),
 });
 const editor = new Editor(viewer, app);
+const directory = new Directory(app, { onGo: (moduleId) => showModule(moduleId) });
 editor.onReload = () => reload();
 
 let current = null;
@@ -46,8 +49,12 @@ window.addEventListener('hashchange', () => {
   if (scene && scene !== current?.scene.id) goTo(scene, { view: readHash() });
 });
 
-async function goTo(sceneId, { via, view } = {}) {
+async function goTo(sceneId, { via, view, force } = {}) {
   if (navigating) return navigating;
+  if (force && sceneId === current?.scene.id) {
+    viewer.setView(view);
+    return;
+  }
   navigating = (async () => {
     fader.classList.add('on');
     const [built] = await Promise.all([buildScene(loader, sceneId), wait(200)]);
@@ -89,6 +96,21 @@ function nextView(previous, built, via, view) {
     return { yaw: wrapDeg(heading + (built.scene.northYaw ?? 0)), pitch: 0 };
   }
   return { yaw: 0, pitch: 0, fov: 75, ...built.scene.initialView };
+}
+
+/** Vai até o ponto de vista mais próximo de um módulo e olha para ele. */
+async function showModule(moduleId) {
+  const [mod, scenes] = await Promise.all([loader.module(moduleId), loader.allScenes()]);
+  const p = mod.placement;
+  const candidates = scenes.filter((s) => s.position && (s.floor ?? null) === (p.floor ?? null));
+  // o ponto precisa estar na frente do box (o lado para onde ele está virado)
+  const inFront = (s) => Math.cos((bearing(p, s.position) - (p.facing ?? 0)) * Math.PI / 180) > 0.2;
+  const dist = (s) => Math.hypot(s.position.x - p.x, s.position.y - p.y);
+  const best = [...candidates].sort((a, b) => (inFront(b) - inFront(a)) || dist(a) - dist(b))[0];
+  if (!best) return;
+  const yaw = wrapDeg((best.northYaw ?? 0) + bearing(best.position, p));
+  await goTo(best.id, { view: { yaw, pitch: -3, fov: 65 }, force: true });
+  info.show(mod);
 }
 
 async function reload() {
@@ -137,4 +159,6 @@ function wait(ms) {
 const start = readHash();
 const tour = await loader.tour();
 app.querySelector('.about').addEventListener('click', () => info.show({ title: tour.title, type: 'Sobre', info: tour.info }));
+directory.setItems(tour.directory);
+app.querySelector('.open-directory').addEventListener('click', () => directory.toggle());
 goTo(start.scene ?? tour.startScene, { view: start.scene ? start : undefined });

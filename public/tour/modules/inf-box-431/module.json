@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 431",
+  "title": "Furuta Cereais",
   "placement": {
     "floor": "inferior",
     "x": 35.52,
@@ -13,14 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(219, 30%, 38%)",
-      "label": "Box 431",
-      "sublabel": "Pavimento inferior"
+      "color": "#7a4a24",
+      "label": "Furuta Cereais",
+      "sublabel": "Cereais e especiarias · Box 431"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+    "category": "Cereais e especiarias",
+    "location": "Pavimento inferior · Box 429, 430, 431, 432",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/furuta-cereais/",
+    "note": "Dados do diretório de comerciantes do site oficial; confirme no local."
   },
-  "generated": true
+  "generated": true,
+  "autoHash": "b1cba108deed"
 }

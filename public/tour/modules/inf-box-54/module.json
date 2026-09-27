@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 54",
+  "title": "Conversic",
   "placement": {
     "floor": "inferior",
     "x": 24.65,
@@ -13,14 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(142, 30%, 38%)",
-      "label": "Box 54",
-      "sublabel": "Pavimento inferior"
+      "color": "#9a6b1f",
+      "label": "Conversic",
+      "sublabel": "Empório e mercearia · Box 54"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Box 54, 55",
+    "phone": "(41) 3022-0802 · WhatsApp (41) 99976-3741",
+    "description": "Há mais de 30 anos com produtos portugueses.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/conversic/",
+    "note": "Dados do diretório de comerciantes do site oficial; confirme no local."
   },
-  "generated": true
+  "generated": true,
+  "autoHash": "5758e8fdb2dd"
 }

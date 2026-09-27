@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 52",
+  "title": "Urbano 52 CWB",
   "placement": {
     "floor": "inferior",
     "x": 66.72,
@@ -13,14 +13,18 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(140, 35%, 30%)",
-      "label": "Banca 52",
-      "sublabel": "Pavimento inferior"
+      "color": "#3c7a34",
+      "label": "Urbano 52 CWB",
+      "sublabel": "Hortifrúti · Banca 52"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+    "category": "Hortifrúti",
+    "location": "Pavimento inferior · Banca 52",
+    "description": "Frutas e verduras.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/urbano-52-cwb/",
+    "note": "Dados do diretório de comerciantes do site oficial; confirme no local."
   },
-  "generated": true
+  "generated": true,
+  "autoHash": "ae442987ead8"
 }

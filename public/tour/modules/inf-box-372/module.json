@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 372",
+  "title": "Empório do Sabor",
   "placement": {
     "floor": "inferior",
     "x": 39.39,
@@ -13,14 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(103, 30%, 38%)",
-      "label": "Box 372",
-      "sublabel": "Pavimento inferior"
+      "color": "#7a4a24",
+      "label": "Empório do Sabor",
+      "sublabel": "Cereais e especiarias · Box 372"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+    "category": "Cereais e especiarias",
+    "location": "Pavimento inferior · Box 372",
+    "phone": "(41) 3264-1543",
+    "description": "Há 17 anos: especiarias, condimentos, cereais, conservas, frutas secas e importados.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-do-sabor/",
+    "note": "Dados do diretório de comerciantes do site oficial; confirme no local."
   },
-  "generated": true
+  "generated": true,
+  "autoHash": "a64965376ee9"
 }

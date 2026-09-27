@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 47",
+  "title": "Armazém Becker",
   "placement": {
     "floor": "inferior",
     "x": 25.85,
@@ -13,14 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(114, 30%, 38%)",
-      "label": "Box 47",
-      "sublabel": "Pavimento inferior"
+      "color": "#7a4a24",
+      "label": "Armazém Becker",
+      "sublabel": "Cereais e especiarias · Box 47"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+    "category": "Cereais e especiarias",
+    "location": "Pavimento inferior · Box 47, 48",
+    "phone": "(41) 3263-4565 · WhatsApp (41) 99215-5300",
+    "description": "Há 32 anos: frutas secas, cereais, farinhas e especiarias.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/armazem-becker/",
+    "note": "Dados do diretório de comerciantes do site oficial; confirme no local."
   },
-  "generated": true
+  "generated": true,
+  "autoHash": "d96ca6ff3fb4"
 }

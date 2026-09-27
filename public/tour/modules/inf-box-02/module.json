@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 02",
+  "title": "Casa de Carnes Pé de Boi",
   "placement": {
     "floor": "inferior",
     "x": 112.5,
@@ -13,14 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(345, 30%, 38%)",
-      "label": "Box 02",
-      "sublabel": "Pavimento inferior"
+      "color": "#8e2f2f",
+      "label": "Casa de Carnes Pé de Boi",
+      "sublabel": "Açougue · Box 02"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+    "category": "Açougue",
+    "location": "Pavimento inferior · Box 02, 03",
+    "phone": "(41) 3264-4890",
+    "description": "Carnes bovina, suína e de aves, carnes exóticas e ingredientes para feijoada, desde 1963.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/casa-de-carnes-pe-de-boi/",
+    "note": "Fonte do box: número do box: guias públicos (applocal, Yelp). Dados do diretório de comerciantes do site oficial; confirme no local."
   },
-  "generated": true
+  "generated": true,
+  "autoHash": "fc2c9b9f72d1"
 }

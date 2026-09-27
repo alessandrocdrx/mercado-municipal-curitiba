@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 434",
+  "title": "Daimaru Bebidas",
   "placement": {
     "floor": "inferior",
     "x": 42.72,
@@ -13,14 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(222, 30%, 38%)",
-      "label": "Box 434",
-      "sublabel": "Pavimento inferior"
+      "color": "#5b2e63",
+      "label": "Daimaru Bebidas",
+      "sublabel": "Bebidas · Box 434"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+    "category": "Bebidas",
+    "location": "Pavimento inferior · Box 433, 434",
+    "phone": "(41) 3363-8275",
+    "description": "Cachaças, vinhos nacionais e importados, licores, xaropes e destilados.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/daimaru-bebidas/",
+    "note": "Dados do diretório de comerciantes do site oficial; confirme no local."
   },
-  "generated": true
+  "generated": true,
+  "autoHash": "b9e3f68c5247"
 }

@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 86",
+  "title": "SN Frutas e Verduras",
   "placement": {
     "floor": "inferior",
     "x": 81.12,
@@ -13,14 +13,18 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(237, 35%, 30%)",
-      "label": "Banca 86",
-      "sublabel": "Pavimento inferior"
+      "color": "#3c7a34",
+      "label": "SN Frutas e Verduras",
+      "sublabel": "Hortifrúti · Banca 86"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+    "category": "Hortifrúti",
+    "location": "Pavimento inferior · Banca 86",
+    "description": "Há 30 anos no Mercado: folhas, frutas, verduras, legumes e cogumelos.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/sn-frutas-e-verduras/",
+    "note": "Dados do diretório de comerciantes do site oficial; confirme no local."
   },
-  "generated": true
+  "generated": true,
+  "autoHash": "ad2f2d58beee"
 }

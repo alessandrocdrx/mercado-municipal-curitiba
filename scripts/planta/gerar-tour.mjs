@@ -10,6 +10,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { PAVIMENTOS, BOXES, PORTAS, CENAS, LIGACOES, ESCADAS } from './dados-planta.mjs';
+import { COMERCIANTES, CATEGORIAS } from './comerciantes.mjs';
+import crypto from 'node:crypto';
 
 const ROOT = 'public/tour';
 const IMG_W = 2000;
@@ -30,6 +32,16 @@ const push = ([px, py], facing, d) => [px + Math.sin((facing * Math.PI) / 180) *
 const moduleIds = [];
 const sceneIds = [];
 
+// box → comerciante
+const donoDoBox = new Map();
+for (const com of COMERCIANTES) {
+  for (const id of com.boxes) {
+    if (donoDoBox.has(id)) throw new Error(`${id} atribuído a "${donoDoBox.get(id).nome}" e "${com.nome}"`);
+    donoDoBox.set(id, com);
+  }
+}
+const numeros = (ids) => ids.map((id) => id.split('-').pop()).join(', ');
+
 // ------------------------------------------------------------ módulos: boxes e bancas
 for (const pav of PAVIMENTOS) {
   const prefix = pav.id === 'inferior' ? 'inf' : 'sup';
@@ -45,9 +57,11 @@ for (const pav of PAVIMENTOS) {
       const banca = tipo === 'banca';
       const id = `${prefix}-${tipo}-${num}`;
       const nome = `${banca ? 'Banca' : 'Box'} ${num}`;
+      const com = donoDoBox.get(id);
+      const cat = com && CATEGORIAS[com.categoria];
       upsertModule(id, {
         type: tipo,
-        title: nome,
+        title: com ? com.nome : nome,
         placement: {
           floor: pav.id,
           ...toMeters(pav, frente),
@@ -57,11 +71,23 @@ for (const pav of PAVIMENTOS) {
           facing,
           surface: 'wall',
         },
-        media: { placeholder: { color: corDoBox(num, banca), label: nome, sublabel: pav.titulo } },
-        info: {
-          location: pav.titulo,
-          description: 'Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados.',
-        },
+        media: com
+          ? { placeholder: { color: cat.cor, label: com.nome, sublabel: `${cat.nome} · ${nome}` } }
+          : { placeholder: { color: corDoBox(num, banca), label: nome, sublabel: pav.titulo } },
+        info: com
+          ? limpa({
+            category: cat.nome,
+            location: `${pav.titulo} · ${banca ? 'Banca' : 'Box'} ${numeros(com.boxes)}`,
+            phone: com.telefone,
+            hours: com.horario,
+            description: com.descricao,
+            url: com.url,
+            note: [com.obs, com.fonte && `Fonte do box: ${com.fonte}.`, 'Dados do diretório de comerciantes do site oficial; confirme no local.'].filter(Boolean).join(' '),
+          })
+          : {
+            location: pav.titulo,
+            description: 'Comerciante deste espaço não identificado no site oficial.',
+          },
       });
     });
   }
@@ -123,6 +149,16 @@ writeJson(path.join(ROOT, 'tour.json'), {
   })),
   scenes: sceneIds,
   modules: moduleIds,
+  directory: COMERCIANTES.map((com) => limpa({
+    name: com.nome,
+    category: CATEGORIAS[com.categoria].nome,
+    modules: com.boxes.length ? com.boxes : undefined,
+    boxes: com.boxes.length ? numeros(com.boxes) : com.boxesForaDaPlanta?.join(', '),
+    onPlan: com.boxes.length > 0,
+    phone: com.telefone,
+    url: com.url,
+    description: com.descricao,
+  })),
 });
 
 // Remove pastas geradas antes que não existem mais na planta
@@ -141,13 +177,26 @@ console.log(`${sceneIds.length} cenas e ${moduleIds.length} módulos gerados em 
 
 // ------------------------------------------------------------ helpers
 
+// Campos que podem ser editados à mão. O gerador guarda um hash do que ele
+// mesmo escreveu (`autoHash`): se o arquivo ainda bate com o hash, ninguém
+// mexeu e ele pode ser atualizado; se não bate, a edição manual é mantida.
+function hash(obj) {
+  const campos = pick(obj, ['title', 'media', 'info', 'enabled', 'version']);
+  return crypto.createHash('sha1').update(JSON.stringify(campos)).digest('hex').slice(0, 12);
+}
+
 function upsertModule(id, gerado) {
   if (moduleIds.includes(id)) throw new Error(`id duplicado na planta: ${id}`);
   moduleIds.push(id);
   const file = path.join(ROOT, 'modules', id, 'module.json');
-  const atual = readJson(file) ?? {};
-  const manual = pick(atual, ['title', 'media', 'info', 'enabled', 'version']);
-  writeJson(file, { ...gerado, ...manual, placement: gerado.placement, generated: true });
+  const atual = readJson(file);
+  const editado = atual && atual.autoHash && hash(atual) !== atual.autoHash;
+  const final = { ...gerado, ...(editado ? pick(atual, ['title', 'media', 'info', 'enabled', 'version']) : {}), placement: gerado.placement };
+  writeJson(file, { ...final, generated: true, autoHash: editado ? atual.autoHash : hash(gerado) });
+}
+
+function limpa(obj) {
+  return Object.fromEntries(Object.entries(obj).filter(([, v]) => v !== undefined && v !== ''));
 }
 
 function upsertScene(id, gerado) {

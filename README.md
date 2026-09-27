@@ -36,10 +36,17 @@ Com uma medida real, ajuste `escala` em `dados-planta.mjs` e rode:
 npm run planta     # regenera posições/links sem apagar o que foi preenchido à mão
 ```
 
-Nome, categoria, fotos e horário de cada box ainda **não** foram cadastrados:
-não há base pública com esses dados por número de box. Preencha `title`,
-`info` e `media` em `public/tour/modules/inf-box-XX/module.json`. O gerador
-preserva esses campos.
+### Comerciantes
+
+`scripts/planta/comerciantes.mjs` lista 74 comerciantes levantados no diretório
+do site oficial (nome, ramo, telefone, descrição e link). 23 deles têm número
+de box que existe na planta e aparecem com nome e cor do ramo no tour. Os
+demais ficam só no botão **Comerciantes** do app, com link para o site oficial.
+Rode `npm run planta` depois de editar a lista.
+
+Edições feitas à mão direto num `module.json` (título, info, mídia) são
+preservadas: o gerador só sobrescreve arquivos que ele mesmo escreveu e que
+ninguém alterou (`autoHash`).
 
 ## Como funciona (3 camadas)
 

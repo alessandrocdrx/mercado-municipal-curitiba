@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 06",
+  "title": "Espaço Angus Prime",
   "placement": {
     "floor": "inferior",
     "x": 97.98,
@@ -13,14 +13,20 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(349, 30%, 38%)",
-      "label": "Box 06",
-      "sublabel": "Pavimento inferior"
+      "color": "#8e2f2f",
+      "label": "Espaço Angus Prime",
+      "sublabel": "Açougue · Box 06"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+    "category": "Açougue",
+    "location": "Pavimento inferior · Box 06, 07",
+    "phone": "(41) 3264-4163 · delivery (41) 99642-9398",
+    "hours": "Ter a Sáb 8h–18h · Dom 8h–13h",
+    "description": "Boutique de carnes 100% Angus e carnes exóticas.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/espaco-angus-prime/",
+    "note": "Fonte do box: número do box: guias públicos. Dados do diretório de comerciantes do site oficial; confirme no local."
   },
-  "generated": true
+  "generated": true,
+  "autoHash": "0dabea0ab78a"
 }

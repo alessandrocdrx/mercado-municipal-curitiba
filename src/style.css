@@ -100,6 +100,30 @@ kbd { border: 1px solid var(--muted); border-radius: 4px; padding: 0 4px; font-s
 }
 .info-sources { margin: 4px 0 0; padding-left: 18px; font-size: 13px; }
 
+/* --- diretório de comerciantes --- */
+.directory {
+  position: absolute; top: 56px; left: 16px; bottom: 16px; width: min(360px, calc(100% - 32px));
+  background: var(--panel); border-radius: 12px; padding: 14px; z-index: 5;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.directory header { display: flex; justify-content: space-between; align-items: center; }
+.directory h2 { margin: 0; font-size: 18px; }
+.directory h3 { margin: 12px 0 4px; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.dir-close { background: none; border: 0; color: var(--text); font-size: 22px; cursor: pointer; }
+#dir-search { width: 100%; padding: 8px 10px; border-radius: 8px; border: 1px solid #555; background: #1b1d22; color: var(--text); font-size: 15px; }
+.dir-count, .dir-note { margin: 0; color: var(--muted); font-size: 12px; }
+.dir-list { overflow-y: auto; flex: 1; min-height: 0; }
+.dir-item {
+  display: flex; flex-direction: column; gap: 2px; width: 100%; text-align: left;
+  background: none; border: 0; border-radius: 8px; padding: 7px 8px; color: var(--text);
+  cursor: pointer; font: inherit; text-decoration: none;
+}
+.dir-item:hover, .dir-item:focus-visible { background: rgba(255,255,255,.08); }
+.dir-item strong { font-size: 14px; font-weight: 600; }
+.dir-item span { font-size: 12px; color: var(--accent); }
+.dir-item.off span { color: var(--muted); }
+div.dir-item.off { cursor: default; }
+
 /* --- editor --- */
 .editor-panel {
   position: absolute; right: 16px; bottom: 16px; width: min(360px, calc(100% - 32px));

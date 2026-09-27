@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 358",
+  "title": "Box do Ademir",
   "placement": {
     "floor": "inferior",
     "x": 42.6,
@@ -13,14 +13,18 @@
   },
   "media": {
     "placeholder": {
-      "color": "hsl(47, 30%, 38%)",
-      "label": "Box 358",
-      "sublabel": "Pavimento inferior"
+      "color": "#3c7a34",
+      "label": "Box do Ademir",
+      "sublabel": "Hortifrúti · Box 358"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Nome, categoria, fotos e horário deste espaço ainda não foram cadastrados."
+    "category": "Hortifrúti",
+    "location": "Pavimento inferior · Box 358",
+    "phone": "(41) 3262-9414 · WhatsApp (41) 99528-7690 / 99962-4073",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/box-do-ademir/",
+    "note": "Dados do diretório de comerciantes do site oficial; confirme no local."
   },
-  "generated": true
+  "generated": true,
+  "autoHash": "b7de39e8921d"
 }
