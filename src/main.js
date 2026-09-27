@@ -9,7 +9,8 @@ import { InfoPanel } from './ui/InfoPanel.js';
 import { Minimap } from './ui/Minimap.js';
 import { Editor } from './ui/Editor.js';
 import { Directory } from './ui/Directory.js';
-import { bearing } from './core/geo.js';
+import { bearing, DEG } from './core/geo.js';
+import * as THREE from 'three';
 
 const app = document.getElementById('app');
 const stage = app.querySelector('.stage');
@@ -39,6 +40,73 @@ viewer.addEventListener('pick', ({ detail }) => {
   else info.hide();
 });
 
+// ------------------------------------------------ andar com clique duplo
+// Como no Street View: dois cliques (ou dois toques) num ponto leva ao ponto
+// de vista mais próximo daquele lugar. No computador, um círculo no chão
+// mostra onde o mouse está apontando.
+
+const cursor = new THREE.Mesh(
+  new THREE.RingGeometry(0.32, 0.42, 40),
+  new THREE.MeshBasicMaterial({ color: '#ffffff', transparent: true, opacity: 0.85, depthTest: false, fog: false }),
+);
+cursor.rotation.x = -Math.PI / 2;
+cursor.renderOrder = 20;
+cursor.visible = false;
+viewer.scene.add(cursor);
+
+viewer.addEventListener('hover', ({ detail }) => {
+  const eye = current?.scene.position?.z ?? 1.6;
+  const p = detail && current?.scene.position ? viewer.floorPoint(detail.x, detail.y, eye) : null;
+  cursor.visible = Boolean(p && p.length() < 40);
+  if (cursor.visible) cursor.position.copy(p).setY(-eye + 0.03);
+});
+
+const tip = app.querySelector('.tip');
+function flash(text) {
+  tip.textContent = text;
+  tip.classList.remove('gone');
+  clearTimeout(flash.t);
+  flash.t = setTimeout(hideTip, 1800);
+}
+const hideTip = () => tip?.classList.add('gone');
+setTimeout(hideTip, 9000);
+
+viewer.addEventListener('doublepick', ({ detail }) => {
+  if (editor.active || !current?.scene.position) return;
+  hideTip();
+  info.hide();
+  const target = walkTarget(detail);
+  if (target) goTo(target.id);
+  else flash('Não há ponto de vista nessa direção');
+});
+
+/** Escolhe o ponto de vista mais próximo do lugar clicado, na direção do clique. */
+function walkTarget({ x, y, hits }) {
+  const here = current.scene;
+  const eye = here.position.z ?? 1.6;
+  // lugar clicado: o box (se clicou num), o chão, ou 6 m à frente se clicou acima do horizonte
+  let local = hits[0]?.point?.clone() ?? viewer.floorPoint(x, y, eye);
+  if (!local || local.length() > 40) {
+    const { yaw } = viewer.pick(x, y);
+    local = new THREE.Vector3(Math.sin(yaw * DEG), 0, -Math.cos(yaw * DEG)).multiplyScalar(6);
+  }
+  const yawLocal = Math.atan2(local.x, -local.z) / DEG;
+  const dist = Math.hypot(local.x, local.z);
+  const b = (yawLocal - (here.northYaw ?? 0)) * DEG;
+  const point = { x: here.position.x + Math.sin(b) * dist, y: here.position.y + Math.cos(b) * dist };
+  const clickBearing = yawLocal - (here.northYaw ?? 0);
+
+  const candidates = current.scenes.filter((s) => s.id !== here.id && s.position && (s.floor ?? null) === (here.floor ?? null))
+    .map((s) => {
+      const away = Math.hypot(s.position.x - here.position.x, s.position.y - here.position.y);
+      const off = Math.abs(wrapDeg(bearing(here.position, s.position) - clickBearing));
+      return { s, away, off, toClick: Math.hypot(s.position.x - point.x, s.position.y - point.y) };
+    })
+    .filter((c) => c.away > 1 && c.off < 60);
+  candidates.sort((a, b) => a.toClick - b.toClick);
+  return candidates[0]?.s ?? null;
+}
+
 viewer.addEventListener('viewchange', ({ detail }) => {
   minimap.setHeading(detail.yaw);
   writeHash();
@@ -64,7 +132,8 @@ async function goTo(sceneId, { via, view, force } = {}) {
     viewer.setContent(built.group);
     viewer.setEnvironment(built.environment);
     viewer.setView(nextView(previous, built, via, view));
-    hotspots.setLinks(built.links);
+    // setas só para trocar de andar (escada); no mesmo andar anda-se com clique duplo
+    hotspots.setLinks(built.links.filter((l) => l.distance === undefined));
     const tour = await loader.tour();
     minimap.render({ tour, tourUrl: loader.tourUrl, scenes: built.scenes, modules: built.modules, current: built.scene });
     minimap.setHeading(viewer.view.yaw);

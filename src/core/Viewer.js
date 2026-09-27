@@ -75,6 +75,18 @@ export class Viewer extends EventTarget {
     return { ...yawPitchFromDir(this.raycaster.ray.direction), hits };
   }
 
+  /**
+   * Ponto do chão sob a posição (x, y) da tela, em coordenadas locais da cena
+   * (observador na origem, olhos a `eye` metros do chão). null se acima do horizonte.
+   */
+  floorPoint(x, y, eye = 1.6) {
+    const { clientWidth: w, clientHeight: h } = this.container;
+    this.raycaster.setFromCamera(new THREE.Vector2((x / w) * 2 - 1, -(y / h) * 2 + 1), this.camera);
+    const dir = this.raycaster.ray.direction;
+    if (dir.y > -0.02) return null;
+    return dir.clone().multiplyScalar(eye / -dir.y);
+  }
+
   resize() {
     const { clientWidth: w, clientHeight: h } = this.container;
     if (!w || !h) return;
@@ -101,6 +113,8 @@ export class Viewer extends EventTarget {
     const pointers = new Map();
     let drag = null;
     let pinch = null;
+    let lastTap = null; // para detectar toque/clique duplo
+    let pendingPick = null;
 
     el.addEventListener('pointerdown', (e) => {
       el.setPointerCapture(e.pointerId);
@@ -114,7 +128,13 @@ export class Viewer extends EventTarget {
     });
 
     el.addEventListener('pointermove', (e) => {
-      if (!pointers.has(e.pointerId)) return;
+      if (!pointers.has(e.pointerId)) {
+        if (e.pointerType === 'mouse') {
+          const rect = el.getBoundingClientRect();
+          this.dispatchEvent(new CustomEvent('hover', { detail: { x: e.clientX - rect.left, y: e.clientY - rect.top } }));
+        }
+        return;
+      }
       pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
       if (pinch && pointers.size === 2) {
         this.setView({ fov: pinch.fov * (pinch.dist / pinchDistance(pointers)) });
@@ -135,12 +155,24 @@ export class Viewer extends EventTarget {
         const rect = el.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        this.dispatchEvent(new CustomEvent('pick', { detail: { x, y, ...this.pick(x, y), shiftKey: e.shiftKey } }));
+        const now = performance.now();
+        const detail = { x, y, ...this.pick(x, y), shiftKey: e.shiftKey };
+        if (lastTap && now - lastTap.t < 350 && Math.hypot(x - lastTap.x, y - lastTap.y) < 40) {
+          // clique/toque duplo: cancela o clique simples pendente e anda
+          clearTimeout(pendingPick);
+          lastTap = null;
+          this.dispatchEvent(new CustomEvent('doublepick', { detail }));
+        } else {
+          lastTap = { t: now, x, y };
+          clearTimeout(pendingPick);
+          pendingPick = setTimeout(() => this.dispatchEvent(new CustomEvent('pick', { detail })), 300);
+        }
       }
       drag = null;
       if (pointers.size < 2) pinch = null;
     };
     el.addEventListener('pointerup', end);
+    el.addEventListener('pointerleave', () => this.dispatchEvent(new CustomEvent('hover', { detail: null })));
     el.addEventListener('pointercancel', end);
 
     el.addEventListener('wheel', (e) => {

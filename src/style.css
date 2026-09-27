@@ -30,6 +30,14 @@ kbd { border: 1px solid var(--muted); border-radius: 4px; padding: 0 4px; font-s
 .fader { position: absolute; inset: 0; background: #000; opacity: 0; pointer-events: none; transition: opacity .2s; }
 .fader.on { opacity: 1; }
 
+/* --- dica inicial --- */
+.tip {
+  position: absolute; left: 50%; bottom: 24px; transform: translateX(-50%);
+  background: var(--panel); padding: 8px 14px; border-radius: 20px; font-size: 14px;
+  pointer-events: none; transition: opacity .6s; white-space: nowrap;
+}
+.tip.gone { opacity: 0; }
+
 /* --- setas de navegação --- */
 .hotspot {
   position: absolute; left: 0; top: 0;
@@ -143,5 +151,6 @@ div.dir-item.off { cursor: default; }
 
 @media (max-width: 600px) {
   .help { display: none; }
+  .tip { display: block; }
   .minimap { width: 180px; }
 }

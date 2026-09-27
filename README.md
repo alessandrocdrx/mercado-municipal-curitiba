@@ -29,7 +29,7 @@ O tour foi montado sobre as **plantas afixadas no próprio mercado** (fotos em
   rampa oeste e portas E, G, H, I e J.
 - **Pavimento superior:** setor 311–353, área rosa (01–19), área verde
   (501–522) e portas B, C e D.
-- **62 pontos de vista** ligados por setas, e a escada ligando os dois pavimentos.
+- **62 pontos de vista**. Anda-se com **dois cliques (ou dois toques) no chão**, como no Street View: o app vai ao ponto de vista mais próximo do lugar clicado. A escada tem uma seta para trocar de pavimento.
 - **370 módulos** (boxes, bancas e portas), cada um na sua pasta.
 
 A escala (metros por pixel) foi **estimada** pelo tamanho típico de um box.
