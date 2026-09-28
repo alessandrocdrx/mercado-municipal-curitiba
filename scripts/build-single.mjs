@@ -34,7 +34,7 @@ const MIME = { '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png',
 const dataUri = (file, mime) => `data:${mime};base64,${fs.readFileSync(path.join('public', file)).toString('base64')}`;
 const icon = dataUri('icon.svg', 'image/svg+xml');
 const head = html.match(/<head>([\s\S]*)<\/head>/)[1]
-  .split('\n').filter((l) => /<meta (name="(description|theme-color|twitter:card)"|property="og:)|<link rel="(icon|apple-touch-icon)"/.test(l)).join('\n')
+  .split('\n').filter((l) => /<meta (name="(viewport|description|theme-color|twitter:card)"|property="og:)|<link rel="(icon|apple-touch-icon)"/.test(l)).join('\n')
   .replaceAll('./icon.svg', icon)
   .replaceAll('./apple-touch-icon.png', dataUri('apple-touch-icon.png', 'image/png'))
   .replaceAll('./og-image.jpg', dataUri('og-image.jpg', 'image/jpeg'));

@@ -204,6 +204,18 @@ div.dir-item.off { cursor: default; }
   .tip { display: block; }
   .minimap { width: 150px; }
   .minimap .mm-bar button { padding: 2px 5px; font-size: 11px; }
-  .forward { bottom: 24px; left: auto; right: 16px; transform: none; max-width: calc(100% - 200px); }
+  .forward { bottom: 24px; left: auto; right: 12px; transform: none; max-width: calc(100% - 210px); font-size: 14px; padding: 10px 14px; }
+  .topbar { padding: 10px 12px 18px; gap: 6px 8px; align-items: center; }
+  .brand { font-size: 14px; }
+  .brand img { width: 24px; height: 24px; }
+  .scene-title { font-size: 15px; flex: 1 1 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .about { font-size: 14px; padding: 7px 14px; border-radius: 18px; min-height: 34px; }
+  .minimap { width: 178px; left: 12px; bottom: 12px; }
+  .minimap .mm-floors { flex-wrap: nowrap; overflow-x: auto; }
+  .minimap .mm-bar button { padding: 4px 7px; font-size: 11px; white-space: nowrap; }
+  .directory { z-index: 9; top: auto; left: 0; right: 0; bottom: 0; width: auto; height: 82%; border-radius: 16px 16px 0 0; padding: 16px; }
+  .dir-item { padding: 10px 8px; }
+  .dir-item strong { font-size: 15px; }
+  #dir-search { font-size: 16px; padding: 10px 12px; }
   .tip { top: 120px; bottom: auto; white-space: normal; width: max-content; max-width: calc(100% - 32px); text-align: center; }
 }
