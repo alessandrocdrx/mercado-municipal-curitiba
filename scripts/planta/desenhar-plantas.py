@@ -29,8 +29,9 @@ titles={m['title'] for m in mods}
 sys.path.insert(0,S)
 MP=json.load(open(S+'/mp.json'))
 def poly(d,f,pts,**k): d.polygon([mp(f,*p) for p in pts],**k)
-for f in ['inferior','superior','nivel3']:
+for f,SEMTEXTO in [(a,b) for a in ['inferior','superior','nivel3'] for b in (False,True)]:
     im=Image.new('RGB',(2000,1500),'#f3efe6'); d=ImageDraw.Draw(im)
+    if SEMTEXTO: d.text=lambda *a,**k: None
     poly(d,f,C['ext_'+f],fill='#e2dccf',outline='#3a3a3a',width=6)
     for name,col,pts in AREAS.get(f,[]):
         poly(d,f,pts,fill=col)
@@ -78,4 +79,4 @@ for f in ['inferior','superior','nivel3']:
         x,y=mp(f,X,Y); d.rectangle([x-16,y-16,x+16,y+16],fill='#1d4d34'); d.text((x,y),'⇅',font=F(22),fill='white',anchor='mm')
     t={'inferior':'Pavimento inferior (Floor 1)','superior':'Pavimento superior (Floor 2)','nivel3':'3º nível (Floor 3)'}[f]
     d.text((40,40),t,font=F(44),fill='#1d4d34'); d.text((40,95),'Planta esquemática a partir de medidas do tour 3D oficial · confirme no local',font=F(20),fill='#666')
-    im.save(R+f'public/tour/plantas/planta-{f}.jpg',quality=82)
+    im.save(R+('public/tour/plantas/piso-' if SEMTEXTO else 'public/tour/plantas/planta-')+f+'.jpg',quality=82)

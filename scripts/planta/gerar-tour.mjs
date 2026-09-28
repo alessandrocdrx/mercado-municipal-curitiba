@@ -166,7 +166,7 @@ writeJson(path.join(ROOT, 'tour.json'), {
     id: p.id,
     title: p.titulo,
     startScene: p.inicio,
-    plan: { src: p.planta, width: r2(IMG_W * p.escala), height: r2(IMG_H * p.escala) },
+    plan: { src: p.planta, floorSrc: p.planta.replace('planta-', 'piso-'), width: r2(IMG_W * p.escala), height: r2(IMG_H * p.escala) },
     bearingUp: p.rumoCima, // rumo real (graus a partir do norte) do "cima" da planta
     outlines: CONTORNOS_OSM.filter((c) => c.pavimentos.includes(p.id)).map((c) => ({
       id: `osm-way-${c.way}`, title: c.nome, kind: c.tipo, source: 'OpenStreetMap',

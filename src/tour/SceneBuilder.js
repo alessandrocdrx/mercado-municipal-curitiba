@@ -91,7 +91,7 @@ async function buildModel(group, scene, floor, tourUrl) {
     const x1 = Math.max(cov.from.x, cov.to.x);
     const y0 = Math.min(-cov.from.y, -cov.to.y); // distância a partir do topo da planta
     const y1 = Math.max(-cov.from.y, -cov.to.y);
-    const original = await textureFor({ src: floor.plan.src }, { baseUrl: tourUrl });
+    const original = await textureFor({ src: floor.plan.floorSrc ?? floor.plan.src }, { baseUrl: tourUrl }); // piso sem textos
     const tex = original.clone();
     tex.userData = { own: true, base: original }; // cópia com recorte próprio
     tex.repeat.set((x1 - x0) / W, (y1 - y0) / H);

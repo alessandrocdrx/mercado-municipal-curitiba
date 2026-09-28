@@ -72,6 +72,7 @@
       "startScene": "inf-b-04",
       "plan": {
         "src": "plantas/planta-inferior.jpg",
+        "floorSrc": "plantas/piso-inferior.jpg",
         "width": 126,
         "height": 94.5
       },
@@ -317,6 +318,7 @@
       "startScene": "sup-escada",
       "plan": {
         "src": "plantas/planta-superior.jpg",
+        "floorSrc": "plantas/piso-superior.jpg",
         "width": 145,
         "height": 108.75
       },
@@ -569,6 +571,7 @@
       "startScene": "n3-gerencia",
       "plan": {
         "src": "plantas/planta-nivel3.jpg",
+        "floorSrc": "plantas/piso-nivel3.jpg",
         "width": 145,
         "height": 108.75
       },
