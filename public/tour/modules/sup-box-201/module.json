@@ -1,0 +1,31 @@
+{
+  "type": "box",
+  "title": "Maia Box Sanduicheria",
+  "placement": {
+    "floor": "superior",
+    "x": 86.13,
+    "y": -93.45,
+    "z": 1.4,
+    "width": 4,
+    "height": 2.8,
+    "facing": 0,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "#b0561d",
+      "label": "Maia Box Sanduicheria",
+      "sublabel": "Lanchonete e restaurante · Box 201"
+    }
+  },
+  "info": {
+    "category": "Lanchonete e restaurante",
+    "location": "Pavimento superior · Galeria de restaurantes · Box 201",
+    "phone": "(41) 3362-9065",
+    "description": "Desde 2000, famosa pelo sanduíche de mortadela.",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/maia-box-sanduicheria/",
+    "note": "A lista informa o box 194; o tour 3D mostra o box 201, na galeria de restaurantes do pavimento superior sobre a Rua General Carneiro (fora da planta afixada). Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+  },
+  "generated": true,
+  "autoHash": "7265acbb820b"
+}

@@ -191,7 +191,7 @@ export const COMERCIANTES = [
   c('Nippon Boutique', 'servicos', 'nippon-boutique', { boxes: sb(352, 353), telefone: '(41) 3263-4615 · (41) 99979-1685', descricao: 'Desde 1977: revistas e livros japoneses e ofurôs.' }),
   c('Okashi Sweets & Teas', 'doces', null, { boxes: sb(375), telefone: '(41) 3254-7738' }),
   c('Box do Eliseu', 'lanchonete', 'box-do-eliseu', { boxes: sb(12, 13), descricao: 'Há 39 anos no Mercado: comida caseira, pastéis, sanduíches, sucos e café. Famoso pela almôndega de carne.', obs: 'Boxes 12–13 do pavimento inferior são do Celeiro Municipal; o Eliseu foi posto na praça de alimentação.', fonte: 'site oficial (via busca)' }),
-  c('Restaurante Anarco', 'lanchonete', 'restaurante-anarco', { telefone: '(41) 3029-6154', descricao: 'Cozinha italiana, fundado em 1991.', obs: 'No tour 3D oficial fica no mezanino das praças de alimentação Déa / 7 de Setembro, área que a planta afixada não desenha.', fonte: TOUR3D }),
+  c('Restaurante Anarco', 'lanchonete', 'restaurante-anarco', { boxes: sb('anarco'), telefone: '(41) 3029-6154', descricao: 'Cozinha italiana, fundado em 1991.', obs: 'No tour 3D oficial fica no mezanino das praças de alimentação Déa / 7 de Setembro, área que a planta afixada não desenha.', fonte: TOUR3D }),
   c('Restaurante Box Curitiba', 'lanchonete', 'restaurante-box-curitiba', { boxes: sb(10), telefone: '(41) 3015-8240', descricao: 'Massas, risotos e saladas.', obs: 'Posição do tour 3D oficial (antes assumida no box 19).', fonte: TOUR3D }),
 
   // ======================= pavimento superior · setor de orgânicos (501–522)
@@ -217,7 +217,7 @@ export const COMERCIANTES = [
   c('Dahra Pedras Brasileiras', 'servicos', null, { boxes: ib(190), telefone: '(41) 99652-5910', fonte: TOUR3D }),
   c('Da Mamma Massas', 'emporio', null, { boxes: ib(192), telefone: '(41) 3262-2768 · (41) 99197-7977', fonte: TOUR3D }),
   c('Casa de Massas Leve Pronto', 'emporio', null, { boxes: ib(193), telefone: '(41) 3264-4990 · (41) 99209-7079', fonte: TOUR3D }),
-  c('Maia Box Sanduicheria', 'lanchonete', 'maia-box-sanduicheria', { boxesForaDaPlanta: ['201'], telefone: '(41) 3362-9065', descricao: 'Desde 2000, famosa pelo sanduíche de mortadela.', obs: 'A lista informa o box 194; o tour 3D mostra o box 201, na galeria de restaurantes do pavimento superior sobre a Rua General Carneiro (fora da planta afixada).', fonte: TOUR3D }),
+  c('Maia Box Sanduicheria', 'lanchonete', 'maia-box-sanduicheria', { boxes: sb(201), telefone: '(41) 3362-9065', descricao: 'Desde 2000, famosa pelo sanduíche de mortadela.', obs: 'A lista informa o box 194; o tour 3D mostra o box 201, na galeria de restaurantes do pavimento superior sobre a Rua General Carneiro (fora da planta afixada).', fonte: TOUR3D }),
   c('Confeitaria Colônia Cecília', 'doces', 'confeitaria-colonia-cecilia', { boxes: ib(195), telefone: '(41) 3030-3076', descricao: 'Desde 2003. Café colonial aos domingos.', fonte: TOUR3D }),
   c('Restaurante Ohana', 'lanchonete', null, { boxes: sb(518), obs: 'A lista informa o box 201; posição do tour 3D (setor de orgânicos).', fonte: TOUR3D }),
   c('Ninki Pastéis & Delícias', 'lanchonete', 'ninki-pasteis-delicias', { boxes: sb(15), telefone: '(41) 99179-1197 · (41) 99663-2026', obs: 'A lista informa o box 205; posição do tour 3D (praça de alimentação Karan).', fonte: TOUR3D }),
@@ -249,10 +249,10 @@ export const COMERCIANTES = [
   c('Bonna Gourmet', 'lanchonete', null, { boxes: sb(1), fonte: TOUR3D }),
   c('Pastelaria Curitiba', 'lanchonete', null, { boxes: sb(8), telefone: '(41) 99734-9001 · (41) 3363-0522', fonte: TOUR3D }),
   // fora da planta afixada (áreas que ela não desenha)
-  c('Fujii Cozinha Japonesa', 'lanchonete', null, { telefone: '(41) 3114-8393', obs: 'Praças de alimentação Déa / 7 de Setembro, a oeste dos boxes 07–10 do pavimento superior.', fonte: TOUR3D }),
-  c('Mister Dea', 'lanchonete', null, { telefone: '(41) 3264-4911 · (41) 98832-0583', obs: 'Praças de alimentação Déa / 7 de Setembro, junto aos boxes 01–04 do pavimento superior.', fonte: TOUR3D }),
+  c('Fujii Cozinha Japonesa', 'lanchonete', null, { boxes: sb('fujii'), telefone: '(41) 3114-8393', obs: 'Praças de alimentação Déa / 7 de Setembro, a oeste dos boxes 07–10 do pavimento superior.', fonte: TOUR3D }),
+  c('Mister Dea', 'lanchonete', null, { boxes: sb('mister-dea'), telefone: '(41) 3264-4911 · (41) 98832-0583', obs: 'Praças de alimentação Déa / 7 de Setembro, junto aos boxes 01–04 do pavimento superior.', fonte: TOUR3D }),
   c('Curitiba Sua Linda', 'servicos', null, { obs: 'Galeria do pavimento superior, entre a área rosa e o setor de orgânicos. Só o rótulo aparece no tour 3D.', fonte: TOUR3D }),
-  c('Restaurante Al Almasor', 'lanchonete', null, { telefone: '(41) 3155-1844', descricao: 'Comida árabe e brasileira.', obs: 'Galeria de restaurantes do pavimento superior, sobre a Rua General Carneiro.', fonte: TOUR3D }),
+  c('Restaurante Al Almasor', 'lanchonete', null, { boxes: sb('almasor'), telefone: '(41) 3155-1844', descricao: 'Comida árabe e brasileira.', obs: 'Galeria de restaurantes do pavimento superior, sobre a Rua General Carneiro.', fonte: TOUR3D }),
   c('Gerência do Mercado (Prefeitura)', 'servicos', null, { telefone: '(41) 3264-6020 · (41) 3264-6224 · (41) 3264-6024', obs: '3º nível, junto ao auditório.', fonte: TOUR3D }),
 
   // ======================= sem número de box

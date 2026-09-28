@@ -1,9 +1,9 @@
 {
-  "title": "Praça de Alimentação Karan · oeste",
+  "title": "Galeria de restaurantes · 3",
   "floor": "superior",
   "position": {
-    "x": 33.35,
-    "y": -39.51,
+    "x": 110.56,
+    "y": -89.83,
     "z": 1.6
   },
   "northYaw": 0,
@@ -14,10 +14,7 @@
   },
   "links": [
     {
-      "to": "sup-escada"
-    },
-    {
-      "to": "sup-rosa-1b"
+      "to": "sup-galeria-2"
     }
   ],
   "generated": true

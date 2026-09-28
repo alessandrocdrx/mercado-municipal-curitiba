@@ -145,6 +145,12 @@ export const BOXES = {
     fileira(seq(522, 519), [1125, 430], [1120, 585], 270),
     fileira(['516', '517'], [960, 730], [1005, 730], 0),
     box('518', [1100, 725], 0, { largura: 120 }),
+    // Áreas que a planta afixada não desenha, com as posições do tour 3D oficial
+    ...[
+      ['anarco', [474, 902], 45, 'Praças Déa / 7 de Setembro'], ['fujii', [511, 1210], 90, 'Praças Déa / 7 de Setembro'],
+      ['mister-dea', [806, 741], 225, 'Praças Déa / 7 de Setembro'],
+      ['201', [1188, 1305], 0, 'Galeria de restaurantes'], ['almasor', [1501, 1300], 0, 'Galeria de restaurantes'],
+    ].map(([id, em, facing, area]) => box(id, em, facing, { area, largura: 60, ...(!/^\d/.test(id) && { rotulo: area }) })),
   ],
 };
 
@@ -249,8 +255,8 @@ export const CENAS = {
     { id: 'sup-sul-1', titulo: 'Setor 300 · sul oeste', em: [245, 445], cor: CINZA },
     { id: 'sup-escada', titulo: 'Escadas · pavimento superior', em: [470, 440], cor: CINZA },
     { id: 'sup-sul-3', titulo: 'Setor 300 · sul leste', em: [695, 445], cor: CINZA },
-    { id: 'sup-rosa-1', titulo: 'Área rosa · oeste', em: [460, 545], cor: ROSA },
-    { id: 'sup-rosa-1b', titulo: 'Área rosa · leste', em: [688, 572], cor: ROSA },
+    { id: 'sup-rosa-1', titulo: 'Praça de Alimentação Karan · oeste', em: [460, 545], cor: ROSA },
+    { id: 'sup-rosa-1b', titulo: 'Praça de Alimentação Karan · leste', em: [688, 572], cor: ROSA },
     { id: 'sup-passagem', titulo: 'Passagem para a área rosa', em: [745, 560], cor: CINZA },
     { id: 'sup-rosa-desce', titulo: 'Área rosa · descida', em: [665, 790], cor: ROSA },
     { id: 'sup-rosa-2', titulo: 'Área rosa · centro', em: [700, 700], cor: ROSA },
@@ -260,6 +266,14 @@ export const CENAS = {
     { id: 'sup-verde-1', titulo: 'Área verde · centro', em: [900, 440], cor: VERDE_ESC },
     { id: 'sup-verde-2', titulo: 'Área verde · leste', em: [1055, 470], cor: VERDE_ESC },
     { id: 'sup-verde-3', titulo: 'Área verde · sul', em: [900, 640], cor: VERDE_ESC },
+    { id: 'sup-dea-norte', titulo: 'Praças Déa / 7 de Setembro · norte', em: [552, 856], cor: ROSA },
+    { id: 'sup-dea-centro', titulo: 'Praças Déa / 7 de Setembro · vão sobre o hall', em: [538, 1045], cor: ROSA },
+    { id: 'sup-dea-sul', titulo: 'Praças Déa / 7 de Setembro · sul', em: [628, 1197], cor: ROSA },
+    { id: 'sup-dea-oeste', titulo: 'Praças Déa / 7 de Setembro · leste', em: [843, 1182], cor: ROSA },
+    { id: 'sup-galeria-1', titulo: 'Galeria de restaurantes · 1', em: [1056, 1262], cor: ROSA },
+    { id: 'sup-galeria-0', titulo: 'Galeria de restaurantes · acesso', em: [860, 1300], cor: ROSA },
+    { id: 'sup-galeria-2', titulo: 'Galeria de restaurantes · 2', em: [1333, 1246], cor: ROSA },
+    { id: 'sup-galeria-3', titulo: 'Galeria de restaurantes · 3', em: [1525, 1239], cor: ROSA },
   ],
 };
 
@@ -299,6 +313,9 @@ export const LIGACOES = [
   ['sup-rosa-2', 'sup-verde-3'],
   ...cadeia(['sup-verde-porta-d', 'sup-verde-1', 'sup-verde-3']),
   ['sup-verde-1', 'sup-verde-2'],
+  ['sup-rosa-3', 'sup-dea-norte'],
+  ...cadeia(['sup-dea-norte', 'sup-dea-centro', 'sup-dea-sul', 'sup-dea-oeste', 'sup-rosa-4']),
+  ...cadeia(['sup-dea-oeste', 'sup-galeria-0', 'sup-galeria-1', 'sup-galeria-2', 'sup-galeria-3']),
   ...cadeia(['n3-gerencia', 'n3-oeste', 'n3-auditorio']),
 ];
 

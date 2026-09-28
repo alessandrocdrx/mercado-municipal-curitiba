@@ -1,9 +1,9 @@
 {
-  "title": "Praça de Alimentação Karan · oeste",
+  "title": "Praças Déa / 7 de Setembro · vão sobre o hall",
   "floor": "superior",
   "position": {
-    "x": 33.35,
-    "y": -39.51,
+    "x": 39,
+    "y": -75.76,
     "z": 1.6
   },
   "northYaw": 0,
@@ -14,10 +14,10 @@
   },
   "links": [
     {
-      "to": "sup-escada"
+      "to": "sup-dea-norte"
     },
     {
-      "to": "sup-rosa-1b"
+      "to": "sup-dea-sul"
     }
   ],
   "generated": true

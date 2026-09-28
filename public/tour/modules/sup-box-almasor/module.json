@@ -1,0 +1,30 @@
+{
+  "type": "box",
+  "title": "Restaurante Al Almasor",
+  "placement": {
+    "floor": "superior",
+    "x": 108.82,
+    "y": -93.09,
+    "z": 1.4,
+    "width": 4,
+    "height": 2.8,
+    "facing": 0,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "#b0561d",
+      "label": "Restaurante Al Almasor",
+      "sublabel": "Lanchonete e restaurante · Galeria de restaurantes"
+    }
+  },
+  "info": {
+    "category": "Lanchonete e restaurante",
+    "location": "Pavimento superior · Galeria de restaurantes · Galeria de restaurantes",
+    "phone": "(41) 3155-1844",
+    "description": "Comida árabe e brasileira.",
+    "note": "Galeria de restaurantes do pavimento superior, sobre a Rua General Carneiro. Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+  },
+  "generated": true,
+  "autoHash": "d58566a5c993"
+}

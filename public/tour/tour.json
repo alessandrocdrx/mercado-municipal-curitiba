@@ -658,6 +658,14 @@
     "sup-verde-1",
     "sup-verde-2",
     "sup-verde-3",
+    "sup-dea-norte",
+    "sup-dea-centro",
+    "sup-dea-sul",
+    "sup-dea-oeste",
+    "sup-galeria-1",
+    "sup-galeria-0",
+    "sup-galeria-2",
+    "sup-galeria-3",
     "n3-gerencia",
     "n3-oeste",
     "n3-auditorio"
@@ -1039,6 +1047,11 @@
     "sup-box-516",
     "sup-box-517",
     "sup-box-518",
+    "sup-box-anarco",
+    "sup-box-fujii",
+    "sup-box-mister-dea",
+    "sup-box-201",
+    "sup-box-almasor",
     "sup-porta-b",
     "sup-porta-c",
     "sup-porta-d"
@@ -2496,7 +2509,11 @@
     {
       "name": "Restaurante Anarco",
       "category": "Lanchonete e restaurante",
-      "onPlan": false,
+      "modules": [
+        "sup-box-anarco"
+      ],
+      "boxes": "anarco",
+      "onPlan": true,
       "phone": "(41) 3029-6154",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/restaurante-anarco/",
       "description": "Cozinha italiana, fundado em 1991."
@@ -2721,8 +2738,11 @@
     {
       "name": "Maia Box Sanduicheria",
       "category": "Lanchonete e restaurante",
+      "modules": [
+        "sup-box-201"
+      ],
       "boxes": "201",
-      "onPlan": false,
+      "onPlan": true,
       "phone": "(41) 3362-9065",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/maia-box-sanduicheria/",
       "description": "Desde 2000, famosa pelo sanduíche de mortadela."
@@ -2975,13 +2995,21 @@
     {
       "name": "Fujii Cozinha Japonesa",
       "category": "Lanchonete e restaurante",
-      "onPlan": false,
+      "modules": [
+        "sup-box-fujii"
+      ],
+      "boxes": "fujii",
+      "onPlan": true,
       "phone": "(41) 3114-8393"
     },
     {
       "name": "Mister Dea",
       "category": "Lanchonete e restaurante",
-      "onPlan": false,
+      "modules": [
+        "sup-box-mister-dea"
+      ],
+      "boxes": "dea",
+      "onPlan": true,
       "phone": "(41) 3264-4911 · (41) 98832-0583"
     },
     {
@@ -2992,7 +3020,11 @@
     {
       "name": "Restaurante Al Almasor",
       "category": "Lanchonete e restaurante",
-      "onPlan": false,
+      "modules": [
+        "sup-box-almasor"
+      ],
+      "boxes": "almasor",
+      "onPlan": true,
       "phone": "(41) 3155-1844",
       "description": "Comida árabe e brasileira."
     },
