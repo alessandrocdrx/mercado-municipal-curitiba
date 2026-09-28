@@ -799,40 +799,43 @@
  },
  "Banca do Kobe": {
   "tipo": "banca_ilha",
-  "fachada": "#B5653F",
+  "fachada": "#F2F2F2",
   "profundidade": 4,
-  "altura": 2.6
+  "altura": 2.6,
+  "letreiro": "#F2E8D0",
+  "texto": "#2E6B4F"
  },
  "Ceccon Produtos Orgânicos": {
   "tipo": "banca_ilha",
-  "fachada": "#1A1A1A",
+  "fachada": "#F2F2F2",
   "letreiro": "#1A1A1A",
-  "texto": "#EFE6CC",
+  "texto": "#FFFFFF",
   "profundidade": 4,
   "altura": 2.6,
   "balcao": "sim (material não identificado)"
  },
  "Couve & Flor": {
   "tipo": "banca_ilha",
-  "fachada": "#2E7D32",
-  "letreiro": "#2E7D32",
-  "texto": "#EFE6CC",
+  "fachada": "#F2F2F2",
+  "letreiro": "#1F4D3A",
+  "texto": "#FFFFFF",
   "profundidade": 4,
   "altura": 2.6
  },
  "Nico's Empório Orgânico": {
   "tipo": "box_aberto_balcao",
   "fachada": "#F2F2F2",
-  "letreiro": "#EFE6CC",
+  "letreiro": "#1A1A1A",
   "profundidade": 4,
   "altura": 3,
-  "balcao": "alvenaria #A0764A"
+  "balcao": "alvenaria #A0764A",
+  "texto": "#FFFFFF"
  },
  "Sírius Orgânicos": {
-  "tipo": "box_aberto_balcao",
-  "fachada": "#1A1A1A",
-  "letreiro": "#1A1A1A",
-  "texto": "#F2F2F2",
+  "tipo": "porta_enrolar",
+  "fachada": "#C9C9C4",
+  "letreiro": "#FFFFFF",
+  "texto": "#1C1C1C",
   "profundidade": 4,
   "altura": 3
  },
@@ -840,107 +843,116 @@
   "tipo": "box_aberto_balcao",
   "profundidade": 4,
   "altura": 3,
-  "balcao": "alvenaria #8A8A8A"
+  "balcao": "alvenaria #8A8A8A",
+  "fachada": "#7F9F86",
+  "letreiro": "#7F9F86",
+  "texto": "#FFFFFF"
  },
  "Espaço Orgânico": {
   "tipo": "quiosque",
-  "fachada": "#1F4D3A",
-  "letreiro": "#1A1A1A",
-  "texto": "#F2F2F2",
+  "fachada": "#F2F2F2",
+  "letreiro": "#F2E8D0",
+  "texto": "#5A3A22",
   "profundidade": 4,
   "altura": 3,
   "vitrine": true
  },
  "Cativa Natureza": {
   "tipo": "outro",
-  "fachada": "#1F4D3A",
+  "fachada": "#EDEAE3",
   "letreiro": "#1F4D3A",
-  "texto": "#F2F2F2",
+  "texto": "#FFFFFF",
   "profundidade": 4,
   "altura": 3,
   "balcao": "madeira #A0764A"
  },
  "Natural Market": {
   "tipo": "box_aberto_balcao",
-  "fachada": "#B5653F",
-  "letreiro": "#1F4D3A",
-  "texto": "#F2F2F2",
+  "fachada": "#C9A26B",
+  "letreiro": "#F2E8D0",
+  "texto": "#2E6B4F",
   "profundidade": 4,
   "altura": 3
  },
  "Botané Sustentável": {
-  "tipo": "box_aberto_balcao",
+  "tipo": "loja_fechada_porta_enrolar",
   "profundidade": 4,
-  "altura": 3
+  "altura": 3,
+  "fachada": "#C9A26B",
+  "letreiro": "#2E6B4F",
+  "texto": "#FFFFFF"
  },
  "Biossana Orgânicos": {
   "tipo": "box_aberto_balcao",
-  "fachada": "#1F4D3A",
+  "fachada": "#8A6A4A",
   "letreiro": "#1F4D3A",
-  "texto": "#F2F2F2",
+  "texto": "#FFFFFF",
   "profundidade": 4,
   "altura": 3,
   "vitrine": true
  },
  "Taurino's Organic": {
   "tipo": "quiosque",
-  "fachada": "#1A1A1A",
+  "fachada": "#2B2B2B",
   "letreiro": "#1A1A1A",
-  "texto": "#F2F2F2",
+  "texto": "#E53935",
   "profundidade": 4,
   "altura": 3,
   "vitrine": true
  },
  "Restaurante Ohana": {
   "tipo": "restaurante_com_mesas",
-  "fachada": "#CFE3E8",
+  "fachada": "#EDE8DC",
   "profundidade": 4,
-  "altura": 3
+  "altura": 3,
+  "letreiro": "#FFFFFF",
+  "texto": "#1F4D3A"
  },
  "Tabacaria Trevo": {
   "tipo": "loja_fechada_porta_enrolar",
-  "letreiro": "#1A1A1A",
-  "texto": "#1A1A1A",
+  "letreiro": "#5A3A22",
+  "texto": "#FFFFFF",
   "profundidade": 4,
-  "altura": 3
+  "altura": 3,
+  "fachada": "#8A6A4A"
  },
  "Vitornis Chapelaria": {
-  "tipo": "outro",
-  "fachada": "#A0764A",
-  "letreiro": "#A0764A",
-  "texto": "#A0764A",
+  "tipo": "loja_fechada_porta_enrolar",
+  "fachada": "#F2F2F2",
+  "letreiro": "#E6DCC0",
+  "texto": "#1C1C1C",
   "profundidade": 4,
   "altura": 3
  },
  "Kotobuki Artesanato e Presentes": {
   "tipo": "box_aberto_balcao",
-  "fachada": "#A0764A",
+  "fachada": "#F2F2F2",
   "letreiro": "#A0764A",
-  "texto": "#1A1A1A",
+  "texto": "#1C1C1C",
   "profundidade": 4,
   "altura": 3
  },
  "Relojoaria Dajuki": {
-  "tipo": "outro",
+  "tipo": "loja_fechada_porta_enrolar",
   "fachada": "#F2F2F2",
-  "letreiro": "#F2F2F2",
-  "texto": "#1A1A1A",
+  "letreiro": "#FFFFFF",
+  "texto": "#1C1C1C",
   "profundidade": 4,
   "altura": 3
  },
  "Box's Celulares": {
-  "tipo": "outro",
-  "fachada": "#1E2F6B",
-  "letreiro": "#1E2F6B",
-  "texto": "#F2F2F2",
+  "tipo": "loja_fechada_porta_enrolar",
+  "fachada": "#F2F2F2",
+  "letreiro": "#1E3A7B",
+  "texto": "#FFFFFF",
   "profundidade": 4,
   "altura": 3
  },
  "Calçados Vila Rica": {
-  "tipo": "outro",
-  "fachada": "#F2F2F2",
-  "letreiro": "#F2F2F2",
-  "texto": "#1A1A1A",
+  "tipo": "loja_fechada_porta_enrolar",
+  "fachada": "#D8D8D4",
+  "letreiro": "#F4F4F4",
+  "texto": "#1C1C1C",
   "profundidade": 4,
   "altura": 3
  },
@@ -951,18 +963,18 @@
   "altura": 3
  },
  "Quadrolândia": {
-  "tipo": "outro",
+  "tipo": "loja_fechada_porta_enrolar",
   "fachada": "#F2F2F2",
-  "letreiro": "#F2F2F2",
-  "texto": "#1A1A1A",
+  "letreiro": "#F4F4F4",
+  "texto": "#2B2B2B",
   "profundidade": 4,
   "altura": 3
  },
  "Ki Bolada Loteria": {
   "tipo": "loja_fechada_porta_enrolar",
-  "fachada": "#1F5FA8",
-  "letreiro": "#1F5FA8",
-  "texto": "#1F5FA8",
+  "fachada": "#F2F2F2",
+  "letreiro": "#FFFFFF",
+  "texto": "#1F4FA0",
   "profundidade": 4,
   "altura": 3,
   "balcao": "alvenaria #F2F2F2"
@@ -977,36 +989,44 @@
   "altura": 3
  },
  "Artigos Orientais": {
-  "tipo": "outro",
-  "fachada": "#F2F2F2",
-  "letreiro": "#F2F2F2",
+  "tipo": "loja_fechada_porta_enrolar",
+  "fachada": "#C9A26B",
+  "letreiro": "#F2EEE6",
   "texto": "#B22222",
   "profundidade": 4,
   "altura": 3
  },
  "Salão de Cabeleireiro Unissex – Eurides": {
-  "tipo": "outro",
-  "letreiro": "#F2F2F2",
+  "tipo": "loja_fechada_porta_enrolar",
+  "letreiro": "#EDE8DC",
   "profundidade": 4,
-  "altura": 3
+  "altura": 3,
+  "fachada": "#F2F2F2",
+  "texto": "#1C1C1C"
  },
  "Rafa's – Ateliê de Costura": {
-  "tipo": "outro",
+  "tipo": "loja_fechada_porta_enrolar",
   "profundidade": 4,
-  "altura": 3
+  "altura": 3,
+  "fachada": "#F2F2F2",
+  "letreiro": "#C8642A",
+  "texto": "#FFFFFF"
  },
  "Ascesme": {
-  "tipo": "outro",
-  "fachada": "#CFE3E8",
+  "tipo": "loja_fechada_porta_enrolar",
+  "fachada": "#F2F2F2",
   "profundidade": 4,
-  "altura": 3
+  "altura": 3,
+  "letreiro": "#FFFFFF",
+  "texto": "#1E3A7B"
  },
  "Sapataria Rápida Capricho": {
   "tipo": "box_aberto_balcao",
-  "letreiro": "#5A3A22",
-  "texto": "#F2F2F2",
+  "letreiro": "#4A2F1E",
+  "texto": "#FFFFFF",
   "profundidade": 4,
-  "altura": 3
+  "altura": 3,
+  "fachada": "#F2F2F2"
  },
  "Loja de Presentes Mina de Ouro": {
   "tipo": "outro",
@@ -1016,51 +1036,111 @@
  },
  "Café do Jorge e da Aurea": {
   "tipo": "box_aberto_balcao",
-  "letreiro": "#F2F2F2",
-  "texto": "#F2F2F2",
+  "letreiro": "#E6DCC0",
+  "texto": "#5A3A22",
   "profundidade": 4,
   "altura": 3,
-  "balcao": "sim (material não identificado)"
+  "balcao": "sim (material não identificado)",
+  "fachada": "#8A6A4A"
  },
  "Pastelaria Curitiba": {
   "tipo": "box_aberto_balcao",
   "profundidade": 4,
   "altura": 3,
   "vitrine": true,
-  "balcao": "vidro #E8C21A"
+  "balcao": "vidro #E8C21A",
+  "fachada": "#D8CFC0",
+  "letreiro": "#3E6A8A",
+  "texto": "#FFFFFF"
  },
  "Max Dandy": {
   "tipo": "box_aberto_balcao",
-  "fachada": "#1F5FA8",
-  "letreiro": "#B22222",
-  "texto": "#B22222",
+  "fachada": "#F2F2F2",
+  "letreiro": "#C62828",
+  "texto": "#FFFFFF",
   "profundidade": 4,
   "altura": 3,
   "vitrine": true
  },
  "Box do Eliseu": {
   "tipo": "box_aberto_balcao",
-  "fachada": "#1F5FA8",
-  "letreiro": "#E8C21A",
+  "fachada": "#5A3A22",
+  "letreiro": "#FFFFFF",
   "profundidade": 4,
   "altura": 3,
-  "balcao": "alvenaria #5A3A22"
+  "balcao": "alvenaria #5A3A22",
+  "texto": "#C62828"
  },
  "Bonna Gourmet": {
   "tipo": "restaurante_com_mesas",
-  "fachada": "#B22222",
-  "letreiro": "#B22222",
-  "texto": "#1A1A1A",
+  "fachada": "#1A1A1A",
+  "letreiro": "#1A1A1A",
+  "texto": "#F28C28",
   "profundidade": 4,
   "altura": 3,
   "balcao": "alvenaria #5A3A22"
  },
  "Restaurante Takê": {
   "tipo": "box_aberto_balcao",
-  "fachada": "#F2F2F2",
-  "letreiro": "#F2F2F2",
-  "texto": "#1A1A1A",
+  "fachada": "#5A3A22",
+  "letreiro": "#FFFFFF",
+  "texto": "#1C1C1C",
   "profundidade": 4,
   "altura": 3
+ },
+ "Bazar Cotegipe": {
+  "fachada": "#F2F2F2",
+  "letreiro": "#1F5FA8",
+  "texto": "#FFFFFF"
+ },
+ "Restaurante Anarco": {
+  "fachada": "#8A6A4A",
+  "letreiro": "#3A2A1E",
+  "texto": "#FFFFFF"
+ },
+ "Okashi Sweets & Teas": {
+  "fachada": "#CFCFCB",
+  "letreiro": "#6B4A2E",
+  "texto": "#FFFFFF"
+ },
+ "Nico's Café Orgânico": {
+  "fachada": "#7F9F86",
+  "letreiro": "#7F9F86",
+  "texto": "#FFFFFF"
+ },
+ "Ninki Pastéis & Delícias": {
+  "fachada": "#E8C21A",
+  "letreiro": "#2B2B2B",
+  "texto": "#F2C200"
+ },
+ "Mister Dea": {
+  "fachada": "#C62828",
+  "letreiro": "#C62828",
+  "texto": "#FFFFFF"
+ },
+ "Curitiba Sua Linda": {
+  "fachada": "#FFFFFF",
+  "letreiro": "#FFFFFF",
+  "texto": "#1C1C1C"
+ },
+ "Fujii Cozinha Japonesa": {
+  "fachada": "#F2F2F2",
+  "letreiro": "#C62828",
+  "texto": "#FFFFFF"
+ },
+ "Restaurante Box Curitiba": {
+  "fachada": "#B5653F",
+  "letreiro": "#B5653F",
+  "texto": "#FFFFFF"
+ },
+ "Restaurante Al Almasor": {
+  "fachada": "#D8CFC0",
+  "letreiro": "#6B4A2E",
+  "texto": "#F2E8D0"
+ },
+ "Maia Box Sanduicheria": {
+  "fachada": "#F2F2F2",
+  "letreiro": "#8A1C1C",
+  "texto": "#FFFFFF"
  }
 }

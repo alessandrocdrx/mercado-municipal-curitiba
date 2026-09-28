@@ -1,10 +1,10 @@
 {
-  "title": "Praças Déa / 7 de Setembro · sul",
+  "title": "Praça Déa · Fujii e Box Curitiba",
   "floor": "superior",
   "position": {
-    "x": 45.53,
-    "y": -86.78,
-    "z": 1.6
+    "x": 42.78,
+    "y": -84.82,
+    "z": 3.1
   },
   "northYaw": 0,
   "moduleRadius": 28,
@@ -14,10 +14,10 @@
   },
   "links": [
     {
-      "to": "sup-dea-centro"
+      "to": "sup-p7-take"
     },
     {
-      "to": "sup-dea-oeste"
+      "to": "sup-dea-centro"
     }
   ],
   "generated": true

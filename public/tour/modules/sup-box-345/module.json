@@ -14,9 +14,10 @@
   },
   "media": {
     "placeholder": {
-      "color": "#F2F2F2",
-      "facade": "#F2F2F2",
-      "textColor": "#1A1A1A",
+      "color": "#F4F4F4",
+      "facade": "#D8D8D4",
+      "textColor": "#1C1C1C",
+      "closed": true,
       "label": "Calçados Vila Rica",
       "sublabel": "Calçados e moda · Box 345"
     }
@@ -29,5 +30,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "1ce562126557"
+  "autoHash": "716d95c7b77d"
 }

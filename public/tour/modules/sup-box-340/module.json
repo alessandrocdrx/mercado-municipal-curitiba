@@ -14,9 +14,10 @@
   },
   "media": {
     "placeholder": {
-      "color": "#F2F2F2",
+      "color": "#FFFFFF",
       "facade": "#F2F2F2",
-      "textColor": "#1A1A1A",
+      "textColor": "#1C1C1C",
+      "closed": true,
       "label": "Relojoaria Dajuki",
       "sublabel": "Consertos e costura · Box 340"
     }
@@ -29,5 +30,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "a8fd9fdfa208"
+  "autoHash": "3e10b835a8ee"
 }

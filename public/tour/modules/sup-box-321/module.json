@@ -14,9 +14,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#1F5FA8",
-      "facade": "#1F5FA8",
-      "textColor": "#1F5FA8",
+      "color": "#FFFFFF",
+      "facade": "#F2F2F2",
+      "textColor": "#1F4FA0",
       "closed": true,
       "label": "Ki Bolada Loteria",
       "sublabel": "Lotéricas · Box 321"
@@ -30,5 +30,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "a384a36369fb"
+  "autoHash": "e6a486e6fed2"
 }

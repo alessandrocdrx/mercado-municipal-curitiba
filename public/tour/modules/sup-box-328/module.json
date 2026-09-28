@@ -14,8 +14,10 @@
   },
   "media": {
     "placeholder": {
-      "color": "#2f5d50",
-      "facade": "#CFE3E8",
+      "color": "#FFFFFF",
+      "facade": "#F2F2F2",
+      "textColor": "#1E3A7B",
+      "closed": true,
       "label": "Ascesme",
       "sublabel": "Administração e serviços públicos · Box 328"
     }
@@ -29,5 +31,5 @@
     "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "18e3c2a869a6"
+  "autoHash": "01e2a39a8221"
 }

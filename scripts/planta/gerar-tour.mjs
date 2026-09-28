@@ -83,7 +83,7 @@ for (const pav of PAVIMENTOS) {
         placement: {
           floor: pav.id,
           ...toMeters(pav, frente),
-          z: banca ? 0.6 : 1.4,
+          z: (banca ? 0.6 : 1.4) + (grupo.base ?? 0),
           width: r2(larguraPx * pav.escala * 0.92),
           height: banca ? 1.2 : r2(clamp(com && VISUAL[com.nome]?.altura, 2.4, 3.5) ?? 2.8),
           depth: banca ? undefined : clamp(com && VISUAL[com.nome]?.profundidade, 1.2, 4),
@@ -137,7 +137,7 @@ for (const pav of PAVIMENTOS) {
     upsertScene(cena.id, {
       title: cena.titulo,
       floor: pav.id,
-      position: { ...toMeters(pav, cena.em), z: 1.6 },
+      position: { ...toMeters(pav, cena.em), z: r2(1.6 + (cena.base ?? 0)) },
       northYaw: 0,
       moduleRadius: 28,
       // sem foto: o app monta a maquete 3D. Para usar foto 360°, preencha
@@ -180,11 +180,7 @@ writeJson(path.join(ROOT, 'tour.json'), {
     covered: AREA_COBERTA[p.id] && {
       from: toMeters(p, AREA_COBERTA[p.id].de), to: toMeters(p, AREA_COBERTA[p.id].ate),
     },
-    props: p.tour3d && (MOBILIARIO[p.id] ?? []).map(({ em: [X, Y], r, altura, ...resto }) => {
-      const { o, ex, ey } = p.tour3d;
-      const esc = Math.hypot(ex[0], ex[1]); // tour 3D → metros da planta
-      return limpa({ ...resto, x: r2(o[0] + ex[0] * X + ey[0] * Y), y: r2(o[1] + ex[1] * X + ey[1] * Y), r: r && r2(r * esc), altura });
-    }),
+    props: p.tour3d && mobiliario(p),
     streets: (RUAS[p.id] ?? []).map((r) => ({
       name: r.nome,
       from: toMeters(p, r.de), to: toMeters(p, r.ate),
@@ -317,3 +313,45 @@ function pick(obj, keys) {
   return Object.fromEntries(keys.filter((k) => obj[k] !== undefined).map((k) => [k, obj[k]]));
 }
 
+
+/**
+ * Mobiliário do tour 3D (coordenadas do tour em m) → metros da planta. Grupos de
+ * mesas viram mesas individuais numa grade; mesas a menos de 1,1 m de um caminho
+ * entre pontos de vista são retiradas (ninguém anda por cima de mesa).
+ */
+function mobiliario(p) {
+  const { o, ex, ey } = p.tour3d;
+  const esc = Math.hypot(ex[0], ex[1]);
+  const tm = ([X, Y]) => ({ x: r2(o[0] + ex[0] * X + ey[0] * Y), y: r2(o[1] + ex[1] * X + ey[1] * Y) });
+  const pos = Object.fromEntries(CENAS[p.id].map((c) => [c.id, toMeters(p, c.em)]));
+  const caminhos = LIGACOES.filter(([a, b]) => pos[a] && pos[b]).map(([a, b]) => [pos[a], pos[b]]);
+  const perto = (q) => caminhos.some(([a, b]) => {
+    const dx = b.x - a.x, dy = b.y - a.y;
+    const k = Math.max(0, Math.min(1, ((q.x - a.x) * dx + (q.y - a.y) * dy) / (dx * dx + dy * dy || 1)));
+    return Math.hypot(a.x + dx * k - q.x, a.y + dy * k - q.y) < 1.1;
+  });
+  const out = [];
+  for (const item of MOBILIARIO[p.id] ?? []) {
+    const { tipo, em, de, ate, pontos, r, n, ...resto } = item;
+    if (tipo === 'mesas') {
+      const w = Math.abs(ate[0] - de[0]), h = Math.abs(ate[1] - de[1]);
+      const cols = Math.max(1, Math.round(Math.sqrt(n * w / (h || 1))));
+      const rows = Math.max(1, Math.ceil(n / cols));
+      for (let i = 0; i < cols; i++) {
+        for (let k = 0; k < rows; k++) {
+          const q = tm([de[0] + (w * (i + 0.5)) / cols * Math.sign(ate[0] - de[0] || 1), de[1] + (h * (k + 0.5)) / rows * Math.sign(ate[1] - de[1] || 1)]);
+          if (!perto(q)) out.push(limpa({ tipo: 'mesa', ...q, r: r && r2(r), ...resto }));
+        }
+      }
+    } else if (de) {
+      const a = tm(de), b = tm(ate);
+      out.push(limpa({ tipo, ...a, x2: b.x, y2: b.y, ...resto }));
+    } else if (pontos) {
+      const ps = pontos.map(tm);
+      out.push(limpa({ tipo, ...ps[0], pontos: ps.map((q) => [q.x, q.y]), ...resto }));
+    } else {
+      out.push(limpa({ tipo, ...tm(em), r: r && r2(r * esc), ...resto }));
+    }
+  }
+  return out;
+}

@@ -13,7 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#b0561d",
+      "color": "#2B2B2B",
+      "facade": "#E8C21A",
+      "textColor": "#F2C200",
       "label": "Ninki Pastéis & Delícias",
       "sublabel": "Lanchonete e restaurante · Box 15"
     }
@@ -28,5 +30,5 @@
     "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "6cf46fe68d68"
+  "autoHash": "7b1132ecd2e4"
 }

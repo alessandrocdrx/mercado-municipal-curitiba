@@ -13,7 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#6b3a2a",
+      "color": "#6B4A2E",
+      "facade": "#CFCFCB",
+      "textColor": "#FFFFFF",
       "label": "Okashi Sweets & Teas",
       "sublabel": "Doces e chocolates · Box 375"
     }
@@ -26,5 +28,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "0ac510735395"
+  "autoHash": "23ef07920e83"
 }

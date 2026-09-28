@@ -14,7 +14,10 @@
   },
   "media": {
     "placeholder": {
-      "color": "#2f7d32",
+      "color": "#2E6B4F",
+      "facade": "#C9A26B",
+      "textColor": "#FFFFFF",
+      "closed": true,
       "label": "Botané Sustentável",
       "sublabel": "Orgânicos · Box 513"
     }
@@ -27,5 +30,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "31cb02097e92"
+  "autoHash": "caca21a7b3ec"
 }

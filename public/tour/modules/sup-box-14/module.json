@@ -14,9 +14,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#B22222",
-      "facade": "#1F5FA8",
-      "textColor": "#B22222",
+      "color": "#C62828",
+      "facade": "#F2F2F2",
+      "textColor": "#FFFFFF",
       "vitrine": true,
       "label": "Max Dandy",
       "sublabel": "Lanchonete e restaurante · Box 14"
@@ -30,5 +30,5 @@
     "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "d117f93fca77"
+  "autoHash": "2784492804c4"
 }

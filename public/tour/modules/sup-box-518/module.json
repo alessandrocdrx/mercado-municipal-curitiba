@@ -14,8 +14,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#b0561d",
-      "facade": "#CFE3E8",
+      "color": "#FFFFFF",
+      "facade": "#EDE8DC",
+      "textColor": "#1F4D3A",
       "label": "Restaurante Ohana",
       "sublabel": "Lanchonete e restaurante · Box 518"
     }
@@ -28,5 +29,5 @@
     "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "c97b926abbb0"
+  "autoHash": "5aab71c9999f"
 }

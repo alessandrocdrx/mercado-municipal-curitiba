@@ -14,8 +14,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#F2F2F2",
-      "textColor": "#F2F2F2",
+      "color": "#E6DCC0",
+      "facade": "#8A6A4A",
+      "textColor": "#5A3A22",
       "label": "Café do Jorge e da Aurea",
       "sublabel": "Lanchonete e restaurante · Box 16"
     }
@@ -30,5 +31,5 @@
     "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "db5a2091125d"
+  "autoHash": "d9dabe407cdd"
 }

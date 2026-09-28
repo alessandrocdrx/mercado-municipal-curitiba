@@ -1,9 +1,9 @@
 {
-  "title": "Praças Déa / 7 de Setembro · leste",
+  "title": "Praça 7 de Setembro · Takê e Pastelaria",
   "floor": "superior",
   "position": {
-    "x": 61.12,
-    "y": -85.69,
+    "x": 62.13,
+    "y": -86.27,
     "z": 1.6
   },
   "northYaw": 0,
@@ -14,10 +14,10 @@
   },
   "links": [
     {
-      "to": "sup-dea-sul"
+      "to": "sup-rosa-4"
     },
     {
-      "to": "sup-rosa-4"
+      "to": "sup-dea-sul"
     },
     {
       "to": "sup-galeria-0"

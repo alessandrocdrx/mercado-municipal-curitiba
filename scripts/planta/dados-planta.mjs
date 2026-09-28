@@ -38,6 +38,7 @@ export const PAVIMENTOS = [
     rumoCima: 66,
     ancora: { px: [978, 478], lonLat: [-49.2565894, -25.4346528] }, // centro do setor de orgânicos = centro do prédio "Mercado Municipal - Orgânicos"
     inicio: 'sup-escada',
+    tour3d: {"o": [63.17751, -12.47285], "ex": [-0.8709, -0.03092], "ey": [0.11189, -0.97151]},
   },
   {
     // 3º nível (administração e auditório): mesmo referencial do pavimento superior
@@ -137,11 +138,7 @@ export const BOXES = {
     fileira(seq(18, 15), [268, 620], [402, 620], 0),
     fileira(seq(14, 11), [515, 625], [645, 625], 0),
     box('19', [692, 517], 180),
-    fileira(seq(1, 4), [718, 805], [835, 805], 180),
-    box('05', [912, 808], 180, { largura: 110 }),
     // entre o 10 e o 08 fica a escada para o hall (não há box 09 no tour 3D)
-    box('10', [657, 1222], 0, { largura: 38 }), box('08', [737, 1222], 0, { largura: 38 }), box('07', [778, 1222], 0, { largura: 38 }),
-    box('06', [920, 1230], 270, { largura: 70 }),
     // Área verde (bancas 501–512) e boxes 513–522
     ...[[238, '510', '512'], [278, '509', '511'], [360, '506', '508'], [402, '505', '507'], [486, '502', '504'], [528, '501', '503']]
       .flatMap(([y, esq, dir]) => [box(esq, [975, y], 270, { tipo: 'banca', largura: 36 }), box(dir, [1012, y], 90, { tipo: 'banca', largura: 36 })]),
@@ -149,12 +146,15 @@ export const BOXES = {
     fileira(seq(522, 519), [1125, 430], [1120, 585], 270),
     fileira(['516', '517'], [960, 730], [1005, 730], 0),
     box('518', [1100, 725], 0, { largura: 120 }),
-    // Áreas que a planta afixada não desenha, com as posições do tour 3D oficial
+    // Praças 7 de Setembro (oeste) e Déa (leste) e galeria de restaurantes: posições
+    // e larguras medidas no levantamento do piso 2 (tour 3D oficial, p2_lojas.csv)
     ...[
-      ['anarco', [474, 902], 135, 'Praças Déa / 7 de Setembro'], ['fujii', [511, 1216], 0, 'Praças Déa / 7 de Setembro'],
-      ['mister-dea', [806, 741], 225, 'Praças Déa / 7 de Setembro'], ['bonna', [455, 1060], 90, 'Praças Déa / 7 de Setembro'],
-      ['201', [1188, 1305], 0, 'Galeria de restaurantes'], ['almasor', [1501, 1300], 0, 'Galeria de restaurantes'],
-    ].map(([id, em, facing, area]) => box(id, em, facing, { area, largura: 60, ...(!/^\d/.test(id) && { rotulo: area }) })),
+      ['take', [845, 1272], 0, 48, 'Praça 7 de Setembro'], ['pastelaria', [794, 1253], 15, 42, 'Praça 7 de Setembro'],
+      ['mister-dea', [903, 842], 195, 102, 'Praça 7 de Setembro'], ['sua-linda', [720, 751], 120, 34, 'Praças Déa / 7 de Setembro'],
+      ['fitoterapico', [666, 723], 120, 31, 'Praças Déa / 7 de Setembro'], ['bonna', [591, 866], 180, 120, 'Praça Déa', 1.5],
+      ['anarco', [461, 866], 145, 48, 'Praça Déa', 1.5], ['fujii', [524, 1249], 20, 48, 'Praça Déa', 1.5], ['box-curitiba', [616, 1246], 350, 60, 'Praça Déa', 1.5],
+      ['201', [1188, 1305], 0, 60, 'Galeria de restaurantes'], ['almasor', [1501, 1300], 0, 60, 'Galeria de restaurantes'],
+    ].map(([id, em, facing, largura, area, base]) => box(id, em, facing, { area, largura, base, ...(!/^\d/.test(id) && { rotulo: area }) })),
   ],
 };
 
@@ -266,20 +266,20 @@ export const CENAS = {
     { id: 'sup-passagem', titulo: 'Passagem para a área rosa', em: [745, 560], cor: CINZA },
     { id: 'sup-rosa-desce', titulo: 'Área rosa · descida', em: [665, 790], cor: ROSA },
     { id: 'sup-rosa-2', titulo: 'Área rosa · centro', em: [700, 700], cor: ROSA },
-    { id: 'sup-rosa-3', titulo: 'Área rosa · corredor', em: [760, 920], cor: ROSA },
-    { id: 'sup-rosa-4', titulo: 'Área rosa · sul', em: [760, 1130], cor: ROSA },
+    { id: 'sup-rosa-3', titulo: 'Praça 7 de Setembro · Mister Dea', em: [826, 927], cor: ROSA },
+    { id: 'sup-rosa-4', titulo: 'Praça 7 de Setembro · centro', em: [841, 1061], cor: ROSA },
+    { id: 'sup-p7-take', titulo: 'Praça 7 de Setembro · Takê e Pastelaria', em: [857, 1190], cor: ROSA },
     { id: 'sup-verde-porta-d', titulo: 'Área verde · Porta D', em: [870, 240], cor: VERDE_ESC },
     { id: 'sup-verde-1', titulo: 'Área verde · centro', em: [900, 440], cor: VERDE_ESC },
     { id: 'sup-verde-2', titulo: 'Área verde · leste', em: [1055, 470], cor: VERDE_ESC },
     { id: 'sup-verde-3', titulo: 'Área verde · sul', em: [900, 640], cor: VERDE_ESC },
-    { id: 'sup-dea-norte', titulo: 'Praças Déa / 7 de Setembro · norte', em: [552, 856], cor: ROSA },
-    { id: 'sup-dea-centro', titulo: 'Praças Déa / 7 de Setembro · vão sobre o hall', em: [538, 1045], cor: ROSA },
-    { id: 'sup-dea-sul', titulo: 'Praças Déa / 7 de Setembro · sul', em: [628, 1197], cor: ROSA },
-    { id: 'sup-dea-oeste', titulo: 'Praças Déa / 7 de Setembro · leste', em: [843, 1182], cor: ROSA },
-    { id: 'sup-galeria-1', titulo: 'Galeria de restaurantes · 1', em: [1056, 1262], cor: ROSA },
-    { id: 'sup-galeria-0', titulo: 'Galeria de restaurantes · acesso', em: [860, 1300], cor: ROSA },
-    { id: 'sup-galeria-2', titulo: 'Galeria de restaurantes · 2', em: [1333, 1246], cor: ROSA },
-    { id: 'sup-galeria-3', titulo: 'Galeria de restaurantes · 3', em: [1525, 1239], cor: ROSA },
+    { id: 'sup-dea-norte', titulo: 'Praça Déa · Bonna Gourmet e Anarco', em: [572, 935], cor: ROSA, base: 1.5 },
+    { id: 'sup-dea-centro', titulo: 'Praça Déa · centro', em: [587, 1057], cor: ROSA, base: 1.5 },
+    { id: 'sup-dea-sul', titulo: 'Praça Déa · Fujii e Box Curitiba', em: [590, 1170], cor: ROSA, base: 1.5 },
+    { id: 'sup-galeria-1', titulo: 'Galeria de restaurantes · 1', em: [1056, 1271], cor: ROSA },
+    { id: 'sup-galeria-0', titulo: 'Galeria de restaurantes · acesso', em: [960, 1258], cor: ROSA },
+    { id: 'sup-galeria-2', titulo: 'Galeria de restaurantes · 2', em: [1333, 1271], cor: ROSA },
+    { id: 'sup-galeria-3', titulo: 'Galeria de restaurantes · 3', em: [1525, 1271], cor: ROSA },
   ],
 };
 
@@ -320,15 +320,49 @@ export const LIGACOES = [
   ['sup-rosa-2', 'sup-verde-3'],
   ...cadeia(['sup-verde-porta-d', 'sup-verde-1', 'sup-verde-3']),
   ['sup-verde-1', 'sup-verde-2'],
-  ['sup-rosa-3', 'sup-dea-norte'],
-  ...cadeia(['sup-dea-norte', 'sup-dea-centro', 'sup-dea-sul', 'sup-dea-oeste', 'sup-rosa-4']),
-  ...cadeia(['sup-dea-oeste', 'sup-galeria-0', 'sup-galeria-1', 'sup-galeria-2', 'sup-galeria-3']),
+  // Praça 7 de Setembro ↔ Praça Déa pelas duas escadas (desnível de 1,5 m)
+  ['sup-rosa-4', 'sup-p7-take'], ['sup-rosa-3', 'sup-dea-norte'], ['sup-p7-take', 'sup-dea-sul'],
+  ...cadeia(['sup-dea-norte', 'sup-dea-centro', 'sup-dea-sul']),
+  ...cadeia(['sup-p7-take', 'sup-galeria-0', 'sup-galeria-1', 'sup-galeria-2', 'sup-galeria-3']),
   ...cadeia(['n3-gerencia', 'n3-oeste', 'n3-auditorio']),
 ];
 
 // Mobiliário e elementos do piloto (tour 3D oficial, piloto_mobiliario.csv e
 // piloto_escada.csv), em coordenadas do tour 3D (X, Y em m). Posições estimadas.
 export const MOBILIARIO = {
+  // Piso 2: levantamento p2_*.csv (tour 3D oficial). Posições estimadas (±1–2 m).
+  superior: [
+    // Praça Déa: mezanino 1,5 m acima da Praça 7 de Setembro, piso de granito e tijolo aparente
+    { tipo: 'plataforma', pontos: [[22, 48], [43, 48], [43, 79], [22, 79]], altura: 1.5, cor: '#8e8e8a', lateral: '#b5653f' },
+    { tipo: 'escada', de: [20, 55.3], ate: [23.6, 55.2], altura: 1.5, largura: 2 },
+    { tipo: 'escada', de: [19.4, 74.4], ate: [23.3, 74.5], altura: 1.5, largura: 2 },
+    { tipo: 'guarda', de: [22, 57.5], ate: [22, 72], base: 1.5 },
+    { tipo: 'mesas', de: [25, 57], ate: [41, 73], n: 42, formato: 'retangular', cor: '#4a2f1e', cadeiras: 4, corCadeira: '#4a2f1e', base: 1.5 },
+    { tipo: 'pilar', em: [34, 57], altura: 5, base: 1.5 },
+    { tipo: 'pilar', em: [34, 68], altura: 5, base: 1.5 },
+    { tipo: 'placa', em: [32, 65], z: 4.2, texto: 'Praça Déa', facing: 90, cor: '#1f4d3a', base: 1.5 },
+    // Praça 7 de Setembro: mesas com toalha preta e o poço da escada junto ao Takê
+    { tipo: 'mesas', de: [1, 53], ate: [16.5, 76], n: 48, formato: 'retangular', cor: '#1a1a1a', cadeiras: 4, corCadeira: '#1a1a1a' },
+    { tipo: 'vao', pontos: [[17, 60], [19.5, 60], [19.5, 68], [17, 68]] },
+    { tipo: 'placa', em: [11, 66], z: 4.2, texto: 'Praça 7 de Setembro', facing: 90, cor: '#1f4d3a' },
+    // Praça de Alimentação Karan
+    { tipo: 'mesas', de: [20, 21], ate: [51, 29], n: 36, formato: 'retangular', cor: '#3a3a3a', cadeiras: 4, corCadeira: '#c9a26b' },
+    { tipo: 'guarda', de: [28, 19], ate: [40, 19] },
+    { tipo: 'placa', em: [30, 26], z: 5, texto: 'Praça de Alimentação', subtexto: 'Manoel Carlos Karan', facing: 0, largura: 4, cor: '#5b5470' },
+    // Galeria de lojas (setor 300)
+    { tipo: 'guarda', de: [17, 18.5], ate: [44, 18.5] },
+    { tipo: 'mesas', de: [49, 12], ate: [51, 17], n: 4, r: 0.35, alta: true, cor: '#3a2a1e', cadeiras: 3, corCadeira: '#1a1a1a', banquetas: true },
+    // Setor de Orgânicos
+    { tipo: 'mesas', de: [-13, 29], ate: [-1, 38], n: 18, r: 0.4, cor: '#e8e6e0', cadeiras: 3, corCadeira: '#1a1a1a' },
+    { tipo: 'pilar', em: [4.5, 28], altura: 3.5 },
+    { tipo: 'pilar', em: [4.5, 33], altura: 3.5 },
+    { tipo: 'guarda', de: [8, 20], ate: [8, 45] },
+    { tipo: 'vaso', em: [-16, 35] },
+    { tipo: 'placa', em: [-6, 35], z: 3.6, texto: 'Orgânicas', subtexto: 'Praça de Alimentação', facing: 90, cor: '#8a8a1f' },
+    // Galeria de restaurantes sobre a R. General Carneiro
+    { tipo: 'guarda', de: [-48, 80], ate: [6, 80] },
+    { tipo: 'mesas', de: [-47, 80.5], ate: [5, 81.7], n: 22, formato: 'retangular', cor: '#3a3a3a', cadeiras: 2, corCadeira: '#1a1a1a' },
+  ],
   inferior: [
     { tipo: 'praca', em: [37.5, 64.5], r: 6.5, cor: '#B9B4AC', borda: '#A85A5A', degraus: 3 },
     { tipo: 'mesa', em: [33.5, 53.3], r: 0.45, cor: '#E6DCC0', cadeiras: 4, corCadeira: '#4A2F1E' },

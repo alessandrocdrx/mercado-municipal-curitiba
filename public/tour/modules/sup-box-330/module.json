@@ -14,8 +14,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#1A1A1A",
-      "textColor": "#1A1A1A",
+      "color": "#5A3A22",
+      "facade": "#8A6A4A",
+      "textColor": "#FFFFFF",
       "closed": true,
       "label": "Tabacaria Trevo",
       "sublabel": "Revistaria e tabacaria · Box 330"
@@ -29,5 +30,5 @@
     "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "c5e5ae78a256"
+  "autoHash": "e4f352fddcfd"
 }

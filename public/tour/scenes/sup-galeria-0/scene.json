@@ -2,8 +2,8 @@
   "title": "Galeria de restaurantes · acesso",
   "floor": "superior",
   "position": {
-    "x": 62.35,
-    "y": -94.25,
+    "x": 69.6,
+    "y": -91.2,
     "z": 1.6
   },
   "northYaw": 0,
@@ -14,7 +14,7 @@
   },
   "links": [
     {
-      "to": "sup-dea-oeste"
+      "to": "sup-p7-take"
     },
     {
       "to": "sup-galeria-1"

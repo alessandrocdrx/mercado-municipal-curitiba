@@ -1,0 +1,31 @@
+{
+  "type": "box",
+  "title": "Espaço Fitoterápico",
+  "placement": {
+    "floor": "superior",
+    "x": 49.29,
+    "y": -53,
+    "z": 1.4,
+    "width": 2.07,
+    "height": 3,
+    "depth": 4,
+    "facing": 120,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "#4a5a73",
+      "label": "Espaço Fitoterápico",
+      "sublabel": "Variedades e serviços · Praças Déa / 7 de Setembro"
+    }
+  },
+  "info": {
+    "category": "Variedades e serviços",
+    "location": "Praças Déa / 7 de Setembro · Praças Déa / 7 de Setembro · Pavimento superior",
+    "color": "#4a5a73",
+    "note": "Só o rótulo aparece no tour 3D.",
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
+  },
+  "generated": true,
+  "autoHash": "9b14025a7817"
+}

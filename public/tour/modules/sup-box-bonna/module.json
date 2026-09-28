@@ -3,30 +3,30 @@
   "title": "Bonna Gourmet",
   "placement": {
     "floor": "superior",
-    "x": 34.15,
-    "y": -76.85,
-    "z": 1.4,
-    "width": 4,
+    "x": 42.85,
+    "y": -63.94,
+    "z": 2.9,
+    "width": 8,
     "height": 3,
     "depth": 4,
-    "facing": 90,
+    "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#B22222",
-      "facade": "#B22222",
-      "textColor": "#1A1A1A",
+      "color": "#1A1A1A",
+      "facade": "#1A1A1A",
+      "textColor": "#F28C28",
       "label": "Bonna Gourmet",
-      "sublabel": "Lanchonete e restaurante · Praças Déa / 7 de Setembro"
+      "sublabel": "Lanchonete e restaurante · Praça Déa"
     }
   },
   "info": {
     "category": "Lanchonete e restaurante",
-    "location": "Praças Déa / 7 de Setembro · Praças Déa / 7 de Setembro · Pavimento superior",
+    "location": "Praça Déa · Praça Déa · Pavimento superior",
     "color": "#b0561d",
     "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "6837e686f7f6"
+  "autoHash": "dc8e54331d9c"
 }

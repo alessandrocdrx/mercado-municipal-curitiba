@@ -15,8 +15,8 @@
   "media": {
     "placeholder": {
       "color": "#1F4D3A",
-      "facade": "#1F4D3A",
-      "textColor": "#F2F2F2",
+      "facade": "#8A6A4A",
+      "textColor": "#FFFFFF",
       "vitrine": true,
       "label": "Biossana Orgânicos",
       "sublabel": "Orgânicos · Box 520"
@@ -30,5 +30,5 @@
     "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "a19f8592f1d5"
+  "autoHash": "b20f430af25b"
 }

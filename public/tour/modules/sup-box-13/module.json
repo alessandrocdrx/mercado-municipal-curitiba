@@ -14,8 +14,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#E8C21A",
-      "facade": "#1F5FA8",
+      "color": "#FFFFFF",
+      "facade": "#5A3A22",
+      "textColor": "#C62828",
       "label": "Box do Eliseu",
       "sublabel": "Lanchonete e restaurante · Box 13"
     }
@@ -30,5 +31,5 @@
     "source": "site oficial (via busca). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "1428034ba733"
+  "autoHash": "7531c9735c8b"
 }

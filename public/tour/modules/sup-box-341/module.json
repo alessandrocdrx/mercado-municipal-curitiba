@@ -14,9 +14,10 @@
   },
   "media": {
     "placeholder": {
-      "color": "#1E2F6B",
-      "facade": "#1E2F6B",
-      "textColor": "#F2F2F2",
+      "color": "#1E3A7B",
+      "facade": "#F2F2F2",
+      "textColor": "#FFFFFF",
+      "closed": true,
       "label": "Box's Celulares",
       "sublabel": "Consertos e costura · Box 341"
     }
@@ -30,5 +31,5 @@
     "source": "guia público (applocal). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "825d3b541df5"
+  "autoHash": "616f998671ed"
 }

@@ -3,30 +3,32 @@
   "title": "Pastelaria Curitiba",
   "placement": {
     "floor": "superior",
-    "x": 53.43,
-    "y": -87.43,
+    "x": 57.87,
+    "y": -89.72,
     "z": 1.4,
-    "width": 2.53,
+    "width": 2.8,
     "height": 3,
     "depth": 4,
-    "facing": 0,
+    "facing": 15,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#b0561d",
+      "color": "#3E6A8A",
+      "facade": "#D8CFC0",
+      "textColor": "#FFFFFF",
       "vitrine": true,
       "label": "Pastelaria Curitiba",
-      "sublabel": "Lanchonete e restaurante · Box 08"
+      "sublabel": "Lanchonete e restaurante · Praça 7 de Setembro"
     }
   },
   "info": {
     "category": "Lanchonete e restaurante",
-    "location": "Box 08 · Pavimento superior",
+    "location": "Praça 7 de Setembro · Praça 7 de Setembro · Pavimento superior",
     "color": "#b0561d",
     "phone": "(41) 99734-9001 · (41) 3363-0522",
     "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "4fc57666dbfe"
+  "autoHash": "e7d63a471924"
 }

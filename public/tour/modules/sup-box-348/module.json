@@ -13,7 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#5a4636",
+      "color": "#1F5FA8",
+      "facade": "#F2F2F2",
+      "textColor": "#FFFFFF",
       "label": "Bazar Cotegipe",
       "sublabel": "Revistaria e tabacaria · Box 348"
     }
@@ -26,5 +28,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "ce46fbc92224"
+  "autoHash": "764ac1d9bc2a"
 }

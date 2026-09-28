@@ -15,8 +15,8 @@
   "media": {
     "placeholder": {
       "color": "#1F4D3A",
-      "facade": "#1F4D3A",
-      "textColor": "#F2F2F2",
+      "facade": "#EDEAE3",
+      "textColor": "#FFFFFF",
       "label": "Cativa Natureza",
       "sublabel": "Orgânicos · Box 514"
     }
@@ -31,5 +31,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "e3f589b0e029"
+  "autoHash": "5a6ec2bb1fc7"
 }

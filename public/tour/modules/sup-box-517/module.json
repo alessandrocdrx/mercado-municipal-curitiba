@@ -14,7 +14,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#2f7d32",
+      "color": "#7F9F86",
+      "facade": "#7F9F86",
+      "textColor": "#FFFFFF",
       "label": "Arte Verde Comida Orgânica",
       "sublabel": "Orgânicos · Box 517"
     }
@@ -27,5 +29,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "15fb2e5e2985"
+  "autoHash": "9caa0ee56c85"
 }

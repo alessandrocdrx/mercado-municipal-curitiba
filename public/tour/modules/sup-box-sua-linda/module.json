@@ -1,0 +1,32 @@
+{
+  "type": "box",
+  "title": "Curitiba Sua Linda",
+  "placement": {
+    "floor": "superior",
+    "x": 53.2,
+    "y": -55.03,
+    "z": 1.4,
+    "width": 2.27,
+    "height": 2.8,
+    "facing": 120,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "#FFFFFF",
+      "facade": "#FFFFFF",
+      "textColor": "#1C1C1C",
+      "label": "Curitiba Sua Linda",
+      "sublabel": "Presentes e artesanato · Praças Déa / 7 de Setembro"
+    }
+  },
+  "info": {
+    "category": "Presentes e artesanato",
+    "location": "Praças Déa / 7 de Setembro · Praças Déa / 7 de Setembro · Pavimento superior",
+    "color": "#8a4f7d",
+    "note": "Galeria do pavimento superior, entre a área rosa e o setor de orgânicos. Só o rótulo aparece no tour 3D.",
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
+  },
+  "generated": true,
+  "autoHash": "f7236c651a64"
+}

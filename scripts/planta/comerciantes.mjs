@@ -199,7 +199,7 @@ export const COMERCIANTES = [
   c('Okashi Sweets & Teas', 'doces', null, { boxes: sb(375), telefone: '(41) 3254-7738' }),
   c('Box do Eliseu', 'lanchonete', 'box-do-eliseu', { boxes: sb(12, 13), descricao: 'Há 39 anos no Mercado: comida caseira, pastéis, sanduíches, sucos e café. Famoso pela almôndega de carne.', obs: 'Boxes 12–13 do pavimento inferior são do Celeiro Municipal; o Eliseu foi posto na praça de alimentação.', fonte: 'site oficial (via busca)' }),
   c('Restaurante Anarco', 'lanchonete', 'restaurante-anarco', { boxes: sb('anarco'), telefone: '(41) 3029-6154', descricao: 'Cozinha italiana, fundado em 1991.', obs: 'No tour 3D oficial fica no mezanino das praças de alimentação Déa / 7 de Setembro, área que a planta afixada não desenha.', fonte: TOUR3D }),
-  c('Restaurante Box Curitiba', 'lanchonete', 'restaurante-box-curitiba', { boxes: sb(10), telefone: '(41) 3015-8240', descricao: 'Massas, risotos e saladas.', obs: 'Posição do tour 3D oficial (antes assumida no box 19).', fonte: TOUR3D }),
+  c('Restaurante Box Curitiba', 'lanchonete', 'restaurante-box-curitiba', { boxes: sb('box-curitiba'), telefone: '(41) 3015-8240', descricao: 'Massas, risotos e saladas.', obs: 'Posição do tour 3D oficial (antes assumida no box 19).', fonte: TOUR3D }),
 
   // ======================= pavimento superior · setor de orgânicos (501–522)
   c("Nico's Empório Orgânico", 'organicos', 'nicos-emporio-organico', { boxes: sbn(501) }),
@@ -252,13 +252,13 @@ export const COMERCIANTES = [
   c('Lule Salão de Cabelos', 'beleza', null, { boxes: sb(318), telefone: '(41) 99644-2203', fonte: TOUR3D }),
   c('Ascesme', 'institucional', null, { boxes: sb(328), telefone: '(41) 3363-3764', descricao: 'Associação dos comerciantes do Mercado Municipal.', fonte: TOUR3D }),
   c('Max Dandy', 'lanchonete', null, { boxes: sb(14), telefone: '(41) 98457-8041', fonte: TOUR3D }),
-  c('Espaço Fitoterápico', 'servicos', null, { boxes: sb(11), obs: 'Só o rótulo aparece no tour 3D.', fonte: TOUR3D }),
+  c('Espaço Fitoterápico', 'servicos', null, { boxes: sb('fitoterapico'), obs: 'Só o rótulo aparece no tour 3D.', fonte: TOUR3D }),
   c('Bonna Gourmet', 'lanchonete', null, { boxes: sb('bonna'), fonte: TOUR3D }),
-  c('Pastelaria Curitiba', 'lanchonete', null, { boxes: sb(8), telefone: '(41) 99734-9001 · (41) 3363-0522', fonte: TOUR3D }),
+  c('Pastelaria Curitiba', 'lanchonete', null, { boxes: sb('pastelaria'), telefone: '(41) 99734-9001 · (41) 3363-0522', fonte: TOUR3D }),
   // fora da planta afixada (áreas que ela não desenha)
   c('Fujii Cozinha Japonesa', 'lanchonete', null, { boxes: sb('fujii'), telefone: '(41) 3114-8393', obs: 'Praças de alimentação Déa / 7 de Setembro, a oeste dos boxes 07–10 do pavimento superior.', fonte: TOUR3D }),
   c('Mister Dea', 'lanchonete', null, { boxes: sb('mister-dea'), telefone: '(41) 3264-4911 · (41) 98832-0583', obs: 'Praças de alimentação Déa / 7 de Setembro, junto aos boxes 01–04 do pavimento superior.', fonte: TOUR3D }),
-  c('Curitiba Sua Linda', 'presentes', null, { obs: 'Galeria do pavimento superior, entre a área rosa e o setor de orgânicos. Só o rótulo aparece no tour 3D.', fonte: TOUR3D }),
+  c('Curitiba Sua Linda', 'presentes', null, { boxes: sb('sua-linda'), obs: 'Galeria do pavimento superior, entre a área rosa e o setor de orgânicos. Só o rótulo aparece no tour 3D.', fonte: TOUR3D }),
   c('Restaurante Al Almasor', 'lanchonete', null, { boxes: sb('almasor'), telefone: '(41) 3155-1844', descricao: 'Comida árabe e brasileira.', obs: 'Galeria de restaurantes do pavimento superior, sobre a Rua General Carneiro.', fonte: TOUR3D }),
   c('Gerência do Mercado (Prefeitura)', 'institucional', null, { telefone: '(41) 3264-6020 · (41) 3264-6224 · (41) 3264-6024', obs: '3º nível, junto ao auditório.', fonte: TOUR3D }),
 
@@ -266,6 +266,6 @@ export const COMERCIANTES = [
   c('Dinho Wine and Spirits', 'bebidas', 'dinho-wine-and-spirits', { telefone: '(41) 98783-5900' }),
   c('Banca do Hiro', 'hortifruti', 'banca-do-hiro', { boxes: ib(62), telefone: '(41) 99944-4334', fonte: TOUR3D }),
   c('Domo Empório Gourmet', 'emporio', 'emporio-curitibano', { descricao: 'Queijos, frios, vinhos, espumantes, destilados e mercearia.', fonte: 'site oficial (via busca)' }),
-  c('Restaurante Takê', 'lanchonete', 'restaurante-take', { boxes: sb(7), telefone: '(41) 3362-7571', descricao: 'Comida japonesa por quilo.', fonte: TOUR3D }),
+  c('Restaurante Takê', 'lanchonete', 'restaurante-take', { boxes: sb('take'), telefone: '(41) 3362-7571', descricao: 'Comida japonesa por quilo.', fonte: TOUR3D }),
   c('Oliveiras Hortifruti', 'hortifruti', 'oliveiras-hortifruti', { fonte: 'site oficial (via busca)' }),
 ];

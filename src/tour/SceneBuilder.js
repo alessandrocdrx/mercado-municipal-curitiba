@@ -60,7 +60,7 @@ export async function buildScene(loader, sceneId) {
 /** Posição da câmera (coordenadas do grupo) para um ponto de vista. */
 export function eyeFor(scene, anchor) {
   if (!scene.position || anchor === scene) return new THREE.Vector3();
-  return worldToLocal({ ...scene.position, z: anchor.position.z }, anchor);
+  return worldToLocal({ ...scene.position, z: scene.position.z ?? anchor.position.z }, anchor); // desníveis (escadas, mezaninos)
 }
 
 // ---------------------------------------------------------------- maquete
@@ -374,24 +374,39 @@ function disposeGroup(group) {
   });
 }
 
-// ------------------------------------------------ mobiliário (mesas, vasos, praça, escada helicoidal)
+// ------------------------------------------------ mobiliário (mesas, vasos, praças, escadas, plataformas, placas)
 const propMat = new Map();
 const mat = (color) => {
   if (!propMat.has(color)) propMat.set(color, new THREE.MeshLambertMaterial({ color }));
   return propMat.get(color);
 };
+const propGeo = new Map();
+const geo = (key, make) => {
+  if (!propGeo.has(key)) propGeo.set(key, make());
+  return propGeo.get(key);
+};
 
 function buildProp(group, scene, p) {
-  const at = (dx = 0, dy = 0, z = 0) => worldToLocal({ x: p.x + dx, y: p.y + dy, z }, scene);
-  const add = (geo, color, dx, dy, z, rotX = 0) => {
-    const m = new THREE.Mesh(geo, mat(color));
+  const base = p.base ?? 0;
+  const at = (dx = 0, dy = 0, z = 0) => worldToLocal({ x: p.x + dx, y: p.y + dy, z: z + base }, scene);
+  const loc = (x, y, z = 0) => worldToLocal({ x, y, z: z + base }, scene);
+  const add = (g, color, dx, dy, z, rotX = 0) => {
+    const m = new THREE.Mesh(g, mat(color));
     m.position.copy(at(dx, dy, z));
     m.rotation.x = rotX;
     group.add(m);
     return m;
   };
+  const rod = (a, b, r, color) => {
+    const len = a.distanceTo(b);
+    const m = new THREE.Mesh(geo(`rod${r}`, () => new THREE.CylinderGeometry(r, r, 1, 6)), mat(color));
+    m.scale.y = len;
+    m.position.copy(a).add(b).multiplyScalar(0.5);
+    m.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), b.clone().sub(a).normalize());
+    group.add(m);
+  };
+  const yawOf = (a, b) => Math.atan2(b.x - a.x, b.z - a.z); // rotação em y que alinha +z de a para b
   if (p.tipo === 'praca') {
-    // praça circular rebaixada: degraus concêntricos em granito
     const n = p.degraus ?? 3;
     add(new THREE.RingGeometry(p.r - 0.35, p.r, 64), p.borda ?? '#a85a5a', 0, 0, 0.015, -Math.PI / 2);
     for (let i = 1; i <= n; i++) {
@@ -400,34 +415,100 @@ function buildProp(group, scene, p) {
     }
     add(new THREE.CircleGeometry(p.r - 0.35, 64), p.cor ?? '#b9b4ac', 0, 0, 0.012, -Math.PI / 2);
   } else if (p.tipo === 'mesa') {
-    const r = p.r ?? 0.45;
-    add(new THREE.CylinderGeometry(r, r, 0.04, 20), p.cor ?? '#eeeeee', 0, 0, 0.75);
-    add(new THREE.CylinderGeometry(0.04, 0.04, 0.73, 8), '#333333', 0, 0, 0.37);
+    const h = p.alta ? 1.05 : 0.75;
+    const ret = p.formato === 'retangular';
+    const top = ret
+      ? add(geo('mesaR', () => new THREE.BoxGeometry(1.2, 0.04, 0.75)), p.cor ?? '#eeeeee', 0, 0, h)
+      : add(geo(`mesa${p.r ?? 0.45}`, () => new THREE.CylinderGeometry(p.r ?? 0.45, p.r ?? 0.45, 0.04, 18)), p.cor ?? '#eeeeee', 0, 0, h);
+    top.rotation.y = (p.giro ?? 0) * DEG;
+    add(geo(`pe${h}`, () => new THREE.CylinderGeometry(0.04, 0.04, h - 0.02, 6)), '#333333', 0, 0, h / 2);
     const k = p.cadeiras ?? 4;
+    const d = ret ? 0.62 : (p.r ?? 0.45) + 0.3;
     for (let i = 0; i < k; i++) {
-      const a = (i / k) * Math.PI * 2 + 0.4;
-      const d = r + 0.3;
+      // retangular: cadeiras nos lados compridos; redonda: em volta
+      const a = ret ? (i % 2 ? Math.PI : 0) + (p.giro ?? 0) * DEG : (i / k) * Math.PI * 2 + 0.4;
+      const off = ret ? (Math.floor(i / 2) - (Math.ceil(k / 2) - 1) / 2) * 0.55 : 0;
+      const g = (p.giro ?? 0) * DEG;
+      const cx = Math.sin(a) * d + (ret ? Math.cos(g) * off : 0);
+      const cy = Math.cos(a) * d - (ret ? Math.sin(g) * off : 0);
       if (p.banquetas) {
-        add(new THREE.CylinderGeometry(0.2, 0.2, 0.45, 14), p.corCadeira, Math.sin(a) * d, Math.cos(a) * d, 0.225);
+        add(geo('banq', () => new THREE.CylinderGeometry(0.18, 0.18, p.alta ? 0.75 : 0.45, 10)), p.corCadeira, cx, cy, p.alta ? 0.375 : 0.225);
       } else {
-        add(new THREE.BoxGeometry(0.42, 0.05, 0.42), p.corCadeira, Math.sin(a) * d, Math.cos(a) * d, 0.45);
-        add(new THREE.BoxGeometry(0.42, 0.45, 0.04), p.corCadeira, Math.sin(a) * (d + 0.2), Math.cos(a) * (d + 0.2), 0.7).rotation.y = -((scene.northYaw ?? 0) * DEG + a);
+        add(geo('assento', () => new THREE.BoxGeometry(0.42, 0.05, 0.42)), p.corCadeira, cx, cy, 0.45);
+        const back = add(geo('encosto', () => new THREE.BoxGeometry(0.42, 0.45, 0.04)), p.corCadeira, cx + Math.sin(a) * 0.2, cy + Math.cos(a) * 0.2, 0.7);
+        back.rotation.y = -((scene.northYaw ?? 0) * DEG + a);
       }
     }
   } else if (p.tipo === 'vaso') {
-    add(new THREE.CylinderGeometry(0.22, 0.16, 0.38, 12), '#b5653f', 0, 0, 0.19);
-    add(new THREE.SphereGeometry(0.3, 10, 8), '#3e6b35', 0, 0, 0.62);
-  } else if (p.tipo === 'helicoidal') {
-    // escada helicoidal: coluna central, degraus em leque e guarda-corpo
-    const h = p.altura ?? 2.5;
-    const r = p.r ?? 1.2;
-    add(new THREE.CylinderGeometry(0.1, 0.1, h + 1, 12), p.cor ?? '#f2f2f2', 0, 0, (h + 1) / 2);
-    const n = Math.round(h / 0.18);
-    for (let i = 0; i < n; i++) {
-      const a = i * 0.42;
-      const step = add(new THREE.BoxGeometry(r, 0.05, 0.42), p.cor ?? '#f2f2f2', Math.sin(a) * r / 2, Math.cos(a) * r / 2, (i + 1) * (h / n));
-      step.rotation.y = -((scene.northYaw ?? 0) * DEG + a) + Math.PI / 2;
-      add(new THREE.CylinderGeometry(0.015, 0.015, 1, 6), '#c9ccce', Math.sin(a) * r, Math.cos(a) * r, (i + 1) * (h / n) + 0.5);
+    add(geo('vaso', () => new THREE.CylinderGeometry(0.22, 0.16, 0.38, 12)), '#b5653f', 0, 0, 0.19);
+    add(geo('planta', () => new THREE.SphereGeometry(0.3, 10, 8)), '#3e6b35', 0, 0, 0.62);
+  } else if (p.tipo === 'pilar') {
+    const h = p.altura ?? 5;
+    add(geo(`pilar${h}`, () => new THREE.CylinderGeometry(0.3, 0.3, h, 16)), p.cor ?? '#f2f2f2', 0, 0, h / 2);
+  } else if (p.tipo === 'guarda') {
+    // guarda-corpo: corrimão a 1,05 m, travessa a 0,5 m e montantes a cada 1,2 m
+    const a = loc(p.x, p.y);
+    const b = loc(p.x2, p.y2);
+    const up = (v, h) => v.clone().setY(v.y + h);
+    rod(up(a, 1.05), up(b, 1.05), 0.03, p.cor ?? '#f2f2f2');
+    rod(up(a, 0.5), up(b, 0.5), 0.015, p.cor ?? '#f2f2f2');
+    const n = Math.max(1, Math.round(a.distanceTo(b) / 1.2));
+    for (let i = 0; i <= n; i++) {
+      const v = a.clone().lerp(b, i / n);
+      rod(v, up(v, 1.05), 0.02, p.cor ?? '#f2f2f2');
     }
+  } else if (p.tipo === 'vao' || p.tipo === 'plataforma') {
+    // vão aberto (poço escuro com guarda-corpo) ou plataforma elevada (mezanino)
+    const pts = p.pontos.map(([x, y]) => loc(x, y));
+    const shape = new THREE.Shape(pts.map((v) => new THREE.Vector2(v.x, -v.z)));
+    if (p.tipo === 'vao') {
+      const m = new THREE.Mesh(new THREE.ShapeGeometry(shape), mat('#2a2a2a'));
+      m.rotation.x = -Math.PI / 2;
+      m.position.y = pts[0].y + 0.02;
+      group.add(m);
+      pts.forEach((v, i) => {
+        const w = pts[(i + 1) % pts.length];
+        rod(v.clone().setY(v.y + 1.05), w.clone().setY(w.y + 1.05), 0.03, '#f2f2f2');
+        rod(v, v.clone().setY(v.y + 1.05), 0.025, '#f2f2f2');
+      });
+    } else {
+      const h = p.altura ?? 1.5;
+      const m = new THREE.Mesh(new THREE.ExtrudeGeometry(shape, { depth: h, bevelEnabled: false }), [mat(p.cor ?? '#8e8e8a'), mat(p.lateral ?? '#b5653f')]);
+      m.rotation.x = -Math.PI / 2;
+      m.position.y = pts[0].y;
+      group.add(m);
+    }
+  } else if (p.tipo === 'escada') {
+    // escada reta do ponto (x, y) no chão até (x2, y2) na altura `altura`
+    const a = loc(p.x, p.y);
+    const b = loc(p.x2, p.y2);
+    const h = p.altura ?? 1.5;
+    const n = Math.max(3, Math.round(h / 0.17));
+    const w = p.largura ?? 2;
+    const run = a.distanceTo(b);
+    const ry = yawOf(a, b);
+    for (let i = 0; i < n; i++) {
+      const v = a.clone().lerp(b, (i + 0.5) / n);
+      const sh = (i + 1) * (h / n);
+      const step = new THREE.Mesh(geo(`deg${w}_${(run / n).toFixed(2)}`, () => new THREE.BoxGeometry(w, 1, run / n)), mat(p.cor ?? '#e6e4de'));
+      step.scale.y = sh;
+      step.position.set(v.x, a.y + sh / 2, v.z);
+      step.rotation.y = ry;
+      group.add(step);
+    }
+    const side = new THREE.Vector3(Math.cos(ry), 0, -Math.sin(ry)).multiplyScalar(w / 2);
+    for (const s of [side, side.clone().negate()]) {
+      rod(a.clone().add(s).setY(a.y + 1), b.clone().add(s).setY(a.y + h + 1), 0.03, p.corGuarda ?? '#f2f2f2');
+    }
+  } else if (p.tipo === 'placa') {
+    // placa suspensa com o nome da área (dupla face)
+    const tex = textureFor({ placeholder: { color: p.cor ?? '#1f4d3a', label: p.texto, sublabel: p.subtexto ?? '' } }, { aspect: 4, resolution: 256 });
+    tex.then((t) => {
+      for (const f of [p.facing ?? 0, (p.facing ?? 0) + 180]) {
+        const m = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ map: t }));
+        applyPlacement(m, { x: p.x, y: p.y, z: (p.z ?? 4) + base, width: p.largura ?? 3, height: (p.largura ?? 3) / 4, facing: f % 360, surface: 'wall' }, scene);
+        group.add(m);
+      }
+    });
   }
 }

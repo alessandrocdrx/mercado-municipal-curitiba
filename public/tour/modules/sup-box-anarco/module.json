@@ -3,24 +3,26 @@
   "title": "Restaurante Anarco",
   "placement": {
     "floor": "superior",
-    "x": 35.19,
-    "y": -66.22,
-    "z": 1.4,
-    "width": 4,
+    "x": 34.09,
+    "y": -63.74,
+    "z": 2.9,
+    "width": 3.2,
     "height": 2.8,
-    "facing": 135,
+    "facing": 145,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#b0561d",
+      "color": "#3A2A1E",
+      "facade": "#8A6A4A",
+      "textColor": "#FFFFFF",
       "label": "Restaurante Anarco",
-      "sublabel": "Lanchonete e restaurante · Praças Déa / 7 de Setembro"
+      "sublabel": "Lanchonete e restaurante · Praça Déa"
     }
   },
   "info": {
     "category": "Lanchonete e restaurante",
-    "location": "Praças Déa / 7 de Setembro · Praças Déa / 7 de Setembro · Pavimento superior",
+    "location": "Praça Déa · Praça Déa · Pavimento superior",
     "color": "#b0561d",
     "phone": "(41) 3029-6154",
     "description": "Cozinha italiana, fundado em 1991.",
@@ -29,5 +31,5 @@
     "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "3e4b18ba4f81"
+  "autoHash": "248d4adc9f74"
 }

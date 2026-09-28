@@ -292,114 +292,114 @@
       "props": [
         {
           "tipo": "praca",
-          "cor": "#B9B4AC",
-          "borda": "#A85A5A",
-          "degraus": 3,
           "x": 15.24,
           "y": -45.78,
-          "r": 5.24
+          "r": 5.24,
+          "cor": "#B9B4AC",
+          "borda": "#A85A5A",
+          "degraus": 3
         },
         {
           "tipo": "mesa",
-          "cor": "#E6DCC0",
-          "cadeiras": 4,
-          "corCadeira": "#4A2F1E",
           "x": 19.25,
           "y": -35.34,
-          "r": 0.36
+          "r": 0.36,
+          "cor": "#E6DCC0",
+          "cadeiras": 4,
+          "corCadeira": "#4A2F1E"
         },
         {
           "tipo": "mesa",
-          "cor": "#E6DCC0",
-          "cadeiras": 4,
-          "corCadeira": "#4A2F1E",
           "x": 19.09,
           "y": -37.48,
-          "r": 0.36
+          "r": 0.36,
+          "cor": "#E6DCC0",
+          "cadeiras": 4,
+          "corCadeira": "#4A2F1E"
         },
         {
           "tipo": "mesa",
-          "cor": "#E6DCC0",
-          "cadeiras": 4,
-          "corCadeira": "#4A2F1E",
           "x": 17.32,
           "y": -35.35,
-          "r": 0.36
+          "r": 0.36,
+          "cor": "#E6DCC0",
+          "cadeiras": 4,
+          "corCadeira": "#4A2F1E"
         },
         {
           "tipo": "mesa",
-          "cor": "#E6DCC0",
-          "cadeiras": 4,
-          "corCadeira": "#4A2F1E",
           "x": 17.16,
           "y": -37.49,
-          "r": 0.36
+          "r": 0.36,
+          "cor": "#E6DCC0",
+          "cadeiras": 4,
+          "corCadeira": "#4A2F1E"
         },
         {
           "tipo": "mesa",
-          "cor": "#E6DCC0",
-          "cadeiras": 4,
-          "corCadeira": "#4A2F1E",
           "x": 15.39,
           "y": -35.37,
-          "r": 0.36
+          "r": 0.36,
+          "cor": "#E6DCC0",
+          "cadeiras": 4,
+          "corCadeira": "#4A2F1E"
         },
         {
           "tipo": "mesa",
-          "cor": "#E6DCC0",
-          "cadeiras": 4,
-          "corCadeira": "#4A2F1E",
           "x": 15.22,
           "y": -37.51,
-          "r": 0.36
+          "r": 0.36,
+          "cor": "#E6DCC0",
+          "cadeiras": 4,
+          "corCadeira": "#4A2F1E"
         },
         {
           "tipo": "mesa",
-          "cor": "#E6DCC0",
-          "cadeiras": 4,
-          "corCadeira": "#4A2F1E",
           "x": 13.45,
           "y": -35.38,
-          "r": 0.36
-        },
-        {
-          "tipo": "mesa",
+          "r": 0.36,
           "cor": "#E6DCC0",
           "cadeiras": 4,
-          "corCadeira": "#4A2F1E",
+          "corCadeira": "#4A2F1E"
+        },
+        {
+          "tipo": "mesa",
           "x": 13.29,
           "y": -37.52,
-          "r": 0.36
+          "r": 0.36,
+          "cor": "#E6DCC0",
+          "cadeiras": 4,
+          "corCadeira": "#4A2F1E"
         },
         {
           "tipo": "mesa",
-          "cor": "#F2F2F2",
-          "cadeiras": 3,
-          "corCadeira": "#C9A0B0",
-          "banquetas": true,
           "x": 23.67,
           "y": -46.18,
-          "r": 0.28
-        },
-        {
-          "tipo": "mesa",
+          "r": 0.28,
           "cor": "#F2F2F2",
           "cadeiras": 3,
           "corCadeira": "#C9A0B0",
-          "banquetas": true,
+          "banquetas": true
+        },
+        {
+          "tipo": "mesa",
           "x": 22.27,
           "y": -47.68,
-          "r": 0.28
-        },
-        {
-          "tipo": "mesa",
+          "r": 0.28,
           "cor": "#F2F2F2",
           "cadeiras": 3,
           "corCadeira": "#C9A0B0",
-          "banquetas": true,
+          "banquetas": true
+        },
+        {
+          "tipo": "mesa",
           "x": 23.44,
           "y": -49.16,
-          "r": 0.28
+          "r": 0.28,
+          "cor": "#F2F2F2",
+          "cadeiras": 3,
+          "corCadeira": "#C9A0B0",
+          "banquetas": true
         },
         {
           "tipo": "vaso",
@@ -483,11 +483,11 @@
         },
         {
           "tipo": "helicoidal",
-          "cor": "#F2F2F2",
           "x": 12.18,
           "y": -38.37,
           "r": 1.05,
-          "altura": 2.5
+          "altura": 2.5,
+          "cor": "#F2F2F2"
         }
       ],
       "streets": [
@@ -764,6 +764,1566 @@
           "y": -101.5
         }
       },
+      "props": [
+        {
+          "tipo": "plataforma",
+          "x": 49.39,
+          "y": -59.79,
+          "pontos": [
+            [
+              49.39,
+              -59.79
+            ],
+            [
+              31.1,
+              -60.43
+            ],
+            [
+              34.57,
+              -90.55
+            ],
+            [
+              52.86,
+              -89.9
+            ]
+          ],
+          "altura": 1.5,
+          "cor": "#8e8e8a",
+          "lateral": "#b5653f"
+        },
+        {
+          "tipo": "escada",
+          "x": 51.95,
+          "y": -66.82,
+          "x2": 48.8,
+          "y2": -66.83,
+          "altura": 1.5,
+          "largura": 2
+        },
+        {
+          "tipo": "escada",
+          "x": 54.61,
+          "y": -85.35,
+          "x2": 51.22,
+          "y2": -85.57,
+          "altura": 1.5,
+          "largura": 2
+        },
+        {
+          "tipo": "guarda",
+          "x": 50.45,
+          "y": -69.01,
+          "x2": 52.07,
+          "y2": -83.1,
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 46.75,
+          "y": -69.77,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 47.01,
+          "y": -71.99,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 47.26,
+          "y": -74.21,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 47.52,
+          "y": -76.44,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 47.77,
+          "y": -78.66,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 48.03,
+          "y": -80.88,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 48.28,
+          "y": -83.1,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 44.43,
+          "y": -69.86,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 44.68,
+          "y": -72.08,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 44.94,
+          "y": -74.3,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 45.19,
+          "y": -76.52,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 45.45,
+          "y": -78.74,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 45.71,
+          "y": -80.96,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 45.96,
+          "y": -83.18,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 39.78,
+          "y": -70.02,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 40.04,
+          "y": -72.24,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 40.29,
+          "y": -74.46,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 40.55,
+          "y": -76.68,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 40.81,
+          "y": -78.9,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 41.06,
+          "y": -81.12,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 41.32,
+          "y": -83.34,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 37.46,
+          "y": -70.1,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 37.72,
+          "y": -72.32,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 37.97,
+          "y": -74.54,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 38.23,
+          "y": -76.77,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 38.48,
+          "y": -78.99,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 38.74,
+          "y": -81.21,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 38.99,
+          "y": -83.43,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 35.14,
+          "y": -70.19,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 35.39,
+          "y": -72.41,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 35.65,
+          "y": -74.63,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 35.9,
+          "y": -76.85,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 36.16,
+          "y": -79.07,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 36.42,
+          "y": -81.29,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 36.67,
+          "y": -83.51,
+          "formato": "retangular",
+          "cor": "#4a2f1e",
+          "cadeiras": 4,
+          "corCadeira": "#4a2f1e",
+          "base": 1.5
+        },
+        {
+          "tipo": "pilar",
+          "x": 39.94,
+          "y": -68.9,
+          "altura": 5,
+          "base": 1.5
+        },
+        {
+          "tipo": "pilar",
+          "x": 41.18,
+          "y": -79.59,
+          "altura": 5,
+          "base": 1.5
+        },
+        {
+          "tipo": "placa",
+          "x": 42.58,
+          "y": -76.61,
+          "z": 4.2,
+          "texto": "Praça Déa",
+          "facing": 90,
+          "cor": "#1f4d3a",
+          "base": 1.5
+        },
+        {
+          "tipo": "mesa",
+          "x": 67.27,
+          "y": -65.43,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 67.59,
+          "y": -68.22,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 67.92,
+          "y": -71.02,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 68.24,
+          "y": -73.81,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 68.56,
+          "y": -76.6,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 68.88,
+          "y": -79.4,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 69.2,
+          "y": -82.19,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 69.52,
+          "y": -84.98,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 65.02,
+          "y": -65.51,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 65.34,
+          "y": -68.3,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 65.67,
+          "y": -71.1,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 65.99,
+          "y": -73.89,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 66.31,
+          "y": -76.68,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 66.63,
+          "y": -79.48,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 66.95,
+          "y": -82.27,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 67.27,
+          "y": -85.06,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 62.77,
+          "y": -65.59,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 63.09,
+          "y": -68.38,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 63.42,
+          "y": -71.18,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 63.74,
+          "y": -73.97,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 64.06,
+          "y": -76.76,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 64.38,
+          "y": -79.56,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 64.7,
+          "y": -82.35,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 65.02,
+          "y": -85.14,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 60.52,
+          "y": -65.67,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 58.6,
+          "y": -68.54,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 58.92,
+          "y": -71.34,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 59.24,
+          "y": -74.13,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 59.56,
+          "y": -76.92,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 59.88,
+          "y": -79.72,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 60.2,
+          "y": -82.51,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 56.02,
+          "y": -65.83,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 56.35,
+          "y": -68.62,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 56.67,
+          "y": -71.42,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 56.99,
+          "y": -74.21,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 57.31,
+          "y": -77,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 57.63,
+          "y": -79.8,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 57.95,
+          "y": -82.59,
+          "formato": "retangular",
+          "cor": "#1a1a1a",
+          "cadeiras": 4,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "vao",
+          "x": 55.09,
+          "y": -71.29,
+          "pontos": [
+            [
+              55.09,
+              -71.29
+            ],
+            [
+              52.91,
+              -71.37
+            ],
+            [
+              53.8,
+              -79.14
+            ],
+            [
+              55.98,
+              -79.06
+            ]
+          ]
+        },
+        {
+          "tipo": "placa",
+          "x": 60.98,
+          "y": -76.93,
+          "z": 4.2,
+          "texto": "Praça 7 de Setembro",
+          "facing": 90,
+          "cor": "#1f4d3a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 47.13,
+          "y": -34.83,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 47.43,
+          "y": -37.42,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 47.73,
+          "y": -40.01,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 44.88,
+          "y": -34.91,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 45.18,
+          "y": -37.5,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 42.63,
+          "y": -34.99,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 42.93,
+          "y": -37.58,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 40.38,
+          "y": -35.07,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 40.68,
+          "y": -37.66,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 38.13,
+          "y": -35.15,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 38.43,
+          "y": -37.74,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 35.88,
+          "y": -35.23,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 36.18,
+          "y": -37.82,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 31.38,
+          "y": -35.39,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 31.68,
+          "y": -37.98,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 31.98,
+          "y": -40.57,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 29.13,
+          "y": -35.47,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 29.43,
+          "y": -38.06,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 29.73,
+          "y": -40.65,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 26.89,
+          "y": -35.55,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 27.18,
+          "y": -38.14,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 27.48,
+          "y": -40.73,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 24.64,
+          "y": -35.63,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 24.93,
+          "y": -38.22,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 25.23,
+          "y": -40.81,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 22.39,
+          "y": -35.71,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 22.68,
+          "y": -38.3,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "mesa",
+          "x": 22.98,
+          "y": -40.89,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 4,
+          "corCadeira": "#c9a26b"
+        },
+        {
+          "tipo": "guarda",
+          "x": 40.92,
+          "y": -31.8,
+          "x2": 30.47,
+          "y2": -32.17
+        },
+        {
+          "tipo": "placa",
+          "x": 39.96,
+          "y": -38.66,
+          "z": 5,
+          "texto": "Praça de Alimentação",
+          "subtexto": "Manoel Carlos Karan",
+          "facing": 0,
+          "largura": 4,
+          "cor": "#5b5470"
+        },
+        {
+          "tipo": "guarda",
+          "x": 50.44,
+          "y": -30.97,
+          "x2": 26.93,
+          "y2": -31.81
+        },
+        {
+          "tipo": "mesa",
+          "x": 21.05,
+          "y": -26.28,
+          "r": 0.35,
+          "alta": true,
+          "cor": "#3a2a1e",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a",
+          "banquetas": true
+        },
+        {
+          "tipo": "mesa",
+          "x": 21.18,
+          "y": -27.5,
+          "r": 0.35,
+          "alta": true,
+          "cor": "#3a2a1e",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a",
+          "banquetas": true
+        },
+        {
+          "tipo": "mesa",
+          "x": 21.32,
+          "y": -28.71,
+          "r": 0.35,
+          "alta": true,
+          "cor": "#3a2a1e",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a",
+          "banquetas": true
+        },
+        {
+          "tipo": "mesa",
+          "x": 21.46,
+          "y": -29.93,
+          "r": 0.35,
+          "alta": true,
+          "cor": "#3a2a1e",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a",
+          "banquetas": true
+        },
+        {
+          "tipo": "mesa",
+          "x": 76.82,
+          "y": -41.37,
+          "r": 0.4,
+          "cor": "#e8e6e0",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 77.08,
+          "y": -43.56,
+          "r": 0.4,
+          "cor": "#e8e6e0",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 77.33,
+          "y": -45.75,
+          "r": 0.4,
+          "cor": "#e8e6e0",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 77.58,
+          "y": -47.93,
+          "r": 0.4,
+          "cor": "#e8e6e0",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 74.73,
+          "y": -41.45,
+          "r": 0.4,
+          "cor": "#e8e6e0",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 74.99,
+          "y": -43.63,
+          "r": 0.4,
+          "cor": "#e8e6e0",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 75.24,
+          "y": -45.82,
+          "r": 0.4,
+          "cor": "#e8e6e0",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 75.49,
+          "y": -48.01,
+          "r": 0.4,
+          "cor": "#e8e6e0",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 72.64,
+          "y": -41.52,
+          "r": 0.4,
+          "cor": "#e8e6e0",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 72.9,
+          "y": -43.71,
+          "r": 0.4,
+          "cor": "#e8e6e0",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 73.15,
+          "y": -45.89,
+          "r": 0.4,
+          "cor": "#e8e6e0",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 73.4,
+          "y": -48.08,
+          "r": 0.4,
+          "cor": "#e8e6e0",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 70.55,
+          "y": -41.6,
+          "r": 0.4,
+          "cor": "#e8e6e0",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 70.81,
+          "y": -43.78,
+          "r": 0.4,
+          "cor": "#e8e6e0",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 71.06,
+          "y": -45.97,
+          "r": 0.4,
+          "cor": "#e8e6e0",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 71.31,
+          "y": -48.16,
+          "r": 0.4,
+          "cor": "#e8e6e0",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 68.46,
+          "y": -41.67,
+          "r": 0.4,
+          "cor": "#e8e6e0",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 68.72,
+          "y": -43.86,
+          "r": 0.4,
+          "cor": "#e8e6e0",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 68.97,
+          "y": -46.04,
+          "r": 0.4,
+          "cor": "#e8e6e0",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 69.22,
+          "y": -48.23,
+          "r": 0.4,
+          "cor": "#e8e6e0",
+          "cadeiras": 3,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "pilar",
+          "x": 62.39,
+          "y": -39.81,
+          "altura": 3.5
+        },
+        {
+          "tipo": "pilar",
+          "x": 62.95,
+          "y": -44.67,
+          "altura": 3.5
+        },
+        {
+          "tipo": "guarda",
+          "x": 58.45,
+          "y": -32.15,
+          "x2": 61.25,
+          "y2": -56.44
+        },
+        {
+          "tipo": "vaso",
+          "x": 81.03,
+          "y": -45.98
+        },
+        {
+          "tipo": "placa",
+          "x": 72.32,
+          "y": -46.29,
+          "z": 3.6,
+          "texto": "Orgânicas",
+          "subtexto": "Praça de Alimentação",
+          "facing": 90,
+          "cor": "#8a8a1f"
+        },
+        {
+          "tipo": "guarda",
+          "x": 113.93,
+          "y": -88.71,
+          "x2": 66.9,
+          "y2": -90.38
+        },
+        {
+          "tipo": "mesa",
+          "x": 112.45,
+          "y": -89.84,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 110.99,
+          "y": -89.89,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 109.53,
+          "y": -89.94,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 108.07,
+          "y": -89.99,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 106.61,
+          "y": -90.04,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 105.15,
+          "y": -90.09,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 103.69,
+          "y": -90.15,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 102.23,
+          "y": -90.2,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 100.77,
+          "y": -90.25,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 99.31,
+          "y": -90.3,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 97.85,
+          "y": -90.35,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 96.38,
+          "y": -90.41,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 94.92,
+          "y": -90.46,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 93.46,
+          "y": -90.51,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 92,
+          "y": -90.56,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 90.54,
+          "y": -90.61,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 89.08,
+          "y": -90.66,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 87.62,
+          "y": -90.72,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 86.16,
+          "y": -90.77,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 84.7,
+          "y": -90.82,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 83.24,
+          "y": -90.87,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 81.78,
+          "y": -90.92,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 80.31,
+          "y": -90.98,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        },
+        {
+          "tipo": "mesa",
+          "x": 78.85,
+          "y": -91.03,
+          "formato": "retangular",
+          "cor": "#3a3a3a",
+          "cadeiras": 2,
+          "corCadeira": "#1a1a1a"
+        }
+      ],
       "streets": []
     },
     {
@@ -860,6 +2420,7 @@
     "sup-rosa-2",
     "sup-rosa-3",
     "sup-rosa-4",
+    "sup-p7-take",
     "sup-verde-porta-d",
     "sup-verde-1",
     "sup-verde-2",
@@ -867,7 +2428,6 @@
     "sup-dea-norte",
     "sup-dea-centro",
     "sup-dea-sul",
-    "sup-dea-oeste",
     "sup-galeria-1",
     "sup-galeria-0",
     "sup-galeria-2",
@@ -1222,15 +2782,6 @@
     "sup-box-12",
     "sup-box-11",
     "sup-box-19",
-    "sup-box-01",
-    "sup-box-02",
-    "sup-box-03",
-    "sup-box-04",
-    "sup-box-05",
-    "sup-box-10",
-    "sup-box-08",
-    "sup-box-07",
-    "sup-box-06",
     "sup-banca-510",
     "sup-banca-512",
     "sup-banca-509",
@@ -1253,10 +2804,15 @@
     "sup-box-516",
     "sup-box-517",
     "sup-box-518",
+    "sup-box-take",
+    "sup-box-pastelaria",
+    "sup-box-mister-dea",
+    "sup-box-sua-linda",
+    "sup-box-fitoterapico",
+    "sup-box-bonna",
     "sup-box-anarco",
     "sup-box-fujii",
-    "sup-box-mister-dea",
-    "sup-box-bonna",
+    "sup-box-box-curitiba",
     "sup-box-201",
     "sup-box-almasor",
     "sup-porta-b",
@@ -2729,9 +4285,9 @@
       "name": "Restaurante Box Curitiba",
       "category": "Lanchonete e restaurante",
       "modules": [
-        "sup-box-10"
+        "sup-box-box-curitiba"
       ],
-      "boxes": "10",
+      "boxes": "curitiba",
       "onPlan": true,
       "phone": "(41) 3015-8240",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/restaurante-box-curitiba/",
@@ -3175,9 +4731,9 @@
       "name": "Espaço Fitoterápico",
       "category": "Variedades e serviços",
       "modules": [
-        "sup-box-11"
+        "sup-box-fitoterapico"
       ],
-      "boxes": "11",
+      "boxes": "fitoterapico",
       "onPlan": true
     },
     {
@@ -3193,9 +4749,9 @@
       "name": "Pastelaria Curitiba",
       "category": "Lanchonete e restaurante",
       "modules": [
-        "sup-box-08"
+        "sup-box-pastelaria"
       ],
-      "boxes": "08",
+      "boxes": "pastelaria",
       "onPlan": true,
       "phone": "(41) 99734-9001 · (41) 3363-0522"
     },
@@ -3222,7 +4778,11 @@
     {
       "name": "Curitiba Sua Linda",
       "category": "Presentes e artesanato",
-      "onPlan": false
+      "modules": [
+        "sup-box-sua-linda"
+      ],
+      "boxes": "linda",
+      "onPlan": true
     },
     {
       "name": "Restaurante Al Almasor",
@@ -3270,9 +4830,9 @@
       "name": "Restaurante Takê",
       "category": "Lanchonete e restaurante",
       "modules": [
-        "sup-box-07"
+        "sup-box-take"
       ],
-      "boxes": "07",
+      "boxes": "take",
       "onPlan": true,
       "phone": "(41) 3362-7571",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/restaurante-take/",

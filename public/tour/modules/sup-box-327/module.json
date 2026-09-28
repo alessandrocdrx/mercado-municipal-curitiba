@@ -14,8 +14,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#5A3A22",
-      "textColor": "#F2F2F2",
+      "color": "#4A2F1E",
+      "facade": "#F2F2F2",
+      "textColor": "#FFFFFF",
       "label": "Sapataria Rápida Capricho",
       "sublabel": "Consertos e costura · Box 327"
     }
@@ -28,5 +29,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "e997658ee9c4"
+  "autoHash": "3950f02f701f"
 }

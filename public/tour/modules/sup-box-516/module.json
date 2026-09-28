@@ -13,7 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#2f7d32",
+      "color": "#7F9F86",
+      "facade": "#7F9F86",
+      "textColor": "#FFFFFF",
       "label": "Nico's Café Orgânico",
       "sublabel": "Orgânicos · Box 516"
     }
@@ -26,5 +28,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "c093db8d641c"
+  "autoHash": "c0289373d98e"
 }

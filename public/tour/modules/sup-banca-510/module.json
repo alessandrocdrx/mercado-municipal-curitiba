@@ -13,9 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#2E7D32",
-      "facade": "#2E7D32",
-      "textColor": "#EFE6CC",
+      "color": "#1F4D3A",
+      "facade": "#F2F2F2",
+      "textColor": "#FFFFFF",
       "label": "Couve & Flor",
       "sublabel": "Orgânicos · Banca 510"
     }
@@ -29,5 +29,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "afd4fee8db39"
+  "autoHash": "42437e48ebda"
 }

@@ -1,9 +1,9 @@
 {
-  "title": "Área rosa · sul",
+  "title": "Praça 7 de Setembro · centro",
   "floor": "superior",
   "position": {
-    "x": 55.1,
-    "y": -81.92,
+    "x": 60.97,
+    "y": -76.92,
     "z": 1.6
   },
   "northYaw": 0,
@@ -17,7 +17,7 @@
       "to": "sup-rosa-3"
     },
     {
-      "to": "sup-dea-oeste"
+      "to": "sup-p7-take"
     }
   ],
   "generated": true

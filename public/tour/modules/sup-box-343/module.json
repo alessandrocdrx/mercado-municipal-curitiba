@@ -14,9 +14,10 @@
   },
   "media": {
     "placeholder": {
-      "color": "#F2F2F2",
+      "color": "#F4F4F4",
       "facade": "#F2F2F2",
-      "textColor": "#1A1A1A",
+      "textColor": "#2B2B2B",
+      "closed": true,
       "label": "Quadrolândia",
       "sublabel": "Presentes e artesanato · Box 343"
     }
@@ -29,5 +30,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "a7a037a0fbdf"
+  "autoHash": "0c7cc2abe93d"
 }

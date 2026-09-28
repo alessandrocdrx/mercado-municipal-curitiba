@@ -14,9 +14,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#1F4D3A",
-      "facade": "#B5653F",
-      "textColor": "#F2F2F2",
+      "color": "#F2E8D0",
+      "facade": "#C9A26B",
+      "textColor": "#2E6B4F",
       "label": "Natural Market",
       "sublabel": "Orgânicos · Box 519"
     }
@@ -29,5 +29,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "bf61482a9623"
+  "autoHash": "0c9f0f450ea3"
 }

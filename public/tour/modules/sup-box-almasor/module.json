@@ -13,7 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#b0561d",
+      "color": "#6B4A2E",
+      "facade": "#D8CFC0",
+      "textColor": "#F2E8D0",
       "label": "Restaurante Al Almasor",
       "sublabel": "Lanchonete e restaurante · Galeria de restaurantes"
     }
@@ -28,5 +30,5 @@
     "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "60db456f3d1f"
+  "autoHash": "25c90543e75f"
 }

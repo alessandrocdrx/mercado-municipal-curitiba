@@ -13,9 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#1A1A1A",
-      "facade": "#1F4D3A",
-      "textColor": "#F2F2F2",
+      "color": "#F2E8D0",
+      "facade": "#F2F2F2",
+      "textColor": "#5A3A22",
       "vitrine": true,
       "label": "Espaço Orgânico",
       "sublabel": "Orgânicos · Banca 508"
@@ -30,5 +30,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "c9b43e599219"
+  "autoHash": "19df8f7fe2ed"
 }

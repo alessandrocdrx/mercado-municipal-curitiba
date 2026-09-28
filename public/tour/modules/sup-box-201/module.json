@@ -13,7 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#b0561d",
+      "color": "#8A1C1C",
+      "facade": "#F2F2F2",
+      "textColor": "#FFFFFF",
       "label": "Maia Box Sanduicheria",
       "sublabel": "Lanchonete e restaurante · Box 201"
     }
@@ -29,5 +31,5 @@
     "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "93379f7e8023"
+  "autoHash": "08bef78baa99"
 }

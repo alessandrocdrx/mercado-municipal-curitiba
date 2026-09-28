@@ -14,9 +14,10 @@
   },
   "media": {
     "placeholder": {
-      "color": "#A0764A",
-      "facade": "#A0764A",
-      "textColor": "#A0764A",
+      "color": "#E6DCC0",
+      "facade": "#F2F2F2",
+      "textColor": "#1C1C1C",
+      "closed": true,
       "label": "Vitornis Chapelaria",
       "sublabel": "Calçados e moda · Box 332"
     }
@@ -29,5 +30,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "88834fc63971"
+  "autoHash": "ee62ad0f5a96"
 }
