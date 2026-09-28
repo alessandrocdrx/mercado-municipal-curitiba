@@ -1,0 +1,21 @@
+{
+  "title": "3º nível · Gerência do Mercado",
+  "floor": "nivel3",
+  "position": {
+    "x": 84.82,
+    "y": -48.79,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 28,
+  "base": {
+    "type": "cube",
+    "faces": {}
+  },
+  "links": [
+    {
+      "to": "n3-oeste"
+    }
+  ],
+  "generated": true
+}

@@ -15,6 +15,12 @@
   "links": [
     {
       "to": "sup-verde-1"
+    },
+    {
+      "to": "n3-auditorio",
+      "yaw": 90,
+      "pitch": -20,
+      "label": "Escada · subir ao 3º nível"
     }
   ],
   "generated": true

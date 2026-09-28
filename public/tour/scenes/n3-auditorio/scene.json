@@ -1,0 +1,27 @@
+{
+  "title": "3º nível · Auditório",
+  "floor": "nivel3",
+  "position": {
+    "x": 81.93,
+    "y": -23.49,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 28,
+  "base": {
+    "type": "cube",
+    "faces": {}
+  },
+  "links": [
+    {
+      "to": "n3-oeste"
+    },
+    {
+      "to": "sup-verde-2",
+      "yaw": 270,
+      "pitch": -20,
+      "label": "Escada · descer ao pavimento superior"
+    }
+  ],
+  "generated": true
+}

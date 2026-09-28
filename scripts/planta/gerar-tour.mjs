@@ -62,7 +62,7 @@ const numeros = (ids) => ids.map((id) => id.split('-').pop()).join(', ');
 
 // ------------------------------------------------------------ módulos: boxes e bancas
 for (const pav of PAVIMENTOS) {
-  const prefix = pav.id === 'inferior' ? 'inf' : 'sup';
+  const prefix = { inferior: 'inf', superior: 'sup', nivel3: 'n3' }[pav.id];
   for (const grupo of BOXES[pav.id]) {
     const { ids, de, ate, facing } = grupo;
     const tipo = grupo.tipo ?? 'box';

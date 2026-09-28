@@ -19,7 +19,7 @@ export const PAVIMENTOS = [
   {
     id: 'inferior',
     titulo: 'Pavimento inferior',
-    planta: 'plantas/pavimento-inferior.jpg',
+    planta: 'plantas/planta-inferior.jpg', // esquemática, medidas do tour 3D (foto original: pavimento-inferior.jpg)
     // largura do bloco principal (General Carneiro → fundo dos boxes 21–43) e
     // distância salão de hortifrúti → canto diagonal sudeste
     escala: 0.063, // m por px
@@ -30,12 +30,22 @@ export const PAVIMENTOS = [
   {
     id: 'superior',
     titulo: 'Pavimento superior',
-    planta: 'plantas/pavimento-superior.jpg',
+    planta: 'plantas/planta-superior.jpg', // esquemática, medidas do tour 3D (foto original: pavimento-superior.jpg)
     // fachada da Av. Sete de Setembro → ponta sudeste, General Carneiro → Rua da Paz
     escala: 0.0725, // m por px
     rumoCima: 66,
     ancora: { px: [978, 478], lonLat: [-49.2565894, -25.4346528] }, // centro do setor de orgânicos = centro do prédio "Mercado Municipal - Orgânicos"
     inicio: 'sup-escada',
+  },
+  {
+    // 3º nível (administração e auditório): mesmo referencial do pavimento superior
+    id: 'nivel3',
+    titulo: '3º nível',
+    planta: 'plantas/planta-nivel3.jpg',
+    escala: 0.0725,
+    rumoCima: 66,
+    ancora: { px: [978, 478], lonLat: [-49.2565894, -25.4346528] },
+    inicio: 'n3-gerencia',
   },
 ];
 
@@ -106,6 +116,7 @@ export const BOXES = {
       area: 'Hall Sete de Setembro', ...(largura && { largura }), ...(id.startsWith('hall') && { rotulo: 'Hall Sete de Setembro' }),
     })),
   ],
+  nivel3: [],
   superior: [
     box('312', [228, 230], 180),
     fileira(seq(313, 319), [285, 238], [500, 238], 180),
@@ -167,6 +178,7 @@ export const PORTAS = {
     { id: 'H', em: [1425, 1127], facing: 0, rua: 'Rua General Carneiro' },
     { id: 'G', em: [1860, 1035], facing: 315, rua: 'lado leste' },
   ],
+  nivel3: [],
   superior: [
     { id: 'B', em: [140, 440], facing: 90, rua: 'Avenida Sete de Setembro' },
     { id: 'C', em: [565, 170], facing: 180, rua: 'Rua da Paz' },
@@ -219,6 +231,11 @@ export const CENAS = {
     { id: 'inf-hall-leste', titulo: 'Hall Sete de Setembro · leste', em: [290, 705], cor: CINZA },
     { id: 'inf-hall-centro', titulo: 'Hall Sete de Setembro · centro', em: [185, 705], cor: CINZA },
     { id: 'inf-hall-oeste', titulo: 'Hall Sete de Setembro · oeste', em: [95, 705], cor: CINZA },
+  ],
+  nivel3: [
+    { id: 'n3-gerencia', titulo: '3º nível · Gerência do Mercado', em: [1170, 673], cor: CINZA },
+    { id: 'n3-oeste', titulo: '3º nível · corredor', em: [1150, 500], cor: CINZA },
+    { id: 'n3-auditorio', titulo: '3º nível · Auditório', em: [1130, 324], cor: CINZA },
   ],
   superior: [
     { id: 'sup-porta-b', titulo: 'Porta B · Av. Sete de Setembro', em: [165, 440], cor: CINZA },
@@ -282,12 +299,15 @@ export const LIGACOES = [
   ['sup-rosa-2', 'sup-verde-3'],
   ...cadeia(['sup-verde-porta-d', 'sup-verde-1', 'sup-verde-3']),
   ['sup-verde-1', 'sup-verde-2'],
+  ...cadeia(['n3-gerencia', 'n3-oeste', 'n3-auditorio']),
 ];
 
 // Escadas entre pavimentos (direção informada à mão: não há planta comum).
 export const ESCADAS = [
   { de: 'inf-a-00', para: 'sup-escada', yaw: 160, rotulo: 'Escada · subir ao pavimento superior' },
   { de: 'sup-escada', para: 'inf-a-00', yaw: 180, rotulo: 'Escada · descer ao pavimento inferior' },
+  { de: 'sup-verde-2', para: 'n3-auditorio', yaw: 90, rotulo: 'Escada · subir ao 3º nível' },
+  { de: 'n3-auditorio', para: 'sup-verde-2', yaw: 270, rotulo: 'Escada · descer ao pavimento superior' },
 ];
 
 // ---------------------------------------------------------------- ruas
@@ -309,7 +329,8 @@ export const RUAS = {
 // Área coberta de cada pavimento (px): o teto só é desenhado aqui dentro.
 export const AREA_COBERTA = {
   inferior: { de: [0, 100], ate: [2000, 1145] },
-  superior: { de: [100, 160], ate: [1180, 1400] },
+  superior: { de: [100, 160], ate: [1600, 1400] },
+  nivel3: { de: [1000, 250], ate: [1260, 760] },
 };
 
 // ---------------------------------------------------------------- OpenStreetMap

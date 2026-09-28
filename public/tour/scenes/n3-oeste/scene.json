@@ -1,0 +1,24 @@
+{
+  "title": "3º nível · corredor",
+  "floor": "nivel3",
+  "position": {
+    "x": 83.38,
+    "y": -36.25,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 28,
+  "base": {
+    "type": "cube",
+    "faces": {}
+  },
+  "links": [
+    {
+      "to": "n3-gerencia"
+    },
+    {
+      "to": "n3-auditorio"
+    }
+  ],
+  "generated": true
+}

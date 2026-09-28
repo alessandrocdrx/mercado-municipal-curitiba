@@ -71,7 +71,7 @@
       "title": "Pavimento inferior",
       "startScene": "inf-b-04",
       "plan": {
-        "src": "plantas/pavimento-inferior.jpg",
+        "src": "plantas/planta-inferior.jpg",
         "width": 126,
         "height": 94.5
       },
@@ -316,7 +316,7 @@
       "title": "Pavimento superior",
       "startScene": "sup-escada",
       "plan": {
-        "src": "plantas/pavimento-superior.jpg",
+        "src": "plantas/planta-superior.jpg",
         "width": 145,
         "height": 108.75
       },
@@ -557,8 +557,31 @@
           "y": -11.6
         },
         "to": {
-          "x": 85.55,
+          "x": 116,
           "y": -101.5
+        }
+      },
+      "streets": []
+    },
+    {
+      "id": "nivel3",
+      "title": "3º nível",
+      "startScene": "n3-gerencia",
+      "plan": {
+        "src": "plantas/planta-nivel3.jpg",
+        "width": 145,
+        "height": 108.75
+      },
+      "bearingUp": 66,
+      "outlines": [],
+      "covered": {
+        "from": {
+          "x": 72.5,
+          "y": -18.12
+        },
+        "to": {
+          "x": 91.35,
+          "y": -55.1
         }
       },
       "streets": []
@@ -634,7 +657,10 @@
     "sup-verde-porta-d",
     "sup-verde-1",
     "sup-verde-2",
-    "sup-verde-3"
+    "sup-verde-3",
+    "n3-gerencia",
+    "n3-oeste",
+    "n3-auditorio"
   ],
   "modules": [
     "inf-box-43",
