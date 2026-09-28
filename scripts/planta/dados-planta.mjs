@@ -269,7 +269,8 @@ export const CENAS = {
     { id: 'sup-verde-3', titulo: 'Área verde · sul', em: [900, 640], cor: VERDE_ESC },
     { id: 'sup-dea-norte', titulo: 'Praças Déa / 7 de Setembro · norte', em: [552, 856], cor: ROSA },
     { id: 'sup-dea-centro', titulo: 'Praças Déa / 7 de Setembro · vão sobre o hall', em: [538, 1045], cor: ROSA },
-    { id: 'sup-dea-sul', titulo: 'Praças Déa / 7 de Setembro · sul', em: [628, 1197], cor: ROSA },
+    { id: 'sup-dea-sul', titulo: 'Praças Déa / 7 de Setembro · sul', em: [610, 1150], cor: ROSA },
+    { id: 'sup-dea-escada', titulo: 'Praça 7 de Setembro · escada ao lado do Takê', em: [697, 1140], cor: ROSA },
     { id: 'sup-dea-oeste', titulo: 'Praças Déa / 7 de Setembro · leste', em: [843, 1182], cor: ROSA },
     { id: 'sup-galeria-1', titulo: 'Galeria de restaurantes · 1', em: [1056, 1262], cor: ROSA },
     { id: 'sup-galeria-0', titulo: 'Galeria de restaurantes · acesso', em: [860, 1300], cor: ROSA },
@@ -315,10 +316,17 @@ export const LIGACOES = [
   ...cadeia(['sup-verde-porta-d', 'sup-verde-1', 'sup-verde-3']),
   ['sup-verde-1', 'sup-verde-2'],
   ['sup-rosa-3', 'sup-dea-norte'],
-  ...cadeia(['sup-dea-norte', 'sup-dea-centro', 'sup-dea-sul', 'sup-dea-oeste', 'sup-rosa-4']),
+  ...cadeia(['sup-dea-norte', 'sup-dea-centro', 'sup-dea-sul', 'sup-dea-escada', 'sup-dea-oeste', 'sup-rosa-4']),
   ...cadeia(['sup-dea-oeste', 'sup-galeria-0', 'sup-galeria-1', 'sup-galeria-2', 'sup-galeria-3']),
   ...cadeia(['n3-gerencia', 'n3-oeste', 'n3-auditorio']),
 ];
+
+// Escadas desenhadas em 3D na maquete (px da planta). `em` = degrau de baixo;
+// sobem na direção oposta a `facing`. Praça 7 de Setembro: entre a Pastelaria
+// Curitiba (08) e o Restaurante Box Curitiba (10), ao lado do Takê.
+export const ESCADAS_3D = {
+  superior: [{ id: 'praca-7-setembro', titulo: 'Escada da Praça 7 de Setembro', em: [697, 1206], facing: 0, largura: 3.6, subida: 2.6, comprimento: 4.8 }],
+};
 
 // Escadas entre pavimentos (direção informada à mão: não há planta comum).
 export const ESCADAS = [

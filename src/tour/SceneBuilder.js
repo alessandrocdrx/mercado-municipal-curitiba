@@ -306,6 +306,7 @@ function inlineModule(layer) {
 const BODY_DEPTH = { box: 2.2, banca: 1.0 };
 
 async function buildModuleMesh(module, placement, scene, model = false) {
+  if (module.type === 'escada' && isWorldPlacement(placement)) return buildStairs(module, placement, scene);
   const aspect = (placement.width ?? 1) / (placement.height ?? 1);
   const baseUrl = module.inline ? scene._baseUrl : module._baseUrl;
   let media = module.media ?? {};
@@ -371,4 +372,52 @@ function disposeGroup(group) {
     if (obj.material.map?.isCanvasTexture || obj.material.map?.userData?.own) obj.material.map.dispose();
     obj.material.dispose();
   });
+}
+
+/**
+ * Escada em 3D: degraus subindo para trás da "frente" (degrau de baixo na
+ * posição do módulo), guarda-corpos brancos nas laterais e corrimão central.
+ * O plano do módulo fica invisível (só para clique); os filhos herdam a
+ * escala largura × altura, por isso as medidas em x/y são frações.
+ */
+function buildStairs(module, placement, scene) {
+  const H = placement.height ?? 3;
+  const run = placement.run ?? 5;
+  const n = Math.max(6, Math.round(H / 0.17));
+  const tread = run / n;
+  const plane = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ transparent: true, opacity: 0, depthWrite: false }));
+  plane.name = `module:${module.id}`;
+  plane.userData = { pickable: true, module, placement, anchor: 'world' };
+  const stepMat = new THREE.MeshLambertMaterial({ color: '#d9d6cf' });
+  const noseMat = new THREE.MeshLambertMaterial({ color: '#4a4a4a' });
+  const railMat = new THREE.MeshLambertMaterial({ color: '#f4f4f2' });
+  for (let i = 0; i < n; i++) {
+    const h = (i + 1) / n;
+    const step = new THREE.Mesh(new THREE.BoxGeometry(1, h, tread), stepMat);
+    step.position.set(0, -0.5 + h / 2, -(i + 0.5) * tread);
+    plane.add(step);
+    const nose = new THREE.Mesh(new THREE.BoxGeometry(1, 0.012, 0.06), noseMat); // faixa escura na quina
+    nose.position.set(0, -0.5 + h + 0.006, -i * tread - 0.03);
+    plane.add(nose);
+  }
+  const railH = 0.95 / H;
+  const rod = (x, y0, z0, y1, z1, r = 0.025) => {
+    const a = new THREE.Vector3(x, y0, z0);
+    const b = new THREE.Vector3(x, y1, z1);
+    const len = a.distanceTo(b);
+    const m = new THREE.Mesh(new THREE.CylinderGeometry(r, r, len, 6), railMat);
+    m.position.copy(a).add(b).multiplyScalar(0.5);
+    m.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), b.clone().sub(a).normalize());
+    plane.add(m);
+  };
+  for (const x of [-0.49, 0, 0.49]) {
+    rod(x, -0.5 + railH, 0, 0.5 + railH, -run); // corrimão inclinado
+    if (x === 0) continue;
+    for (let i = 0; i <= n; i += 1) { // guarda-corpo de barras verticais
+      const y = -0.5 + i / n;
+      rod(x, y, -i * tread, y + railH, -i * tread, 0.012);
+    }
+  }
+  applyPlacement(plane, placement, scene);
+  return plane;
 }
