@@ -184,6 +184,16 @@ export function facadeTexture({ style = 'box', color = '#6b6e73', label = '', su
     ctx.fillStyle = 'rgba(0,0,0,.25)';
     ctx.fillRect(0, signH - 6, w, 6);
     signText(ctx, label, known ? sublabel : '', 0, 0, w, signH, legivel(textColor, color)); // sem comerciante: só o número
+    if (known && label) {
+      // selo "i": convite a tocar para ver detalhes
+      const r = Math.min(signH * 0.16, 18);
+      ctx.fillStyle = '#ffd23f';
+      ctx.beginPath(); ctx.arc(w - r * 1.5, signH - r * 1.5, r, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#1c1c1c';
+      ctx.font = `bold ${Math.round(r * 1.5)}px system-ui, sans-serif`;
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillText('i', w - r * 1.5, signH - r * 1.5 + 1);
+    }
   }
   ctx.strokeStyle = 'rgba(0,0,0,.35)';
   ctx.lineWidth = 6;

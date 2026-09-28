@@ -54,6 +54,37 @@ cursor.renderOrder = 20;
 cursor.visible = false;
 viewer.scene.add(cursor);
 
+// Lojas: ao passar o mouse, moldura amarela e etiqueta "clique para ver detalhes"
+const frame = new THREE.LineLoop(
+  new THREE.BufferGeometry().setFromPoints([[-0.5, -0.5], [0.5, -0.5], [0.5, 0.5], [-0.5, 0.5]].map(([x, y]) => new THREE.Vector3(x, y, 0.02))),
+  new THREE.LineBasicMaterial({ color: '#ffd23f', depthTest: false, fog: false }),
+);
+frame.renderOrder = 30;
+const hoverTag = document.createElement('div');
+hoverTag.className = 'hover-tag';
+hoverTag.hidden = true;
+app.appendChild(hoverTag);
+let hovered = null;
+viewer.addEventListener('hover', ({ detail }) => {
+  const mod = detail && !editor.active ? viewer.pick(detail.x, detail.y).hits[0]?.object : null;
+  const shop = mod && ['box', 'banca'].includes(mod.userData.module?.type) ? mod : null;
+  if (shop !== hovered) {
+    frame.removeFromParent();
+    if (shop) shop.add(frame);
+    hovered = shop;
+  }
+  viewer.renderer.domElement.style.cursor = shop ? 'pointer' : '';
+  hoverTag.hidden = !shop;
+  if (shop) {
+    const known = Boolean(shop.userData.module.info?.category);
+    hoverTag.innerHTML = '';
+    const b = document.createElement('b');
+    b.textContent = shop.userData.module.title;
+    hoverTag.append(b, known ? 'Clique para ver telefone e detalhes' : 'Espaço sem comerciante identificado');
+    hoverTag.style.transform = `translate(${detail.x + 16}px, ${detail.y + 12}px)`;
+  }
+});
+
 viewer.addEventListener('hover', ({ detail }) => {
   const eye = current?.scene.position?.z ?? 1.6;
   const p = detail && current?.scene.position ? viewer.floorPoint(detail.x, detail.y, eye) : null;
@@ -62,14 +93,24 @@ viewer.addEventListener('hover', ({ detail }) => {
 });
 
 const tip = app.querySelector('.tip');
-function flash(text) {
+function flash(text, ms = 2200) {
   tip.textContent = text;
   tip.classList.remove('gone');
   clearTimeout(flash.t);
-  flash.t = setTimeout(hideTip, 1800);
+  flash.t = setTimeout(hideTip, ms);
 }
 const hideTip = () => tip?.classList.add('gone');
-setTimeout(hideTip, 9000);
+setTimeout(() => flash('👆 Toque no letreiro de uma loja para ver telefone e detalhes', 7000), 8000);
+
+// Primeira visita: três passos rápidos (reabre no botão Ajuda)
+const guide = app.querySelector('.guide');
+const openGuide = () => { guide.hidden = false; };
+guide.querySelector('button').addEventListener('click', () => {
+  guide.hidden = true;
+  try { localStorage.setItem('mercado360:guia', '1'); } catch { /* sem armazenamento: mostra de novo na próxima visita */ }
+});
+app.querySelector('.open-help').addEventListener('click', openGuide);
+try { if (!localStorage.getItem('mercado360:guia')) openGuide(); } catch { openGuide(); }
 
 viewer.addEventListener('doublepick', ({ detail }) => {
   if (editor.active || !current?.scene.position) return;
@@ -308,12 +349,5 @@ app.querySelector('.open-directory').addEventListener('click', () => {
   info.hide();
   directory.toggle();
 });
-if (tour.info?.contact) {
-  // pedido de correção/remoção (LGPD) já preenchido com a loja
-  info.correction = (m) => {
-    const body = `Loja: ${m.title}\nIdentificação no tour: ${m.id}\nLocalização: ${m.info?.location ?? ''}\n\nO que corrigir ou remover:\n`;
-    return `${tour.info.contact}?title=${encodeURIComponent(`Correção: ${m.title}`)}&body=${encodeURIComponent(body)}`;
-  };
-}
 if (start.loja) showModule(start.loja).catch(() => goTo(tour.startScene));
 else goTo(start.scene ?? tour.startScene, { view: start.scene ? start : undefined });

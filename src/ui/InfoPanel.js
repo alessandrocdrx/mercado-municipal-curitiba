@@ -34,11 +34,6 @@ export class InfoPanel {
     const ig = text.match(/@([A-Za-z0-9_.]{3,30})/);
     if (ig) actions.append(action('📷 Instagram', `https://instagram.com/${ig[1].replace(/\.$/, '')}`));
     if (info.url) actions.append(action(module.type === 'box' || module.type === 'banca' ? '🔗 Site oficial' : '🔗 Saiba mais', info.url));
-    if (this.correction && (module.type === 'box' || module.type === 'banca')) {
-      const fix = action('✏️ Informar correção', this.correction(module));
-      fix.classList.add('info-fix');
-      actions.append(fix);
-    }
     if (actions.childElementCount) this.el.append(actions);
 
     if (info.description) this.el.append(element('p', info.description, 'info-desc'));
