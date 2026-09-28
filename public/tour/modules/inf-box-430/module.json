@@ -7,13 +7,16 @@
     "y": -65.9,
     "z": 1.4,
     "width": 2.32,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#7a4a24",
+      "color": "#F2F2F2",
+      "facade": "#F2F2F2",
+      "textColor": "#B22222",
       "label": "Furuta Cereais",
       "sublabel": "Cereais e especiarias · Box 430"
     }
@@ -26,5 +29,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "5f7ecbb2cd31"
+  "autoHash": "cdf53dd531c4"
 }

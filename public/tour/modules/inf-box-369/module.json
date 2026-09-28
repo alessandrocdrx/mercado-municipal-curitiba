@@ -7,13 +7,14 @@
     "y": -54.05,
     "z": 1.4,
     "width": 2.64,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#5d5a6e",
+      "color": "#5A3A22",
       "label": "Puro Coco",
       "sublabel": "Outros · Box 369"
     }
@@ -25,5 +26,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "8844d8f82913"
+  "autoHash": "e4036d1052ac"
 }

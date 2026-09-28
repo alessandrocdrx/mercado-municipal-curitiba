@@ -7,13 +7,16 @@
     "y": -27.55,
     "z": 1.4,
     "width": 2.4,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 90,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#4a5a73",
+      "color": "#1A1A1A",
+      "textColor": "#1A1A1A",
+      "closed": true,
       "label": "Tabacaria Trevo",
       "sublabel": "Variedades e serviços · Box 330"
     }
@@ -25,5 +28,5 @@
     "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "00cb3deb0d85"
+  "autoHash": "9d065d633e88"
 }

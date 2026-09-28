@@ -7,13 +7,16 @@
     "y": -22.98,
     "z": 1.4,
     "width": 2.67,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#4a5a73",
+      "color": "#F2F2F2",
+      "facade": "#F2F2F2",
+      "textColor": "#1A1A1A",
       "label": "Quadrolândia",
       "sublabel": "Variedades e serviços · Box 343"
     }
@@ -25,5 +28,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "b6921e753fe5"
+  "autoHash": "455746bb446c"
 }

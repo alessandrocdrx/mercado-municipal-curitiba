@@ -7,13 +7,16 @@
     "y": -48.32,
     "z": 1.4,
     "width": 2.62,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#9a6b1f",
+      "color": "#2E7D32",
+      "facade": "#B22222",
+      "textColor": "#2E7D32",
       "label": "Empório 365",
       "sublabel": "Empório e mercearia · Box 365"
     }
@@ -25,5 +28,5 @@
     "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "a4f6f64df4d2"
+  "autoHash": "7716c321c636"
 }

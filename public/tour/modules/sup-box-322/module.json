@@ -7,13 +7,16 @@
     "y": -18.92,
     "z": 1.4,
     "width": 2.51,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#4a5a73",
+      "color": "#F2F2F2",
+      "facade": "#F2F2F2",
+      "textColor": "#B22222",
       "label": "Artigos Orientais",
       "sublabel": "Variedades e serviços · Box 322"
     }
@@ -25,5 +28,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "0989c611081d"
+  "autoHash": "d80cf349d9ff"
 }

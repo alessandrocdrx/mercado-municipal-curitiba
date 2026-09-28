@@ -13,7 +13,7 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3c7a34",
+      "color": "#F2F2F2",
       "label": "Banca do Eduardo",
       "sublabel": "Hortifrúti · Banca 93"
     }
@@ -25,5 +25,5 @@
     "note": "Na planta do tour: \"Eduardo e Daniel\". Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "e8cd0f140b92"
+  "autoHash": "c818161e709a"
 }

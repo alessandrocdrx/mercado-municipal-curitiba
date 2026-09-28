@@ -7,13 +7,16 @@
     "y": -49.2,
     "z": 1.4,
     "width": 1.91,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#4c5f7a",
+      "color": "#F2F2F2",
+      "facade": "#1F5FA8",
+      "vitrine": true,
       "label": "Planeta Aquários",
       "sublabel": "Pet shop · Box 18"
     }
@@ -27,5 +30,5 @@
     "note": "A lista cita o box 17; no tour 3D a loja ocupa os boxes vizinhos. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "459b1a6cb097"
+  "autoHash": "6a15bf399229"
 }

@@ -13,7 +13,7 @@
   },
   "media": {
     "placeholder": {
-      "color": "#9a6b1f",
+      "color": "#EFE6CC",
       "label": "Une Toyoda",
       "sublabel": "Empório e mercearia · Banca 102"
     }
@@ -25,5 +25,5 @@
     "note": "A lista cita a banca 101; outro guia cita 101 e 102. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "7d567b503ac9"
+  "autoHash": "e4047334972f"
 }

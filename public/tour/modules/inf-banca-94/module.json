@@ -13,7 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3c7a34",
+      "color": "#E8C21A",
+      "facade": "#1F4D3A",
+      "textColor": "#1A1A1A",
       "label": "Banca da Isabel",
       "sublabel": "Hortifrúti · Banca 94"
     }
@@ -25,5 +27,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "bed3f03ad616"
+  "autoHash": "e3ef57b54082"
 }

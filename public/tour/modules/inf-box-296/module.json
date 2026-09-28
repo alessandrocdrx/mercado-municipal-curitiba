@@ -7,13 +7,15 @@
     "y": -19.72,
     "z": 1.4,
     "width": 2.64,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#6b3a2a",
+      "color": "#1F4D3A",
+      "facade": "#E0A020",
       "label": "D'Fuhrmann Chocolates",
       "sublabel": "Doces e chocolates · Box 296"
     }
@@ -27,5 +29,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "d77faf886f6c"
+  "autoHash": "f69e3f3745e4"
 }

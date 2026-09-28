@@ -7,13 +7,14 @@
     "y": -65.9,
     "z": 1.4,
     "width": 2.32,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#5b2e63",
+      "color": "#1F5FA8",
       "label": "Daimaru Bebidas",
       "sublabel": "Bebidas · Box 434"
     }
@@ -27,5 +28,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "d275571a7ee1"
+  "autoHash": "6030f8ababb9"
 }

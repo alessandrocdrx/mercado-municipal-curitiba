@@ -7,13 +7,16 @@
     "y": -48.32,
     "z": 1.4,
     "width": 2.62,
-    "height": 2.8,
+    "height": 2.6,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#7a4a24",
+      "color": "#D8C8A8",
+      "facade": "#D8C8A8",
+      "textColor": "#E8C21A",
       "label": "Vitaly's Especiarias",
       "sublabel": "Cereais e especiarias · Box 367"
     }
@@ -25,5 +28,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "17f7d37ea0d9"
+  "autoHash": "49ca971aa159"
 }

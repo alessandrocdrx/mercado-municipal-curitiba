@@ -7,13 +7,15 @@
     "y": -31.46,
     "z": 1.4,
     "width": 2.4,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 270,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
       "color": "#4a5a73",
+      "facade": "#CFE3E8",
       "label": "Ascesme",
       "sublabel": "Variedades e serviços · Box 328"
     }
@@ -26,5 +28,5 @@
     "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "27c0365b5118"
+  "autoHash": "84084819cafa"
 }

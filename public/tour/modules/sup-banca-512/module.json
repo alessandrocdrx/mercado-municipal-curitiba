@@ -13,7 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#2f7d32",
+      "color": "#1A1A1A",
+      "facade": "#1A1A1A",
+      "textColor": "#F2F2F2",
       "label": "Sírius Orgânicos",
       "sublabel": "Orgânicos · Banca 512"
     }
@@ -25,5 +27,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "59f12f1bc149"
+  "autoHash": "c1314980a424"
 }

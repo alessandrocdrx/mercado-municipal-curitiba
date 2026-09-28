@@ -13,7 +13,8 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3c7a34",
+      "color": "#B22222",
+      "textColor": "#B22222",
       "label": "Banca do Fernando",
       "sublabel": "Hortifrúti · Banca 47"
     }
@@ -25,5 +26,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "6d8a0f3c5d06"
+  "autoHash": "cf6c4db9b01f"
 }

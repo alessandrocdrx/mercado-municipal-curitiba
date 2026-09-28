@@ -7,13 +7,15 @@
     "y": -55.06,
     "z": 1.4,
     "width": 2.32,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#9a6b1f",
+      "color": "#B22222",
+      "facade": "#B5653F",
       "label": "Miranda's Mercearia",
       "sublabel": "Empório e mercearia · Box 189"
     }
@@ -27,5 +29,5 @@
     "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "ddafafeb73d7"
+  "autoHash": "2981e4694a9f"
 }

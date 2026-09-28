@@ -7,13 +7,15 @@
     "y": -44.15,
     "z": 1.4,
     "width": 2.89,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#b0561d",
+      "color": "#E8C21A",
+      "facade": "#1F5FA8",
       "label": "Box do Eliseu",
       "sublabel": "Lanchonete e restaurante · Box 13"
     }
@@ -26,5 +28,5 @@
     "note": "Boxes 12–13 do pavimento inferior são do Celeiro Municipal; o Eliseu foi posto na praça de alimentação. Fonte: site oficial (via busca). Confirme no local."
   },
   "generated": true,
-  "autoHash": "81cd83f0aef4"
+  "autoHash": "335d0ea2ed29"
 }

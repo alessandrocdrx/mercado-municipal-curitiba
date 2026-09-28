@@ -7,13 +7,15 @@
     "y": -31.88,
     "z": 1.4,
     "width": 2.27,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
       "color": "#9a6b1f",
+      "facade": "#A0764A",
       "label": "Casa da Azeitona",
       "sublabel": "Empório e mercearia · Box 33"
     }
@@ -25,5 +27,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "e451420810f6"
+  "autoHash": "97cfd391a704"
 }

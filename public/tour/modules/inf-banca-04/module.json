@@ -13,7 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#7a4a24",
+      "color": "#B22222",
+      "facade": "#1F4D3A",
+      "textColor": "#F2F2F2",
       "label": "Banca do Paulo",
       "sublabel": "Cereais e especiarias · Banca 04"
     }
@@ -25,5 +27,5 @@
     "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "c69996d73de7"
+  "autoHash": "54839072c3d8"
 }

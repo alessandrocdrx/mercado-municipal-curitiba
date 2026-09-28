@@ -7,13 +7,17 @@
     "y": -43.85,
     "z": 1.4,
     "width": 1.91,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#8e2f2f",
+      "color": "#7A1F2B",
+      "facade": "#7A1F2B",
+      "textColor": "#F2F2F2",
+      "vitrine": true,
       "label": "Espaço Angus Prime",
       "sublabel": "Açougue · Box 06"
     }
@@ -28,5 +32,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "0cfafbbe4980"
+  "autoHash": "64901f86e5bf"
 }

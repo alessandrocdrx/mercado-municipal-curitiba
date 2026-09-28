@@ -7,13 +7,15 @@
     "y": -18.41,
     "z": 1.4,
     "width": 2.39,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
       "color": "#4a5a73",
+      "facade": "#4A2F1E",
       "label": "Lule Salão de Cabelos",
       "sublabel": "Variedades e serviços · Box 318"
     }
@@ -25,5 +27,5 @@
     "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "d87fe1de764a"
+  "autoHash": "41de9a2e7b5e"
 }

@@ -13,7 +13,8 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3c7a34",
+      "color": "#D9722B",
+      "vitrine": true,
       "label": "Fitz",
       "sublabel": "Hortifrúti · Banca 78"
     }
@@ -25,5 +26,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "3f2b2d6ee0a9"
+  "autoHash": "541d4d1362dc"
 }

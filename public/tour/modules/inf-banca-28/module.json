@@ -14,6 +14,7 @@
   "media": {
     "placeholder": {
       "color": "#3c7a34",
+      "facade": "#8BC34A",
       "label": "Banca do Adonis",
       "sublabel": "Hortifrúti · Banca 28"
     }
@@ -25,5 +26,5 @@
     "note": "A lista informa as bancas 127 e 224; o tour 3D mostra a banca nos boxes 28 e 29 do salão (falar com Thiago ou Karine). Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "695e2efeb37d"
+  "autoHash": "ca299108880c"
 }

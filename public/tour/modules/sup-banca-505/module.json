@@ -13,7 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#2f7d32",
+      "color": "#1A1A1A",
+      "facade": "#1A1A1A",
+      "textColor": "#EFE6CC",
       "label": "Ceccon Produtos Orgânicos",
       "sublabel": "Orgânicos · Banca 505"
     }
@@ -25,5 +27,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "22a6806f7317"
+  "autoHash": "0ea2842c5932"
 }

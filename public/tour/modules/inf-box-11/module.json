@@ -7,13 +7,16 @@
     "y": -37.17,
     "z": 1.4,
     "width": 2.32,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 270,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#23577f",
+      "color": "#B22222",
+      "facade": "#F2F2F2",
+      "vitrine": true,
       "label": "Peixaria Santa Clara",
       "sublabel": "Peixaria · Box 11"
     }
@@ -27,5 +30,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "ed98aa2e29f9"
+  "autoHash": "8fb0583dfbb2"
 }

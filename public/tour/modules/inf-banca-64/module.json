@@ -13,7 +13,8 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3c7a34",
+      "color": "#1F5FA8",
+      "facade": "#2E7D32",
       "label": "Banca da Cirlei",
       "sublabel": "Hortifrúti · Banca 64"
     }
@@ -25,5 +26,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "63d729dc9012"
+  "autoHash": "6aabab1e1d51"
 }

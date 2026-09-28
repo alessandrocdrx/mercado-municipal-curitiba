@@ -7,13 +7,16 @@
     "y": -42.71,
     "z": 1.4,
     "width": 2.58,
-    "height": 2.8,
+    "height": 2.6,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#3c7a34",
+      "color": "#D9722B",
+      "facade": "#1F4D3A",
+      "textColor": "#A0764A",
       "label": "Banca do Adalto",
       "sublabel": "Hortifrúti · Box 363"
     }
@@ -26,5 +29,5 @@
     "note": "A lista informa 111 e 113; posição do tour 3D (\"Box do Adalto\"). Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "ef9311a6a143"
+  "autoHash": "1d994219ded6"
 }

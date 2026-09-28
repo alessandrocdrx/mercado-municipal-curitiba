@@ -13,7 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#7a4a24",
+      "color": "#F2F2F2",
+      "facade": "#F2F2F2",
+      "textColor": "#B22222",
       "label": "Cereais Mistura Fina",
       "sublabel": "Cereais e especiarias · Banca 17"
     }
@@ -27,5 +29,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "0e91a0a47ec6"
+  "autoHash": "f5f7a8537af7"
 }

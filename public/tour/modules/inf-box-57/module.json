@@ -7,13 +7,17 @@
     "y": -59.91,
     "z": 1.4,
     "width": 2.32,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#9a6b1f",
+      "color": "#D9722B",
+      "facade": "#D9722B",
+      "textColor": "#B22222",
+      "vitrine": true,
       "label": "Bon Vivant",
       "sublabel": "Empório e mercearia · Box 57"
     }
@@ -37,5 +41,5 @@
     ]
   },
   "generated": true,
-  "autoHash": "a687af4b35a2"
+  "autoHash": "643411eee9cb"
 }

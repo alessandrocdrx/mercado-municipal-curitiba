@@ -13,7 +13,8 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3c7a34",
+      "color": "#B22222",
+      "facade": "#1F4D3A",
       "label": "Banca do Demétrio",
       "sublabel": "Hortifrúti · Banca 41"
     }
@@ -25,5 +26,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "429bca6b9b87"
+  "autoHash": "6c5119b6afc7"
 }

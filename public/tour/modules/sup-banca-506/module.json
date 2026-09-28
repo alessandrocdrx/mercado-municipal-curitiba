@@ -14,6 +14,7 @@
   "media": {
     "placeholder": {
       "color": "#2f7d32",
+      "facade": "#B5653F",
       "label": "Banca do Kobe",
       "sublabel": "Orgânicos · Banca 506"
     }
@@ -25,5 +26,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "e6ddc23674f1"
+  "autoHash": "89bf07d8c9c8"
 }

@@ -7,13 +7,15 @@
     "y": -24.38,
     "z": 1.4,
     "width": 2.06,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#7a4a24",
+      "color": "#1A1A1A",
+      "textColor": "#1A1A1A",
       "label": "Casa Nobre Especiarias",
       "sublabel": "Cereais e especiarias · Box 283"
     }
@@ -25,5 +27,5 @@
     "note": "Na lista aparece como Casa Gourmet (mesmo celular). Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "d622f1aaf97a"
+  "autoHash": "a36b37ddab4f"
 }

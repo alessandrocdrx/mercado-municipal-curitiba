@@ -13,7 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3c7a34",
+      "color": "#F2F2F2",
+      "textColor": "#F2F2F2",
+      "vitrine": true,
       "label": "Manga Rosa",
       "sublabel": "Hortifrúti · Banca 59"
     }
@@ -25,5 +27,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "987fb130a9f3"
+  "autoHash": "906f35b38108"
 }

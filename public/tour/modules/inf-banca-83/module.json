@@ -13,7 +13,8 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3c7a34",
+      "color": "#1A1A1A",
+      "textColor": "#1A1A1A",
       "label": "Banca do Nei",
       "sublabel": "Hortifrúti · Banca 83"
     }
@@ -25,5 +26,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "2daea5bac0e8"
+  "autoHash": "5f39351466be"
 }

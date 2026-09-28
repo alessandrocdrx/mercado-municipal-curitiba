@@ -7,13 +7,16 @@
     "y": -18.41,
     "z": 1.4,
     "width": 2.39,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#4a5a73",
+      "color": "#A0764A",
+      "facade": "#A0764A",
+      "textColor": "#1A1A1A",
       "label": "Kotobuki Artesanato e Presentes",
       "sublabel": "Variedades e serviços · Box 313"
     }
@@ -25,5 +28,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "e4d1709ebbc1"
+  "autoHash": "bc417f0ddc02"
 }

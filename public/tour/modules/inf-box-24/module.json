@@ -7,13 +7,15 @@
     "y": -32.19,
     "z": 1.4,
     "width": 2.22,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#7a4a24",
+      "color": "#B22222",
+      "facade": "#A0764A",
       "label": "Cia. do Tempero",
       "sublabel": "Cereais e especiarias · Box 24"
     }
@@ -27,5 +29,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "fc1e08cac388"
+  "autoHash": "908871afcd0b"
 }

@@ -13,7 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3c7a34",
+      "color": "#2E7D32",
+      "facade": "#1F4D3A",
+      "textColor": "#F2F2F2",
       "label": "Banca Tutumi",
       "sublabel": "Hortifrúti · Banca 30"
     }
@@ -25,5 +27,5 @@
     "note": "A lista diz \"Box 22 e 30\"; foi posta nas bancas 22 e 30 do salão. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "9e692e0ef7e7"
+  "autoHash": "8ffc32dcdbad"
 }

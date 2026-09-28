@@ -13,7 +13,7 @@
   },
   "media": {
     "placeholder": {
-      "color": "#9a6b1f",
+      "color": "#2E7D32",
       "label": "Mafo Com. de Alimentos",
       "sublabel": "Empório e mercearia · Banca 37"
     }
@@ -25,5 +25,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "06c0f5a78007"
+  "autoHash": "187875fe2d7f"
 }

@@ -7,13 +7,15 @@
     "y": -51.4,
     "z": 1.4,
     "width": 8,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
       "color": "#b0561d",
+      "facade": "#CFE3E8",
       "label": "Restaurante Ohana",
       "sublabel": "Lanchonete e restaurante · Box 518"
     }
@@ -24,5 +26,5 @@
     "note": "A lista informa o box 201; posição do tour 3D (setor de orgânicos). Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "55c0b444272b"
+  "autoHash": "7bdeefe53849"
 }

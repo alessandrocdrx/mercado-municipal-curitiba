@@ -43,6 +43,10 @@ const toMeters = (pav, [px, py]) => ({ x: r2(px * pav.escala), y: r2(-py * pav.e
 /** desloca um ponto em px na direção de um facing */
 const push = ([px, py], facing, d) => [px + Math.sin((facing * Math.PI) / 180) * d, py - Math.cos((facing * Math.PI) / 180) * d];
 
+// Aparência real (cores, tipo, profundidade) lida no tour 3D oficial: visual-tour3d.json
+const VISUAL = JSON.parse(fs.readFileSync(new URL('./visual-tour3d.json', import.meta.url), 'utf8'));
+const clamp = (v, a, b) => (v === undefined ? undefined : Math.min(b, Math.max(a, v)));
+
 const moduleIds = [];
 const sceneIds = [];
 
@@ -81,12 +85,17 @@ for (const pav of PAVIMENTOS) {
           ...toMeters(pav, frente),
           z: banca ? 0.6 : 1.4,
           width: r2(larguraPx * pav.escala * 0.92),
-          height: banca ? 1.2 : 2.8,
+          height: banca ? 1.2 : r2(clamp(com && VISUAL[com.nome]?.altura, 2.4, 3.5) ?? 2.8),
+          depth: banca ? undefined : clamp(com && VISUAL[com.nome]?.profundidade, 1.2, 4),
           facing,
           surface: 'wall',
         },
         media: com
-          ? { placeholder: { color: cat.cor, label: com.nome, sublabel: `${cat.nome} · ${nome}` } }
+          ? { placeholder: limpa({
+            color: VISUAL[com.nome]?.letreiro ?? cat.cor, facade: VISUAL[com.nome]?.fachada, textColor: VISUAL[com.nome]?.texto,
+            closed: VISUAL[com.nome]?.tipo === 'loja_fechada_porta_enrolar' || undefined, vitrine: VISUAL[com.nome]?.vitrine,
+            label: com.nome, sublabel: `${cat.nome} · ${nome}`,
+          }) }
           : { placeholder: { color: banca ? '#3a3f3c' : '#44474d', label: nome, sublabel: 'comerciante não identificado' } },
         info: com
           ? limpa({

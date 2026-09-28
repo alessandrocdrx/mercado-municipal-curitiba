@@ -7,13 +7,14 @@
     "y": -61.45,
     "z": 1.4,
     "width": 2.46,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#a33d6b",
+      "color": "#1F5FA8",
       "label": "Flora Cristiane",
       "sublabel": "Flores e plantas · Box 79"
     }
@@ -27,5 +28,5 @@
     "note": "A lista cita o Box 78; o site oficial cita 77, 79 e 80. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "74e97c7ba25b"
+  "autoHash": "732cd31c46b0"
 }

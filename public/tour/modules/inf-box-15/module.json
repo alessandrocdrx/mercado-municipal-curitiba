@@ -7,7 +7,8 @@
     "y": -55.19,
     "z": 1.4,
     "width": 7.53,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },

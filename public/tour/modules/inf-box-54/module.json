@@ -7,13 +7,16 @@
     "y": -57.27,
     "z": 1.4,
     "width": 2.78,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 90,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#6b3a2a",
+      "color": "#F2F2F2",
+      "textColor": "#F2F2F2",
+      "vitrine": true,
       "label": "Conversic",
       "sublabel": "Doces e chocolates · Box 54"
     }
@@ -27,5 +30,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "0fe6fd34e7c7"
+  "autoHash": "f2ff3685d1db"
 }

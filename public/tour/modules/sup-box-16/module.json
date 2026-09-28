@@ -7,13 +7,15 @@
     "y": -43.79,
     "z": 1.4,
     "width": 2.98,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#b0561d",
+      "color": "#F2F2F2",
+      "textColor": "#F2F2F2",
       "label": "Café do Jorge e da Aurea",
       "sublabel": "Lanchonete e restaurante · Box 16"
     }
@@ -26,5 +28,5 @@
     "note": "A lista informa o box 206; posição do tour 3D (praça de alimentação Karan). Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "68d5490f0e30"
+  "autoHash": "acc79a0b9c55"
 }

@@ -7,13 +7,16 @@
     "y": -36.6,
     "z": 1.4,
     "width": 2.38,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 90,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#7a4a24",
+      "color": "#F2F2F2",
+      "facade": "#F2F2F2",
+      "textColor": "#1A1A1A",
       "label": "Armazém Becker",
       "sublabel": "Cereais e especiarias · Box 48"
     }
@@ -27,5 +30,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "d5938fb0d89d"
+  "autoHash": "ef1352a441d9"
 }

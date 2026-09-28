@@ -13,7 +13,8 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3c7a34",
+      "color": "#1F5FA8",
+      "textColor": "#F2F2F2",
       "label": "Banca da Leonilda",
       "sublabel": "Hortifrúti · Banca 65"
     }
@@ -25,5 +26,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "f5056c83f229"
+  "autoHash": "767784fef686"
 }

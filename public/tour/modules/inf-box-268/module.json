@@ -7,13 +7,15 @@
     "y": -11.28,
     "z": 1.4,
     "width": 2.17,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#5b2e63",
+      "color": "#D9722B",
+      "textColor": "#1A1A1A",
       "label": "Adega Brasil",
       "sublabel": "Bebidas · Box 268"
     }
@@ -26,5 +28,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "76a4e5f7f326"
+  "autoHash": "43a57ab9392c"
 }

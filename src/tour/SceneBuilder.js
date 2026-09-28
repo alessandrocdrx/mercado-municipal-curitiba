@@ -331,10 +331,10 @@ async function buildModuleMesh(module, placement, scene, model = false) {
   mesh.userData = { pickable: true, module, placement, anchor: isWorldPlacement(placement) ? 'world' : 'view' };
   if (model && BODY_DEPTH[kind] && isWorldPlacement(placement) && (placement.surface ?? 'wall') === 'wall') {
     // volume da loja atrás da fachada (filho do plano: herda posição e largura/altura)
-    const depth = BODY_DEPTH[kind];
+    const depth = placement.depth ?? BODY_DEPTH[kind];
     const body = new THREE.Mesh(
       new THREE.BoxGeometry(1, 1, depth),
-      new THREE.MeshLambertMaterial({ color: kind === 'banca' ? '#cfc6b4' : '#ddd6c8' }),
+      new THREE.MeshLambertMaterial({ color: media.placeholder?.facade ?? (kind === 'banca' ? '#cfc6b4' : '#ddd6c8') }),
     );
     body.position.z = -depth / 2 - 0.005;
     body.name = 'volume';

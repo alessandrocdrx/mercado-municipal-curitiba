@@ -7,13 +7,14 @@
     "y": -34.07,
     "z": 1.4,
     "width": 2.4,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 270,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#4a5a73",
+      "color": "#F2F2F2",
       "label": "Salão de Cabeleireiro Unissex – Eurides",
       "sublabel": "Variedades e serviços · Box 329"
     }
@@ -25,5 +26,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "b113a1dc96b5"
+  "autoHash": "b83256666e0d"
 }

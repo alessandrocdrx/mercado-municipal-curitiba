@@ -7,13 +7,16 @@
     "y": -35.41,
     "z": 1.4,
     "width": 2.32,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
       "color": "#9a6b1f",
+      "facade": "#B22222",
+      "vitrine": true,
       "label": "Casa de Massas Leve Pronto",
       "sublabel": "Empório e mercearia · Box 193"
     }
@@ -25,5 +28,5 @@
     "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "488fbb3f2ed0"
+  "autoHash": "a17bedab7c1b"
 }

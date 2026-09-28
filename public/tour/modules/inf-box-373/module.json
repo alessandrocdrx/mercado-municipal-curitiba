@@ -7,13 +7,16 @@
     "y": -54.24,
     "z": 1.4,
     "width": 2.64,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#4c5f7a",
+      "color": "#F2F2F2",
+      "facade": "#F2F2F2",
+      "textColor": "#5A3A22",
       "label": "Rei do Kão",
       "sublabel": "Pet shop · Box 373"
     }
@@ -27,5 +30,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "6dbe1896088a"
+  "autoHash": "d3ce93ce592a"
 }

@@ -7,13 +7,16 @@
     "y": -24.38,
     "z": 1.4,
     "width": 2.06,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#5b2e63",
+      "color": "#4A2F1E",
+      "facade": "#4A2F1E",
+      "vitrine": true,
       "label": "Manfré Cervejas Especiais",
       "sublabel": "Bebidas · Box 284"
     }
@@ -25,5 +28,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "a6eea394027d"
+  "autoHash": "6d6e31600378"
 }

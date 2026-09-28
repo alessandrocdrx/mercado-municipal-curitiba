@@ -7,13 +7,16 @@
     "y": -55.82,
     "z": 1.4,
     "width": 2.32,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#4a5a73",
+      "color": "#5B2C83",
+      "facade": "#5B2C83",
+      "textColor": "#F2F2F2",
       "label": "Dahra Pedras Brasileiras",
       "sublabel": "Variedades e serviços · Box 190"
     }
@@ -25,5 +28,5 @@
     "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "069dcb06a539"
+  "autoHash": "cb5126e4c035"
 }

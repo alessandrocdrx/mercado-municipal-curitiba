@@ -13,7 +13,7 @@
   },
   "media": {
     "placeholder": {
-      "color": "#6b3a2a",
+      "color": "#A0764A",
       "label": "Empório Nossa Banca",
       "sublabel": "Doces e chocolates · Banca 87"
     }
@@ -25,5 +25,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "a8935289e101"
+  "autoHash": "567aac8ffac3"
 }

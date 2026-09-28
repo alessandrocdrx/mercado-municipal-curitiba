@@ -13,7 +13,8 @@
   },
   "media": {
     "placeholder": {
-      "color": "#2f7d32",
+      "color": "#EFE6CC",
+      "facade": "#F2F2F2",
       "label": "Nico's Empório Orgânico",
       "sublabel": "Orgânicos · Banca 501"
     }
@@ -25,5 +26,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "092ed2702da0"
+  "autoHash": "325c21e4acaf"
 }

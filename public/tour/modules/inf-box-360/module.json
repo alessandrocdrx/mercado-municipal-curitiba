@@ -7,13 +7,14 @@
     "y": -42.71,
     "z": 1.4,
     "width": 2.58,
-    "height": 2.8,
+    "height": 2.6,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#6b3a2a",
+      "color": "#1A1A1A",
       "label": "Empório Top Mix",
       "sublabel": "Doces e chocolates · Box 360"
     }
@@ -27,5 +28,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "7553316bc91c"
+  "autoHash": "2169640015fe"
 }

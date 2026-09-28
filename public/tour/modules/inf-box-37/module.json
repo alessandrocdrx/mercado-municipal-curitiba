@@ -7,13 +7,16 @@
     "y": -31.88,
     "z": 1.4,
     "width": 2.27,
-    "height": 2.8,
+    "height": 2.6,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#9a6b1f",
+      "color": "#2E7D32",
+      "facade": "#F2F2F2",
+      "textColor": "#2E7D32",
       "label": "Mercearia MMM",
       "sublabel": "Empório e mercearia · Box 37"
     }
@@ -25,5 +28,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "1c57ff0f0262"
+  "autoHash": "d9398e0f37ae"
 }

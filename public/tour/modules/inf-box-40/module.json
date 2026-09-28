@@ -7,13 +7,17 @@
     "y": -31.88,
     "z": 1.4,
     "width": 2.27,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#5b2e63",
+      "color": "#7A1F2B",
+      "facade": "#7A1F2B",
+      "textColor": "#F2F2F2",
+      "vitrine": true,
       "label": "Box 41 – Vinhos",
       "sublabel": "Bebidas · Box 40"
     }
@@ -27,5 +31,5 @@
     "note": "A lista informa \"Box 40\"; guias públicos citam os boxes 39 a 42. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "31a32a72f4e6"
+  "autoHash": "1bd2e7daf64b"
 }

@@ -7,13 +7,16 @@
     "y": -31.88,
     "z": 1.4,
     "width": 2.27,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#9a6b1f",
+      "color": "#F2F2F2",
+      "facade": "#A0764A",
+      "textColor": "#F2F2F2",
       "label": "Claudio's Mercearia",
       "sublabel": "Empório e mercearia · Box 32"
     }
@@ -25,5 +28,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "e496c61e874f"
+  "autoHash": "a7e29c971e5f"
 }

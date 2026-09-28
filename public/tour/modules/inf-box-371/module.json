@@ -7,13 +7,15 @@
     "y": -54.15,
     "z": 1.4,
     "width": 2.64,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
       "color": "#5b2e63",
+      "vitrine": true,
       "label": "Adega Curitibana",
       "sublabel": "Bebidas · Box 371"
     }
@@ -25,5 +27,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "5a935e35743f"
+  "autoHash": "631cb624cdf3"
 }

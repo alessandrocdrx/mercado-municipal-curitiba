@@ -7,13 +7,17 @@
     "y": -18.92,
     "z": 1.4,
     "width": 2.51,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#4a5a73",
+      "color": "#1F5FA8",
+      "facade": "#1F5FA8",
+      "textColor": "#1F5FA8",
+      "closed": true,
       "label": "Ki Bolada Loteria",
       "sublabel": "Variedades e serviços · Box 321"
     }
@@ -25,5 +29,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "cd938a98beeb"
+  "autoHash": "778fd3972fdb"
 }

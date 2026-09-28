@@ -7,13 +7,17 @@
     "y": -25.7,
     "z": 1.4,
     "width": 2.32,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 270,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#9a6b1f",
+      "color": "#1F4D3A",
+      "facade": "#1F4D3A",
+      "textColor": "#B22222",
+      "vitrine": true,
       "label": "Bonsai Mercearia",
       "sublabel": "Empório e mercearia · Box 266"
     }
@@ -25,5 +29,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "7a2861a2839f"
+  "autoHash": "08236da72f47"
 }

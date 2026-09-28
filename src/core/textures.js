@@ -134,7 +134,7 @@ function line(ctx, x1, y1, x2, y2) {
  * Fachada provisória para a maquete 3D: letreiro colorido no alto com o nome
  * e, abaixo, a "loja" (vão escuro com balcão). style: 'box' | 'banca' | 'porta'.
  */
-export function facadeTexture({ style = 'box', color = '#6b6e73', label = '', sublabel = '', aspect = 1, known = true }) {
+export function facadeTexture({ style = 'box', color = '#6b6e73', label = '', sublabel = '', aspect = 1, known = true, facade, textColor, closed, vitrine }) {
   const w = 320;
   const h = Math.max(64, Math.round(w / aspect));
   const canvas = document.createElement('canvas');
@@ -156,19 +156,28 @@ export function facadeTexture({ style = 'box', color = '#6b6e73', label = '', su
   } else {
     const signH = style === 'banca' ? h * 0.42 : h * 0.3;
     // corpo da loja
-    ctx.fillStyle = '#e7e1d6';
+    // corpo da loja (cor real da fachada quando conhecida)
+    ctx.fillStyle = facade ?? '#e7e1d6';
     ctx.fillRect(0, 0, w, h);
     ctx.fillStyle = known ? '#3b342c' : '#4a4a4a';
     ctx.fillRect(w * 0.06, signH + h * 0.04, w * 0.88, h - signH - h * 0.04);
-    // balcão
-    ctx.fillStyle = known ? shade(color, 0.35) : '#8a8a8a';
-    ctx.fillRect(w * 0.06, h * (style === 'banca' ? 0.72 : 0.68), w * 0.88, h);
+    if (closed) {
+      // loja fechada: vitrine de vidro com caixilhos
+      ctx.fillStyle = 'rgba(170,200,215,.55)';
+      ctx.fillRect(w * 0.06, signH + h * 0.04, w * 0.88, h - signH - h * 0.04);
+      ctx.fillStyle = '#2b2b2b';
+      for (const x of [0.06, 0.36, 0.64, 0.92]) ctx.fillRect(w * x, signH + h * 0.04, w * 0.02, h);
+    } else {
+      // balcão (vitrine refrigerada = vidro claro)
+      ctx.fillStyle = vitrine ? '#cfe3ea' : known ? shade(facade ?? color, 0.35) : '#8a8a8a';
+      ctx.fillRect(w * 0.06, h * (style === 'banca' ? 0.72 : 0.68), w * 0.88, h);
+    }
     // letreiro
     ctx.fillStyle = color;
     ctx.fillRect(0, 0, w, signH);
     ctx.fillStyle = 'rgba(0,0,0,.25)';
     ctx.fillRect(0, signH - 6, w, 6);
-    signText(ctx, label, sublabel, 0, 0, w, signH);
+    signText(ctx, label, sublabel, 0, 0, w, signH, legivel(textColor, color));
   }
   ctx.strokeStyle = 'rgba(0,0,0,.35)';
   ctx.lineWidth = 6;
@@ -180,10 +189,10 @@ export function facadeTexture({ style = 'box', color = '#6b6e73', label = '', su
   return tex;
 }
 
-function signText(ctx, label, sublabel, x, y, w, h) {
+function signText(ctx, label, sublabel, x, y, w, h, color = '#fff') {
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
-  ctx.fillStyle = '#fff';
+  ctx.fillStyle = color;
   let size = Math.min(h * (sublabel ? 0.42 : 0.55), w * 0.14);
   ctx.font = `700 ${size}px system-ui, sans-serif`;
   // quebra em duas linhas se o nome for longo
@@ -200,8 +209,9 @@ function signText(ctx, label, sublabel, x, y, w, h) {
   }
   if (sublabel) {
     ctx.font = `500 ${size * 0.5}px system-ui, sans-serif`;
-    ctx.fillStyle = 'rgba(255,255,255,.85)';
+    ctx.fillStyle = color; ctx.globalAlpha = 0.85;
     ctx.fillText(sublabel, x + w / 2, cy - size * 0.15, w * 0.92);
+    ctx.globalAlpha = 1;
   }
 }
 
@@ -307,4 +317,15 @@ export function streetSignTexture(name) {
     ctx.font = '700 54px system-ui, sans-serif';
     ctx.fillText(name, w / 2, h / 2 + 2, w - 40);
   }, false);
+}
+
+const lum = (hex) => {
+  const n = parseInt(String(hex).slice(1), 16);
+  if (!/^#[0-9a-f]{6}$/i.test(hex)) return 0.3;
+  return (0.299 * (n >> 16) + 0.587 * ((n >> 8) & 255) + 0.114 * (n & 255)) / 255;
+};
+/** Cor do texto do letreiro: a informada, se contrastar com o fundo; senão preto ou branco. */
+function legivel(texto, fundo) {
+  if (texto && Math.abs(lum(texto) - lum(fundo)) > 0.35) return texto;
+  return lum(fundo) > 0.6 ? '#1c1c1c' : '#fff';
 }

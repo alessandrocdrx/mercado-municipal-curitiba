@@ -1,0 +1,1071 @@
+{
+ "Box 41 – Vinhos": {
+  "tipo": "outro",
+  "fachada": "#7A1F2B",
+  "letreiro": "#7A1F2B",
+  "texto": "#F2F2F2",
+  "profundidade": 5,
+  "altura": 3,
+  "vitrine": true
+ },
+ "Cia. do Tempero": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#A0764A",
+  "letreiro": "#B22222",
+  "profundidade": 5,
+  "altura": 3
+ },
+ "Armazém Becker": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#F2F2F2",
+  "letreiro": "#F2F2F2",
+  "texto": "#1A1A1A",
+  "profundidade": 5,
+  "altura": 3
+ },
+ "Empório Valência": {
+  "tipo": "banca_ilha",
+  "letreiro": "#F2F2F2",
+  "texto": "#B22222",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Mercearia Sayonara": {
+  "tipo": "box_aberto_balcao",
+  "letreiro": "#1E2F6B",
+  "texto": "#F2F2F2",
+  "profundidade": 5,
+  "altura": 3,
+  "balcao": "madeira #A0764A"
+ },
+ "Box do Ademir": {
+  "tipo": "banca_ilha",
+  "letreiro": "#8BC34A",
+  "texto": "#8BC34A",
+  "profundidade": 5,
+  "altura": 2.6,
+  "vitrine": true
+ },
+ "Mercearia MMM": {
+  "tipo": "banca_ilha",
+  "fachada": "#F2F2F2",
+  "letreiro": "#2E7D32",
+  "texto": "#2E7D32",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Casa da Azeitona": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#A0764A",
+  "profundidade": 5,
+  "altura": 3
+ },
+ "Banca da Helena": {
+  "tipo": "banca_ilha",
+  "fachada": "#1F4D3A",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Claudio's Mercearia": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#A0764A",
+  "letreiro": "#F2F2F2",
+  "texto": "#F2F2F2",
+  "profundidade": 5,
+  "altura": 3,
+  "balcao": "alvenaria #F2F2F2"
+ },
+ "Banca da Júlia": {
+  "tipo": "banca_ilha",
+  "fachada": "#1F4D3A",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Banca do Oyama": {
+  "tipo": "banca_ilha",
+  "fachada": "#2E7D32",
+  "letreiro": "#E8C21A",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Armazém da Zelma": {
+  "tipo": "banca_ilha",
+  "fachada": "#E8C21A",
+  "letreiro": "#E8C21A",
+  "texto": "#E8C21A",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Osvaldo Cereais": {
+  "tipo": "banca_ilha",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Cereais e Especiarias Sissi": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#2E7D32",
+  "letreiro": "#2E7D32",
+  "texto": "#D9722B",
+  "profundidade": 5,
+  "altura": 3
+ },
+ "SN Frutas e Verduras": {
+  "tipo": "banca_ilha",
+  "letreiro": "#E8C21A",
+  "texto": "#1A1A1A",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Empório Nossa Banca": {
+  "tipo": "banca_ilha",
+  "letreiro": "#A0764A",
+  "profundidade": 5,
+  "altura": 2.6,
+  "balcao": "madeira #A0764A"
+ },
+ "Banco de Alimentos": {
+  "tipo": "banca_ilha",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Banca do Adalto": {
+  "tipo": "banca_ilha",
+  "fachada": "#1F4D3A",
+  "letreiro": "#D9722B",
+  "texto": "#A0764A",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Banca do Mário": {
+  "tipo": "banca_ilha",
+  "letreiro": "#B22222",
+  "texto": "#D9722B",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Cereais Mistura Fina": {
+  "tipo": "banca_ilha",
+  "fachada": "#F2F2F2",
+  "letreiro": "#F2F2F2",
+  "texto": "#B22222",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Banca Tutumi": {
+  "tipo": "banca_ilha",
+  "fachada": "#1F4D3A",
+  "letreiro": "#2E7D32",
+  "texto": "#F2F2F2",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Banca do Adonis": {
+  "tipo": "banca_ilha",
+  "fachada": "#8BC34A",
+  "profundidade": 5,
+  "altura": 2.6,
+  "balcao": "sim (material não identificado)"
+ },
+ "Banca da Maria": {
+  "tipo": "banca_ilha",
+  "fachada": "#2E7D32",
+  "letreiro": "#2E7D32",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Banca do João Carlos": {
+  "tipo": "banca_ilha",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Mercearia Imperial": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#E8C21A",
+  "letreiro": "#E8C21A",
+  "texto": "#1E2F6B",
+  "profundidade": 5,
+  "altura": 3
+ },
+ "Puro Coco": {
+  "tipo": "box_aberto_balcao",
+  "letreiro": "#5A3A22",
+  "profundidade": 5,
+  "altura": 3
+ },
+ "Empório 365": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#B22222",
+  "letreiro": "#2E7D32",
+  "texto": "#2E7D32",
+  "profundidade": 5,
+  "altura": 3,
+  "balcao": "sim (material não identificado) #B22222"
+ },
+ "Empório Top Mix": {
+  "tipo": "banca_ilha",
+  "letreiro": "#1A1A1A",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Adega Curitibana": {
+  "tipo": "box_aberto_balcao",
+  "profundidade": 5,
+  "altura": 3,
+  "vitrine": true
+ },
+ "Box do Palmito": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#E8C21A",
+  "letreiro": "#E8C21A",
+  "texto": "#2E7D32",
+  "profundidade": 5,
+  "altura": 3
+ },
+ "Vitaly's Especiarias": {
+  "tipo": "banca_ilha",
+  "fachada": "#D8C8A8",
+  "letreiro": "#D8C8A8",
+  "texto": "#E8C21A",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Banca do Paulo": {
+  "tipo": "banca_ilha",
+  "fachada": "#1F4D3A",
+  "letreiro": "#B22222",
+  "texto": "#F2F2F2",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Banca do Demétrio": {
+  "tipo": "banca_ilha",
+  "fachada": "#1F4D3A",
+  "letreiro": "#B22222",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Banca do Fernando": {
+  "tipo": "banca_ilha",
+  "letreiro": "#B22222",
+  "texto": "#B22222",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Urbano 52 CWB": {
+  "tipo": "banca_ilha",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Banca da Cirlei": {
+  "tipo": "banca_ilha",
+  "fachada": "#2E7D32",
+  "letreiro": "#1F5FA8",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Banca da Leonilda": {
+  "tipo": "banca_ilha",
+  "letreiro": "#1F5FA8",
+  "texto": "#F2F2F2",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Urnab (Banca do G)": {
+  "tipo": "banca_ilha",
+  "letreiro": "#B22222",
+  "texto": "#D9722B",
+  "profundidade": 5,
+  "altura": 2.6,
+  "vitrine": true
+ },
+ "Fitz": {
+  "tipo": "banca_ilha",
+  "letreiro": "#D9722B",
+  "profundidade": 5,
+  "altura": 2.6,
+  "vitrine": true
+ },
+ "Banca do Nei": {
+  "tipo": "banca_ilha",
+  "letreiro": "#1A1A1A",
+  "texto": "#1A1A1A",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Banca do Eduardo": {
+  "tipo": "banca_ilha",
+  "letreiro": "#F2F2F2",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Banca da Isabel": {
+  "tipo": "banca_ilha",
+  "fachada": "#1F4D3A",
+  "letreiro": "#E8C21A",
+  "texto": "#1A1A1A",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Une Toyoda": {
+  "tipo": "banca_ilha",
+  "letreiro": "#EFE6CC",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Impactto": {
+  "tipo": "outro",
+  "profundidade": 5,
+  "altura": 3
+ },
+ "ICAB Chocolates": {
+  "tipo": "box_aberto_balcao",
+  "letreiro": "#D9722B",
+  "texto": "#D9722B",
+  "profundidade": 5,
+  "altura": 3
+ },
+ "Rei do Kão": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#F2F2F2",
+  "letreiro": "#F2F2F2",
+  "texto": "#5A3A22",
+  "profundidade": 5,
+  "altura": 3
+ },
+ "Tenda Árabe": {
+  "tipo": "banca_ilha",
+  "fachada": "#5A3A22",
+  "letreiro": "#5A3A22",
+  "texto": "#EFE6CC",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Mafo Com. de Alimentos": {
+  "tipo": "box_aberto_balcao",
+  "letreiro": "#2E7D32",
+  "profundidade": 5,
+  "altura": 3
+ },
+ "Manga Rosa": {
+  "tipo": "banca_ilha",
+  "letreiro": "#F2F2F2",
+  "texto": "#F2F2F2",
+  "profundidade": 5,
+  "altura": 2.6,
+  "vitrine": true
+ },
+ "Viver Mais": {
+  "tipo": "box_aberto_balcao",
+  "letreiro": "#2E7D32",
+  "profundidade": 5,
+  "altura": 3,
+  "vitrine": true
+ },
+ "Vô Milano Cachaçaria": {
+  "tipo": "box_aberto_balcao",
+  "profundidade": 5,
+  "altura": 3,
+  "balcao": "vidro #A0764A"
+ },
+ "Mel Zum (Mimila)": {
+  "tipo": "banca_ilha",
+  "letreiro": "#E8C21A",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Emporium Nattuvida": {
+  "tipo": "banca_ilha",
+  "letreiro": "#F2F2F2",
+  "profundidade": 5,
+  "altura": 2.6
+ },
+ "Conversic": {
+  "tipo": "box_aberto_balcao",
+  "letreiro": "#F2F2F2",
+  "texto": "#F2F2F2",
+  "profundidade": 5,
+  "altura": 3,
+  "vitrine": true
+ },
+ "Bon Vivant": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#D9722B",
+  "letreiro": "#D9722B",
+  "texto": "#B22222",
+  "profundidade": 5,
+  "altura": 3,
+  "vitrine": true,
+  "balcao": "inox"
+ },
+ "Empório Francisca": {
+  "tipo": "box_aberto_balcao",
+  "letreiro": "#B22222",
+  "texto": "#B22222",
+  "profundidade": 5,
+  "altura": 3
+ },
+ "Cafe do Mercado Co.": {
+  "tipo": "banca_ilha",
+  "profundidade": 5,
+  "altura": 2.6,
+  "balcao": "madeira #4A2F1E"
+ },
+ "Banca do Hiro": {
+  "tipo": "box_aberto_balcao",
+  "letreiro": "#2E7D32",
+  "texto": "#D9722B",
+  "profundidade": 5,
+  "altura": 3,
+  "balcao": "alvenaria #F2F2F2"
+ },
+ "Empório Barion": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#D9722B",
+  "letreiro": "#D9722B",
+  "texto": "#EFE6CC",
+  "profundidade": 5,
+  "altura": 3,
+  "vitrine": true,
+  "balcao": "vidro"
+ },
+ "Empório do Sabor": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#4A2F1E",
+  "letreiro": "#4A2F1E",
+  "profundidade": 5,
+  "altura": 3
+ },
+ "Empório Bon Appétit": {
+  "tipo": "box_aberto_balcao",
+  "letreiro": "#4A2F1E",
+  "texto": "#EFE6CC",
+  "profundidade": 5,
+  "altura": 3,
+  "vitrine": true,
+  "balcao": "vidro"
+ },
+ "Embalagens Municipal": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#F2F2F2",
+  "letreiro": "#F2F2F2",
+  "texto": "#1A1A1A",
+  "profundidade": 5,
+  "altura": 3,
+  "balcao": "madeira #A0764A"
+ },
+ "Mercearia Sansei": {
+  "tipo": "box_aberto_balcao",
+  "profundidade": 5,
+  "altura": 3,
+  "vitrine": true,
+  "balcao": "alvenaria #F2F2F2"
+ },
+ "Casa da Bolacha Caseira": {
+  "tipo": "box_aberto_balcao",
+  "profundidade": 5,
+  "altura": 3
+ },
+ "Furuta Cereais": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#F2F2F2",
+  "letreiro": "#F2F2F2",
+  "texto": "#B22222",
+  "profundidade": 4.5,
+  "altura": 3
+ },
+ "Daimaru Bebidas": {
+  "tipo": "outro",
+  "letreiro": "#1F5FA8",
+  "profundidade": 4.5,
+  "altura": 3
+ },
+ "Box Verde": {
+  "tipo": "box_aberto_balcao",
+  "profundidade": 4.5,
+  "altura": 3,
+  "balcao": "alvenaria #F2F2F2"
+ },
+ "Peixaria São José": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#1F5FA8",
+  "profundidade": 5,
+  "altura": 3,
+  "vitrine": true,
+  "balcao": "vidro #CFE3E8"
+ },
+ "Yamasaki Verduras": {
+  "tipo": "banca_ilha",
+  "fachada": "#1F4D3A",
+  "letreiro": "#B22222",
+  "texto": "#F2F2F2",
+  "profundidade": 5,
+  "altura": 2.6,
+  "vitrine": true
+ },
+ "Peixaria Santa Clara": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#F2F2F2",
+  "letreiro": "#B22222",
+  "profundidade": 5,
+  "altura": 3,
+  "vitrine": true,
+  "balcao": "vidro #CFE3E8"
+ },
+ "Peixaria Keli Mozer": {
+  "tipo": "box_aberto_balcao",
+  "profundidade": 4.5,
+  "altura": 3
+ },
+ "Espaço Angus Prime": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#7A1F2B",
+  "letreiro": "#7A1F2B",
+  "texto": "#F2F2F2",
+  "profundidade": 4.5,
+  "altura": 3,
+  "vitrine": true,
+  "balcao": "vidro"
+ },
+ "DAP Boutique de Carnes": {
+  "tipo": "box_aberto_balcao",
+  "letreiro": "#E8C21A",
+  "texto": "#B22222",
+  "profundidade": 4.5,
+  "altura": 3,
+  "vitrine": true
+ },
+ "Casa de Carnes Pé de Boi": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#B5653F",
+  "letreiro": "#1F5FA8",
+  "texto": "#E8C21A",
+  "profundidade": 4.5,
+  "altura": 3,
+  "vitrine": true,
+  "balcao": "vidro"
+ },
+ "Planeta Aquários": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#1F5FA8",
+  "letreiro": "#F2F2F2",
+  "profundidade": 4.5,
+  "altura": 3,
+  "vitrine": true,
+  "balcao": "vidro #CFE3E8"
+ },
+ "Empório Kaveh Kanes": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#F2F2F2",
+  "profundidade": 4.5,
+  "altura": 3
+ },
+ "Celeiro Municipal": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#1A1A1A",
+  "letreiro": "#1A1A1A",
+  "profundidade": 5,
+  "altura": 3
+ },
+ "Adega Municipal": {
+  "tipo": "box_aberto_balcao",
+  "profundidade": 5,
+  "altura": 3
+ },
+ "K & M Artesanatos": {
+  "tipo": "box_aberto_balcao",
+  "letreiro": "#E8C21A",
+  "profundidade": 5,
+  "altura": 3
+ },
+ "Flora Cristiane": {
+  "tipo": "box_aberto_balcao",
+  "letreiro": "#1F5FA8",
+  "profundidade": 5,
+  "altura": 3
+ },
+ "Skina das Delícias": {
+  "profundidade": 5,
+  "altura": 3
+ },
+ "Revistaria Municipal": {
+  "tipo": "box_aberto_balcao",
+  "letreiro": "#F2F2F2",
+  "profundidade": 4.5,
+  "altura": 3
+ },
+ "Empório Curitibano": {
+  "tipo": "box_aberto_balcao",
+  "profundidade": 4,
+  "altura": 3,
+  "vitrine": true,
+  "balcao": "vidro"
+ },
+ "D'Fuhrmann Chocolates": {
+  "tipo": "outro",
+  "fachada": "#E0A020",
+  "letreiro": "#1F4D3A",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Armazém da Serra": {
+  "tipo": "box_aberto_balcao",
+  "letreiro": "#1A1A1A",
+  "texto": "#1A1A1A",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Nissei Comércio de Alimentos": {
+  "tipo": "box_aberto_balcao",
+  "letreiro": "#1F5FA8",
+  "texto": "#1F5FA8",
+  "profundidade": 4,
+  "altura": 3,
+  "vitrine": true,
+  "balcao": "vidro #CFE3E8"
+ },
+ "Adega Brasil": {
+  "tipo": "box_aberto_balcao",
+  "letreiro": "#D9722B",
+  "texto": "#1A1A1A",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Organique Essentiel": {
+  "tipo": "outro",
+  "fachada": "#F2F2F2",
+  "letreiro": "#2E7D32",
+  "texto": "#F2F2F2",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Empório D'Gust": {
+  "tipo": "box_aberto_balcao",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Temperamento": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#CFE3E8",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Manfré Cervejas Especiais": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#4A2F1E",
+  "letreiro": "#4A2F1E",
+  "profundidade": 4,
+  "altura": 3,
+  "vitrine": true,
+  "balcao": "madeira #A0764A"
+ },
+ "Satine Cosméticos": {
+  "tipo": "outro",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Kalloria Zero": {
+  "tipo": "outro",
+  "fachada": "#F2F2F2",
+  "letreiro": "#1F5FA8",
+  "texto": "#1F5FA8",
+  "profundidade": 4,
+  "altura": 3,
+  "vitrine": true,
+  "balcao": "alvenaria #F2F2F2"
+ },
+ "Casa Nobre Especiarias": {
+  "tipo": "box_aberto_balcao",
+  "letreiro": "#1A1A1A",
+  "texto": "#1A1A1A",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Empório Metropolitano": {
+  "tipo": "outro",
+  "fachada": "#F2F2F2",
+  "letreiro": "#F2F2F2",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Darumayá": {
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Galisa Lotérica": {
+  "tipo": "outro",
+  "fachada": "#F2F2F2",
+  "letreiro": "#F2F2F2",
+  "profundidade": 4,
+  "altura": 3,
+  "balcao": "madeira #A0764A"
+ },
+ "Mercearia Shizen": {
+  "tipo": "box_aberto_balcao",
+  "letreiro": "#EFE6CC",
+  "texto": "#2E7D32",
+  "profundidade": 4,
+  "altura": 3,
+  "vitrine": true
+ },
+ "Abranches Lotérica": {
+  "tipo": "outro",
+  "fachada": "#1F5FA8",
+  "letreiro": "#1F5FA8",
+  "profundidade": 4,
+  "altura": 3,
+  "balcao": "inox"
+ },
+ "Bonsai Mercearia": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#1F4D3A",
+  "letreiro": "#1F4D3A",
+  "texto": "#B22222",
+  "profundidade": 4,
+  "altura": 3,
+  "vitrine": true
+ },
+ "Mercearia O Barracão": {
+  "tipo": "box_aberto_balcao",
+  "profundidade": 4,
+  "altura": 3,
+  "vitrine": true
+ },
+ "Queijos e Vinhos": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#F2F2F2",
+  "letreiro": "#F2F2F2",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Casa de Massas Leve Pronto": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#B22222",
+  "profundidade": 4,
+  "altura": 3,
+  "vitrine": true,
+  "balcao": "vidro #CFE3E8"
+ },
+ "Dahra Pedras Brasileiras": {
+  "tipo": "outro",
+  "fachada": "#5B2C83",
+  "letreiro": "#5B2C83",
+  "texto": "#F2F2F2",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Miranda's Mercearia": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#B5653F",
+  "letreiro": "#B22222",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Da Mamma Massas": {
+  "tipo": "restaurante_com_mesas",
+  "fachada": "#B22222",
+  "letreiro": "#F2F2F2",
+  "texto": "#B22222",
+  "profundidade": 4,
+  "altura": 3,
+  "vitrine": true,
+  "balcao": "vidro #CFE3E8"
+ },
+ "Célio Dobrucki (Dobrucki Vintage)": {
+  "tipo": "loja_fechada_porta_enrolar",
+  "fachada": "#A0764A",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Sweet Sobremesas Especiais": {
+  "tipo": "loja_fechada_porta_enrolar",
+  "letreiro": "#1A1A1A",
+  "texto": "#1A1A1A",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Confeitaria Colônia Cecília": {
+  "tipo": "restaurante_com_mesas",
+  "profundidade": 4,
+  "altura": 3,
+  "balcao": "sim (material não identificado)"
+ },
+ "Natureba": {
+  "tipo": "loja_fechada_porta_enrolar",
+  "letreiro": "#2E7D32",
+  "texto": "#2E7D32",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Oishii": {
+  "tipo": "quiosque",
+  "profundidade": 4,
+  "altura": 3,
+  "balcao": "vidro #CFE3E8"
+ },
+ "Banca do Kobe": {
+  "tipo": "banca_ilha",
+  "fachada": "#B5653F",
+  "profundidade": 4,
+  "altura": 2.6
+ },
+ "Ceccon Produtos Orgânicos": {
+  "tipo": "banca_ilha",
+  "fachada": "#1A1A1A",
+  "letreiro": "#1A1A1A",
+  "texto": "#EFE6CC",
+  "profundidade": 4,
+  "altura": 2.6,
+  "balcao": "sim (material não identificado)"
+ },
+ "Couve & Flor": {
+  "tipo": "banca_ilha",
+  "fachada": "#2E7D32",
+  "letreiro": "#2E7D32",
+  "texto": "#EFE6CC",
+  "profundidade": 4,
+  "altura": 2.6
+ },
+ "Nico's Empório Orgânico": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#F2F2F2",
+  "letreiro": "#EFE6CC",
+  "profundidade": 4,
+  "altura": 3,
+  "balcao": "alvenaria #A0764A"
+ },
+ "Sírius Orgânicos": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#1A1A1A",
+  "letreiro": "#1A1A1A",
+  "texto": "#F2F2F2",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Arte Verde Comida Orgânica": {
+  "tipo": "box_aberto_balcao",
+  "profundidade": 4,
+  "altura": 3,
+  "balcao": "alvenaria #8A8A8A"
+ },
+ "Espaço Orgânico": {
+  "tipo": "quiosque",
+  "fachada": "#1F4D3A",
+  "letreiro": "#1A1A1A",
+  "texto": "#F2F2F2",
+  "profundidade": 4,
+  "altura": 3,
+  "vitrine": true
+ },
+ "Cativa Natureza": {
+  "tipo": "outro",
+  "fachada": "#1F4D3A",
+  "letreiro": "#1F4D3A",
+  "texto": "#F2F2F2",
+  "profundidade": 4,
+  "altura": 3,
+  "balcao": "madeira #A0764A"
+ },
+ "Natural Market": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#B5653F",
+  "letreiro": "#1F4D3A",
+  "texto": "#F2F2F2",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Botané Sustentável": {
+  "tipo": "box_aberto_balcao",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Biossana Orgânicos": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#1F4D3A",
+  "letreiro": "#1F4D3A",
+  "texto": "#F2F2F2",
+  "profundidade": 4,
+  "altura": 3,
+  "vitrine": true
+ },
+ "Taurino's Organic": {
+  "tipo": "quiosque",
+  "fachada": "#1A1A1A",
+  "letreiro": "#1A1A1A",
+  "texto": "#F2F2F2",
+  "profundidade": 4,
+  "altura": 3,
+  "vitrine": true
+ },
+ "Restaurante Ohana": {
+  "tipo": "restaurante_com_mesas",
+  "fachada": "#CFE3E8",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Tabacaria Trevo": {
+  "tipo": "loja_fechada_porta_enrolar",
+  "letreiro": "#1A1A1A",
+  "texto": "#1A1A1A",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Vitornis Chapelaria": {
+  "tipo": "outro",
+  "fachada": "#A0764A",
+  "letreiro": "#A0764A",
+  "texto": "#A0764A",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Kotobuki Artesanato e Presentes": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#A0764A",
+  "letreiro": "#A0764A",
+  "texto": "#1A1A1A",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Relojoaria Dajuki": {
+  "tipo": "outro",
+  "fachada": "#F2F2F2",
+  "letreiro": "#F2F2F2",
+  "texto": "#1A1A1A",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Box's Celulares": {
+  "tipo": "outro",
+  "fachada": "#1E2F6B",
+  "letreiro": "#1E2F6B",
+  "texto": "#F2F2F2",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Calçados Vila Rica": {
+  "tipo": "outro",
+  "fachada": "#F2F2F2",
+  "letreiro": "#F2F2F2",
+  "texto": "#1A1A1A",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Lule Salão de Cabelos": {
+  "tipo": "outro",
+  "fachada": "#4A2F1E",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Quadrolândia": {
+  "tipo": "outro",
+  "fachada": "#F2F2F2",
+  "letreiro": "#F2F2F2",
+  "texto": "#1A1A1A",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Ki Bolada Loteria": {
+  "tipo": "loja_fechada_porta_enrolar",
+  "fachada": "#1F5FA8",
+  "letreiro": "#1F5FA8",
+  "texto": "#1F5FA8",
+  "profundidade": 4,
+  "altura": 3,
+  "balcao": "alvenaria #F2F2F2"
+ },
+ "Nippon Boutique": {
+  "tipo": "outro",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Espaço Fitoterápico": {
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Artigos Orientais": {
+  "tipo": "outro",
+  "fachada": "#F2F2F2",
+  "letreiro": "#F2F2F2",
+  "texto": "#B22222",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Salão de Cabeleireiro Unissex – Eurides": {
+  "tipo": "outro",
+  "letreiro": "#F2F2F2",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Rafa's – Ateliê de Costura": {
+  "tipo": "outro",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Ascesme": {
+  "tipo": "outro",
+  "fachada": "#CFE3E8",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Sapataria Rápida Capricho": {
+  "tipo": "box_aberto_balcao",
+  "letreiro": "#5A3A22",
+  "texto": "#F2F2F2",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Loja de Presentes Mina de Ouro": {
+  "tipo": "outro",
+  "letreiro": "#1E2F6B",
+  "profundidade": 4,
+  "altura": 3
+ },
+ "Café do Jorge e da Aurea": {
+  "tipo": "box_aberto_balcao",
+  "letreiro": "#F2F2F2",
+  "texto": "#F2F2F2",
+  "profundidade": 4,
+  "altura": 3,
+  "balcao": "sim (material não identificado)"
+ },
+ "Pastelaria Curitiba": {
+  "tipo": "box_aberto_balcao",
+  "profundidade": 4,
+  "altura": 3,
+  "vitrine": true,
+  "balcao": "vidro #E8C21A"
+ },
+ "Max Dandy": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#1F5FA8",
+  "letreiro": "#B22222",
+  "texto": "#B22222",
+  "profundidade": 4,
+  "altura": 3,
+  "vitrine": true
+ },
+ "Box do Eliseu": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#1F5FA8",
+  "letreiro": "#E8C21A",
+  "profundidade": 4,
+  "altura": 3,
+  "balcao": "alvenaria #5A3A22"
+ },
+ "Bonna Gourmet": {
+  "tipo": "restaurante_com_mesas",
+  "fachada": "#B22222",
+  "letreiro": "#B22222",
+  "texto": "#1A1A1A",
+  "profundidade": 4,
+  "altura": 3,
+  "balcao": "alvenaria #5A3A22"
+ },
+ "Restaurante Takê": {
+  "tipo": "box_aberto_balcao",
+  "fachada": "#F2F2F2",
+  "letreiro": "#F2F2F2",
+  "texto": "#1A1A1A",
+  "profundidade": 4,
+  "altura": 3
+ }
+}

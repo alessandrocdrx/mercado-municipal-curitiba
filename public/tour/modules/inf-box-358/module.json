@@ -7,13 +7,16 @@
     "y": -36.98,
     "z": 1.4,
     "width": 2.54,
-    "height": 2.8,
+    "height": 2.6,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#3c7a34",
+      "color": "#8BC34A",
+      "textColor": "#8BC34A",
+      "vitrine": true,
       "label": "Box do Ademir",
       "sublabel": "Hortifrúti · Box 358"
     }
@@ -26,5 +29,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "fddade214a2e"
+  "autoHash": "540ae8807e9a"
 }

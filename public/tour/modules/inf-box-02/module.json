@@ -7,13 +7,17 @@
     "y": -44.1,
     "z": 1.4,
     "width": 2.03,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#8e2f2f",
+      "color": "#1F5FA8",
+      "facade": "#B5653F",
+      "textColor": "#E8C21A",
+      "vitrine": true,
       "label": "Casa de Carnes Pé de Boi",
       "sublabel": "Açougue · Box 02"
     }
@@ -27,5 +31,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "ae5cb4116db0"
+  "autoHash": "5cac34db42fa"
 }

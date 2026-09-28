@@ -13,7 +13,9 @@
   },
   "media": {
     "placeholder": {
-      "color": "#9a6b1f",
+      "color": "#5A3A22",
+      "facade": "#5A3A22",
+      "textColor": "#EFE6CC",
       "label": "Tenda Árabe",
       "sublabel": "Empório e mercearia · Banca 02"
     }
@@ -25,5 +27,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "f89e1b502e1f"
+  "autoHash": "8946660fa109"
 }

@@ -7,13 +7,15 @@
     "y": -49.39,
     "z": 1.4,
     "width": 3.48,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#9a6b1f",
+      "color": "#1A1A1A",
+      "facade": "#1A1A1A",
       "label": "Celeiro Municipal",
       "sublabel": "Empório e mercearia · Box 12"
     }
@@ -27,5 +29,5 @@
     "note": "A lista não traz o número do box; boxes 12–13 vêm de guia público. Fonte: guia público (applocal). Confirme no local."
   },
   "generated": true,
-  "autoHash": "6d3b554812c5"
+  "autoHash": "94d1a52ebec6"
 }

@@ -7,13 +7,16 @@
     "y": -43.97,
     "z": 1.4,
     "width": 2.43,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#8e2f2f",
+      "color": "#E8C21A",
+      "textColor": "#B22222",
+      "vitrine": true,
       "label": "DAP Boutique de Carnes",
       "sublabel": "Açougue · Box 05"
     }
@@ -27,5 +30,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "82c7fa07360e"
+  "autoHash": "9d75925333f4"
 }

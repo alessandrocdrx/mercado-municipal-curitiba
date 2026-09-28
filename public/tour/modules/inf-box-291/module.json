@@ -7,13 +7,15 @@
     "y": -22.4,
     "z": 1.4,
     "width": 2.77,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 90,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
       "color": "#9a6b1f",
+      "vitrine": true,
       "label": "Empório Curitibano",
       "sublabel": "Empório e mercearia · Box 291"
     }
@@ -25,5 +27,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "40dc2a2b99c2"
+  "autoHash": "08ce095f5c50"
 }

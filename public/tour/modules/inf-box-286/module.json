@@ -7,13 +7,16 @@
     "y": -24.38,
     "z": 1.4,
     "width": 2.06,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#2f7d32",
+      "color": "#2E7D32",
+      "facade": "#F2F2F2",
+      "textColor": "#F2F2F2",
       "label": "Organique Essentiel",
       "sublabel": "Orgânicos · Box 286"
     }
@@ -26,5 +29,5 @@
     "note": "A lista cita boxes 286 e 289; o 289 também aparece como Armazém da Serra. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "33819b188c5b"
+  "autoHash": "eb0bfdee3755"
 }

@@ -7,13 +7,14 @@
     "y": -61.32,
     "z": 1.4,
     "width": 2.46,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#4a5a73",
+      "color": "#E8C21A",
       "label": "K & M Artesanatos",
       "sublabel": "Variedades e serviços · Box 76"
     }
@@ -25,5 +26,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "6ede48d27927"
+  "autoHash": "f20c0a7c8363"
 }

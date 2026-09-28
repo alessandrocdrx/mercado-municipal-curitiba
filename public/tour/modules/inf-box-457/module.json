@@ -7,13 +7,15 @@
     "y": -52.68,
     "z": 1.4,
     "width": 2.64,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 250,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
       "color": "#9a6b1f",
+      "facade": "#F2F2F2",
       "label": "Empório Kaveh Kanes",
       "sublabel": "Empório e mercearia · Box 457"
     }
@@ -26,5 +28,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "c4476a27ed20"
+  "autoHash": "0bdcf2542896"
 }

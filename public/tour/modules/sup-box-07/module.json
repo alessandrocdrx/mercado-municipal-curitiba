@@ -7,13 +7,16 @@
     "y": -87.43,
     "z": 1.4,
     "width": 2.69,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#b0561d",
+      "color": "#F2F2F2",
+      "facade": "#F2F2F2",
+      "textColor": "#1A1A1A",
       "label": "Restaurante Takê",
       "sublabel": "Lanchonete e restaurante · Box 07"
     }
@@ -27,5 +30,5 @@
     "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "c7c3d5950aec"
+  "autoHash": "1acaccad72d1"
 }

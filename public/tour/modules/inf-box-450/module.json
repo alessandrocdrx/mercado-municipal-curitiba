@@ -7,13 +7,14 @@
     "y": -67.32,
     "z": 1.4,
     "width": 2.46,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#4a5a73",
+      "color": "#F2F2F2",
       "label": "Revistaria Municipal",
       "sublabel": "Variedades e serviços · Box 450"
     }
@@ -25,5 +26,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "515e94d8116a"
+  "autoHash": "dcdbda96a851"
 }

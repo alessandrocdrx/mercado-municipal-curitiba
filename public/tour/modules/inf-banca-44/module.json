@@ -14,6 +14,7 @@
   "media": {
     "placeholder": {
       "color": "#3c7a34",
+      "facade": "#1F4D3A",
       "label": "Banca da Júlia",
       "sublabel": "Hortifrúti · Banca 44"
     }
@@ -27,5 +28,5 @@
     "note": "A lista diz \"Box 43 e 44\", números dos boxes do Empório Valência; foi posta nas bancas 43–44. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "111e4a4cf82b"
+  "autoHash": "5a57bc62a30d"
 }

@@ -7,13 +7,16 @@
     "y": -42.71,
     "z": 1.4,
     "width": 2.58,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#9a6b1f",
+      "color": "#E8C21A",
+      "facade": "#E8C21A",
+      "textColor": "#2E7D32",
       "label": "Box do Palmito",
       "sublabel": "Empório e mercearia · Box 362"
     }
@@ -26,5 +29,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "6755ac031eb9"
+  "autoHash": "9cedad5b8c84"
 }

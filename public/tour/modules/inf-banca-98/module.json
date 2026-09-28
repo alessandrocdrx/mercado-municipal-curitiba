@@ -13,7 +13,10 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3c7a34",
+      "color": "#B22222",
+      "facade": "#1F4D3A",
+      "textColor": "#F2F2F2",
+      "vitrine": true,
       "label": "Yamasaki Verduras",
       "sublabel": "Hortifrúti · Banca 98"
     }
@@ -27,5 +30,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "a7e5e34b1348"
+  "autoHash": "cee40454d234"
 }

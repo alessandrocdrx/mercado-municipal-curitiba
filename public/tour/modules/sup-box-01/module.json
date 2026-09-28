@@ -7,13 +7,16 @@
     "y": -59.52,
     "z": 1.4,
     "width": 2.6,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#b0561d",
+      "color": "#B22222",
+      "facade": "#B22222",
+      "textColor": "#1A1A1A",
       "label": "Bonna Gourmet",
       "sublabel": "Lanchonete e restaurante · Box 01"
     }
@@ -24,5 +27,5 @@
     "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "d6bea58608e3"
+  "autoHash": "2ac11107606b"
 }

@@ -7,13 +7,16 @@
     "y": -19.72,
     "z": 1.4,
     "width": 2.64,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#9a6b1f",
+      "color": "#1F5FA8",
+      "textColor": "#1F5FA8",
+      "vitrine": true,
       "label": "Nissei Comércio de Alimentos",
       "sublabel": "Empório e mercearia · Box 297"
     }
@@ -25,5 +28,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "bfdb3feb47eb"
+  "autoHash": "98e3345da884"
 }

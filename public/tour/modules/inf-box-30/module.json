@@ -7,13 +7,16 @@
     "y": -31.88,
     "z": 1.4,
     "width": 2.27,
-    "height": 2.8,
+    "height": 2.6,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#7a4a24",
+      "color": "#E8C21A",
+      "facade": "#E8C21A",
+      "textColor": "#E8C21A",
       "label": "Armazém da Zelma",
       "sublabel": "Cereais e especiarias · Box 30"
     }
@@ -27,5 +30,5 @@
     "note": "A lista cita só o Box 28; o site oficial e o Foursquare citam 28 a 30. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "6e83d342be4b"
+  "autoHash": "2c6bd68cd848"
 }

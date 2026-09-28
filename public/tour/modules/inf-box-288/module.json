@@ -7,13 +7,15 @@
     "y": -24.38,
     "z": 1.4,
     "width": 2.06,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#7a4a24",
+      "color": "#1A1A1A",
+      "textColor": "#1A1A1A",
       "label": "Armazém da Serra",
       "sublabel": "Cereais e especiarias · Box 288"
     }
@@ -25,5 +27,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "b20a37677116"
+  "autoHash": "fbb67447502a"
 }

@@ -7,13 +7,15 @@
     "y": -19.72,
     "z": 1.4,
     "width": 2.64,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#4a5a73",
+      "color": "#1F5FA8",
+      "facade": "#1F5FA8",
       "label": "Abranches Lotérica",
       "sublabel": "Variedades e serviços · Box 310"
     }
@@ -25,5 +27,5 @@
     "note": "Na lista aparece como Lotérica Mercado Municipal (mesmo telefone). Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "95f15afe6910"
+  "autoHash": "8d67d92a03e7"
 }

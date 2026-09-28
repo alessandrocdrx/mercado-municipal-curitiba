@@ -7,13 +7,16 @@
     "y": -32.19,
     "z": 1.4,
     "width": 2.22,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
       "color": "#23577f",
+      "facade": "#1F5FA8",
+      "vitrine": true,
       "label": "Peixaria São José",
       "sublabel": "Peixaria · Box 21"
     }
@@ -27,5 +30,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "25b0ce0f6dc3"
+  "autoHash": "433d884a8c17"
 }

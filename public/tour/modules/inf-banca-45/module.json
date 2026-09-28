@@ -13,7 +13,8 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3c7a34",
+      "color": "#E8C21A",
+      "facade": "#2E7D32",
       "label": "Banca do Oyama",
       "sublabel": "Hortifrúti · Banca 45"
     }
@@ -25,5 +26,5 @@
     "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "539d33526d14"
+  "autoHash": "c9a221cfebe9"
 }

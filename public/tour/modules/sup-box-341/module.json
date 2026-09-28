@@ -7,13 +7,16 @@
     "y": -22.98,
     "z": 1.4,
     "width": 2.67,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#4a5a73",
+      "color": "#1E2F6B",
+      "facade": "#1E2F6B",
+      "textColor": "#F2F2F2",
       "label": "Box's Celulares",
       "sublabel": "Variedades e serviços · Box 341"
     }
@@ -26,5 +29,5 @@
     "note": "Fonte: guia público (applocal). Confirme no local."
   },
   "generated": true,
-  "autoHash": "6aa06d990bf9"
+  "autoHash": "a57862dbde01"
 }

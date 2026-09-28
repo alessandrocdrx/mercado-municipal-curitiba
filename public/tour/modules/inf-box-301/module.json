@@ -7,13 +7,15 @@
     "y": -15.31,
     "z": 1.4,
     "width": 2.64,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
       "color": "#7a4a24",
+      "facade": "#CFE3E8",
       "label": "Temperamento",
       "sublabel": "Cereais e especiarias · Box 301"
     }
@@ -27,5 +29,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "e0ac4572e66f"
+  "autoHash": "c30401a881dc"
 }

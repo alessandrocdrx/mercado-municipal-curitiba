@@ -7,13 +7,16 @@
     "y": -24.51,
     "z": 1.4,
     "width": 2.32,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#9a6b1f",
+      "color": "#EFE6CC",
+      "textColor": "#2E7D32",
+      "vitrine": true,
       "label": "Mercearia Shizen",
       "sublabel": "Empório e mercearia · Box 280"
     }
@@ -25,5 +28,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "13a827d86f2a"
+  "autoHash": "5b5c78ca865e"
 }

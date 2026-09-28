@@ -7,13 +7,17 @@
     "y": -60.42,
     "z": 1.4,
     "width": 2.39,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#9a6b1f",
+      "color": "#D9722B",
+      "facade": "#D9722B",
+      "textColor": "#EFE6CC",
+      "vitrine": true,
       "label": "Empório Barion",
       "sublabel": "Empório e mercearia · Box 63"
     }
@@ -27,5 +31,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "150aed9245db"
+  "autoHash": "90c4c8a3e21b"
 }

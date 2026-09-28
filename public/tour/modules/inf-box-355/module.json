@@ -7,13 +7,15 @@
     "y": -36.98,
     "z": 1.4,
     "width": 2.54,
-    "height": 2.8,
+    "height": 3,
+    "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#9a6b1f",
+      "color": "#1E2F6B",
+      "textColor": "#F2F2F2",
       "label": "Mercearia Sayonara",
       "sublabel": "Empório e mercearia · Box 355"
     }
@@ -25,5 +27,5 @@
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "5dba6510fdd1"
+  "autoHash": "8b090451981a"
 }
