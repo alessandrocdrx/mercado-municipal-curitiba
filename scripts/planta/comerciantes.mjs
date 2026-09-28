@@ -246,7 +246,7 @@ export const COMERCIANTES = [
   c('Ascesme', 'servicos', null, { boxes: sb(328), telefone: '(41) 3363-3764', descricao: 'Associação dos comerciantes do Mercado Municipal.', fonte: TOUR3D }),
   c('Max Dandy', 'lanchonete', null, { boxes: sb(14), telefone: '(41) 98457-8041', fonte: TOUR3D }),
   c('Espaço Fitoterápico', 'servicos', null, { boxes: sb(11), obs: 'Só o rótulo aparece no tour 3D.', fonte: TOUR3D }),
-  c('Bonna Gourmet', 'lanchonete', null, { boxes: sb(1), fonte: TOUR3D }),
+  c('Bonna Gourmet', 'lanchonete', null, { boxes: sb('bonna'), fonte: TOUR3D }),
   c('Pastelaria Curitiba', 'lanchonete', null, { boxes: sb(8), telefone: '(41) 99734-9001 · (41) 3363-0522', fonte: TOUR3D }),
   // fora da planta afixada (áreas que ela não desenha)
   c('Fujii Cozinha Japonesa', 'lanchonete', null, { boxes: sb('fujii'), telefone: '(41) 3114-8393', obs: 'Praças de alimentação Déa / 7 de Setembro, a oeste dos boxes 07–10 do pavimento superior.', fonte: TOUR3D }),

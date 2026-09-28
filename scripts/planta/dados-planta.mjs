@@ -136,7 +136,8 @@ export const BOXES = {
     box('19', [692, 517], 180),
     fileira(seq(1, 4), [718, 805], [835, 805], 180),
     box('05', [912, 808], 180, { largura: 110 }),
-    fileira(seq(10, 7), [657, 1222], [778, 1222], 0),
+    // entre o 10 e o 08 fica a escada para o hall (não há box 09 no tour 3D)
+    box('10', [657, 1222], 0, { largura: 38 }), box('08', [737, 1222], 0, { largura: 38 }), box('07', [778, 1222], 0, { largura: 38 }),
     box('06', [920, 1230], 270, { largura: 70 }),
     // Área verde (bancas 501–512) e boxes 513–522
     ...[[238, '510', '512'], [278, '509', '511'], [360, '506', '508'], [402, '505', '507'], [486, '502', '504'], [528, '501', '503']]
@@ -147,8 +148,8 @@ export const BOXES = {
     box('518', [1100, 725], 0, { largura: 120 }),
     // Áreas que a planta afixada não desenha, com as posições do tour 3D oficial
     ...[
-      ['anarco', [474, 902], 45, 'Praças Déa / 7 de Setembro'], ['fujii', [511, 1210], 90, 'Praças Déa / 7 de Setembro'],
-      ['mister-dea', [806, 741], 225, 'Praças Déa / 7 de Setembro'],
+      ['anarco', [474, 902], 135, 'Praças Déa / 7 de Setembro'], ['fujii', [511, 1216], 0, 'Praças Déa / 7 de Setembro'],
+      ['mister-dea', [806, 741], 225, 'Praças Déa / 7 de Setembro'], ['bonna', [455, 1060], 90, 'Praças Déa / 7 de Setembro'],
       ['201', [1188, 1305], 0, 'Galeria de restaurantes'], ['almasor', [1501, 1300], 0, 'Galeria de restaurantes'],
     ].map(([id, em, facing, area]) => box(id, em, facing, { area, largura: 60, ...(!/^\d/.test(id) && { rotulo: area }) })),
   ],

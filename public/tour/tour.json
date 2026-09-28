@@ -1021,7 +1021,6 @@
     "sup-box-04",
     "sup-box-05",
     "sup-box-10",
-    "sup-box-09",
     "sup-box-08",
     "sup-box-07",
     "sup-box-06",
@@ -1050,6 +1049,7 @@
     "sup-box-anarco",
     "sup-box-fujii",
     "sup-box-mister-dea",
+    "sup-box-bonna",
     "sup-box-201",
     "sup-box-almasor",
     "sup-porta-b",
@@ -2977,9 +2977,9 @@
       "name": "Bonna Gourmet",
       "category": "Lanchonete e restaurante",
       "modules": [
-        "sup-box-01"
+        "sup-box-bonna"
       ],
-      "boxes": "01",
+      "boxes": "bonna",
       "onPlan": true
     },
     {
