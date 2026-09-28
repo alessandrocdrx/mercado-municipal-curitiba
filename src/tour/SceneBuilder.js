@@ -134,6 +134,7 @@ async function buildModel(group, scene, floor, tourUrl) {
   group.add(ceiling);
 
   for (const street of floor?.streets ?? []) buildStreet(group, scene, street);
+  for (const prop of floor?.props ?? []) buildProp(group, scene, prop);
 
   return { background: '#cfdbe4', fog: { color: '#d6dde2', near: 12, far: 55 } };
 }
@@ -371,4 +372,62 @@ function disposeGroup(group) {
     if (obj.material.map?.isCanvasTexture || obj.material.map?.userData?.own) obj.material.map.dispose();
     obj.material.dispose();
   });
+}
+
+// ------------------------------------------------ mobiliário (mesas, vasos, praça, escada helicoidal)
+const propMat = new Map();
+const mat = (color) => {
+  if (!propMat.has(color)) propMat.set(color, new THREE.MeshLambertMaterial({ color }));
+  return propMat.get(color);
+};
+
+function buildProp(group, scene, p) {
+  const at = (dx = 0, dy = 0, z = 0) => worldToLocal({ x: p.x + dx, y: p.y + dy, z }, scene);
+  const add = (geo, color, dx, dy, z, rotX = 0) => {
+    const m = new THREE.Mesh(geo, mat(color));
+    m.position.copy(at(dx, dy, z));
+    m.rotation.x = rotX;
+    group.add(m);
+    return m;
+  };
+  if (p.tipo === 'praca') {
+    // praça circular rebaixada: degraus concêntricos em granito
+    const n = p.degraus ?? 3;
+    add(new THREE.RingGeometry(p.r - 0.35, p.r, 64), p.borda ?? '#a85a5a', 0, 0, 0.015, -Math.PI / 2);
+    for (let i = 1; i <= n; i++) {
+      const r = p.r - 0.35 - i * 0.45;
+      add(new THREE.RingGeometry(r - 0.05, r, 64), '#8f8a82', 0, 0, 0.016, -Math.PI / 2);
+    }
+    add(new THREE.CircleGeometry(p.r - 0.35, 64), p.cor ?? '#b9b4ac', 0, 0, 0.012, -Math.PI / 2);
+  } else if (p.tipo === 'mesa') {
+    const r = p.r ?? 0.45;
+    add(new THREE.CylinderGeometry(r, r, 0.04, 20), p.cor ?? '#eeeeee', 0, 0, 0.75);
+    add(new THREE.CylinderGeometry(0.04, 0.04, 0.73, 8), '#333333', 0, 0, 0.37);
+    const k = p.cadeiras ?? 4;
+    for (let i = 0; i < k; i++) {
+      const a = (i / k) * Math.PI * 2 + 0.4;
+      const d = r + 0.3;
+      if (p.banquetas) {
+        add(new THREE.CylinderGeometry(0.2, 0.2, 0.45, 14), p.corCadeira, Math.sin(a) * d, Math.cos(a) * d, 0.225);
+      } else {
+        add(new THREE.BoxGeometry(0.42, 0.05, 0.42), p.corCadeira, Math.sin(a) * d, Math.cos(a) * d, 0.45);
+        add(new THREE.BoxGeometry(0.42, 0.45, 0.04), p.corCadeira, Math.sin(a) * (d + 0.2), Math.cos(a) * (d + 0.2), 0.7).rotation.y = -((scene.northYaw ?? 0) * DEG + a);
+      }
+    }
+  } else if (p.tipo === 'vaso') {
+    add(new THREE.CylinderGeometry(0.22, 0.16, 0.38, 12), '#b5653f', 0, 0, 0.19);
+    add(new THREE.SphereGeometry(0.3, 10, 8), '#3e6b35', 0, 0, 0.62);
+  } else if (p.tipo === 'helicoidal') {
+    // escada helicoidal: coluna central, degraus em leque e guarda-corpo
+    const h = p.altura ?? 2.5;
+    const r = p.r ?? 1.2;
+    add(new THREE.CylinderGeometry(0.1, 0.1, h + 1, 12), p.cor ?? '#f2f2f2', 0, 0, (h + 1) / 2);
+    const n = Math.round(h / 0.18);
+    for (let i = 0; i < n; i++) {
+      const a = i * 0.42;
+      const step = add(new THREE.BoxGeometry(r, 0.05, 0.42), p.cor ?? '#f2f2f2', Math.sin(a) * r / 2, Math.cos(a) * r / 2, (i + 1) * (h / n));
+      step.rotation.y = -((scene.northYaw ?? 0) * DEG + a) + Math.PI / 2;
+      add(new THREE.CylinderGeometry(0.015, 0.015, 1, 6), '#c9ccce', Math.sin(a) * r, Math.cos(a) * r, (i + 1) * (h / n) + 0.5);
+    }
+  }
 }

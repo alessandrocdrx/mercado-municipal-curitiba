@@ -9,7 +9,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { PAVIMENTOS, BOXES, PORTAS, CENAS, LIGACOES, ESCADAS, RUAS, AREA_COBERTA, CONTORNOS_OSM } from './dados-planta.mjs';
+import { PAVIMENTOS, BOXES, PORTAS, CENAS, LIGACOES, ESCADAS, RUAS, MOBILIARIO, AREA_COBERTA, CONTORNOS_OSM } from './dados-planta.mjs';
 import { COMERCIANTES, CATEGORIAS } from './comerciantes.mjs';
 import { FOTOS_MERCADO, FOTOS_COMERCIANTES } from './fotos.mjs';
 import crypto from 'node:crypto';
@@ -93,7 +93,7 @@ for (const pav of PAVIMENTOS) {
         media: com
           ? { placeholder: limpa({
             color: VISUAL[com.nome]?.letreiro ?? cat.cor, facade: VISUAL[com.nome]?.fachada, textColor: VISUAL[com.nome]?.texto,
-            closed: VISUAL[com.nome]?.tipo === 'loja_fechada_porta_enrolar' || undefined, vitrine: VISUAL[com.nome]?.vitrine,
+            closed: VISUAL[com.nome]?.tipo === 'loja_fechada_porta_enrolar' || undefined, shutter: VISUAL[com.nome]?.tipo === 'porta_enrolar' || undefined, vitrine: VISUAL[com.nome]?.vitrine,
             label: com.nome, sublabel: `${cat.nome} · ${nome}`,
           }) }
           : { placeholder: { color: banca ? '#3a3f3c' : '#44474d', label: nome, sublabel: 'comerciante não identificado' } },
@@ -175,6 +175,11 @@ writeJson(path.join(ROOT, 'tour.json'), {
     covered: AREA_COBERTA[p.id] && {
       from: toMeters(p, AREA_COBERTA[p.id].de), to: toMeters(p, AREA_COBERTA[p.id].ate),
     },
+    props: p.tour3d && (MOBILIARIO[p.id] ?? []).map(({ em: [X, Y], r, altura, ...resto }) => {
+      const { o, ex, ey } = p.tour3d;
+      const esc = Math.hypot(ex[0], ex[1]); // tour 3D → metros da planta
+      return limpa({ ...resto, x: r2(o[0] + ex[0] * X + ey[0] * Y), y: r2(o[1] + ex[1] * X + ey[1] * Y), r: r && r2(r * esc), altura });
+    }),
     streets: (RUAS[p.id] ?? []).map((r) => ({
       name: r.nome,
       from: toMeters(p, r.de), to: toMeters(p, r.ate),

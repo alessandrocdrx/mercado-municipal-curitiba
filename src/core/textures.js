@@ -134,7 +134,7 @@ function line(ctx, x1, y1, x2, y2) {
  * Fachada provisória para a maquete 3D: letreiro colorido no alto com o nome
  * e, abaixo, a "loja" (vão escuro com balcão). style: 'box' | 'banca' | 'porta'.
  */
-export function facadeTexture({ style = 'box', color = '#6b6e73', label = '', sublabel = '', aspect = 1, known = true, facade, textColor, closed, vitrine }) {
+export function facadeTexture({ style = 'box', color = '#6b6e73', label = '', sublabel = '', aspect = 1, known = true, facade, textColor, closed, vitrine, shutter }) {
   const w = 320;
   const h = Math.max(64, Math.round(w / aspect));
   const canvas = document.createElement('canvas');
@@ -161,7 +161,13 @@ export function facadeTexture({ style = 'box', color = '#6b6e73', label = '', su
     ctx.fillRect(0, 0, w, h);
     ctx.fillStyle = known ? '#3b342c' : '#4a4a4a';
     ctx.fillRect(w * 0.06, signH + h * 0.04, w * 0.88, h - signH - h * 0.04);
-    if (closed) {
+    if (shutter) {
+      // fechada com porta de enrolar metálica
+      ctx.fillStyle = '#9a9ea2';
+      ctx.fillRect(w * 0.06, signH + h * 0.04, w * 0.88, h);
+      ctx.fillStyle = 'rgba(0,0,0,.18)';
+      for (let y = signH + h * 0.06; y < h; y += h * 0.035) ctx.fillRect(w * 0.06, y, w * 0.88, 2);
+    } else if (closed) {
       // loja fechada: vitrine de vidro com caixilhos
       ctx.fillStyle = 'rgba(170,200,215,.55)';
       ctx.fillRect(w * 0.06, signH + h * 0.04, w * 0.88, h - signH - h * 0.04);

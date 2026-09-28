@@ -738,69 +738,64 @@
   "altura": 3
  },
  "Casa de Massas Leve Pronto": {
-  "tipo": "box_aberto_balcao",
   "fachada": "#B22222",
-  "profundidade": 4,
-  "altura": 3,
+  "letreiro": "#1E2F6B",
+  "texto": "#FFFFFF",
   "vitrine": true,
-  "balcao": "vidro #CFE3E8"
+  "profundidade": 4
  },
  "Dahra Pedras Brasileiras": {
-  "tipo": "outro",
-  "fachada": "#5B2C83",
+  "fachada": "#F2F2F2",
   "letreiro": "#5B2C83",
-  "texto": "#F2F2F2",
-  "profundidade": 4,
-  "altura": 3
+  "texto": "#FFFFFF",
+  "profundidade": 4
  },
  "Miranda's Mercearia": {
-  "tipo": "box_aberto_balcao",
-  "fachada": "#B5653F",
+  "fachada": "#D8C8A8",
   "letreiro": "#B22222",
-  "profundidade": 4,
-  "altura": 3
+  "texto": "#FFFFFF",
+  "profundidade": 4
  },
  "Da Mamma Massas": {
-  "tipo": "restaurante_com_mesas",
   "fachada": "#B22222",
-  "letreiro": "#F2F2F2",
-  "texto": "#B22222",
-  "profundidade": 4,
-  "altura": 3,
+  "letreiro": "#B22222",
+  "texto": "#FFFFFF",
   "vitrine": true,
-  "balcao": "vidro #CFE3E8"
+  "profundidade": 4
  },
  "Célio Dobrucki (Dobrucki Vintage)": {
-  "tipo": "loja_fechada_porta_enrolar",
-  "fachada": "#A0764A",
-  "profundidade": 4,
-  "altura": 3
+  "fachada": "#D8CFC0",
+  "letreiro": "#4A2F1E",
+  "texto": "#FFFFFF",
+  "profundidade": 4
  },
  "Sweet Sobremesas Especiais": {
-  "tipo": "loja_fechada_porta_enrolar",
+  "fachada": "#D9CBB0",
   "letreiro": "#1A1A1A",
-  "texto": "#1A1A1A",
-  "profundidade": 4,
-  "altura": 3
+  "texto": "#FFFFFF",
+  "tipo": "porta_enrolar",
+  "profundidade": 3
  },
  "Confeitaria Colônia Cecília": {
-  "tipo": "restaurante_com_mesas",
-  "profundidade": 4,
-  "altura": 3,
-  "balcao": "sim (material não identificado)"
+  "fachada": "#E8DCC8",
+  "letreiro": "#F2E8D0",
+  "texto": "#2E4A2E",
+  "profundidade": 5
  },
  "Natureba": {
-  "tipo": "loja_fechada_porta_enrolar",
-  "letreiro": "#2E7D32",
-  "texto": "#2E7D32",
-  "profundidade": 4,
-  "altura": 3
+  "fachada": "#D9CBB0",
+  "letreiro": "#1A1A1A",
+  "texto": "#8BC34A",
+  "tipo": "porta_enrolar",
+  "profundidade": 3
  },
  "Oishii": {
-  "tipo": "quiosque",
-  "profundidade": 4,
-  "altura": 3,
-  "balcao": "vidro #CFE3E8"
+  "fachada": "#B0306A",
+  "letreiro": "#B0306A",
+  "texto": "#FFFFFF",
+  "vitrine": true,
+  "profundidade": 1.5,
+  "altura": 2.5
  },
  "Banca do Kobe": {
   "tipo": "banca_ilha",

@@ -26,6 +26,8 @@ export const PAVIMENTOS = [
     rumoCima: 66,
     ancora: { px: [1857, 1143], lonLat: [-49.2568914, -25.435487] }, // canto General Carneiro × diagonal sudeste
     inicio: 'inf-b-04',
+    // coordenadas do tour 3D oficial (X, Y em m) → metros desta planta
+    tour3d: {"o": [49.97999, 14.4389], "ex": [-0.8056, -0.00605], "ey": [-0.07016, -0.93012]},
   },
   {
     id: 'superior',
@@ -108,12 +110,13 @@ export const BOXES = {
     // Hall da entrada Sete de Setembro (praça circular), a oeste da rampa. A
     // planta afixada não o desenha: posições dos marcadores do tour 3D oficial
     // (ver comerciantes.mjs), com o centro do box 16 px atrás da frente.
+    // Posições e larguras medidas no piloto do tour 3D (piloto_lojas.csv)
     ...[
-      ['193', [105, 546], 180], ['192', [167, 546], 180], ['195', [270, 539], 180],
-      ['190', [82, 902], 0], ['189', [134, 890], 0], ['188', [199, 871], 0, 30],
-      ['hall-b', [231, 868], 0, 30], ['hall-a', [270, 846], 0, 34], ['185', [342, 808], 0, 34],
+      ['193', [106, 527], 180, 32], ['192', [170, 527], 180, 32], ['195', [265, 489], 180, 64],
+      ['189', [133, 913], 0, 38], ['190', [82, 921], 0, 39], ['188', [197, 890], 0, 34],
+      ['hall-b', [234, 883], 0, 34], ['hall-a', [270, 860], 0, 30], ['185', [342, 808], 0, 32], ['hall-c', [168, 883], 0, 18],
     ].map(([id, em, facing, largura]) => box(id, em, facing, {
-      area: 'Hall Sete de Setembro', ...(largura && { largura }), ...(id.startsWith('hall') && { rotulo: 'Hall Sete de Setembro' }),
+      area: 'Hall Sete de Setembro', largura, ...(id.startsWith('hall') && { rotulo: 'Hall Sete de Setembro' }),
     })),
   ],
   nivel3: [],
@@ -235,9 +238,11 @@ export const CENAS = {
     { id: 'inf-anexo-4', titulo: 'Anexo · noroeste', em: [88, 215], cor: LILAS },
     { id: 'inf-anexo-5', titulo: 'Anexo · sudoeste', em: [82, 350], cor: LILAS },
     { id: 'inf-anexo-6', titulo: 'Anexo · sul', em: [330, 350], cor: LILAS },
-    { id: 'inf-hall-leste', titulo: 'Hall Sete de Setembro · leste', em: [290, 705], cor: CINZA },
-    { id: 'inf-hall-centro', titulo: 'Hall Sete de Setembro · centro', em: [185, 705], cor: CINZA },
-    { id: 'inf-hall-oeste', titulo: 'Hall Sete de Setembro · oeste', em: [95, 705], cor: CINZA },
+    { id: 'inf-hall-leste', titulo: 'Hall Sete de Setembro · acesso do salão', em: [335, 705], cor: CINZA },
+    { id: 'inf-hall-norte', titulo: 'Hall Sete de Setembro · mesas da Colônia Cecília', em: [218, 624], cor: CINZA },
+    { id: 'inf-hall-sul', titulo: 'Hall Sete de Setembro · Miranda\'s e Dahra', em: [228, 823], cor: CINZA },
+    { id: 'inf-hall-centro', titulo: 'Hall Sete de Setembro · praça circular', em: [242, 727], cor: CINZA },
+    { id: 'inf-hall-oeste', titulo: 'Hall Sete de Setembro · entrada da Av. Sete de Setembro', em: [120, 728], cor: CINZA },
   ],
   nivel3: [
     { id: 'n3-gerencia', titulo: '3º nível · Gerência do Mercado', em: [1170, 673], cor: CINZA },
@@ -299,6 +304,7 @@ export const LIGACOES = [
   ['inf-c-08', 'inf-diagonal'],
   ['inf-b-00', 'inf-rampa'],
   ...cadeia(['inf-rampa', 'inf-hall-leste', 'inf-hall-centro', 'inf-hall-oeste']),
+  ['inf-hall-centro', 'inf-hall-norte'], ['inf-hall-centro', 'inf-hall-sul'], ['inf-hall-norte', 'inf-hall-oeste'], ['inf-hall-sul', 'inf-hall-oeste'],
   ['inf-a-00', 'inf-anexo-1'],
   ...cadeia(['inf-anexo-1', 'inf-anexo-2', 'inf-anexo-3', 'inf-anexo-4', 'inf-anexo-5', 'inf-anexo-6', 'inf-anexo-1']),
   // pavimento superior
@@ -319,6 +325,40 @@ export const LIGACOES = [
   ...cadeia(['sup-dea-oeste', 'sup-galeria-0', 'sup-galeria-1', 'sup-galeria-2', 'sup-galeria-3']),
   ...cadeia(['n3-gerencia', 'n3-oeste', 'n3-auditorio']),
 ];
+
+// Mobiliário e elementos do piloto (tour 3D oficial, piloto_mobiliario.csv e
+// piloto_escada.csv), em coordenadas do tour 3D (X, Y em m). Posições estimadas.
+export const MOBILIARIO = {
+  inferior: [
+    { tipo: 'praca', em: [37.5, 64.5], r: 6.5, cor: '#B9B4AC', borda: '#A85A5A', degraus: 3 },
+    { tipo: 'mesa', em: [33.5, 53.3], r: 0.45, cor: '#E6DCC0', cadeiras: 4, corCadeira: '#4A2F1E' },
+    { tipo: 'mesa', em: [33.5, 55.6], r: 0.45, cor: '#E6DCC0', cadeiras: 4, corCadeira: '#4A2F1E' },
+    { tipo: 'mesa', em: [35.9, 53.3], r: 0.45, cor: '#E6DCC0', cadeiras: 4, corCadeira: '#4A2F1E' },
+    { tipo: 'mesa', em: [35.9, 55.6], r: 0.45, cor: '#E6DCC0', cadeiras: 4, corCadeira: '#4A2F1E' },
+    { tipo: 'mesa', em: [38.3, 53.3], r: 0.45, cor: '#E6DCC0', cadeiras: 4, corCadeira: '#4A2F1E' },
+    { tipo: 'mesa', em: [38.3, 55.6], r: 0.45, cor: '#E6DCC0', cadeiras: 4, corCadeira: '#4A2F1E' },
+    { tipo: 'mesa', em: [40.7, 53.3], r: 0.45, cor: '#E6DCC0', cadeiras: 4, corCadeira: '#4A2F1E' },
+    { tipo: 'mesa', em: [40.7, 55.6], r: 0.45, cor: '#E6DCC0', cadeiras: 4, corCadeira: '#4A2F1E' },
+    ...[[27, 65], [28.6, 66.6], [27, 68.2]].map((em) => ({ tipo: 'mesa', em, r: 0.35, cor: '#F2F2F2', cadeiras: 3, corCadeira: '#C9A0B0', banquetas: true })),
+    { tipo: 'vaso', em: [41, 63.6] },
+    { tipo: 'vaso', em: [41, 65.4] },
+    { tipo: 'vaso', em: [42, 63.6] },
+    { tipo: 'vaso', em: [42, 65.4] },
+    { tipo: 'vaso', em: [43, 63.6] },
+    { tipo: 'vaso', em: [43, 65.4] },
+    { tipo: 'vaso', em: [44, 63.6] },
+    { tipo: 'vaso', em: [44, 65.4] },
+    { tipo: 'vaso', em: [45, 63.6] },
+    { tipo: 'vaso', em: [45, 65.4] },
+    { tipo: 'vaso', em: [46, 63.6] },
+    { tipo: 'vaso', em: [46, 65.4] },
+    { tipo: 'vaso', em: [47, 63.6] },
+    { tipo: 'vaso', em: [47, 65.4] },
+    { tipo: 'vaso', em: [48, 63.6] },
+    { tipo: 'vaso', em: [48, 65.4] },
+    { tipo: 'helicoidal', em: [42, 56.5], r: 1.3, altura: 2.5, cor: '#F2F2F2' },
+  ],
+};
 
 // Escadas entre pavimentos (direção informada à mão: não há planta comum).
 export const ESCADAS = [

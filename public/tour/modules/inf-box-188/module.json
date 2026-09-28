@@ -3,20 +3,20 @@
   "title": "Célio Dobrucki (Dobrucki Vintage)",
   "placement": {
     "floor": "inferior",
-    "x": 12.54,
-    "y": -53.86,
+    "x": 12.41,
+    "y": -55.06,
     "z": 1.4,
-    "width": 1.74,
-    "height": 3,
+    "width": 1.97,
+    "height": 2.8,
     "depth": 4,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#4a5a73",
-      "facade": "#A0764A",
-      "closed": true,
+      "color": "#4A2F1E",
+      "facade": "#D8CFC0",
+      "textColor": "#FFFFFF",
       "label": "Célio Dobrucki (Dobrucki Vintage)",
       "sublabel": "Variedades e serviços · Box 188"
     }
@@ -28,5 +28,5 @@
     "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "5ebf58c8c271"
+  "autoHash": "dd3c07b2e09b"
 }

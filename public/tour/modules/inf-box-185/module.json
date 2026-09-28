@@ -6,15 +6,18 @@
     "x": 21.55,
     "y": -49.9,
     "z": 1.4,
-    "width": 1.97,
-    "height": 3,
-    "depth": 4,
+    "width": 1.85,
+    "height": 2.5,
+    "depth": 1.5,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#b0561d",
+      "color": "#B0306A",
+      "facade": "#B0306A",
+      "textColor": "#FFFFFF",
+      "vitrine": true,
       "label": "Oishii",
       "sublabel": "Lanchonete e restaurante · Box 185"
     }
@@ -25,5 +28,5 @@
     "note": "Crepe japonês. Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "5ffc85356df1"
+  "autoHash": "d6b07ef7a1b2"
 }

@@ -1,9 +1,9 @@
 {
-  "title": "Hall Sete de Setembro · praça circular",
+  "title": "Hall Sete de Setembro · Miranda's e Dahra",
   "floor": "inferior",
   "position": {
-    "x": 15.25,
-    "y": -45.8,
+    "x": 14.36,
+    "y": -51.85,
     "z": 1.6
   },
   "northYaw": 0,
@@ -14,16 +14,10 @@
   },
   "links": [
     {
-      "to": "inf-hall-leste"
+      "to": "inf-hall-centro"
     },
     {
       "to": "inf-hall-oeste"
-    },
-    {
-      "to": "inf-hall-norte"
-    },
-    {
-      "to": "inf-hall-sul"
     }
   ],
   "generated": true

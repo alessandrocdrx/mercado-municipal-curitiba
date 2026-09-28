@@ -4,19 +4,20 @@
   "placement": {
     "floor": "inferior",
     "x": 17.01,
-    "y": -52.29,
+    "y": -53.17,
     "z": 1.4,
-    "width": 1.97,
-    "height": 3,
-    "depth": 4,
+    "width": 1.74,
+    "height": 2.8,
+    "depth": 3,
     "facing": 0,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#2E7D32",
-      "textColor": "#2E7D32",
-      "closed": true,
+      "color": "#1A1A1A",
+      "facade": "#D9CBB0",
+      "textColor": "#8BC34A",
+      "shutter": true,
       "label": "Natureba",
       "sublabel": "Lanchonete e restaurante · Hall Sete de Setembro"
     }
@@ -28,5 +29,5 @@
     "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "0936df981618"
+  "autoHash": "521101ada0b3"
 }

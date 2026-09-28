@@ -3,19 +3,20 @@
   "title": "Casa de Massas Leve Pronto",
   "placement": {
     "floor": "inferior",
-    "x": 6.62,
-    "y": -35.41,
+    "x": 6.68,
+    "y": -34.21,
     "z": 1.4,
-    "width": 2.32,
-    "height": 3,
+    "width": 1.85,
+    "height": 2.8,
     "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#9a6b1f",
+      "color": "#1E2F6B",
       "facade": "#B22222",
+      "textColor": "#FFFFFF",
       "vitrine": true,
       "label": "Casa de Massas Leve Pronto",
       "sublabel": "Empório e mercearia · Box 193"
@@ -28,5 +29,5 @@
     "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "a17bedab7c1b"
+  "autoHash": "cec49d1f63da"
 }

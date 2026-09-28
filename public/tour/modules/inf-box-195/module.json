@@ -3,18 +3,20 @@
   "title": "Confeitaria Colônia Cecília",
   "placement": {
     "floor": "inferior",
-    "x": 17.01,
-    "y": -34.97,
+    "x": 16.7,
+    "y": -31.81,
     "z": 1.4,
-    "width": 2.32,
-    "height": 3,
+    "width": 3.71,
+    "height": 2.8,
     "depth": 4,
     "facing": 180,
     "surface": "wall"
   },
   "media": {
     "placeholder": {
-      "color": "#6b3a2a",
+      "color": "#F2E8D0",
+      "facade": "#E8DCC8",
+      "textColor": "#2E4A2E",
       "label": "Confeitaria Colônia Cecília",
       "sublabel": "Doces e chocolates · Box 195"
     }
@@ -28,5 +30,5 @@
     "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "4314047a55dd"
+  "autoHash": "9b8d4c732f67"
 }
