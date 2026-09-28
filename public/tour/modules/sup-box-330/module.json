@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 330",
+  "title": "Tabacaria Trevo",
   "placement": {
     "floor": "superior",
     "x": 15.3,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 330",
-      "sublabel": "comerciante não identificado"
+      "color": "#4a5a73",
+      "label": "Tabacaria Trevo",
+      "sublabel": "Variedades e serviços · Box 330"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento superior · Box 330",
+    "phone": "(41) 3264-5445 · (41) 99242-4662",
+    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "ffeaca391765"
+  "autoHash": "00cb3deb0d85"
 }

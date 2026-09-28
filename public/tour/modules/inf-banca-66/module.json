@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 66",
+  "title": "Banca do João Carlos",
   "placement": {
     "floor": "inferior",
     "x": 73.96,
@@ -13,15 +13,16 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 66",
-      "sublabel": "comerciante não identificado"
+      "color": "#3c7a34",
+      "label": "Banca do João Carlos",
+      "sublabel": "Hortifrúti · Banca 66"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Hortifrúti",
+    "location": "Pavimento inferior · Banca 66",
+    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "6260821ccf55"
+  "autoHash": "a8f5cc8a5730"
 }

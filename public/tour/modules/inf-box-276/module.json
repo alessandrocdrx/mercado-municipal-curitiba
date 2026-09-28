@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Empório Gourmet (Casabianco)",
+  "title": "Queijos e Vinhos",
   "placement": {
     "floor": "inferior",
     "x": 37.3,
@@ -13,18 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#9a6b1f",
-      "label": "Empório Gourmet (Casabianco)",
-      "sublabel": "Empório e mercearia · Box 276"
+      "color": "#5b2e63",
+      "label": "Queijos e Vinhos",
+      "sublabel": "Bebidas · Box 276"
     }
   },
   "info": {
-    "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Box 276, 277",
-    "phone": "(41) 3335-4689 · (41) 9984-9896",
-    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-gourmet/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "category": "Bebidas",
+    "location": "Pavimento inferior · Box 276",
+    "phone": "(41) 3264-9982 · (41) 99976-5650",
+    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "8a4cf22a14ca"
+  "autoHash": "4c160cf4c161"
 }

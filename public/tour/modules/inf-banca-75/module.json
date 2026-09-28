@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 75",
+  "title": "Urnab (Banca do G)",
   "placement": {
     "floor": "inferior",
     "x": 79,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 75",
-      "sublabel": "comerciante não identificado"
+      "color": "#3c7a34",
+      "label": "Urnab (Banca do G)",
+      "sublabel": "Hortifrúti · Banca 75"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Hortifrúti",
+    "location": "Pavimento inferior · Banca 75",
+    "phone": "(41) 99954-6053",
+    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "2e3d3de3837f"
+  "autoHash": "e26912be4e35"
 }

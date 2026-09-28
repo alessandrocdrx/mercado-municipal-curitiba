@@ -58,10 +58,21 @@ npm run planta     # regenera posições/links sem apagar o que foi preenchido �
 
 ### Comerciantes
 
-`scripts/planta/comerciantes.mjs` lista 158 comerciantes da lista pública de
+`scripts/planta/comerciantes.mjs` lista 184 comerciantes da lista pública de
 lojas do Mercado (curitiba.mercadomodelo.com.br), com descrições do site
-oficial. 140 deles ocupam 220 boxes e bancas da planta e aparecem com nome e
-cor do ramo no tour. Boxes sem comerciante identificado ficam cinza. Os demais
+oficial, conferidos no tour 3D oficial do Mercado (Matterport,
+my.matterport.com/show/?m=tgwA2xoKA2y). 173 deles ocupam 265 boxes e bancas
+da planta e aparecem com nome e cor do ramo no tour.
+
+Do tour 3D vieram só **fatos** (nomes, telefones e a posição de cada
+marcador), nunca imagens. As coordenadas dos marcadores foram ajustadas à
+planta pelos ~70 comerciantes comuns às duas fontes (desvio típico de 1–3 m).
+Isso confirmou a planta, corrigiu algumas lojas (ex.: Adega Municipal no
+box 15), pôs 26 comerciantes novos e acrescentou o **hall da entrada Sete de
+Setembro** (praça circular a oeste da rampa), que a planta afixada não
+desenha. Lojas em áreas ainda fora da planta (praças Déa / 7 de Setembro,
+galeria de restaurantes sobre a General Carneiro, 3º nível) ficam só na lista,
+com a localização em `obs`. Boxes sem comerciante identificado ficam cinza. Os demais
 aparecem só no botão **Comerciantes** do app.
 Rode `npm run planta` depois de editar a lista.
 

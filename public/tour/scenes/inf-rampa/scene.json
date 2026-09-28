@@ -15,6 +15,9 @@
   "links": [
     {
       "to": "inf-b-00"
+    },
+    {
+      "to": "inf-hall-leste"
     }
   ],
   "generated": true

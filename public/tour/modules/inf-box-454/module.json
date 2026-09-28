@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 454",
+  "title": "Skina das Delícias",
   "placement": {
     "floor": "inferior",
     "x": 117.49,
@@ -13,15 +13,16 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 454",
-      "sublabel": "comerciante não identificado"
+      "color": "#b0561d",
+      "label": "Skina das Delícias",
+      "sublabel": "Lanchonete e restaurante · Box 454"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Lanchonete e restaurante",
+    "location": "Pavimento inferior · Box 454",
+    "note": "Só o rótulo aparece no tour 3D. Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "1037f60c2e90"
+  "autoHash": "e547c5a23ab1"
 }

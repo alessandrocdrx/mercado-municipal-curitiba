@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 15",
+  "title": "Ninki Pastéis & Delícias",
   "placement": {
     "floor": "superior",
     "x": 29.15,
@@ -13,15 +13,18 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 15",
-      "sublabel": "comerciante não identificado"
+      "color": "#b0561d",
+      "label": "Ninki Pastéis & Delícias",
+      "sublabel": "Lanchonete e restaurante · Box 15"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Lanchonete e restaurante",
+    "location": "Pavimento superior · Box 15",
+    "phone": "(41) 99179-1197 · (41) 99663-2026",
+    "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/ninki-pasteis-delicias/",
+    "note": "A lista informa o box 205; posição do tour 3D (praça de alimentação Karan). Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "3903acf72783"
+  "autoHash": "9b38f54cf8dd"
 }

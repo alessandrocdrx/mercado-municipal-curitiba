@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Galisa",
+  "title": "Galisa Lotérica",
   "placement": {
     "floor": "inferior",
     "x": 28.94,
@@ -13,17 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#5d5a6e",
-      "label": "Galisa",
-      "sublabel": "Outros · Box 307"
+      "color": "#4a5a73",
+      "label": "Galisa Lotérica",
+      "sublabel": "Variedades e serviços · Box 307"
     }
   },
   "info": {
-    "category": "Outros",
+    "category": "Variedades e serviços",
     "location": "Pavimento inferior · Box 307",
     "phone": "(41) 3014-7760 · (41) 99845-9535",
     "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
   },
   "generated": true,
-  "autoHash": "82fbb118b7a3"
+  "autoHash": "520d778ad93d"
 }

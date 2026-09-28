@@ -70,7 +70,7 @@ for (const pav of PAVIMENTOS) {
       const frente = push(centro, facing, tipo === 'banca' ? 6 : 16);
       const banca = tipo === 'banca';
       const id = `${prefix}-${tipo}-${num}`;
-      const nome = `${banca ? 'Banca' : 'Box'} ${num}`;
+      const nome = grupo.rotulo ?? `${banca ? 'Banca' : 'Box'} ${num}`;
       const com = donoDoBox.get(id);
       const cat = com && CATEGORIAS[com.categoria];
       upsertModule(id, {
@@ -91,7 +91,7 @@ for (const pav of PAVIMENTOS) {
         info: com
           ? limpa({
             category: cat.nome,
-            location: `${pav.titulo} · ${banca ? 'Banca' : 'Box'} ${numeros(com.boxes)}`,
+            location: [pav.titulo, grupo.area, grupo.rotulo ?? `${banca ? 'Banca' : 'Box'} ${numeros(com.boxes)}`].filter(Boolean).join(' · '),
             phone: com.telefone,
             hours: com.horario,
             description: com.descricao,

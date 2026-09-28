@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 11",
+  "title": "Espaço Fitoterápico",
   "placement": {
     "floor": "superior",
     "x": 46.76,
@@ -13,15 +13,16 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 11",
-      "sublabel": "comerciante não identificado"
+      "color": "#4a5a73",
+      "label": "Espaço Fitoterápico",
+      "sublabel": "Variedades e serviços · Box 11"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento superior · Box 11",
+    "note": "Só o rótulo aparece no tour 3D. Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "572311a80b47"
+  "autoHash": "6ae67164670d"
 }

@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 359",
+  "title": "Mercearia Imperial",
   "placement": {
     "floor": "inferior",
     "x": 33.39,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 359",
-      "sublabel": "comerciante não identificado"
+      "color": "#9a6b1f",
+      "label": "Mercearia Imperial",
+      "sublabel": "Empório e mercearia · Box 359"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Empório e mercearia",
+    "location": "Pavimento inferior · Box 359",
+    "phone": "(41) 3077-3467 · (41) 98762-8681 · (41) 99228-1472",
+    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "a4787e54e214"
+  "autoHash": "468ee3dd8379"
 }

@@ -610,6 +610,9 @@
     "inf-anexo-4",
     "inf-anexo-5",
     "inf-anexo-6",
+    "inf-hall-leste",
+    "inf-hall-centro",
+    "inf-hall-oeste",
     "sup-porta-b",
     "sup-porta-c",
     "sup-norte-c",
@@ -809,6 +812,15 @@
     "inf-box-306",
     "inf-box-308",
     "inf-box-310",
+    "inf-box-193",
+    "inf-box-192",
+    "inf-box-195",
+    "inf-box-190",
+    "inf-box-189",
+    "inf-box-188",
+    "inf-box-hall-b",
+    "inf-box-hall-a",
+    "inf-box-185",
     "inf-banca-08",
     "inf-banca-07",
     "inf-banca-09",
@@ -1086,14 +1098,11 @@
       "name": "Adega Municipal",
       "category": "Bebidas",
       "modules": [
-        "inf-box-267",
-        "inf-box-269",
-        "inf-box-270",
-        "inf-box-271"
+        "inf-box-15"
       ],
-      "boxes": "267, 269, 270, 271",
+      "boxes": "15",
       "onPlan": true,
-      "phone": "(41) 3039-1984 · (41) 98870-1977",
+      "phone": "(41) 3039-1984 · (41) 3039-2776 · (41) 98870-1977",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/adega-municipal/",
       "description": "Vinhos, espumantes, whisky, conhaque, licores e tabacaria."
     },
@@ -1101,9 +1110,11 @@
       "name": "Planeta Aquários",
       "category": "Pet shop",
       "modules": [
-        "inf-box-17"
+        "inf-box-16",
+        "inf-box-17",
+        "inf-box-18"
       ],
-      "boxes": "17",
+      "boxes": "16, 17, 18",
       "onPlan": true,
       "phone": "(41) 3363-4519 · (41) 99996-1419",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/planeta-aquarios/",
@@ -1439,13 +1450,22 @@
       "name": "Empório Gourmet (Casabianco)",
       "category": "Empório e mercearia",
       "modules": [
-        "inf-box-276",
         "inf-box-277"
       ],
-      "boxes": "276, 277",
+      "boxes": "277",
       "onPlan": true,
       "phone": "(41) 3335-4689 · (41) 9984-9896",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-gourmet/"
+    },
+    {
+      "name": "Queijos e Vinhos",
+      "category": "Bebidas",
+      "modules": [
+        "inf-box-276"
+      ],
+      "boxes": "276",
+      "onPlan": true,
+      "phone": "(41) 3264-9982 · (41) 99976-5650"
     },
     {
       "name": "Mercearia O Barracão",
@@ -1469,7 +1489,7 @@
       "phone": "(41) 3362-9165 · (41) 99196-5622"
     },
     {
-      "name": "Casa Gourmet",
+      "name": "Casa Nobre Especiarias",
       "category": "Cereais e especiarias",
       "modules": [
         "inf-box-281",
@@ -1477,7 +1497,7 @@
       ],
       "boxes": "281, 283",
       "onPlan": true,
-      "phone": "(41) 3238-0927 · (41) 99571-0735"
+      "phone": "(41) 3262-5064 · (41) 99571-0735"
     },
     {
       "name": "Manfré Cervejas Especiais",
@@ -1609,8 +1629,8 @@
       "description": "Espaço de apoio a pequenos produtores artesanais, manuais e semi-industriais."
     },
     {
-      "name": "Galisa",
-      "category": "Outros",
+      "name": "Galisa Lotérica",
+      "category": "Variedades e serviços",
       "modules": [
         "inf-box-307"
       ],
@@ -1629,7 +1649,7 @@
       "phone": "(41) 3053-8323 · (41) 99184-9277"
     },
     {
-      "name": "Lotérica Mercado Municipal",
+      "name": "Abranches Lotérica",
       "category": "Variedades e serviços",
       "modules": [
         "inf-box-309",
@@ -1637,7 +1657,7 @@
       ],
       "boxes": "309, 310",
       "onPlan": true,
-      "phone": "(41) 3014-7760"
+      "phone": "(41) 3014-7760 · (41) 99975-9265"
     },
     {
       "name": "Mercearia Imperial (A Faca e o Queijo)",
@@ -2450,12 +2470,8 @@
     {
       "name": "Restaurante Anarco",
       "category": "Lanchonete e restaurante",
-      "modules": [
-        "sup-box-16"
-      ],
-      "boxes": "16",
-      "onPlan": true,
-      "phone": "(41) 3336-0049",
+      "onPlan": false,
+      "phone": "(41) 3029-6154",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/restaurante-anarco/",
       "description": "Cozinha italiana, fundado em 1991."
     },
@@ -2463,9 +2479,9 @@
       "name": "Restaurante Box Curitiba",
       "category": "Lanchonete e restaurante",
       "modules": [
-        "sup-box-19"
+        "sup-box-10"
       ],
-      "boxes": "19",
+      "boxes": "10",
       "onPlan": true,
       "phone": "(41) 3015-8240",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/restaurante-box-curitiba/",
@@ -2605,30 +2621,43 @@
     {
       "name": "Banca do Adonis",
       "category": "Hortifrúti",
-      "boxes": "127, 224",
-      "onPlan": false,
-      "phone": "(41) 3323-6150 · (41) 99681-3996"
+      "modules": [
+        "inf-banca-28",
+        "inf-banca-29"
+      ],
+      "boxes": "28, 29",
+      "onPlan": true,
+      "phone": "(41) 99681-3996 · (41) 99918-6927"
     },
     {
       "name": "Banca do Adalto",
       "category": "Hortifrúti",
-      "boxes": "111, 113",
-      "onPlan": false,
+      "modules": [
+        "inf-box-363"
+      ],
+      "boxes": "363",
+      "onPlan": true,
       "phone": "(41) 3362-7698 · (41) 97400-1534",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-do-adalto/"
     },
     {
-      "name": "Dobrucki Vintage",
+      "name": "Célio Dobrucki (Dobrucki Vintage)",
       "category": "Variedades e serviços",
+      "modules": [
+        "inf-box-188"
+      ],
       "boxes": "188",
-      "onPlan": false,
+      "onPlan": true,
       "phone": "(41) 99912-7206"
     },
     {
       "name": "Miranda's Mercearia",
       "category": "Empório e mercearia",
+      "modules": [
+        "inf-box-189"
+      ],
       "boxes": "189",
-      "onPlan": false,
+      "onPlan": true,
       "phone": "(41) 99700-4977",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/mirandas-mercearia/",
       "description": "Produtos paranaenses: chocolates artesanais, doces e cafés."
@@ -2636,60 +2665,82 @@
     {
       "name": "Dahra Pedras Brasileiras",
       "category": "Variedades e serviços",
+      "modules": [
+        "inf-box-190"
+      ],
       "boxes": "190",
-      "onPlan": false,
+      "onPlan": true,
       "phone": "(41) 99652-5910"
     },
     {
       "name": "Da Mamma Massas",
       "category": "Empório e mercearia",
+      "modules": [
+        "inf-box-192"
+      ],
       "boxes": "192",
-      "onPlan": false,
+      "onPlan": true,
       "phone": "(41) 3262-2768 · (41) 99197-7977"
     },
     {
       "name": "Casa de Massas Leve Pronto",
       "category": "Empório e mercearia",
+      "modules": [
+        "inf-box-193"
+      ],
       "boxes": "193",
-      "onPlan": false,
+      "onPlan": true,
       "phone": "(41) 3264-4990 · (41) 99209-7079"
     },
     {
       "name": "Maia Box Sanduicheria",
       "category": "Lanchonete e restaurante",
-      "boxes": "194",
+      "boxes": "201",
       "onPlan": false,
+      "phone": "(41) 3362-9065",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/maia-box-sanduicheria/",
       "description": "Desde 2000, famosa pelo sanduíche de mortadela."
     },
     {
       "name": "Confeitaria Colônia Cecília",
       "category": "Doces e chocolates",
+      "modules": [
+        "inf-box-195"
+      ],
       "boxes": "195",
-      "onPlan": false,
-      "phone": "(41) 3336-0106",
+      "onPlan": true,
+      "phone": "(41) 3030-3076",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/confeitaria-colonia-cecilia/",
       "description": "Desde 2003. Café colonial aos domingos."
     },
     {
       "name": "Restaurante Ohana",
       "category": "Lanchonete e restaurante",
-      "boxes": "201",
-      "onPlan": false
+      "modules": [
+        "sup-box-518"
+      ],
+      "boxes": "518",
+      "onPlan": true
     },
     {
       "name": "Ninki Pastéis & Delícias",
       "category": "Lanchonete e restaurante",
-      "boxes": "205",
-      "onPlan": false,
+      "modules": [
+        "sup-box-15"
+      ],
+      "boxes": "15",
+      "onPlan": true,
       "phone": "(41) 99179-1197 · (41) 99663-2026",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/ninki-pasteis-delicias/"
     },
     {
       "name": "Café do Jorge e da Aurea",
       "category": "Lanchonete e restaurante",
-      "boxes": "206",
-      "onPlan": false,
+      "modules": [
+        "sup-box-16"
+      ],
+      "boxes": "16",
+      "onPlan": true,
       "phone": "(41) 3152-6132",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cafe-do-jorge-e-da-aurea/"
     },
@@ -2701,6 +2752,231 @@
       "phone": "(41) 3396-3507 · (41) 98871-0662"
     },
     {
+      "name": "Banca do Oyama",
+      "category": "Hortifrúti",
+      "modules": [
+        "inf-banca-45"
+      ],
+      "boxes": "45",
+      "onPlan": true,
+      "phone": "(41) 3264-7563"
+    },
+    {
+      "name": "Banca do Paulo",
+      "category": "Cereais e especiarias",
+      "modules": [
+        "inf-banca-04"
+      ],
+      "boxes": "04",
+      "onPlan": true,
+      "phone": "(41) 99956-3898"
+    },
+    {
+      "name": "Banca do João Carlos",
+      "category": "Hortifrúti",
+      "modules": [
+        "inf-banca-66"
+      ],
+      "boxes": "66",
+      "onPlan": true
+    },
+    {
+      "name": "Urnab (Banca do G)",
+      "category": "Hortifrúti",
+      "modules": [
+        "inf-banca-75"
+      ],
+      "boxes": "75",
+      "onPlan": true,
+      "phone": "(41) 99954-6053"
+    },
+    {
+      "name": "Banca do Eduardo",
+      "category": "Hortifrúti",
+      "modules": [
+        "inf-banca-93"
+      ],
+      "boxes": "93",
+      "onPlan": true,
+      "phone": "(41) 98486-8214"
+    },
+    {
+      "name": "Banco de Alimentos",
+      "category": "Variedades e serviços",
+      "modules": [
+        "inf-banca-97"
+      ],
+      "boxes": "97",
+      "onPlan": true
+    },
+    {
+      "name": "Empório 365",
+      "category": "Empório e mercearia",
+      "modules": [
+        "inf-box-365"
+      ],
+      "boxes": "365",
+      "onPlan": true,
+      "phone": "(41) 3010-2544 · (41) 98777-5454"
+    },
+    {
+      "name": "Mercearia Imperial",
+      "category": "Empório e mercearia",
+      "modules": [
+        "inf-box-359"
+      ],
+      "boxes": "359",
+      "onPlan": true,
+      "phone": "(41) 3077-3467 · (41) 98762-8681 · (41) 99228-1472"
+    },
+    {
+      "name": "Skina das Delícias",
+      "category": "Lanchonete e restaurante",
+      "modules": [
+        "inf-box-454"
+      ],
+      "boxes": "454",
+      "onPlan": true
+    },
+    {
+      "name": "Oishii",
+      "category": "Lanchonete e restaurante",
+      "modules": [
+        "inf-box-185"
+      ],
+      "boxes": "185",
+      "onPlan": true
+    },
+    {
+      "name": "Natureba",
+      "category": "Lanchonete e restaurante",
+      "modules": [
+        "inf-box-hall-a"
+      ],
+      "boxes": "a",
+      "onPlan": true,
+      "phone": "(41) 98875-6461"
+    },
+    {
+      "name": "Sweet Sobremesas Especiais",
+      "category": "Doces e chocolates",
+      "modules": [
+        "inf-box-hall-b"
+      ],
+      "boxes": "b",
+      "onPlan": true,
+      "phone": "(41) 3262-3311 · (41) 99997-7070"
+    },
+    {
+      "name": "Biossana Orgânicos",
+      "category": "Orgânicos",
+      "modules": [
+        "sup-box-520"
+      ],
+      "boxes": "520",
+      "onPlan": true,
+      "phone": "(41) 99936-0224"
+    },
+    {
+      "name": "Tabacaria Trevo",
+      "category": "Variedades e serviços",
+      "modules": [
+        "sup-box-330"
+      ],
+      "boxes": "330",
+      "onPlan": true,
+      "phone": "(41) 3264-5445 · (41) 99242-4662"
+    },
+    {
+      "name": "Lule Salão de Cabelos",
+      "category": "Variedades e serviços",
+      "modules": [
+        "sup-box-318"
+      ],
+      "boxes": "318",
+      "onPlan": true,
+      "phone": "(41) 99644-2203"
+    },
+    {
+      "name": "Ascesme",
+      "category": "Variedades e serviços",
+      "modules": [
+        "sup-box-328"
+      ],
+      "boxes": "328",
+      "onPlan": true,
+      "phone": "(41) 3363-3764",
+      "description": "Associação dos comerciantes do Mercado Municipal."
+    },
+    {
+      "name": "Max Dandy",
+      "category": "Lanchonete e restaurante",
+      "modules": [
+        "sup-box-14"
+      ],
+      "boxes": "14",
+      "onPlan": true,
+      "phone": "(41) 98457-8041"
+    },
+    {
+      "name": "Espaço Fitoterápico",
+      "category": "Variedades e serviços",
+      "modules": [
+        "sup-box-11"
+      ],
+      "boxes": "11",
+      "onPlan": true
+    },
+    {
+      "name": "Bonna Gourmet",
+      "category": "Lanchonete e restaurante",
+      "modules": [
+        "sup-box-01"
+      ],
+      "boxes": "01",
+      "onPlan": true
+    },
+    {
+      "name": "Pastelaria Curitiba",
+      "category": "Lanchonete e restaurante",
+      "modules": [
+        "sup-box-08"
+      ],
+      "boxes": "08",
+      "onPlan": true,
+      "phone": "(41) 99734-9001 · (41) 3363-0522"
+    },
+    {
+      "name": "Fujii Cozinha Japonesa",
+      "category": "Lanchonete e restaurante",
+      "onPlan": false,
+      "phone": "(41) 3114-8393"
+    },
+    {
+      "name": "Mister Dea",
+      "category": "Lanchonete e restaurante",
+      "onPlan": false,
+      "phone": "(41) 3264-4911 · (41) 98832-0583"
+    },
+    {
+      "name": "Curitiba Sua Linda",
+      "category": "Variedades e serviços",
+      "onPlan": false
+    },
+    {
+      "name": "Restaurante Al Almasor",
+      "category": "Lanchonete e restaurante",
+      "onPlan": false,
+      "phone": "(41) 3155-1844",
+      "description": "Comida árabe e brasileira."
+    },
+    {
+      "name": "Gerência do Mercado (Prefeitura)",
+      "category": "Variedades e serviços",
+      "onPlan": false,
+      "phone": "(41) 3264-6020 · (41) 3264-6224 · (41) 3264-6024"
+    },
+    {
       "name": "Dinho Wine and Spirits",
       "category": "Bebidas",
       "onPlan": false,
@@ -2710,7 +2986,11 @@
     {
       "name": "Banca do Hiro",
       "category": "Hortifrúti",
-      "onPlan": false,
+      "modules": [
+        "inf-box-62"
+      ],
+      "boxes": "62",
+      "onPlan": true,
       "phone": "(41) 99944-4334",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-do-hiro/"
     },
@@ -2724,7 +3004,12 @@
     {
       "name": "Restaurante Takê",
       "category": "Lanchonete e restaurante",
-      "onPlan": false,
+      "modules": [
+        "sup-box-07"
+      ],
+      "boxes": "07",
+      "onPlan": true,
+      "phone": "(41) 3362-7571",
       "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/restaurante-take/",
       "description": "Comida japonesa por quilo."
     },

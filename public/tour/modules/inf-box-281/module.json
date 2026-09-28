@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Casa Gourmet",
+  "title": "Casa Nobre Especiarias",
   "placement": {
     "floor": "inferior",
     "x": 23.31,
@@ -14,16 +14,16 @@
   "media": {
     "placeholder": {
       "color": "#7a4a24",
-      "label": "Casa Gourmet",
+      "label": "Casa Nobre Especiarias",
       "sublabel": "Cereais e especiarias · Box 281"
     }
   },
   "info": {
     "category": "Cereais e especiarias",
     "location": "Pavimento inferior · Box 281, 283",
-    "phone": "(41) 3238-0927 · (41) 99571-0735",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "phone": "(41) 3262-5064 · (41) 99571-0735",
+    "note": "Na lista aparece como Casa Gourmet (mesmo celular). Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "39736e048df0"
+  "autoHash": "681ca1640503"
 }

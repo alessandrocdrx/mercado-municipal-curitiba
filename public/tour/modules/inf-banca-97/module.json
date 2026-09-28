@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 97",
+  "title": "Banco de Alimentos",
   "placement": {
     "floor": "inferior",
     "x": 89.15,
@@ -13,15 +13,16 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 97",
-      "sublabel": "comerciante não identificado"
+      "color": "#4a5a73",
+      "label": "Banco de Alimentos",
+      "sublabel": "Variedades e serviços · Banca 97"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Variedades e serviços",
+    "location": "Pavimento inferior · Banca 97",
+    "note": "Só o rótulo aparece no tour 3D. Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "4fe3f8f5a84f"
+  "autoHash": "65daa504c5ce"
 }

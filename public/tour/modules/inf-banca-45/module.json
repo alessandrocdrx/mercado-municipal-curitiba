@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 45",
+  "title": "Banca do Oyama",
   "placement": {
     "floor": "inferior",
     "x": 66.15,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 45",
-      "sublabel": "comerciante não identificado"
+      "color": "#3c7a34",
+      "label": "Banca do Oyama",
+      "sublabel": "Hortifrúti · Banca 45"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Hortifrúti",
+    "location": "Pavimento inferior · Banca 45",
+    "phone": "(41) 3264-7563",
+    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "deb82c2cec94"
+  "autoHash": "539d33526d14"
 }

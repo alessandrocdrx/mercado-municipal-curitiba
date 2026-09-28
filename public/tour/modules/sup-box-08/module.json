@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 08",
+  "title": "Pastelaria Curitiba",
   "placement": {
     "floor": "superior",
     "x": 53.48,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 08",
-      "sublabel": "comerciante não identificado"
+      "color": "#b0561d",
+      "label": "Pastelaria Curitiba",
+      "sublabel": "Lanchonete e restaurante · Box 08"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Lanchonete e restaurante",
+    "location": "Pavimento superior · Box 08",
+    "phone": "(41) 99734-9001 · (41) 3363-0522",
+    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "e001bfbe17fd"
+  "autoHash": "4ed3ba3bb511"
 }

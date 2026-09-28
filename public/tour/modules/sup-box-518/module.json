@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 518",
+  "title": "Restaurante Ohana",
   "placement": {
     "floor": "superior",
     "x": 79.75,
@@ -13,15 +13,16 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 518",
-      "sublabel": "comerciante não identificado"
+      "color": "#b0561d",
+      "label": "Restaurante Ohana",
+      "sublabel": "Lanchonete e restaurante · Box 518"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Lanchonete e restaurante",
+    "location": "Pavimento superior · Box 518",
+    "note": "A lista informa o box 201; posição do tour 3D (setor de orgânicos). Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "93cbdebf041a"
+  "autoHash": "55c0b444272b"
 }

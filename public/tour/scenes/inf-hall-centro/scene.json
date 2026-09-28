@@ -1,0 +1,24 @@
+{
+  "title": "Hall Sete de Setembro · centro",
+  "floor": "inferior",
+  "position": {
+    "x": 11.66,
+    "y": -44.41,
+    "z": 1.6
+  },
+  "northYaw": 0,
+  "moduleRadius": 28,
+  "base": {
+    "type": "cube",
+    "faces": {}
+  },
+  "links": [
+    {
+      "to": "inf-hall-leste"
+    },
+    {
+      "to": "inf-hall-oeste"
+    }
+  ],
+  "generated": true
+}

@@ -95,6 +95,16 @@ export const BOXES = {
     box('281', [370, 403], 0), box('280', [420, 405], 0),
     fileira(['295', '298', '299', '301', '377', '303', '305', '307', '309'], [140, 259], [505, 259], 0),
     fileira(['296', '297', '300', '302', '378', '304', '306', '308', '310'], [140, 297], [505, 297], 180),
+    // Hall da entrada Sete de Setembro (praça circular), a oeste da rampa. A
+    // planta afixada não o desenha: posições dos marcadores do tour 3D oficial
+    // (ver comerciantes.mjs), com o centro do box 16 px atrás da frente.
+    ...[
+      ['193', [105, 546], 180], ['192', [167, 546], 180], ['195', [270, 539], 180],
+      ['190', [82, 902], 0], ['189', [134, 890], 0], ['188', [199, 871], 0, 30],
+      ['hall-b', [231, 868], 0, 30], ['hall-a', [270, 846], 0, 34], ['185', [342, 808], 0, 34],
+    ].map(([id, em, facing, largura]) => box(id, em, facing, {
+      area: 'Hall Sete de Setembro', ...(largura && { largura }), ...(id.startsWith('hall') && { rotulo: 'Hall Sete de Setembro' }),
+    })),
   ],
   superior: [
     box('312', [228, 230], 180),
@@ -206,6 +216,9 @@ export const CENAS = {
     { id: 'inf-anexo-4', titulo: 'Anexo · noroeste', em: [88, 215], cor: LILAS },
     { id: 'inf-anexo-5', titulo: 'Anexo · sudoeste', em: [82, 350], cor: LILAS },
     { id: 'inf-anexo-6', titulo: 'Anexo · sul', em: [330, 350], cor: LILAS },
+    { id: 'inf-hall-leste', titulo: 'Hall Sete de Setembro · leste', em: [290, 705], cor: CINZA },
+    { id: 'inf-hall-centro', titulo: 'Hall Sete de Setembro · centro', em: [185, 705], cor: CINZA },
+    { id: 'inf-hall-oeste', titulo: 'Hall Sete de Setembro · oeste', em: [95, 705], cor: CINZA },
   ],
   superior: [
     { id: 'sup-porta-b', titulo: 'Porta B · Av. Sete de Setembro', em: [165, 440], cor: CINZA },
@@ -253,6 +266,7 @@ export const LIGACOES = [
   ...cadeia(['inf-sul-00', 'inf-porta-j', 'inf-porta-i', 'inf-porta-h', 'inf-sul-04', 'inf-sul-05', 'inf-porta-g', 'inf-diagonal', 'inf-b-09']),
   ['inf-c-08', 'inf-diagonal'],
   ['inf-b-00', 'inf-rampa'],
+  ...cadeia(['inf-rampa', 'inf-hall-leste', 'inf-hall-centro', 'inf-hall-oeste']),
   ['inf-a-00', 'inf-anexo-1'],
   ...cadeia(['inf-anexo-1', 'inf-anexo-2', 'inf-anexo-3', 'inf-anexo-4', 'inf-anexo-5', 'inf-anexo-6', 'inf-anexo-1']),
   // pavimento superior

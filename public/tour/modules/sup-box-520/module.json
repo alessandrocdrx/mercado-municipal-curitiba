@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 520",
+  "title": "Biossana Orgânicos",
   "placement": {
     "floor": "superior",
     "x": 80.16,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 520",
-      "sublabel": "comerciante não identificado"
+      "color": "#2f7d32",
+      "label": "Biossana Orgânicos",
+      "sublabel": "Orgânicos · Box 520"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Orgânicos",
+    "location": "Pavimento superior · Box 520",
+    "phone": "(41) 99936-0224",
+    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "34ba30da973d"
+  "autoHash": "e9fa21a0c03c"
 }

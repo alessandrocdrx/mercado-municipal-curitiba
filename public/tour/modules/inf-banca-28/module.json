@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 28",
+  "title": "Banca do Adonis",
   "placement": {
     "floor": "inferior",
     "x": 60.17,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 28",
-      "sublabel": "comerciante não identificado"
+      "color": "#3c7a34",
+      "label": "Banca do Adonis",
+      "sublabel": "Hortifrúti · Banca 28"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Hortifrúti",
+    "location": "Pavimento inferior · Banca 28, 29",
+    "phone": "(41) 99681-3996 · (41) 99918-6927",
+    "note": "A lista informa as bancas 127 e 224; o tour 3D mostra a banca nos boxes 28 e 29 do salão (falar com Thiago ou Karine). Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "e4e4be0a3897"
+  "autoHash": "695e2efeb37d"
 }

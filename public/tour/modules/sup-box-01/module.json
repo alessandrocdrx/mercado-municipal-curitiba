@@ -1,6 +1,6 @@
 {
   "type": "box",
-  "title": "Box 01",
+  "title": "Bonna Gourmet",
   "placement": {
     "floor": "superior",
     "x": 52.06,
@@ -13,15 +13,16 @@
   },
   "media": {
     "placeholder": {
-      "color": "#44474d",
-      "label": "Box 01",
-      "sublabel": "comerciante não identificado"
+      "color": "#b0561d",
+      "label": "Bonna Gourmet",
+      "sublabel": "Lanchonete e restaurante · Box 01"
     }
   },
   "info": {
-    "location": "Pavimento superior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Lanchonete e restaurante",
+    "location": "Pavimento superior · Box 01",
+    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "dc514492788c"
+  "autoHash": "d6bea58608e3"
 }

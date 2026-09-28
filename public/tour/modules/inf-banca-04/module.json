@@ -1,6 +1,6 @@
 {
   "type": "banca",
-  "title": "Banca 04",
+  "title": "Banca do Paulo",
   "placement": {
     "floor": "inferior",
     "x": 50.21,
@@ -13,15 +13,17 @@
   },
   "media": {
     "placeholder": {
-      "color": "#3a3f3c",
-      "label": "Banca 04",
-      "sublabel": "comerciante não identificado"
+      "color": "#7a4a24",
+      "label": "Banca do Paulo",
+      "sublabel": "Cereais e especiarias · Banca 04"
     }
   },
   "info": {
-    "location": "Pavimento inferior",
-    "description": "Comerciante deste espaço não identificado no site oficial."
+    "category": "Cereais e especiarias",
+    "location": "Pavimento inferior · Banca 04",
+    "phone": "(41) 99956-3898",
+    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
   },
   "generated": true,
-  "autoHash": "6208d182f6e6"
+  "autoHash": "c69996d73de7"
 }

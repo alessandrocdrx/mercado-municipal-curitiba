@@ -16,6 +16,11 @@
 //
 // boxes: ids dos módulos gerados pela planta (inf-box-XX, inf-banca-XX, sup-box-XXX)
 // boxesForaDaPlanta: número informado pela fonte, mas que não aparece nas plantas
+//
+// Tour 3D oficial (Matterport): as coordenadas dos marcadores de cada loja foram
+// ajustadas à planta pelos ~70 comerciantes que as duas fontes têm em comum
+// (desvio típico de 1–3 m). Onde divergiam, vale o tour 3D, que é mais recente;
+// a lista antiga fica em `obs`.
 
 const OFICIAL = 'https://www.mercadomunicipaldecuritiba.com.br/comerciante/';
 
@@ -36,6 +41,10 @@ export const CATEGORIAS = {
 };
 
 const LISTA = 'lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br)';
+// Tour 3D oficial (my.matterport.com/show/?m=tgwA2xoKA2y), marcadores lidos em
+// 28/09/2026. Usado como referência de nomes e posições; nenhuma imagem dele
+// entra no projeto.
+const TOUR3D = 'tour 3D oficial do Mercado (Matterport, set/2026)';
 const c = (nome, categoria, slug, extra = {}) => ({ nome, categoria, url: slug ? OFICIAL + slug + '/' : undefined, boxes: [], fonte: LISTA, ...extra });
 const pad = (n) => String(n).padStart(2, '0');
 const ib = (...n) => n.map((x) => `inf-box-${typeof x === 'number' ? pad(x) : x}`);
@@ -51,8 +60,8 @@ export const COMERCIANTES = [
   c('Peixaria Keli Mozer', 'peixaria', 'peixaria-keli-mozer', { boxes: ib(10), telefone: '(41) 3264-1523 · (41) 99566-7702', descricao: 'Pescados e frutos do mar, com estrutura totalmente reformada.' }),
   c('Peixaria Santa Clara', 'peixaria', 'peixaria-santa-clara-eireli', { boxes: ib(11), telefone: '(41) 3264-4014 · (41) 99979-0212', descricao: 'Desde 1970: peixes frescos, filés, postas, camarão, lagosta, lagostins e crustáceos importados.' }),
   c('Celeiro Municipal', 'emporio', 'celeiro-municipal', { boxes: ib(12, 13), telefone: '(41) 3013-6132', descricao: 'Queijos, vinhos, destilados, castanhas, frutas secas e bacalhau.', obs: 'A lista não traz o número do box; boxes 12–13 vêm de guia público.', fonte: 'guia público (applocal)' }),
-  c('Adega Municipal', 'bebidas', 'adega-municipal', { boxes: ib(267, 269, 270, 271), telefone: '(41) 3039-1984 · (41) 98870-1977', descricao: 'Vinhos, espumantes, whisky, conhaque, licores e tabacaria.', obs: 'A lista informa "Box 15B". Um guia público lista os boxes 267 a 271 (bebidas e tabacaria) com o mesmo telefone; o 268 é da Adega Brasil. Confirmar no local.', fonte: 'lista de lojas e guia público' }),
-  c('Planeta Aquários', 'pet', 'planeta-aquarios', { boxes: ib(17), telefone: '(41) 3363-4519 · (41) 99996-1419', descricao: 'Aquários e peixes ornamentais de água doce e salgada.' }),
+  c('Adega Municipal', 'bebidas', 'adega-municipal', { boxes: ib(15), telefone: '(41) 3039-1984 · (41) 3039-2776 · (41) 98870-1977', descricao: 'Vinhos, espumantes, whisky, conhaque, licores e tabacaria.', obs: 'A lista informa "Box 15B"; o tour 3D oficial mostra a loja ao lado do Celeiro Municipal. Um guia antigo citava os boxes 267 a 271 do anexo.', fonte: TOUR3D }),
+  c('Planeta Aquários', 'pet', 'planeta-aquarios', { boxes: ib(16, 17, 18), telefone: '(41) 3363-4519 · (41) 99996-1419', descricao: 'Aquários e peixes ornamentais de água doce e salgada.', obs: 'A lista cita o box 17; no tour 3D a loja ocupa os boxes vizinhos.' }),
   c('Peixaria São José', 'peixaria', 'peixaria-sao-jose', { boxes: ib(21, 22), telefone: '(41) 3264-1462 · (41) 99870-8373', descricao: 'Lagosta, lagostim, polvo, lula, mariscos e peixes variados. Faz entregas.' }),
   c('Cia. do Tempero', 'especiarias', 'cia-do-tempero', { boxes: ib(23, 24), telefone: '(41) 3363-1527 · (41) 98870-1977', descricao: 'Temperos e castanhas.' }),
   c('Cereais e Especiarias Sissi', 'especiarias', 'cereais-e-especiarias-sissi', { boxes: ib(25, 26), telefone: '(41) 3264-5271 · (41) 99923-2668', descricao: 'Azeites, especiarias e conservas nacionais e importados.' }),
@@ -82,10 +91,11 @@ export const COMERCIANTES = [
   c('Adega Brasil', 'bebidas', 'adega-brasil', { boxes: ib(268), telefone: '(41) 3264-4232 · (41) 98901-7114' }),
   c('Darumayá', 'emporio', null, { boxes: ib(272, 273), telefone: '(41) 3264-7496 · (41) 3262-1712' }),
   c('Tepanya – Utilidades Domésticas', 'servicos', null, { boxes: ib(275, 376), telefone: '(41) 3023-2099 · (41) 99975-9265' }),
-  c('Empório Gourmet (Casabianco)', 'emporio', 'emporio-gourmet', { boxes: ib(276, 277), telefone: '(41) 3335-4689 · (41) 9984-9896' }),
+  c('Empório Gourmet (Casabianco)', 'emporio', 'emporio-gourmet', { boxes: ib(277), telefone: '(41) 3335-4689 · (41) 9984-9896', obs: 'A lista cita os boxes 276 e 277; no tour 3D o 276 aparece como Queijos e Vinhos.' }),
+  c('Queijos e Vinhos', 'bebidas', null, { boxes: ib(276), telefone: '(41) 3264-9982 · (41) 99976-5650', fonte: TOUR3D }),
   c('Mercearia O Barracão', 'emporio', null, { boxes: ib(278, 279), telefone: '(41) 3265-4426 · (41) 99580-5340' }),
   c('Mercearia Shizen', 'emporio', null, { boxes: ib(280), telefone: '(41) 3362-9165 · (41) 99196-5622' }),
-  c('Casa Gourmet', 'especiarias', null, { boxes: ib(281, 283), telefone: '(41) 3238-0927 · (41) 99571-0735' }),
+  c('Casa Nobre Especiarias', 'especiarias', null, { boxes: ib(281, 283), telefone: '(41) 3262-5064 · (41) 99571-0735', obs: 'Na lista aparece como Casa Gourmet (mesmo celular).', fonte: TOUR3D }),
   c('Manfré Cervejas Especiais', 'bebidas', null, { boxes: ib(284, 285), telefone: '(41) 3053-8324 · (41) 99184-9277' }),
   c('Organique Essentiel', 'organicos', 'organique-essentiel', { boxes: ib(286), telefone: '(41) 3363-0040 · (41) 99203-6337', obs: 'A lista cita boxes 286 e 289; o 289 também aparece como Armazém da Serra.' }),
   c('Armazém da Serra', 'especiarias', null, { boxes: ib(288, 289), telefone: '(41) 3264-8769' }),
@@ -97,9 +107,9 @@ export const COMERCIANTES = [
   c("Empório D'Gust", 'emporio', null, { boxes: ib(300, 302), telefone: '(41) 3231-0569 · (41) 98890-3025', obs: 'A lista cita boxes 300 a 302; o 301 é da Temperamento.' }),
   c('Bordando Sonhos', 'servicos', null, { boxes: ib(303, 305), telefone: '(41) 99688-1790', obs: 'A lista cita boxes 303, 304 e 305; o 304 também aparece como Empório Metropolitano.' }),
   c('Empório Metropolitano', 'emporio', 'emporio-metropolitano', { boxes: ib(304, 306), telefone: '(41) 3239-2762', descricao: 'Espaço de apoio a pequenos produtores artesanais, manuais e semi-industriais.' }),
-  c('Galisa', 'outros', null, { boxes: ib(307), telefone: '(41) 3014-7760 · (41) 99845-9535' }),
+  c('Galisa Lotérica', 'servicos', null, { boxes: ib(307), telefone: '(41) 3014-7760 · (41) 99845-9535' }),
   c('Empório Manfré', 'bebidas', null, { boxes: ib(308), telefone: '(41) 3053-8323 · (41) 99184-9277' }),
-  c('Lotérica Mercado Municipal', 'servicos', null, { boxes: ib(309, 310), telefone: '(41) 3014-7760' }),
+  c('Abranches Lotérica', 'servicos', null, { boxes: ib(309, 310), telefone: '(41) 3014-7760 · (41) 99975-9265', obs: 'Na lista aparece como Lotérica Mercado Municipal (mesmo telefone).', fonte: TOUR3D }),
 
   // ======================= pavimento inferior · blocos 354–378
   c('Mercearia Imperial (A Faca e o Queijo)', 'emporio', 'mercearia-imperial', { boxes: ib(354), telefone: '(41) 3077-3467', descricao: 'Mais de 200 queijos, bacalhau, azeitonas, azeites, castanhas e nozes.' }),
@@ -181,8 +191,8 @@ export const COMERCIANTES = [
   c('Nippon Boutique', 'servicos', 'nippon-boutique', { boxes: sb(352, 353), telefone: '(41) 3263-4615 · (41) 99979-1685', descricao: 'Desde 1977: revistas e livros japoneses e ofurôs.' }),
   c('Okashi Sweets & Teas', 'doces', null, { boxes: sb(375), telefone: '(41) 3254-7738' }),
   c('Box do Eliseu', 'lanchonete', 'box-do-eliseu', { boxes: sb(12, 13), descricao: 'Há 39 anos no Mercado: comida caseira, pastéis, sanduíches, sucos e café. Famoso pela almôndega de carne.', obs: 'Boxes 12–13 do pavimento inferior são do Celeiro Municipal; o Eliseu foi posto na praça de alimentação.', fonte: 'site oficial (via busca)' }),
-  c('Restaurante Anarco', 'lanchonete', 'restaurante-anarco', { boxes: sb(16), telefone: '(41) 3336-0049', descricao: 'Cozinha italiana, fundado em 1991.', obs: 'Pavimento assumido: praça de alimentação.', fonte: 'site do restaurante' }),
-  c('Restaurante Box Curitiba', 'lanchonete', 'restaurante-box-curitiba', { boxes: sb(19), telefone: '(41) 3015-8240', descricao: 'Massas, risotos e saladas.', obs: 'Pavimento assumido: praça de alimentação.', fonte: 'guia público (Guia da Semana)' }),
+  c('Restaurante Anarco', 'lanchonete', 'restaurante-anarco', { telefone: '(41) 3029-6154', descricao: 'Cozinha italiana, fundado em 1991.', obs: 'No tour 3D oficial fica no mezanino das praças de alimentação Déa / 7 de Setembro, área que a planta afixada não desenha.', fonte: TOUR3D }),
+  c('Restaurante Box Curitiba', 'lanchonete', 'restaurante-box-curitiba', { boxes: sb(10), telefone: '(41) 3015-8240', descricao: 'Massas, risotos e saladas.', obs: 'Posição do tour 3D oficial (antes assumida no box 19).', fonte: TOUR3D }),
 
   // ======================= pavimento superior · setor de orgânicos (501–522)
   c("Nico's Empório Orgânico", 'organicos', 'nicos-emporio-organico', { boxes: sbn(501) }),
@@ -199,24 +209,56 @@ export const COMERCIANTES = [
   c("Taurino's Organic", 'organicos', 'taurinos-organic', { boxes: sb(521, 522), telefone: '(41) 3095-0123 · (41) 98851-9391', descricao: 'Primeiro açougue orgânico certificado do Brasil, no setor de orgânicos desde 2009.' }),
 
   // ======================= número fora das plantas
-  c('Banca do Adonis', 'hortifruti', null, { boxesForaDaPlanta: ['127', '224'], telefone: '(41) 3323-6150 · (41) 99681-3996' }),
-  c('Banca do Adalto', 'hortifruti', 'banca-do-adalto', { boxesForaDaPlanta: ['111', '113'], telefone: '(41) 3362-7698 · (41) 97400-1534' }),
-  c('Dobrucki Vintage', 'servicos', null, { boxesForaDaPlanta: ['188'], telefone: '(41) 99912-7206' }),
-  c("Miranda's Mercearia", 'emporio', 'mirandas-mercearia', { boxesForaDaPlanta: ['189'], telefone: '(41) 99700-4977', descricao: 'Produtos paranaenses: chocolates artesanais, doces e cafés.' }),
-  c('Dahra Pedras Brasileiras', 'servicos', null, { boxesForaDaPlanta: ['190'], telefone: '(41) 99652-5910' }),
-  c('Da Mamma Massas', 'emporio', null, { boxesForaDaPlanta: ['192'], telefone: '(41) 3262-2768 · (41) 99197-7977' }),
-  c('Casa de Massas Leve Pronto', 'emporio', null, { boxesForaDaPlanta: ['193'], telefone: '(41) 3264-4990 · (41) 99209-7079' }),
-  c('Maia Box Sanduicheria', 'lanchonete', 'maia-box-sanduicheria', { boxesForaDaPlanta: ['194'], descricao: 'Desde 2000, famosa pelo sanduíche de mortadela.', fonte: 'site oficial (via busca)' }),
-  c('Confeitaria Colônia Cecília', 'doces', 'confeitaria-colonia-cecilia', { boxesForaDaPlanta: ['195'], telefone: '(41) 3336-0106', descricao: 'Desde 2003. Café colonial aos domingos.' }),
-  c('Restaurante Ohana', 'lanchonete', null, { boxesForaDaPlanta: ['201'], fonte: 'resumo de busca' }),
-  c('Ninki Pastéis & Delícias', 'lanchonete', 'ninki-pasteis-delicias', { boxesForaDaPlanta: ['205'], telefone: '(41) 99179-1197 · (41) 99663-2026', fonte: 'site oficial (via busca)' }),
-  c('Café do Jorge e da Aurea', 'lanchonete', 'cafe-do-jorge-e-da-aurea', { boxesForaDaPlanta: ['206'], telefone: '(41) 3152-6132' }),
+  c('Banca do Adonis', 'hortifruti', null, { boxes: ibn(28, 29), telefone: '(41) 99681-3996 · (41) 99918-6927', obs: 'A lista informa as bancas 127 e 224; o tour 3D mostra a banca nos boxes 28 e 29 do salão (falar com Thiago ou Karine).', fonte: TOUR3D }),
+  c('Banca do Adalto', 'hortifruti', 'banca-do-adalto', { boxes: ib(363), telefone: '(41) 3362-7698 · (41) 97400-1534', obs: 'A lista informa 111 e 113; posição do tour 3D ("Box do Adalto").', fonte: TOUR3D }),
+  // hall da entrada Sete de Setembro: número da lista, posição do tour 3D
+  c('Célio Dobrucki (Dobrucki Vintage)', 'servicos', null, { boxes: ib(188), telefone: '(41) 99912-7206', fonte: TOUR3D }),
+  c("Miranda's Mercearia", 'emporio', 'mirandas-mercearia', { boxes: ib(189), telefone: '(41) 99700-4977', descricao: 'Produtos paranaenses: chocolates artesanais, doces e cafés.', fonte: TOUR3D }),
+  c('Dahra Pedras Brasileiras', 'servicos', null, { boxes: ib(190), telefone: '(41) 99652-5910', fonte: TOUR3D }),
+  c('Da Mamma Massas', 'emporio', null, { boxes: ib(192), telefone: '(41) 3262-2768 · (41) 99197-7977', fonte: TOUR3D }),
+  c('Casa de Massas Leve Pronto', 'emporio', null, { boxes: ib(193), telefone: '(41) 3264-4990 · (41) 99209-7079', fonte: TOUR3D }),
+  c('Maia Box Sanduicheria', 'lanchonete', 'maia-box-sanduicheria', { boxesForaDaPlanta: ['201'], telefone: '(41) 3362-9065', descricao: 'Desde 2000, famosa pelo sanduíche de mortadela.', obs: 'A lista informa o box 194; o tour 3D mostra o box 201, na galeria de restaurantes do pavimento superior sobre a Rua General Carneiro (fora da planta afixada).', fonte: TOUR3D }),
+  c('Confeitaria Colônia Cecília', 'doces', 'confeitaria-colonia-cecilia', { boxes: ib(195), telefone: '(41) 3030-3076', descricao: 'Desde 2003. Café colonial aos domingos.', fonte: TOUR3D }),
+  c('Restaurante Ohana', 'lanchonete', null, { boxes: sb(518), obs: 'A lista informa o box 201; posição do tour 3D (setor de orgânicos).', fonte: TOUR3D }),
+  c('Ninki Pastéis & Delícias', 'lanchonete', 'ninki-pasteis-delicias', { boxes: sb(15), telefone: '(41) 99179-1197 · (41) 99663-2026', obs: 'A lista informa o box 205; posição do tour 3D (praça de alimentação Karan).', fonte: TOUR3D }),
+  c('Café do Jorge e da Aurea', 'lanchonete', 'cafe-do-jorge-e-da-aurea', { boxes: sb(16), telefone: '(41) 3152-6132', obs: 'A lista informa o box 206; posição do tour 3D (praça de alimentação Karan).', fonte: TOUR3D }),
   c('Pachamama', 'servicos', null, { boxesForaDaPlanta: ['428'], telefone: '(41) 3396-3507 · (41) 98871-0662' }),
+
+  // ======================= novos: comerciantes vistos no tour 3D oficial (Matterport)
+  // pavimento inferior · salão central
+  c('Banca do Oyama', 'hortifruti', null, { boxes: ibn(45), telefone: '(41) 3264-7563', fonte: TOUR3D }),
+  c('Banca do Paulo', 'especiarias', null, { boxes: ibn(4), telefone: '(41) 99956-3898', fonte: TOUR3D }),
+  c('Banca do João Carlos', 'hortifruti', null, { boxes: ibn(66), fonte: TOUR3D }),
+  c('Urnab (Banca do G)', 'hortifruti', null, { boxes: ibn(75), telefone: '(41) 99954-6053', fonte: TOUR3D }),
+  c('Banca do Eduardo', 'hortifruti', null, { boxes: ibn(93), telefone: '(41) 98486-8214', obs: 'Na planta do tour: "Eduardo e Daniel".', fonte: TOUR3D }),
+  c('Banco de Alimentos', 'servicos', null, { boxes: ibn(97), obs: 'Só o rótulo aparece no tour 3D.', fonte: TOUR3D }),
+  c('Empório 365', 'emporio', null, { boxes: ib(365), telefone: '(41) 3010-2544 · (41) 98777-5454', fonte: TOUR3D }),
+  c('Mercearia Imperial', 'emporio', null, { boxes: ib(359), telefone: '(41) 3077-3467 · (41) 98762-8681 · (41) 99228-1472', fonte: TOUR3D }),
+  c('Skina das Delícias', 'lanchonete', null, { boxes: ib(454), obs: 'Só o rótulo aparece no tour 3D.', fonte: TOUR3D }),
+  // pavimento inferior · hall da entrada Sete de Setembro (praça circular)
+  c('Oishii', 'lanchonete', null, { boxes: ib(185), obs: 'Crepe japonês.', fonte: TOUR3D }),
+  c('Natureba', 'lanchonete', null, { boxes: ib('hall-a'), telefone: '(41) 98875-6461', fonte: TOUR3D }),
+  c('Sweet Sobremesas Especiais', 'doces', null, { boxes: ib('hall-b'), telefone: '(41) 3262-3311 · (41) 99997-7070', fonte: TOUR3D }),
+  // pavimento superior
+  c('Biossana Orgânicos', 'organicos', null, { boxes: sb(520), telefone: '(41) 99936-0224', fonte: TOUR3D }),
+  c('Tabacaria Trevo', 'servicos', null, { boxes: sb(330), telefone: '(41) 3264-5445 · (41) 99242-4662', fonte: TOUR3D }),
+  c('Lule Salão de Cabelos', 'servicos', null, { boxes: sb(318), telefone: '(41) 99644-2203', fonte: TOUR3D }),
+  c('Ascesme', 'servicos', null, { boxes: sb(328), telefone: '(41) 3363-3764', descricao: 'Associação dos comerciantes do Mercado Municipal.', fonte: TOUR3D }),
+  c('Max Dandy', 'lanchonete', null, { boxes: sb(14), telefone: '(41) 98457-8041', fonte: TOUR3D }),
+  c('Espaço Fitoterápico', 'servicos', null, { boxes: sb(11), obs: 'Só o rótulo aparece no tour 3D.', fonte: TOUR3D }),
+  c('Bonna Gourmet', 'lanchonete', null, { boxes: sb(1), fonte: TOUR3D }),
+  c('Pastelaria Curitiba', 'lanchonete', null, { boxes: sb(8), telefone: '(41) 99734-9001 · (41) 3363-0522', fonte: TOUR3D }),
+  // fora da planta afixada (áreas que ela não desenha)
+  c('Fujii Cozinha Japonesa', 'lanchonete', null, { telefone: '(41) 3114-8393', obs: 'Praças de alimentação Déa / 7 de Setembro, a oeste dos boxes 07–10 do pavimento superior.', fonte: TOUR3D }),
+  c('Mister Dea', 'lanchonete', null, { telefone: '(41) 3264-4911 · (41) 98832-0583', obs: 'Praças de alimentação Déa / 7 de Setembro, junto aos boxes 01–04 do pavimento superior.', fonte: TOUR3D }),
+  c('Curitiba Sua Linda', 'servicos', null, { obs: 'Galeria do pavimento superior, entre a área rosa e o setor de orgânicos. Só o rótulo aparece no tour 3D.', fonte: TOUR3D }),
+  c('Restaurante Al Almasor', 'lanchonete', null, { telefone: '(41) 3155-1844', descricao: 'Comida árabe e brasileira.', obs: 'Galeria de restaurantes do pavimento superior, sobre a Rua General Carneiro.', fonte: TOUR3D }),
+  c('Gerência do Mercado (Prefeitura)', 'servicos', null, { telefone: '(41) 3264-6020 · (41) 3264-6224 · (41) 3264-6024', obs: '3º nível, junto ao auditório.', fonte: TOUR3D }),
 
   // ======================= sem número de box
   c('Dinho Wine and Spirits', 'bebidas', 'dinho-wine-and-spirits', { telefone: '(41) 98783-5900' }),
-  c('Banca do Hiro', 'hortifruti', 'banca-do-hiro', { telefone: '(41) 99944-4334' }),
+  c('Banca do Hiro', 'hortifruti', 'banca-do-hiro', { boxes: ib(62), telefone: '(41) 99944-4334', fonte: TOUR3D }),
   c('Domo Empório Gourmet', 'emporio', 'emporio-curitibano', { descricao: 'Queijos, frios, vinhos, espumantes, destilados e mercearia.', fonte: 'site oficial (via busca)' }),
-  c('Restaurante Takê', 'lanchonete', 'restaurante-take', { descricao: 'Comida japonesa por quilo.', fonte: 'site oficial (via busca)' }),
+  c('Restaurante Takê', 'lanchonete', 'restaurante-take', { boxes: sb(7), telefone: '(41) 3362-7571', descricao: 'Comida japonesa por quilo.', fonte: TOUR3D }),
   c('Oliveiras Hortifruti', 'hortifruti', 'oliveiras-hortifruti', { fonte: 'site oficial (via busca)' }),
 ];
