@@ -9,7 +9,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { PAVIMENTOS, BOXES, PORTAS, CENAS, LIGACOES, ESCADAS, ESCADAS_3D, RUAS, AREA_COBERTA, CONTORNOS_OSM } from './dados-planta.mjs';
+import { PAVIMENTOS, BOXES, PORTAS, CENAS, LIGACOES, ESCADAS, RUAS, AREA_COBERTA, CONTORNOS_OSM } from './dados-planta.mjs';
 import { COMERCIANTES, CATEGORIAS } from './comerciantes.mjs';
 import { FOTOS_MERCADO, FOTOS_COMERCIANTES } from './fotos.mjs';
 import crypto from 'node:crypto';
@@ -117,16 +117,6 @@ for (const pav of PAVIMENTOS) {
   }
 
   // ---------------------------------------------------------- módulos: portas
-  for (const e of ESCADAS_3D[pav.id] ?? []) {
-    const id = `${prefix}-escada-${e.id}`;
-    upsertModule(id, {
-      type: 'escada',
-      title: e.titulo,
-      placement: { floor: pav.id, ...toMeters(pav, e.em), z: e.subida / 2, width: e.largura, height: e.subida, run: e.comprimento, facing: e.facing, surface: 'wall' },
-      info: { location: pav.titulo, description: 'Escada larga com corrimão central e guarda-corpos brancos.' },
-    });
-  }
-
   for (const porta of PORTAS[pav.id]) {
     const { facing } = porta;
     upsertModule(`${prefix}-porta-${porta.id.toLowerCase()}`, {

@@ -2,8 +2,8 @@
   "title": "Praças Déa / 7 de Setembro · sul",
   "floor": "superior",
   "position": {
-    "x": 44.22,
-    "y": -83.37,
+    "x": 45.53,
+    "y": -86.78,
     "z": 1.6
   },
   "northYaw": 0,
@@ -17,7 +17,7 @@
       "to": "sup-dea-centro"
     },
     {
-      "to": "sup-dea-escada"
+      "to": "sup-dea-oeste"
     }
   ],
   "generated": true
