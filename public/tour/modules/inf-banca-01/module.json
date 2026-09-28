@@ -20,10 +20,11 @@
   },
   "info": {
     "category": "Hortifrúti",
-    "location": "Pavimento inferior · Banca 01, 13",
+    "location": "Bancas 01 e 13 · Pavimento inferior",
+    "color": "#3c7a34",
     "phone": "(41) 99944-4334",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "309874ebdd89"
+  "autoHash": "90bce510afdc"
 }

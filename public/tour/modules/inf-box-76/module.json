@@ -21,10 +21,11 @@
   },
   "info": {
     "category": "Variedades e serviços",
-    "location": "Pavimento inferior · Box 75, 76",
+    "location": "Boxes 75 e 76 · Pavimento inferior",
+    "color": "#4a5a73",
     "phone": "(41) 3082-3434 · (41) 99677-0762",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "f20c0a7c8363"
+  "autoHash": "87678058e116"
 }

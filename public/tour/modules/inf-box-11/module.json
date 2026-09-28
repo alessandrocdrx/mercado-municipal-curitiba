@@ -23,12 +23,13 @@
   },
   "info": {
     "category": "Peixaria",
-    "location": "Pavimento inferior · Box 11",
+    "location": "Box 11 · Pavimento inferior",
+    "color": "#23577f",
     "phone": "(41) 3264-4014 · (41) 99979-0212",
     "description": "Desde 1970: peixes frescos, filés, postas, camarão, lagosta, lagostins e crustáceos importados.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/peixaria-santa-clara-eireli/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "8fb0583dfbb2"
+  "autoHash": "4974bdef7bc3"
 }

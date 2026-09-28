@@ -22,10 +22,11 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Box 58, 59",
+    "location": "Boxes 58 e 59 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3079-5207 · (41) 99178-8090",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "aab6c8dbd627"
+  "autoHash": "15ac58e4b04a"
 }

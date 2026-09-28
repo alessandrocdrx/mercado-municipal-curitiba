@@ -22,12 +22,13 @@
   },
   "info": {
     "category": "Cereais e especiarias",
-    "location": "Pavimento inferior · Box 23, 24",
+    "location": "Boxes 23 e 24 · Pavimento inferior",
+    "color": "#7a4a24",
     "phone": "(41) 3363-1527 · (41) 98870-1977",
     "description": "Temperos e castanhas.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cia-do-tempero/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "c2879ba04584"
+  "autoHash": "e56bcb431ec9"
 }

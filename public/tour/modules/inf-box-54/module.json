@@ -23,12 +23,13 @@
   },
   "info": {
     "category": "Doces e chocolates",
-    "location": "Pavimento inferior · Box 54, 55",
+    "location": "Boxes 54 e 55 · Pavimento inferior",
+    "color": "#6b3a2a",
     "phone": "(41) 3022-0802 · (41) 99976-3741",
     "description": "Há mais de 30 anos com produtos portugueses.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/conversic/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "f2ff3685d1db"
+  "autoHash": "f135721e3492"
 }

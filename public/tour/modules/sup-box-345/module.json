@@ -23,10 +23,11 @@
   },
   "info": {
     "category": "Variedades e serviços",
-    "location": "Pavimento superior · Box 345",
+    "location": "Box 345 · Pavimento superior",
+    "color": "#4a5a73",
     "phone": "(41) 3262-5828",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "0e5524bb6c83"
+  "autoHash": "ecabbd5dd01a"
 }

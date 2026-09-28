@@ -24,11 +24,12 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Box 56, 57",
+    "location": "Boxes 56 e 57 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3013-7753 · (41) 99673-7753",
     "description": "Mais de 300 queijos nacionais e importados e embutidos artesanais.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/bon-vivant/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local.",
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local.",
     "photos": [
       {
         "src": "../../fotos/bon-vivant.jpg",
@@ -41,5 +42,5 @@
     ]
   },
   "generated": true,
-  "autoHash": "800882dcc63f"
+  "autoHash": "3ba9b4611f98"
 }

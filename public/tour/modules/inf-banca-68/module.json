@@ -20,10 +20,12 @@
   },
   "info": {
     "category": "Cereais e especiarias",
-    "location": "Pavimento inferior · Banca 68, 69, 70",
+    "location": "Bancas 68, 69 e 70 · Pavimento inferior",
+    "color": "#7a4a24",
     "phone": "(41) 3264-5271 · (41) 99923-2668",
-    "note": "A lista cita a banca 68; outro guia cita 68 a 70. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "note": "A lista cita a banca 68; outro guia cita 68 a 70.",
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "2c390ebcee99"
+  "autoHash": "12e96dae36a4"
 }

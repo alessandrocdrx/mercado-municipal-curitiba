@@ -21,10 +21,11 @@
   },
   "info": {
     "category": "Hortifrúti",
-    "location": "Pavimento inferior · Banca 41",
+    "location": "Banca 41 · Pavimento inferior",
+    "color": "#3c7a34",
     "phone": "(41) 3352-0601",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "6c5119b6afc7"
+  "autoHash": "9041bd4b81c5"
 }

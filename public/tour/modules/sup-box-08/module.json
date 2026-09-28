@@ -22,10 +22,11 @@
   },
   "info": {
     "category": "Lanchonete e restaurante",
-    "location": "Pavimento superior · Box 08",
+    "location": "Box 08 · Pavimento superior",
+    "color": "#b0561d",
     "phone": "(41) 99734-9001 · (41) 3363-0522",
-    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "8f55c415c25b"
+  "autoHash": "4fc57666dbfe"
 }

@@ -20,10 +20,11 @@
   },
   "info": {
     "category": "Lanchonete e restaurante",
-    "location": "Pavimento superior · Box 311",
+    "location": "Box 311 · Pavimento superior",
+    "color": "#b0561d",
     "phone": "(41) 99925-5508",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "f7341b5d4d54"
+  "autoHash": "72a546c0541b"
 }

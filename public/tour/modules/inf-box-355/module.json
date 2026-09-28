@@ -22,10 +22,11 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Box 355",
+    "location": "Box 355 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3262-2386 · (41) 98762-8681",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "8b090451981a"
+  "autoHash": "cd2a546ac0e3"
 }

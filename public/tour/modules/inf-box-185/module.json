@@ -24,9 +24,11 @@
   },
   "info": {
     "category": "Lanchonete e restaurante",
-    "location": "Pavimento inferior · Hall Sete de Setembro · Box 185",
-    "note": "Crepe japonês. Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "location": "Box 185 · Hall Sete de Setembro · Pavimento inferior",
+    "color": "#b0561d",
+    "note": "Crepe japonês.",
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "d6b07ef7a1b2"
+  "autoHash": "70e8ffd8f8d2"
 }

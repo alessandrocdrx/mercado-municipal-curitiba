@@ -20,9 +20,10 @@
   },
   "info": {
     "category": "Variedades e serviços",
-    "location": "Pavimento inferior · Banca 25",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "location": "Banca 25 · Pavimento inferior",
+    "color": "#4a5a73",
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "3f24ad734709"
+  "autoHash": "cb2c4a5dd419"
 }

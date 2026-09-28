@@ -183,7 +183,7 @@ export function facadeTexture({ style = 'box', color = '#6b6e73', label = '', su
     ctx.fillRect(0, 0, w, signH);
     ctx.fillStyle = 'rgba(0,0,0,.25)';
     ctx.fillRect(0, signH - 6, w, 6);
-    signText(ctx, label, sublabel, 0, 0, w, signH, legivel(textColor, color));
+    signText(ctx, label, known ? sublabel : '', 0, 0, w, signH, legivel(textColor, color)); // sem comerciante: só o número
   }
   ctx.strokeStyle = 'rgba(0,0,0,.35)';
   ctx.lineWidth = 6;

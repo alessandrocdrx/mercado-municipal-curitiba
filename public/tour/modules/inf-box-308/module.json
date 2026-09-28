@@ -20,10 +20,11 @@
   },
   "info": {
     "category": "Bebidas",
-    "location": "Pavimento inferior · Box 308",
+    "location": "Box 308 · Pavimento inferior",
+    "color": "#5b2e63",
     "phone": "(41) 3053-8323 · (41) 99184-9277",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "c7f42e12bd11"
+  "autoHash": "3cc558bf1d46"
 }

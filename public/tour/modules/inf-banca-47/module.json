@@ -21,10 +21,11 @@
   },
   "info": {
     "category": "Hortifrúti",
-    "location": "Pavimento inferior · Banca 47",
+    "location": "Banca 47 · Pavimento inferior",
+    "color": "#3c7a34",
     "phone": "(41) 98754-7070 · (41) 98811-7070",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "cf6c4db9b01f"
+  "autoHash": "53de09338087"
 }

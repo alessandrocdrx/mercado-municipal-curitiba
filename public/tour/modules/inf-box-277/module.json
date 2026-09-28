@@ -20,11 +20,13 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Box 277",
+    "location": "Box 277 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3335-4689 · (41) 9984-9896",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-gourmet/",
-    "note": "A lista cita os boxes 276 e 277; no tour 3D o 276 aparece como Queijos e Vinhos. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "note": "A lista cita os boxes 276 e 277; no tour 3D o 276 aparece como Queijos e Vinhos.",
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "06b957bcb112"
+  "autoHash": "814b73c17ad0"
 }

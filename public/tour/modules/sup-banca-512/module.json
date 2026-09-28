@@ -22,10 +22,11 @@
   },
   "info": {
     "category": "Orgânicos",
-    "location": "Pavimento superior · Banca 511, 512",
+    "location": "Bancas 511 e 512 · Pavimento superior",
+    "color": "#2f7d32",
     "phone": "(41) 99134-4400",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "c1314980a424"
+  "autoHash": "5b0988c759dc"
 }

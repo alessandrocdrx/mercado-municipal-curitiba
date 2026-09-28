@@ -21,10 +21,11 @@
   },
   "info": {
     "category": "Hortifrúti",
-    "location": "Pavimento inferior · Banca 83",
+    "location": "Banca 83 · Pavimento inferior",
+    "color": "#3c7a34",
     "phone": "(41) 3262-2678",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "5f39351466be"
+  "autoHash": "41685f61246c"
 }

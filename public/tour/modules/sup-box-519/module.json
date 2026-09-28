@@ -23,10 +23,11 @@
   },
   "info": {
     "category": "Orgânicos",
-    "location": "Pavimento superior · Box 519",
+    "location": "Box 519 · Pavimento superior",
+    "color": "#2f7d32",
     "phone": "(41) 3262-2222 · (41) 99987-6186",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "adf1d5d8ec65"
+  "autoHash": "bf61482a9623"
 }

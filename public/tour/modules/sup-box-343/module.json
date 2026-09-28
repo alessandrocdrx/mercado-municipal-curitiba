@@ -23,10 +23,11 @@
   },
   "info": {
     "category": "Variedades e serviços",
-    "location": "Pavimento superior · Box 343",
+    "location": "Box 343 · Pavimento superior",
+    "color": "#4a5a73",
     "phone": "(41) 99948-2823",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "455746bb446c"
+  "autoHash": "518533c907b0"
 }

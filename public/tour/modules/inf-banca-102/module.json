@@ -20,10 +20,12 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Banca 101, 102",
+    "location": "Bancas 101 e 102 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3019-5293 · (41) 99245-0122",
-    "note": "A lista cita a banca 101; outro guia cita 101 e 102. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "note": "A lista cita a banca 101; outro guia cita 101 e 102.",
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "e4047334972f"
+  "autoHash": "0470e0cf56de"
 }

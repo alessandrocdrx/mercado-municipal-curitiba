@@ -22,11 +22,12 @@
   },
   "info": {
     "category": "Orgânicos",
-    "location": "Pavimento superior · Banca 509, 510",
+    "location": "Bancas 509 e 510 · Pavimento superior",
+    "color": "#2f7d32",
     "phone": "(41) 99915-8062 · (41) 3227-4612",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/couve-flor/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "c7d43d5230e9"
+  "autoHash": "26495123fe08"
 }

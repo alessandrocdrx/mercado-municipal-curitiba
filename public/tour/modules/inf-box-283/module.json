@@ -22,10 +22,12 @@
   },
   "info": {
     "category": "Cereais e especiarias",
-    "location": "Pavimento inferior · Box 281, 283",
+    "location": "Boxes 281 e 283 · Pavimento inferior",
+    "color": "#7a4a24",
     "phone": "(41) 3262-5064 · (41) 99571-0735",
-    "note": "Na lista aparece como Casa Gourmet (mesmo celular). Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "note": "Na lista aparece como Casa Gourmet (mesmo celular).",
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "a36b37ddab4f"
+  "autoHash": "5d427374c1bf"
 }

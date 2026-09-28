@@ -20,9 +20,10 @@
   },
   "info": {
     "category": "Hortifrúti",
-    "location": "Pavimento inferior · Banca 66",
-    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "location": "Banca 66 · Pavimento inferior",
+    "color": "#3c7a34",
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "a8f5cc8a5730"
+  "autoHash": "64468b73ade3"
 }

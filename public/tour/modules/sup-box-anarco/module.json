@@ -20,12 +20,14 @@
   },
   "info": {
     "category": "Lanchonete e restaurante",
-    "location": "Pavimento superior · Praças Déa / 7 de Setembro · Praças Déa / 7 de Setembro",
+    "location": "Praças Déa / 7 de Setembro · Praças Déa / 7 de Setembro · Pavimento superior",
+    "color": "#b0561d",
     "phone": "(41) 3029-6154",
     "description": "Cozinha italiana, fundado em 1991.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/restaurante-anarco/",
-    "note": "No tour 3D oficial fica no mezanino das praças de alimentação Déa / 7 de Setembro, área que a planta afixada não desenha. Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "note": "No tour 3D oficial fica no mezanino das praças de alimentação Déa / 7 de Setembro, área que a planta afixada não desenha.",
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "8bbf3494a8d5"
+  "autoHash": "3e4b18ba4f81"
 }

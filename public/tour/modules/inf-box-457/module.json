@@ -22,11 +22,12 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Box 456, 457",
+    "location": "Boxes 456 e 457 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3039-1049",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-kaveh-kanes/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "0bdcf2542896"
+  "autoHash": "a4950f4ebecc"
 }

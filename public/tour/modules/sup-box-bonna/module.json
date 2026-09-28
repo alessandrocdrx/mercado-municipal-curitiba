@@ -23,9 +23,10 @@
   },
   "info": {
     "category": "Lanchonete e restaurante",
-    "location": "Pavimento superior · Praças Déa / 7 de Setembro · Praças Déa / 7 de Setembro",
-    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "location": "Praças Déa / 7 de Setembro · Praças Déa / 7 de Setembro · Pavimento superior",
+    "color": "#b0561d",
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "2b615a57d875"
+  "autoHash": "6837e686f7f6"
 }

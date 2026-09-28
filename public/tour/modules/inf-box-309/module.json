@@ -22,10 +22,12 @@
   },
   "info": {
     "category": "Variedades e serviços",
-    "location": "Pavimento inferior · Box 309, 310",
+    "location": "Boxes 309 e 310 · Pavimento inferior",
+    "color": "#4a5a73",
     "phone": "(41) 3014-7760 · (41) 99975-9265",
-    "note": "Na lista aparece como Lotérica Mercado Municipal (mesmo telefone). Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "note": "Na lista aparece como Lotérica Mercado Municipal (mesmo telefone).",
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "62fac48ba987"
+  "autoHash": "efb57973361b"
 }

@@ -24,12 +24,13 @@
   },
   "info": {
     "category": "Açougue",
-    "location": "Pavimento inferior · Box 02, 03",
+    "location": "Boxes 02 e 03 · Pavimento inferior",
+    "color": "#8e2f2f",
     "phone": "(41) 3264-4890 · (41) 99642-9398",
     "description": "Carnes bovina, suína e de aves, carnes exóticas e ingredientes para feijoada, desde 1963.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/casa-de-carnes-pe-de-boi/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "859d39311124"
+  "autoHash": "f281ed84ab1f"
 }

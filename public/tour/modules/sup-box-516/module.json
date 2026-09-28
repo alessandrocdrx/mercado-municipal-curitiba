@@ -20,10 +20,11 @@
   },
   "info": {
     "category": "Orgânicos",
-    "location": "Pavimento superior · Box 516",
+    "location": "Box 516 · Pavimento superior",
+    "color": "#2f7d32",
     "phone": "(41) 99573-3365",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "ad8b35dbdf9f"
+  "autoHash": "c093db8d641c"
 }

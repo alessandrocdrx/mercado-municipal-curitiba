@@ -21,10 +21,11 @@
   },
   "info": {
     "category": "Orgânicos",
-    "location": "Pavimento superior · Banca 501",
+    "location": "Banca 501 · Pavimento superior",
+    "color": "#2f7d32",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/nicos-emporio-organico/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "325c21e4acaf"
+  "autoHash": "472c1db7ed22"
 }

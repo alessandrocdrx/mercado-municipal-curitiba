@@ -22,10 +22,12 @@
   },
   "info": {
     "category": "Hortifrúti",
-    "location": "Pavimento inferior · Banca 22, 30",
+    "location": "Bancas 22 e 30 · Pavimento inferior",
+    "color": "#3c7a34",
     "phone": "(41) 3264-4274 · (41) 99279-0911",
-    "note": "A lista diz \"Box 22 e 30\"; foi posta nas bancas 22 e 30 do salão. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "note": "A lista diz \"Box 22 e 30\"; foi posta nas bancas 22 e 30 do salão.",
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "daf761f7f0c0"
+  "autoHash": "abe0dd90b9ca"
 }

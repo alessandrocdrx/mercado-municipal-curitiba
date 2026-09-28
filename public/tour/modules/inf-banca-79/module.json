@@ -20,10 +20,11 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Banca 79, 90",
+    "location": "Bancas 79 e 90 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3015-0255",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "6f9c1e57d43a"
+  "autoHash": "0f4afc3add3f"
 }

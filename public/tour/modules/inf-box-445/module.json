@@ -20,9 +20,11 @@
   },
   "info": {
     "category": "Lanchonete e restaurante",
-    "location": "Pavimento inferior · Box 445, 446",
-    "note": "Razão social da permissionária; nome fantasia não identificado. Fonte: Decreto municipal nº 327/2019 (transferência de permissão de uso). Confirme no local."
+    "location": "Boxes 445 e 446 · Pavimento inferior",
+    "color": "#b0561d",
+    "note": "Razão social da permissionária; nome fantasia não identificado.",
+    "source": "Decreto municipal nº 327/2019 (transferência de permissão de uso). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "69c4224ce01f"
+  "autoHash": "f4c823289ffd"
 }

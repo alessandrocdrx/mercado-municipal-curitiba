@@ -22,12 +22,13 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Box 73",
+    "location": "Box 73 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3264-1673 · (41) 99668-8860",
     "description": "Produtos da culinária oriental, doces típicos, bebidas e utensílios.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/mercearia-sansei/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "4fc4d8cdd7d0"
+  "autoHash": "ad43d0b0419a"
 }

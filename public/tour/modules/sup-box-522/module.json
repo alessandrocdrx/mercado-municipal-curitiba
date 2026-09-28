@@ -24,12 +24,13 @@
   },
   "info": {
     "category": "Orgânicos",
-    "location": "Pavimento superior · Box 521, 522",
+    "location": "Boxes 521 e 522 · Pavimento superior",
+    "color": "#2f7d32",
     "phone": "(41) 3095-0123 · (41) 98851-9391",
     "description": "Primeiro açougue orgânico certificado do Brasil, no setor de orgânicos desde 2009.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/taurinos-organic/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "ee68df0b7618"
+  "autoHash": "24d8642aa7b7"
 }

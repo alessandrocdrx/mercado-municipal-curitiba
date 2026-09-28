@@ -21,10 +21,11 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Box 272, 273",
+    "location": "Boxes 272 e 273 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3264-7496 · (41) 3262-1712",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "4ccfe9428ee9"
+  "autoHash": "6054aee0b2d3"
 }

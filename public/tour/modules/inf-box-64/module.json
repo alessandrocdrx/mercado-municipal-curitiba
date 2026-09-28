@@ -24,12 +24,13 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Box 63, 64",
+    "location": "Boxes 63 e 64 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3019-5909",
     "description": "Ingredientes diferenciados, queijos nacionais e importados, tábuas de frios e cestas de café.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-barion/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "1ad6ba9bd246"
+  "autoHash": "5f2ddda7cf21"
 }

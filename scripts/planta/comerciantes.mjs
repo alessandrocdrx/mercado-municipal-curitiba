@@ -117,7 +117,7 @@ export const COMERCIANTES = [
   c('Box do Palmito', 'emporio', 'box-do-palmito', { boxes: ib(357, 362), telefone: '(41) 3152-1485 · (41) 99901-1161' }),
   c('Box do Ademir', 'hortifruti', 'box-do-ademir', { boxes: ib(358), telefone: '(41) 3262-9414 · (41) 99528-7690' }),
   c('Empório Top Mix', 'doces', 'emporio-top-mix', { boxes: ib(360), telefone: '(41) 3010-2544 · (41) 99950-5456', descricao: 'Desde 2011: geleias, azeites, frutas secas, patês, azeitonas e doces.' }),
-  c('Puro Coco', 'outros', null, { boxes: ib(364, 369), telefone: '(41) 3085-5080 · (41) 99995-0345' }),
+  c('Puro Coco', 'doces', null, { boxes: ib(364, 369), telefone: '(41) 3085-5080 · (41) 99995-0345' }),
   c('Adega Curitibana', 'bebidas', null, { boxes: ib(366, 371), telefone: '(41) 3010-7545 · (41) 99133-7545' }),
   c("Vitaly's Especiarias", 'especiarias', null, { boxes: ib(367, 368), telefone: '(41) 3363-5316 · (41) 99891-8237' }),
   c('ICAB Chocolates', 'doces', 'icab-chocolates', { boxes: ib(370), telefone: '(41) 3049-0136', descricao: 'Fundada em 1930: chocolates, biscoitos e bombons.' }),

@@ -22,11 +22,12 @@
   },
   "info": {
     "category": "Hortifrúti",
-    "location": "Pavimento inferior · Box 62",
+    "location": "Box 62 · Pavimento inferior",
+    "color": "#3c7a34",
     "phone": "(41) 99944-4334",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-do-hiro/",
-    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "21fbfda5487f"
+  "autoHash": "7532bbe5b1de"
 }

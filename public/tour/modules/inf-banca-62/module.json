@@ -20,9 +20,10 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Banca 62",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "location": "Banca 62 · Pavimento inferior",
+    "color": "#9a6b1f",
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "3eee414b1a3b"
+  "autoHash": "31e641e4b3ea"
 }

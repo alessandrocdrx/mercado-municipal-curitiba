@@ -23,12 +23,14 @@
   },
   "info": {
     "category": "Pet shop",
-    "location": "Pavimento inferior · Box 16, 17, 18",
+    "location": "Boxes 16, 17 e 18 · Pavimento inferior",
+    "color": "#4c5f7a",
     "phone": "(41) 3363-4519 · (41) 99996-1419",
     "description": "Aquários e peixes ornamentais de água doce e salgada.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/planeta-aquarios/",
-    "note": "A lista cita o box 17; no tour 3D a loja ocupa os boxes vizinhos. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "note": "A lista cita o box 17; no tour 3D a loja ocupa os boxes vizinhos.",
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "6a15bf399229"
+  "autoHash": "d3076fb27607"
 }

@@ -23,11 +23,12 @@
   },
   "info": {
     "category": "Orgânicos",
-    "location": "Pavimento superior · Banca 508",
+    "location": "Banca 508 · Pavimento superior",
+    "color": "#2f7d32",
     "phone": "(41) 3088-1403 · (41) 98405-3506",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/espaco-organico/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "038490d8352d"
+  "autoHash": "c9b43e599219"
 }

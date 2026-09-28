@@ -20,10 +20,11 @@
   },
   "info": {
     "category": "Variedades e serviços",
-    "location": "Pavimento inferior · Box 275, 376",
+    "location": "Boxes 275 e 376 · Pavimento inferior",
+    "color": "#4a5a73",
     "phone": "(41) 3023-2099 · (41) 99975-9265",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "b8a27d821d99"
+  "autoHash": "3e11961534f5"
 }

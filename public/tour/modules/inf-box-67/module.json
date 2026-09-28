@@ -22,12 +22,13 @@
   },
   "info": {
     "category": "Cereais e especiarias",
-    "location": "Pavimento inferior · Box 66, 67",
+    "location": "Boxes 66 e 67 · Pavimento inferior",
+    "color": "#7a4a24",
     "phone": "(41) 3264-1543 · (41) 99671-5483",
     "description": "Há 17 anos: especiarias, condimentos, cereais, conservas, frutas secas e importados.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-do-sabor/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "5f0a129e271e"
+  "autoHash": "96eca6a663a1"
 }

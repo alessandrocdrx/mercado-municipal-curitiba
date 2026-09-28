@@ -22,12 +22,14 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Box 12, 13",
+    "location": "Boxes 12 e 13 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3013-6132",
     "description": "Queijos, vinhos, destilados, castanhas, frutas secas e bacalhau.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/celeiro-municipal/",
-    "note": "A lista não traz o número do box; boxes 12–13 vêm de guia público. Fonte: guia público (applocal). Confirme no local."
+    "note": "A lista não traz o número do box; boxes 12–13 vêm de guia público.",
+    "source": "guia público (applocal). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "e09da1ae4de7"
+  "autoHash": "db4a7937a6af"
 }

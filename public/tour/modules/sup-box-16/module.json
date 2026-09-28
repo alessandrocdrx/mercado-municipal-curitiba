@@ -22,11 +22,13 @@
   },
   "info": {
     "category": "Lanchonete e restaurante",
-    "location": "Pavimento superior · Box 16",
+    "location": "Box 16 · Pavimento superior",
+    "color": "#b0561d",
     "phone": "(41) 3152-6132",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cafe-do-jorge-e-da-aurea/",
-    "note": "A lista informa o box 206; posição do tour 3D (praça de alimentação Karan). Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "note": "A lista informa o box 206; posição do tour 3D (praça de alimentação Karan).",
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "acc79a0b9c55"
+  "autoHash": "db5a2091125d"
 }

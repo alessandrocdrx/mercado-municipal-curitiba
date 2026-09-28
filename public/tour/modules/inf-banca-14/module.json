@@ -20,10 +20,11 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Banca 14",
+    "location": "Banca 14 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3076-7121",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "f0326e9f7cb2"
+  "autoHash": "b2245ceef361"
 }

@@ -22,10 +22,11 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Box 278, 279",
+    "location": "Boxes 278 e 279 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3265-4426 · (41) 99580-5340",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "b99a6ae88810"
+  "autoHash": "27b3b7ca5e29"
 }

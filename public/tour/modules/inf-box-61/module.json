@@ -21,11 +21,12 @@
   },
   "info": {
     "category": "Lanchonete e restaurante",
-    "location": "Pavimento inferior · Box 61",
+    "location": "Box 61 · Pavimento inferior",
+    "color": "#b0561d",
     "phone": "(41) 3011-1212 · (41) 99235-3196",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cafe-do-mercado-co/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "b9edd5bb9c0c"
+  "autoHash": "3d394a0e1d8f"
 }

@@ -22,10 +22,11 @@
   },
   "info": {
     "category": "Bebidas",
-    "location": "Pavimento inferior · Box 276",
+    "location": "Box 276 · Pavimento inferior",
+    "color": "#5b2e63",
     "phone": "(41) 3264-9982 · (41) 99976-5650",
-    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "6d6ad867a25b"
+  "autoHash": "8a077436b94f"
 }

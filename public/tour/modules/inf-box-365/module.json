@@ -23,10 +23,11 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Box 365",
+    "location": "Box 365 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3010-2544 · (41) 98777-5454",
-    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "7716c321c636"
+  "autoHash": "55d00d62437f"
 }

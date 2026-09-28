@@ -20,10 +20,11 @@
   },
   "info": {
     "category": "Doces e chocolates",
-    "location": "Pavimento inferior · Banca 87, 88",
+    "location": "Bancas 87 e 88 · Pavimento inferior",
+    "color": "#6b3a2a",
     "phone": "(41) 99700-4977",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "b622b07d3817"
+  "autoHash": "023816637039"
 }

@@ -21,12 +21,14 @@
   },
   "info": {
     "category": "Bebidas",
-    "location": "Pavimento inferior · Box 15",
+    "location": "Box 15 · Pavimento inferior",
+    "color": "#5b2e63",
     "phone": "(41) 3039-1984 · (41) 3039-2776 · (41) 98870-1977",
     "description": "Vinhos, espumantes, whisky, conhaque, licores e tabacaria.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/adega-municipal/",
-    "note": "A lista informa \"Box 15B\"; o tour 3D oficial mostra a loja ao lado do Celeiro Municipal. Um guia antigo citava os boxes 267 a 271 do anexo. Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "note": "A lista informa \"Box 15B\"; o tour 3D oficial mostra a loja ao lado do Celeiro Municipal. Um guia antigo citava os boxes 267 a 271 do anexo.",
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "818774d5a361"
+  "autoHash": "fe90d8099134"
 }

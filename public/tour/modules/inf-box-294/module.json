@@ -20,12 +20,13 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Box 293, 294",
+    "location": "Boxes 293 e 294 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3262-9911",
     "description": "Produtos de Minas Gerais: cachaças, doces, queijos e artesanato.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/la-de-minas/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "e5738f592461"
+  "autoHash": "afe7eb8cc962"
 }

@@ -22,12 +22,13 @@
   },
   "info": {
     "category": "Doces e chocolates",
-    "location": "Pavimento inferior · Box 370",
+    "location": "Box 370 · Pavimento inferior",
+    "color": "#6b3a2a",
     "phone": "(41) 3049-0136",
     "description": "Fundada em 1930: chocolates, biscoitos e bombons.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/icab-chocolates/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "147fc57f3a5d"
+  "autoHash": "da33204ac126"
 }

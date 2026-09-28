@@ -24,10 +24,11 @@
   },
   "info": {
     "category": "Orgânicos",
-    "location": "Pavimento superior · Box 520",
+    "location": "Box 520 · Pavimento superior",
+    "color": "#2f7d32",
     "phone": "(41) 99936-0224",
-    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "25fbea80eaaa"
+  "autoHash": "a19f8592f1d5"
 }

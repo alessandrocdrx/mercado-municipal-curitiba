@@ -21,10 +21,11 @@
   },
   "info": {
     "category": "Hortifrúti",
-    "location": "Pavimento inferior · Banca 65",
+    "location": "Banca 65 · Pavimento inferior",
+    "color": "#3c7a34",
     "phone": "(41) 98867-9897",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "767784fef686"
+  "autoHash": "b4cc532f3c0b"
 }

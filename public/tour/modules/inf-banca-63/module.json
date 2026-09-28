@@ -20,12 +20,13 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Banca 63",
+    "location": "Banca 63 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 98476-5236",
     "description": "Produtos coloniais: conservas, queijos, salames, doces.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-63-produtos-coloniais/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "3d4b00285759"
+  "autoHash": "062528703396"
 }

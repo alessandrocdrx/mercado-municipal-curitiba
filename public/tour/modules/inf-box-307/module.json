@@ -22,10 +22,11 @@
   },
   "info": {
     "category": "Variedades e serviços",
-    "location": "Pavimento inferior · Box 307",
+    "location": "Box 307 · Pavimento inferior",
+    "color": "#4a5a73",
     "phone": "(41) 3014-7760 · (41) 99845-9535",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "3a25733c2f93"
+  "autoHash": "075ce61a69fe"
 }

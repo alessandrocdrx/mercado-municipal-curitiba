@@ -21,10 +21,11 @@
   },
   "info": {
     "category": "Hortifrúti",
-    "location": "Pavimento inferior · Banca 76, 77, 78",
+    "location": "Bancas 76, 77 e 78 · Pavimento inferior",
+    "color": "#3c7a34",
     "phone": "(41) 99654-6053",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "2ed8e1da7af7"
+  "autoHash": "c9f332d90c32"
 }

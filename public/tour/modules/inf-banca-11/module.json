@@ -20,10 +20,11 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Banca 11, 12",
+    "location": "Bancas 11 e 12 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 98731-0990 · (41) 3347-7234",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "085b3abc419f"
+  "autoHash": "bf0a8a95c8cf"
 }

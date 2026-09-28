@@ -21,10 +21,11 @@
   },
   "info": {
     "category": "Orgânicos",
-    "location": "Pavimento superior · Banca 506",
+    "location": "Banca 506 · Pavimento superior",
+    "color": "#2f7d32",
     "phone": "(41) 99846-2846",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "89bf07d8c9c8"
+  "autoHash": "ec51f20820c6"
 }

@@ -23,10 +23,11 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Box 31, 32",
+    "location": "Boxes 31 e 32 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3026-7468 · (41) 99647-4429",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "7bab7cb9a8c5"
+  "autoHash": "e57024bfd31b"
 }

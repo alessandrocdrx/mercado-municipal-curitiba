@@ -20,11 +20,13 @@
   },
   "info": {
     "category": "Lanchonete e restaurante",
-    "location": "Pavimento superior · Galeria de restaurantes · Galeria de restaurantes",
+    "location": "Galeria de restaurantes · Galeria de restaurantes · Pavimento superior",
+    "color": "#b0561d",
     "phone": "(41) 3155-1844",
     "description": "Comida árabe e brasileira.",
-    "note": "Galeria de restaurantes do pavimento superior, sobre a Rua General Carneiro. Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "note": "Galeria de restaurantes do pavimento superior, sobre a Rua General Carneiro.",
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "d58566a5c993"
+  "autoHash": "60db456f3d1f"
 }

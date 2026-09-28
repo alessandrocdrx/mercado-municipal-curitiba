@@ -23,10 +23,11 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Box 37, 38",
+    "location": "Boxes 37 e 38 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3264-2721 · (41) 99102-2044",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "563f7895e60e"
+  "autoHash": "239deb8f9b82"
 }

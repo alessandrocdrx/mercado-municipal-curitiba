@@ -20,10 +20,11 @@
   },
   "info": {
     "category": "Variedades e serviços",
-    "location": "Pavimento inferior · Box 452, 453",
+    "location": "Boxes 452 e 453 · Pavimento inferior",
+    "color": "#4a5a73",
     "phone": "(41) 3363-2478 · (41) 99139-3770",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "b3924b1f76e0"
+  "autoHash": "f9fd171e0f09"
 }

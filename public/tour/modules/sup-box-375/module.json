@@ -20,10 +20,11 @@
   },
   "info": {
     "category": "Doces e chocolates",
-    "location": "Pavimento superior · Box 375",
+    "location": "Box 375 · Pavimento superior",
+    "color": "#6b3a2a",
     "phone": "(41) 3254-7738",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "ad80709b544d"
+  "autoHash": "0ac510735395"
 }

@@ -21,11 +21,13 @@
   },
   "info": {
     "category": "Hortifrúti",
-    "location": "Pavimento inferior · Banca 09, 10",
+    "location": "Bancas 09 e 10 · Pavimento inferior",
+    "color": "#3c7a34",
     "phone": "(41) 3264-2721 · (41) 99102-2044",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-do-mario/",
-    "note": "A lista diz \"Box 09 e 10\"; como o Box 10 é da Peixaria Keli Mozer, foi posta nas bancas 09–10. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "note": "A lista diz \"Box 09 e 10\"; como o Box 10 é da Peixaria Keli Mozer, foi posta nas bancas 09–10.",
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "f01f4cfe74f8"
+  "autoHash": "46ad798527a7"
 }

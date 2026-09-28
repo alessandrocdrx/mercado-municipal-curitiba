@@ -21,10 +21,12 @@
   },
   "info": {
     "category": "Hortifrúti",
-    "location": "Pavimento inferior · Banca 28, 29",
+    "location": "Bancas 28 e 29 · Pavimento inferior",
+    "color": "#3c7a34",
     "phone": "(41) 99681-3996 · (41) 99918-6927",
-    "note": "A lista informa as bancas 127 e 224; o tour 3D mostra a banca nos boxes 28 e 29 do salão (falar com Thiago ou Karine). Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "note": "A lista informa as bancas 127 e 224; o tour 3D mostra a banca nos boxes 28 e 29 do salão (falar com Thiago ou Karine).",
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "d58178911654"
+  "autoHash": "7ac794b580a6"
 }

@@ -20,10 +20,11 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Banca 91, 92",
+    "location": "Bancas 91 e 92 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 99187-8481",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "af2cc6721d9e"
+  "autoHash": "89def04fb8ce"
 }

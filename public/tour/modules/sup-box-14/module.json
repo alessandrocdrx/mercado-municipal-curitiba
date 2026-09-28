@@ -24,10 +24,11 @@
   },
   "info": {
     "category": "Lanchonete e restaurante",
-    "location": "Pavimento superior · Box 14",
+    "location": "Box 14 · Pavimento superior",
+    "color": "#b0561d",
     "phone": "(41) 98457-8041",
-    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "0fddce4874ac"
+  "autoHash": "d117f93fca77"
 }

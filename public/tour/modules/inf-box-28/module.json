@@ -23,12 +23,14 @@
   },
   "info": {
     "category": "Cereais e especiarias",
-    "location": "Pavimento inferior · Box 28, 29, 30",
+    "location": "Boxes 28, 29 e 30 · Pavimento inferior",
+    "color": "#7a4a24",
     "phone": "(41) 3264-4064 · (41) 99215-5400",
     "description": "No Mercado desde 1º de novembro de 1960: azeites, bacalhau, castanhas, frutas secas, especiarias, conservas e cereais.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/armazem-da-zelma/",
-    "note": "A lista cita só o Box 28; o site oficial e o Foursquare citam 28 a 30. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "note": "A lista cita só o Box 28; o site oficial e o Foursquare citam 28 a 30.",
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "0ab4ba22aead"
+  "autoHash": "f8b5731328ea"
 }

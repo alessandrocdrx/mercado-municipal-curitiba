@@ -22,10 +22,11 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Banca 02, 03",
+    "location": "Bancas 02 e 03 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3016-0910 · (41) 99911-6842",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "c19c548c79cf"
+  "autoHash": "373f5e39581e"
 }

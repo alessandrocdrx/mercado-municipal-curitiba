@@ -20,11 +20,12 @@
   },
   "info": {
     "category": "Lanchonete e restaurante",
-    "location": "Pavimento inferior · Box 438, 439",
+    "location": "Boxes 438 e 439 · Pavimento inferior",
+    "color": "#b0561d",
     "phone": "(41) 3011-1212 · (41) 99235-3196",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cafe-do-mercado/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "205180a04962"
+  "autoHash": "915b110cc34b"
 }

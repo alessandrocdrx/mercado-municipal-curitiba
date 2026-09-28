@@ -22,10 +22,11 @@
   },
   "info": {
     "category": "Bebidas",
-    "location": "Pavimento inferior · Box 366, 371",
+    "location": "Boxes 366 e 371 · Pavimento inferior",
+    "color": "#5b2e63",
     "phone": "(41) 3010-7545 · (41) 99133-7545",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "51e469bcb063"
+  "autoHash": "ab924897f35e"
 }

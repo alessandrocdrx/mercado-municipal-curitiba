@@ -23,12 +23,13 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Box 68, 69",
+    "location": "Boxes 68 e 69 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3363-5750",
     "description": "Frios, queijos, azeitonas, bacalhau, azeites, massas e frutas secas.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-bon-appetit/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "25286132e57f"
+  "autoHash": "608cdd9e5086"
 }

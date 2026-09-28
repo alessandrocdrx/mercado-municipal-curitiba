@@ -14,20 +14,37 @@ export class InfoPanel {
   show(module) {
     const info = module.info ?? {};
     this.el.replaceChildren();
+    this.el.style.setProperty('--cat', info.color ?? 'var(--accent)');
+    this.el.classList.toggle('has-cat', Boolean(info.color));
     const close = button('×', 'info-close', () => this.hide());
-    const title = element('h2', module.title ?? module.id);
-    this.el.append(close, title);
-    const label = info.category ?? { box: 'Box', banca: 'Banca', porta: 'Porta' }[module.type] ?? module.type;
-    if (label) this.el.append(element('p', label, 'info-type'));
-    if (info.description) this.el.append(element('p', info.description));
-    const rows = [['Endereço', info.address], ['Horário', info.hours], ['Telefone', info.phone], ['Categoria', info.category], ['Localização', info.location]].filter(([, v]) => v);
+    close.setAttribute('aria-label', 'Fechar');
+    const kind = info.category ?? module.type;
+    if (kind) this.el.append(element('p', kind, 'info-type'));
+    this.el.append(close, element('h2', module.title ?? module.id));
+    if (info.location) this.el.append(element('p', `📍 ${info.location}`, 'info-where'));
+
+    const actions = document.createElement('div');
+    actions.className = 'info-actions';
+    const text = [info.phone, info.description, info.note].filter(Boolean).join(' ');
+    const phones = [...(info.phone ?? '').matchAll(/\(?(\d{2})\)?\s*(\d{4,5})-?(\d{4})/g)].map((m) => ({ ddd: m[1], num: m[2] + m[3], label: `(${m[1]}) ${m[2]}-${m[3]}` }));
+    const fixo = phones.find((t) => t.num.length === 8) ?? phones[0];
+    const cel = phones.find((t) => t.num.length === 9 && t.num.startsWith('9'));
+    if (fixo) actions.append(action('📞 Ligar', `tel:+55${fixo.ddd}${fixo.num}`));
+    if (cel) actions.append(action('💬 WhatsApp', `https://wa.me/55${cel.ddd}${cel.num}`));
+    const ig = text.match(/@([A-Za-z0-9_.]{3,30})/);
+    if (ig) actions.append(action('📷 Instagram', `https://instagram.com/${ig[1].replace(/\.$/, '')}`));
+    if (info.url) actions.append(action(module.type === 'box' || module.type === 'banca' ? '🔗 Site oficial' : '🔗 Saiba mais', info.url));
+    if (actions.childElementCount) this.el.append(actions);
+
+    if (info.description) this.el.append(element('p', info.description, 'info-desc'));
+    const rows = [['Horário', info.hours], ['Telefone', phones.length ? phones.map((t) => t.label).join('\n') : info.phone], ['Endereço', info.address]].filter(([, v]) => v);
     if (rows.length) {
       const dl = document.createElement('dl');
       for (const [k, v] of rows) dl.append(element('dt', k), element('dd', v));
       this.el.append(dl);
     }
     if (info.photos?.length) this.el.append(this.photos(info.photos, module._baseUrl ?? window.__TOUR_ROOT__));
-    if (info.note) this.el.append(element('p', info.note, 'info-version'));
+    if (info.note) this.el.append(element('p', info.note, 'info-note'));
     if (info.sources?.length) {
       const list = document.createElement('ul');
       list.className = 'info-sources';
@@ -40,14 +57,12 @@ export class InfoPanel {
       }
       this.el.append(element('p', 'Fontes', 'info-type'), list);
     }
-    if (info.url) {
-      const a = element('a', 'Saiba mais');
-      a.href = info.url;
-      a.target = '_blank';
-      a.rel = 'noopener';
-      this.el.append(a);
+    if (info.source) {
+      const det = document.createElement('details');
+      det.className = 'info-source';
+      det.append(element('summary', 'Sobre estes dados'), element('p', `Fonte: ${info.source}`));
+      this.el.append(det);
     }
-    if (module.version) this.el.append(element('p', `Atualizado: ${module.version}`, 'info-version'));
     this.el.hidden = false;
   }
 
@@ -131,4 +146,10 @@ function button(text, className, onClick) {
   const el = element('button', text, className);
   el.addEventListener('click', onClick);
   return el;
+}
+
+function action(label, href) {
+  const a = element('a', label, 'info-action');
+  Object.assign(a, { href, target: '_blank', rel: 'noopener' });
+  return a;
 }

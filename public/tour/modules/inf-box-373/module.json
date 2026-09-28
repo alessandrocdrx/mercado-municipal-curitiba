@@ -23,12 +23,13 @@
   },
   "info": {
     "category": "Pet shop",
-    "location": "Pavimento inferior · Box 373",
+    "location": "Box 373 · Pavimento inferior",
+    "color": "#4c5f7a",
     "phone": "(41) 3262-7136 · (41) 98422-2464",
     "description": "Único pet shop do Mercado.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/rei-do-kao/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "d3ce93ce592a"
+  "autoHash": "d0daa17eceb4"
 }

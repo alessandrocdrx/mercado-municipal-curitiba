@@ -23,11 +23,13 @@
   },
   "info": {
     "category": "Hortifrúti",
-    "location": "Pavimento inferior · Box 363",
+    "location": "Box 363 · Pavimento inferior",
+    "color": "#3c7a34",
     "phone": "(41) 3362-7698 · (41) 97400-1534",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-do-adalto/",
-    "note": "A lista informa 111 e 113; posição do tour 3D (\"Box do Adalto\"). Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "note": "A lista informa 111 e 113; posição do tour 3D (\"Box do Adalto\").",
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "1d994219ded6"
+  "autoHash": "a3fb00c09e4b"
 }

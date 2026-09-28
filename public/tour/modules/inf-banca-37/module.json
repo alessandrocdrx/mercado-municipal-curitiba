@@ -20,10 +20,11 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Banca 37",
+    "location": "Banca 37 · Pavimento inferior",
+    "color": "#9a6b1f",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/mafo-com-de-alimentos/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "187875fe2d7f"
+  "autoHash": "0f9dfebd2ad4"
 }

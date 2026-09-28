@@ -23,12 +23,13 @@
   },
   "info": {
     "category": "Hortifrúti",
-    "location": "Pavimento inferior · Banca 98, 99, 100",
+    "location": "Bancas 98, 99 e 100 · Pavimento inferior",
+    "color": "#3c7a34",
     "phone": "(41) 3264-4533",
     "description": "Há 40 anos no hortifrúti do Mercado.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/yamasaki-verduras-2/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "4100e25642eb"
+  "autoHash": "0c06754480b9"
 }

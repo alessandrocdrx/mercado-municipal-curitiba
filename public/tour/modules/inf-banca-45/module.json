@@ -21,10 +21,11 @@
   },
   "info": {
     "category": "Hortifrúti",
-    "location": "Pavimento inferior · Banca 45",
+    "location": "Banca 45 · Pavimento inferior",
+    "color": "#3c7a34",
     "phone": "(41) 3264-7563",
-    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "c9a221cfebe9"
+  "autoHash": "b455ad1f7ed0"
 }

@@ -23,12 +23,13 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Hall Sete de Setembro · Box 189",
+    "location": "Box 189 · Hall Sete de Setembro · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 99700-4977",
     "description": "Produtos paranaenses: chocolates artesanais, doces e cafés.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/mirandas-mercearia/",
-    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "8bb29f138fd6"
+  "autoHash": "e9431258eafd"
 }

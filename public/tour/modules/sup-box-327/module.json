@@ -22,10 +22,11 @@
   },
   "info": {
     "category": "Variedades e serviços",
-    "location": "Pavimento superior · Box 327",
+    "location": "Box 327 · Pavimento superior",
+    "color": "#4a5a73",
     "phone": "(41) 3026-7082 · (41) 99591-5098",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "9ce3f199f4cf"
+  "autoHash": "d1582913ba80"
 }

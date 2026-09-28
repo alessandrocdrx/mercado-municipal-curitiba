@@ -24,12 +24,14 @@
   },
   "info": {
     "category": "Bebidas",
-    "location": "Pavimento inferior · Box 39, 40, 41, 42",
+    "location": "Boxes 39, 40, 41 e 42 · Pavimento inferior",
+    "color": "#5b2e63",
     "phone": "(41) 3264-4343 · (41) 99705-4697",
     "description": "Especialista em vinhos, com mais de 1.100 rótulos.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/box-41-vinhos/",
-    "note": "A lista informa \"Box 40\"; guias públicos citam os boxes 39 a 42. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "note": "A lista informa \"Box 40\"; guias públicos citam os boxes 39 a 42.",
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "0a8ba8c4f6e4"
+  "autoHash": "038e58e53bd5"
 }

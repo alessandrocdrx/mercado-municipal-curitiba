@@ -20,12 +20,13 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Box 354",
+    "location": "Box 354 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3077-3467",
     "description": "Mais de 200 queijos, bacalhau, azeitonas, azeites, castanhas e nozes.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/mercearia-imperial/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "e099db8af9a1"
+  "autoHash": "e2f96fb04419"
 }

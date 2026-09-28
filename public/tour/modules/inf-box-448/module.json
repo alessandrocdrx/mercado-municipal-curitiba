@@ -20,10 +20,11 @@
   },
   "info": {
     "category": "Bebidas",
-    "location": "Pavimento inferior · Box 447, 448",
+    "location": "Boxes 447 e 448 · Pavimento inferior",
+    "color": "#5b2e63",
     "phone": "(41) 99184-8362 · (41) 99184-9277",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "66aedf6706bd"
+  "autoHash": "4c3316a6864a"
 }

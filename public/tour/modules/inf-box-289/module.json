@@ -22,10 +22,11 @@
   },
   "info": {
     "category": "Cereais e especiarias",
-    "location": "Pavimento inferior · Box 288, 289",
+    "location": "Boxes 288 e 289 · Pavimento inferior",
+    "color": "#7a4a24",
     "phone": "(41) 3264-8769",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "829f0aec0865"
+  "autoHash": "1d7a41fee4df"
 }

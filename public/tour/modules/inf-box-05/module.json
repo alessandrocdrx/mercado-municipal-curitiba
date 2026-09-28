@@ -23,12 +23,13 @@
   },
   "info": {
     "category": "Açougue",
-    "location": "Pavimento inferior · Box 04, 05",
+    "location": "Boxes 04 e 05 · Pavimento inferior",
+    "color": "#8e2f2f",
     "phone": "(41) 3264-4163 · (41) 99642-9398",
     "description": "Carnes exóticas: cordeiro, coelho, pato, jacaré, rã, codorna.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/dap-boutique-de-carnes/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "9d75925333f4"
+  "autoHash": "5f126623135d"
 }

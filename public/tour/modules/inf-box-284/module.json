@@ -23,10 +23,11 @@
   },
   "info": {
     "category": "Bebidas",
-    "location": "Pavimento inferior · Box 284, 285",
+    "location": "Boxes 284 e 285 · Pavimento inferior",
+    "color": "#5b2e63",
     "phone": "(41) 3053-8324 · (41) 99184-9277",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "6d6e31600378"
+  "autoHash": "8afff532945f"
 }

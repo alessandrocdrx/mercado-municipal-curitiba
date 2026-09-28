@@ -23,12 +23,13 @@
   },
   "info": {
     "category": "Cereais e especiarias",
-    "location": "Pavimento inferior · Box 47, 48",
+    "location": "Boxes 47 e 48 · Pavimento inferior",
+    "color": "#7a4a24",
     "phone": "(41) 3263-4565 · (41) 99215-5300",
     "description": "Há 32 anos: frutas secas, cereais, farinhas e especiarias.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/armazem-becker/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "5622c306ff87"
+  "autoHash": "34d2d5dad1af"
 }

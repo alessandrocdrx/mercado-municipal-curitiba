@@ -23,10 +23,11 @@
   },
   "info": {
     "category": "Variedades e serviços",
-    "location": "Pavimento superior · Box 322, 323",
+    "location": "Boxes 322 e 323 · Pavimento superior",
+    "color": "#4a5a73",
     "phone": "(41) 3264-7914 · (41) 99975-9265",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "f5a593c3ac70"
+  "autoHash": "36fe5ff86267"
 }

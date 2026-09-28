@@ -22,12 +22,13 @@
   },
   "info": {
     "category": "Doces e chocolates",
-    "location": "Pavimento inferior · Box 295, 296",
+    "location": "Boxes 295 e 296 · Pavimento inferior",
+    "color": "#6b3a2a",
     "phone": "(41) 3154-5999 · (41) 99677-8821",
     "description": "Chocolates de tradição alemã feitos em Curitiba.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/dfuhrmann-chocolates/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "312241a473e4"
+  "autoHash": "1f13e92e5040"
 }

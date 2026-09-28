@@ -21,10 +21,11 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Banca 61",
+    "location": "Banca 61 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3276-8525 · (41) 98802-7159",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "4008dd3126a2"
+  "autoHash": "4026563b0c7f"
 }

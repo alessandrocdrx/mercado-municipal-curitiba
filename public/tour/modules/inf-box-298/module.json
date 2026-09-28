@@ -23,10 +23,11 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Box 297, 298",
+    "location": "Boxes 297 e 298 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3322-0822 · (41) 99787-3590",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "66f96a512bc4"
+  "autoHash": "52e6a736dff2"
 }

@@ -20,10 +20,11 @@
   },
   "info": {
     "category": "Pet shop",
-    "location": "Pavimento superior · Box 314",
+    "location": "Box 314 · Pavimento superior",
+    "color": "#4c5f7a",
     "phone": "(41) 98819-9892",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "443b76e5a1ef"
+  "autoHash": "f1fc1a9045dd"
 }

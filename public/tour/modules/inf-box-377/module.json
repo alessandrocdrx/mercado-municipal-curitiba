@@ -21,10 +21,11 @@
   },
   "info": {
     "category": "Variedades e serviços",
-    "location": "Pavimento inferior · Box 377",
+    "location": "Box 377 · Pavimento inferior",
+    "color": "#4a5a73",
     "phone": "(41) 3029-6250 · (41) 99118-0069",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "860ebd4cdd56"
+  "autoHash": "02d4c8b11956"
 }

@@ -20,10 +20,12 @@
   },
   "info": {
     "category": "Variedades e serviços",
-    "location": "Pavimento inferior · Box 303, 305",
+    "location": "Boxes 303 e 305 · Pavimento inferior",
+    "color": "#4a5a73",
     "phone": "(41) 99688-1790",
-    "note": "A lista cita boxes 303, 304 e 305; o 304 também aparece como Empório Metropolitano. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "note": "A lista cita boxes 303, 304 e 305; o 304 também aparece como Empório Metropolitano.",
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "39f24daad356"
+  "autoHash": "e5e09d90a06e"
 }

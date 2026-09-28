@@ -24,10 +24,11 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Hall Sete de Setembro · Box 192",
+    "location": "Box 192 · Hall Sete de Setembro · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3262-2768 · (41) 99197-7977",
-    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "53b6484d70c1"
+  "autoHash": "1e20128bcf1f"
 }

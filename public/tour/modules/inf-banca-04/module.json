@@ -22,10 +22,11 @@
   },
   "info": {
     "category": "Cereais e especiarias",
-    "location": "Pavimento inferior · Banca 04",
+    "location": "Banca 04 · Pavimento inferior",
+    "color": "#7a4a24",
     "phone": "(41) 99956-3898",
-    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "54839072c3d8"
+  "autoHash": "778b586bff00"
 }

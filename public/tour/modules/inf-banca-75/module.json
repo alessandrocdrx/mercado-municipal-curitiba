@@ -22,10 +22,11 @@
   },
   "info": {
     "category": "Hortifrúti",
-    "location": "Pavimento inferior · Banca 75",
+    "location": "Banca 75 · Pavimento inferior",
+    "color": "#3c7a34",
     "phone": "(41) 99954-6053",
-    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "f9406e9b38f6"
+  "autoHash": "09c51e0ba335"
 }

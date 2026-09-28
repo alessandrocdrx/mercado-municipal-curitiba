@@ -24,10 +24,11 @@
   },
   "info": {
     "category": "Lanchonete e restaurante",
-    "location": "Pavimento inferior · Hall Sete de Setembro · Hall Sete de Setembro",
+    "location": "Hall Sete de Setembro · Hall Sete de Setembro · Pavimento inferior",
+    "color": "#b0561d",
     "phone": "(41) 98875-6461",
-    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "521101ada0b3"
+  "autoHash": "3e39fd641884"
 }

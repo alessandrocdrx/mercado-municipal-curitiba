@@ -21,10 +21,11 @@
   },
   "info": {
     "category": "Orgânicos",
-    "location": "Pavimento superior · Box 513",
+    "location": "Box 513 · Pavimento superior",
+    "color": "#2f7d32",
     "phone": "(41) 3262-0610 · (41) 99126-3383",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "042e7f6f1fb1"
+  "autoHash": "31cb02097e92"
 }

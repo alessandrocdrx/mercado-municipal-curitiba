@@ -23,11 +23,12 @@
   },
   "info": {
     "category": "Hortifrúti",
-    "location": "Pavimento inferior · Box 358",
+    "location": "Box 358 · Pavimento inferior",
+    "color": "#3c7a34",
     "phone": "(41) 3262-9414 · (41) 99528-7690",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/box-do-ademir/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "540ae8807e9a"
+  "autoHash": "c3b346e1d324"
 }

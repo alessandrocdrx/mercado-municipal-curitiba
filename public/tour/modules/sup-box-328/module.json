@@ -22,11 +22,12 @@
   },
   "info": {
     "category": "Variedades e serviços",
-    "location": "Pavimento superior · Box 328",
+    "location": "Box 328 · Pavimento superior",
+    "color": "#4a5a73",
     "phone": "(41) 3363-3764",
     "description": "Associação dos comerciantes do Mercado Municipal.",
-    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "84084819cafa"
+  "autoHash": "d8ddb2121ae4"
 }

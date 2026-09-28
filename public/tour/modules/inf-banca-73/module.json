@@ -20,12 +20,13 @@
   },
   "info": {
     "category": "Bebidas",
-    "location": "Pavimento inferior · Banca 73, 74",
+    "location": "Bancas 73 e 74 · Pavimento inferior",
+    "color": "#5b2e63",
     "phone": "(41) 99228-2527",
     "description": "Única loja de Curitiba 100% especializada em cachaça, com mais de 400 rótulos.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/vo-milano-cachacaria/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "026c3a25ef6e"
+  "autoHash": "e366f7910f22"
 }

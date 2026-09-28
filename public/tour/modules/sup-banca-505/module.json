@@ -22,10 +22,11 @@
   },
   "info": {
     "category": "Orgânicos",
-    "location": "Pavimento superior · Banca 505, 507",
+    "location": "Bancas 505 e 507 · Pavimento superior",
+    "color": "#2f7d32",
     "phone": "(41) 3362-9044 · (41) 99619-4397",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "0ea2842c5932"
+  "autoHash": "42b6adfd605d"
 }

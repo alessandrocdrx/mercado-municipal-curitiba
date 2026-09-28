@@ -24,13 +24,14 @@
   },
   "info": {
     "category": "Açougue",
-    "location": "Pavimento inferior · Box 06, 07",
+    "location": "Boxes 06 e 07 · Pavimento inferior",
+    "color": "#8e2f2f",
     "phone": "(41) 3264-4163 · (41) 99642-9398",
     "hours": "Ter a Sáb 8h–18h · Dom 8h–13h",
     "description": "Boutique de carnes 100% Angus e carnes exóticas.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/espaco-angus-prime/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "64901f86e5bf"
+  "autoHash": "1824229354dc"
 }

@@ -23,10 +23,11 @@
   },
   "info": {
     "category": "Cereais e especiarias",
-    "location": "Pavimento inferior · Box 367, 368",
+    "location": "Boxes 367 e 368 · Pavimento inferior",
+    "color": "#7a4a24",
     "phone": "(41) 3363-5316 · (41) 99891-8237",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "49ca971aa159"
+  "autoHash": "dacdbf01610a"
 }

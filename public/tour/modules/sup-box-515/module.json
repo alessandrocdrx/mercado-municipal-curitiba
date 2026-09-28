@@ -23,12 +23,13 @@
   },
   "info": {
     "category": "Orgânicos",
-    "location": "Pavimento superior · Box 514, 515",
+    "location": "Boxes 514 e 515 · Pavimento superior",
+    "color": "#2f7d32",
     "phone": "(41) 3363-0905 · (41) 99281-1275",
     "description": "Cosméticos com insumos orgânicos rastreados, desde 2008.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/cativa-natureza/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "95606c4c1d86"
+  "autoHash": "21be00a25585"
 }

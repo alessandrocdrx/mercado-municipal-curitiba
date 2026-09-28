@@ -22,12 +22,13 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Box 304, 306",
+    "location": "Boxes 304 e 306 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3239-2762",
     "description": "Espaço de apoio a pequenos produtores artesanais, manuais e semi-industriais.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/emporio-metropolitano/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "f6430da7e53d"
+  "autoHash": "3b7e27d24ab6"
 }

@@ -21,9 +21,11 @@
   },
   "info": {
     "category": "Lanchonete e restaurante",
-    "location": "Pavimento inferior · Box 454",
-    "note": "Só o rótulo aparece no tour 3D. Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "location": "Box 454 · Pavimento inferior",
+    "color": "#b0561d",
+    "note": "Só o rótulo aparece no tour 3D.",
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "e547c5a23ab1"
+  "autoHash": "409302e5fce9"
 }

@@ -22,12 +22,13 @@
   },
   "info": {
     "category": "Cereais e especiarias",
-    "location": "Pavimento inferior · Box 299, 301",
+    "location": "Boxes 299 e 301 · Pavimento inferior",
+    "color": "#7a4a24",
     "phone": "(41) 3030-2728 · (41) 99827-1827",
     "description": "Especiarias, molhos, azeites, pimentas, sais e utensílios culinários.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/temperamento/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "1ffb1ac5c257"
+  "autoHash": "a600e3871d4e"
 }

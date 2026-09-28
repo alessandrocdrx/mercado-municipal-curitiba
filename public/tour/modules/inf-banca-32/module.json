@@ -21,10 +21,11 @@
   },
   "info": {
     "category": "Hortifrúti",
-    "location": "Pavimento inferior · Banca 32",
+    "location": "Banca 32 · Pavimento inferior",
+    "color": "#3c7a34",
     "phone": "(41) 3262-7266",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "5c81a6b1be4d"
+  "autoHash": "b3003895b3f1"
 }

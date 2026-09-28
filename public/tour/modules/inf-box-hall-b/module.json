@@ -24,10 +24,11 @@
   },
   "info": {
     "category": "Doces e chocolates",
-    "location": "Pavimento inferior · Hall Sete de Setembro · Hall Sete de Setembro",
+    "location": "Hall Sete de Setembro · Hall Sete de Setembro · Pavimento inferior",
+    "color": "#6b3a2a",
     "phone": "(41) 3262-3311 · (41) 99997-7070",
-    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "1fc50d2cb898"
+  "autoHash": "cbffe56c6aef"
 }

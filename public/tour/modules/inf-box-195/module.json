@@ -23,12 +23,13 @@
   },
   "info": {
     "category": "Doces e chocolates",
-    "location": "Pavimento inferior · Hall Sete de Setembro · Box 195",
+    "location": "Box 195 · Hall Sete de Setembro · Pavimento inferior",
+    "color": "#6b3a2a",
     "phone": "(41) 3030-3076",
     "description": "Desde 2003. Café colonial aos domingos.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/confeitaria-colonia-cecilia/",
-    "note": "Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "9b8d4c732f67"
+  "autoHash": "6d91c1b1adf9"
 }

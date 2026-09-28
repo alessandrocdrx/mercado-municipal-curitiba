@@ -20,12 +20,14 @@
   },
   "info": {
     "category": "Lanchonete e restaurante",
-    "location": "Pavimento superior · Box 10",
+    "location": "Box 10 · Pavimento superior",
+    "color": "#b0561d",
     "phone": "(41) 3015-8240",
     "description": "Massas, risotos e saladas.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/restaurante-box-curitiba/",
-    "note": "Posição do tour 3D oficial (antes assumida no box 19). Fonte: tour 3D oficial do Mercado (Matterport, set/2026). Confirme no local."
+    "note": "Posição do tour 3D oficial (antes assumida no box 19).",
+    "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "0743f5eca28e"
+  "autoHash": "4ad093999054"
 }

@@ -100,17 +100,19 @@ for (const pav of PAVIMENTOS) {
         info: com
           ? limpa({
             category: cat.nome,
-            location: [pav.titulo, grupo.area, grupo.rotulo ?? `${banca ? 'Banca' : 'Box'} ${numeros(com.boxes)}`].filter(Boolean).join(' · '),
+            location: [grupo.rotulo ?? `${banca ? (com.boxes.length > 1 ? 'Bancas' : 'Banca') : (com.boxes.length > 1 ? 'Boxes' : 'Box')} ${numeros(com.boxes).replace(/, ([^,]*)$/, ' e $1')}`, grupo.area, pav.titulo].filter(Boolean).join(' · '),
+            color: cat.cor,
             phone: com.telefone,
             hours: com.horario,
             description: com.descricao,
             url: com.url,
-            note: [com.obs, `Fonte: ${com.fonte ?? 'diretório de comerciantes do site oficial'}. Confirme no local.`].filter(Boolean).join(' '),
+            note: com.obs,
+            source: `${com.fonte ?? 'diretório de comerciantes do site oficial'}. Comerciantes podem mudar de box: confirme no local.`,
             photos: FOTOS_COMERCIANTES[com.nome],
           })
           : {
             location: pav.titulo,
-            description: 'Comerciante deste espaço não identificado no site oficial.',
+            description: 'Ainda não sabemos quem ocupa este espaço. Se você souber, avise para atualizarmos o tour.',
           },
       });
     });

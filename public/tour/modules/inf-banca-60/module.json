@@ -22,10 +22,11 @@
   },
   "info": {
     "category": "Hortifrúti",
-    "location": "Pavimento inferior · Banca 59, 60",
+    "location": "Bancas 59 e 60 · Pavimento inferior",
+    "color": "#3c7a34",
     "phone": "(41) 98477-8335",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "4b81abd181ca"
+  "autoHash": "328160149e81"
 }

@@ -23,11 +23,12 @@
   },
   "info": {
     "category": "Variedades e serviços",
-    "location": "Pavimento superior · Box 341",
+    "location": "Box 341 · Pavimento superior",
+    "color": "#4a5a73",
     "description": "Assistência técnica de celulares e acessórios, desde 2005.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/boxs-celulares-ltda/",
-    "note": "Fonte: guia público (applocal). Confirme no local."
+    "source": "guia público (applocal). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "a57862dbde01"
+  "autoHash": "142b767c72eb"
 }

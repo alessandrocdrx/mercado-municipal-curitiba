@@ -219,3 +219,26 @@ div.dir-item.off { cursor: default; }
   #dir-search { font-size: 16px; padding: 10px 12px; }
   .tip { top: 120px; bottom: auto; white-space: normal; width: max-content; max-width: calc(100% - 32px); text-align: center; }
 }
+
+/* --- painel de informações (revisão de UX) --- */
+.info-panel.has-cat { border-top: 5px solid var(--cat); }
+.info-panel .info-type { color: var(--muted); font-weight: 700; margin-bottom: 2px; display: flex; align-items: center; gap: 6px; }
+.info-panel.has-cat .info-type::before { content: ''; width: 10px; height: 10px; border-radius: 50%; background: var(--cat); box-shadow: 0 0 0 2px rgba(255,255,255,.25); }
+.info-panel dd { white-space: pre-line; }
+.info-panel h2 { font-size: 21px; line-height: 1.2; }
+.info-where { margin: 4px 0 10px; font-size: 14px; color: var(--text); opacity: .9; }
+.info-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 10px; }
+.info-panel a.info-action {
+  display: inline-flex; align-items: center; gap: 4px; padding: 8px 12px; border-radius: 20px;
+  background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.22); color: var(--text);
+  text-decoration: none; font-size: 14px; font-weight: 600;
+}
+.info-panel a.info-action:hover { background: rgba(255,255,255,.18); }
+.info-desc { margin: 4px 0 8px; line-height: 1.45; }
+.info-note { font-size: 13px; color: var(--muted); line-height: 1.4; border-left: 3px solid rgba(255,255,255,.2); padding-left: 8px; }
+.info-source { margin-top: 10px; font-size: 12px; color: var(--muted); }
+.info-source summary { cursor: pointer; }
+.info-source p { margin: 6px 0 0; }
+@media (max-width: 600px) {
+  .info-panel { left: 0 !important; right: 0 !important; top: auto !important; bottom: 0 !important; width: auto !important; max-height: 70% !important; border-radius: 16px 16px 0 0; z-index: 9; }
+}

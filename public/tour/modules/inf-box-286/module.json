@@ -23,11 +23,13 @@
   },
   "info": {
     "category": "Orgânicos",
-    "location": "Pavimento inferior · Box 286",
+    "location": "Box 286 · Pavimento inferior",
+    "color": "#2f7d32",
     "phone": "(41) 3363-0040 · (41) 99203-6337",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/organique-essentiel/",
-    "note": "A lista cita boxes 286 e 289; o 289 também aparece como Armazém da Serra. Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "note": "A lista cita boxes 286 e 289; o 289 também aparece como Armazém da Serra.",
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "eb0bfdee3755"
+  "autoHash": "903501729b45"
 }

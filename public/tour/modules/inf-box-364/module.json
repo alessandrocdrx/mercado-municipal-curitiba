@@ -16,15 +16,16 @@
     "placeholder": {
       "color": "#5A3A22",
       "label": "Puro Coco",
-      "sublabel": "Outros · Box 364"
+      "sublabel": "Doces e chocolates · Box 364"
     }
   },
   "info": {
-    "category": "Outros",
-    "location": "Pavimento inferior · Box 364, 369",
+    "category": "Doces e chocolates",
+    "location": "Boxes 364 e 369 · Pavimento inferior",
+    "color": "#6b3a2a",
     "phone": "(41) 3085-5080 · (41) 99995-0345",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "91d7c3b8d49f"
+  "autoHash": "2c590a3707e2"
 }

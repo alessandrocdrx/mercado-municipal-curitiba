@@ -21,12 +21,13 @@
   },
   "info": {
     "category": "Hortifrúti",
-    "location": "Pavimento inferior · Banca 53",
+    "location": "Banca 53 · Pavimento inferior",
+    "color": "#3c7a34",
     "phone": "(41) 99989-1674",
     "description": "Há 10 anos no hortifrúti do Mercado.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/banca-da-maria/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "383db7ae5253"
+  "autoHash": "a98486074dc1"
 }

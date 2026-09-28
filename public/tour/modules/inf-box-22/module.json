@@ -23,12 +23,13 @@
   },
   "info": {
     "category": "Peixaria",
-    "location": "Pavimento inferior · Box 21, 22",
+    "location": "Boxes 21 e 22 · Pavimento inferior",
+    "color": "#23577f",
     "phone": "(41) 3264-1462 · (41) 99870-8373",
     "description": "Lagosta, lagostim, polvo, lula, mariscos e peixes variados. Faz entregas.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/peixaria-sao-jose/",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "449820bd0929"
+  "autoHash": "249ab21c54fe"
 }

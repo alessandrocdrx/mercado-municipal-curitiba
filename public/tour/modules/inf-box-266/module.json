@@ -24,10 +24,11 @@
   },
   "info": {
     "category": "Empório e mercearia",
-    "location": "Pavimento inferior · Box 266",
+    "location": "Box 266 · Pavimento inferior",
+    "color": "#9a6b1f",
     "phone": "(41) 3264-9166 · (41) 3030-1673",
-    "note": "Fonte: lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Confirme no local."
+    "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "08236da72f47"
+  "autoHash": "35fcce612117"
 }
