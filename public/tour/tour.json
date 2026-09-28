@@ -1,9 +1,10 @@
 {
   "title": "Mercado Municipal de Curitiba",
   "info": {
-    "description": "Fundado em 2 de agosto de 1958, com projeto do engenheiro Saul Raiz. Em 2009 ganhou o Mercado de Orgânicos, ao lado do mercado tradicional. Este tour usa as plantas afixadas no próprio mercado; fotos e dados dos boxes serão adicionados aos poucos.",
+    "description": "Fundado em 2 de agosto de 1958, com projeto do engenheiro Saul Raiz. Em 2009 ganhou o Mercado de Orgânicos, ao lado do mercado tradicional.\n\nPROJETO INDEPENDENTE: este tour não tem vínculo oficial com o Mercado Municipal, a Ascesme ou a Prefeitura de Curitiba. A maquete e as plantas são desenhos próprios; nomes de lojas aparecem apenas para identificá-las e as marcas pertencem aos seus donos.\n\nDADOS E PRIVACIDADE (LGPD): mostramos só contatos comerciais divulgados publicamente pelas lojas. Não coletamos dados de quem visita o tour. Comerciante: para corrigir ou remover qualquer informação, use o botão \"Informar correção\" no painel da sua loja.\n\nFotos: só com licença livre, com autor e licença indicados. Dados de posição e nomes: fontes listadas abaixo; confirme no local.",
     "address": "Av. Sete de Setembro, 1865 – Centro, Curitiba – PR, 80230-901",
     "hours": "Seg 7h–14h · Ter a Sáb 7h–18h · Dom 7h–13h (confirme antes de ir)",
+    "contact": "https://github.com/alessandrocdrx/mercado-municipal-curitiba/issues/new",
     "sources": [
       {
         "title": "Visite Curitiba",
@@ -1491,7 +1492,7 @@
     },
     {
       "name": "Impactto",
-      "category": "Variedades e serviços",
+      "category": "Presentes e artesanato",
       "modules": [
         "inf-box-53"
       ],
@@ -1625,7 +1626,7 @@
     },
     {
       "name": "K & M Artesanatos",
-      "category": "Variedades e serviços",
+      "category": "Presentes e artesanato",
       "modules": [
         "inf-box-75",
         "inf-box-76"
@@ -1852,7 +1853,7 @@
     },
     {
       "name": "Bordando Sonhos",
-      "category": "Variedades e serviços",
+      "category": "Presentes e artesanato",
       "modules": [
         "inf-box-303",
         "inf-box-305"
@@ -1876,7 +1877,7 @@
     },
     {
       "name": "Galisa Lotérica",
-      "category": "Variedades e serviços",
+      "category": "Lotéricas",
       "modules": [
         "inf-box-307"
       ],
@@ -1896,7 +1897,7 @@
     },
     {
       "name": "Abranches Lotérica",
-      "category": "Variedades e serviços",
+      "category": "Lotéricas",
       "modules": [
         "inf-box-309",
         "inf-box-310"
@@ -2021,7 +2022,7 @@
     },
     {
       "name": "Satine Cosméticos",
-      "category": "Variedades e serviços",
+      "category": "Beleza e cosméticos",
       "modules": [
         "inf-box-377"
       ],
@@ -2112,7 +2113,7 @@
     },
     {
       "name": "Revistaria Municipal",
-      "category": "Variedades e serviços",
+      "category": "Revistaria e tabacaria",
       "modules": [
         "inf-box-450",
         "inf-box-451"
@@ -2224,7 +2225,7 @@
     },
     {
       "name": "Decaésse Acessórios",
-      "category": "Variedades e serviços",
+      "category": "Presentes e artesanato",
       "modules": [
         "inf-banca-25"
       ],
@@ -2535,7 +2536,7 @@
     },
     {
       "name": "Kotobuki Artesanato e Presentes",
-      "category": "Variedades e serviços",
+      "category": "Presentes e artesanato",
       "modules": [
         "sup-box-313",
         "sup-box-333"
@@ -2556,7 +2557,7 @@
     },
     {
       "name": "Ki Bolada Loteria",
-      "category": "Variedades e serviços",
+      "category": "Lotéricas",
       "modules": [
         "sup-box-320",
         "sup-box-321"
@@ -2567,7 +2568,7 @@
     },
     {
       "name": "Artigos Orientais",
-      "category": "Variedades e serviços",
+      "category": "Presentes e artesanato",
       "modules": [
         "sup-box-322",
         "sup-box-323"
@@ -2578,7 +2579,7 @@
     },
     {
       "name": "Loja de Presentes Mina de Ouro",
-      "category": "Variedades e serviços",
+      "category": "Presentes e artesanato",
       "modules": [
         "sup-box-324"
       ],
@@ -2588,7 +2589,7 @@
     },
     {
       "name": "Rafa's – Ateliê de Costura",
-      "category": "Variedades e serviços",
+      "category": "Consertos e costura",
       "modules": [
         "sup-box-325",
         "sup-box-326"
@@ -2599,7 +2600,7 @@
     },
     {
       "name": "Sapataria Rápida Capricho",
-      "category": "Variedades e serviços",
+      "category": "Consertos e costura",
       "modules": [
         "sup-box-327"
       ],
@@ -2609,7 +2610,7 @@
     },
     {
       "name": "Salão de Cabeleireiro Unissex – Eurides",
-      "category": "Variedades e serviços",
+      "category": "Beleza e cosméticos",
       "modules": [
         "sup-box-329"
       ],
@@ -2619,7 +2620,7 @@
     },
     {
       "name": "Vitornis Chapelaria",
-      "category": "Variedades e serviços",
+      "category": "Calçados e moda",
       "modules": [
         "sup-box-332"
       ],
@@ -2629,7 +2630,7 @@
     },
     {
       "name": "Relojoaria Dajuki",
-      "category": "Variedades e serviços",
+      "category": "Consertos e costura",
       "modules": [
         "sup-box-340"
       ],
@@ -2639,7 +2640,7 @@
     },
     {
       "name": "Box's Celulares",
-      "category": "Variedades e serviços",
+      "category": "Consertos e costura",
       "modules": [
         "sup-box-341"
       ],
@@ -2650,7 +2651,7 @@
     },
     {
       "name": "Quadrolândia",
-      "category": "Variedades e serviços",
+      "category": "Presentes e artesanato",
       "modules": [
         "sup-box-343"
       ],
@@ -2660,7 +2661,7 @@
     },
     {
       "name": "Calçados Vila Rica",
-      "category": "Variedades e serviços",
+      "category": "Calçados e moda",
       "modules": [
         "sup-box-345"
       ],
@@ -2670,7 +2671,7 @@
     },
     {
       "name": "Bazar Cotegipe",
-      "category": "Variedades e serviços",
+      "category": "Revistaria e tabacaria",
       "modules": [
         "sup-box-348"
       ],
@@ -2680,7 +2681,7 @@
     },
     {
       "name": "Nippon Boutique",
-      "category": "Variedades e serviços",
+      "category": "Presentes e artesanato",
       "modules": [
         "sup-box-352",
         "sup-box-353"
@@ -2892,7 +2893,7 @@
     },
     {
       "name": "Célio Dobrucki (Dobrucki Vintage)",
-      "category": "Variedades e serviços",
+      "category": "Presentes e artesanato",
       "modules": [
         "inf-box-188"
       ],
@@ -2914,7 +2915,7 @@
     },
     {
       "name": "Dahra Pedras Brasileiras",
-      "category": "Variedades e serviços",
+      "category": "Presentes e artesanato",
       "modules": [
         "inf-box-190"
       ],
@@ -2999,7 +3000,7 @@
     },
     {
       "name": "Pachamama",
-      "category": "Variedades e serviços",
+      "category": "Presentes e artesanato",
       "boxes": "428",
       "onPlan": false,
       "phone": "(41) 3396-3507 · (41) 98871-0662"
@@ -3055,7 +3056,7 @@
     },
     {
       "name": "Banco de Alimentos",
-      "category": "Variedades e serviços",
+      "category": "Administração e serviços públicos",
       "modules": [
         "inf-banca-97"
       ],
@@ -3132,7 +3133,7 @@
     },
     {
       "name": "Tabacaria Trevo",
-      "category": "Variedades e serviços",
+      "category": "Revistaria e tabacaria",
       "modules": [
         "sup-box-330"
       ],
@@ -3142,7 +3143,7 @@
     },
     {
       "name": "Lule Salão de Cabelos",
-      "category": "Variedades e serviços",
+      "category": "Beleza e cosméticos",
       "modules": [
         "sup-box-318"
       ],
@@ -3152,7 +3153,7 @@
     },
     {
       "name": "Ascesme",
-      "category": "Variedades e serviços",
+      "category": "Administração e serviços públicos",
       "modules": [
         "sup-box-328"
       ],
@@ -3221,7 +3222,7 @@
     },
     {
       "name": "Curitiba Sua Linda",
-      "category": "Variedades e serviços",
+      "category": "Presentes e artesanato",
       "onPlan": false
     },
     {
@@ -3237,7 +3238,7 @@
     },
     {
       "name": "Gerência do Mercado (Prefeitura)",
-      "category": "Variedades e serviços",
+      "category": "Administração e serviços públicos",
       "onPlan": false,
       "phone": "(41) 3264-6020 · (41) 3264-6224 · (41) 3264-6024"
     },

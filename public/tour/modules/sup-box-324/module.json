@@ -16,16 +16,16 @@
     "placeholder": {
       "color": "#1E2F6B",
       "label": "Loja de Presentes Mina de Ouro",
-      "sublabel": "Variedades e serviços · Box 324"
+      "sublabel": "Presentes e artesanato · Box 324"
     }
   },
   "info": {
-    "category": "Variedades e serviços",
+    "category": "Presentes e artesanato",
     "location": "Box 324 · Pavimento superior",
-    "color": "#4a5a73",
+    "color": "#8a4f7d",
     "phone": "(41) 3362-9357",
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "4313cd947eb0"
+  "autoHash": "50c3082f49ad"
 }

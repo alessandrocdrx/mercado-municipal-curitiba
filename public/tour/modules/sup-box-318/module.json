@@ -14,19 +14,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "#4a5a73",
+      "color": "#b0487a",
       "facade": "#4A2F1E",
       "label": "Lule Salão de Cabelos",
-      "sublabel": "Variedades e serviços · Box 318"
+      "sublabel": "Beleza e cosméticos · Box 318"
     }
   },
   "info": {
-    "category": "Variedades e serviços",
+    "category": "Beleza e cosméticos",
     "location": "Box 318 · Pavimento superior",
-    "color": "#4a5a73",
+    "color": "#b0487a",
     "phone": "(41) 99644-2203",
     "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "81289b0e1551"
+  "autoHash": "f3dd71213b23"
 }

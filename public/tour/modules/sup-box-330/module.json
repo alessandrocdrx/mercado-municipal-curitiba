@@ -18,16 +18,16 @@
       "textColor": "#1A1A1A",
       "closed": true,
       "label": "Tabacaria Trevo",
-      "sublabel": "Variedades e serviços · Box 330"
+      "sublabel": "Revistaria e tabacaria · Box 330"
     }
   },
   "info": {
-    "category": "Variedades e serviços",
+    "category": "Revistaria e tabacaria",
     "location": "Box 330 · Pavimento superior",
-    "color": "#4a5a73",
+    "color": "#5a4636",
     "phone": "(41) 3264-5445 · (41) 99242-4662",
     "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "6fbd9ac160f9"
+  "autoHash": "c5e5ae78a256"
 }

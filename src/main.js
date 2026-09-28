@@ -276,7 +276,7 @@ function collectTextures(group) {
 function readHash() {
   const p = new URLSearchParams(location.hash.slice(1));
   const num = (k) => (p.has(k) ? Number(p.get(k)) : undefined);
-  return { scene: p.get('cena') ?? undefined, yaw: num('yaw'), pitch: num('pitch'), fov: num('fov') };
+  return { loja: p.get('loja') ?? undefined, scene: p.get('cena') ?? undefined, yaw: num('yaw'), pitch: num('pitch'), fov: num('fov') };
 }
 
 let hashTimer;
@@ -308,4 +308,12 @@ app.querySelector('.open-directory').addEventListener('click', () => {
   info.hide();
   directory.toggle();
 });
-goTo(start.scene ?? tour.startScene, { view: start.scene ? start : undefined });
+if (tour.info?.contact) {
+  // pedido de correção/remoção (LGPD) já preenchido com a loja
+  info.correction = (m) => {
+    const body = `Loja: ${m.title}\nIdentificação no tour: ${m.id}\nLocalização: ${m.info?.location ?? ''}\n\nO que corrigir ou remover:\n`;
+    return `${tour.info.contact}?title=${encodeURIComponent(`Correção: ${m.title}`)}&body=${encodeURIComponent(body)}`;
+  };
+}
+if (start.loja) showModule(start.loja).catch(() => goTo(tour.startScene));
+else goTo(start.scene ?? tour.startScene, { view: start.scene ? start : undefined });

@@ -17,17 +17,17 @@
       "color": "#1F5FA8",
       "facade": "#1F5FA8",
       "label": "Abranches Lotérica",
-      "sublabel": "Variedades e serviços · Box 310"
+      "sublabel": "Lotéricas · Box 310"
     }
   },
   "info": {
-    "category": "Variedades e serviços",
+    "category": "Lotéricas",
     "location": "Boxes 309 e 310 · Pavimento inferior",
-    "color": "#4a5a73",
+    "color": "#1f6e8c",
     "phone": "(41) 3014-7760 · (41) 99975-9265",
     "note": "Na lista aparece como Lotérica Mercado Municipal (mesmo telefone).",
     "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "930a311d7f28"
+  "autoHash": "9a8735882965"
 }

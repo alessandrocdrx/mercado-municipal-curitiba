@@ -13,19 +13,19 @@
   },
   "media": {
     "placeholder": {
-      "color": "#4a5a73",
+      "color": "#8a4f7d",
       "label": "Bordando Sonhos",
-      "sublabel": "Variedades e serviços · Box 305"
+      "sublabel": "Presentes e artesanato · Box 305"
     }
   },
   "info": {
-    "category": "Variedades e serviços",
+    "category": "Presentes e artesanato",
     "location": "Boxes 303 e 305 · Pavimento inferior",
-    "color": "#4a5a73",
+    "color": "#8a4f7d",
     "phone": "(41) 99688-1790",
     "note": "A lista cita boxes 303, 304 e 305; o 304 também aparece como Empório Metropolitano.",
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "1f3cb8a2aebd"
+  "autoHash": "e0c9ef9e4c76"
 }

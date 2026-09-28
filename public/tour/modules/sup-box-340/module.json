@@ -18,16 +18,16 @@
       "facade": "#F2F2F2",
       "textColor": "#1A1A1A",
       "label": "Relojoaria Dajuki",
-      "sublabel": "Variedades e serviços · Box 340"
+      "sublabel": "Consertos e costura · Box 340"
     }
   },
   "info": {
-    "category": "Variedades e serviços",
+    "category": "Consertos e costura",
     "location": "Box 340 · Pavimento superior",
-    "color": "#4a5a73",
+    "color": "#6d6a3a",
     "phone": "(41) 99870-3865",
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "23228845e6af"
+  "autoHash": "a8fd9fdfa208"
 }

@@ -16,16 +16,16 @@
     "placeholder": {
       "color": "#E8C21A",
       "label": "K & M Artesanatos",
-      "sublabel": "Variedades e serviços · Box 76"
+      "sublabel": "Presentes e artesanato · Box 76"
     }
   },
   "info": {
-    "category": "Variedades e serviços",
+    "category": "Presentes e artesanato",
     "location": "Boxes 75 e 76 · Pavimento inferior",
-    "color": "#4a5a73",
+    "color": "#8a4f7d",
     "phone": "(41) 3082-3434 · (41) 99677-0762",
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "87678058e116"
+  "autoHash": "19ac4a48de6d"
 }

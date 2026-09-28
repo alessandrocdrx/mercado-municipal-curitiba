@@ -18,17 +18,17 @@
       "facade": "#1E2F6B",
       "textColor": "#F2F2F2",
       "label": "Box's Celulares",
-      "sublabel": "Variedades e serviços · Box 341"
+      "sublabel": "Consertos e costura · Box 341"
     }
   },
   "info": {
-    "category": "Variedades e serviços",
+    "category": "Consertos e costura",
     "location": "Box 341 · Pavimento superior",
-    "color": "#4a5a73",
+    "color": "#6d6a3a",
     "description": "Assistência técnica de celulares e acessórios, desde 2005.",
     "url": "https://www.mercadomunicipaldecuritiba.com.br/comerciante/boxs-celulares-ltda/",
     "source": "guia público (applocal). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "142b767c72eb"
+  "autoHash": "825d3b541df5"
 }

@@ -14,20 +14,20 @@
   },
   "media": {
     "placeholder": {
-      "color": "#4a5a73",
+      "color": "#2f5d50",
       "facade": "#CFE3E8",
       "label": "Ascesme",
-      "sublabel": "Variedades e serviços · Box 328"
+      "sublabel": "Administração e serviços públicos · Box 328"
     }
   },
   "info": {
-    "category": "Variedades e serviços",
+    "category": "Administração e serviços públicos",
     "location": "Box 328 · Pavimento superior",
-    "color": "#4a5a73",
+    "color": "#2f5d50",
     "phone": "(41) 3363-3764",
     "description": "Associação dos comerciantes do Mercado Municipal.",
     "source": "tour 3D oficial do Mercado (Matterport, set/2026). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "d8ddb2121ae4"
+  "autoHash": "18e3c2a869a6"
 }
