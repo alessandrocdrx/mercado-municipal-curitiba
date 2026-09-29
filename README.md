@@ -87,6 +87,10 @@ ninguém alterou (`autoHash`).
 - **Escadas:** a espiral do Hall Sete de Setembro (`helicoidal`) agora é desenhada; corrimãos e guarda-corpos têm balaústres.
 - **Rua General Carneiro:** prédios do outro lado, árvores e postes; três **cercadinhos com mesas e guarda-sóis** na calçada (função `cercadinho` em `dados-planta.mjs`). **Posições estimadas**: ajuste `x0` e `y0` no local.
 - **Entrada principal e ruas:** a entrada da **Av. Sete de Setembro** (no Hall, porta larga `inf-porta-a`), a **Rua da Paz** (portas C e D, setor de Orgânicos) e o **estacionamento** em frente à Porta E têm calçada, asfalto, faixas, prédios e árvores. Ruas em `RUAS` (`dados-planta.mjs`); `faixasPedestres` = distância em px ao longo da rua. A posição do meio-fio e da porta principal é **estimada**.
+- **Lojas com vários boxes:** boxes vizinhos do mesmo comerciante viram **uma fachada contínua** (ex.: Armazém da Zelma, boxes 28–30), em vez de um letreiro por box.
+- **Escadas (lances):** cada ligação de `ESCADAS` desenha o lance no ponto de origem: **subir** = degraus até o teto; **descer** = vão no piso com degraus dentro. Ao usar a seta, a câmera sobe/desce antes de trocar de andar. Altura do lance **estimada** (4,5 m inf→sup; 3,5 m sup→3º).
+- **Painéis de Poty Lazzarotto:** *Cenas do Largo da Ordem* e *O Quitandeiro* (`OBRAS` em `dados-planta.mjs`), ao lado da Entrada Sete de Setembro; ilustração geométrica no lugar da imagem (obra protegida). **Paredes e posições estimadas** (`PAREDES`). Fonte: patrimoniocultural.pr.gov.br.
+- **Pendente:** escada da Arena Jaime Lerner (falta a localização).
 - **Olhar para baixo no pavimento superior:** onde a planta do piso 2 não tem laje (fora do contorno e nos vãos) o piso fica transparente e aparece o pavimento inferior. O desnível (`abaixo.desnivel`, 4,5 m) é **estimado**; meça e corrija em `dados-planta.mjs`.
 
 ## Como funciona (3 camadas)

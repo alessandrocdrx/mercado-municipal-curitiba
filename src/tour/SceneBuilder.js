@@ -77,6 +77,19 @@ export function hasPhoto(base) {
 
 const CEILING_HEIGHT = 5.5;
 
+/** Retângulo (m da planta) ocupado por um lance de escada: da base até o fim do trecho. */
+function lanceRetangulo(p, larg = 2.4) {
+  const run = (p.altura / 0.17) * 0.28;
+  const yaw = p.yaw * DEG;
+  const dx = Math.sin(yaw);
+  const dy = Math.cos(yaw);
+  const nx = -dy * larg / 2;
+  const ny = dx * larg / 2;
+  const x2 = p.x + dx * run;
+  const y2 = p.y + dy * run;
+  return [[p.x + nx, p.y + ny], [x2 + nx, y2 + ny], [x2 - nx, y2 - ny], [p.x - nx, p.y - ny]];
+}
+
 async function buildModel(group, scene, floor, tourUrl, ctx = {}) {
   // luz para os volumes dos boxes terem faces com tons diferentes
   group.add(new THREE.AmbientLight('#ffffff', estilizado() ? 1.9 : 1.6));
@@ -88,7 +101,10 @@ async function buildModel(group, scene, floor, tourUrl, ctx = {}) {
   // Pavimento com outro embaixo (o superior): o piso fica transparente onde não há laje
   // (fora do contorno e nos vãos) e por ali se vê o pavimento de baixo.
   const vazado = Boolean(floor?.below && ctx.tour && ctx.modules);
-  const vaos = (floor?.props ?? []).filter((p) => p.tipo === 'vao');
+  const vaos = [
+    ...(floor?.props ?? []).filter((p) => p.tipo === 'vao'),
+    ...(floor?.props ?? []).filter((p) => p.tipo === 'lance' && !p.subir).map((p) => ({ tipo: 'vao', pontos: lanceRetangulo(p) })),
+  ];
   const plate = await addFloorPlane(group, scene, floor, tourUrl, { alpha: vazado, holes: vaos, extras: vazado ? sustentos(floor, ctx) : [] });
   if (vazado) await buildBelow(group, scene, floor, tourUrl, ctx, plate);
   if (ctx.modules && ctx.scenes && floor?.id !== 'inferior') {
@@ -188,6 +204,7 @@ function sustentos(floor, { scenes = [], modules = [] }) {
     else if (p.tipo === 'vaso' || p.tipo === 'pilar') out.push({ c: [p.x, p.y], r: 1.0 });
     else if (p.tipo === 'guarda') out.push({ seg: [p.x, p.y, p.x2, p.y2], w: 0.6 });
     else if (p.tipo === 'plataforma') out.push({ poly: p.pontos });
+    else if (p.tipo === 'lance' && p.subir) { const r = lanceRetangulo(p); out.push({ poly: r }); }
     else if (p.tipo === 'escada') out.push({ seg: [p.x, p.y, p.x2, p.y2], w: 2.4 });
   }
   for (const m of modules) {
@@ -410,7 +427,7 @@ function autoGuardas(floor, mask, { modules, scenes }) {
   const lojas = modules
     .filter((m) => isWorldPlacement(m.placement) && (m.placement.floor ?? null) === floor.id && ['box', 'banca', 'porta'].includes(m.type))
     .map((m) => ({ x: m.placement.x, y: m.placement.y, r: (m.placement.width ?? 1) / 2 + 1.4 }));
-  const degraus = props.filter((p) => p.tipo === 'escada').flatMap((p) => [[p.x, p.y], [p.x2, p.y2]]);
+  const degraus = props.filter((p) => p.tipo === 'escada' || p.tipo === 'lance').flatMap((p) => (p.tipo === 'lance' ? lanceRetangulo(p).map(([a, b]) => [a, b]).concat([[p.x, p.y]]) : [[p.x, p.y], [p.x2, p.y2]]));
   const dSeg = (px, py, [x1, y1, x2, y2]) => {
     const dx = x2 - x1;
     const dy = y2 - y1;
@@ -509,6 +526,7 @@ async function buildBelow(group, anchor, floor, tourUrl, { tour, modules }, uppe
     sub.add(fachada);
   }
   for (const prop of lower.props ?? []) {
+    if (prop.tipo === 'lance') continue;
     if (typeof prop.x === 'number' && !visivel(prop.x, prop.y)) continue;
     buildProp(sub, lowerAnchor, prop);
   }
@@ -749,8 +767,8 @@ async function buildModuleMesh(module, placement, scene, model = false) {
   const aspect = (placement.width ?? 1) / (placement.height ?? 1);
   const baseUrl = module.inline ? scene._baseUrl : module._baseUrl;
   let media = module.media ?? {};
-  const kind = module.type === 'porta' ? 'porta' : module.type === 'banca' ? 'banca' : 'box';
-  if (model && !media.src && ['box', 'banca', 'porta'].includes(module.type)) {
+  const kind = module.type === 'porta' ? 'porta' : module.type === 'banca' ? 'banca' : module.type === 'arte' ? 'arte' : 'box';
+  if (model && !media.src && ['box', 'banca', 'porta', 'arte'].includes(module.type)) {
     // fachada com letreiro em vez da placa provisória
     const known = !String(media.placeholder?.sublabel ?? '').includes('não identificado');
     media = { ...media, placeholder: { ...media.placeholder, style: kind, known, tema: estilizado() ? 'estilizado' : undefined } };
@@ -872,6 +890,14 @@ function estiliza(p) {
 
 function buildProp(group, scene, p) {
   const st = estilizado();
+  if (p.tipo === 'lance') {
+    // subir: degraus a partir do ponto; descer: degraus dentro do vão, da base (−altura) até o ponto
+    const r = lanceRetangulo(p);
+    const run = (p.altura / 0.17) * 0.28;
+    const fim = { x: p.x + Math.sin(p.yaw * DEG) * run, y: p.y + Math.cos(p.yaw * DEG) * run };
+    if (p.subir) p = { tipo: 'escada', x: p.x, y: p.y, x2: fim.x, y2: fim.y, altura: p.altura, largura: 2.2, semAviso: false };
+    else p = { tipo: 'escada', x: fim.x, y: fim.y, x2: p.x, y2: p.y, altura: p.altura, largura: 2.2, base: -p.altura, semAviso: true, r };
+  }
   if (st) p = estiliza(p);
   const base = p.base ?? 0;
   const at = (dx = 0, dy = 0, z = 0) => worldToLocal({ x: p.x + dx, y: p.y + dy, z: z + base }, scene);
@@ -1015,7 +1041,17 @@ function buildProp(group, scene, p) {
     const sy = dx / len;
     const px = p.x - (dx / len) * 0.6 + sx * (w / 2 + 0.35);
     const py = p.y - (dy / len) * 0.6 + sy * (w / 2 + 0.35);
-    avisoPoste(px, py, (Math.atan2(-dx, -dy) / DEG + 360) % 360, 'degrau', 0.5);
+    if (!p.semAviso) avisoPoste(px, py, (Math.atan2(-dx, -dy) / DEG + 360) % 360, 'degrau', 0.5);
+  } else if (p.tipo === 'parede') {
+    // parede de contenção/fechamento (planta em m; altura em m)
+    const a = loc(p.x, p.y);
+    const b = loc(p.x2, p.y2);
+    const len = a.distanceTo(b);
+    const w = new THREE.Mesh(geo('parede', () => new THREE.BoxGeometry(0.3, 1, 1)), mat(st ? PALETA.pedra : '#cfc6b4'));
+    w.scale.set(1, p.altura ?? 4.5, len);
+    w.position.copy(a).add(b).multiplyScalar(0.5).setY(a.y + (p.altura ?? 4.5) / 2);
+    w.rotation.y = yawOf(a, b);
+    group.add(w);
   } else if (p.tipo === 'aviso') {
     avisoPoste(p.x, p.y, p.facing ?? 0, p.icone, p.largura ?? 0.6, p.texto, p.z ?? 1.9);
   } else if (p.tipo === 'guardasol') {

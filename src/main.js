@@ -188,6 +188,17 @@ async function goTo(sceneId, { via, view, force } = {}) {
       if (view) viewer.setView(view);
       return;
     }
+    // troca de pavimento pela escada: a câmera anda até o lance e sobe (ou desce) antes de trocar
+    if (via && current?.world && (target.floor ?? null) !== current.world.floor) {
+      const ordem = ['inferior', 'superior', 'nivel3'];
+      const sobe = ordem.indexOf(target.floor) > ordem.indexOf(current.world.floor);
+      const yaw = (via.yaw ?? 0) * Math.PI / 180;
+      const alvo = viewer.eye.clone().add(new THREE.Vector3(Math.sin(yaw) * 6, sobe ? 3.6 : -3.6, -Math.cos(yaw) * 6));
+      info.hide();
+      viewer.setView({ yaw: via.yaw ?? viewer.view.yaw, pitch: sobe ? 22 : -26 });
+      setTimeout(() => fader.classList.add('on'), 900);
+      await viewer.moveEye(alvo, 1500);
+    }
     fader.classList.add('on');
     const [built] = await Promise.all([buildScene(loader, sceneId), wait(200)]);
     const previous = current;

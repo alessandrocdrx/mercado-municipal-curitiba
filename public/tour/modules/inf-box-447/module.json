@@ -3,10 +3,10 @@
   "title": "The Bootlegger's",
   "placement": {
     "floor": "inferior",
-    "x": 93.68,
-    "y": -67.16,
+    "x": 95.02,
+    "y": -67.18,
     "z": 1.4,
-    "width": 2.46,
+    "width": 5.14,
     "height": 2.8,
     "facing": 180,
     "surface": "wall"

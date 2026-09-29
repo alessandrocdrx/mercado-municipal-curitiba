@@ -3,10 +3,10 @@
   "title": "Revistaria Municipal",
   "placement": {
     "floor": "inferior",
-    "x": 101.71,
-    "y": -67.32,
+    "x": 103.05,
+    "y": -67.34,
     "z": 1.4,
-    "width": 2.46,
+    "width": 5.14,
     "height": 3,
     "depth": 4,
     "facing": 180,

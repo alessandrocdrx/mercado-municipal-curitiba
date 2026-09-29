@@ -1,0 +1,28 @@
+{
+  "type": "arte",
+  "title": "Cenas do Largo da Ordem",
+  "placement": {
+    "floor": "inferior",
+    "x": 3,
+    "y": -38.81,
+    "z": 2.3,
+    "width": 5.5,
+    "height": 2,
+    "facing": 90,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "label": "Cenas do Largo da Ordem",
+      "sublabel": "Poty Lazzarotto · 1996"
+    }
+  },
+  "info": {
+    "category": "Arte",
+    "description": "Painel de Poty Lazzarotto (1996), de cerca de 11 m², pintado sobre azulejos com tintas especiais, na ala de alimentação com entrada pela Av. Sete de Setembro. Posição no tour estimada; a obra não é reproduzida aqui.",
+    "url": "https://www.patrimoniocultural.pr.gov.br/Bem-Tombado/Obras-de-Poty-Lazzarotto-Paineis-e-Murais-em-Curitiba",
+    "location": "Pavimento inferior · posição estimada"
+  },
+  "generated": true,
+  "autoHash": "cc368164f16c"
+}

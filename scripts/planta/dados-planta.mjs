@@ -450,6 +450,37 @@ export const ESCADAS = [
   { de: 'sup-dea-norte', para: 'inf-hall-norte', yaw: 261, rotulo: 'Escada helicoidal · descer ao Hall Sete de Setembro' },
 ];
 
+// ---------------------------------------------------------------- paredes e obras de arte
+// Paredes retas (px da planta) que ladeiam a entrada principal. Posições ESTIMADAS.
+export const PAREDES = {
+  inferior: [
+    { de: [45, 560], ate: [45, 673], altura: 4.5 },
+    { de: [45, 783], ate: [45, 890], altura: 4.5 },
+  ],
+};
+
+// Painéis de azulejo de Poty Lazzarotto no Mercado. Fatos: painéis "Cenas do Largo da Ordem" (1996,
+// ~11 m², azulejos pintados, ala de alimentação com entrada pela Av. Sete de Setembro) e "O Quitandeiro"
+// (1997, azulejos). A parede exata NÃO foi confirmada: posições ESTIMADAS. A obra não é reproduzida
+// (direitos autorais): o painel mostra legenda; para uma foto autorizada use `media.src` no module.json.
+const FONTE_POTY = 'https://www.patrimoniocultural.pr.gov.br/Bem-Tombado/Obras-de-Poty-Lazzarotto-Paineis-e-Murais-em-Curitiba';
+export const OBRAS = {
+  inferior: [
+    {
+      id: 'poty-largo-da-ordem', titulo: 'Cenas do Largo da Ordem', autor: 'Poty Lazzarotto', ano: 1996,
+      em: [47.6, 616], facing: 90, largura: 5.5, altura: 2.0,
+      descricao: 'Painel de Poty Lazzarotto (1996), de cerca de 11 m², pintado sobre azulejos com tintas especiais, na ala de alimentação com entrada pela Av. Sete de Setembro. Posição no tour estimada; a obra não é reproduzida aqui.',
+      url: FONTE_POTY,
+    },
+    {
+      id: 'poty-quitandeiro', titulo: 'O Quitandeiro', autor: 'Poty Lazzarotto', ano: 1997,
+      em: [47.6, 836], facing: 90, largura: 3.4, altura: 2.4,
+      descricao: 'Painel de azulejos de Poty Lazzarotto (1997) que retrata um quitandeiro japonês e o trabalho do homem. Posição no tour estimada; a obra não é reproduzida aqui.',
+      url: FONTE_POTY,
+    },
+  ],
+};
+
 // ---------------------------------------------------------------- ruas
 // Camada de rua do lado de fora do prédio (px da planta). `calcada` = faixa
 // entre o prédio e o asfalto; `pista` = asfalto; `portas` recebem faixa de

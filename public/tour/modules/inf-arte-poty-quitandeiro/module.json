@@ -1,0 +1,28 @@
+{
+  "type": "arte",
+  "title": "O Quitandeiro",
+  "placement": {
+    "floor": "inferior",
+    "x": 3,
+    "y": -52.67,
+    "z": 2.5,
+    "width": 3.4,
+    "height": 2.4,
+    "facing": 90,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "label": "O Quitandeiro",
+      "sublabel": "Poty Lazzarotto · 1997"
+    }
+  },
+  "info": {
+    "category": "Arte",
+    "description": "Painel de azulejos de Poty Lazzarotto (1997) que retrata um quitandeiro japonês e o trabalho do homem. Posição no tour estimada; a obra não é reproduzida aqui.",
+    "url": "https://www.patrimoniocultural.pr.gov.br/Bem-Tombado/Obras-de-Poty-Lazzarotto-Paineis-e-Murais-em-Curitiba",
+    "location": "Pavimento inferior · posição estimada"
+  },
+  "generated": true,
+  "autoHash": "769230df8f90"
+}

@@ -135,6 +135,7 @@ function line(ctx, x1, y1, x2, y2) {
  * e, abaixo, a "loja" (vão escuro com balcão). style: 'box' | 'banca' | 'porta'.
  */
 export function facadeTexture(args) {
+  if (args.style === 'arte') return facadeArte(args);
   return args.tema === 'estilizado' ? facadeEstilizada(args) : facadeAtual(args);
 }
 
@@ -573,3 +574,35 @@ export const estacionamentoTexture = once(() => canvasTexture(128, 256, (ctx, w,
   ctx.fillRect(0, 0, 4, h);
   ctx.fillRect(0, 0, w, 4);
 }));
+
+
+/** Painel de arte na parede (mural em estilo geométrico, moldura e plaqueta). */
+function facadeArte({ label = '', sublabel = '', aspect = 2, tema }) {
+  const w = 512;
+  const h = Math.max(96, Math.round(w / aspect));
+  const c = document.createElement('canvas');
+  c.width = w; c.height = h;
+  const g = c.getContext('2d');
+  g.fillStyle = '#3a2f28'; g.fillRect(0, 0, w, h);
+  const m = 8;
+  g.fillStyle = '#efe4cc'; g.fillRect(m, m, w - 2 * m, h - 2 * m - 22);
+  // figuras geométricas (evocam os painéis em traço de Poty; ilustração, não reprodução)
+  const cores = ['#c8553d', '#1f4d3a', '#e8b339', '#2a7f8a', '#2f3a44'];
+  let seed = 7;
+  const rnd = () => { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; };
+  for (let i = 0; i < 16; i++) {
+    g.fillStyle = cores[i % cores.length];
+    const x = m + rnd() * (w - 2 * m - 60);
+    const y = m + rnd() * (h - 2 * m - 22 - 40);
+    if (i % 3 === 0) { g.beginPath(); g.arc(x + 25, y + 20, 14 + rnd() * 14, 0, 6.3); g.fill(); }
+    else g.fillRect(x, y, 20 + rnd() * 50, 14 + rnd() * 28);
+  }
+  g.strokeStyle = '#2f3a44'; g.lineWidth = 2;
+  for (let i = 0; i < 9; i++) { g.beginPath(); g.moveTo(m + rnd() * (w - 2 * m), m); g.bezierCurveTo(rnd() * w, h * 0.3, rnd() * w, h * 0.6, m + rnd() * (w - 2 * m), h - 30); g.stroke(); }
+  g.fillStyle = '#f4ead2'; g.fillRect(0, h - 22, w, 22);
+  g.fillStyle = '#2f3a44'; g.font = 'bold 13px sans-serif'; g.textBaseline = 'middle';
+  g.fillText(`${label} — ${sublabel}`.slice(0, 80), 10, h - 11);
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace;
+  return t;
+}

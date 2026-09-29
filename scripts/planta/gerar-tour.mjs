@@ -9,10 +9,14 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { PAVIMENTOS, BOXES, PORTAS, CENAS, LIGACOES, ESCADAS, RUAS, MOBILIARIO, AREA_COBERTA, CONTORNOS_OSM } from './dados-planta.mjs';
+import { PAVIMENTOS, BOXES, PORTAS, CENAS, LIGACOES, ESCADAS, RUAS, MOBILIARIO, AREA_COBERTA, CONTORNOS_OSM, PAREDES, OBRAS } from './dados-planta.mjs';
 import { COMERCIANTES, CATEGORIAS } from './comerciantes.mjs';
 import { FOTOS_MERCADO, FOTOS_COMERCIANTES } from './fotos.mjs';
 import crypto from 'node:crypto';
+
+const ORDEM_PISOS = ['inferior', 'superior', 'nivel3'];
+const PREFIXO_PISO = { 'inf-': 'inferior', 'sup-': 'superior', 'n3-': 'nivel3' };
+const ALTURA_LANCE = { 'inferior>superior': 4.5, 'superior>nivel3': 3.5 };
 
 const ROOT = 'public/tour';
 const IMG_W = 2000;
@@ -48,6 +52,7 @@ const VISUAL = JSON.parse(fs.readFileSync(new URL('./visual-tour3d.json', import
 const clamp = (v, a, b) => (v === undefined ? undefined : Math.min(b, Math.max(a, v)));
 
 const moduleIds = [];
+const fundidos = new Set(); // boxes absorvidos por uma loja de vários boxes
 const sceneIds = [];
 
 // box → comerciante
@@ -68,8 +73,20 @@ for (const pav of PAVIMENTOS) {
     const tipo = grupo.tipo ?? 'box';
     const passo = ids.length > 1 ? Math.hypot(ate[0] - de[0], ate[1] - de[1]) / (ids.length - 1) : null;
     const larguraPx = grupo.largura ?? passo ?? 40;
+    // boxes vizinhos do mesmo comerciante viram uma loja só (fachada contínua)
+    const dono = (num) => donoDoBox.get(`${prefix}-${tipo}-${num}`);
+    const corridas = [];
     ids.forEach((num, i) => {
-      const t = ids.length > 1 ? i / (ids.length - 1) : 0;
+      const ult = corridas[corridas.length - 1];
+      if (ult && dono(num) && dono(ids[ult.fim]) === dono(num) && ult.fim === i - 1) ult.fim = i;
+      else corridas.push({ ini: i, fim: i });
+    });
+    corridas.forEach(({ ini, fim }) => {
+      const i = ini;
+      const num = ids[ini];
+      const n = fim - ini + 1;
+      for (let k = ini + 1; k <= fim; k++) fundidos.add(`${prefix}-${tipo}-${ids[k]}`);
+      const t = ids.length > 1 ? (ini + fim) / 2 / (ids.length - 1) : 0;
       const centro = [de[0] + (ate[0] - de[0]) * t, de[1] + (ate[1] - de[1]) * t];
       const frente = push(centro, facing, tipo === 'banca' ? 6 : 16);
       const banca = tipo === 'banca';
@@ -84,7 +101,7 @@ for (const pav of PAVIMENTOS) {
           floor: pav.id,
           ...toMeters(pav, frente),
           z: (banca ? 0.6 : 1.4) + (grupo.base ?? 0),
-          width: r2(larguraPx * pav.escala * 0.92),
+          width: r2(larguraPx * pav.escala * (0.92 + (n - 1))),
           height: banca ? 1.2 : r2(clamp(com && VISUAL[com.nome]?.altura, 2.4, 3.5) ?? 2.8),
           depth: banca ? undefined : clamp(com && VISUAL[com.nome]?.profundidade, 1.2, 4),
           facing,
@@ -119,6 +136,15 @@ for (const pav of PAVIMENTOS) {
   }
 
   // ---------------------------------------------------------- módulos: portas
+  for (const obra of OBRAS[pav.id] ?? []) {
+    upsertModule(`${prefix}-arte-${obra.id}`, {
+      type: 'arte',
+      title: obra.titulo,
+      placement: { floor: pav.id, ...toMeters(pav, obra.em), z: 1.3 + obra.altura / 2, width: obra.largura, height: obra.altura, facing: obra.facing, surface: 'wall' },
+      media: { placeholder: { label: obra.titulo, sublabel: `${obra.autor} · ${obra.ano}` } },
+      info: { category: 'Arte', description: obra.descricao, url: obra.url, location: `${pav.titulo} · posição estimada` },
+    });
+  }
   for (const porta of PORTAS[pav.id]) {
     const { facing } = porta;
     upsertModule(`${prefix}-porta-${porta.id.toLowerCase()}`, {
@@ -182,7 +208,7 @@ writeJson(path.join(ROOT, 'tour.json'), {
     covered: AREA_COBERTA[p.id] && {
       from: toMeters(p, AREA_COBERTA[p.id].de), to: toMeters(p, AREA_COBERTA[p.id].ate),
     },
-    props: p.tour3d && mobiliario(p),
+    props: [...(p.tour3d ? mobiliario(p) : []), ...lances(p), ...paredes(p)],
     streets: (RUAS[p.id] ?? []).map((r) => ({
       name: r.nome,
       from: toMeters(p, r.de), to: toMeters(p, r.ate),
@@ -219,7 +245,7 @@ for (const [dir, keep] of [['scenes', sceneIds], ['modules', moduleIds]]) {
 
 verificaLigacoes();
 for (const com of COMERCIANTES) {
-  const faltando = com.boxes.filter((id) => !moduleIds.includes(id));
+  const faltando = com.boxes.filter((id) => !moduleIds.includes(id) && !fundidos.has(id));
   if (faltando.length) {
     console.error(`${com.nome}: box inexistente na planta: ${faltando.join(', ')}`);
     process.exit(1);
@@ -286,6 +312,32 @@ function atravessa(a, b, p, prof) {
 function hash(obj) {
   const campos = pick(obj, ['title', 'media', 'info', 'enabled', 'version']);
   return crypto.createHash('sha1').update(JSON.stringify(campos)).digest('hex').slice(0, 12);
+}
+
+/** Lances de escada nos pontos de vista que têm ligação entre pavimentos (subir ou descer). */
+function lances(p) {
+  const out = [];
+  for (const e of ESCADAS) {
+    const de = (CENAS[p.id] ?? []).find((c) => c.id === e.de);
+    if (!de) continue;
+    const destino = Object.entries(PREFIXO_PISO).find(([pre]) => e.para.startsWith(pre))?.[1];
+    const a = ORDEM_PISOS.indexOf(p.id);
+    const b = ORDEM_PISOS.indexOf(destino);
+    if (a < 0 || b < 0 || a === b) continue;
+    const subir = b > a;
+    if (!subir && p.id === 'nivel3') continue; // o 3º nível não tem piso vazado para descer
+    const altura = ALTURA_LANCE[subir ? `${p.id}>${destino}` : `${destino}>${p.id}`] ?? 4;
+    out.push({ tipo: 'lance', ...toMeters(p, de.em), yaw: e.yaw, subir, altura, rotulo: e.rotulo });
+  }
+  return out;
+}
+
+function paredes(p) {
+  return (PAREDES[p.id] ?? []).map((w) => {
+    const a = toMeters(p, w.de);
+    const b = toMeters(p, w.ate);
+    return { tipo: 'parede', ...a, x2: b.x, y2: b.y, altura: w.altura };
+  });
 }
 
 function upsertModule(id, gerado) {
