@@ -173,6 +173,8 @@ writeJson(path.join(ROOT, 'tour.json'), {
     startScene: p.inicio,
     plan: { src: p.planta, floorSrc: p.planta.replace('planta-', 'piso-'), width: r2(IMG_W * p.escala), height: r2(IMG_H * p.escala) },
     bearingUp: p.rumoCima, // rumo real (graus a partir do norte) do "cima" da planta
+    tour3d: p.tour3d,
+    below: p.abaixo && { floor: p.abaixo.pavimento, drop: p.abaixo.desnivel },
     outlines: CONTORNOS_OSM.filter((c) => c.pavimentos.includes(p.id)).map((c) => ({
       id: `osm-way-${c.way}`, title: c.nome, kind: c.tipo, source: 'OpenStreetMap',
       points: OSM.ways[c.way].lonLat.map((ll) => toMeters(p, lonLatParaPx(p, ll))),

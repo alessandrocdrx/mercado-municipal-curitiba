@@ -461,3 +461,85 @@ function acabamentoLetreiro(ctx, w, signH) {
   ctx.lineWidth = 2;
   ctx.strokeRect(6, 6, w - 12, signH - 14);
 }
+
+// ---------------------------------------------------------------- sinalização
+
+const AVISOS = {
+  saida: { fundo: '#0b7a45', texto: '#ffffff', titulo: 'SAÍDA', ratio: 0.42 },
+  escada: { fundo: '#1f4f8f', texto: '#ffffff', titulo: 'ESCADA', ratio: 0.5 },
+  rampa: { fundo: '#1f4f8f', texto: '#ffffff', titulo: 'RAMPA', ratio: 0.5 },
+  degrau: { fundo: '#f2c200', texto: '#1c1c1c', titulo: 'CUIDADO', sub: 'DEGRAU', ratio: 0.75 },
+  vao: { fundo: '#f2c200', texto: '#1c1c1c', titulo: 'ATENÇÃO', sub: 'VÃO', ratio: 0.75 },
+  acessivel: { fundo: '#1f4f8f', texto: '#ffffff', titulo: 'ACESSÍVEL', ratio: 0.5 },
+};
+const avisoCache = new Map();
+
+/** Placa de sinalização (canvas). `icone` escolhe o modelo; `texto` substitui o título. */
+export function avisoTexture(icone = 'atencao', texto) {
+  const key = `${icone}|${texto ?? ''}`;
+  if (avisoCache.has(key)) return avisoCache.get(key);
+  const cfg = AVISOS[icone] ?? { fundo: '#f2c200', texto: '#1c1c1c', titulo: texto ?? 'ATENÇÃO', ratio: 0.5 };
+  const W = 256;
+  const H = Math.round(W * cfg.ratio);
+  const tex = canvasTexture(W, H, (ctx, w, h) => {
+    ctx.fillStyle = cfg.fundo;
+    ctx.fillRect(0, 0, w, h);
+    ctx.strokeStyle = cfg.texto;
+    ctx.lineWidth = 6;
+    ctx.strokeRect(8, 8, w - 16, h - 16);
+    ctx.fillStyle = cfg.texto;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    const titulo = texto ?? cfg.titulo;
+    if (icone === 'saida') {
+      // porta com seta para a direita
+      ctx.font = '700 62px system-ui, sans-serif';
+      ctx.fillText(titulo, w * 0.42, h / 2 + 3, w * 0.7);
+      ctx.beginPath();
+      ctx.moveTo(w * 0.78, h * 0.5); ctx.lineTo(w * 0.9, h * 0.5);
+      ctx.moveTo(w * 0.84, h * 0.32); ctx.lineTo(w * 0.92, h * 0.5); ctx.lineTo(w * 0.84, h * 0.68);
+      ctx.lineWidth = 7; ctx.stroke();
+    } else if (icone === 'escada' || icone === 'rampa') {
+      ctx.beginPath();
+      if (icone === 'escada') { ctx.moveTo(30, h * 0.42); for (let i = 0; i < 4; i++) { ctx.lineTo(30 + i * 20, h * 0.42 - i * 8 + 8); ctx.lineTo(30 + (i + 1) * 20, h * 0.42 - i * 8 + 8); } } else { ctx.moveTo(30, h * 0.5); ctx.lineTo(120, h * 0.28); ctx.lineTo(120, h * 0.5); ctx.closePath(); }
+      ctx.lineWidth = 6; ctx.stroke();
+      ctx.font = '700 52px system-ui, sans-serif';
+      ctx.fillText(titulo, w * 0.62, h * 0.5, w * 0.56);
+    } else if (cfg.sub) {
+      // triângulo de advertência
+      ctx.fillStyle = cfg.texto;
+      ctx.beginPath(); ctx.moveTo(w * 0.5, 22); ctx.lineTo(w * 0.86, h * 0.56); ctx.lineTo(w * 0.14, h * 0.56); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = cfg.fundo;
+      ctx.font = '800 64px system-ui, sans-serif';
+      ctx.fillText('!', w * 0.5, h * 0.42);
+      ctx.fillStyle = cfg.texto;
+      ctx.font = '800 34px system-ui, sans-serif';
+      ctx.fillText(`${titulo} · ${cfg.sub}`, w / 2, h * 0.8, w * 0.86);
+    } else {
+      ctx.font = '700 44px system-ui, sans-serif';
+      ctx.fillText(titulo, w / 2, h / 2, w * 0.86);
+    }
+  }, false);
+  tex.userData.shared = true;
+  tex.userData.ratio = cfg.ratio;
+  avisoCache.set(key, tex);
+  return tex;
+}
+
+/** Fachada de prédio com janelas (cinza claro; a cor do prédio entra por `material.color`). */
+export const predioTexture = once(() => canvasTexture(128, 128, (ctx, w, h) => {
+  ctx.fillStyle = '#ececec';
+  ctx.fillRect(0, 0, w, h);
+  for (const x of [14, 74]) {
+    ctx.fillStyle = '#556b80';
+    ctx.fillRect(x, 26, 40, 60);
+    ctx.fillStyle = 'rgba(255,255,255,.25)';
+    ctx.fillRect(x, 26, 40, 18);
+    ctx.strokeStyle = '#d0d0d0';
+    ctx.lineWidth = 3;
+    ctx.strokeRect(x, 26, 40, 60);
+    ctx.beginPath(); ctx.moveTo(x + 20, 26); ctx.lineTo(x + 20, 86); ctx.stroke();
+  }
+  ctx.fillStyle = 'rgba(0,0,0,.12)';
+  ctx.fillRect(0, h - 6, w, 6);
+}));

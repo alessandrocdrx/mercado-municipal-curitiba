@@ -39,6 +39,8 @@ export const PAVIMENTOS = [
     ancora: { px: [978, 478], lonLat: [-49.2565894, -25.4346528] }, // centro do setor de orgânicos = centro do prédio "Mercado Municipal - Orgânicos"
     inicio: 'sup-escada',
     tour3d: {"o": [63.17751, -12.47285], "ex": [-0.8709, -0.03092], "ey": [0.11189, -0.97151]},
+    // o que se vê olhando para baixo onde não há piso: o pavimento inferior, ~4,5 m abaixo (desnível ESTIMADO)
+    abaixo: { pavimento: 'inferior', desnivel: 4.5 },
   },
   {
     // 3º nível (administração e auditório): mesmo referencial do pavimento superior
@@ -392,8 +394,38 @@ export const MOBILIARIO = {
     { tipo: 'vaso', em: [48, 63.6] },
     { tipo: 'vaso', em: [48, 65.4] },
     { tipo: 'helicoidal', em: [42, 56.5], r: 1.3, altura: 2.5, cor: '#F2F2F2' },
+    // Corredor da General Carneiro: cercadinhos com mesas na calçada, em frente aos cafés e bares.
+    // Posições ESTIMADAS a partir das lojas (Daimaru, Café do Mercado, The Bootleggers); ajuste x0/y0 no local.
+    ...cercadinho(2, 94.2, '#c0392b'),
+    ...cercadinho(-24.4, 94.2, '#d68910'),
+    ...cercadinho(-71, 94.2, '#1f6f8b'),
   ],
 };
+
+/** Cercadinho de calçada (X, Y do tour 3D): cerca baixa com entrada, 6 mesas, guarda-sóis e vasos. */
+function cercadinho(x0, y0, corSol) {
+  const L = 10;
+  const D = 5.3;
+  const x1 = x0 + L;
+  const y1 = y0 + D;
+  const cerca = { alt: 0.9, cor: '#3a3f45' };
+  const itens = [
+    { tipo: 'guarda', de: [x0, y0], ate: [x0 + L / 2 - 1, y0], ...cerca },
+    { tipo: 'guarda', de: [x0 + L / 2 + 1, y0], ate: [x1, y0], ...cerca },
+    { tipo: 'guarda', de: [x1, y0], ate: [x1, y1], ...cerca },
+    { tipo: 'guarda', de: [x1, y1], ate: [x0, y1], ...cerca },
+    { tipo: 'guarda', de: [x0, y1], ate: [x0, y0], ...cerca },
+  ];
+  for (let i = 0; i < 3; i++) {
+    const cx = x0 + 1.7 + i * 3;
+    itens.push({ tipo: 'guardasol', em: [cx, y0 + 2.6], r: 1.7, cor: corSol });
+    for (let j = 0; j < 2; j++) {
+      itens.push({ tipo: 'mesa', em: [cx, y0 + 1.5 + j * 2.2], r: 0.45, cor: '#f2f2f2', cadeiras: 4, corCadeira: '#2f3a44' });
+    }
+  }
+  for (const [vx, vy] of [[x0 - 0.5, y0 - 0.5], [x1 + 0.5, y0 - 0.5], [x0 - 0.5, y1 + 0.5], [x1 + 0.5, y1 + 0.5]]) itens.push({ tipo: 'vaso', em: [vx, vy] });
+  return itens;
+}
 
 // Escadas entre pavimentos (direção informada à mão: não há planta comum).
 export const ESCADAS = [

@@ -80,6 +80,14 @@ Edições feitas à mão direto num `module.json` (título, info, mídia) são
 preservadas: o gerador só sobrescreve arquivos que ele mesmo escreveu e que
 ninguém alterou (`autoHash`).
 
+### Detalhes da maquete (o que é medido e o que é estimado)
+
+- **Menu Visual → Texturas** (desligado por padrão): reboco, azulejo, letreiros com brilho, concreto e madeira nos boxes, portas, escadas e corrimãos. É só aparência, gerada por código (`src/core/textures.js`).
+- **Sinalização:** "SAÍDA" sobre cada porta e "cuidado, degrau" no pé de cada escada; tipo `aviso` em `MOBILIARIO` cria outras placas (`escada`, `rampa`, `vao`, `acessivel`).
+- **Escadas:** a espiral do Hall Sete de Setembro (`helicoidal`) agora é desenhada; corrimãos e guarda-corpos têm balaústres.
+- **Rua General Carneiro:** prédios do outro lado, árvores e postes; três **cercadinhos com mesas e guarda-sóis** na calçada (função `cercadinho` em `dados-planta.mjs`). **Posições estimadas**: ajuste `x0` e `y0` no local.
+- **Olhar para baixo no pavimento superior:** onde a planta do piso 2 não tem laje (fora do contorno e nos vãos) o piso fica transparente e aparece o pavimento inferior. O desnível (`abaixo.desnivel`, 4,5 m) é **estimado**; meça e corrija em `dados-planta.mjs`.
+
 ## Como funciona (3 camadas)
 
 ```
