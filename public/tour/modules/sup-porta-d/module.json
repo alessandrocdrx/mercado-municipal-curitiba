@@ -1,6 +1,6 @@
 {
   "type": "porta",
-  "title": "Porta D",
+  "title": "Porta D · Orgânicos",
   "placement": {
     "floor": "superior",
     "x": 61.62,
@@ -14,7 +14,7 @@
   "media": {
     "placeholder": {
       "color": "#1e3a5f",
-      "label": "Porta D",
+      "label": "Porta D · Orgânicos",
       "sublabel": "Rua da Paz"
     }
   },
@@ -22,5 +22,5 @@
     "location": "Pavimento superior · Rua da Paz"
   },
   "generated": true,
-  "autoHash": "98168fec0c4c"
+  "autoHash": "f56ac0711e5d"
 }

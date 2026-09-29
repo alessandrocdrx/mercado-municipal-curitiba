@@ -560,3 +560,16 @@ export const predioEstilizado = once(() => canvasTexture(128, 128, (ctx, w, h) =
   ctx.fillStyle = 'rgba(0,0,0,.08)';
   ctx.fillRect(0, h - 6, w, 6);
 }));
+
+/** Asfalto de estacionamento com divisórias das vagas (repetição = 2,5 m × 5,5 m). */
+export const estacionamentoTexture = once(() => canvasTexture(128, 256, (ctx, w, h) => {
+  ctx.fillStyle = '#4a4f55';
+  ctx.fillRect(0, 0, w, h);
+  for (let i = 0; i < 700; i++) {
+    ctx.fillStyle = `rgba(255,255,255,${Math.random() * 0.05})`;
+    ctx.fillRect(Math.random() * w, Math.random() * h, 2, 2);
+  }
+  ctx.fillStyle = '#e8e8e8';
+  ctx.fillRect(0, 0, 4, h);
+  ctx.fillRect(0, 0, w, 4);
+}));

@@ -1,0 +1,26 @@
+{
+  "type": "porta",
+  "title": "Entrada principal",
+  "placement": {
+    "floor": "inferior",
+    "x": 2.84,
+    "y": -45.86,
+    "z": 2.1,
+    "width": 7,
+    "height": 4.2,
+    "facing": 90,
+    "surface": "wall"
+  },
+  "media": {
+    "placeholder": {
+      "color": "#1e3a5f",
+      "label": "Entrada principal",
+      "sublabel": "Av. Sete de Setembro"
+    }
+  },
+  "info": {
+    "location": "Pavimento inferior · Av. Sete de Setembro"
+  },
+  "generated": true,
+  "autoHash": "7ddb41acab4e"
+}

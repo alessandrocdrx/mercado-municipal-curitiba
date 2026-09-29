@@ -123,9 +123,9 @@ for (const pav of PAVIMENTOS) {
     const { facing } = porta;
     upsertModule(`${prefix}-porta-${porta.id.toLowerCase()}`, {
       type: 'porta',
-      title: `Porta ${porta.id}`,
-      placement: { floor: pav.id, ...toMeters(pav, porta.em), z: 1.6, width: 3.2, height: 3.2, facing, surface: 'wall' },
-      media: { placeholder: { color: '#1e3a5f', label: `Porta ${porta.id}`, sublabel: porta.rua } },
+      title: porta.titulo ?? `Porta ${porta.id}`,
+      placement: { floor: pav.id, ...toMeters(pav, porta.em), z: (porta.altura ?? 3.2) / 2, width: porta.largura ?? 3.2, height: porta.altura ?? 3.2, facing, surface: 'wall' },
+      media: { placeholder: { color: '#1e3a5f', label: porta.titulo ?? `Porta ${porta.id}`, sublabel: porta.rua } },
       info: { location: `${pav.titulo} · ${porta.rua}` },
     });
   }

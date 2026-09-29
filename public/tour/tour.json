@@ -944,6 +944,40 @@
             67.41,
             89.78
           ]
+        },
+        {
+          "name": "Av. Sete de Setembro",
+          "from": {
+            "x": 2.84,
+            "y": 0
+          },
+          "to": {
+            "x": 2.84,
+            "y": -94.5
+          },
+          "side": "direita",
+          "sidewalk": 6.93,
+          "road": 12.6,
+          "farSidewalk": 5.04,
+          "crosswalks": [
+            45.86
+          ]
+        },
+        {
+          "name": "Rua da Paz",
+          "from": {
+            "x": 0,
+            "y": 15.75
+          },
+          "to": {
+            "x": 126,
+            "y": 15.75
+          },
+          "side": "norte",
+          "sidewalk": 3.78,
+          "road": 8.82,
+          "farSidewalk": 3.15,
+          "crosswalks": []
         }
       ]
     },
@@ -2821,7 +2855,45 @@
           "corCadeira": "#1a1a1a"
         }
       ],
-      "streets": []
+      "streets": [
+        {
+          "name": "Rua da Paz",
+          "from": {
+            "x": 0,
+            "y": -12.98
+          },
+          "to": {
+            "x": 145,
+            "y": -12.98
+          },
+          "side": "norte",
+          "sidewalk": 3.99,
+          "road": 7.98,
+          "farSidewalk": 2.9,
+          "crosswalks": [
+            40.96,
+            61.62
+          ]
+        },
+        {
+          "name": "Av. Sete de Setembro",
+          "from": {
+            "x": 8.99,
+            "y": 0
+          },
+          "to": {
+            "x": 8.99,
+            "y": -108.75
+          },
+          "side": "direita",
+          "sidewalk": 3.99,
+          "road": 10.15,
+          "farSidewalk": 3.26,
+          "crosswalks": [
+            31.9
+          ]
+        }
+      ]
     },
     {
       "id": "nivel3",
@@ -3226,6 +3298,7 @@
     "inf-porta-i",
     "inf-porta-h",
     "inf-porta-g",
+    "inf-porta-a",
     "sup-box-312",
     "sup-box-313",
     "sup-box-314",

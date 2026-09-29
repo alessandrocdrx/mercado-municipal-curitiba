@@ -86,6 +86,7 @@ ninguém alterou (`autoHash`).
 - **Sinalização:** "SAÍDA" sobre cada porta e "cuidado, degrau" no pé de cada escada; tipo `aviso` em `MOBILIARIO` cria outras placas (`escada`, `rampa`, `vao`, `acessivel`).
 - **Escadas:** a espiral do Hall Sete de Setembro (`helicoidal`) agora é desenhada; corrimãos e guarda-corpos têm balaústres.
 - **Rua General Carneiro:** prédios do outro lado, árvores e postes; três **cercadinhos com mesas e guarda-sóis** na calçada (função `cercadinho` em `dados-planta.mjs`). **Posições estimadas**: ajuste `x0` e `y0` no local.
+- **Entrada principal e ruas:** a entrada da **Av. Sete de Setembro** (no Hall, porta larga `inf-porta-a`), a **Rua da Paz** (portas C e D, setor de Orgânicos) e o **estacionamento** em frente à Porta E têm calçada, asfalto, faixas, prédios e árvores. Ruas em `RUAS` (`dados-planta.mjs`); `faixasPedestres` = distância em px ao longo da rua. A posição do meio-fio e da porta principal é **estimada**.
 - **Olhar para baixo no pavimento superior:** onde a planta do piso 2 não tem laje (fora do contorno e nos vãos) o piso fica transparente e aparece o pavimento inferior. O desnível (`abaixo.desnivel`, 4,5 m) é **estimado**; meça e corrija em `dados-planta.mjs`.
 
 ## Como funciona (3 camadas)

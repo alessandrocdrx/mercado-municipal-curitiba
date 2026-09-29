@@ -189,12 +189,14 @@ export const PORTAS = {
     { id: 'I', em: [1070, 1117], facing: 0, rua: 'Rua General Carneiro' },
     { id: 'H', em: [1425, 1127], facing: 0, rua: 'Rua General Carneiro' },
     { id: 'G', em: [1860, 1035], facing: 315, rua: 'lado leste' },
+    // Entrada principal, no Hall Sete de Setembro (porta larga; posição ESTIMADA a oeste do ponto de vista do hall)
+    { id: 'A', titulo: 'Entrada principal', em: [45, 728], facing: 90, rua: 'Av. Sete de Setembro', largura: 7, altura: 4.2 },
   ],
   nivel3: [],
   superior: [
     { id: 'B', em: [140, 440], facing: 90, rua: 'Avenida Sete de Setembro' },
     { id: 'C', em: [565, 170], facing: 180, rua: 'Rua da Paz' },
-    { id: 'D', em: [850, 180], facing: 180, rua: 'Rua da Paz' },
+    { id: 'D', titulo: 'Porta D · Orgânicos', em: [850, 180], facing: 180, rua: 'Rua da Paz' },
   ],
 };
 
@@ -460,6 +462,38 @@ export const RUAS = {
       lado: 'sul',                       // a rua fica ao sul (para baixo na planta)
       calcada: 120, pista: 170, calcadaOposta: 70,
       faixasPedestres: [765, 1070, 1425],
+    },
+    {
+      // lado oeste: a entrada principal do Hall (posição do meio-fio ESTIMADA)
+      nome: 'Av. Sete de Setembro',
+      de: [45, 0], ate: [45, 1500],
+      lado: 'direita',
+      calcada: 110, pista: 200, calcadaOposta: 80,
+      faixasPedestres: [728], // distância em px ao longo da rua, a partir de `de`
+    },
+    {
+      // acima do estacionamento que fica em frente à Porta E (posição ESTIMADA pelo contorno do OpenStreetMap)
+      nome: 'Rua da Paz',
+      de: [0, -250], ate: [2000, -250],
+      lado: 'norte',
+      calcada: 60, pista: 140, calcadaOposta: 50,
+    },
+  ],
+  superior: [
+    {
+      // lado norte: portas C e D (setor de Orgânicos); a rua fica acima da planta
+      nome: 'Rua da Paz',
+      de: [0, 179], ate: [2000, 179],
+      lado: 'norte',
+      calcada: 55, pista: 110, calcadaOposta: 40,
+      faixasPedestres: [565, 850],
+    },
+    {
+      nome: 'Av. Sete de Setembro',
+      de: [124, 0], ate: [124, 1500],
+      lado: 'direita',
+      calcada: 55, pista: 140, calcadaOposta: 45,
+      faixasPedestres: [440],
     },
   ],
 };

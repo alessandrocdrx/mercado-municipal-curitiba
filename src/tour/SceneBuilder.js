@@ -3,7 +3,7 @@
 
 import * as THREE from 'three';
 import { DEG, bearing, wrapDeg, worldToLocal } from '../core/geo.js';
-import { textureFor, ceilingTexture, roadTexture, sidewalkTexture, crosswalkTexture, streetSignTexture, avisoTexture, predioTexture, predioEstilizado, tetoEstilizado, harmoniza, PALETA } from '../core/textures.js';
+import { textureFor, ceilingTexture, roadTexture, sidewalkTexture, crosswalkTexture, streetSignTexture, avisoTexture, estacionamentoTexture, predioTexture, predioEstilizado, tetoEstilizado, harmoniza, PALETA } from '../core/textures.js';
 import { settings } from '../core/settings.js';
 
 const estilizado = () => settings.estilo === 'estilizado';
@@ -121,6 +121,7 @@ async function buildModel(group, scene, floor, tourUrl, ctx = {}) {
   }
   group.add(ceiling);
 
+  for (const o of floor?.outlines ?? []) if (o.kind === 'estacionamento') addParking(group, scene, o);
   for (const street of floor?.streets ?? []) buildStreet(group, scene, street);
   for (const prop of floor?.props ?? []) buildProp(group, scene, vazado && prop.tipo === 'vao' ? { ...prop, aberto: true } : prop);
 
@@ -519,6 +520,20 @@ function lowMat(color) {
   return lowMats.get(color);
 }
 
+/** Estacionamento (contorno do OpenStreetMap): asfalto com divisórias das vagas, ao nível da rua. */
+function addParking(group, scene, outline) {
+  const shape = new THREE.Shape(outline.points.map((p) => new THREE.Vector2(p.x, p.y)));
+  const map = estacionamentoTexture().clone();
+  map.userData = { own: true };
+  map.repeat.set(1 / 2.5, 1 / 5.5);
+  map.needsUpdate = true;
+  const m = new THREE.Mesh(new THREE.ShapeGeometry(shape), new THREE.MeshBasicMaterial({ map }));
+  m.name = 'estacionamento';
+  m.rotation.x = -Math.PI / 2;
+  m.position.y = 0.02 - (scene.position?.z ?? 1.6);
+  group.add(m);
+}
+
 /**
  * Rua do lado de fora do prédio: calçada, meio-fio, asfalto com faixa
  * central, faixas de pedestres em frente às portas, calçada oposta e placas.
@@ -554,8 +569,8 @@ function buildStreet(group, scene, st) {
 
   // faixas de pedestres em frente às portas
   const cwTex = crosswalkTexture();
-  for (const x of st.crosswalks ?? []) {
-    const base = { x: st.from.x + (x - st.from.x), y: st.from.y };
+  for (const dist of st.crosswalks ?? []) { // distância em m ao longo da rua, a partir de `from`
+    const base = { x: st.from.x + Math.sin(along * DEG) * dist, y: st.from.y + Math.cos(along * DEG) * dist };
     const m = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ map: cwTex, transparent: true }));
     const c = { x: base.x + n.x * (st.sidewalk + st.road / 2), y: base.y + n.y * (st.sidewalk + st.road / 2) };
     applyPlacement(m, { ...c, z: 0.02, width: 4, height: st.road - 0.6, facing: along - 90, surface: 'floor' }, scene);
