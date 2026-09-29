@@ -269,10 +269,10 @@ export const CENAS = {
     { id: 'sup-rosa-3', titulo: 'Praça 7 de Setembro · Mister Dea', em: [826, 927], cor: ROSA },
     { id: 'sup-rosa-4', titulo: 'Praça 7 de Setembro · centro', em: [841, 1061], cor: ROSA },
     { id: 'sup-p7-take', titulo: 'Praça 7 de Setembro · Takê e Pastelaria', em: [857, 1190], cor: ROSA },
-    { id: 'sup-verde-porta-d', titulo: 'Área verde · Porta D', em: [870, 240], cor: VERDE_ESC },
-    { id: 'sup-verde-1', titulo: 'Área verde · centro', em: [900, 440], cor: VERDE_ESC },
-    { id: 'sup-verde-2', titulo: 'Área verde · leste', em: [1055, 470], cor: VERDE_ESC },
-    { id: 'sup-verde-3', titulo: 'Área verde · sul', em: [900, 640], cor: VERDE_ESC },
+    { id: 'sup-verde-porta-d', titulo: 'Setor de Orgânicos · entrada (Porta D)', em: [870, 240], cor: VERDE_ESC },
+    { id: 'sup-verde-1', titulo: 'Setor de Orgânicos · bancas', em: [900, 440], cor: VERDE_ESC },
+    { id: 'sup-verde-2', titulo: 'Setor de Orgânicos · lojas', em: [1055, 470], cor: VERDE_ESC },
+    { id: 'sup-verde-3', titulo: 'Setor de Orgânicos · praça de mesas', em: [900, 640], cor: VERDE_ESC },
     { id: 'sup-dea-norte', titulo: 'Praça Déa · Bonna Gourmet e Anarco', em: [572, 935], cor: ROSA, base: 1.5 },
     { id: 'sup-dea-centro', titulo: 'Praça Déa · centro', em: [587, 1057], cor: ROSA, base: 1.5 },
     { id: 'sup-dea-sul', titulo: 'Praça Déa · Fujii e Box Curitiba', em: [590, 1170], cor: ROSA, base: 1.5 },
@@ -357,6 +357,7 @@ export const MOBILIARIO = {
     { tipo: 'pilar', em: [4.5, 28], altura: 3.5 },
     { tipo: 'pilar', em: [4.5, 33], altura: 3.5 },
     { tipo: 'guarda', de: [8, 20], ate: [8, 45] },
+    { tipo: 'escada', de: [7, 41], ate: [4.2, 44.8], altura: 2.6, largura: 1.5, corGuarda: '#1a1a1a' }, // sobe ao 3º nível (1º lance)
     { tipo: 'vaso', em: [-16, 35] },
     { tipo: 'placa', em: [-6, 35], z: 3.6, texto: 'Orgânicas', subtexto: 'Praça de Alimentação', facing: 90, cor: '#8a8a1f' },
     // Galeria de restaurantes sobre a R. General Carneiro
@@ -400,6 +401,13 @@ export const ESCADAS = [
   { de: 'sup-escada', para: 'inf-a-00', yaw: 180, rotulo: 'Escada · descer ao pavimento inferior' },
   { de: 'sup-verde-2', para: 'n3-auditorio', yaw: 90, rotulo: 'Escada · subir ao 3º nível' },
   { de: 'n3-auditorio', para: 'sup-verde-2', yaw: 270, rotulo: 'Escada · descer ao pavimento superior' },
+  // Escadas medidas no levantamento do piso 2 (p2_escadas.csv)
+  { de: 'sup-rosa-4', para: 'inf-b-00', yaw: 285, rotulo: 'Escada junto ao Takê · descer ao térreo' },
+  { de: 'inf-b-00', para: 'sup-rosa-4', yaw: 22, rotulo: 'Escada · subir à Praça 7 de Setembro' },
+  { de: 'sup-verde-3', para: 'n3-gerencia', yaw: 211, rotulo: 'Escada dos Orgânicos · subir ao 3º nível' },
+  { de: 'n3-gerencia', para: 'sup-verde-3', yaw: 180, rotulo: 'Escada · descer ao Setor de Orgânicos' },
+  { de: 'inf-hall-norte', para: 'sup-dea-norte', yaw: 301, rotulo: 'Escada helicoidal · subir à Praça Déa' },
+  { de: 'sup-dea-norte', para: 'inf-hall-norte', yaw: 261, rotulo: 'Escada helicoidal · descer ao Hall Sete de Setembro' },
 ];
 
 // ---------------------------------------------------------------- ruas

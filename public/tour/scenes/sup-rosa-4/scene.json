@@ -18,6 +18,12 @@
     },
     {
       "to": "sup-p7-take"
+    },
+    {
+      "to": "inf-b-00",
+      "yaw": 285,
+      "pitch": -20,
+      "label": "Escada junto ao Takê · descer ao térreo"
     }
   ],
   "generated": true

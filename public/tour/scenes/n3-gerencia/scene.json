@@ -15,6 +15,12 @@
   "links": [
     {
       "to": "n3-oeste"
+    },
+    {
+      "to": "sup-verde-3",
+      "yaw": 180,
+      "pitch": -20,
+      "label": "Escada · descer ao Setor de Orgânicos"
     }
   ],
   "generated": true

@@ -18,6 +18,12 @@
     },
     {
       "to": "sup-dea-centro"
+    },
+    {
+      "to": "inf-hall-norte",
+      "yaw": 261,
+      "pitch": -20,
+      "label": "Escada helicoidal · descer ao Hall Sete de Setembro"
     }
   ],
   "generated": true

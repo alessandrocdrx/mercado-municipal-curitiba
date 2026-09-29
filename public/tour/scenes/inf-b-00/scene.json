@@ -24,6 +24,12 @@
     },
     {
       "to": "inf-rampa"
+    },
+    {
+      "to": "sup-rosa-4",
+      "yaw": 22,
+      "pitch": -20,
+      "label": "Escada · subir à Praça 7 de Setembro"
     }
   ],
   "generated": true

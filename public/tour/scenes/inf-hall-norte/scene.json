@@ -18,6 +18,12 @@
     },
     {
       "to": "inf-hall-oeste"
+    },
+    {
+      "to": "sup-dea-norte",
+      "yaw": 301,
+      "pitch": -20,
+      "label": "Escada helicoidal · subir à Praça Déa"
     }
   ],
   "generated": true

@@ -1,5 +1,5 @@
 {
-  "title": "Área verde · sul",
+  "title": "Setor de Orgânicos · praça de mesas",
   "floor": "superior",
   "position": {
     "x": 65.25,
@@ -18,6 +18,12 @@
     },
     {
       "to": "sup-verde-1"
+    },
+    {
+      "to": "n3-gerencia",
+      "yaw": 211,
+      "pitch": -20,
+      "label": "Escada dos Orgânicos · subir ao 3º nível"
     }
   ],
   "generated": true

@@ -434,8 +434,9 @@ function buildProp(group, scene, p) {
       if (p.banquetas) {
         add(geo('banq', () => new THREE.CylinderGeometry(0.18, 0.18, p.alta ? 0.75 : 0.45, 10)), p.corCadeira, cx, cy, p.alta ? 0.375 : 0.225);
       } else {
-        add(geo('assento', () => new THREE.BoxGeometry(0.42, 0.05, 0.42)), p.corCadeira, cx, cy, 0.45);
-        const back = add(geo('encosto', () => new THREE.BoxGeometry(0.42, 0.45, 0.04)), p.corCadeira, cx + Math.sin(a) * 0.2, cy + Math.cos(a) * 0.2, 0.7);
+        add(geo('assento', () => new THREE.BoxGeometry(0.4, 0.04, 0.4)), p.corCadeira, cx, cy, 0.45);
+        add(geo('pernaC', () => new THREE.CylinderGeometry(0.02, 0.02, 0.44, 5)), '#2b2b2b', cx, cy, 0.22);
+        const back = add(geo('encosto', () => new THREE.BoxGeometry(0.4, 0.32, 0.03)), p.corCadeira, cx + Math.sin(a) * 0.2, cy + Math.cos(a) * 0.2, 0.68);
         back.rotation.y = -((scene.northYaw ?? 0) * DEG + a);
       }
     }
@@ -504,9 +505,12 @@ function buildProp(group, scene, p) {
     // placa suspensa com o nome da área (dupla face)
     const tex = textureFor({ placeholder: { color: p.cor ?? '#1f4d3a', label: p.texto, sublabel: p.subtexto ?? '' } }, { aspect: 4, resolution: 256 });
     tex.then((t) => {
-      for (const f of [p.facing ?? 0, (p.facing ?? 0) + 180]) {
+      const w = p.largura ?? 3;
+      for (const f of [0, 90, 180, 270]) {
+        const fa = ((p.facing ?? 0) + f) % 360;
+        const d = w / 2; // cubo suspenso: cada face afastada do centro, virada para fora
         const m = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ map: t }));
-        applyPlacement(m, { x: p.x, y: p.y, z: (p.z ?? 4) + base, width: p.largura ?? 3, height: (p.largura ?? 3) / 4, facing: f % 360, surface: 'wall' }, scene);
+        applyPlacement(m, { x: p.x + Math.sin(fa * DEG) * d, y: p.y + Math.cos(fa * DEG) * d, z: (p.z ?? 4) + base, width: w, height: w / 4, facing: fa, surface: 'wall' }, scene);
         group.add(m);
       }
     });
