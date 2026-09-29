@@ -86,7 +86,7 @@ async function buildModel(group, scene, floor, tourUrl, ctx = {}) {
   // (fora do contorno e nos vãos) e por ali se vê o pavimento de baixo.
   const vazado = Boolean(floor?.below && ctx.tour && ctx.modules);
   const vaos = (floor?.props ?? []).filter((p) => p.tipo === 'vao');
-  const plate = await addFloorPlane(group, scene, floor, tourUrl, { alpha: vazado, holes: vaos });
+  const plate = await addFloorPlane(group, scene, floor, tourUrl, { alpha: vazado, holes: vaos, extras: vazado ? sustentos(floor, ctx) : [] });
   if (vazado) await buildBelow(group, scene, floor, tourUrl, ctx, plate);
   if (ctx.modules && ctx.scenes && floor?.id !== 'inferior') {
     for (const g of autoGuardas(floor, plate?.userData.mask, ctx)) buildProp(group, scene, g);
@@ -129,7 +129,7 @@ async function buildModel(group, scene, floor, tourUrl, ctx = {}) {
  * coberta (fora dela a foto mostra só o papel). Com `alpha`, o papel de fora e os
  * vãos ficam transparentes. Devolve a textura base (com a máscara em userData).
  */
-async function addFloorPlane(group, scene, floor, tourUrl, { alpha = false, holes = [] } = {}) {
+async function addFloorPlane(group, scene, floor, tourUrl, { alpha = false, holes = [], extras = [] } = {}) {
   if (!floor?.plan) return null;
   const W = floor.plan.width;
   const H = floor.plan.height;
@@ -139,7 +139,7 @@ async function addFloorPlane(group, scene, floor, tourUrl, { alpha = false, hole
   const y0 = Math.min(-cov.from.y, -cov.to.y); // distância a partir do topo da planta
   const y1 = Math.max(-cov.from.y, -cov.to.y);
   const original = await textureFor({ src: floor.plan.floorSrc ?? floor.plan.src }, { baseUrl: tourUrl }); // piso sem textos
-  const base = alpha ? plateTexture(original, floor, holes) : original;
+  const base = alpha ? plateTexture(original, floor, holes, extras) : original;
   const tex = base.clone();
   tex.userData = { own: true, base }; // cópia com recorte próprio
   tex.repeat.set((x1 - x0) / W, (y1 - y0) / H);
@@ -162,7 +162,36 @@ const plateCache = new Map();
  * Cópia da foto do piso em que o "papel" ligado às bordas (fora do contorno da laje)
  * e os vãos são transparentes. `userData.mask` guarda 0/255 por pixel.
  */
-function plateTexture(original, floor, holes) {
+/**
+ * Formas (em metros da planta) onde o piso do pavimento existe mesmo fora do contorno
+ * desenhado: a planta é esquemática, mas mesas, lojas, caminhos e plataformas são medidos.
+ */
+function sustentos(floor, { scenes = [], modules = [] }) {
+  const same = (s) => (s.floor ?? null) === floor.id && s.position;
+  const byId = new Map(scenes.map((s) => [s.id, s]));
+  const out = [];
+  for (const s of scenes.filter(same)) {
+    out.push({ c: [s.position.x, s.position.y], r: 3.2 });
+    for (const l of s.links ?? []) {
+      const t = byId.get(l.to);
+      if (t && same(t)) out.push({ seg: [s.position.x, s.position.y, t.position.x, t.position.y], w: 3.2 });
+    }
+  }
+  for (const p of floor.props ?? []) {
+    if (p.tipo === 'mesa') out.push({ c: [p.x, p.y], r: 1.7 });
+    else if (p.tipo === 'vaso' || p.tipo === 'pilar') out.push({ c: [p.x, p.y], r: 1.0 });
+    else if (p.tipo === 'guarda') out.push({ seg: [p.x, p.y, p.x2, p.y2], w: 0.6 });
+    else if (p.tipo === 'plataforma') out.push({ poly: p.pontos });
+    else if (p.tipo === 'escada') out.push({ seg: [p.x, p.y, p.x2, p.y2], w: 2.4 });
+  }
+  for (const m of modules) {
+    const q = m.placement;
+    if (isWorldPlacement(q) && (q.floor ?? null) === floor.id && ['box', 'banca', 'porta'].includes(m.type)) out.push({ c: [q.x, q.y], r: 1.6 });
+  }
+  return out;
+}
+
+function plateTexture(original, floor, holes, extras = []) {
   const key = `${floor.id}|${holes.length}`;
   if (plateCache.has(key)) return plateCache.get(key);
   const img = original.image;
@@ -198,6 +227,53 @@ function plateTexture(original, floor, holes) {
     if (y < H - 1) push(x, y + 1);
   }
   ctx.putImageData(data, 0, 0);
+  // Pinta atrás do que já existe: só aparece onde a foto estava transparente.
+  const kx = W / floor.plan.width;
+  const ky = H / floor.plan.height;
+  const paint = (c) => {
+    c.fillStyle = '#e2d9c8';
+    c.strokeStyle = '#e2d9c8';
+    c.lineCap = 'round';
+    for (const s of extras) {
+      if (s.c) {
+        c.beginPath();
+        c.arc(s.c[0] * kx, -s.c[1] * ky, s.r * kx, 0, Math.PI * 2);
+        c.fill();
+      } else if (s.seg) {
+        c.lineWidth = s.w * kx;
+        c.beginPath();
+        c.moveTo(s.seg[0] * kx, -s.seg[1] * ky);
+        c.lineTo(s.seg[2] * kx, -s.seg[3] * ky);
+        c.stroke();
+      } else if (s.poly) {
+        c.beginPath();
+        s.poly.forEach(([x, y], i) => { if (i) c.lineTo(x * kx, -y * ky); else c.moveTo(x * kx, -y * ky); });
+        c.closePath();
+        c.fill();
+      }
+    }
+  };
+  if (extras.length) {
+    // o contorno preto da planta não deve cortar o chão nas áreas estendidas
+    const ex = document.createElement('canvas');
+    ex.width = W;
+    ex.height = H;
+    const ec = ex.getContext('2d', { willReadFrequently: true });
+    paint(ec);
+    const area = ec.getImageData(0, 0, W, H).data;
+    const cur = ctx.getImageData(0, 0, W, H);
+    const c = cur.data;
+    for (let k = 0; k < W * H; k++) {
+      if (!area[k * 4 + 3] || !c[k * 4 + 3]) continue;
+      const r = c[k * 4];
+      const g = c[k * 4 + 1];
+      const b = c[k * 4 + 2];
+      if (r + g + b < 450 && Math.max(r, g, b) - Math.min(r, g, b) < 30) { c[k * 4] = 226; c[k * 4 + 1] = 217; c[k * 4 + 2] = 200; }
+    }
+    ctx.putImageData(cur, 0, 0);
+  }
+  ctx.globalCompositeOperation = 'destination-over';
+  paint(ctx);
   // vãos (polígonos em metros da planta → pixels)
   ctx.globalCompositeOperation = 'destination-out';
   ctx.fillStyle = '#000';
