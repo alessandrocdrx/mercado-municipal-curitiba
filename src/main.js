@@ -9,6 +9,7 @@ import { InfoPanel } from './ui/InfoPanel.js';
 import { Minimap } from './ui/Minimap.js';
 import { Editor } from './ui/Editor.js';
 import { Directory } from './ui/Directory.js';
+import { settings } from './core/settings.js';
 import { bearing, DEG } from './core/geo.js';
 import * as THREE from 'three';
 
@@ -29,6 +30,17 @@ const minimap = new Minimap(app, {
 const editor = new Editor(viewer, app);
 const directory = new Directory(app, { onGo: (moduleId) => showModule(moduleId) });
 editor.onReload = () => reload();
+
+// Menu Visual: opções que mudam só a aparência (a atual é o padrão)
+const visualBtn = app.querySelector('.open-visual');
+const visualMenu = app.querySelector('.visual-menu');
+const optTexturas = app.querySelector('#opt-texturas');
+optTexturas.checked = settings.texturas;
+visualBtn.addEventListener('click', (e) => { e.stopPropagation(); visualMenu.hidden = !visualMenu.hidden; });
+document.addEventListener('click', (e) => { if (!visualMenu.hidden && !visualMenu.contains(e.target)) visualMenu.hidden = true; });
+window.addEventListener('keydown', (e) => { if (e.key === 'Escape') visualMenu.hidden = true; });
+optTexturas.addEventListener('change', () => settings.setTexturas(optTexturas.checked));
+settings.onChange(() => rebuild());
 
 let current = null;
 let navigating = null;
@@ -294,6 +306,16 @@ async function showModule(moduleId) {
   const yaw = wrapDeg((best.northYaw ?? 0) + bearing(best.position, p));
   await goTo(best.id, { view: { yaw, pitch: -3, fov: 65 }, force: true });
   info.show(mod);
+}
+
+/** Remonta o ponto atual (mesma vista) depois de mudar uma opção de visual. */
+async function rebuild() {
+  if (!current || navigating) return;
+  const old = current;
+  const view = { ...viewer.view };
+  current = null;
+  await goTo(old.scene.id, { view });
+  old.dispose();
 }
 
 async function reload() {

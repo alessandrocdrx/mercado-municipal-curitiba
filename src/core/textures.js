@@ -134,7 +134,7 @@ function line(ctx, x1, y1, x2, y2) {
  * Fachada provisória para a maquete 3D: letreiro colorido no alto com o nome
  * e, abaixo, a "loja" (vão escuro com balcão). style: 'box' | 'banca' | 'porta'.
  */
-export function facadeTexture({ style = 'box', color = '#6b6e73', label = '', sublabel = '', aspect = 1, known = true, facade, textColor, closed, vitrine, shutter }) {
+export function facadeTexture({ style = 'box', color = '#6b6e73', label = '', sublabel = '', aspect = 1, known = true, facade, textColor, closed, vitrine, shutter, textura }) {
   const w = 320;
   const h = Math.max(64, Math.round(w / aspect));
   const canvas = document.createElement('canvas');
@@ -149,6 +149,20 @@ export function facadeTexture({ style = 'box', color = '#6b6e73', label = '', su
     ctx.fillRect(0, 0, w, h * 0.26);
     ctx.fillRect(0, 0, w * 0.07, h);
     ctx.fillRect(w * 0.93, 0, w * 0.07, h);
+    if (textura) {
+      // moldura metálica com brilho, requadro interno e soleira de latão
+      const g = ctx.createLinearGradient(0, 0, w, 0);
+      g.addColorStop(0, 'rgba(255,255,255,.28)'); g.addColorStop(0.5, 'rgba(255,255,255,0)'); g.addColorStop(1, 'rgba(255,255,255,.28)');
+      ctx.fillStyle = g;
+      ctx.fillRect(0, 0, w * 0.07, h);
+      ctx.fillRect(w * 0.93, 0, w * 0.07, h);
+      ctx.fillRect(0, 0, w, h * 0.26);
+      ctx.strokeStyle = '#5f7791';
+      ctx.lineWidth = 3;
+      ctx.strokeRect(w * 0.07, h * 0.26, w * 0.86, h * 0.72);
+      ctx.fillStyle = '#b8964a';
+      ctx.fillRect(w * 0.07, h * 0.97, w * 0.86, h * 0.03);
+    }
     signText(ctx, label, sublabel, 0, 0, w, h * 0.26);
     const tex = new THREE.CanvasTexture(canvas);
     tex.colorSpace = THREE.SRGBColorSpace;
@@ -178,11 +192,13 @@ export function facadeTexture({ style = 'box', color = '#6b6e73', label = '', su
       ctx.fillStyle = vitrine ? '#cfe3ea' : known ? shade(facade ?? color, 0.35) : '#8a8a8a';
       ctx.fillRect(w * 0.06, h * (style === 'banca' ? 0.72 : 0.68), w * 0.88, h);
     }
+    if (textura) acabamentoLoja(ctx, w, h, { style, signH, counterY: h * (style === 'banca' ? 0.72 : 0.68), plain: Boolean(shutter || closed) });
     // letreiro
     ctx.fillStyle = color;
     ctx.fillRect(0, 0, w, signH);
     ctx.fillStyle = 'rgba(0,0,0,.25)';
     ctx.fillRect(0, signH - 6, w, 6);
+    if (textura) acabamentoLetreiro(ctx, w, signH);
     signText(ctx, label, known ? sublabel : '', 0, 0, w, signH, legivel(textColor, color)); // sem comerciante: só o número
     if (known && label) {
       // selo "i": convite a tocar para ver detalhes
@@ -348,4 +364,100 @@ const lum = (hex) => {
 function legivel(texto, fundo) {
   if (texto && Math.abs(lum(texto) - lum(fundo)) > 0.35) return texto;
   return lum(fundo) > 0.6 ? '#1c1c1c' : '#fff';
+}
+
+// ---------------------------------------------------------------- acabamentos (menu Visual > Texturas)
+
+const once = (fn) => {
+  let v;
+  return () => {
+    if (!v) { v = fn(); v.userData.shared = true; }
+    return v;
+  };
+};
+
+/** Reboco claro com manchas leves e rodapé; a cor da loja entra por `material.color`. */
+export const plasterTexture = once(() => canvasTexture(256, 256, (ctx, w, h) => {
+  ctx.fillStyle = '#f4f1ea';
+  ctx.fillRect(0, 0, w, h);
+  for (let i = 0; i < 2600; i++) {
+    const a = Math.random() * 0.07;
+    ctx.fillStyle = Math.random() < 0.5 ? `rgba(0,0,0,${a})` : `rgba(255,255,255,${a})`;
+    ctx.fillRect(Math.random() * w, Math.random() * h, 2 + Math.random() * 3, 2 + Math.random() * 3);
+  }
+  ctx.fillStyle = 'rgba(0,0,0,.14)';
+  ctx.fillRect(0, h * 0.86, w, h * 0.14);
+  ctx.fillStyle = 'rgba(0,0,0,.22)';
+  ctx.fillRect(0, h * 0.86, w, 3);
+}));
+
+/** Concreto claro com granulado (laterais e espelhos dos degraus). */
+export const concreteTexture = once(() => canvasTexture(128, 128, (ctx, w, h) => {
+  ctx.fillStyle = '#d3cfc6';
+  ctx.fillRect(0, 0, w, h);
+  for (let i = 0; i < 900; i++) {
+    ctx.fillStyle = `rgba(${Math.random() < 0.5 ? '0,0,0' : '255,255,255'},${Math.random() * 0.09})`;
+    ctx.fillRect(Math.random() * w, Math.random() * h, 2, 2);
+  }
+}));
+
+/** Piso do degrau: concreto com faixas antiderrapantes amarelas nas duas bordas. */
+export const stepTopTexture = once(() => canvasTexture(256, 64, (ctx, w, h) => {
+  ctx.fillStyle = '#c9c5bb';
+  ctx.fillRect(0, 0, w, h);
+  for (let i = 0; i < 500; i++) {
+    ctx.fillStyle = `rgba(0,0,0,${Math.random() * 0.08})`;
+    ctx.fillRect(Math.random() * w, Math.random() * h, 2, 2);
+  }
+  for (const y of [0, h - 12]) {
+    ctx.fillStyle = '#e0b93a';
+    ctx.fillRect(0, y, w, 12);
+    ctx.fillStyle = 'rgba(0,0,0,.25)';
+    for (let x = 4; x < w; x += 10) ctx.fillRect(x, y + 3, 5, 6);
+  }
+}, false));
+
+/** Detalhes extras da loja (rodapé de azulejo, veio de madeira no balcão, luz no vão). */
+function acabamentoLoja(ctx, w, h, { style, signH, counterY, plain }) {
+  const y0 = signH + h * 0.04;
+  // luz vinda de cima no vão da loja
+  if (!plain) {
+    const g = ctx.createLinearGradient(0, y0, 0, h);
+    g.addColorStop(0, 'rgba(255,255,255,.10)');
+    g.addColorStop(1, 'rgba(0,0,0,.28)');
+    ctx.fillStyle = g;
+    ctx.fillRect(w * 0.06, y0, w * 0.88, h - y0);
+    if (style === 'box') {
+      ctx.strokeStyle = 'rgba(40,20,5,.28)';
+      ctx.lineWidth = 1;
+      for (let x = w * 0.06; x < w * 0.94; x += 14) {
+        ctx.beginPath(); ctx.moveTo(x, counterY); ctx.lineTo(x, h); ctx.stroke();
+      }
+    }
+  }
+  // rodapé de azulejo
+  const t = h * 0.07;
+  ctx.fillStyle = '#efece4';
+  ctx.fillRect(0, h - t, w, t);
+  ctx.strokeStyle = 'rgba(0,0,0,.25)';
+  ctx.lineWidth = 1;
+  for (let x = 0; x <= w; x += t) { ctx.beginPath(); ctx.moveTo(x, h - t); ctx.lineTo(x, h); ctx.stroke(); }
+  ctx.beginPath(); ctx.moveTo(0, h - t); ctx.lineTo(w, h - t); ctx.stroke();
+  // pilaretes laterais
+  ctx.fillStyle = 'rgba(0,0,0,.10)';
+  ctx.fillRect(0, y0, w * 0.06, h - y0);
+  ctx.fillRect(w * 0.94, y0, w * 0.06, h - y0);
+}
+
+/** Brilho e moldura do letreiro. */
+function acabamentoLetreiro(ctx, w, signH) {
+  const g = ctx.createLinearGradient(0, 0, 0, signH);
+  g.addColorStop(0, 'rgba(255,255,255,.24)');
+  g.addColorStop(0.5, 'rgba(255,255,255,0)');
+  g.addColorStop(1, 'rgba(0,0,0,.20)');
+  ctx.fillStyle = g;
+  ctx.fillRect(0, 0, w, signH);
+  ctx.strokeStyle = 'rgba(255,255,255,.4)';
+  ctx.lineWidth = 2;
+  ctx.strokeRect(6, 6, w - 12, signH - 14);
 }

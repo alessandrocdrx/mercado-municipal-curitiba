@@ -297,3 +297,15 @@ div.dir-item.off { cursor: default; }
   .minimap { width: 190px; }
   .mm-map .mm-expand { font-size: 11px; padding: 3px 7px; }
 }
+
+/* --- menu Visual --- */
+.visual-menu {
+  position: absolute; top: 84px; left: 16px; z-index: 8; width: min(340px, calc(100% - 32px));
+  background: #14161a; border: 1px solid rgba(255,255,255,.25); border-radius: 12px; padding: 6px;
+  box-shadow: 0 8px 28px rgba(0,0,0,.5);
+}
+.visual-menu .opt { display: flex; gap: 12px; align-items: flex-start; padding: 12px; cursor: pointer; border-radius: 8px; }
+.visual-menu .opt:hover { background: rgba(255,255,255,.08); }
+.visual-menu input { width: 22px; height: 22px; margin-top: 2px; accent-color: var(--accent); flex: none; }
+.visual-menu b { display: block; font-size: 16px; }
+.visual-menu small { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }

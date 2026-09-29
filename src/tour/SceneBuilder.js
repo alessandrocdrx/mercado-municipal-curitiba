@@ -3,7 +3,8 @@
 
 import * as THREE from 'three';
 import { DEG, bearing, wrapDeg, worldToLocal } from '../core/geo.js';
-import { textureFor, ceilingTexture, roadTexture, sidewalkTexture, crosswalkTexture, streetSignTexture } from '../core/textures.js';
+import { textureFor, ceilingTexture, roadTexture, sidewalkTexture, crosswalkTexture, streetSignTexture, plasterTexture, concreteTexture, stepTopTexture } from '../core/textures.js';
+import { settings } from '../core/settings.js';
 import { applyPlacement, isWorldPlacement } from './placement.js';
 
 const BASE_RADIUS = 1000;
@@ -314,7 +315,7 @@ async function buildModuleMesh(module, placement, scene, model = false) {
   if (model && !media.src && ['box', 'banca', 'porta'].includes(module.type)) {
     // fachada com letreiro em vez da placa provisória
     const known = !String(media.placeholder?.sublabel ?? '').includes('não identificado');
-    media = { ...media, placeholder: { ...media.placeholder, style: kind, known } };
+    media = { ...media, placeholder: { ...media.placeholder, style: kind, known, textura: settings.texturas } };
   }
   const tex = await textureFor(media, {
     baseUrl, version: module.version, aspect, fallbackLabel: module.title ?? module.id, resolution: 256,
@@ -335,7 +336,10 @@ async function buildModuleMesh(module, placement, scene, model = false) {
     const depth = placement.depth ?? BODY_DEPTH[kind];
     const body = new THREE.Mesh(
       new THREE.BoxGeometry(1, 1, depth),
-      new THREE.MeshLambertMaterial({ color: media.placeholder?.facade ?? (kind === 'banca' ? '#cfc6b4' : '#ddd6c8') }),
+      new THREE.MeshLambertMaterial({
+        color: media.placeholder?.facade ?? (kind === 'banca' ? '#cfc6b4' : '#ddd6c8'),
+        map: settings.texturas ? plasterTexture() : null,
+      }),
     );
     body.position.z = -depth / 2 - 0.005;
     body.name = 'volume';
@@ -369,7 +373,8 @@ function disposeGroup(group) {
     if (Array.isArray(obj.material)) return;
     obj.geometry.dispose();
     // Texturas de arquivo ficam no cache (textures.js); só as geradas morrem aqui.
-    if (obj.material.map?.isCanvasTexture || obj.material.map?.userData?.own) obj.material.map.dispose();
+    const map = obj.material.map;
+    if ((map?.isCanvasTexture || map?.userData?.own) && !map.userData?.shared) map.dispose();
     obj.material.dispose();
   });
 }
@@ -380,6 +385,15 @@ const mat = (color) => {
   if (!propMat.has(color)) propMat.set(color, new THREE.MeshLambertMaterial({ color }));
   return propMat.get(color);
 };
+const stepMats = new Map();
+function stepMaterials(cor) {
+  if (!stepMats.has(cor)) {
+    const side = new THREE.MeshLambertMaterial({ color: cor, map: concreteTexture() });
+    const top = new THREE.MeshLambertMaterial({ color: cor, map: stepTopTexture() });
+    stepMats.set(cor, [side, side, top, side, side, side]); // +x, -x, topo, base, +z, -z
+  }
+  return stepMats.get(cor);
+}
 const propGeo = new Map();
 const geo = (key, make) => {
   if (!propGeo.has(key)) propGeo.set(key, make());
@@ -406,6 +420,18 @@ function buildProp(group, scene, p) {
     group.add(m);
   };
   const yawOf = (a, b) => Math.atan2(b.x - a.x, b.z - a.z); // rotação em y que alinha +z de a para b
+  const tx = settings.texturas;
+  // corrimão de madeira, travessa e balaústres de aço (só com texturas ligadas)
+  const railing = (a, b, top) => {
+    const raise = (v, h) => v.clone().setY(v.y + h);
+    rod(raise(a, top), raise(b, top), 0.035, '#6a4a2f');
+    rod(raise(a, top * 0.48), raise(b, top * 0.48), 0.014, '#a5abb1');
+    const n = Math.max(1, Math.round(a.distanceTo(b) / 0.8));
+    for (let i = 0; i <= n; i++) {
+      const v = a.clone().lerp(b, i / n);
+      rod(v, raise(v, top), i % 2 ? 0.012 : 0.022, '#a5abb1');
+    }
+  };
   if (p.tipo === 'praca') {
     const n = p.degraus ?? 3;
     add(new THREE.RingGeometry(p.r - 0.35, p.r, 64), p.borda ?? '#a85a5a', 0, 0, 0.015, -Math.PI / 2);
@@ -451,12 +477,16 @@ function buildProp(group, scene, p) {
     const a = loc(p.x, p.y);
     const b = loc(p.x2, p.y2);
     const up = (v, h) => v.clone().setY(v.y + h);
-    rod(up(a, 1.05), up(b, 1.05), 0.03, p.cor ?? '#f2f2f2');
-    rod(up(a, 0.5), up(b, 0.5), 0.015, p.cor ?? '#f2f2f2');
-    const n = Math.max(1, Math.round(a.distanceTo(b) / 1.2));
-    for (let i = 0; i <= n; i++) {
-      const v = a.clone().lerp(b, i / n);
-      rod(v, up(v, 1.05), 0.02, p.cor ?? '#f2f2f2');
+    if (tx) {
+      railing(a, b, 1.05);
+    } else {
+      rod(up(a, 1.05), up(b, 1.05), 0.03, p.cor ?? '#f2f2f2');
+      rod(up(a, 0.5), up(b, 0.5), 0.015, p.cor ?? '#f2f2f2');
+      const n = Math.max(1, Math.round(a.distanceTo(b) / 1.2));
+      for (let i = 0; i <= n; i++) {
+        const v = a.clone().lerp(b, i / n);
+        rod(v, up(v, 1.05), 0.02, p.cor ?? '#f2f2f2');
+      }
     }
   } else if (p.tipo === 'vao' || p.tipo === 'plataforma') {
     // vão aberto (poço escuro com guarda-corpo) ou plataforma elevada (mezanino)
@@ -469,6 +499,7 @@ function buildProp(group, scene, p) {
       group.add(m);
       pts.forEach((v, i) => {
         const w = pts[(i + 1) % pts.length];
+        if (tx) { railing(v, w, 1.05); return; }
         rod(v.clone().setY(v.y + 1.05), w.clone().setY(w.y + 1.05), 0.03, '#f2f2f2');
         rod(v, v.clone().setY(v.y + 1.05), 0.025, '#f2f2f2');
       });
@@ -491,7 +522,7 @@ function buildProp(group, scene, p) {
     for (let i = 0; i < n; i++) {
       const v = a.clone().lerp(b, (i + 0.5) / n);
       const sh = (i + 1) * (h / n);
-      const step = new THREE.Mesh(geo(`deg${w}_${(run / n).toFixed(2)}`, () => new THREE.BoxGeometry(w, 1, run / n)), mat(p.cor ?? '#e6e4de'));
+      const step = new THREE.Mesh(geo(`deg${w}_${(run / n).toFixed(2)}`, () => new THREE.BoxGeometry(w, 1, run / n)), tx ? stepMaterials(p.cor ?? '#ffffff') : mat(p.cor ?? '#e6e4de'));
       step.scale.y = sh;
       step.position.set(v.x, a.y + sh / 2, v.z);
       step.rotation.y = ry;
@@ -499,7 +530,8 @@ function buildProp(group, scene, p) {
     }
     const side = new THREE.Vector3(Math.cos(ry), 0, -Math.sin(ry)).multiplyScalar(w / 2);
     for (const s of [side, side.clone().negate()]) {
-      rod(a.clone().add(s).setY(a.y + 1), b.clone().add(s).setY(a.y + h + 1), 0.03, p.corGuarda ?? '#f2f2f2');
+      if (tx) railing(a.clone().add(s), b.clone().add(s).setY(a.y + h), 1);
+      else rod(a.clone().add(s).setY(a.y + 1), b.clone().add(s).setY(a.y + h + 1), 0.03, p.corGuarda ?? '#f2f2f2');
     }
   } else if (p.tipo === 'placa') {
     // placa suspensa com o nome da área (dupla face)
