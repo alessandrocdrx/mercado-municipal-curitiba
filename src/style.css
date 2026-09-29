@@ -240,7 +240,7 @@ div.dir-item.off { cursor: default; }
 .info-source summary { cursor: pointer; }
 .info-source p { margin: 6px 0 0; }
 @media (max-width: 600px) {
-  .info-panel { left: 0 !important; right: 0 !important; top: auto !important; bottom: 0 !important; width: auto !important; max-height: 70% !important; border-radius: 16px 16px 0 0; z-index: 9; }
+  .info-panel { left: 0 !important; right: 0 !important; top: auto !important; bottom: 0 !important; width: auto !important; max-height: 70% !important; border-radius: 16px 16px 0 0; z-index: 9; background: #14161a; }
 }
 .info-panel a.info-action.info-fix { background: none; border-style: dashed; font-weight: 500; color: var(--muted); }
 .info-panel .info-desc { white-space: pre-line; }

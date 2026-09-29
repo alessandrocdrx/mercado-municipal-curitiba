@@ -68,7 +68,8 @@ export class Directory {
         const name = document.createElement('strong');
         name.textContent = it.name;
         const meta = document.createElement('span');
-        const where = it.onPlan ? `Box ${it.boxes} · ver no tour` : it.boxes ? `Box ${it.boxes} · fora das plantas` : 'Box não informado';
+        const box = /\d/.test(it.boxes ?? '') ? `Box ${it.boxes}` : '';
+        const where = it.onPlan ? [box, 'ver no tour'].filter(Boolean).join(' · ') : it.boxes ? [box, 'fora das plantas'].filter(Boolean).join(' · ') : 'Box não informado';
         meta.textContent = !it.onPlan && it.url ? `${where} · site oficial ↗` : where;
         btn.append(name, meta);
         if (it.onPlan) {
