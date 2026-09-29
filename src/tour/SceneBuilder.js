@@ -34,7 +34,7 @@ export async function buildScene(loader, sceneId) {
     };
     const tour = await loader.tour();
     const floor = tour.floors?.find((f) => f.id === scene.floor);
-    environment = await buildModel(group, anchor, floor, loader.tourUrl, { tour, modules });
+    environment = await buildModel(group, anchor, floor, loader.tourUrl, { tour, modules, scenes });
   } else {
     group.add(await buildBase(scene));
   }
@@ -88,6 +88,9 @@ async function buildModel(group, scene, floor, tourUrl, ctx = {}) {
   const vaos = (floor?.props ?? []).filter((p) => p.tipo === 'vao');
   const plate = await addFloorPlane(group, scene, floor, tourUrl, { alpha: vazado, holes: vaos });
   if (vazado) await buildBelow(group, scene, floor, tourUrl, ctx, plate);
+  if (ctx.modules && ctx.scenes && floor?.id !== 'inferior') {
+    for (const g of autoGuardas(floor, plate?.userData.mask, ctx)) buildProp(group, scene, g);
+  }
   // piso neutro em volta, para não haver "buraco" fora da planta
   const ground = new THREE.Mesh(new THREE.PlaneGeometry(400, 400), new THREE.MeshBasicMaterial({ color: '#8d8b86' }));
   ground.rotation.x = -Math.PI / 2;
@@ -217,6 +220,159 @@ function plateTexture(original, floor, holes) {
   tex.userData = { shared: true, mask: { W, H, data: mask } };
   plateCache.set(key, tex);
   return tex;
+}
+
+/** Contornos (laços de vértices em células) das regiões opacas da máscara. */
+function outlineLoops(mask, step = 4) {
+  const { W, H, data } = mask;
+  const GW = Math.ceil(W / step);
+  const GH = Math.ceil(H / step);
+  const solid = new Uint8Array(GW * GH);
+  for (let j = 0; j < GH; j++) {
+    for (let i = 0; i < GW; i++) {
+      const x = Math.min(W - 1, i * step + (step >> 1));
+      const y = Math.min(H - 1, j * step + (step >> 1));
+      solid[j * GW + i] = data[y * W + x] ? 1 : 0;
+    }
+  }
+  const at = (i, j) => (i < 0 || j < 0 || i >= GW || j >= GH ? 0 : solid[j * GW + i]);
+  const key = (i, j) => j * (GW + 1) + i;
+  const edges = new Map();
+  const add = (a, b, c, d) => {
+    const k = key(a, b);
+    if (!edges.has(k)) edges.set(k, []);
+    edges.get(k).push({ i: c, j: d, used: false });
+  };
+  for (let j = 0; j < GH; j++) {
+    for (let i = 0; i < GW; i++) {
+      if (!at(i, j)) continue;
+      if (!at(i, j - 1)) add(i, j, i + 1, j);
+      if (!at(i + 1, j)) add(i + 1, j, i + 1, j + 1);
+      if (!at(i, j + 1)) add(i + 1, j + 1, i, j + 1);
+      if (!at(i - 1, j)) add(i, j + 1, i, j);
+    }
+  }
+  const loops = [];
+  for (const [k0, list] of edges) {
+    for (const e0 of list) {
+      if (e0.used) continue;
+      const i0 = k0 % (GW + 1);
+      const j0 = Math.floor(k0 / (GW + 1));
+      const pts = [[i0, j0]];
+      let e = e0;
+      for (;;) {
+        e.used = true;
+        if (e.i === i0 && e.j === j0) break;
+        pts.push([e.i, e.j]);
+        const next = (edges.get(key(e.i, e.j)) ?? []).find((x) => !x.used);
+        if (!next) break;
+        e = next;
+      }
+      loops.push(pts.map(([i, j]) => [i * step, j * step]));
+    }
+  }
+  return loops;
+}
+
+/** Douglas-Peucker num laço fechado. */
+function simplifyLoop(pts, eps) {
+  if (pts.length < 4) return pts;
+  const dist = (p, a, b) => {
+    const dx = b[0] - a[0];
+    const dy = b[1] - a[1];
+    const t = Math.max(0, Math.min(1, ((p[0] - a[0]) * dx + (p[1] - a[1]) * dy) / (dx * dx + dy * dy || 1)));
+    return Math.hypot(p[0] - a[0] - t * dx, p[1] - a[1] - t * dy);
+  };
+  const ring = pts.concat([pts[0]]);
+  const rec = (a, b, out) => {
+    let far = -1;
+    let max = -1;
+    for (let k = a + 1; k < b; k++) {
+      const d = dist(ring[k], ring[a], ring[b]);
+      if (d > max) { max = d; far = k; }
+    }
+    if (max > eps) { rec(a, far, out); rec(far, b, out); } else out.push(ring[b]);
+  };
+  let mid = 0;
+  let best = -1;
+  ring.forEach((p, k) => { const d = Math.hypot(p[0] - ring[0][0], p[1] - ring[0][1]); if (d > best) { best = d; mid = k; } });
+  const out = [ring[0]];
+  rec(0, mid, out);
+  rec(mid, ring.length - 1, out);
+  out.pop();
+  return out;
+}
+
+/**
+ * Guarda-corpos automáticos: ao longo das bordas abertas da laje (contorno da máscara) e das
+ * plataformas. Ficam de fora os trechos junto de lojas, escadas, pontos de vista e caminhos
+ * entre eles e onde já existe guarda-corpo ou vão.
+ */
+function autoGuardas(floor, mask, { modules, scenes }) {
+  const props = floor.props ?? [];
+  const segs = [];
+  for (const p of props) {
+    if (p.tipo === 'guarda') segs.push([p.x, p.y, p.x2, p.y2]);
+    if (p.tipo === 'vao') p.pontos.forEach(([x, y], i) => { const q = p.pontos[(i + 1) % p.pontos.length]; segs.push([x, y, q[0], q[1]]); });
+  }
+  const same = (s) => (s.floor ?? null) === floor.id && s.position;
+  const byId = new Map(scenes.map((s) => [s.id, s]));
+  const caminhos = [];
+  for (const s of scenes.filter(same)) {
+    for (const l of s.links ?? []) {
+      const t = byId.get(l.to);
+      if (t && same(t)) caminhos.push([s.position.x, s.position.y, t.position.x, t.position.y]);
+    }
+  }
+  const pontos = scenes.filter(same).map((s) => [s.position.x, s.position.y]);
+  const lojas = modules
+    .filter((m) => isWorldPlacement(m.placement) && (m.placement.floor ?? null) === floor.id && ['box', 'banca', 'porta'].includes(m.type))
+    .map((m) => ({ x: m.placement.x, y: m.placement.y, r: (m.placement.width ?? 1) / 2 + 1.4 }));
+  const degraus = props.filter((p) => p.tipo === 'escada').flatMap((p) => [[p.x, p.y], [p.x2, p.y2]]);
+  const dSeg = (px, py, [x1, y1, x2, y2]) => {
+    const dx = x2 - x1;
+    const dy = y2 - y1;
+    const t = Math.max(0, Math.min(1, ((px - x1) * dx + (py - y1) * dy) / (dx * dx + dy * dy || 1)));
+    return Math.hypot(px - x1 - t * dx, py - y1 - t * dy);
+  };
+  const protegido = (x, y) => segs.some((s) => dSeg(x, y, s) < 0.9)
+    || caminhos.some((s) => dSeg(x, y, s) < 1.5)
+    || pontos.some(([a, b]) => Math.hypot(x - a, y - b) < 2.2)
+    || lojas.some((l) => Math.hypot(x - l.x, y - l.y) < l.r)
+    || degraus.some(([a, b]) => Math.hypot(x - a, y - b) < 2.6);
+
+  const out = [];
+  const trecho = (a, b, base) => {
+    const n = Math.max(1, Math.ceil(Math.hypot(b.x - a.x, b.y - a.y)));
+    const em = (t) => ({ x: a.x + (b.x - a.x) * t, y: a.y + (b.y - a.y) * t });
+    let ini = null;
+    const fecha = (t0, t1) => {
+      const p = em(t0);
+      const q = em(t1);
+      out.push({ tipo: 'guarda', x: p.x, y: p.y, x2: q.x, y2: q.y, esp: 1.4, base, auto: true });
+    };
+    for (let k = 0; k < n; k++) {
+      const m = em((k + 0.5) / n);
+      if (!protegido(m.x, m.y)) {
+        if (ini === null) ini = k / n;
+        if (k === n - 1) fecha(ini, 1);
+      } else if (ini !== null) {
+        fecha(ini, k / n);
+        ini = null;
+      }
+    }
+  };
+  if (mask) {
+    for (const loop of outlineLoops(mask)) {
+      const poly = simplifyLoop(loop, 5).map(([px, py]) => ({ x: (px * floor.plan.width) / mask.W, y: (-py * floor.plan.height) / mask.H }));
+      poly.forEach((a, i) => trecho(a, poly[(i + 1) % poly.length], 0));
+    }
+  }
+  for (const p of props.filter((q) => q.tipo === 'plataforma')) {
+    const poly = p.pontos.map(([x, y]) => ({ x, y }));
+    poly.forEach((a, i) => trecho(a, poly[(i + 1) % poly.length], p.altura ?? 1.5));
+  }
+  return out;
 }
 
 /**
@@ -623,13 +779,13 @@ function buildProp(group, scene, p) {
   const yawOf = (a, b) => Math.atan2(b.x - a.x, b.z - a.z); // rotação em y que alinha +z de a para b
   const tx = settings.texturas;
   // corrimão, travessa e balaústres; com texturas: madeira e aço, sem elas: branco
-  const railing = (a, b, top, cor) => {
+  const railing = (a, b, top, cor, esp = 0.8) => {
     const raise = (v, h) => v.clone().setY(v.y + h);
     const topo = cor ?? (tx ? '#6a4a2f' : '#f2f2f2');
     const barra = cor ?? (tx ? '#a5abb1' : '#e2e2e2');
     rod(raise(a, top), raise(b, top), tx ? 0.035 : 0.03, topo);
     rod(raise(a, top * 0.48), raise(b, top * 0.48), 0.014, barra);
-    const n = Math.max(1, Math.round(a.distanceTo(b) / 0.8));
+    const n = Math.max(1, Math.round(a.distanceTo(b) / esp));
     for (let i = 0; i <= n; i++) {
       const v = a.clone().lerp(b, i / n);
       rod(v, raise(v, top), i % 2 ? 0.012 : 0.022, barra);
@@ -692,7 +848,7 @@ function buildProp(group, scene, p) {
     // guarda-corpo: corrimão a 1,05 m, travessa a 0,5 m e montantes a cada 1,2 m
     const a = loc(p.x, p.y);
     const b = loc(p.x2, p.y2);
-    railing(a, b, p.alt ?? 1.05, p.cor);
+    railing(a, b, p.alt ?? 1.05, p.cor, p.esp);
   } else if (p.tipo === 'vao' || p.tipo === 'plataforma') {
     // vão aberto (poço escuro com guarda-corpo) ou plataforma elevada (mezanino)
     const pts = p.pontos.map(([x, y]) => loc(x, y));
