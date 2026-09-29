@@ -18,7 +18,11 @@
       "facade": "#1F5FA8",
       "vitrine": true,
       "label": "Planeta Aquários",
-      "sublabel": "Pet shop · Box 16"
+      "sublabel": "Pet shop · Boxes 16 · 18",
+      "numeros": [
+        "16",
+        "18"
+      ]
     }
   },
   "info": {
@@ -32,5 +36,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "fb08d487e71c"
+  "autoHash": "e9898edbacd7"
 }

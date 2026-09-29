@@ -15,7 +15,11 @@
     "placeholder": {
       "color": "#5b2e63",
       "label": "The Bootlegger's",
-      "sublabel": "Bebidas · Box 447"
+      "sublabel": "Bebidas · Boxes 447 · 448",
+      "numeros": [
+        "447",
+        "448"
+      ]
     }
   },
   "info": {
@@ -26,5 +30,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "68c3b5871457"
+  "autoHash": "783182b5c601"
 }

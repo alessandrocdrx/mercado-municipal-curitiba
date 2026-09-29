@@ -17,7 +17,11 @@
       "color": "#F2F2F2",
       "facade": "#F2F2F2",
       "label": "Empório Metropolitano",
-      "sublabel": "Empório e mercearia · Box 304"
+      "sublabel": "Empório e mercearia · Boxes 304 · 306",
+      "numeros": [
+        "304",
+        "306"
+      ]
     }
   },
   "info": {
@@ -30,5 +34,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "3b7e27d24ab6"
+  "autoHash": "b39e741c6794"
 }

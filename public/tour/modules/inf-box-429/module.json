@@ -18,7 +18,13 @@
       "facade": "#F2F2F2",
       "textColor": "#B22222",
       "label": "Furuta Cereais",
-      "sublabel": "Cereais e especiarias · Box 429"
+      "sublabel": "Cereais e especiarias · Boxes 429 · 430 · 431 · 432",
+      "numeros": [
+        "429",
+        "430",
+        "431",
+        "432"
+      ]
     }
   },
   "info": {
@@ -30,5 +36,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "422794b8ca86"
+  "autoHash": "9ca5fc6fb739"
 }

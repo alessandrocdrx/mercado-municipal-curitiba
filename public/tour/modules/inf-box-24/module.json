@@ -17,7 +17,11 @@
       "color": "#B22222",
       "facade": "#A0764A",
       "label": "Cia. do Tempero",
-      "sublabel": "Cereais e especiarias · Box 24"
+      "sublabel": "Cereais e especiarias · Boxes 24 · 23",
+      "numeros": [
+        "24",
+        "23"
+      ]
     }
   },
   "info": {
@@ -30,5 +34,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "fe61b7b5d3b3"
+  "autoHash": "c8af35cac579"
 }

@@ -17,7 +17,11 @@
       "color": "#4A2F1E",
       "facade": "#4A2F1E",
       "label": "Empório do Sabor",
-      "sublabel": "Cereais e especiarias · Box 66"
+      "sublabel": "Cereais e especiarias · Boxes 66 · 67",
+      "numeros": [
+        "66",
+        "67"
+      ]
     }
   },
   "info": {
@@ -30,5 +34,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "59660101ad21"
+  "autoHash": "dd45ccda98f2"
 }

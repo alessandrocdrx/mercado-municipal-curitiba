@@ -17,7 +17,11 @@
       "color": "#B22222",
       "textColor": "#B22222",
       "label": "Empório Francisca",
-      "sublabel": "Empório e mercearia · Box 58"
+      "sublabel": "Empório e mercearia · Boxes 58 · 59",
+      "numeros": [
+        "58",
+        "59"
+      ]
     }
   },
   "info": {
@@ -28,5 +32,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "15ac58e4b04a"
+  "autoHash": "c4a3dce61c4a"
 }

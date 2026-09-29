@@ -19,7 +19,11 @@
       "textColor": "#1F4FA0",
       "closed": true,
       "label": "Ki Bolada Loteria",
-      "sublabel": "Lotéricas · Box 320"
+      "sublabel": "Lotéricas · Boxes 320 · 321",
+      "numeros": [
+        "320",
+        "321"
+      ]
     }
   },
   "info": {
@@ -30,5 +34,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "0178a13c21ea"
+  "autoHash": "189ac498df6f"
 }

@@ -19,7 +19,11 @@
       "textColor": "#B22222",
       "closed": true,
       "label": "Artigos Orientais",
-      "sublabel": "Presentes e artesanato · Box 322"
+      "sublabel": "Presentes e artesanato · Boxes 322 · 323",
+      "numeros": [
+        "322",
+        "323"
+      ]
     }
   },
   "info": {
@@ -30,5 +34,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "8401444d4c19"
+  "autoHash": "fa9df1635624"
 }

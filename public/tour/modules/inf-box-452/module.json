@@ -15,7 +15,11 @@
     "placeholder": {
       "color": "#4a5a73",
       "label": "Farmácia do Mercado – Nellyfarma",
-      "sublabel": "Variedades e serviços · Box 452"
+      "sublabel": "Variedades e serviços · Boxes 452 · 453",
+      "numeros": [
+        "452",
+        "453"
+      ]
     }
   },
   "info": {
@@ -26,5 +30,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "1fdcc9e4fc17"
+  "autoHash": "9a829fbbab34"
 }

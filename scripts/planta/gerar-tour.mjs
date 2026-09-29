@@ -91,7 +91,8 @@ for (const pav of PAVIMENTOS) {
       const frente = push(centro, facing, tipo === 'banca' ? 6 : 16);
       const banca = tipo === 'banca';
       const id = `${prefix}-${tipo}-${num}`;
-      const nome = grupo.rotulo ?? `${banca ? 'Banca' : 'Box'} ${num}`;
+      const numerosLoja = ids.slice(ini, fim + 1);
+      const nome = grupo.rotulo ?? (n > 1 ? `${banca ? 'Bancas' : 'Boxes'} ${numerosLoja.join(' · ')}` : `${banca ? 'Banca' : 'Box'} ${num}`);
       const com = donoDoBox.get(id);
       const cat = com && CATEGORIAS[com.categoria];
       upsertModule(id, {
@@ -111,7 +112,7 @@ for (const pav of PAVIMENTOS) {
           ? { placeholder: limpa({
             color: VISUAL[com.nome]?.letreiro ?? cat.cor, facade: VISUAL[com.nome]?.fachada, textColor: VISUAL[com.nome]?.texto,
             closed: VISUAL[com.nome]?.tipo === 'loja_fechada_porta_enrolar' || undefined, shutter: VISUAL[com.nome]?.tipo === 'porta_enrolar' || undefined, vitrine: VISUAL[com.nome]?.vitrine,
-            label: com.nome, sublabel: `${cat.nome} · ${nome}`,
+            label: com.nome, sublabel: `${cat.nome} · ${nome}`, numeros: n > 1 ? numerosLoja.map(String) : undefined,
           }) }
           : { placeholder: { color: banca ? '#3a3f3c' : '#44474d', label: nome, sublabel: 'comerciante não identificado' } },
         info: com

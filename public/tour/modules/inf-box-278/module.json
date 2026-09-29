@@ -17,7 +17,11 @@
       "color": "#9a6b1f",
       "vitrine": true,
       "label": "Mercearia O Barracão",
-      "sublabel": "Empório e mercearia · Box 278"
+      "sublabel": "Empório e mercearia · Boxes 278 · 279",
+      "numeros": [
+        "278",
+        "279"
+      ]
     }
   },
   "info": {
@@ -28,5 +32,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "0dacaabdca33"
+  "autoHash": "850d5f145433"
 }

@@ -18,7 +18,11 @@
       "facade": "#2E7D32",
       "textColor": "#D9722B",
       "label": "Cereais e Especiarias Sissi",
-      "sublabel": "Cereais e especiarias · Box 26"
+      "sublabel": "Cereais e especiarias · Boxes 26 · 25",
+      "numeros": [
+        "26",
+        "25"
+      ]
     }
   },
   "info": {
@@ -31,5 +35,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "2f58d09fb2ce"
+  "autoHash": "0485b3462f69"
 }

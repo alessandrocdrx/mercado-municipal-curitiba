@@ -15,7 +15,11 @@
     "placeholder": {
       "color": "#b0561d",
       "label": "Café do Mercado",
-      "sublabel": "Lanchonete e restaurante · Box 438"
+      "sublabel": "Lanchonete e restaurante · Boxes 438 · 439",
+      "numeros": [
+        "438",
+        "439"
+      ]
     }
   },
   "info": {
@@ -27,5 +31,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "915b110cc34b"
+  "autoHash": "510026f8f64e"
 }

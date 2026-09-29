@@ -16,7 +16,11 @@
     "placeholder": {
       "color": "#9a6b1f",
       "label": "Box Verde",
-      "sublabel": "Empório e mercearia · Box 435"
+      "sublabel": "Empório e mercearia · Boxes 435 · 436",
+      "numeros": [
+        "435",
+        "436"
+      ]
     }
   },
   "info": {
@@ -27,5 +31,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "87ff7864f154"
+  "autoHash": "11e4acb004d4"
 }

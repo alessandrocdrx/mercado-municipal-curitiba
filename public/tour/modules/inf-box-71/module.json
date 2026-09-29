@@ -18,7 +18,11 @@
       "facade": "#F2F2F2",
       "textColor": "#1A1A1A",
       "label": "Embalagens Municipal",
-      "sublabel": "Variedades e serviços · Box 71"
+      "sublabel": "Variedades e serviços · Boxes 71 · 72",
+      "numeros": [
+        "71",
+        "72"
+      ]
     }
   },
   "info": {
@@ -31,5 +35,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "5986653323ab"
+  "autoHash": "12c87627f2e3"
 }

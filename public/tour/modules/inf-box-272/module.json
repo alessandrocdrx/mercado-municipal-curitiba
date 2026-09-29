@@ -16,7 +16,11 @@
     "placeholder": {
       "color": "#9a6b1f",
       "label": "Darumayá",
-      "sublabel": "Empório e mercearia · Box 272"
+      "sublabel": "Empório e mercearia · Boxes 272 · 273",
+      "numeros": [
+        "272",
+        "273"
+      ]
     }
   },
   "info": {
@@ -27,5 +31,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "6054aee0b2d3"
+  "autoHash": "39a81a888c94"
 }

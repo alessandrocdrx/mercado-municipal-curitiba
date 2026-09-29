@@ -19,7 +19,11 @@
       "textColor": "#B22222",
       "vitrine": true,
       "label": "Bon Vivant",
-      "sublabel": "Empório e mercearia · Box 56"
+      "sublabel": "Empório e mercearia · Boxes 56 · 57",
+      "numeros": [
+        "56",
+        "57"
+      ]
     }
   },
   "info": {
@@ -42,5 +46,5 @@
     ]
   },
   "generated": true,
-  "autoHash": "3ba9b4611f98"
+  "autoHash": "fc52f5b03a90"
 }

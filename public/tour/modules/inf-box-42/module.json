@@ -19,7 +19,13 @@
       "textColor": "#F2F2F2",
       "vitrine": true,
       "label": "Box 41 – Vinhos",
-      "sublabel": "Bebidas · Box 42"
+      "sublabel": "Bebidas · Boxes 42 · 41 · 40 · 39",
+      "numeros": [
+        "42",
+        "41",
+        "40",
+        "39"
+      ]
     }
   },
   "info": {
@@ -33,5 +39,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "24167df48471"
+  "autoHash": "a0da7ee28a25"
 }

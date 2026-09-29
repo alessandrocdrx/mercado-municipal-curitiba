@@ -18,7 +18,11 @@
       "textColor": "#B22222",
       "vitrine": true,
       "label": "DAP Boutique de Carnes",
-      "sublabel": "Açougue · Box 05"
+      "sublabel": "Açougue · Boxes 05 · 04",
+      "numeros": [
+        "05",
+        "04"
+      ]
     }
   },
   "info": {
@@ -31,5 +35,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "5f126623135d"
+  "autoHash": "779ea44b96fd"
 }

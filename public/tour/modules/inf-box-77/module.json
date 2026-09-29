@@ -16,7 +16,13 @@
     "placeholder": {
       "color": "#1F5FA8",
       "label": "Flora Cristiane",
-      "sublabel": "Flores e plantas · Box 77"
+      "sublabel": "Flores e plantas · Boxes 77 · 78 · 79 · 80",
+      "numeros": [
+        "77",
+        "78",
+        "79",
+        "80"
+      ]
     }
   },
   "info": {
@@ -30,5 +36,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "840b9857566a"
+  "autoHash": "bab3910d9b3b"
 }

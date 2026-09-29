@@ -17,7 +17,11 @@
       "color": "#7a4a24",
       "facade": "#CFE3E8",
       "label": "Temperamento",
-      "sublabel": "Cereais e especiarias · Box 299"
+      "sublabel": "Cereais e especiarias · Boxes 299 · 301",
+      "numeros": [
+        "299",
+        "301"
+      ]
     }
   },
   "info": {
@@ -30,5 +34,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "a600e3871d4e"
+  "autoHash": "a3650351b251"
 }

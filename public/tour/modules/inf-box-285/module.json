@@ -18,7 +18,11 @@
       "facade": "#4A2F1E",
       "vitrine": true,
       "label": "Manfré Cervejas Especiais",
-      "sublabel": "Bebidas · Box 285"
+      "sublabel": "Bebidas · Boxes 285 · 284",
+      "numeros": [
+        "285",
+        "284"
+      ]
     }
   },
   "info": {
@@ -29,5 +33,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "e8ba0d9e68be"
+  "autoHash": "869fe937503e"
 }

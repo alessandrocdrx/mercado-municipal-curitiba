@@ -16,7 +16,11 @@
     "placeholder": {
       "color": "#F2F2F2",
       "label": "Revistaria Municipal",
-      "sublabel": "Revistaria e tabacaria · Box 450"
+      "sublabel": "Revistaria e tabacaria · Boxes 450 · 451",
+      "numeros": [
+        "450",
+        "451"
+      ]
     }
   },
   "info": {
@@ -27,5 +31,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "0a051e2e8eb4"
+  "autoHash": "6b0302d3e121"
 }

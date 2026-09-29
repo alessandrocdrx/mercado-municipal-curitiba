@@ -15,7 +15,11 @@
     "placeholder": {
       "color": "#b0561d",
       "label": "Grander & Shiomi (restaurante)",
-      "sublabel": "Lanchonete e restaurante · Box 445"
+      "sublabel": "Lanchonete e restaurante · Boxes 445 · 446",
+      "numeros": [
+        "445",
+        "446"
+      ]
     }
   },
   "info": {
@@ -26,5 +30,5 @@
     "source": "Decreto municipal nº 327/2019 (transferência de permissão de uso). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "f4c823289ffd"
+  "autoHash": "a288ad28e195"
 }

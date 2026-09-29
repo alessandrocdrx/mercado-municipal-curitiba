@@ -19,7 +19,11 @@
       "textColor": "#EFE6CC",
       "vitrine": true,
       "label": "Empório Barion",
-      "sublabel": "Empório e mercearia · Box 63"
+      "sublabel": "Empório e mercearia · Boxes 63 · 64",
+      "numeros": [
+        "63",
+        "64"
+      ]
     }
   },
   "info": {
@@ -32,5 +36,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "fa0bc025ea61"
+  "autoHash": "776dc692120c"
 }

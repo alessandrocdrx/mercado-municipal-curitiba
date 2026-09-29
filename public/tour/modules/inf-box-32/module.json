@@ -18,7 +18,11 @@
       "facade": "#A0764A",
       "textColor": "#F2F2F2",
       "label": "Claudio's Mercearia",
-      "sublabel": "Empório e mercearia · Box 32"
+      "sublabel": "Empório e mercearia · Boxes 32 · 31",
+      "numeros": [
+        "32",
+        "31"
+      ]
     }
   },
   "info": {
@@ -29,5 +33,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "3d0ff0b78f12"
+  "autoHash": "7bc196fba511"
 }

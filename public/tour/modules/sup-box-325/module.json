@@ -19,7 +19,11 @@
       "textColor": "#FFFFFF",
       "closed": true,
       "label": "Rafa's – Ateliê de Costura",
-      "sublabel": "Consertos e costura · Box 325"
+      "sublabel": "Consertos e costura · Boxes 325 · 326",
+      "numeros": [
+        "325",
+        "326"
+      ]
     }
   },
   "info": {
@@ -30,5 +34,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "c7fe3e674a3d"
+  "autoHash": "e23ce0264676"
 }

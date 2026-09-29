@@ -18,7 +18,11 @@
       "facade": "#D8C8A8",
       "textColor": "#E8C21A",
       "label": "Vitaly's Especiarias",
-      "sublabel": "Cereais e especiarias · Box 367"
+      "sublabel": "Cereais e especiarias · Boxes 367 · 368",
+      "numeros": [
+        "367",
+        "368"
+      ]
     }
   },
   "info": {
@@ -29,5 +33,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "dacdbf01610a"
+  "autoHash": "decfd9b25837"
 }

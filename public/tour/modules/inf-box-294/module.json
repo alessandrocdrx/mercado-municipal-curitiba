@@ -15,7 +15,11 @@
     "placeholder": {
       "color": "#9a6b1f",
       "label": "Lá de Minas",
-      "sublabel": "Empório e mercearia · Box 294"
+      "sublabel": "Empório e mercearia · Boxes 294 · 293",
+      "numeros": [
+        "294",
+        "293"
+      ]
     }
   },
   "info": {
@@ -28,5 +32,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "afe7eb8cc962"
+  "autoHash": "3aca57587538"
 }

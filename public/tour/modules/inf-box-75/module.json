@@ -16,7 +16,11 @@
     "placeholder": {
       "color": "#E8C21A",
       "label": "K & M Artesanatos",
-      "sublabel": "Presentes e artesanato · Box 75"
+      "sublabel": "Presentes e artesanato · Boxes 75 · 76",
+      "numeros": [
+        "75",
+        "76"
+      ]
     }
   },
   "info": {
@@ -27,5 +31,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "2feceb03b0a6"
+  "autoHash": "c7cc58bb18dd"
 }

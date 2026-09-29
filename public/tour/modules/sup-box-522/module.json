@@ -19,7 +19,11 @@
       "textColor": "#E53935",
       "vitrine": true,
       "label": "Taurino's Organic",
-      "sublabel": "Orgânicos · Box 522"
+      "sublabel": "Orgânicos · Boxes 522 · 521",
+      "numeros": [
+        "522",
+        "521"
+      ]
     }
   },
   "info": {
@@ -32,5 +36,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "eaa88207da00"
+  "autoHash": "972763d9cec4"
 }

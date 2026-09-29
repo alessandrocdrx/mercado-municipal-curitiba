@@ -136,7 +136,9 @@ function line(ctx, x1, y1, x2, y2) {
  */
 export function facadeTexture(args) {
   if (args.style === 'arte') return facadeArte(args);
-  return args.tema === 'estilizado' ? facadeEstilizada(args) : facadeAtual(args);
+  const tex = args.tema === 'estilizado' ? facadeEstilizada(args) : facadeAtual(args);
+  if (args.numeros?.length > 1 && args.style !== 'porta') numerosDasBaias(tex.image, args.numeros, args.tema === 'estilizado');
+  return tex;
 }
 
 function facadeAtual({ style = 'box', color = '#6b6e73', label = '', sublabel = '', aspect = 1, known = true, facade, textColor, closed, vitrine, shutter, tema }) {
@@ -605,4 +607,28 @@ function facadeArte({ label = '', sublabel = '', aspect = 2, tema }) {
   const t = new THREE.CanvasTexture(c);
   t.colorSpace = THREE.SRGBColorSpace;
   return t;
+}
+
+
+/** Loja de vários boxes: divisórias e o número de cada box, para todos continuarem aparentes. */
+function numerosDasBaias(canvas, numeros, estilizado) {
+  const ctx = canvas.getContext('2d');
+  const { width: w, height: h } = canvas;
+  const n = numeros.length;
+  const bw = w / n;
+  const y0 = h * 0.74;
+  ctx.strokeStyle = estilizado ? PALETA.creme : 'rgba(255,255,255,.75)';
+  ctx.lineWidth = 3;
+  for (let i = 1; i < n; i++) { ctx.beginPath(); ctx.moveTo(i * bw, h * 0.34); ctx.lineTo(i * bw, h); ctx.stroke(); }
+  const ph = Math.min(h * 0.2, bw * 0.4);
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  numeros.forEach((num, i) => {
+    const cx = i * bw + bw / 2;
+    ctx.fillStyle = estilizado ? PALETA.ardosia : '#1c1f24';
+    ctx.fillRect(cx - bw * 0.3, y0, bw * 0.6, ph);
+    ctx.fillStyle = '#fff';
+    ctx.font = `700 ${ph * 0.75}px system-ui, sans-serif`;
+    ctx.fillText(num, cx, y0 + ph / 2, bw * 0.56);
+  });
 }

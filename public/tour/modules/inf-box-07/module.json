@@ -19,7 +19,11 @@
       "textColor": "#F2F2F2",
       "vitrine": true,
       "label": "Espaço Angus Prime",
-      "sublabel": "Açougue · Box 07"
+      "sublabel": "Açougue · Boxes 07 · 06",
+      "numeros": [
+        "07",
+        "06"
+      ]
     }
   },
   "info": {
@@ -33,5 +37,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "aac72c693c1b"
+  "autoHash": "f74c3cc0b0b1"
 }

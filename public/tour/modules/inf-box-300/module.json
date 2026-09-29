@@ -16,7 +16,11 @@
     "placeholder": {
       "color": "#9a6b1f",
       "label": "Empório D'Gust",
-      "sublabel": "Empório e mercearia · Box 300"
+      "sublabel": "Empório e mercearia · Boxes 300 · 302",
+      "numeros": [
+        "300",
+        "302"
+      ]
     }
   },
   "info": {
@@ -28,5 +32,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "480bf455e461"
+  "autoHash": "3b654fb75534"
 }

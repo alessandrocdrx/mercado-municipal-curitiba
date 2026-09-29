@@ -18,7 +18,11 @@
       "textColor": "#F2F2F2",
       "vitrine": true,
       "label": "Conversic",
-      "sublabel": "Doces e chocolates · Box 54"
+      "sublabel": "Doces e chocolates · Boxes 54 · 55",
+      "numeros": [
+        "54",
+        "55"
+      ]
     }
   },
   "info": {
@@ -31,5 +35,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "f135721e3492"
+  "autoHash": "26ac2bac25ef"
 }

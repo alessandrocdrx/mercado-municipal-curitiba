@@ -17,7 +17,11 @@
       "color": "#9a6b1f",
       "vitrine": true,
       "label": "Empório Curitibano",
-      "sublabel": "Empório e mercearia · Box 292"
+      "sublabel": "Empório e mercearia · Boxes 292 · 291",
+      "numeros": [
+        "292",
+        "291"
+      ]
     }
   },
   "info": {
@@ -28,5 +32,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "4de6ad56daef"
+  "autoHash": "273ccd43243f"
 }

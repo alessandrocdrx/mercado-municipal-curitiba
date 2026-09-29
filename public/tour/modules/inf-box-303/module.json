@@ -15,7 +15,11 @@
     "placeholder": {
       "color": "#8a4f7d",
       "label": "Bordando Sonhos",
-      "sublabel": "Presentes e artesanato · Box 303"
+      "sublabel": "Presentes e artesanato · Boxes 303 · 305",
+      "numeros": [
+        "303",
+        "305"
+      ]
     }
   },
   "info": {
@@ -27,5 +31,5 @@
     "source": "lista de lojas do Mercado Municipal (curitiba.mercadomodelo.com.br). Comerciantes podem mudar de box: confirme no local."
   },
   "generated": true,
-  "autoHash": "106d6e934430"
+  "autoHash": "b00b41f5a8b1"
 }
