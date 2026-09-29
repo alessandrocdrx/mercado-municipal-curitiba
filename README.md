@@ -82,7 +82,7 @@ ninguém alterou (`autoHash`).
 
 ### Detalhes da maquete (o que é medido e o que é estimado)
 
-- **Menu Visual → Texturas** (desligado por padrão): reboco, azulejo, letreiros com brilho, concreto e madeira nos boxes, portas, escadas e corrimãos. É só aparência, gerada por código (`src/core/textures.js`).
+- **Menu Visual → Cenário:** *Atual* (padrão) ou *Estilizado*. O estilizado usa uma paleta única (`PALETA` em `src/core/textures.js`): lojas com letreiro liso e toldo listrado, teto e chão claros, mobiliário, corrimãos e prédios da rua na mesma família de cores. A escolha fica salva no navegador.
 - **Sinalização:** "SAÍDA" sobre cada porta e "cuidado, degrau" no pé de cada escada; tipo `aviso` em `MOBILIARIO` cria outras placas (`escada`, `rampa`, `vao`, `acessivel`).
 - **Escadas:** a espiral do Hall Sete de Setembro (`helicoidal`) agora é desenhada; corrimãos e guarda-corpos têm balaústres.
 - **Rua General Carneiro:** prédios do outro lado, árvores e postes; três **cercadinhos com mesas e guarda-sóis** na calçada (função `cercadinho` em `dados-planta.mjs`). **Posições estimadas**: ajuste `x0` e `y0` no local.

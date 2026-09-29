@@ -34,12 +34,13 @@ editor.onReload = () => reload();
 // Menu Visual: opções que mudam só a aparência (a atual é o padrão)
 const visualBtn = app.querySelector('.open-visual');
 const visualMenu = app.querySelector('.visual-menu');
-const optTexturas = app.querySelector('#opt-texturas');
-optTexturas.checked = settings.texturas;
+for (const radio of visualMenu.querySelectorAll('input[name="estilo"]')) {
+  radio.checked = radio.value === settings.estilo;
+  radio.addEventListener('change', () => radio.checked && settings.setEstilo(radio.value));
+}
 visualBtn.addEventListener('click', (e) => { e.stopPropagation(); visualMenu.hidden = !visualMenu.hidden; });
 document.addEventListener('click', (e) => { if (!visualMenu.hidden && !visualMenu.contains(e.target)) visualMenu.hidden = true; });
 window.addEventListener('keydown', (e) => { if (e.key === 'Escape') visualMenu.hidden = true; });
-optTexturas.addEventListener('change', () => settings.setTexturas(optTexturas.checked));
 settings.onChange(() => rebuild());
 
 let current = null;

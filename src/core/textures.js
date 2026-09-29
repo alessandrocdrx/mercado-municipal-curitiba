@@ -134,7 +134,11 @@ function line(ctx, x1, y1, x2, y2) {
  * Fachada provisória para a maquete 3D: letreiro colorido no alto com o nome
  * e, abaixo, a "loja" (vão escuro com balcão). style: 'box' | 'banca' | 'porta'.
  */
-export function facadeTexture({ style = 'box', color = '#6b6e73', label = '', sublabel = '', aspect = 1, known = true, facade, textColor, closed, vitrine, shutter, textura }) {
+export function facadeTexture(args) {
+  return args.tema === 'estilizado' ? facadeEstilizada(args) : facadeAtual(args);
+}
+
+function facadeAtual({ style = 'box', color = '#6b6e73', label = '', sublabel = '', aspect = 1, known = true, facade, textColor, closed, vitrine, shutter, tema }) {
   const w = 320;
   const h = Math.max(64, Math.round(w / aspect));
   const canvas = document.createElement('canvas');
@@ -149,20 +153,6 @@ export function facadeTexture({ style = 'box', color = '#6b6e73', label = '', su
     ctx.fillRect(0, 0, w, h * 0.26);
     ctx.fillRect(0, 0, w * 0.07, h);
     ctx.fillRect(w * 0.93, 0, w * 0.07, h);
-    if (textura) {
-      // moldura metálica com brilho, requadro interno e soleira de latão
-      const g = ctx.createLinearGradient(0, 0, w, 0);
-      g.addColorStop(0, 'rgba(255,255,255,.28)'); g.addColorStop(0.5, 'rgba(255,255,255,0)'); g.addColorStop(1, 'rgba(255,255,255,.28)');
-      ctx.fillStyle = g;
-      ctx.fillRect(0, 0, w * 0.07, h);
-      ctx.fillRect(w * 0.93, 0, w * 0.07, h);
-      ctx.fillRect(0, 0, w, h * 0.26);
-      ctx.strokeStyle = '#5f7791';
-      ctx.lineWidth = 3;
-      ctx.strokeRect(w * 0.07, h * 0.26, w * 0.86, h * 0.72);
-      ctx.fillStyle = '#b8964a';
-      ctx.fillRect(w * 0.07, h * 0.97, w * 0.86, h * 0.03);
-    }
     signText(ctx, label, sublabel, 0, 0, w, h * 0.26);
     const tex = new THREE.CanvasTexture(canvas);
     tex.colorSpace = THREE.SRGBColorSpace;
@@ -192,28 +182,13 @@ export function facadeTexture({ style = 'box', color = '#6b6e73', label = '', su
       ctx.fillStyle = vitrine ? '#cfe3ea' : known ? shade(facade ?? color, 0.35) : '#8a8a8a';
       ctx.fillRect(w * 0.06, h * (style === 'banca' ? 0.72 : 0.68), w * 0.88, h);
     }
-    if (textura) acabamentoLoja(ctx, w, h, { style, signH, counterY: h * (style === 'banca' ? 0.72 : 0.68), plain: Boolean(shutter || closed) });
     // letreiro
     ctx.fillStyle = color;
     ctx.fillRect(0, 0, w, signH);
     ctx.fillStyle = 'rgba(0,0,0,.25)';
     ctx.fillRect(0, signH - 6, w, 6);
-    if (textura) acabamentoLetreiro(ctx, w, signH);
     signText(ctx, label, known ? sublabel : '', 0, 0, w, signH, legivel(textColor, color)); // sem comerciante: só o número
-    if (known && label) {
-      // selo "i": convite a tocar para ver detalhes
-      // fica no vão escuro da loja, abaixo do letreiro, para não cobrir nome e número
-      const r = Math.min(w * 0.06, 20);
-      const cx = w * 0.94 - r * 1.4;
-      const cy = signH + h * 0.04 + r * 1.4;
-      ctx.fillStyle = '#ffd23f';
-      ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.fill();
-      ctx.strokeStyle = '#1c1c1c'; ctx.lineWidth = 2; ctx.stroke();
-      ctx.fillStyle = '#1c1c1c';
-      ctx.font = `bold ${Math.round(r * 1.4)}px system-ui, sans-serif`;
-      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-      ctx.fillText('i', cx, cy + 1);
-    }
+    if (known && label) seloInfo(ctx, w, h, signH);
   }
   ctx.strokeStyle = 'rgba(0,0,0,.35)';
   ctx.lineWidth = 6;
@@ -376,92 +351,6 @@ const once = (fn) => {
   };
 };
 
-/** Reboco claro com manchas leves e rodapé; a cor da loja entra por `material.color`. */
-export const plasterTexture = once(() => canvasTexture(256, 256, (ctx, w, h) => {
-  ctx.fillStyle = '#f4f1ea';
-  ctx.fillRect(0, 0, w, h);
-  for (let i = 0; i < 2600; i++) {
-    const a = Math.random() * 0.07;
-    ctx.fillStyle = Math.random() < 0.5 ? `rgba(0,0,0,${a})` : `rgba(255,255,255,${a})`;
-    ctx.fillRect(Math.random() * w, Math.random() * h, 2 + Math.random() * 3, 2 + Math.random() * 3);
-  }
-  ctx.fillStyle = 'rgba(0,0,0,.14)';
-  ctx.fillRect(0, h * 0.86, w, h * 0.14);
-  ctx.fillStyle = 'rgba(0,0,0,.22)';
-  ctx.fillRect(0, h * 0.86, w, 3);
-}));
-
-/** Concreto claro com granulado (laterais e espelhos dos degraus). */
-export const concreteTexture = once(() => canvasTexture(128, 128, (ctx, w, h) => {
-  ctx.fillStyle = '#d3cfc6';
-  ctx.fillRect(0, 0, w, h);
-  for (let i = 0; i < 900; i++) {
-    ctx.fillStyle = `rgba(${Math.random() < 0.5 ? '0,0,0' : '255,255,255'},${Math.random() * 0.09})`;
-    ctx.fillRect(Math.random() * w, Math.random() * h, 2, 2);
-  }
-}));
-
-/** Piso do degrau: concreto com faixas antiderrapantes amarelas nas duas bordas. */
-export const stepTopTexture = once(() => canvasTexture(256, 64, (ctx, w, h) => {
-  ctx.fillStyle = '#c9c5bb';
-  ctx.fillRect(0, 0, w, h);
-  for (let i = 0; i < 500; i++) {
-    ctx.fillStyle = `rgba(0,0,0,${Math.random() * 0.08})`;
-    ctx.fillRect(Math.random() * w, Math.random() * h, 2, 2);
-  }
-  for (const y of [0, h - 12]) {
-    ctx.fillStyle = '#e0b93a';
-    ctx.fillRect(0, y, w, 12);
-    ctx.fillStyle = 'rgba(0,0,0,.25)';
-    for (let x = 4; x < w; x += 10) ctx.fillRect(x, y + 3, 5, 6);
-  }
-}, false));
-
-/** Detalhes extras da loja (rodapé de azulejo, veio de madeira no balcão, luz no vão). */
-function acabamentoLoja(ctx, w, h, { style, signH, counterY, plain }) {
-  const y0 = signH + h * 0.04;
-  // luz vinda de cima no vão da loja
-  if (!plain) {
-    const g = ctx.createLinearGradient(0, y0, 0, h);
-    g.addColorStop(0, 'rgba(255,255,255,.10)');
-    g.addColorStop(1, 'rgba(0,0,0,.28)');
-    ctx.fillStyle = g;
-    ctx.fillRect(w * 0.06, y0, w * 0.88, h - y0);
-    if (style === 'box') {
-      ctx.strokeStyle = 'rgba(40,20,5,.28)';
-      ctx.lineWidth = 1;
-      for (let x = w * 0.06; x < w * 0.94; x += 14) {
-        ctx.beginPath(); ctx.moveTo(x, counterY); ctx.lineTo(x, h); ctx.stroke();
-      }
-    }
-  }
-  // rodapé de azulejo
-  const t = h * 0.07;
-  ctx.fillStyle = '#efece4';
-  ctx.fillRect(0, h - t, w, t);
-  ctx.strokeStyle = 'rgba(0,0,0,.25)';
-  ctx.lineWidth = 1;
-  for (let x = 0; x <= w; x += t) { ctx.beginPath(); ctx.moveTo(x, h - t); ctx.lineTo(x, h); ctx.stroke(); }
-  ctx.beginPath(); ctx.moveTo(0, h - t); ctx.lineTo(w, h - t); ctx.stroke();
-  // pilaretes laterais
-  ctx.fillStyle = 'rgba(0,0,0,.10)';
-  ctx.fillRect(0, y0, w * 0.06, h - y0);
-  ctx.fillRect(w * 0.94, y0, w * 0.06, h - y0);
-}
-
-/** Brilho e moldura do letreiro. */
-function acabamentoLetreiro(ctx, w, signH) {
-  const g = ctx.createLinearGradient(0, 0, 0, signH);
-  g.addColorStop(0, 'rgba(255,255,255,.24)');
-  g.addColorStop(0.5, 'rgba(255,255,255,0)');
-  g.addColorStop(1, 'rgba(0,0,0,.20)');
-  ctx.fillStyle = g;
-  ctx.fillRect(0, 0, w, signH);
-  ctx.strokeStyle = 'rgba(255,255,255,.4)';
-  ctx.lineWidth = 2;
-  ctx.strokeRect(6, 6, w - 12, signH - 14);
-}
-
 // ---------------------------------------------------------------- sinalização
 
 const AVISOS = {
@@ -541,5 +430,133 @@ export const predioTexture = once(() => canvasTexture(128, 128, (ctx, w, h) => {
     ctx.beginPath(); ctx.moveTo(x + 20, 26); ctx.lineTo(x + 20, 86); ctx.stroke();
   }
   ctx.fillStyle = 'rgba(0,0,0,.12)';
+  ctx.fillRect(0, h - 6, w, 6);
+}));
+
+/** Selo "i" amarelo: convida a tocar para ver detalhes (fica no vão escuro, abaixo do letreiro). */
+function seloInfo(ctx, w, h, signH) {
+  const r = Math.min(w * 0.06, 20);
+  const cx = w * 0.94 - r * 1.4;
+  const cy = signH + h * 0.04 + r * 1.4;
+  ctx.fillStyle = '#ffd23f';
+  ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.fill();
+  ctx.strokeStyle = '#1c1c1c'; ctx.lineWidth = 2; ctx.stroke();
+  ctx.fillStyle = '#1c1c1c';
+  ctx.font = `bold ${Math.round(r * 1.4)}px system-ui, sans-serif`;
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText('i', cx, cy + 1);
+}
+
+// ---------------------------------------------------------------- cenário estilizado
+// Uma só paleta para tudo: lojas, chão, teto, mobiliário, corrimãos e rua.
+
+export const PALETA = {
+  creme: '#f4ead2', pedra: '#cfc6b4', terracota: '#c8553d', mostarda: '#e8b339',
+  verde: '#1f4d3a', petroleo: '#2a7f8a', ameixa: '#7b4b6a', ardosia: '#2f3a44', ceu: '#dcecf3',
+};
+const CORES_LOJA = [PALETA.terracota, PALETA.mostarda, PALETA.verde, PALETA.petroleo, PALETA.ameixa, PALETA.ardosia];
+
+/** Cor da paleta mais próxima: as lojas mantêm a ideia da cor do ramo, todas na mesma família. */
+export function harmoniza(hex) {
+  const c = new THREE.Color(hex);
+  let melhor = CORES_LOJA[0];
+  let menor = Infinity;
+  for (const p of CORES_LOJA) {
+    const q = new THREE.Color(p);
+    const d = (c.r - q.r) ** 2 + (c.g - q.g) ** 2 + (c.b - q.b) ** 2;
+    if (d < menor) { menor = d; melhor = p; }
+  }
+  return melhor;
+}
+
+/** Loja estilizada: letreiro liso, toldo listrado, vão em ardósia e balcão mostarda. */
+function facadeEstilizada({ style = 'box', color = '#6b6e73', label = '', sublabel = '', aspect = 1, known = true, closed, shutter, vitrine }) {
+  const P = PALETA;
+  const w = 320;
+  const h = Math.max(64, Math.round(w / aspect));
+  const canvas = document.createElement('canvas');
+  canvas.width = w;
+  canvas.height = h;
+  const ctx = canvas.getContext('2d');
+
+  if (style === 'porta') {
+    ctx.fillStyle = P.verde;
+    ctx.fillRect(0, 0, w, h * 0.26);
+    ctx.fillRect(0, 0, w * 0.07, h);
+    ctx.fillRect(w * 0.93, 0, w * 0.07, h);
+    ctx.fillStyle = P.mostarda;
+    ctx.fillRect(0, h * 0.26 - 5, w, 5);
+    signText(ctx, label, sublabel, 0, 0, w, h * 0.26, P.creme);
+  } else {
+    const signH = style === 'banca' ? h * 0.42 : h * 0.3;
+    const cor = known ? harmoniza(color) : '#7c7668';
+    const y0 = signH + h * 0.04;
+    ctx.fillStyle = P.creme;
+    ctx.fillRect(0, 0, w, h);
+    ctx.fillStyle = P.ardosia;
+    ctx.fillRect(w * 0.06, y0, w * 0.88, h - y0);
+    if (shutter) {
+      ctx.fillStyle = P.pedra;
+      ctx.fillRect(w * 0.06, y0, w * 0.88, h - y0);
+      ctx.fillStyle = 'rgba(0,0,0,.12)';
+      for (let y = y0 + 6; y < h; y += h * 0.05) ctx.fillRect(w * 0.06, y, w * 0.88, 2);
+    } else if (closed) {
+      ctx.fillStyle = '#bcd6e2';
+      ctx.fillRect(w * 0.06, y0, w * 0.88, h - y0);
+      ctx.fillStyle = P.ardosia;
+      for (const x of [0.06, 0.36, 0.64, 0.92]) ctx.fillRect(w * x, y0, w * 0.02, h - y0);
+    } else {
+      ctx.fillStyle = vitrine ? '#bcd6e2' : P.mostarda;
+      ctx.fillRect(w * 0.06, h * (style === 'banca' ? 0.72 : 0.68), w * 0.88, h * 0.06);
+    }
+    // toldo listrado com babado
+    const n = 8;
+    const tw = (w * 0.88) / n;
+    for (let i = 0; i < n; i++) {
+      ctx.fillStyle = i % 2 ? P.creme : cor;
+      ctx.beginPath();
+      ctx.rect(w * 0.06 + i * tw, signH, tw, h * 0.05);
+      ctx.arc(w * 0.06 + i * tw + tw / 2, signH + h * 0.05, tw / 2, 0, Math.PI);
+      ctx.fill();
+    }
+    // letreiro
+    ctx.fillStyle = cor;
+    ctx.fillRect(0, 0, w, signH);
+    ctx.strokeStyle = P.creme;
+    ctx.lineWidth = 3;
+    ctx.strokeRect(7, 7, w - 14, signH - 14);
+    signText(ctx, label, known ? sublabel : '', 0, 0, w, signH, lum(cor) > 0.6 ? P.ardosia : P.creme);
+    ctx.fillStyle = P.verde;
+    ctx.fillRect(0, h - h * 0.04, w, h * 0.04);
+    if (known && label) seloInfo(ctx, w, h, signH);
+  }
+  const tex = new THREE.CanvasTexture(canvas);
+  tex.colorSpace = THREE.SRGBColorSpace;
+  tex.anisotropy = 4;
+  return tex;
+}
+
+/** Teto creme com vigas verdes finas. */
+export const tetoEstilizado = once(() => canvasTexture(256, 256, (ctx, w, h) => {
+  ctx.fillStyle = PALETA.creme;
+  ctx.fillRect(0, 0, w, h);
+  ctx.fillStyle = 'rgba(31,77,58,.20)';
+  ctx.fillRect(0, 0, w, 10);
+  ctx.fillRect(0, 0, 10, h);
+  ctx.fillStyle = 'rgba(255,255,255,.55)';
+  ctx.fillRect(64, 64, 128, 128);
+}));
+
+/** Fachada de prédio: duas faixas de janelas azul-claras sobre fundo liso (a cor vem do material). */
+export const predioEstilizado = once(() => canvasTexture(128, 128, (ctx, w, h) => {
+  ctx.fillStyle = '#f7f3ea';
+  ctx.fillRect(0, 0, w, h);
+  for (const y of [20, 72]) {
+    ctx.fillStyle = '#8fb7c9';
+    ctx.fillRect(10, y, 108, 34);
+    ctx.fillStyle = '#f7f3ea';
+    for (const x of [37, 64, 91]) ctx.fillRect(x, y, 3, 34);
+  }
+  ctx.fillStyle = 'rgba(0,0,0,.08)';
   ctx.fillRect(0, h - 6, w, 6);
 }));

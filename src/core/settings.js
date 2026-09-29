@@ -1,15 +1,16 @@
 // Opções de visual escolhidas pelo visitante (guardadas no navegador).
 
-const KEY = 'mercado360:texturas';
+const KEY = 'mercado360:estilo';
 const listeners = new Set();
-let texturas = false;
-try { texturas = localStorage.getItem(KEY) === '1'; } catch { /* sem armazenamento: começa desligado */ }
+let estilo = 'atual';
+try { estilo = localStorage.getItem(KEY) === 'estilizado' ? 'estilizado' : 'atual'; } catch { /* sem armazenamento: cenário atual */ }
 
 export const settings = {
-  get texturas() { return texturas; },
-  setTexturas(on) {
-    texturas = Boolean(on);
-    try { localStorage.setItem(KEY, texturas ? '1' : '0'); } catch { /* ignora */ }
+  /** 'atual' (padrão) ou 'estilizado'. */
+  get estilo() { return estilo; },
+  setEstilo(valor) {
+    estilo = valor === 'estilizado' ? 'estilizado' : 'atual';
+    try { localStorage.setItem(KEY, estilo); } catch { /* ignora */ }
     listeners.forEach((fn) => fn());
   },
   onChange(fn) { listeners.add(fn); },

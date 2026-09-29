@@ -3,8 +3,11 @@
 
 import * as THREE from 'three';
 import { DEG, bearing, wrapDeg, worldToLocal } from '../core/geo.js';
-import { textureFor, ceilingTexture, roadTexture, sidewalkTexture, crosswalkTexture, streetSignTexture, plasterTexture, concreteTexture, stepTopTexture, avisoTexture, predioTexture } from '../core/textures.js';
+import { textureFor, ceilingTexture, roadTexture, sidewalkTexture, crosswalkTexture, streetSignTexture, avisoTexture, predioTexture, predioEstilizado, tetoEstilizado, harmoniza, PALETA } from '../core/textures.js';
 import { settings } from '../core/settings.js';
+
+const estilizado = () => settings.estilo === 'estilizado';
+const proprio = (t) => { const c = t.clone(); c.userData = { own: true }; c.needsUpdate = true; return c; };
 import { applyPlacement, isWorldPlacement } from './placement.js';
 
 const BASE_RADIUS = 1000;
@@ -76,8 +79,8 @@ const CEILING_HEIGHT = 5.5;
 
 async function buildModel(group, scene, floor, tourUrl, ctx = {}) {
   // luz para os volumes dos boxes terem faces com tons diferentes
-  group.add(new THREE.AmbientLight('#ffffff', 1.6));
-  const sun = new THREE.DirectionalLight('#ffffff', 1.4);
+  group.add(new THREE.AmbientLight('#ffffff', estilizado() ? 1.9 : 1.6));
+  const sun = new THREE.DirectionalLight('#ffffff', estilizado() ? 0.9 : 1.4);
   sun.position.set(0.4, 1, 0.25);
   group.add(sun);
 
@@ -92,14 +95,14 @@ async function buildModel(group, scene, floor, tourUrl, ctx = {}) {
     for (const g of autoGuardas(floor, plate?.userData.mask, ctx)) buildProp(group, scene, g);
   }
   // piso neutro em volta, para não haver "buraco" fora da planta
-  const ground = new THREE.Mesh(new THREE.PlaneGeometry(400, 400), new THREE.MeshBasicMaterial({ color: '#8d8b86' }));
+  const ground = new THREE.Mesh(new THREE.PlaneGeometry(400, 400), new THREE.MeshBasicMaterial({ color: estilizado() ? '#d9cfba' : '#8d8b86' }));
   ground.rotation.x = -Math.PI / 2;
   ground.position.y = -(cam.z ?? 1.6) - 0.02 - (vazado ? floor.below.drop + 0.05 : 0);
   group.add(ground);
 
   // teto só sobre a área coberta do pavimento (na rua, céu aberto)
   const cov = floor?.covered;
-  const ceilTex = ceilingTexture();
+  const ceilTex = estilizado() ? proprio(tetoEstilizado()) : ceilingTexture();
   const ceiling = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ map: ceilTex }));
   ceiling.name = 'teto';
   if (cov) {
@@ -121,7 +124,9 @@ async function buildModel(group, scene, floor, tourUrl, ctx = {}) {
   for (const street of floor?.streets ?? []) buildStreet(group, scene, street);
   for (const prop of floor?.props ?? []) buildProp(group, scene, vazado && prop.tipo === 'vao' ? { ...prop, aberto: true } : prop);
 
-  return { background: '#cfdbe4', fog: { color: '#d6dde2', near: 12, far: 55 } };
+  return estilizado()
+    ? { background: PALETA.ceu, fog: { color: '#e6f0f4', near: 14, far: 60 } }
+    : { background: '#cfdbe4', fog: { color: '#d6dde2', near: 12, far: 55 } };
 }
 
 /**
@@ -145,7 +150,7 @@ async function addFloorPlane(group, scene, floor, tourUrl, { alpha = false, hole
   tex.repeat.set((x1 - x0) / W, (y1 - y0) / H);
   tex.offset.set(x0 / W, 1 - y1 / H);
   tex.needsUpdate = true;
-  const mat = new THREE.MeshBasicMaterial({ map: tex, color: '#d8d8d8', transparent: alpha, alphaTest: alpha ? 0.5 : 0 });
+  const mat = new THREE.MeshBasicMaterial({ map: tex, color: estilizado() ? '#f6ecd6' : '#d8d8d8', transparent: alpha, alphaTest: alpha ? 0.5 : 0 });
   const plane = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), mat);
   plane.name = 'piso-planta';
   applyPlacement(plane, {
@@ -495,8 +500,8 @@ async function buildBelow(group, anchor, floor, tourUrl, { tour, modules }, uppe
     if (!visivel(p.x, p.y)) continue;
     const ph = m.media?.placeholder ?? {};
     const depth = p.depth ?? BODY_DEPTH[m.type === 'banca' ? 'banca' : 'box'];
-    const fachada = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), lowMat(ph.color ?? '#7a6f5a'));
-    const volume = new THREE.Mesh(new THREE.BoxGeometry(1, 1, depth), lowMat(ph.facade ?? '#ddd6c8'));
+    const fachada = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), lowMat(estilizado() ? harmoniza(ph.color ?? '#7a6f5a') : (ph.color ?? '#7a6f5a')));
+    const volume = new THREE.Mesh(new THREE.BoxGeometry(1, 1, depth), lowMat(estilizado() ? PALETA.creme : (ph.facade ?? '#ddd6c8')));
     volume.position.z = -depth / 2 - 0.005;
     fachada.add(volume);
     applyPlacement(fachada, p, lowerAnchor);
@@ -582,12 +587,14 @@ function buildStreet(group, scene, st) {
   const rotY = -((scene.northYaw ?? 0) + along - 90) * DEG;
   const farEdge = st.sidewalk + st.road + st.farSidewalk;
   const alturas = [11, 17, 8, 21, 13, 9, 19, 12];
-  const cores = ['#c9b79c', '#b7c2c9', '#d4c1a8', '#a9b5a1', '#cbbfb0', '#b9a9a0'];
+  const cores = estilizado()
+    ? ['#f0d9b5', '#e7c9a9', '#cfe0e6', '#e9e2c8', '#dcc9d4', '#d9e3cf']
+    : ['#c9b79c', '#b7c2c9', '#d4c1a8', '#a9b5a1', '#cbbfb0', '#b9a9a0'];
   let t = -L / 2;
   for (let i = 0; t < L / 2; i++) {
     const w = 12 + ((i * 7) % 9);
     const h = alturas[i % alturas.length];
-    const map = predioTexture().clone();
+    const map = (estilizado() ? predioEstilizado() : predioTexture()).clone();
     map.userData = { own: true };
     map.repeat.set(w / 5, h / 3.5);
     map.needsUpdate = true;
@@ -599,9 +606,9 @@ function buildStreet(group, scene, st) {
     t += w + 0.4;
   }
   for (let d = -L / 2 + 6; d < L / 2; d += 11) {
-    const tronco = new THREE.Mesh(geo('arv-tronco', () => new THREE.CylinderGeometry(0.12, 0.16, 3.2, 8)), mat('#6b4a2f'));
+    const tronco = new THREE.Mesh(geo('arv-tronco', () => new THREE.CylinderGeometry(0.12, 0.16, 3.2, 8)), mat(estilizado() ? '#8a6a4a' : '#6b4a2f'));
     tronco.position.copy(pos(farEdge - st.farSidewalk / 2, d, 1.6));
-    const copa = new THREE.Mesh(geo('arv-copa', () => new THREE.SphereGeometry(1.7, 10, 8)), mat('#3f7d3a'));
+    const copa = new THREE.Mesh(geo('arv-copa', () => new THREE.SphereGeometry(1.7, 10, 8)), mat(estilizado() ? '#3f8a5a' : '#3f7d3a'));
     copa.position.copy(pos(farEdge - st.farSidewalk / 2, d, 4.4));
     copa.scale.y = 0.85;
     group.add(tronco, copa);
@@ -731,7 +738,7 @@ async function buildModuleMesh(module, placement, scene, model = false) {
   if (model && !media.src && ['box', 'banca', 'porta'].includes(module.type)) {
     // fachada com letreiro em vez da placa provisória
     const known = !String(media.placeholder?.sublabel ?? '').includes('não identificado');
-    media = { ...media, placeholder: { ...media.placeholder, style: kind, known, textura: settings.texturas } };
+    media = { ...media, placeholder: { ...media.placeholder, style: kind, known, tema: estilizado() ? 'estilizado' : undefined } };
   }
   const tex = await textureFor(media, {
     baseUrl, version: module.version, aspect, fallbackLabel: module.title ?? module.id, resolution: 256,
@@ -753,8 +760,7 @@ async function buildModuleMesh(module, placement, scene, model = false) {
     const body = new THREE.Mesh(
       new THREE.BoxGeometry(1, 1, depth),
       new THREE.MeshLambertMaterial({
-        color: media.placeholder?.facade ?? (kind === 'banca' ? '#cfc6b4' : '#ddd6c8'),
-        map: settings.texturas ? plasterTexture() : null,
+        color: estilizado() ? (kind === 'banca' ? '#ece0c2' : PALETA.creme) : (media.placeholder?.facade ?? (kind === 'banca' ? '#cfc6b4' : '#ddd6c8')),
       }),
     );
     body.position.z = -depth / 2 - 0.005;
@@ -765,7 +771,7 @@ async function buildModuleMesh(module, placement, scene, model = false) {
     // marquise de concreto sobre a porta e placa "SAÍDA" logo acima do vão
     const pw = placement.width ?? 1;
     const ph = placement.height ?? 1;
-    const marquise = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshLambertMaterial({ color: settings.texturas ? '#8f8b83' : '#6d7178', map: settings.texturas ? concreteTexture() : null }));
+    const marquise = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshLambertMaterial({ color: estilizado() ? PALETA.verde : '#6d7178' }));
     marquise.name = 'marquise';
     marquise.scale.set((pw + 0.9) / pw, 0.16 / ph, 1.1);
     marquise.position.set(0, 0.5 + 0.08 / ph, -0.55);
@@ -819,13 +825,12 @@ const mat = (color) => {
   return propMat.get(color);
 };
 const stepMats = new Map();
-function stepMaterials(cor) {
-  if (!stepMats.has(cor)) {
-    const side = new THREE.MeshLambertMaterial({ color: cor, map: concreteTexture() });
-    const top = new THREE.MeshLambertMaterial({ color: cor, map: stepTopTexture() });
-    stepMats.set(cor, [side, side, top, side, side, side]); // +x, -x, topo, base, +z, -z
+function stepMaterials() {
+  if (!stepMats.size) {
+    const lado = mat(PALETA.creme);
+    stepMats.set('e', [lado, lado, mat('#e9d9a6'), lado, lado, lado]); // +x, -x, topo, base, +z, -z
   }
-  return stepMats.get(cor);
+  return stepMats.get('e');
 }
 const propGeo = new Map();
 const geo = (key, make) => {
@@ -833,7 +838,26 @@ const geo = (key, make) => {
   return propGeo.get(key);
 };
 
+/** Cenário estilizado: mesas, cadeiras, pisos e corrimãos passam para a paleta única. */
+function estiliza(p) {
+  const P = PALETA;
+  const h = Math.abs(Math.round((p.x ?? 0) * 7 + (p.y ?? 0) * 13));
+  switch (p.tipo) {
+    case 'mesa': return { ...p, cor: P.creme, corCadeira: [P.terracota, P.verde, P.mostarda, P.petroleo][h % 4] };
+    case 'praca': return { ...p, cor: '#ecdfc4', borda: P.terracota };
+    case 'pilar': case 'helicoidal': return { ...p, cor: P.creme };
+    case 'guarda': return { ...p, cor: P.verde };
+    case 'escada': return { ...p, corGuarda: P.verde };
+    case 'plataforma': return { ...p, cor: '#dccfb2', lateral: P.terracota };
+    case 'placa': return { ...p, cor: P.verde };
+    case 'guardasol': return { ...p, cor: [P.terracota, P.mostarda, P.petroleo][h % 3] };
+    default: return p;
+  }
+}
+
 function buildProp(group, scene, p) {
+  const st = estilizado();
+  if (st) p = estiliza(p);
   const base = p.base ?? 0;
   const at = (dx = 0, dy = 0, z = 0) => worldToLocal({ x: p.x + dx, y: p.y + dy, z: z + base }, scene);
   const loc = (x, y, z = 0) => worldToLocal({ x, y, z: z + base }, scene);
@@ -853,13 +877,12 @@ function buildProp(group, scene, p) {
     group.add(m);
   };
   const yawOf = (a, b) => Math.atan2(b.x - a.x, b.z - a.z); // rotação em y que alinha +z de a para b
-  const tx = settings.texturas;
-  // corrimão, travessa e balaústres; com texturas: madeira e aço, sem elas: branco
+  // corrimão, travessa e balaústres
   const railing = (a, b, top, cor, esp = 0.8) => {
     const raise = (v, h) => v.clone().setY(v.y + h);
-    const topo = cor ?? (tx ? '#6a4a2f' : '#f2f2f2');
-    const barra = cor ?? (tx ? '#a5abb1' : '#e2e2e2');
-    rod(raise(a, top), raise(b, top), tx ? 0.035 : 0.03, topo);
+    const topo = st ? PALETA.verde : (cor ?? '#f2f2f2');
+    const barra = st ? PALETA.pedra : (cor ?? '#e2e2e2');
+    rod(raise(a, top), raise(b, top), st ? 0.035 : 0.03, topo);
     rod(raise(a, top * 0.48), raise(b, top * 0.48), 0.014, barra);
     const n = Math.max(1, Math.round(a.distanceTo(b) / esp));
     for (let i = 0; i <= n; i++) {
@@ -959,7 +982,7 @@ function buildProp(group, scene, p) {
     for (let i = 0; i < n; i++) {
       const v = a.clone().lerp(b, (i + 0.5) / n);
       const sh = (i + 1) * (h / n);
-      const step = new THREE.Mesh(geo(`deg${w}_${(run / n).toFixed(2)}`, () => new THREE.BoxGeometry(w, 1, run / n)), tx ? stepMaterials(p.cor ?? '#ffffff') : mat(p.cor ?? '#e6e4de'));
+      const step = new THREE.Mesh(geo(`deg${w}_${(run / n).toFixed(2)}`, () => new THREE.BoxGeometry(w, 1, run / n)), st ? stepMaterials() : mat(p.cor ?? '#e6e4de'));
       step.scale.y = sh;
       step.position.set(v.x, a.y + sh / 2, v.z);
       step.rotation.y = ry;
@@ -996,12 +1019,12 @@ function buildProp(group, scene, p) {
     for (let i = 0; i < n; i++) {
       const phi = (i / n) * volta;
       const z = (i + 1) * (altura / n);
-      const step = new THREE.Mesh(geo(`heli-deg${raio}`, () => new THREE.BoxGeometry(0.5, 0.05, raio)), tx ? stepMaterials(p.cor ?? '#ffffff') : mat(p.cor ?? '#f2f2f2'));
+      const step = new THREE.Mesh(geo(`heli-deg${raio}`, () => new THREE.BoxGeometry(0.5, 0.05, raio)), st ? stepMaterials() : mat(p.cor ?? '#f2f2f2'));
       step.position.copy(at(Math.sin(phi) * raio / 2, Math.cos(phi) * raio / 2, z));
       step.rotation.y = Math.PI - phi;
       group.add(step);
       const ponta = at(Math.sin(phi) * raio, Math.cos(phi) * raio, z + 1.0);
-      if (anterior) rod(anterior, ponta, 0.022, tx ? '#6a4a2f' : '#e8e8e8');
+      if (anterior) rod(anterior, ponta, 0.022, st ? PALETA.verde : '#e8e8e8');
       if (i % 3 === 0) rod(at(Math.sin(phi) * raio, Math.cos(phi) * raio, z), ponta, 0.012, '#a5abb1');
       anterior = ponta;
     }
