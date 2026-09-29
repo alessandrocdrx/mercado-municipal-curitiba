@@ -186,13 +186,17 @@ export function facadeTexture({ style = 'box', color = '#6b6e73', label = '', su
     signText(ctx, label, known ? sublabel : '', 0, 0, w, signH, legivel(textColor, color)); // sem comerciante: só o número
     if (known && label) {
       // selo "i": convite a tocar para ver detalhes
-      const r = Math.min(signH * 0.16, 18);
+      // fica no vão escuro da loja, abaixo do letreiro, para não cobrir nome e número
+      const r = Math.min(w * 0.06, 20);
+      const cx = w * 0.94 - r * 1.4;
+      const cy = signH + h * 0.04 + r * 1.4;
       ctx.fillStyle = '#ffd23f';
-      ctx.beginPath(); ctx.arc(w - r * 1.5, signH - r * 1.5, r, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.fill();
+      ctx.strokeStyle = '#1c1c1c'; ctx.lineWidth = 2; ctx.stroke();
       ctx.fillStyle = '#1c1c1c';
-      ctx.font = `bold ${Math.round(r * 1.5)}px system-ui, sans-serif`;
+      ctx.font = `bold ${Math.round(r * 1.4)}px system-ui, sans-serif`;
       ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-      ctx.fillText('i', w - r * 1.5, signH - r * 1.5 + 1);
+      ctx.fillText('i', cx, cy + 1);
     }
   }
   ctx.strokeStyle = 'rgba(0,0,0,.35)';

@@ -285,3 +285,15 @@ div.dir-item.off { cursor: default; }
 @keyframes mm-pulse { from { transform: scale(.6); opacity: 1; } to { transform: scale(1.6); opacity: 0; } }
 .mm-cone { fill: rgba(255, 170, 0, .55); stroke: rgba(120, 70, 0, .6); stroke-width: .15; }
 .mm-link { stroke: rgba(29, 63, 143, .35); }
+
+/* minimapa: andares em linha própria, ampliar sobre o mapa, seta de posição */
+.mm-bar { justify-content: flex-start; }
+.mm-floors { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+.mm-map .mm-expand { position: absolute; left: 6px; top: 6px; z-index: 1; padding: 4px 9px; border-radius: 14px; font-size: 12px; box-shadow: 0 1px 4px rgba(0,0,0,.35); }
+.mm-arrow { fill: #ffd23f; stroke: #1c1c1c; stroke-linejoin: round; }
+.mm-me .mm-pulse { fill: rgba(255, 210, 63, .4); }
+@media (max-width: 600px) {
+  .minimap .mm-bar button { padding: 3px 7px; font-size: 12px; }
+  .minimap { width: 190px; }
+  .mm-map .mm-expand { font-size: 11px; padding: 3px 7px; }
+}

@@ -11,8 +11,8 @@ export class Minimap {
     this.el = document.createElement('section');
     this.el.className = 'minimap';
     this.el.innerHTML = `
-      <div class="mm-bar"><div class="mm-floors"></div><button class="mm-expand" title="Ampliar mapa">⤢ Ampliar</button></div>
-      <div class="mm-map"><span class="mm-north" title="Norte real" hidden><i></i>N</span></div>
+      <div class="mm-bar"><div class="mm-floors"></div></div>
+      <div class="mm-map"><button class="mm-expand" title="Ampliar mapa">⤢ Ampliar</button><span class="mm-north" title="Norte real" hidden><i></i>N</span></div>
       <a class="mm-credit" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener" title="Contornos, escala e norte do prédio: © OpenStreetMap contributors (ODbL)" hidden>© OpenStreetMap</a>`;
     this.svg = document.createElementNS(SVG, 'svg');
     this.el.querySelector('.mm-map').appendChild(this.svg);
@@ -39,7 +39,8 @@ export class Minimap {
     const floorsEl = this.el.querySelector('.mm-floors');
     floorsEl.replaceChildren(...tour.floors.map((f) => {
       const b = document.createElement('button');
-      b.textContent = f.title ?? f.id;
+      b.textContent = (f.title ?? f.id).replace(/^Pavimento /, '').replace(/ nível$/, '').replace(/^./, (c) => c.toUpperCase());
+      b.title = f.title ?? f.id;
       b.className = f.id === floorId ? 'on' : '';
       b.addEventListener('click', () => f.id !== floorId && this.onFloor(f));
       return b;
@@ -91,9 +92,13 @@ export class Minimap {
       }
     }
 
-    const r = unit * 9;
-    this.cone = node('path', { d: `M0 0 L${-r * 0.45} ${-r} A${r} ${r} 0 0 1 ${r * 0.45} ${-r} Z`, class: 'mm-cone' });
-    this.svg.append(this.cone);
+    // "você está aqui": seta que gira para onde a pessoa olha (desenhada no fim, por cima)
+    const a = unit * 4.2;
+    this.cone = node('g', { class: 'mm-me' });
+    this.cone.append(
+      node('circle', { r: a * 1.25, class: 'mm-pulse' }),
+      node('path', { d: `M0 ${-a * 1.3} L${a * 0.85} ${a * 0.9} L0 ${a * 0.35} L${-a * 0.85} ${a * 0.9} Z`, class: 'mm-arrow', 'stroke-width': unit * 0.6 }),
+    );
     this.current = current;
     this.unit = unit;
     this.placed = placed;
@@ -112,14 +117,8 @@ export class Minimap {
       this.svg.append(dot);
       this.dots.set(s.id, dot);
     }
-    if (current.position) {
-      // "você está aqui": anel pulsante + ponto amarelo com borda
-      const cx = current.position.x, cy = -current.position.y;
-      this.svg.append(node('circle', { cx, cy, r: unit * 4, class: 'mm-pulse' }));
-      const me = node('circle', { cx, cy, r: unit * 2.2, class: 'mm-current', 'stroke-width': unit * 0.6 });
-      me.append(node('title', {}, `Você está aqui: ${current.title ?? ''}`));
-      this.svg.append(me);
-    }
+    this.cone.append(node('title', {}, `Você está aqui: ${current.title ?? ''}`));
+    this.svg.append(this.cone);
     this.setTarget(this.targetId);
   }
 
