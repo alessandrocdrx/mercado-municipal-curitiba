@@ -18,6 +18,12 @@
     },
     {
       "to": "inf-anexo-4"
+    },
+    {
+      "to": "sup-escada",
+      "yaw": 42,
+      "pitch": -20,
+      "label": "Escada do anexo · subir à galeria de lojas (Vila Rica)"
     }
   ],
   "generated": true

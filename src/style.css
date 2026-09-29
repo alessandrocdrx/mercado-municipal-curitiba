@@ -273,3 +273,15 @@ div.dir-item.off { cursor: default; }
 .guide-card button { width: 100%; padding: 12px; border: 0; border-radius: 10px; background: #1d4d34; color: #fff; font-size: 16px; font-weight: 700; cursor: pointer; }
 @media (max-width: 600px) { .hover-tag { display: none; } .open-help { padding-inline: 10px; } }
 @media (max-width: 600px) { .brand-note { display: none; } }
+
+/* --- minimapa: onde estou, para onde vou --- */
+.mm-expand { background: var(--accent) !important; color: #1c1c1c !important; border-color: var(--accent) !important; font-weight: 700; white-space: nowrap; }
+.mm-scene { fill: #9aa3b5; stroke: #fff; stroke-width: .25; cursor: pointer; }
+.mm-near { fill: #1d3f8f; }
+.mm-target { fill: #ff8a00; }
+.mm-target-line { stroke: #ff8a00; }
+.mm-current { fill: #ffd23f; stroke: #1c1c1c; }
+.mm-pulse { fill: rgba(255, 210, 63, .35); stroke: none; transform-box: fill-box; transform-origin: center; animation: mm-pulse 1.6s ease-out infinite; }
+@keyframes mm-pulse { from { transform: scale(.6); opacity: 1; } to { transform: scale(1.6); opacity: 0; } }
+.mm-cone { fill: rgba(255, 170, 0, .55); stroke: rgba(120, 70, 0, .6); stroke-width: .15; }
+.mm-link { stroke: rgba(29, 63, 143, .35); }

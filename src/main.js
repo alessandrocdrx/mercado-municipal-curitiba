@@ -247,6 +247,7 @@ function updateForward() {
   forwardTarget = neighborToward(0);
   forward.hidden = !forwardTarget;
   if (forwardTarget) forward.querySelector('span').textContent = forwardTarget.label;
+  minimap.setTarget(forwardTarget?.to ?? null);
 }
 
 forward.addEventListener('click', () => {

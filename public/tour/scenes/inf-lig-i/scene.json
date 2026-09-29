@@ -18,6 +18,12 @@
     },
     {
       "to": "inf-porta-i"
+    },
+    {
+      "to": "sup-galeria-2",
+      "yaw": 162,
+      "pitch": -20,
+      "label": "Escada · subir à galeria de restaurantes"
     }
   ],
   "generated": true

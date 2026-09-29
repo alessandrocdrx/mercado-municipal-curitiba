@@ -345,7 +345,32 @@ function mobiliario(p) {
       }
     } else if (de) {
       const a = tm(de), b = tm(ate);
-      out.push(limpa({ tipo, ...a, x2: b.x, y2: b.y, ...resto }));
+      if (tipo !== 'guarda') {
+        out.push(limpa({ tipo, ...a, x2: b.x, y2: b.y, ...resto }));
+        continue;
+      }
+      // guarda-corpo: abre uma passagem de 2,4 m onde um caminho entre pontos de vista o cruza
+      const L = Math.hypot(b.x - a.x, b.y - a.y);
+      const cortes = [];
+      for (const [c, d] of caminhos) {
+        const den = (b.x - a.x) * (d.y - c.y) - (b.y - a.y) * (d.x - c.x);
+        if (!den) continue;
+        const u = ((c.x - a.x) * (d.y - c.y) - (c.y - a.y) * (d.x - c.x)) / den;
+        const v = ((c.x - a.x) * (b.y - a.y) - (c.y - a.y) * (b.x - a.x)) / den;
+        if (u > 0 && u < 1 && v > 0 && v < 1) cortes.push(u * L);
+      }
+      const trechos = [];
+      let ini = 0;
+      for (const k of cortes.sort((x, y) => x - y)) {
+        if (k - 1.2 > ini) trechos.push([ini, k - 1.2]);
+        ini = k + 1.2;
+      }
+      if (L > ini) trechos.push([ini, L]);
+      for (const [s0, s1] of trechos) {
+        const q0 = { x: r2(a.x + (b.x - a.x) * s0 / L), y: r2(a.y + (b.y - a.y) * s0 / L) };
+        const q1 = { x: r2(a.x + (b.x - a.x) * s1 / L), y: r2(a.y + (b.y - a.y) * s1 / L) };
+        out.push(limpa({ tipo, ...q0, x2: q1.x, y2: q1.y, ...resto }));
+      }
     } else if (pontos) {
       const ps = pontos.map(tm);
       out.push(limpa({ tipo, ...ps[0], pontos: ps.map((q) => [q.x, q.y]), ...resto }));

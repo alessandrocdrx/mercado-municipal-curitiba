@@ -33,6 +33,12 @@
       "yaw": 180,
       "pitch": -20,
       "label": "Escada · descer ao pavimento inferior"
+    },
+    {
+      "to": "inf-anexo-3",
+      "yaw": 102,
+      "pitch": -20,
+      "label": "Escada · descer ao anexo (Adega Brasil, Satine)"
     }
   ],
   "generated": true

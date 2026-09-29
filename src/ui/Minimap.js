@@ -11,7 +11,7 @@ export class Minimap {
     this.el = document.createElement('section');
     this.el.className = 'minimap';
     this.el.innerHTML = `
-      <div class="mm-bar"><div class="mm-floors"></div><button class="mm-expand" title="Ampliar mapa">⤢</button></div>
+      <div class="mm-bar"><div class="mm-floors"></div><button class="mm-expand" title="Ampliar mapa">⤢ Ampliar</button></div>
       <div class="mm-map"><span class="mm-north" title="Norte real" hidden><i></i>N</span></div>
       <a class="mm-credit" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener" title="Contornos, escala e norte do prédio: © OpenStreetMap contributors (ODbL)" hidden>© OpenStreetMap</a>`;
     this.svg = document.createElementNS(SVG, 'svg');
@@ -21,7 +21,10 @@ export class Minimap {
     root.appendChild(this.el);
     this.onSelect = onSelect;
     this.onFloor = onFloor;
-    this.el.querySelector('.mm-expand').addEventListener('click', () => this.el.classList.toggle('large'));
+    this.el.querySelector('.mm-expand').addEventListener('click', (e) => {
+      const large = this.el.classList.toggle('large');
+      e.currentTarget.textContent = large ? '✕ Reduzir' : '⤢ Ampliar';
+    });
   }
 
   render({ tour, tourUrl, scenes, modules, current }) {
@@ -81,15 +84,6 @@ export class Minimap {
     this.north.hidden = floor?.bearingUp === undefined;
     if (!this.north.hidden) this.north.firstElementChild.style.transform = `rotate(${-floor.bearingUp}deg)`;
 
-    for (const m of modules) {
-      const p = m.placement;
-      if (p?.x === undefined || !onFloor(p.floor) || p.surface === 'ceiling' || p.surface === 'floor') continue;
-      const rect = node('rect', { x: -(p.width ?? 1) / 2, y: -unit * 0.35, width: p.width ?? 1, height: unit * 0.7, class: 'mm-module' });
-      rect.setAttribute('transform', `translate(${p.x} ${-p.y}) rotate(${p.facing ?? 0})`);
-      rect.append(node('title', {}, m.title ?? m.id));
-      this.svg.append(rect);
-    }
-
     for (const s of placed) {
       for (const link of s.links ?? []) {
         const t = placed.find((o) => o.id === link.to);
@@ -97,17 +91,48 @@ export class Minimap {
       }
     }
 
-    const r = unit * 6;
-    this.cone = node('path', { d: `M0 0 L${-r * 0.4} ${-r} A${r} ${r} 0 0 1 ${r * 0.4} ${-r} Z`, class: 'mm-cone' });
+    const r = unit * 9;
+    this.cone = node('path', { d: `M0 0 L${-r * 0.45} ${-r} A${r} ${r} 0 0 1 ${r * 0.45} ${-r} Z`, class: 'mm-cone' });
     this.svg.append(this.cone);
     this.current = current;
+    this.unit = unit;
+    this.placed = placed;
+    // linha até o próximo destino (botão ▲)
+    this.targetLine = node('line', { class: 'mm-target-line', 'stroke-width': unit * 0.7, 'stroke-dasharray': `${unit * 1.5} ${unit}` });
+    this.svg.append(this.targetLine);
 
+    const vizinhos = new Set((current.links ?? []).map((l) => l.to));
+    this.dots = new Map();
     for (const s of placed) {
-      const isCur = s.id === current.id;
-      const dot = node('circle', { cx: s.position.x, cy: -s.position.y, r: unit * (isCur ? 1.5 : 1), class: isCur ? 'mm-scene mm-current' : 'mm-scene' });
+      if (s.id === current.id) continue;
+      const near = vizinhos.has(s.id);
+      const dot = node('circle', { cx: s.position.x, cy: -s.position.y, r: unit * (near ? 1.4 : 0.9), class: near ? 'mm-scene mm-near' : 'mm-scene' });
       dot.append(node('title', {}, s.title ?? s.id));
       dot.addEventListener('click', () => this.onSelect(s.id));
       this.svg.append(dot);
+      this.dots.set(s.id, dot);
+    }
+    if (current.position) {
+      // "você está aqui": anel pulsante + ponto amarelo com borda
+      const cx = current.position.x, cy = -current.position.y;
+      this.svg.append(node('circle', { cx, cy, r: unit * 4, class: 'mm-pulse' }));
+      const me = node('circle', { cx, cy, r: unit * 2.2, class: 'mm-current', 'stroke-width': unit * 0.6 });
+      me.append(node('title', {}, `Você está aqui: ${current.title ?? ''}`));
+      this.svg.append(me);
+    }
+    this.setTarget(this.targetId);
+  }
+
+  /** Destaca no mapa o ponto para onde o botão ▲ leva. */
+  setTarget(sceneId) {
+    this.targetId = sceneId;
+    if (!this.dots) return;
+    for (const [id, dot] of this.dots) dot.classList.toggle('mm-target', id === sceneId);
+    const t = this.placed?.find((s) => s.id === sceneId);
+    const c = this.current?.position;
+    this.targetLine.style.display = t && c ? '' : 'none';
+    if (t && c) {
+      Object.entries({ x1: c.x, y1: -c.y, x2: t.position.x, y2: -t.position.y }).forEach(([k, v]) => this.targetLine.setAttribute(k, v));
     }
   }
 

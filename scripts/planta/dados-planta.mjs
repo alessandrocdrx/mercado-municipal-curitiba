@@ -401,6 +401,12 @@ export const ESCADAS = [
   { de: 'sup-escada', para: 'inf-a-00', yaw: 180, rotulo: 'Escada · descer ao pavimento inferior' },
   { de: 'sup-verde-2', para: 'n3-auditorio', yaw: 90, rotulo: 'Escada · subir ao 3º nível' },
   { de: 'n3-auditorio', para: 'sup-verde-2', yaw: 270, rotulo: 'Escada · descer ao pavimento superior' },
+  // Escada do anexo (em frente à Satine, ao lado da Adega Brasil) ↔ galeria do piso 2, na frente da Calçados Vila Rica
+  { de: 'inf-anexo-3', para: 'sup-escada', yaw: 42, rotulo: 'Escada do anexo · subir à galeria de lojas (Vila Rica)' },
+  { de: 'sup-escada', para: 'inf-anexo-3', yaw: 102, rotulo: 'Escada · descer ao anexo (Adega Brasil, Satine)' },
+  // Escada do corredor da General Carneiro (junto à Porta I) ↔ galeria de restaurantes (mezanino)
+  { de: 'inf-lig-i', para: 'sup-galeria-2', yaw: 162, rotulo: 'Escada · subir à galeria de restaurantes' },
+  { de: 'sup-galeria-2', para: 'inf-lig-i', yaw: 180, rotulo: 'Escada · descer ao corredor da General Carneiro' },
   // Escadas medidas no levantamento do piso 2 (p2_escadas.csv)
   { de: 'sup-rosa-4', para: 'inf-b-00', yaw: 285, rotulo: 'Escada junto ao Takê · descer ao térreo' },
   { de: 'inf-b-00', para: 'sup-rosa-4', yaw: 22, rotulo: 'Escada · subir à Praça 7 de Setembro' },

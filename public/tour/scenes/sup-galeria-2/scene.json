@@ -18,6 +18,12 @@
     },
     {
       "to": "sup-galeria-3"
+    },
+    {
+      "to": "inf-lig-i",
+      "yaw": 180,
+      "pitch": -20,
+      "label": "Escada · descer ao corredor da General Carneiro"
     }
   ],
   "generated": true
