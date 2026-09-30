@@ -585,11 +585,14 @@ function facadeArte({ label = '', sublabel = '', aspect = 2, tema }) {
   const c = document.createElement('canvas');
   c.width = w; c.height = h;
   const g = c.getContext('2d');
-  g.fillStyle = '#3a2f28'; g.fillRect(0, 0, w, h);
-  const m = 8;
-  g.fillStyle = '#efe4cc'; g.fillRect(m, m, w - 2 * m, h - 2 * m - 22);
+  g.fillStyle = '#f3f3ef'; g.fillRect(0, 0, w, h);
+  const m = 6;
+  // parede de azulejos brancos (o mural real é pintura sobre azulejo)
+  g.strokeStyle = 'rgba(120,125,130,.35)'; g.lineWidth = 1;
+  for (let x = 0; x < w; x += 22) { g.beginPath(); g.moveTo(x, 0); g.lineTo(x, h); g.stroke(); }
+  for (let y = 0; y < h; y += 22) { g.beginPath(); g.moveTo(0, y); g.lineTo(w, y); g.stroke(); }
   // figuras geométricas (evocam os painéis em traço de Poty; ilustração, não reprodução)
-  const cores = ['#c8553d', '#1f4d3a', '#e8b339', '#2a7f8a', '#2f3a44'];
+  const cores = ['#d9a81e', '#2f5d2a', '#1c2a4a', '#c46a1c', '#7fa6c9'];
   let seed = 7;
   const rnd = () => { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; };
   for (let i = 0; i < 16; i++) {

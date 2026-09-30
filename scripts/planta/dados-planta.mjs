@@ -468,8 +468,9 @@ export const OBRAS = {
   inferior: [
     {
       id: 'poty-largo-da-ordem', titulo: 'Cenas do Largo da Ordem', autor: 'Poty Lazzarotto', ano: 1996,
-      em: [47.6, 616], facing: 90, largura: 5.5, altura: 2.0,
-      descricao: 'Painel de Poty Lazzarotto (1996), de cerca de 11 m², pintado sobre azulejos com tintas especiais, na ala de alimentação com entrada pela Av. Sete de Setembro. Posição no tour estimada; a obra não é reproduzida aqui.',
+      // na parede de azulejos ao lado da escada principal (inf-a-00 → piso superior), lado esquerdo de quem sobe
+      noLance: { de: 'inf-a-00', lado: 1, recuo: 0.8 }, largura: 6.2, altura: 3.4, base: 1.5,
+      descricao: 'Painel de Poty Lazzarotto (1996), de cerca de 11 m², pintado sobre azulejos com tintas especiais, na parede da escada principal do Mercado (junto ao Setor C). Posição no tour estimada; a obra não é reproduzida aqui.',
       url: FONTE_POTY,
     },
     {

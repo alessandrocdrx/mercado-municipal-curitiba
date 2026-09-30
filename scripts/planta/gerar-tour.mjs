@@ -141,7 +141,10 @@ for (const pav of PAVIMENTOS) {
     upsertModule(`${prefix}-arte-${obra.id}`, {
       type: 'arte',
       title: obra.titulo,
-      placement: { floor: pav.id, ...toMeters(pav, obra.em), z: 1.3 + obra.altura / 2, width: obra.largura, height: obra.altura, facing: obra.facing, surface: 'wall' },
+      placement: (() => {
+        const g = posicaoObra(pav, obra);
+        return { floor: pav.id, x: g.x, y: g.y, z: (obra.base ?? 1.3) + obra.altura / 2, width: obra.largura, height: obra.altura, facing: g.facing, surface: 'wall' };
+      })(),
       media: { placeholder: { label: obra.titulo, sublabel: `${obra.autor} · ${obra.ano}` } },
       info: { category: 'Arte', description: obra.descricao, url: obra.url, location: `${pav.titulo} · posição estimada` },
     });
@@ -333,12 +336,38 @@ function lances(p) {
   return out;
 }
 
+/** Posição (m) e rumo de uma obra; `noLance` a encosta na parede lateral de um lance de escada. */
+function posicaoObra(pav, obra) {
+  if (!obra.noLance) return { ...toMeters(pav, obra.em), facing: obra.facing };
+  const { de, lado, recuo } = obra.noLance;
+  const cena = CENAS[pav.id].find((c) => c.id === de);
+  const e = ESCADAS.find((q) => q.de === de);
+  const o = toMeters(pav, cena.em);
+  const yaw = (e.yaw * Math.PI) / 180;
+  const dx = Math.sin(yaw);
+  const dy = Math.cos(yaw);
+  const nx = -dy * lado; // normal para o lado da parede
+  const ny = dx * lado;
+  const off = 1.3; // meia largura do lance + espessura da parede
+  const t = recuo + obra.largura / 2;
+  const face = off - 0.19; // face da parede voltada para a escada
+  return { x: o.x + dx * t + nx * face, y: o.y + dy * t + ny * face, facing: (Math.atan2(-nx, -ny) * 180 / Math.PI + 360) % 360, o, dx, dy, nx, ny, off };
+}
+
 function paredes(p) {
-  return (PAREDES[p.id] ?? []).map((w) => {
+  const pav = PAVIMENTOS.find((q) => q.id === p.id);
+  const doLance = (OBRAS[p.id] ?? []).filter((ob) => ob.noLance).map((ob) => {
+    const g = posicaoObra(pav, ob);
+    const ponto = (t) => [g.o.x + g.dx * t + g.nx * g.off, g.o.y + g.dy * t + g.ny * g.off];
+    const [x, y] = ponto(ob.noLance.recuo - 0.5);
+    const [x2, y2] = ponto(ob.noLance.recuo + ob.largura + 0.5);
+    return { tipo: 'parede', x, y, x2, y2, altura: 5.2 };
+  });
+  return [...doLance, ...(PAREDES[p.id] ?? []).map((w) => {
     const a = toMeters(p, w.de);
     const b = toMeters(p, w.ate);
     return { tipo: 'parede', ...a, x2: b.x, y2: b.y, altura: w.altura };
-  });
+  })];
 }
 
 function upsertModule(id, gerado) {

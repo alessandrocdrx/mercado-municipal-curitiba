@@ -3,12 +3,12 @@
   "title": "Cenas do Largo da Ordem",
   "placement": {
     "floor": "inferior",
-    "x": 3,
-    "y": -38.81,
-    "z": 2.3,
-    "width": 5.5,
-    "height": 2,
-    "facing": 90,
+    "x": 31.98693736804247,
+    "y": -37.36515886197355,
+    "z": 3.2,
+    "width": 6.2,
+    "height": 3.4,
+    "facing": 250,
     "surface": "wall"
   },
   "media": {
@@ -19,10 +19,10 @@
   },
   "info": {
     "category": "Arte",
-    "description": "Painel de Poty Lazzarotto (1996), de cerca de 11 m², pintado sobre azulejos com tintas especiais, na ala de alimentação com entrada pela Av. Sete de Setembro. Posição no tour estimada; a obra não é reproduzida aqui.",
+    "description": "Painel de Poty Lazzarotto (1996), de cerca de 11 m², pintado sobre azulejos com tintas especiais, na parede da escada principal do Mercado (junto ao Setor C). Posição no tour estimada; a obra não é reproduzida aqui.",
     "url": "https://www.patrimoniocultural.pr.gov.br/Bem-Tombado/Obras-de-Poty-Lazzarotto-Paineis-e-Murais-em-Curitiba",
     "location": "Pavimento inferior · posição estimada"
   },
   "generated": true,
-  "autoHash": "cc368164f16c"
+  "autoHash": "90912423dd74"
 }
